@@ -283,6 +283,25 @@ h3.sub { margin: 18px 0 8px; font-size: 0.95rem; }
 .lrow .pct { font-family: var(--f-mono); font-weight: 500; }
 .lrow .ex { grid-column: 1 / -1; font-family: var(--f-quote); color: var(--muted); font-size: 0.8125rem; }
 .sim { display: grid; gap: 4px; margin-top: 8px; }
+/* D74: where you stand map */
+.whmap { margin-top: 28px; }
+.whmap .mapgrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 360px); gap: 20px; align-items: start; }
+.whmap svg { width: 100%; height: auto; display: block; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); }
+.whmap .state { fill: var(--sunk); stroke: var(--line); stroke-width: .8; }
+.whmap circle { stroke: var(--surface); stroke-width: 1; cursor: pointer; }
+.whmap circle:hover { stroke: var(--ink); stroke-width: 1.5; }
+.whmap circle.sel { stroke: var(--ink); stroke-width: 2.5; }
+.whmap .mlegend { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; font-size: 0.75rem; color: var(--muted); margin: 8px 0; }
+.whmap .mlegend i { display: inline-block; width: 11px; height: 11px; border-radius: 50%; margin-right: 4px; vertical-align: -1px; }
+.cmpcard { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 14px 16px; position: sticky; top: calc(var(--tabh, 48px) + 12px); font-size: 0.8125rem; }
+.cmpcard h3 { margin: 0 0 2px; font-size: 1rem; }
+.cmpcard .big { font-size: 1.6rem; font-family: var(--f-mono); font-weight: 500; }
+.cmpcard table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+.cmpcard th, .cmpcard td { text-align: left; vertical-align: top; padding: 5px 4px; border-bottom: 1px solid var(--line); }
+.cmpcard th { font-size: 0.6875rem; text-transform: uppercase; letter-spacing: .05em; color: var(--muted); font-weight: 600; }
+.cmpcard td.ok { color: var(--accent); font-weight: 600; } .cmpcard td.no { color: var(--muted); }
+.cmpcard select { width: 100%; margin: 8px 0; }
+@media (max-width: 900px) { .whmap .mapgrid { grid-template-columns: 1fr; } .cmpcard { position: static; } }
 
 /* patterns, method */
 .prose { max-width: 76ch; }
@@ -312,6 +331,9 @@ h3.sub { margin: 18px 0 8px; font-size: 0.95rem; }
 <div class="tabbar"><div class="wrap"><nav class="tabs" role="tablist" id="tabs"></nav></div></div>
 <main class="wrap" id="main" role="tabpanel"><p class="note">Loading the corpus…</p></main>
 
+<script src="vendor/d3-array.min.js"></script>
+<script src="vendor/d3-geo.min.js"></script>
+<script src="vendor/topojson-client.min.js"></script>
 <script>
 (() => {
 "use strict";
@@ -626,8 +648,68 @@ function renderLabel() {
   PROF ||= uniProfiles();
   const qs = questionsHTML();
   return `<div class="toolbar"><span class="note">Answer for your unit. The label shows how many universities in the corpus made the same choice and what their policies say. University and unit documents are compared; course syllabi are not.</span><span class="grow"></span><button class="btn" id="reset">Clear answers</button></div>
-    ${reading(`Each answer is compared with all ${U.length} universities: the percentage is the share whose university or unit documents make the same choice, with one real example of how it is worded. "Most similar universities" share the most of your choices. The Draft a policy tab turns the same answers into a document.`)}
-    <div class="builder"><div>${qs}</div><aside>${labelCard()}</aside></div>`;
+    ${reading(`Each answer is compared with all ${U.length} universities: the percentage is the share whose university or unit documents make the same choice, with one real example of how it is worded. "Most similar universities" share the most of your answers; the map below shows every university the same way. The Draft a policy tab turns the same answers into a document.`)}
+    <div class="builder"><div>${qs}</div><aside>${labelCard()}</aside></div>
+    ${whereMap()}`;
+}
+// D74: where you stand. Each university's documents are checked against each of your answers (same rule as the label's shares);
+// its match is the share of your answers it shares. Click a dot, a "most similar" name or pick from the list to compare side by side.
+let GEO = null, MAPS = null;
+async function loadGeo() {
+  if (GEO) return;
+  const [g, topo] = await Promise.all([fetch("data/geo.json").then(r => r.json()), fetch("vendor/states-10m.json").then(r => r.json())]);
+  const states = topojson.feature(topo, topo.objects.states);
+  const proj = d3.geoAlbersUsa().fitSize([960, 600], states), path = d3.geoPath(proj);
+  MAPS = states.features.map(f => path(f)).filter(Boolean);
+  GEO = new Map(Object.entries(g).map(([slug, v]) => [slug, proj([v[1], v[0]])]));
+  render();
+}
+function theirs(q, p) {
+  if (q.type === "stance") return new Set(p.stances);
+  if (q.yn) return new Set([q.yn.some(t => p.types.has(t)) ? "yes" : "no"]);
+  const hit = q.opts.filter(o => o[2].some(t => p.types.has(t))).map(o => o[0]);
+  return new Set(hit.length ? hit : q.opts.filter(o => !o[2].length).map(o => o[0]));
+}
+const optLabel = (q, v) => q.type === "stance" ? SL[v] || v : q.yn ? (v === "yes" ? "Yes" : "No") : (q.opts.find(o => o[0] === v) || [, v])[1];
+function matchOf(p) {
+  const qs = QUESTIONS.filter(q => st.answers[q.id] != null);
+  const k = qs.filter(q => theirs(q, p).has(st.answers[q.id])).length;
+  return { k, n: qs.length, s: qs.length ? k / qs.length : null };
+}
+const BINS = [[0.8, 1], [0.6, 0.78], [0.4, 0.56], [0.2, 0.36], [0, 0.18]];
+const binOf = s => BINS.find(b => s >= b[0] - 1e-9);
+function whereMap() {
+  if (!GEO) { loadGeo(); return `<section class="whmap"><h3 class="sub">Where you stand</h3><p class="note">Loading the map…</p></section>`; }
+  const nAns = QUESTIONS.filter(q => st.answers[q.id] != null).length;
+  const M2 = new Map([...PROF].map(([slug, p]) => [slug, matchOf(p)]));
+  const dots = U.filter(u => GEO.get(u.slug)).map(u => ({ u, xy: GEO.get(u.slug), m: M2.get(u.slug) }))
+    .sort((a, b) => (a.m.s ?? 0) - (b.m.s ?? 0) || (a.u.slug === st.mapUni) - (b.u.slug === st.mapUni));
+  const col = m => m.s == null ? "var(--muted)" : `color-mix(in srgb, var(--accent) ${Math.round(100 * binOf(m.s)[1])}%, var(--sunk))`;
+  const off = U.length - dots.length;
+  const svg = `<svg viewBox="0 0 960 600" role="img" aria-label="Map of universities colored by how closely their policies match your answers">
+    ${MAPS.map(d => `<path class="state" d="${d}"/>`).join("")}
+    ${dots.map(({ u, xy, m }) => `<circle cx="${xy[0].toFixed(1)}" cy="${xy[1].toFixed(1)}" r="${u.slug === st.mapUni ? 8 : 5}" fill="${col(m)}" data-mapuni="${u.slug}" class="${u.slug === st.mapUni ? "sel" : ""}"><title>${esc(u.name)}${m.s == null ? "" : ` · matches ${m.k} of ${m.n} answers`}</title></circle>`).join("")}</svg>`;
+  const legend = nAns ? `<div class="mlegend"><span>Share of your answers a university shares:</span>${["0–19%", "20–39%", "40–59%", "60–79%", "80–100%"].map((l, i) => `<span><i style="background:${col({ s: [0.1, 0.3, 0.5, 0.7, 0.9][i] })}"></i>${l}</span>`).join("")}${off ? `<span>${off} universities outside the map (Puerto Rico) are in the list.</span>` : ""}</div>` : `<p class="note">Answer the questions above (or in Draft a policy) to color the map by how closely each university's policies match yours.</p>`;
+  return `<section class="whmap"><h3 class="sub">Where you stand</h3>
+    <p class="note">Each dot is a university. Darker dots share more of your answers, judged from their university-wide, school and computing documents. Click a dot, or a name under "Most similar universities", to compare it with your policy.</p>
+    ${legend}<div class="mapgrid"><div>${svg}</div><aside>${cmpCard(M2, nAns)}</aside></div></section>`;
+}
+function cmpCard(M2, nAns) {
+  const opts = [...U].sort((a, b) => a.name.localeCompare(b.name)).map(u => `<option value="${u.slug}" ${u.slug === st.mapUni ? "selected" : ""}>${esc(u.name)}</option>`).join("");
+  const pick = `<select id="mapuni" aria-label="Pick a university"><option value="">Pick a university…</option>${opts}</select>`;
+  const u = st.mapUni && uniBySlug.get(st.mapUni);
+  if (!u) return `<div class="cmpcard"><h3>Compare with a university</h3>${pick}<p class="note">Or click a dot on the map.</p></div>`;
+  const p = PROF.get(u.slug), m = M2.get(u.slug);
+  const scores = [...M2.values()].filter(x => x.s != null).map(x => x.s);
+  const below = m.s == null ? 0 : scores.filter(s => s < m.s).length;
+  const rows = QUESTIONS.map(q => {
+    const th = [...theirs(q, p)], a = st.answers[q.id];
+    const same = a != null && th.includes(a);
+    return `<tr><td>${esc(q.q)}</td><td>${a == null ? `<span class="note">–</span>` : esc(optLabel(q, a))}</td><td class="${a == null ? "" : same ? "ok" : "no"}">${th.length ? esc(th.map(v => optLabel(q, v)).join(", ")) : "–"}${a == null ? "" : same ? " ✓" : ""}</td></tr>`;
+  }).join("");
+  return `<div class="cmpcard" aria-live="polite"><h3>${esc(u.name)}</h3><span class="note">${esc(u.state || "")} · ${esc(u.type || "")} · <a href="#universities" data-gouni="${u.slug}">open its documents</a></span>
+    ${nAns ? `<div style="margin-top:10px"><span class="big">${m.k} of ${m.n}</span> <span class="note">of your answers match (${Math.round(100 * m.s)}%). It matches you more closely than ${Math.round(100 * below / scores.length)}% of universities.</span></div>` : `<p class="note">Answer the questions to see how this university compares with you.</p>`}
+    <table><thead><tr><th>Decision</th><th>You</th><th>This university</th></tr></thead><tbody>${rows}</tbody></table>${pick}</div>`;
 }
 function labelCard() {
   const n = U.length;
@@ -645,8 +727,10 @@ function labelCard() {
   const mine = chosenTypes();
   let sim = "";
   if (mine.size) {
-    const scores = [...PROF].map(([slug, p]) => { const inter = [...mine].filter(t => p.types.has(t)).length; const uni = new Set([...mine, ...p.types]).size; return [slug, uni ? inter / uni : 0]; }).sort((a, b) => b[1] - a[1]).slice(0, 6);
-    sim = `<div class="lrow thick"><b>Most similar universities</b><span></span></div><div class="sim">${scores.map(([slug, s]) => `<a href="#universities" data-gouni="${slug}">${esc(uniBySlug.get(slug).name)}</a> <span class="count">${Math.round(100 * s)}% overlap</span>`).join("<br>")}</div>`;
+    // D74: same measure as the map (share of your answers the university shares); ties broken by topic overlap
+    const scores = [...PROF].map(([slug, p]) => { const inter = [...mine].filter(t => p.types.has(t)).length; const uni = new Set([...mine, ...p.types]).size; return [slug, matchOf(p), uni ? inter / uni : 0]; })
+      .sort((a, b) => b[1].s - a[1].s || b[2] - a[2]).slice(0, 6);
+    sim = `<div class="lrow thick"><b>Most similar universities</b><span></span></div><div class="sim">${scores.map(([slug, m]) => `<a href="#" data-mapuni="${slug}">${esc(uniBySlug.get(slug).name)}</a> <span class="count">${m.k} of ${m.n} answers match</span>`).join("<br>")}</div>`;
   }
   return `<div class="label-card" aria-live="polite"><h3>AI Policy Facts</h3><div class="lrow thick"><span class="note">Your choice</span><span class="note">Share of ${n} universities</span></div>${rows.join("") || `<p class="note">Answer a question to start your label.</p>`}${sim}</div>`;
 }
@@ -988,6 +1072,8 @@ function render() {
   if (fid) { const el = document.getElementById(fid); if (el) { el.focus(); if (sel) try { el.setSelectionRange(...sel); } catch {} } }
 }
 document.addEventListener("click", e => {
+  const mu = e.target.closest("[data-mapuni]");
+  if (mu) { e.preventDefault(); st.mapUni = mu.dataset.mapuni; render(); return; }
   const sb = e.target.closest("[data-psub],[data-csub],[data-osub],[data-olayer],[data-role],[data-rlayer]");
   if (sb) { for (const k of ["psub", "csub", "osub", "olayer", "role", "rlayer"]) if (sb.dataset[k]) st[{ psub: "pSub", csub: "cSub", osub: "oSub", olayer: "oLayer", role: "role", rlayer: "rLayer" }[k]] = sb.dataset[k]; render(); return; }
   const t = e.target.closest("[data-tab],[data-uni],[data-mview],[data-mcount],[data-cell],[data-gouni],[data-focus],[data-unfocus],[data-cuni],[data-more],#reset,#copyDraft,#dlDraft");
@@ -1019,6 +1105,7 @@ document.addEventListener("change", e => {
   if (t.id === "ustate") { st.uState = t.value; render(); }
   if (t.id === "player") { st.pLayer = t.value; render(); }
   if (t.id === "mlayer") { st.mLayer = t.value; st.mCell = null; render(); }
+  if (t.id === "mapuni") { st.mapUni = t.value || null; render(); }
   if (t.id === "docKind") { st.docKind = t.value; store.set("docKind", t.value); render(); }
   if (t.name && t.name.startsWith("q-")) { st.answers[t.name.slice(2)] = t.value; store.set("answers", st.answers); render(); }
 });
