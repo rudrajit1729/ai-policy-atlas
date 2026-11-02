@@ -50,6 +50,7 @@ h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
 .siteband .wrap { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 24px; padding-block: 14px; }
 .siteband .brand { font-family: var(--f-quote); font-weight: 600; font-size: 1.35rem; letter-spacing: .01em; }
 .siteband .tag { font-size: 0.8125rem; opacity: .85; }
+@media (max-width: 640px) { .siteband .tag { display: none; } }
 .mast { padding-block: 26px 14px; display: grid; gap: 10px; }
 .mast h1 { font-family: var(--f-quote); font-weight: 600; font-size: clamp(1.6rem, 3.2vw, 2.3rem); line-height: 1.15; max-width: 30ch; }
 .mast p { margin: 0; color: var(--muted); max-width: 78ch; }
@@ -212,6 +213,26 @@ table.mx tr.actor th { background: var(--sunk); font-size: 0.75rem; text-transfo
 
 .cell[aria-pressed="true"] { outline: 2px solid var(--accent); }
 .drawer { margin-top: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 14px; display: grid; gap: 10px; }
+/* D73: the matrix scrolls inside its own box, so column headers (top) and row labels (left) stay visible; a cell opens in a side panel */
+.mx-scroll { overflow-x: clip; }
+.mx-scroll table.mx thead th { top: var(--tabh, 48px); z-index: 3; }
+.mx-scroll table.mx { width: 100%; table-layout: fixed; }
+.mx-scroll table.mx th:first-child { width: 190px; }
+.mx-scroll table.mx th.rowh { white-space: normal; }
+/* too wide or narrow screen: the matrix becomes its own scroll box (both axes) with the header pinned inside it */
+.mx-scroll.boxed { max-height: calc(100vh - 190px); min-height: 320px; overflow: auto; }
+.mx-scroll.boxed table.mx { table-layout: auto; }
+.mx-scroll.boxed table.mx thead th { top: 0; }
+table.mx thead th:first-child { left: 0; z-index: 4; }
+table.mx tr.actor th { position: sticky; left: 0; z-index: 2; }
+@media (max-width: 899px) { .drawer.side { width: 100vw; } }
+.drawer.side { position: fixed; top: 0; right: 0; bottom: 0; width: min(500px, 42vw); min-width: min(380px, 100vw); margin: 0; border-radius: 0; border-width: 0 0 0 1px; z-index: 40;
+  overflow-y: auto; align-content: start; box-shadow: -12px 0 32px rgba(0,0,0,.18); padding: 0 18px 24px; overscroll-behavior: contain; }
+.drawer.side .dhead { position: sticky; top: 0; background: var(--surface); padding: 14px 0 10px; border-bottom: 1px solid var(--line); z-index: 1; display: grid; gap: 4px; }
+.drawer.side .dhead .row { display: flex; gap: 10px; align-items: flex-start; justify-content: space-between; }
+.drawer.side .dhead h3 { margin: 0; font-size: 1.05rem; }
+.drawer.side .xbtn { flex: none; width: 32px; height: 32px; border-radius: 50%; border: 1px solid var(--line); background: var(--bg); color: var(--ink); font-size: 1.1rem; line-height: 1; cursor: pointer; }
+.drawer.side .xbtn:hover { border-color: var(--accent); color: var(--accent); }
 
 /* readings, links, focus, courses, draft */
 .reading { border-left: 3px solid var(--accent); background: var(--surface); padding: 10px 14px; margin: 4px 0 14px; font-size: 0.875rem; max-width: 80ch; border-radius: 0 4px 4px 0; }
@@ -537,9 +558,10 @@ function renderMatrix() {
     const byTh = {}; for (const x of list) { const th = (typeById.get(x.type) || {}).theme || "other"; ((byTh[th] ||= {})[x.type] ||= []).push(x); }
     const link = `#matrix/${encodeURIComponent([st.mView, st.mLayer, st.mCell].join("~"))}`;
     const thOrder = M.themes.map(t => t.id).filter(t => byTh[t]).concat(byTh.other ? ["other"] : []);
-    drawer = `<details class="drawer" open aria-live="polite"><summary><h3>${AL[a]} · ${PL[p]}${s ? " · " + SL[s] : ""}</h3> <span class="count">${list.length.toLocaleString()} policies from ${new Set(list.map(x => x.uni)).size} universities</span></summary>
-      <p class="note"><a href="${link}" class="plink">Link to this cell</a> · <button class="linkbtn" data-cell="${esc(st.mCell)}">Close</button></p>
-      ${thOrder.map(th => `<div class="dgroup"><h4>${esc((M.themes.find(t => t.id === th) || { label: "Other" }).label)}</h4>${Object.entries(byTh[th]).sort((x, y) => byRank(typeById.get(x[0]) || {}, typeById.get(y[0]) || {})).map(([tid, xs]) => `<details class="ptype"><summary><div class="hd"><h3>${esc((typeById.get(tid) || { name: tid }).name)}</h3><span class="unibar">${nUnis(new Set(xs.map(x => x.uni)).size)}</span></div></summary><div class="body">${posList(xs, "cell:" + st.mCell + ":" + tid)}</div></details>`).join("")}</div>`).join("")}</details>`;
+    drawer = `<aside class="drawer side" role="dialog" aria-label="Policies in this cell" data-keep="panel:${esc(st.mCell)}"><div class="dhead"><div class="row"><h3>${AL[a]} · ${PL[p]}${s ? " · " + SL[s] : ""}</h3><button class="xbtn" data-cell="${esc(st.mCell)}" aria-label="Close" title="Close (Esc)">×</button></div>
+      <span class="count">${new Set(list.map(x => x.pos)).size.toLocaleString()} policies · ${list.length.toLocaleString()} statements · ${new Set(list.map(x => x.uni)).size} universities</span>
+      <p class="note" style="margin:0"><a href="${link}" class="plink">Link to this cell</a></p></div>
+      ${thOrder.map(th => `<div class="dgroup"><h4>${esc((M.themes.find(t => t.id === th) || { label: "Other" }).label)}</h4>${Object.entries(byTh[th]).sort((x, y) => byRank(typeById.get(x[0]) || {}, typeById.get(y[0]) || {})).map(([tid, xs]) => `<details class="ptype"><summary><div class="hd"><h3>${esc((typeById.get(tid) || { name: tid }).name)}</h3><span class="unibar">${nUnis(new Set(xs.map(x => x.uni)).size)}</span></div></summary><div class="body">${posList(xs, "cell:" + st.mCell + ":" + tid)}</div></details>`).join("")}</div>`).join("")}</aside>`;
   }
   return `<div class="toolbar"><span class="lbl">View</span><div class="seg" role="group"><button data-mview="full" aria-pressed="${st.mView === "full"}">Actor › phase × stance</button><button data-mview="ap" aria-pressed="${st.mView === "ap"}">Actor × phase</button></div>
     <label class="field"><span class="lbl">Layer</span><select id="mlayer"><option value="all">All layers</option>${M.layers.map(l => `<option value="${l}" ${st.mLayer === l ? "selected" : ""}>${LL[l]}</option>`).join("")}</select></label>
@@ -547,7 +569,7 @@ function renderMatrix() {
     ${st.mView === "full" ? `<div class="legend">${M.stances.filter(s => P.some(x => x.stance === s)).map(s => `<div><span class="stance st-${s}">${SL[s]}</span><span class="note">${SDEF[s]}</span></div>`).join("")}</div>` : ""}
     <p class="note">The matrix shows the policy set only (rules, recommendations, facts and warnings). Each cell counts the ${cellU()} for that group and stage and lists its three most common topics. Columns are the overall stance of the document a policy comes from. Rows group who a policy addresses: students, instructors, staff and administrators (TAs, staff, administrators and offices), and everyone (rules addressed to the whole community rather than one role). Select a cell to read its policies, grouped by theme and kind.</p>
     ${matrixReading(cells)}
-    <div class="mx-wrap"><table class="mx"><thead>${head}</thead><tbody>${body}</tbody></table></div>${drawer}`;
+    <div class="mx-wrap mx-scroll" data-keep="matrix"><table class="mx"><thead>${head}</thead><tbody>${body}</tbody></table></div>${drawer}`;
 }
 const cellN = l => st.mCount === "units" ? l.length : st.mCount === "unis" ? new Set(l.map(x => x.uni)).size : new Set(l.map(x => x.pos)).size;
 const cellU = () => ({ pols: "policies", units: "statements", unis: "universities" })[st.mCount] || "policies";
@@ -939,6 +961,10 @@ function renderRoles() {
     <p class="note">${L.length} ${course ? "course" : "institutional"} policies address ${esc(AL[st.role].toLowerCase())}${st.role === "all" ? " (rules for the whole community)" : ""}. Open a stage to read them; open a policy to see every statement behind it. A policy's direction follows how most of its statements word it for this role.</p>
     ${body || `<p class="empty">No policies.</p>`}`;
 }
+function fitMatrix() {
+  for (const w of document.querySelectorAll(".mx-scroll")) { w.classList.remove("boxed"); w.classList.toggle("boxed", innerWidth < 900 || w.scrollWidth > w.clientWidth + 1); }
+}
+addEventListener("resize", () => { clearTimeout(fitMatrix.t); fitMatrix.t = setTimeout(fitMatrix, 150); });
 function render() {
   document.getElementById("tabs").innerHTML = TABS.map(([id, l]) => `<button role="tab" aria-selected="${st.tab === id}" data-tab="${id}">${l}</button>`).join("");
   const f = { overview: renderOverview, universities: renderUniversities, policies: renderPolicies, cpolicies: renderCoursePolicies, other: renderOther, matrix: renderMatrix,
@@ -952,7 +978,13 @@ function render() {
     courses: ["CS course coverage", "Which of the six frame courses have a current public syllabus, and the AI passages found in them."],
     draft: ["Draft a policy", "Answer a few questions to draft a course or department AI policy, with examples of how other universities word each part."],
     label: ["Policy label", "Build a profile of a policy and find universities with similar ones."] };
+  const y = scrollY;
+  const keep = new Map([...document.querySelectorAll("[data-keep]")].map(el => [el.dataset.keep, [el.scrollTop, el.scrollLeft]]));
+  const tb = document.querySelector(".tabbar"); if (tb) document.documentElement.style.setProperty("--tabh", tb.offsetHeight + "px");
   main.innerHTML = focusPanel() + (own || !HEAD[st.tab] ? "" : pageHead(...HEAD[st.tab]) + csvBar(st.tab)) + f();
+  fitMatrix();
+  scrollTo(scrollX, y);
+  for (const el of document.querySelectorAll("[data-keep]")) { const k = keep.get(el.dataset.keep); if (k) [el.scrollTop, el.scrollLeft] = k; }
   if (fid) { const el = document.getElementById(fid); if (el) { el.focus(); if (sel) try { el.setSelectionRange(...sel); } catch {} } }
 }
 document.addEventListener("click", e => {
@@ -974,7 +1006,7 @@ document.addEventListener("click", e => {
   else if (t.dataset.cell) { st.mCell = st.mCell === t.dataset.cell ? null : t.dataset.cell; setHash(st.mCell ? "matrix/" + encodeURIComponent([st.mView, st.mLayer, st.mCell].join("~")) : "matrix"); render(); }
   else if (t.id === "reset") { st.answers = {}; store.set("answers", {}); render(); }
 });
-document.addEventListener("keydown", e => { if ((e.key === "Enter" || e.key === " ") && e.target.dataset && e.target.dataset.cell) { e.preventDefault(); e.target.click(); } });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && st.tab === "matrix" && st.mCell) { st.mCell = null; setHash("matrix"); render(); return; } if ((e.key === "Enter" || e.key === " ") && e.target.dataset && e.target.dataset.cell) { e.preventDefault(); e.target.click(); } });
 document.addEventListener("input", e => {
   const t = e.target;
   if (t.id === "uq") { st.uq = t.value; render(); }
