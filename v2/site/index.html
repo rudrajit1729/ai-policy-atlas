@@ -270,7 +270,7 @@ h3.sub { margin: 18px 0 8px; font-size: 0.95rem; }
 .q { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 14px; display: grid; gap: 8px; margin-bottom: 10px; }
 .q legend { font-weight: 600; padding: 0; }
 .q fieldset { border: 0; margin: 0; padding: 0; display: grid; gap: 6px; }
-.opts { display: flex; flex-wrap: wrap; gap: 6px; }
+.opts { display: flex; flex-wrap: wrap; gap: 6px; align-items: flex-start; align-content: flex-start; }
 .opts label { border: 1px solid var(--line); border-radius: 999px; padding: 4px 11px; cursor: pointer; font-size: 0.8125rem; background: var(--bg); }
 .opts input { position: absolute; opacity: 0; pointer-events: none; }
 .opts input:checked + span { font-weight: 600; }
@@ -586,19 +586,19 @@ function matrixReading(cells) {
 
 // ---------- policy label builder ----------
 const QUESTIONS = [
-  { id: "stance", q: "What is your default stance on AI for graded computing work?", type: "stance" },
-  { id: "who", q: "Who decides what is allowed?", opts: [["dept", "One rule for the unit", ["P01", "P02", "P06"]], ["instr", "Each instructor or assignment", ["P04"]], ["tiers", "Named levels that instructors choose from", ["P05"]]] },
-  { id: "syllabus", q: "Must every syllabus include an AI statement?", yn: ["P09"] },
-  { id: "tutor", q: "May students use AI to learn concepts or debug?", yn: ["P12", "P13", "P14", "P15"] },
-  { id: "code", q: "May students submit AI-generated code?", opts: [["no", "No", ["P19"]], ["cond", "Within stated limits", ["P16"]], ["yes", "Freely", ["P02", "P16"]]] },
-  { id: "exams", q: "Is AI banned on exams and quizzes?", yn: ["P22"] },
-  { id: "disclose", q: "Must students disclose AI use?", opts: [["no", "No requirement", []], ["stmt", "A statement or citation", ["P24"]], ["full", "Prompts, outputs or transcripts", ["P24", "P25", "P26"]]] },
-  { id: "explain", q: "Must students be able to explain their work, with oral or code checks?", yn: ["P30", "P34"] },
-  { id: "detect", q: "How do you treat AI detectors?", opts: [["avoid", "Do not rely on them", ["P39"]], ["use", "Use detection or similarity tools", ["P40"]], ["none", "Not addressed", []]] },
-  { id: "faculty", q: "Does the policy cover instructors' own AI use (grading, materials)?", yn: ["P46", "P47", "P48"] },
-  { id: "privacy", q: "Does it address student data and privacy?", yn: ["P50"] },
-  { id: "equity", q: "Does it address equity and access (no paid tools, opt-outs)?", yn: ["P51"] },
-  { id: "review", q: "Will the policy be reviewed on a schedule?", yn: ["P54"] },
+  { id: "stance", q: "What default stance will your policy take on AI for graded computing work?", type: "stance" },
+  { id: "who", q: "Under your policy, who decides what is allowed?", opts: [["dept", "One rule for the unit", ["P01", "P02", "P06"]], ["instr", "Each instructor or assignment", ["P04"]], ["tiers", "Named levels that instructors choose from", ["P05"]]] },
+  { id: "syllabus", q: "Will your policy require every syllabus to include an AI statement?", yn: ["P09"] },
+  { id: "tutor", q: "Will your policy allow students to use AI to learn concepts or debug?", yn: ["P12", "P13", "P14", "P15"] },
+  { id: "code", q: "Will your policy allow students to submit AI-generated code?", opts: [["no", "No", ["P19"]], ["cond", "Within stated limits", ["P16"]], ["yes", "Freely", ["P02", "P16"]]] },
+  { id: "exams", q: "Will your policy ban AI on exams and quizzes?", yn: ["P22"] },
+  { id: "disclose", q: "What will your policy require students to disclose about their AI use?", opts: [["no", "No requirement", []], ["stmt", "A statement or citation", ["P24"]], ["full", "Prompts, outputs or transcripts", ["P24", "P25", "P26"]]] },
+  { id: "explain", q: "Will your policy require students to explain their work, with oral or code checks?", yn: ["P30", "P34"] },
+  { id: "detect", q: "How will your policy treat AI detectors?", opts: [["avoid", "Do not rely on them", ["P39"]], ["use", "Use detection or similarity tools", ["P40"]], ["none", "Not addressed", []]] },
+  { id: "faculty", q: "Does your policy need to cover instructors' own AI use (grading, materials)?", yn: ["P46", "P47", "P48"] },
+  { id: "privacy", q: "Does your policy need to address student data and privacy?", yn: ["P50"] },
+  { id: "equity", q: "Does your policy need to address equity and access (no paid tools, opt-outs)?", yn: ["P51"] },
+  { id: "review", q: "Will your policy be reviewed on a schedule?", yn: ["P54"] },
 ];
 function uniProfiles() {
   const prof = new Map();
@@ -763,7 +763,7 @@ function renderDraft() {
     <p class="note">Every sentence above is a template matched to your answers, not text from any institution. Under it, each bold sentence is a policy shared by other universities, followed by one university's original wording with a link.</p>
     <div class="toolbar"><button class="btn" id="copyDraft">Copy as text</button><button class="btn" id="dlDraft">Download (.md)</button></div></article>` : `<p class="note">Answer the questions to build your draft. Sections appear in the order a course runs.</p>`;
   window.__draftMD = md;
-  return `${reading(`Your answers become a policy organized by the course lifecycle: your overall approach, what is settled before the course, what the syllabus tells students, what students may do while they work, the rules for assessments, what happens if misuse is suspected, and how the policy is kept current. The answers are shared with the Policy label tab, which shows how common each choice is.`)}
+  return `${reading(`Each question is a decision about your policy. Your answers become a draft organized by the course lifecycle: your overall approach, what is settled before the course, what the syllabus tells students, what students may do while they work, the rules for assessments, what happens if misuse is suspected, and how your policy is kept current. The answers are shared with the Policy label tab, which shows how common each choice is.`)}
     <div class="toolbar"><label class="field"><span class="lbl">Name</span><input id="unitName" value="${esc(st.unitName)}" placeholder="e.g. CS 161 or School of EECS"></label>
     <label class="field"><span class="lbl">Document</span><select id="docKind"><option value="syllabus" ${st.docKind === "syllabus" ? "selected" : ""}>Course syllabus statement</option><option value="dept" ${st.docKind === "dept" ? "selected" : ""}>Department guideline</option></select></label>
     <span class="grow"></span><button class="btn" id="reset">Clear answers</button></div>
