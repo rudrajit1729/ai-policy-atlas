@@ -23,11 +23,25 @@ STG = [("before-course", "Before the course"), ("course-start", "At the start of
        ("background", "Background (facts and context)")]
 LEV = [("university", "University-wide"), ("school", "School or college"), ("computing", "Computing unit"), ("course", "CS course syllabi")]
 LAB = {"university": "U", "school": "S", "computing": "C"}
+# D72: stance tag per policy, from the stance of its statements (prohibit, restrict, permit, encourage, require, neutral).
+# A policy takes its most common non-neutral stance when at least a quarter of its statements take one; otherwise it is
+# "Instructor decides" if its topics are about who decides (P04, P85, CT04), else "No position" (it states a duty or fact without a stance on AI use).
+STANCE = {"prohibit": "Prohibit", "restrict": "Only listed uses", "permit": "Allowed with conditions", "encourage": "Encourage", "require": "Require",
+          "delegates": "Instructor decides", "none": "No position"}
+DECIDES = {"P04", "P85", "CT04"}
 KIND = {"rule": "rule", "recommendation": "recommendation", "fact": "fact or warning"}
 
 
 def kind(q):
     return "fact or warning" if q["cat"] == "fact" else KIND.get(q.get("policy_kind"), q.get("policy_kind") or "")
+
+
+def stance(c, types):
+    n = sum(c.values())
+    nn = {k: v for k, v in c.items() if k in STANCE and k not in ("delegates", "none")}
+    if nn and sum(nn.values()) >= 0.25 * n:
+        return max(nn, key=nn.get)
+    return "delegates" if DECIDES & set(types) else "none"
 
 
 def load():
@@ -36,12 +50,23 @@ def load():
     C = json.loads((D / "courses.json").read_text())
     M = json.loads((D / "meta.json").read_text())
     CP = [q for q in C.get("policies", []) if q["cat"] in SET]
-    lev = defaultdict(set)
+    lev, stc = defaultdict(set), defaultdict(Counter)
     for x in P:
         if x["about_ai"] == "yes" and x.get("pos"):
             lev[x["pos"]].add(x["layer"])
+            stc[x["pos"]][x["unit_stance"]] += 1
     for q in POS:
         q["levels"] = [l for l, _ in LEV if l in lev[q["pid"]]]
+        q["stance"] = stance(stc[q["pid"]], q.get("types", [q["type"]]))
+    cs = defaultdict(Counter)
+    for u in C["universities"]:
+        for sl in u["slots"]:
+            for pp in sl["passages"]:
+                for l in pp.get("labels") or []:
+                    if l.get("pos"):
+                        cs[l["pos"]][l.get("stance")] += 1
+    for q in CP:
+        q["stance"] = stance(cs[q["pid"]], q.get("types", [q["type"]]))
     cnt = Counter()
     for r in csv.DictReader(open(D / "csv" / "policy_set_counts.csv")):
         cnt[(r["level"], r["who it addresses"], r["stage"])] += int(r["policies"])
@@ -96,6 +121,10 @@ def blocks(d):
                     + [["Total"] + [str(lvl_tot[l]) for l, _ in LEV]])),
          ("h3", "When the policies apply"),
          ("table", (["Stage"] + [n for _, n in LEV], [[sn] + [f"{sum(v for (L, a, s), v in cnt.items() if L == l and s == sk)} ({pct(sum(v for (L, a, s), v in cnt.items() if L == l and s == sk), lvl_tot[l])})" for l, _ in LEV] for sk, sn in STG])),
+         ("h3", "Stance of the policies"),
+         ("table", (["Stance", "Institutional", "CS course syllabi"], [[STANCE[st], f"{sum(q['stance'] == st for q in POS)} ({pct(sum(q['stance'] == st for q in POS), len(POS))})",
+                     f"{sum(q['stance'] == st for q in CP)} ({pct(sum(q['stance'] == st for q in CP), len(CP))})"] for st in STANCE])),
+         ("p", "A policy's stance is the stance most of its statements take on AI use. \"No position\" means the policy sets a duty or states a fact without allowing or restricting AI (for example, verify AI output; AI output can be wrong)."),
          ("h2", "4. What the policies show"),
          ("h3", "Little is binding at the top"),
          ("table", (["Level", "Rule", "Recommendation", "Description", "Template"], [
@@ -124,7 +153,7 @@ def blocks(d):
                  f"**How to run the human review on a sample.** Proposal: two reviewers check (a) every policy merged from 5 or more versions ({merged5}), and (b) a random sample of about 10% of the rest, drawn evenly across who it addresses and stage (about 60 institutional, 25 course). For each: does the sentence say what its statements say, are the merges right, are the group and stage right. Report agreement, fix, and extend the review where errors cluster."]),
          ("pagebreak", None),
          ("h2", f"Appendix A. Institutional policy set ({len(POS)})"),
-         ("p", "Grouped by who the policy addresses, then by stage in course order. Within a stage, most widespread first. Universities = how many universities state it. Levels: U university-wide, S school or college, C computing unit. Each sentence summarizes the statements merged into it; the original wording and sources are in policy_set_statements.csv."),
+         ("p", "Grouped by who the policy addresses, then by stage in course order. Within a stage, most widespread first. Universities = how many universities state it. Stance: what the policy does about AI use (Prohibit, Only listed uses, Allowed with conditions, Encourage, Require, Instructor decides, or No position). Levels: U university-wide, S school or college, C computing unit. Each sentence summarizes the statements merged into it; the original wording and sources are in policy_set_statements.csv."),
          ("policies", ("inst", POS)),
          ("pagebreak", None),
          ("h2", f"Appendix B. CS course policy set ({len(CP)})"),
@@ -168,11 +197,11 @@ def to_html(B):
             for an, n, stages in groups(pols):
                 h.append(f'<h3 class="who">{html.escape(an)} <span>{n}</span></h3>')
                 for sn, qs in stages:
-                    cols = "<th>Policy</th><th>Kind</th><th>Universities</th>" + ("<th>Levels</th>" if layer == "inst" else "")
+                    cols = "<th>Policy</th><th>Stance</th><th>Kind</th><th title='Universities'>Univ.</th>" + ("<th>Levels</th>" if layer == "inst" else "")
                     h.append(f'<h4>{html.escape(sn)} <span>{len(qs)}</span></h4><table class="pol"><thead><tr>{cols}</tr></thead><tbody>')
                     for q in qs:
                         lv = f"<td>{' '.join(LAB[l] for l in q['levels'])}</td>" if layer == "inst" else ""
-                        h.append(f"<tr><td>{html.escape(q['sentence'])}</td><td>{kind(q)}</td><td class=n>{q['n_unis']}</td>{lv}</tr>")
+                        h.append(f"<tr><td>{html.escape(q['sentence'])}</td><td><span class='st st-{q['stance']}'>{STANCE[q['stance']]}</span></td><td>{kind(q)}</td><td class=n>{q['n_unis']}</td>{lv}</tr>")
                     h.append("</tbody></table>")
     css = """:root{--bg:#fbfaf7;--ink:#1d2329;--mute:#5b6570;--line:#d9d6cf;--head:#f0ede6;--acc:#1f5f8b}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#15181b;--ink:#e6e3dd;--mute:#9aa3ad;--line:#33383d;--head:#1f2428;--acc:#7fb3d9}}
@@ -184,7 +213,15 @@ h4{font:600 13px/1.4 system-ui,sans-serif;text-transform:uppercase;letter-spacin
 h3 span,h4 span{font:500 12px system-ui,sans-serif;color:var(--mute);margin-left:6px}h3.who{color:var(--acc);font-size:19px;margin-top:34px}
 table{width:100%;border-collapse:collapse;margin:8px 0 14px;font:13.5px/1.45 system-ui,-apple-system,sans-serif}
 th,td{border-bottom:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}th{background:var(--head);font-weight:600}
-td.n{text-align:right;white-space:nowrap}table.pol td:nth-child(2){white-space:nowrap;color:var(--mute)}
+td.n{text-align:right}table.pol{table-layout:fixed}table.pol th:nth-child(1){width:48%}table.pol th:nth-child(2){width:21%}table.pol th:nth-child(3){width:15%}
+table.pol th:nth-child(n+4){width:8%}table.pol td:nth-child(3){color:var(--mute)}table.pol td{overflow-wrap:break-word;hyphens:auto}table.pol th{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+@media (max-width:640px){table.pol{font-size:12px}table.pol th:nth-child(1){width:40%}table.pol th:nth-child(2){width:23%}table.pol th:nth-child(3){width:17%}
+table.pol th:nth-child(n+4){width:10%}table.pol th,table.pol td{padding:5px 4px}.st{white-space:normal}}
+.st{display:inline-block;max-width:100%;font-size:11.5px;line-height:1.3;padding:1px 7px;border-radius:9px;border:1px solid var(--line)}
+.st-prohibit{background:#f6dcdc;border-color:#e3b3b3;color:#7a1f1f}.st-restrict{background:#f8e9d2;border-color:#e6c89a;color:#6e4510}
+.st-permit{background:#dcefe0;border-color:#b2d6ba;color:#1f5a2e}.st-encourage{background:#d6ecef;border-color:#a9d2d8;color:#145560}
+.st-require{background:#e3def3;border-color:#c3b8e3;color:#3d2c7a}.st-delegates{background:#dde6f2;border-color:#b5c7e0;color:#1f3f6b}.st-none{color:var(--mute)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .st:not(.st-none){filter:brightness(.85) saturate(.9)}}
 li{margin:4px 0}.bar{font:13px system-ui,sans-serif;display:flex;gap:14px;flex-wrap:wrap;margin:0 0 18px}.bar a{color:var(--acc)}
 .tw{overflow-x:auto}
 @media print{:root{--bg:#fff;--ink:#000;--head:#eee}.bar{display:none}main{max-width:none;padding:0}body{font-size:11pt}
@@ -262,9 +299,9 @@ def to_docx(B, path):
                     r = p.add_run(f"{sn} ({len(qs)})")
                     r.bold, r.font.color.rgb = True, RGBColor(0x5B, 0x65, 0x70)
                     if layer == "inst":
-                        table(["Policy", "Kind", "Universities", "Levels"], [[q["sentence"], kind(q), q["n_unis"], " ".join(LAB[l] for l in q["levels"])] for q in qs], [4.4, 1.1, 0.8, 0.6])
+                        table(["Policy", "Stance", "Kind", "Universities", "Levels"], [[q["sentence"], STANCE[q["stance"]], kind(q), q["n_unis"], " ".join(LAB[l] for l in q["levels"])] for q in qs], [3.6, 1.2, 1.0, 0.8, 0.5])
                     else:
-                        table(["Policy", "Kind", "Universities"], [[q["sentence"], kind(q), q["n_unis"]] for q in qs], [5.0, 1.1, 0.8])
+                        table(["Policy", "Stance", "Kind", "Universities"], [[q["sentence"], STANCE[q["stance"]], kind(q), q["n_unis"]] for q in qs], [4.1, 1.2, 1.0, 0.8])
     doc.save(path)
 
 
