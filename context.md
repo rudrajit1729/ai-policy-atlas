@@ -86,7 +86,7 @@ _Last updated: 2026-10-05 (end of session 1)_
 - **Stance columns:** prohibit · restrict · permit · encourage · require · delegates.
 - **Matrix:** two views, full actor › phase × stance, and actor × phase.
 - **Policy-label builder:** a checklist that produces a profile plus similar universities.
-- **Delivery:** a private GitHub repo under rudrajit1729 (ask the PI before pushing; render locally first) plus the claude.ai Artifact site (a standalone HTML app). The living Excel file is `v2/exports/atlas_v2.xlsx`, rebuilt after every university.
+- **Delivery:** (superseded by D71) a private GitHub repo under rudrajit1729 (ask the PI before pushing; render locally first) plus the claude.ai Artifact site (a standalone HTML app). The living Excel file is `v2/exports/atlas_v2.xlsx`, rebuilt after every university.
 - **Autonomy (PI 2026-10-25):** Claude judges document quality, then codes, then runs the audit without asking. Surface only decisions that are genuinely the PI's, plus the 40% usage notification.
 - **Run setup (PI 2026-10-25, latest):**
   - Use a cheaper model (Sonnet 5.5) for agents.
@@ -196,3 +196,5 @@ PI's idea: we go top-down first (university → school → department). Where th
 **Policies, final (D62-D65, 2026-11-02):** `v2/positions/final.json` is the source the app, both Excel files and the findings page read: 1,062 institutional policies (merged across types; stage or background; actor groups students / instructors / staff and administrators / everyone) and 317 course policies. Rebuild order: `python3 v2/tools/synthesis.py apply`, then `build_v2.py`, `export_xlsx.py`, `build_course_xlsx.py`, `build_site_data.py`, `build_findings_page.py`. The headless `claude` CLI login expired on 2026-11-02 (run `claude auth login` in a terminal to restore background workers); until then `SYN_MODE=files` writes prompts for in-session subagents.
 
 **Website (D68, 2026-11-02):** the atlas is the local site `v2/site/index.html` (double-click `Open AI Policy Atlas.command`, or `python3 -m http.server 8792 --directory v2/site`). Policy set = rules + recommendations + facts (675 institutional, 229 course); other coded text on its own page. Rebuild after any data change: `synthesis.py apply`, `build_v2.py`, `export_site_csv.py`, `export_xlsx.py`, `build_course_xlsx.py`, `build_site_data.py`, `build_findings_page.py`, then `build_report.py` (Report tab, printable HTML and Word, D70).
+
+**Public repo and site (D71, 2026-11-02):** https://github.com/rudrajit1729/ai-policy-atlas (branch main) and https://rudrajit1729.github.io/ai-policy-atlas/ (GitHub Pages, redeploys when v2/site changes). After rebuilding, commit and push to update the live site.

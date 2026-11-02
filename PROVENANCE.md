@@ -202,7 +202,7 @@ Append-only record of how the corpus and synthesis were produced: who or what di
   - a proper thematic analysis (codebook, themes, patterns);
   - an actor × lifecycle × document-stance matrix. Stance columns: Prohibit · Restrict (only with explicit permission) · Permit with conditions · Encourage · Require/integrate · Delegates to instructor;
   - a "nutrition label" builder (checklist → generated profile plus similar schools).
-- **Delivery:** a private GitHub repo under rudrajit1729 (data, code, site, Excel workbook). The interactive site stays on the claude.ai Artifact link.
+- **Delivery:** (superseded by D71) a private GitHub repo under rudrajit1729 (data, code, site, Excel workbook). The interactive site stays on the claude.ai Artifact link.
 - **Versioning:** the v1 corpus and dashboard are kept as-is for the record. v2 lives in `v2/`.
 
 ## 2026-10-25: v2 dry run and full-run setup
@@ -323,3 +323,4 @@ Append-only record of how the corpus and synthesis were produced: who or what di
 ## 2026-11-02 Meeting brief and repo prep
 - Wrote v2/MEETING_BRIEF.md (demo order, talking points, questions for advisors, open items). Added .DS_Store, __pycache__ and *.pyc to .gitignore. No git repo yet; private GitHub repo awaits PI approval.
 - 2026-11-02 D70: tools/build_report.py writes v2/site/report.html (Report tab) and AI_Policy_Atlas_report.docx (site/data and exports): status, pipeline, numbers, findings, CS vs university/school, 2 advisor decisions, all 675 + 229 policies grouped by who and stage. MEETING_BRIEF decisions trimmed to 2.
+- 2026-11-02 D71: PI asked to publish. Public repo https://github.com/rudrajit1729/ai-policy-atlas (main); site on GitHub Pages https://rudrajit1729.github.io/ai-policy-atlas/ via .github/workflows/pages.yml (deploys v2/site). Excluded: .cache/, logs/, .claude/. Root README.md added.
