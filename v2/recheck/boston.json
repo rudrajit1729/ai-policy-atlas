@@ -1,0 +1,83 @@
+{
+ "slug": "boston",
+ "university": "Boston University",
+ "units_searched": [
+  {
+   "unit": "Faculty of Computing & Data Sciences (CDS)",
+   "layer": "computing",
+   "site": "https://www.bu.edu/cds-faculty/",
+   "queries": [
+    "site:cs.bu.edu generative AI policy collaboration",
+    "site:bu.edu/cds-faculty AI policy GAIA",
+    "Boston University Metropolitan College computer science generative AI policy academic conduct"
+   ],
+   "pages_checked": [
+    "https://www.bu.edu/cds-faculty/culture-community/gaia-policy/"
+   ],
+   "result": "found",
+   "note": "GAIA policy, adopted by unanimous faculty vote in March 2023; covers the whole unit."
+  },
+  {
+   "unit": "Department of Computer Science (CAS)",
+   "layer": "computing",
+   "site": "https://www.bu.edu/cs/",
+   "queries": [
+    "site:cs.bu.edu generative AI policy collaboration",
+    "Boston University Computer Science department \"academic conduct\" AI generative policy CAS CS courses bu.edu/cs"
+   ],
+   "pages_checked": [
+    "https://www.bu.edu/cs/undergraduate/",
+    "https://cs.bu.edu/ (DNS failure)",
+    "https://www.bu.edu/cs/undergraduate/academic-policies/ (404)"
+   ],
+   "result": "none-found",
+   "note": "No department-level AI rule; CDS GAIA policy is the one surfaced."
+  },
+  {
+   "unit": "Metropolitan College Computer Science",
+   "layer": "computing",
+   "site": "https://www.bu.edu/csmet/",
+   "queries": [
+    "Boston University Metropolitan College computer science generative AI policy academic conduct",
+    "bu.edu/eng electrical computer engineering generative AI policy course syllabus statement College of Engineering"
+   ],
+   "pages_checked": [
+    "https://www.bu.edu/csmet/",
+    "https://www.bu.edu/csmet/academic-programs/met-computer-science-academic-policies-manual/"
+   ],
+   "result": "none-found",
+   "note": "Academic Policies Manual has no AI rule (per fetch summary)."
+  },
+  {
+   "unit": "Electrical & Computer Engineering (College of Engineering)",
+   "layer": "computing",
+   "site": "https://www.bu.edu/eng/academics/departments/electrical-and-computer-engineering/",
+   "queries": [
+    "Boston University College of Engineering ECE department generative AI policy students"
+   ],
+   "pages_checked": [
+    "https://www.bu.edu/eng/academics/departments/electrical-and-computer-engineering/"
+   ],
+   "result": "none-found",
+   "note": "No AI rule on department page; none surfaced in search."
+  }
+ ],
+ "documents": [
+  {
+   "id": "bu-gaia",
+   "layer": "computing",
+   "unit": "Faculty of Computing & Data Sciences",
+   "title": "CDS Generative AI Assistance (GAIA) Policy",
+   "url": "https://www.bu.edu/cds-faculty/culture-community/gaia-policy/",
+   "date_or_term": "adopted March 2023",
+   "text_file": ".cache/text/v2-bu-gaia.txt",
+   "quality": "good",
+   "quality_note": "Already fetched in first collection; not re-fetched. Unit-wide.",
+   "in_first_collection": true
+  }
+ ],
+ "course_examples": [
+  "https://www.bu.edu/csmet/files/2023/07/MET-CS-793-Syllabus-1.pdf (MET CS 793 syllabus; not fetched, AI statement unverified)"
+ ],
+ "notes": "First collection's finding (CDS GAIA) confirmed; no additional computing-unit policy found. Did not run the fetch_text step, since the only qualifying document was already collected. Satisfied by the cached copy; I did not re-read its text."
+}

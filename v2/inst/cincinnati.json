@@ -1,0 +1,552 @@
+{
+ "university": "University of Cincinnati",
+ "slug": "cincinnati",
+ "state": "OH",
+ "type": "R1",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "cincinnati-ai-guidelines",
+   "layer": "university",
+   "unit": "AI at UC (AI Enablement Community of Practice)",
+   "course": null,
+   "title": "Guidelines on AI use",
+   "url": "https://ai.uc.edu/about/ai-guidelines",
+   "date_or_term": "undated (2026 footer)",
+   "stance_why": "The page sets no default rule and sends students to instructors and syllabi: \"Check with faculty members\" and \"Review course syllabi\". It calls itself \"a compass\" and not \"a list of restrictions\", so the decision is delegated.",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "General UC guidance with sections for general use, students and research. It stresses UC-licensed tools, public data only, and checking instructors and syllabi before using AI. It sets no course-level AI stance.",
+   "units": [
+    {
+     "why": "The opening line frames the guidance as \"a compass\" and not \"a list of restrictions\", which sets the document's purpose and principles; this is an institution-level framework, so P56, not a rule.",
+     "anchor": "not intended as a list of restrictions, but as a compass",
+     "frag_start": "This information is not",
+     "frag_end": "ethical and practical landscape of AI",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "governance",
+      "rationale"
+     ]
+    },
+    {
+     "why": "\"We champion academic integrity, discovery, and human-centered responsibility\" states the principles behind UC's AI approach, an institutional principles statement (P56) rather than a rule.",
+     "anchor": "We champion academic integrity, discovery, and human-centered responsibility",
+     "frag_start": "We champion academic integrity",
+     "frag_end": "responsibility as AI evolves",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "governance",
+      "rationale"
+     ],
+     "resolution_why": "Only coder B found this passage (intro blurb: \"We champion academic integrity, discovery, and human-centered responsibility\"). Coder A coded the near-duplicate \"built on the pillars of academic integrity...\" sentence instead and I dropped it as a repeat of the same principle. The statement is a real institution-level principles statement, so P56 stands."
+    },
+    {
+     "why": "\"As this field evolves, so will our approach\" says the guidance is provisional and invites participation (\"ongoing conversation\"), matching P54.",
+     "anchor": "As this field evolves, so will our approach",
+     "frag_start": "As this field evolves, so",
+     "frag_end": "ongoing conversation",
+     "policy": null,
+     "actor": "all",
+     "phase": "over-time",
+     "modality": "informs",
+     "policy_type": "P54",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "\"Log into UC tools with your UC credentials\" directs users to university-licensed AI tools; institution-wide, so P92 and not the course-tool type P17.",
+     "anchor": "Log into UC tools with your UC credentials",
+     "frag_start": "Log into UC tools with",
+     "frag_end": "privacy and security",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P92",
+     "unit_stance": "encourage",
+     "topics": [
+      "approved-tools",
+      "privacy-data"
+     ],
+     "resolution_why": "A coded phase during-work, B general; both P92, should, encourage. The source tells users to log into UC tools with UC credentials when using AI, an action taken while doing work, so during-work. The anchor alone states the rule, so policy is null (A had copied the anchor into policy)."
+    },
+    {
+     "why": "The text says licensing agreements \"offer privacy-protected access to approved AI and Generative AI tools\"; it states that university-licensed tools exist and why to use them, so P92 (use university-licensed or approved tools), as a fact (informs) and not a rule.",
+     "anchor": "privacy-protected access to approved AI and Generative AI tools",
+     "frag_start": "The university's software licensing agreements",
+     "frag_end": "administrative use",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P92",
+     "unit_stance": "neutral",
+     "topics": [
+      "approved-tools",
+      "privacy-data"
+     ],
+     "resolution_why": "A coded P92 permit; B coded P50 neutral. The sentence sits under the heading \"Sign into UC-licensed tools\" and explains why to use the licensed, approved tools, which is what P92 covers; P50 is about protecting data content, which the next section covers. It permits nothing new, so unit_stance is neutral."
+    },
+    {
+     "why": "\"Neither controlled nor restricted data are approved for use in AI tools\" bans classes of data from AI tools; a data-protection rule, P50.",
+     "anchor": "Neither controlled nor restricted data are approved for use in AI tools",
+     "frag_start": "Neither controlled nor restricted",
+     "frag_end": "use in AI tools",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "prohibit",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "Coders agreed on type, actor, phase and modality; stance differed (A prohibit, B restrict). \"Neither controlled nor restricted data are approved for use in AI tools\" bans those data classes outright, as the directory-data sentence does, so prohibit."
+    },
+    {
+     "why": "The instruction to \"Verify that the data you intend to interact with is classified\" as Public before using AI is a pre-use data check, P50.",
+     "anchor": "Verify that the data you intend to interact with is classified",
+     "frag_start": "Verify that the data you",
+     "frag_end": "before using AI or Generative AI tools",
+     "policy": "Verify that the data intended for use with AI or Generative AI tools is classified as Public under the Data Classification Policy before using those tools.",
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"When in doubt, seek guidance from the Office of Information Security\" names an office to ask about data classification when unsure; it is a data-protection instruction, so P50, not P10 (which is ask-the-instructor).",
+     "anchor": "When in doubt, seek guidance from the Office of Information Security",
+     "frag_start": "When in doubt, seek guidance",
+     "frag_end": "Office of Information Security",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ],
+     "fit_note": "Asks users to consult the Information Security office about data classification, not the instructor about allowed AI use; coder A coded this P10.",
+     "resolution_why": "Only coder A found this (as P10 with a fit_note). It is a real instruction in the source. It tells users where to ask about data classification, which the sentences around it (P50) are about; P10 is about asking the instructor, so I recoded P50 and kept A's note."
+    },
+    {
+     "why": "\"UC student directory data is not approved for use in AI tools\" bans a specific data class from AI tools; a privacy rule, P50.",
+     "anchor": "UC student directory data is not approved for use in AI tools",
+     "frag_start": "UC student directory data",
+     "frag_end": "use in AI tools",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "prohibit",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"exercise caution to avoid inadvertently sharing personal information\" is advice on protecting personal data, P50.",
+     "anchor": "exercise caution to avoid inadvertently sharing personal information",
+     "frag_start": "even when dealing with public",
+     "frag_end": "analyzed",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "A coded unit_stance restrict, B neutral; type, actor, phase and modality agree. \"Exercise caution\" is advice, not a ban, so neutral."
+    },
+    {
+     "why": "\"complies with legal requirements, copyright laws, and ethical standards\" ties AI use to existing law; P77 rather than P52 because it is a general compliance duty, not a rule about ownership of output.",
+     "anchor": "complies with legal requirements, copyright laws, and ethical standards",
+     "frag_start": "Ensure that your use of",
+     "frag_end": "ethical standards",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "intellectual-property",
+      "ethics"
+     ],
+     "resolution_why": "A coded phase during-work, B general. The sentence (\"Adhere to legal and ethical standards\") states a general duty that covers all AI use, so general. Type P77 agreed; B's anchor kept because A's was cut at 15 words."
+    },
+    {
+     "why": "Students are told to \"Communicate with your instructors about the acceptability and appropriate use\" of AI before using it; this is ask-the-instructor guidance, P10.",
+     "anchor": "Communicate with your instructors about the acceptability and appropriate use",
+     "frag_start": "Communicate with your instructors about",
+     "frag_end": "in your coursework",
+     "policy": null,
+     "actor": "student",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P10",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "Faculty \"can provide clear guidance about how these tools may or may not fit into their learning objectives\"; the university leaves acceptability to instructors, P04.",
+     "anchor": "how these tools may or may not fit into their learning objectives",
+     "frag_start": "Faculty members can provide clear",
+     "frag_end": "evaluation criteria",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "informs",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion"
+     ],
+     "fit_note": "Also ties the decision to the course learning objectives and evaluation criteria (P83).",
+     "resolution_why": "A coded phase general, B course-start; type P04 and actor instructor agree. Faculty are said to \"provide clear guidance\" about fit with learning objectives, which is communicating expectations, so course-start."
+    },
+    {
+     "why": "\"Carefully read the syllabi for each of your courses\" makes students responsible for finding each course's AI rules, P78.",
+     "anchor": "Carefully read the syllabi for each of your courses",
+     "frag_start": "Carefully read the syllabi for",
+     "frag_end": "beginning of the term",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P78",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"or reach out to your instructor if you're unsure\" tells students to ask when the syllabus is unclear, P10.",
+     "anchor": "reach out to your instructor if you're unsure",
+     "frag_start": "Look for sections on assignments",
+     "frag_end": "if you're unsure",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P10",
+     "unit_stance": "neutral",
+     "topics": [
+      "clarify-with-instructor"
+     ]
+    },
+    {
+     "why": "\"should align with the UC Student Code of Conduct\" binds student AI use to the existing code; P77 (existing university policy), since it does not say AI misuse is misconduct outright.",
+     "anchor": "should align with the UC Student Code of Conduct",
+     "frag_start": "The responsible use of technology",
+     "frag_end": "Student Code of Conduct",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "academic-integrity"
+     ]
+    },
+    {
+     "why": "\"Investigators are encouraged to indicate ... the extent to which ... generative AI technology was used\" is a disclosure request for research proposals; P62 (research use).",
+     "anchor": "Investigators are encouraged to indicate in the project description",
+     "frag_start": "Investigators are encouraged to indicate",
+     "frag_end": "develop their proposal",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P62",
+     "unit_stance": "permit",
+     "topics": [
+      "research-use",
+      "disclosure-citation"
+     ],
+     "fit_note": "Also a disclosure-of-AI-use request (P24), but for research proposals, not student submissions.",
+     "resolution_why": "A coded phase during-work, B general. Investigators are asked to indicate AI use in the project description they are writing, so during-work. Type P62 and should/permit agree. Kept A's fit_note."
+    },
+    {
+     "why": "NSF and NIH reviewers are told to \"pay attention\" to notices, one of which prohibits generative AI in NIH peer review; this defers to funder rules, which P62 covers.",
+     "anchor": "If you serve as an NSF or NIH reviewer, please pay attention",
+     "frag_start": "If you serve as an",
+     "frag_end": "following notices",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P62",
+     "unit_stance": "neutral",
+     "topics": [
+      "research-use"
+     ],
+     "resolution_why": "A coded phase during-work, B general. The sentence points reviewers to funder notices and is not about a work step, so general. Type P62 agreed. A also listed the NIH notice title as a separate unit (\"Use of Generative Artificial Intelligence Technologies Prohibited in NIH Peer Review Process\"); it is a link title in the same sentence's notices, so I folded it into this unit and dropped it."
+    }
+   ]
+  },
+  {
+   "id": "cincinnati-ai-policies",
+   "layer": "university",
+   "unit": "UCIT / AI at UC",
+   "course": null,
+   "title": "AI Applicable Policies",
+   "url": "https://www.uc.edu/about/ucit/software-tools/ai/guidelines/policies.html",
+   "date_or_term": "undated",
+   "stance_why": "The page sets no stance on whether AI may be used. It lists existing policies that apply to AI (e.g. \"The Acceptable Use policy is applicable to the use of AI\"), so it carries other rules over and neither allows nor bans AI.",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "A list of existing UC policies (data governance, acceptable use, accessibility, security review, conduct, export control) stated to apply to AI use. It adds no AI-specific teaching rules.",
+   "units": [
+    {
+     "why": "The page says it \"ensures AI enablement across the institution aligns with the university's broader data governance and information security standards\", a statement of scope and purpose, P56.",
+     "anchor": "ensures AI enablement across the institution aligns with the university's broader data governance",
+     "frag_start": "This ensures AI enablement across",
+     "frag_end": "security standards",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "governance",
+      "privacy-data"
+     ],
+     "resolution_why": "Only coder B found this scope statement (\"ensures AI enablement across the institution aligns with the university's broader data governance and information security standards\"). It is a real statement of purpose, P56. Coder A's extra unit (federal and state laws limit access to data) says nothing about AI use and was dropped."
+    },
+    {
+     "why": "\"are required to comply with these policies while utilizing AI\" makes existing security policies binding for AI use, P77.",
+     "anchor": "are required to comply with these policies while utilizing AI",
+     "frag_start": "All persons with access to",
+     "frag_end": "utilizing AI at the university",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data",
+      "governance"
+     ],
+     "resolution_why": "A coded phase during-work, B general; type, actor and modality agree (All persons ... required to comply with these policies). The page applies existing policies to AI as a standing scope rule, not a step in doing work, so general."
+    },
+    {
+     "why": "\"The Data Governance and Classification Policy is applicable when using AI\" extends an existing data policy to AI, P77.",
+     "anchor": "The Data Governance and Classification Policy is applicable when using AI",
+     "frag_start": "The Data Governance and Classification",
+     "frag_end": "applicable when using AI",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "A coded phase during-work, B general; type, actor and modality agree (Data Governance policy). The page applies existing policies to AI as a standing scope rule, not a step in doing work, so general."
+    },
+    {
+     "why": "\"The Acceptable Use policy is applicable to the use of AI\" extends the acceptable-use policy to AI, P77.",
+     "anchor": "The Acceptable Use policy is applicable to the use of AI",
+     "frag_start": "Access to and usage of",
+     "frag_end": "applicable to the use of AI",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "governance"
+     ],
+     "resolution_why": "A coded phase during-work, B general; type, actor and modality agree (Acceptable Use policy). The page applies existing policies to AI as a standing scope rule, not a step in doing work, so general."
+    },
+    {
+     "why": "The EIT Accessibility Policy sets standards for \"design, development, acquisition and use of electronic and information technology resources, including AI\", so P97.",
+     "anchor": "design, development, acquisition and use of electronic and information technology resources, including AI",
+     "frag_start": "This policy and related procedures",
+     "frag_end": "including AI",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P97",
+     "unit_stance": "neutral",
+     "topics": [
+      "equity-access"
+     ],
+     "resolution_why": "A coded phase before-course, B general; P97 and informs agree. The sentence defines the scope of the accessibility policy (design, acquisition and use incl. AI), so general."
+    },
+    {
+     "why": "Security Review requires risk assessments for IT solutions \"including AI\"; this is institutional review of AI tools, P65.",
+     "anchor": "Information security risk assessments",
+     "frag_start": "Security Review Information security risk",
+     "frag_end": "mitigate the identified risk",
+     "policy": "Information security risk assessments (Information Security Reviews) are necessary to identify and document information security risk related to new or existing university information systems or IT solutions, including AI, and provide recommendations to mitigate the identified risk.",
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P65",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data",
+      "governance"
+     ],
+     "resolution_why": "A coded modality informs, B must; type P65 and phase agree. The source says risk assessments \"are necessary\" for new or existing IT solutions including AI, which is a requirement, so must. B's normalized policy kept; it stays within the source."
+    },
+    {
+     "why": "\"Students and employees ... are required to comply with these policies while utilizing AI\" makes conduct rules binding on AI use, P77.",
+     "anchor": "are required to comply with these policies while utilizing AI",
+     "frag_start": "Students and employees who access",
+     "frag_end": "utilizing AI at the university",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics",
+      "governance"
+     ]
+    },
+    {
+     "why": "\"The Student Code of Conduct is applicable to the use of AI\" ties student AI use to the code and its sanctions; P77 rather than P36 because it does not itself call any AI use misconduct.",
+     "anchor": "The Student Code of Conduct is applicable to the use of AI",
+     "frag_start": "The Student Code of Conduct is",
+     "frag_end": "use of AI",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "academic-integrity",
+      "integrity-sanctions"
+     ],
+     "resolution_why": "A coded phase when-misuse, B general. The sentence only says the Student Code of Conduct \"is applicable to the use of AI\"; sanctions are named in the description of the code but not for AI misuse, so general."
+    },
+    {
+     "why": "\"The use of AI must comply with Export Control Regulations\" for students is a legal compliance rule, P77.",
+     "anchor": "The use of AI must comply with Export Control Regulations",
+     "frag_start": "All students, volunteers, and visitors",
+     "frag_end": "Export Control Regulations",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "governance",
+      "intellectual-property"
+     ],
+     "resolution_why": "A coded phase during-work, B general; type, actor and modality agree (Student export control). The page applies existing policies to AI as a standing scope rule, not a step in doing work, so general."
+    },
+    {
+     "why": "Employees \"may receive disciplinary action, up to and including termination, for conduct and/or rules violations\" under the conduct rules that apply to AI use; a consequence under existing policy, P77.",
+     "anchor": "An employee may receive disciplinary action, up to and including termination",
+     "frag_start": "An employee may receive disciplinary",
+     "frag_end": "rules violations",
+     "policy": null,
+     "actor": "ta-staff",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "fit_note": "States sanctions for employees under the conduct rule, not AI-specific (P37-like); both coders noted this.",
+     "resolution_why": "Coders agreed on all codes. Merged fit notes from A and B."
+    },
+    {
+     "why": "\"AI may not be used in a manner that creates a conflict of interest\" is a conduct rule on employees' AI use, P77 (existing conflict-of-interest policy).",
+     "anchor": "AI may not be used in a manner that creates a conflict of interest",
+     "frag_start": "collective bargaining agreement or for whom",
+     "frag_end": "conflict of interest",
+     "policy": null,
+     "actor": "ta-staff",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P77",
+     "unit_stance": "restrict",
+     "topics": [
+      "ethics"
+     ],
+     "fit_note": "Bans a use that creates a conflict of interest rather than deception or malice; coded P77 because it applies the existing conflict-of-interest policy (coder A coded P74).",
+     "resolution_why": "A coded P74 prohibit with phase during-work; B coded P77 restrict with phase general. The sentence follows \"The UC Conflict of Interest policy is applicable to employees\" and applies that existing policy to AI; P74 covers deception, fabrication or malice, which a conflict of interest is not, so P77. It bans one manner of use, so restrict; general phase."
+    },
+    {
+     "why": "\"AI may not be used to engage in any form of harassment\" is a general ban on malicious AI use, P74.",
+     "anchor": "AI may not be used to engage in any form of harassment",
+     "frag_start": "AI may not be used",
+     "frag_end": "form of harassment",
+     "policy": null,
+     "actor": "ta-staff",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P74",
+     "unit_stance": "prohibit",
+     "topics": [
+      "ethics"
+     ],
+     "resolution_why": "A coded phase during-work, B general; P74, must-not, prohibit agree. A general ban on harassment through AI, so general."
+    },
+    {
+     "why": "\"The use of AI must comply with Export Regulations\" for faculty and staff is the employee version of the export-control compliance rule, P77.",
+     "anchor": "The use of AI must comply with Export",
+     "frag_start": "All faculty, staff, volunteers, and visitors",
+     "frag_end": "comply with Export Regulations",
+     "policy": null,
+     "actor": "ta-staff",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "governance",
+      "intellectual-property"
+     ],
+     "resolution_why": "A coded phase during-work, B general; type, actor and modality agree (Faculty export control). The page applies existing policies to AI as a standing scope rule, not a step in doing work, so general."
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Reconciled from coders A and B. Two university-layer documents; no school or computing-unit AI policy found; course layer deferred. Neither document states a classroom AI stance; both delegate to instructors/syllabi and carry over existing policy."
+}

@@ -1,0 +1,170 @@
+{
+ "university": "University of Dayton",
+ "slug": "dayton",
+ "state": "OH",
+ "type": "R1",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "dayton-honor-code",
+   "layer": "university",
+   "unit": "Academic Honor Code (Academic Catalog, Office of the Provost)",
+   "course": null,
+   "title": "The Academic Honor Code",
+   "url": "https://catalog.udayton.edu/undergraduate/generalinformation/academicinformation/theacademichonorcode/",
+   "date_or_term": "2026-2027 Academic Catalog",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "The Academic Honor Code defines AI use that breaks instructor or university guidelines, or is not expressly permitted by the instructor, as cheating. It sets no AI rule of its own: whether and how AI is allowed varies by course and is the instructor's call, and students must check with the instructor and keep up with changing guidelines. The rest of the code (procedures, appeals) is general and not AI-specific.",
+   "stance_why": "Section III.H says \"How and whether instructors permit the use of AI products will vary widely from course to course, and is always subject to each instructor's authority and guidelines\", so the document sets no stance itself and hands the decision to instructors (delegates), while backing it with a fallback ban on AI \"not expressly permitted by the instructor\". No tiers or templates are offered.",
+   "units": [
+    {
+     "why": "The cheating definition says cheating \"also consists of the use of artificial intelligence (AI) products in a way that violates an instructor's guidelines\"; it classifies improper AI use as misconduct, so it is a P36 rule binding students at the point of misuse (when-misuse), stated as a prohibition.",
+     "anchor": "use of artificial intelligence (AI) products in a way that violates an instructor’s guidelines",
+     "frag_start": "Cheating also consists of the",
+     "frag_end": "(see III.H)",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "prohibit",
+     "topics": [
+      "integrity-sanctions",
+      "prohibited-uses",
+      "instructor-discretion"
+     ],
+     "resolution_why": "Both coders: student, when-misuse, must-not, P36, prohibit. Source III.A: 'Cheating also consists of the use of artificial intelligence (AI) products in a way that violates an instructor's guidelines', a classification of unauthorized AI use as cheating, so P36. Only the topic lists differed; the union of the two is kept."
+    },
+    {
+     "why": "The same sentence adds \"or using it to complete coursework in a way not expressly permitted by the instructor\", so AI is off unless the instructor expressly permits it. This is the fallback rule (P06), not P36, because it sets the default when instructors have said nothing.",
+     "anchor": "using it to complete coursework in a way not expressly permitted by the instructor",
+     "frag_start": "Cheating also consists of the",
+     "frag_end": "(see III.H)",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P06",
+     "unit_stance": "restrict",
+     "topics": [
+      "default-stance",
+      "prohibited-uses"
+     ],
+     "resolution_why": "Both coders assigned the same actor, phase, modality and policy_type to this passage; source text confirms the code, so it is kept as coded."
+    },
+    {
+     "why": "The cheating paragraph says \"It is the responsibility of the student to consult with the instructor concerning what constitutes permissible collaboration and what materials/products are allowed\"; it tells students to ask the instructor what is allowed, which is P10. It speaks of materials/products, so AI is covered only by reference to the preceding AI sentence.",
+     "anchor": "responsibility of the student to consult with the instructor concerning what constitutes permissible collaboration",
+     "frag_start": "It is the responsibility of the",
+     "frag_end": "consulted and/or utilized.",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "must",
+     "policy_type": "P10",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "accountability-understanding"
+     ],
+     "fit_note": "Not AI-specific wording: covers collaboration and any materials or products, with AI implied by the preceding sentence.",
+     "resolution_why": "Coders agreed on actor, modality and P10 but A put the phase at during-work and B at course-start. Source III.A: 'It is the responsibility of the student to consult with the instructor concerning what constitutes permissible collaboration and what materials/products are allowed'. The student asks the instructor to learn the expectations, which is expectation-clarifying (course-start) rather than doing the work. Final: course-start. The fit_note is kept because the sentence is not AI-worded."
+    },
+    {
+     "why": "Section III.H states \"Use of technology (including AI) in a way that violates instructor and/or University guidelines ... is prohibited\"; it makes violating AI guidelines a standalone honor-code violation, so P36 (misconduct) with a must-not modality, not P01 since it bans only non-compliant use.",
+     "anchor": "Use of technology (including AI) in a way that violates instructor and/or University guidelines",
+     "frag_start": "Use of technology (including AI) in",
+     "frag_end": "is prohibited.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "prohibit",
+     "topics": [
+      "integrity-sanctions",
+      "prohibited-uses"
+     ],
+     "resolution_why": "Both coders assigned the same actor, phase, modality and policy_type to this passage; source text confirms the code, so it is kept as coded."
+    },
+    {
+     "why": "III.H says \"How and whether instructors permit the use of AI products will vary widely from course to course, and is always subject to each instructor's authority\"; the university sets no AI rule itself and hands the decision to instructors, which is P04.",
+     "anchor": "How and whether instructors permit the use of AI products will vary widely",
+     "frag_start": "How and whether instructors permit",
+     "frag_end": "each instructor’s authority and guidelines.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "default-stance"
+     ],
+     "resolution_why": "Both coders assigned the same actor, phase, modality and policy_type to this passage; source text confirms the code, so it is kept as coded."
+    },
+    {
+     "why": "III.H instructs \"Students should always check with the instructor before using these products to complete their coursework\"; students unsure of what is allowed ask first, so P10 with a should modality.",
+     "anchor": "Students should always check with the instructor before using these products",
+     "frag_start": "Students should always check with",
+     "frag_end": "complete their coursework.",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P10",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "syllabus-communication"
+     ],
+     "resolution_why": "Coders agreed on P10 and should, but A put the phase at during-work and B at course-start. Source III.H: 'Students should always check with the instructor before using these products to complete their coursework.' It is a check to learn expectations before any use, the same step as the III.A consultation duty, so course-start for consistency."
+    },
+    {
+     "why": "III.H warns \"Guidelines about these practices may change over time, so students should be sure to ask for the most up-to-date guidelines\"; it asks students to keep current with changing guidance (P102) rather than describing a review cycle (P54). The policy is also acknowledged as provisional.",
+     "anchor": "Guidelines about these practices may change over time, so students should be sure to ask",
+     "frag_start": "Guidelines about these practices may",
+     "frag_end": "up-to-date guidelines.",
+     "policy": null,
+     "actor": "student",
+     "phase": "over-time",
+     "modality": "should",
+     "policy_type": "P102",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ],
+     "fit_note": "Also acknowledges that AI guidelines change over time (P54) but does not commit to a review cycle. A coded this unit as informs, P54, and noted that the sentence also tells students to ask for the latest guidelines.",
+     "resolution_why": "A coded 'Guidelines about these practices may change over time' as informs, P54 (policy will be revisited); B coded the full sentence as should, P102. Source III.H: 'Guidelines about these practices may change over time, so students should be sure to ask for the most up-to-date guidelines.' The sentence does not commit the university to review its guidance (P54 needs that); it tells students to keep up with current guidance, which is a should addressed to students (P102). Final: should, P102, with B's fit_note about the unmatched P54 element."
+    },
+    {
+     "why": "III.H ends \"For broader University level guidance please refer to\" the UDit AI policies page; it points students to a separate university guidance document. No type fits well: it is not a framework (P56) or a statement of rules, only a referral.",
+     "anchor": "For broader University level guidance please refer to",
+     "frag_start": "For broader University level guidance",
+     "frag_end": "policies-and-guidelines",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution",
+      "default-stance"
+     ],
+     "uncovered_note": "Refers students to a separate university-level AI guidance page (login-protected, not read) for broader rules.",
+     "resolution_why": "A coded P56 (institution-wide framework); B coded UNCOVERED. Source III.H: 'For broader University level guidance please refer to [UDit AI policies and guidelines page]'. This sentence only points to a separate, login-protected guidance page and states no purpose, scope or principle, so P56 does not fit. Final: UNCOVERED, as B."
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Single document coded (Academic Honor Code); the UDit AI policies and guidelines page requires login and was not read. Coder A also coded 8 general honor-code units that do not mention AI (pledge, instructor syllabus and discussion duties, instructor-set consequences, instructor duty to investigate and report, student meeting, appeal right, dean's records duty). Following 'skip boilerplate unrelated to AI', they were dropped, as B did; they govern AI cases only through III.A and III.H. Coder A noted this reach in fit_notes."
+}

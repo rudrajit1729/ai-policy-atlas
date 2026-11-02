@@ -1,0 +1,34 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT07 "Named levels of AI use" (The course uses levels or tiers of AI use (department levels, student-chosen levels, a level per milestone).).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..9 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | brigham-young | C4 | all | informs | adopts department AI usage levels | CS 340 has adopted the [BYU CS Department AI Usage Level Definitions]
+1 | brigham-young | C4 | student | must | default AI as reference only | level 1: Reference. AI helps you learn. It never sees your work.
+2 | brigham-young | C4 | student | may | level 3 partner for milestones | the allowed AI usage level is 3: Partner. You build it together. You understand all of it.
+3 | georgia-tech | C4 | student | may | AI encouraged level | 1. AI encouraged: The student can use any and all AI assistance as they desire.
+4 | georgia-tech | C4 | student | may | AI permitted level | 2. AI permitted: The student can use AI for coding assignments and projects, but
+5 | georgia-tech | C4 | student | must-not | AI limited means no AI | 3. AI limited: The student must not use any AI to complete the assignment.
+6 | harvey-mudd-college | C1 | student | may | AI use at student-chosen level | You are also welcome to use it under constraints of your choosing
+7 | harvey-mudd-college | C1 | student | may | AI-use score student-chosen | cs5's AI-use score is student-chosen, between perhaps a
+8 | pomona | C4 | student | may | AI allowed in limited circumstances | AI use is allowed in limited circumstances as described on the syllabus
+9 | pomona | C6 | all | informs | class is Tier 0 no AI | this class maintains the Tier 0 level of acceptable AI use

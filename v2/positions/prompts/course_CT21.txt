@@ -1,0 +1,43 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT21 "Agentic coding tools" (Rules on coding agents that act in the codebase (banned, allowed for experienced students, or the course is built around them).).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..18 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | california-berkeley | C1 | student | must | final project uses AI coding agents | After developing a comprehensive understanding of programming, students will use AI coding agents in their final
+1 | california-berkeley | C2 | student | must-not | agentic coding tools banned | agentic coding tools are outright banned
+2 | columbia | C6 | student | should | coding agents encouraged for learning | You are encouraged to use coding agents as learning tools.
+3 | cornell | C1 | student | should | avoid agentic tools | limit such work to a chat interface and refrain from agentic tools such as
+4 | georgia-southern | C1 | student | must-not | agentic AI on assessments is cheating | Use of agentive AI to complete assessments without human interaction is considered cheating.
+5 | georgia-southern | C2 | student | must-not | agentic AI on assessments is cheating | Use of agentive AI to complete assessments without human interaction is considered cheating.
+6 | georgia-southern | C3 | student | must-not | agentic AI on assessments is cheating | Use of agentive AI to complete assessments without human interaction is considered cheating.
+7 | georgia-southern | C6 | student | must-not | agentic AI on assessments is cheating | Use of agentive AI to complete assessments without human interaction is considered cheating.
+8 | loyola-marymount | C1 | student | may | agentic coding for experienced students | For students with significant programming experience that are working on comprehensive projects, agentic coding is generally acceptable
+9 | loyola-marymount | C2 | student | may | agentic coding for experienced students | For students with significant programming experience that are working on comprehensive projects, agentic coding is generally acceptable
+10 | loyola-marymount | C3 | student | may | agentic coding for experienced students | For students with significant programming experience that are working on comprehensive projects, agentic coding is generally acceptable
+11 | loyola-marymount | C5 | student | may | agentic coding allowed for experienced | agentic coding is generally acceptable
+12 | loyola-marymount | C6 | student | may | agentic coding allowed for experienced | agentic coding is generally acceptable
+13 | princeton | C5 | student | must-not | no agentic AI tools | Using agentic AI (e.g., Claude Code, Cursor, etc.)
+14 | uiuc | C1 | student | informs | AI agent writes project code by design | An AI agent will write most of your code, and that is the assignment, not a loophole.
+15 | uiuc | C1 | student | may | unattended agent runs allowed | setting your agent up on a long task and walking away.
+16 | uiuc | C6 | student | must | agentic AI expected on projects | We expect you to use agentic AI for these projects.
+17 | uiuc | C6 | student | must | AI expected on system projects | We expect you to use agentic or in-chat AI on these projects.
+18 | virginia-tech | C3 | instructor | informs | agents can complete projects unaided | Current coding agents such as Codex or Claude can produce

@@ -1,0 +1,25 @@
+{"slug": "virginia", "university": "University of Virginia",
+ "units_searched": [
+  {"unit": "School of Engineering and Applied Science (contains Computer Science, ECE, Systems and Information Engineering)", "layer": "school", "site": "https://engineering.virginia.edu/",
+   "queries": ["site:engineering.virginia.edu generative AI policy", "engineering.virginia.edu undergraduate record OR handbook \"artificial intelligence\" honor policy School of Engineering and Applied Science students", "University of Virginia SEAS \"Honor\" generative AI engineering school students policy undergraduate"],
+   "pages_checked": ["https://engineering.virginia.edu/departments/computer-science (HTTP 403 to WebFetch)", "https://engineering.virginia.edu/ (HTTP 403 to curl)", "https://engineering.virginia.edu/department/computer-science/cs-undergraduate-artificial-intelligence-concentrations (empty fetch)", "https://teaching.virginia.edu/collections/uva-seas-resources-teaching-genai-use-for-engineering-design-and-analysis"],
+   "result": "none-found", "note": "Site is bot-blocked (403), so direct browsing was limited; search surfaced no SEAS-wide AI policy. The only SEAS item is a Teaching Hub collection of course activities (ENGR 1010 etc.), which is teaching material, not a rule. Honor Committee page honor.virginia.edu/resources/artificial-intelligence is university-level (and fetch returned empty)."},
+  {"unit": "Department of Computer Science", "layer": "computing", "site": "https://engineering.virginia.edu/departments/computer-science (cs.virginia.edu redirects here)",
+   "queries": ["site:cs.virginia.edu AI policy ChatGPT academic integrity", "University of Virginia computer science department generative AI collaboration policy undergraduate handbook", "UVA computer science \"AI\" policy CS 1110 OR CS 2100 OR CS 3100 syllabus generative AI collaboration"],
+   "pages_checked": ["https://www.cs.virginia.edu/ (meta-refresh to engineering.virginia.edu)", "https://aiatuva.cs.virginia.edu/aifaculty/ (faculty research directory, no policy)", "https://aiatuva.cs.virginia.edu/"],
+   "result": "none-found", "note": "No department-wide AI or collaboration policy surfaced. Search results repeatedly state UVA leaves AI policy to individual faculty and departments. Because the engineering site returned 403, absence on the CS pages is not fully verified."},
+  {"unit": "School of Data Science", "layer": "computing", "site": "https://datascience.virginia.edu/",
+   "queries": ["site:datascience.virginia.edu artificial intelligence policy students", "UVA School of Data Science OR \"Systems and Information Engineering\" OR \"Electrical and Computer Engineering\" generative AI policy students handbook"],
+   "pages_checked": ["https://datascience.virginia.edu/", "https://api.dsi.virginia.edu/sites/default/files/2024-10/Artificial%20Intelligence%20Policy.pdf (already collected)"],
+   "result": "found", "note": "The School's Artificial Intelligence Policy PDF (Oct 2024) is already in the first collection as virginia-ds. No additional unit document found."},
+  {"unit": "Electrical and Computer Engineering; Systems and Information Engineering", "layer": "computing", "site": "https://engineering.virginia.edu/",
+   "queries": ["UVA School of Data Science OR \"Systems and Information Engineering\" OR \"Electrical and Computer Engineering\" generative AI policy students handbook"],
+   "pages_checked": [],
+   "result": "inaccessible", "note": "Department sites sit on the blocked engineering.virginia.edu domain; the one search returned nothing unit-specific."}
+ ],
+ "documents": [
+  {"id": "virginia-ds", "layer": "computing", "unit": "School of Data Science", "title": "AI Policy (student use of AI tools in Data Science courses)", "url": "https://api.dsi.virginia.edu/sites/default/files/2024-10/Artificial%20Intelligence%20Policy.pdf",
+   "date_or_term": "2024-10-02", "text_file": ".cache/text/v2-virginia-ds.txt", "quality": "good", "quality_note": "Already collected; not re-fetched in this recheck.", "in_first_collection": true}
+ ],
+ "course_examples": ["https://ylkuo.notion.site/Artificial-Intelligence-2024-Spring-37849d287b0d4d97954a74dc25351a21 (UVA CS 4710 syllabus page; not fetched)"],
+ "notes": "No new computing-layer document found beyond the Data Science policy already collected. Main limit: engineering.virginia.edu returned 403 to WebFetch and curl, so SEAS, CS, ECE and SIE pages could not be browsed directly; their none-found status rests on search results only."}

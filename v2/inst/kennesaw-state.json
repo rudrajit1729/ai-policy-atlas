@@ -1,0 +1,650 @@
+{
+ "university": "Kennesaw State University",
+ "slug": "kennesaw-state",
+ "state": "GA",
+ "type": "R2",
+ "searched": {
+  "university": "found",
+  "school": "found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "kennesaw-state-ai-policy",
+   "layer": "university",
+   "unit": "AI Governance Committee / Academic Affairs",
+   "course": null,
+   "title": "Kennesaw State University Artificial Intelligence Policy",
+   "url": "https://campus.kennesaw.edu/faculty-staff/academic-affairs/curriculum-instruction-assessment/academic-program-planning-development/committees/docs/ksu-ai-policy-accessible-04.17.2026a.pdf",
+   "date_or_term": "Effective May 1, 2026",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "A short institution-wide policy effective May 1, 2026 that sets ethical and security principles for AI-enabled tools, creates an AI Governance Committee to approve tools and maintain a separate Guidance Document, and requires annual AI training. It sets no rules for how students may use AI in coursework.",
+   "stance_why": "The policy says users 'shall do so ethically, responsibly, and securely' and defers specifics to 'the KSU Institutional Artificial Intelligence Guidance Document'; it states no allow or ban for student coursework, so it delegates.",
+   "units": [
+    {
+     "why": "The opening sentence binds all internal stakeholders to use AI-enabled tools 'ethically, responsibly, and securely'; a principle-level statement of scope, so P56, actor all, general, must.",
+     "anchor": "shall do so ethically, responsibly, and securely",
+     "frag_start": "All Kennesaw State University internal stakeholders",
+     "frag_end": "ethically, responsibly, and securely.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment"
+     ]
+    },
+    {
+     "why": "Use cases of AI-enabled tools in 'instructional, learning' and other functions 'must be reviewed and approved by the AI Governance Committee before purchase, deployment, or use'; this vets which tools may be used, so P50 (prefer vetted tools).",
+     "resolution_why": "Coder A coded P65 with actor admin; coder B coded P50 with actor all. The source sentence is about approving tool use cases before use by stakeholders, not about contracts or data sharing with providers (those are in the next paragraph), so P50 (vetted tools) fits and P65 does not. The requirement binds the stakeholders who seek to use tools, so actor is all. Phase and modality agreed.",
+     "anchor": "must be reviewed and approved by the AI Governance Committee before purchase, deployment, or use",
+     "frag_start": "Use cases of AI-Enabled tools used",
+     "frag_end": "before purchase, deployment, or use.",
+     "policy": null,
+     "actor": "all",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data",
+      "course-provided-tools"
+     ]
+    },
+    {
+     "why": "States KSU will ensure contracted tools 'meet institutional privacy, security, and data protection standards'; a data-protection commitment by the institution, P50, actor admin.",
+     "anchor": "meet institutional privacy, security, and data protection standards",
+     "frag_start": "KSU will implement practices, processes, and/or",
+     "frag_end": "security, and data protection standards.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "Institutional guidance will make sure agreements with AI providers 'address ethical considerations and responsible use of AI prior to the execution of any services, contracts, or agreements'; review of vendor agreements, P65.",
+     "anchor": "agreements with suppliers, contractors, and providers of AI tools",
+     "frag_start": "Institutional guidance will outline necessary steps",
+     "frag_end": "agreements that leverage AI.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P65",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment",
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "'Use of AI must comply with the University's ethical standards' and 'reflect ethical principles such as fairness/mitigation of bias, accountability, freedom from hallucinations, transparency, human oversight'; a statement of principles framing the whole policy, P56.",
+     "resolution_why": "Coder A split this sentence into three units (ethical standards P56, data protection P50, listed principles P53); coder B coded one P56 unit. The listed principles are the content of the ethical standards, not a separate rule naming harms, so they stay in this P56 unit (P53 dropped). The 'protect personal and institutional data' clause is a distinct rule and is kept as its own P50 unit.",
+     "anchor": "must comply with the University’s ethical standards",
+     "frag_start": "Use of AI must comply with",
+     "frag_end": "Intelligence Guidance Document.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment",
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "Within the same sentence AI use must 'protect personal and institutional data'; a data-protection rule, P50 rather than the framework type P56.",
+     "resolution_why": "Found only by coder A. The source sentence lists 'protect personal and institutional data' as a separate obligation from the ethical-standards clause, so it is a real distinct rule; kept as P50 (personal and confidential data).",
+     "anchor": "protect personal and institutional data",
+     "frag_start": "Use of AI must comply with",
+     "frag_end": "Intelligence Guidance Document.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "Assigns oversight: 'Oversight responsibility for this policy will be assigned to KSU's AI Governance Committee'; governance structure, P56.",
+     "anchor": "Oversight responsibility for this policy will be assigned",
+     "frag_start": "Oversight responsibility for this policy",
+     "frag_end": "Research Integrity. This Committee will:",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "The committee will 'Maintain the KSU Institutional Artificial Intelligence Guidance Document'; who keeps the guidance current is governance, P56, since the review cycle is a separate unit.",
+     "resolution_why": "Found only by coder A. The bullet 'Maintain the KSU Institutional Artificial Intelligence Guidance Document' is a real committee duty in the source; kept as P56 governance (A's coding), with the dated review kept separate as P54.",
+     "anchor": "Maintain the KSU Institutional Artificial Intelligence Guidance Document.",
+     "frag_start": "Maintain the KSU Institutional Artificial",
+     "frag_end": "Guidance Document.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "must",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "The committee will 'Review use cases of AI-Enabled Tool requests prior to purchase or deployment'; vetting of tools before adoption, P50 to match the resolved coding of the approval requirement.",
+     "resolution_why": "Found only by coder A, who coded P65. The source bullet is the committee's side of the approval requirement ('ensure the tools meet the expectations'), not a contract review, so it is kept and coded P50 to stay consistent with the approval unit.",
+     "anchor": "Review use cases of AI-Enabled Tool requests prior to purchase or deployment",
+     "frag_start": "Review use cases of AI-Enabled Tool",
+     "frag_end": "Intelligence Guidance Document.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "course-provided-tools"
+     ]
+    },
+    {
+     "why": "The committee will 'Publish an institutional inventory of AI-Enabled Tools and their acceptable use'; tells users which tools are vetted, P50.",
+     "anchor": "Publish an institutional inventory of AI-Enabled Tools",
+     "frag_start": "Publish an institutional inventory of",
+     "frag_end": "in institutional contexts.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "course-provided-tools",
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "The committee will 'Review the AI Policy and KSU Institutional Artificial Intelligence Guidance Document annually', a fixed review cycle, P54.",
+     "anchor": "Review the AI Policy and KSU Institutional Artificial Intelligence Guidance Document annually.",
+     "frag_start": "Review the AI Policy and KSU",
+     "frag_end": "Guidance Document annually.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "must",
+     "policy_type": "P54",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "'KSU employees and students must complete an AI training module' annually and acknowledge they 'will comply with the Policy'; no type covers required training plus acknowledgement (P63 is faculty learning), so UNCOVERED.",
+     "resolution_why": "Coders agreed on actor, phase, modality and UNCOVERED; they differed only on unit_stance (A neutral, B require). The training teaches the policy rather than requiring AI use in work, so neutral.",
+     "anchor": "KSU employees and students must complete an AI training module",
+     "frag_start": "KSU employees and students must complete",
+     "frag_end": "will comply with the Policy.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale",
+      "policy-evolution"
+     ],
+     "uncovered_note": "Mandatory annual AI training module for all students and employees, with acknowledgement that they understand and will comply with the policy."
+    },
+    {
+     "why": "Internal stakeholders 'must adhere to the guidelines and principles' of the Guidance Document on listed areas (ethical principles, accountability for AI content, privacy of student information, research oversight); a binding link to the framework, P56.",
+     "resolution_why": "Coder A also coded four of the bullet topics of this sentence as separate units (privacy P50, professional development UNCOVERED, two research P62); coder B folded them into this unit. The bullets are only topic headings of what the Guidance Document covers and state no rule of their own, so they are not separate units; their topics are carried here.",
+     "anchor": "must adhere to the guidelines and principles",
+     "frag_start": "KSU internal stakeholders must adhere to",
+     "frag_end": "Responsible Use of AI in Scholarly Communications",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding",
+      "privacy-data"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kennesaw-state-dli-syllabus-statements",
+   "layer": "university",
+   "unit": "Digital Learning Innovations, Academic Affairs",
+   "course": null,
+   "title": "Sample Syllabus Statements on AI Use",
+   "url": "https://campus.kennesaw.edu/faculty-staff/academic-affairs/curriculum-instruction-assessment/digital-learning-innovations/faculty-development/ai-use-syllabus-statements.php",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance": "delegates",
+   "tiers": [
+    "AI Use Prohibited",
+    "AI Use Allowed, but Not Required",
+    "AI Use Required"
+   ],
+   "summary": "A university teaching-office page encouraging faculty to publish an AI policy in each syllabus and offering three templates: prohibited, allowed but not required, and required. The allowed and required templates repeat the same warning, responsibility and credit language, which is coded once.",
+   "stance_why": "The page says faculty 'should tailor the statements' and offers three templates (AI Use Prohibited, Allowed, Required); it sets no single rule, so it delegates with tiers.",
+   "units": [
+    {
+     "why": "'Faculty are encouraged to articulate and publish an artificial intelligence (AI) use policy' in each syllabus; asks for a syllabus AI statement as a recommendation, P09, should.",
+     "resolution_why": "Coders agreed on all codes except unit_stance (A neutral, B encourage). The sentence encourages instructors to state a policy, not AI use itself, so neutral.",
+     "anchor": "encouraged to articulate and publish an artificial intelligence (AI) use policy",
+     "frag_start": "Faculty are encouraged to articulate and",
+     "frag_end": "within their course syllabus.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "The page 'has drafted three AI use policy templates with sample language' (prohibited, allowed, required); named tiers of use, P05.",
+     "resolution_why": "Actor differed (A admin, B instructor). The templates are offered to help instructors choose and adapt a tier; the passage is addressed to faculty, so instructor.",
+     "anchor": "has drafted three AI use policy templates with sample language",
+     "frag_start": "has drafted three AI use policy",
+     "frag_end": "specific assignments.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P05",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance",
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "Faculty 'should tailor the statements to appropriately fit their class context, field of study, and specific assignments', leaving the rule to instructors, P04.",
+     "anchor": "faculty should tailor the statements to appropriately fit their class context",
+     "frag_start": "faculty should tailor the",
+     "frag_end": "specific assignments.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "'If AI use is permitted, faculty are strongly encouraged to train students on best practices for the responsible use of AI tools'; teaching AI use as a skill, P44.",
+     "anchor": "faculty are strongly encouraged to train students on best practices for the responsible use of",
+     "frag_start": "If AI use is permitted, faculty",
+     "frag_end": "within their subject area.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P44",
+     "unit_stance": "encourage",
+     "topics": [
+      "ai-literacy-career"
+     ]
+    },
+    {
+     "why": "'Faculty professional development on AI is available to support this'; support for faculty learning AI, P63.",
+     "resolution_why": "Actor differed (A admin, B instructor). The sentence tells faculty that development is available to them, so it is addressed to instructors.",
+     "anchor": "professional development on AI is available to support this",
+     "frag_start": "Faculty professional development on AI",
+     "frag_end": "available to support this.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "Prohibited template: 'You are expected to generate your own work in this class' and 'you are asserting that you have created it completely on your own'; students own what they submit, P29.",
+     "anchor": "you are asserting that you have created it completely on your own",
+     "frag_start": "You are expected to generate",
+     "frag_end": "indicate otherwise using quotation marks",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P29",
+     "unit_stance": "prohibit",
+     "topics": [
+      "accountability-understanding",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "Prohibited template says content 'created or assisted by an AI generative tool is cheating'; the prohibited-tier ban on AI for submitted work, P01.",
+     "resolution_why": "Type differed: A P01, B P19. The sentence also bars content merely 'assisted by' AI, which goes beyond P19 (AI producing the submitted work), and it is the ban of the prohibited-tier template for the whole class (P01). The classification as misconduct is the separate P36 unit.",
+     "anchor": "created or assisted by an AI generative tool is cheating",
+     "frag_start": "Submitting content that has been generated",
+     "frag_end": "KSU Code of Academic Integrity.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P01",
+     "unit_stance": "prohibit",
+     "topics": [
+      "default-stance",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "The same template says such use 'constitutes a violation of the KSU Code of Academic Integrity', classing AI use as misconduct, P36.",
+     "anchor": "constitutes a violation of the KSU Code of Academic Integrity",
+     "frag_start": "Submitting content that has been generated",
+     "frag_end": "KSU Code of Academic Integrity.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "prohibit",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Allowed template: 'you are welcome to use AI for any purpose', an open permission by default, P02.",
+     "anchor": "you are welcome to use AI for any purpose",
+     "frag_start": "In this class, you are welcome",
+     "frag_end": "for any purpose.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P02",
+     "unit_stance": "permit",
+     "topics": [
+      "default-stance",
+      "permitted-uses"
+     ]
+    },
+    {
+     "why": "Warns that 'all AI generative tools still tend to make up incorrect facts and fake citations' and code models 'tend to produce inaccurate outputs'; unreliable output, P31.",
+     "anchor": "all AI generative tools still tend to make up incorrect facts and fake citations",
+     "frag_start": "However, you should note that all",
+     "frag_end": "offensive products.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "informs",
+     "policy_type": "P31",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "Notes image/art generation tools 'can produce copied work or offensive products'; a harm of AI outputs, P53 rather than P52 because the point is harm, not licensing.",
+     "resolution_why": "Found only by coder B. The clause is a separate warning in the source (copied or offensive output from image tools), distinct from the incorrect-facts warning, so it is kept as P53.",
+     "anchor": "image/art generation tools can produce copied work or offensive products.",
+     "frag_start": "all AI generative tools still",
+     "frag_end": "offensive products.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "informs",
+     "policy_type": "P53",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment"
+     ]
+    },
+    {
+     "why": "'You will be responsible for any inaccurate, biased, offensive, or otherwise unethical content you submit regardless of whether it originally comes from you or an AI tool'; students own what they submit, P29.",
+     "anchor": "You will be responsible for any inaccurate, biased, offensive, or otherwise unethical content you submit",
+     "frag_start": "You will be responsible for any",
+     "frag_end": "from you or an AI tool.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P29",
+     "unit_stance": "permit",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "'If you use an AI tool, its contribution must be credited in your submission'; disclosure rule, P24.",
+     "anchor": "If you use an AI tool, its contribution must be credited in your submission.",
+     "frag_start": "If you use an AI tool,",
+     "frag_end": "in your submission.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "'The use of an AI tool without acknowledgement is cheating'; nondisclosure is the violation, P28 rather than the general misconduct type P36.",
+     "anchor": "The use of an AI tool without acknowledgement is cheating",
+     "frag_start": "The use of an AI tool",
+     "frag_end": "Code of Academic Integrity.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P28",
+     "unit_stance": "restrict",
+     "topics": [
+      "disclosure-citation",
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Required template: 'You will be expected to use AI generative tools in this class'; AI use expected by default, P02.",
+     "anchor": "You will be expected to use AI generative tools in this class",
+     "frag_start": "You will be expected to use",
+     "frag_end": "where AI tools are allowed.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P02",
+     "unit_stance": "require",
+     "topics": [
+      "default-stance"
+     ]
+    },
+    {
+     "why": "Required AI use is limited to 'assignments where AI tools are allowed', 'following the instructor's permissions and directions'; the instructor or assignment decides, P04.",
+     "anchor": "only using it on assignments where AI tools are allowed",
+     "frag_start": "You will be expected to use",
+     "frag_end": "where AI tools are allowed.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P04",
+     "unit_stance": "restrict",
+     "topics": [
+      "instructor-discretion"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "kennesaw-state-ccse-fye-policies",
+   "layer": "school",
+   "unit": "College of Computing and Software Engineering (CCSE), First Year Experience",
+   "course": null,
+   "title": "CCSE FYE Policies (Academic Misconduct: AI & Cheating)",
+   "url": "https://campus.kennesaw.edu/colleges-departments/ccse/first-year-experience/policies.php",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance": "prohibit",
+   "tiers": [],
+   "summary": "The first-year programming page of the computing college says all labs, assignments, quizzes and tests must be written without AI, lists AI use as academic misconduct, and bans AI in exams with penalties up to an F. It applies to the FYE course sequence only.",
+   "stance_why": "The page requires work 'Written by you, without the use of AI' and states 'Student MAY NOT use AI' on exams, with no exceptions, so it prohibits.",
+   "units": [
+    {
+     "why": "Rule that submitted work must be 'Written by you, without the use of AI, or other external help'; a default ban on AI for graded work in the FYE courses, P01.",
+     "anchor": "Written by you, without the use of AI, or other external help",
+     "frag_start": "All submitted work (labs, quizzes, assignments",
+     "frag_end": "or other external help",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P01",
+     "unit_stance": "prohibit",
+     "topics": [
+      "default-stance",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "'All submitted work ... must be your own work' is a separate ownership requirement, P29, distinct from the AI ban that follows it.",
+     "resolution_why": "Found only by coder A (prohibit). The source sentence states 'must be your own work' before the AI clause, a general ownership rule that is distinct from the AI ban, so it is kept as P29. It does not itself mention AI, so unit_stance is neutral.",
+     "anchor": "must be your own work",
+     "frag_start": "All submitted work (labs, quizzes, assignments",
+     "frag_end": "or other external help",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P29",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "Lists as misconduct 'Using AI complete or aid in the completion of any lab, assignment, quiz, or exam'; classification as misconduct, P36.",
+     "anchor": "Using AI complete or aid in the completion of any lab, assignment, quiz, or exam",
+     "frag_start": "Using AI complete or aid in",
+     "frag_end": "quiz, or exam",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "prohibit",
+     "topics": [
+      "integrity-sanctions",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "Exam rules say 'Student MAY NOT use AI.', a direct exam ban, P22.",
+     "anchor": "Student MAY NOT use AI.",
+     "frag_start": "Student MAY NOT use AI.",
+     "frag_end": "Student MAY NOT use AI.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-assessment",
+     "modality": "must-not",
+     "policy_type": "P22",
+     "unit_stance": "prohibit",
+     "topics": [
+      "exams-in-person",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "Exam rule 'Student MAY NOT use any electronic devices' that can look up or store answers; a closed-device rule that also shuts out AI, P22 (which covers closed-device rules).",
+     "resolution_why": "Found only by coder A (prohibit). The source lists this as one of the exam rules that cover AI; P22 explicitly includes closed-device rules, so it is kept. It does not name AI, so unit_stance is restrict rather than prohibit.",
+     "anchor": "Student MAY NOT use any electronic devices",
+     "frag_start": "Student MAY NOT use any electronic",
+     "frag_end": "look up or store answers.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-assessment",
+     "modality": "must-not",
+     "policy_type": "P22",
+     "unit_stance": "restrict",
+     "topics": [
+      "exams-in-person"
+     ]
+    },
+    {
+     "why": "'The following FYE test-taking rules are listed at the start of each exam' says where the exam rules, including the AI ban, are communicated; P09 (rules stated in assignment instructions).",
+     "resolution_why": "Found only by coder A. The sentence is a real statement of how exam rules are communicated (listed on each exam), so it is kept; P09 is the closest type, covering rules stated in assignment instructions.",
+     "anchor": "test-taking rules are listed at the start of each exam",
+     "frag_start": "The following FYE test-taking rules are",
+     "frag_end": "start of each exam.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "during-assessment",
+     "modality": "informs",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "Violators 'may receive any penalty up to and including a 0 on the assignment or an F in the course', stated penalties for breaking the exam rules including the AI ban, P37.",
+     "anchor": "may receive any penalty up to and including a 0 on the assignment",
+     "frag_start": "Students found violating the rules",
+     "frag_end": "F in the course.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P37",
+     "unit_stance": "prohibit",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "'Student may also be reported to student conduct and academic integrity (SCAI) for cheating', routing violations to the integrity process, P36.",
+     "anchor": "reported to student conduct and academic integrity (SCAI) for cheating",
+     "frag_start": "Student may also be reported",
+     "frag_end": "academic integrity (SCAI) for cheating.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "prohibit",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "No separate computing-department policy found; the CCSE FYE page is coded as school layer. The university policy defers to a Guidance Document that was not available. Repeated warning and credit text in the Required syllabus template is skipped as an exact repeat. One UNCOVERED unit: mandatory annual AI training with acknowledgement. Reconciled from coders A and B; the committee duty to communicate inventory review results was coded by neither coder and is not added."
+}

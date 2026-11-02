@@ -1,0 +1,692 @@
+<meta charset="utf-8">
+<title>Computing AI Policy Atlas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
+<style>
+/* Layout: a reading-room ledger. Sticky tab bar; synthesis = group rail + card column;
+   verbatim policy text is always set in serif on highlighter, everything analyst-written in sans. */
+:root {
+  --bg: #f4f5f8;
+  --surface: #ffffff;
+  --sunk: #eceef3;
+  --ink: #1a1f2e;
+  --muted: #5b6273;
+  --line: #d9dce5;
+  --accent: #3b3f9c;
+  --accent-soft: #e5e6f5;
+  --mark: #fff0a3;
+  --mark-ink: #1a1f2e;
+  --ok: #2c7a4c;
+  --warn: #9a5d0a;
+  --bad: #b13a31;
+  --side-a: #1f6f8b;
+  --side-b: #9b3d6a;
+  --f-quote: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --f-ui: "IBM Plex Sans", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --s-xs: 0.75rem; --s-sm: 0.8125rem; --s-md: 0.9375rem; --s-lg: 1.125rem; --s-xl: 1.5rem; --s-2xl: 2.25rem;
+  --r: 6px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11131a; --surface: #191c26; --sunk: #141720; --ink: #e6e8ef; --muted: #9ba1b3; --line: #2a2e3b;
+    --accent: #a3a7ff; --accent-soft: #262a4b; --mark: #4d4512; --mark-ink: #fbf1c2;
+    --ok: #6cc592; --warn: #e3a54a; --bad: #ef7d73; --side-a: #6cc1de; --side-b: #e58bb6;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11131a; --surface: #191c26; --sunk: #141720; --ink: #e6e8ef; --muted: #9ba1b3; --line: #2a2e3b;
+  --accent: #a3a7ff; --accent-soft: #262a4b; --mark: #4d4512; --mark-ink: #fbf1c2;
+  --ok: #6cc592; --warn: #e3a54a; --bad: #ef7d73; --side-a: #6cc1de; --side-b: #e58bb6;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-ui); font-size: var(--s-md); line-height: 1.5; }
+a { color: var(--accent); }
+button, select, input { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+h1, h2, h3 { text-wrap: balance; margin: 0; }
+.wrap { max-width: 1200px; margin: 0 auto; padding-inline: 20px; }
+
+/* masthead */
+.mast { padding-block: 28px 18px; display: grid; gap: 10px; }
+.mast h1 { font-family: var(--f-quote); font-weight: 600; font-size: var(--s-2xl); line-height: 1.1; letter-spacing: -0.01em; }
+.mast p { margin: 0; color: var(--muted); max-width: 70ch; }
+.stats { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: var(--s-sm); color: var(--muted); font-variant-numeric: tabular-nums; }
+.stats b { color: var(--ink); font-weight: 600; }
+
+/* tabs */
+.tabbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bg); border-bottom: 1px solid var(--line); }
+.tabs { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+.tabs button { background: none; border: 0; border-bottom: 2px solid transparent; padding: 12px 14px 10px; cursor: pointer; color: var(--muted); font-weight: 500; white-space: nowrap; }
+.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+.tabs button:hover { color: var(--ink); }
+main { padding-block: 22px 60px; }
+
+/* toolbar */
+.toolbar { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; margin-bottom: 18px; }
+.seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; background: var(--surface); }
+.seg button { border: 0; background: none; padding: 6px 11px; cursor: pointer; font-size: var(--s-sm); color: var(--muted); border-right: 1px solid var(--line); }
+.seg button:last-child { border-right: 0; }
+.seg button[aria-pressed="true"] { background: var(--accent-soft); color: var(--ink); font-weight: 600; }
+.lbl { font-size: var(--s-xs); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 600; }
+.field { display: inline-flex; align-items: center; gap: 6px; }
+input[type="search"], input[type="text"], select { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 6px 9px; font-size: var(--s-sm); }
+input[type="search"] { width: min(260px, 100%); }
+.btn { border: 1px solid var(--line); background: var(--surface); border-radius: var(--r); padding: 6px 11px; font-size: var(--s-sm); cursor: pointer; }
+.btn:hover { border-color: var(--accent); }
+.btn.primary { background: var(--accent); color: var(--surface); border-color: var(--accent); }
+.btn.danger { color: var(--bad); }
+.btn.small { padding: 3px 8px; font-size: var(--s-xs); }
+.grow { flex: 1; }
+
+/* synthesis layout */
+.syn { display: grid; grid-template-columns: 230px minmax(0, 1fr); gap: 28px; }
+.rail { position: sticky; top: 64px; align-self: start; max-height: calc(100vh - 80px); overflow: auto; font-size: var(--s-sm); }
+.rail a { display: flex; justify-content: space-between; gap: 8px; padding: 5px 8px; border-radius: var(--r); color: var(--muted); text-decoration: none; }
+.rail a:hover { background: var(--sunk); color: var(--ink); }
+.rail .n { font-family: var(--f-mono); font-size: var(--s-xs); }
+.group { margin-bottom: 34px; scroll-margin-top: 70px; }
+.group > header { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; padding-bottom: 8px; margin-bottom: 12px; border-bottom: 1px solid var(--line); }
+.group > header h2 { font-family: var(--f-quote); font-size: var(--s-xl); font-weight: 600; }
+.group > header .desc { flex-basis: 100%; color: var(--muted); font-size: var(--s-sm); max-width: 75ch; }
+.group > header input { font-family: var(--f-quote); font-size: var(--s-lg); font-weight: 600; min-width: 0; flex: 1; }
+.cards { display: grid; gap: 12px; }
+.group.drop-target .cards { outline: 2px dashed var(--accent); outline-offset: 6px; border-radius: var(--r); }
+.empty-drop { color: var(--muted); font-size: var(--s-sm); padding: 14px; border: 1px dashed var(--line); border-radius: var(--r); }
+
+.g { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 16px 18px; display: grid; gap: 10px; }
+.g[draggable="true"] { cursor: grab; }
+.g.dragging { opacity: 0.5; }
+.g-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 10px; }
+.gid { font-family: var(--f-mono); font-size: var(--s-xs); color: var(--muted); }
+.g-head h3 { font-size: var(--s-lg); font-weight: 600; flex: 1; min-width: 12ch; }
+.count { font-size: var(--s-xs); color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.count b { color: var(--ink); }
+.analyst { font-size: var(--s-xs); color: var(--muted); font-style: italic; }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; }
+.tag { font-size: var(--s-xs); padding: 1px 8px; border-radius: 999px; background: var(--sunk); color: var(--muted); border: 1px solid var(--line); }
+.tag.stance { background: var(--accent-soft); color: var(--ink); border-color: transparent; }
+
+/* verbatim */
+.vq { font-family: var(--f-quote); font-size: 1.0625rem; line-height: 1.5; margin: 0; }
+.vq mark { background: var(--mark); color: var(--mark-ink); padding: 0.05em 0.2em; border-radius: 2px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.vq.lead { font-size: 1.1875rem; }
+.cite { font-size: var(--s-sm); color: var(--muted); display: flex; flex-wrap: wrap; gap: 2px 8px; align-items: baseline; }
+.cite .who { color: var(--ink); font-weight: 500; }
+.cite a { text-decoration: none; white-space: nowrap; }
+.cite a:hover { text-decoration: underline; }
+.unv { color: var(--warn); font-size: var(--s-xs); }
+details.all > summary { cursor: pointer; font-size: var(--s-sm); color: var(--accent); font-weight: 500; list-style: none; }
+details.all > summary::-webkit-details-marker { display: none; }
+details.all > summary::before { content: "▸ "; }
+details.all[open] > summary::before { content: "▾ "; }
+.stmts { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 12px; border-left: 2px solid var(--line); padding-left: 14px; }
+.stmts .vq { font-size: var(--s-md); }
+.move { display: flex; align-items: center; gap: 6px; font-size: var(--s-xs); color: var(--muted); }
+
+/* scheme editor */
+.scheme-bar { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 10px 12px; margin-bottom: 18px; font-size: var(--s-sm); }
+.status { font-size: var(--s-xs); color: var(--muted); }
+.inline-form { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; background: var(--surface); border: 1px solid var(--accent); border-radius: var(--r); padding: 10px 12px; margin-bottom: 18px; font-size: var(--s-sm); }
+
+/* patterns */
+.pat-section { margin-bottom: 36px; }
+.pat-section > h2 { font-family: var(--f-quote); font-size: var(--s-xl); font-weight: 600; margin-bottom: 4px; }
+.pat-section > p { color: var(--muted); margin: 0 0 14px; max-width: 75ch; font-size: var(--s-sm); }
+.pat { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 16px 18px; margin-bottom: 12px; display: grid; gap: 10px; }
+.pat h3 { font-size: var(--s-lg); font-weight: 600; }
+.pat .body { margin: 0; max-width: 80ch; }
+.sides { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.side { border-top: 3px solid var(--side-a); padding-top: 10px; display: grid; gap: 10px; align-content: start; min-width: 0; }
+.side.b { border-top-color: var(--side-b); }
+.side h4 { margin: 0; font-size: var(--s-sm); font-weight: 600; }
+.side .vq { font-size: var(--s-md); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { font-size: var(--s-xs); border: 1px solid var(--line); background: var(--sunk); border-radius: 999px; padding: 2px 9px; cursor: pointer; color: var(--ink); }
+.chip:hover { border-color: var(--accent); }
+.bar { height: 6px; background: var(--sunk); border-radius: 3px; overflow: hidden; }
+.bar > i { display: block; height: 100%; background: var(--accent); }
+
+/* corpus table */
+.tbl-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: var(--s-sm); }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: var(--s-xs); text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 600; background: var(--sunk); position: sticky; top: 0; cursor: pointer; white-space: nowrap; }
+td.num { font-family: var(--f-mono); font-variant-numeric: tabular-nums; }
+tr.doc-row:hover td { background: var(--sunk); }
+.inst { font-weight: 600; }
+.sub { color: var(--muted); font-size: var(--s-xs); }
+tr.detail td { background: var(--sunk); }
+.detail-grid { display: grid; gap: 12px; padding: 4px 0 8px; max-width: 90ch; }
+.tiers { display: grid; grid-template-columns: minmax(0, 220px) minmax(0, 1fr); gap: 14px 24px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 14px 16px; margin-bottom: 18px; }
+.tier-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; }
+.tier-list li { display: flex; gap: 10px; align-items: flex-start; font-size: var(--s-sm); }
+.tier-n { font-family: var(--f-mono); font-weight: 500; color: var(--accent); border: 1px solid var(--accent); border-radius: 50%; width: 1.6em; height: 1.6em; display: inline-grid; place-items: center; flex: none; font-size: var(--s-xs); }
+@media (max-width: 820px) { .tiers { grid-template-columns: 1fr; } }
+.coverage { columns: 3 220px; font-size: var(--s-sm); padding: 0; list-style: none; }
+.coverage li { break-inside: avoid; padding: 3px 0; }
+.coverage .sub { display: block; }
+
+/* explorer */
+details.xg { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); margin-bottom: 10px; }
+details.xg > summary { padding: 10px 14px; cursor: pointer; display: flex; gap: 10px; align-items: baseline; font-weight: 600; }
+details.xg > summary .count { margin-left: auto; }
+.xlist { list-style: none; margin: 0; padding: 4px 14px 14px; display: grid; gap: 12px; }
+
+/* method */
+.prose { max-width: 72ch; }
+.prose h2 { font-family: var(--f-quote); font-size: var(--s-xl); font-weight: 600; margin: 28px 0 8px; }
+.prose ol, .prose ul { padding-left: 1.3em; }
+.prose li { margin-bottom: 6px; }
+.codebook { display: grid; grid-template-columns: max-content 1fr; gap: 6px 16px; font-size: var(--s-sm); }
+.codebook code { font-family: var(--f-mono); font-size: var(--s-xs); background: var(--sunk); padding: 1px 6px; border-radius: 4px; }
+
+.note { font-size: var(--s-sm); color: var(--muted); }
+.jev { font-family: var(--f-mono); font-size: var(--s-xs); padding: 0 6px; border-radius: 4px; border: 1px solid currentColor; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.jev.ok { color: var(--ok); } .jev.mid { color: var(--warn); } .jev.low { color: var(--bad); }
+.jevline { font-size: var(--s-xs); color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px; align-items: baseline; }
+.hide-sm { }
+@media (max-width: 820px) {
+  .syn { grid-template-columns: 1fr; }
+  .rail { display: none; }
+  .sides { grid-template-columns: 1fr; }
+  .mast h1 { font-size: 1.75rem; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; transition: none !important; } }
+</style>
+
+<div class="wrap mast">
+  <h1>Computing AI Policy Atlas</h1>
+  <p>Generative-AI policies from computing departments and courses at universities in the United States and Canada, with the university-wide policy standing in where no computing policy exists. They are gathered as a corpus and reconciled into shared guidelines. Highlighted text is quoted verbatim from each source; everything else is analyst annotation.</p>
+  <div class="stats" id="stats"></div>
+</div>
+<div class="tabbar"><div class="wrap"><nav class="tabs" role="tablist" id="tabs"></nav></div></div>
+<main class="wrap" id="main"></main>
+
+<script id="corpus-data" type="application/json">/*__CORPUS__*/</script>
+<script id="synthesis-data" type="application/json">/*__SYNTHESIS__*/</script>
+<script>
+(() => {
+"use strict";
+const C = JSON.parse(document.getElementById("corpus-data").textContent);
+const S = JSON.parse(document.getElementById("synthesis-data").textContent);
+
+// ---------- indexes ----------
+const DOCS = C.documents;
+const docById = new Map(DOCS.map(d => [d.id, d]));
+const EX = [];
+for (const d of DOCS) for (const e of (d.excerpts || [])) { e.doc = d; EX.push(e); }
+const exById = new Map(EX.map(e => [e.id, e]));
+const G = S.guidelines.map(g => ({ ...g, members: g.members.filter(id => exById.has(id)) })).filter(g => g.members.length);
+const gById = new Map(G.map(g => [g.id, g]));
+const gOfEx = new Map();
+for (const g of G) for (const id of g.members) gOfEx.set(id, g.id);
+
+const LABEL = {
+  level: { department: "Department / school", course: "Course", "university-computing": "University (computing section)", "school-general": "School / college-wide (no computing policy)", "university-general": "University-wide (no computing policy)" },
+  stance: { "prohibit-by-default": "Prohibit by default", "permit-with-conditions": "Permit with conditions", encourage: "Encourage", "instructor-discretion": "Instructor discretion", tiered: "Tiered levels", mixed: "Mixed" },
+  phase: Object.fromEntries(S.phases.map(p => [p.id, p.label])),
+  actor: Object.fromEntries(S.actors.map(p => [p.id, p.label])),
+  theme: Object.fromEntries(S.themes.map(p => [p.id, p.label])),
+  code: Object.fromEntries(S.codebook.map(c => [c.code, c.label || c.code])),
+};
+
+// ---------- state ----------
+const store = {
+  get(k, d) { try { const v = localStorage.getItem("atlas:" + k); return v == null ? d : JSON.parse(v); } catch { return d; } },
+  set(k, v) { try { localStorage.setItem("atlas:" + k, JSON.stringify(v)); } catch {} },
+};
+const TABS = [
+  { id: "synthesis", label: "Synthesis" },
+  { id: "patterns", label: "Patterns & tensions" },
+  { id: "corpus", label: "Corpus" },
+  { id: "explorer", label: "Statement explorer" },
+  { id: "method", label: "Method" },
+];
+const st = {
+  tab: TABS.some(t => "#" + t.id === location.hash) ? location.hash.slice(1) : store.get("tab", "synthesis"),
+  scheme: store.get("scheme", "theme"),
+  q: "", country: "all", level: "all", agree: "all",
+  xFacet: store.get("xFacet", "topic"), xq: "",
+  sortKey: "university", sortDir: 1, openDoc: null,
+  creating: false, confirmDelete: false,
+};
+let schemes = {};          // id -> {name, groups:[{id,label}], assign:{gid:groupId}, createdBy, updated}
+let db = null, userCap = null, schemeStatus = "";
+const localSchemes = store.get("schemes", {});
+
+// ---------- helpers ----------
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const plural = (n, w, p) => `${n} ${n === 1 ? w : (p || w + "s")}`;
+const JEV = S.jev || null;
+function jevChip(e) {
+  if (!JEV || !JEV.statements[e.id]) return "";
+  const [top, topP, pA] = JEV.statements[e.id];
+  const mine = gOfEx.get(e.id);
+  const cls = pA >= 0.6 ? "ok" : pA >= 0.3 ? "mid" : "low";
+  const alt = top !== mine ? ` · Jev's top pick: ${top === "none_fit" ? "none of the guidelines" : top + " " + (gById.get(top)?.label || "")} (${topP.toFixed(2)})` : "";
+  return `<span class="jev ${cls}" title="Jev's probability that this statement belongs to ${mine}${esc(alt)}">Jev ${pA.toFixed(2)}${top !== mine ? " ≠" : ""}</span>`;
+}
+function jevAgrees(e) { const v = JEV && JEV.statements[e.id]; return !v || v[0] === gOfEx.get(e.id); }
+function jevGroupLine(g) {
+  const scheme = { theme: "theme", phase: "phase", actor: "actor" }[st.scheme];
+  if (!JEV || !scheme || !JEV.guidelines[g.id] || !JEV.guidelines[g.id][scheme]) return "";
+  const dist = JEV.guidelines[g.id][scheme].dist;
+  const here = dist[g[scheme]] || 0;
+  const names = Object.fromEntries((scheme === "theme" ? S.themes : scheme === "phase" ? S.phases : S.actors).map(x => [x.id, x.label]));
+  const others = Object.entries(dist).filter(([k, v]) => k !== g[scheme] && v >= 0.1).map(([k, v]) => `${esc(names[k] || k)} ${v.toFixed(2)}`).join(", ");
+  return `<div class="jevline"><span class="jev ${here >= 0.6 ? "ok" : here >= 0.3 ? "mid" : "low"}">Jev ${here.toFixed(2)}</span> probability this guideline belongs in this group${others ? `; also ${others}` : ""}</div>`;
+}
+const instCount = ids => new Set(ids.map(id => exById.get(id).doc.university)).size;
+function passes(e) {
+  const d = e.doc;
+  if (st.country !== "all" && d.country !== st.country) return false;
+  if (st.level !== "all" && d.level !== st.level) return false;
+  if (st.agree === "agree" && !jevAgrees(e)) return false;
+  if (st.agree === "disagree" && jevAgrees(e)) return false;
+  return true;
+}
+function matchesQ(text, q) { return !q || text.toLowerCase().includes(q.toLowerCase()); }
+function exText(e) { return `${e.text} ${e.doc.university} ${e.doc.unit} ${e.doc.course || ""}`; }
+function where(d) { return [d.unit, d.course].filter(Boolean).join(" · "); }
+function quote(e, cls = "") {
+  return `<div class="stmt"><p class="vq ${cls}"><mark>${esc(e.text)}</mark></p>
+  <div class="cite"><span class="who">${esc(e.doc.university)}</span><span>${esc(where(e.doc))}</span>
+  <a href="${esc(e.link || e.doc.url)}" target="_blank" rel="noopener" title="Open the source with this passage highlighted">read in source ↗</a>
+  ${jevChip(e)}
+  ${e.doc.language === "fr" ? `<span class="tag" title="Quoted in the original French">French</span>` : ""}
+  ${e.verified !== "exact" ? `<span class="unv" title="Not matched against the fetched page text; check the source">unverified</span>` : ""}</div></div>`;
+}
+
+// ---------- groupings ----------
+const BUILTIN = {
+  theme: { name: "Theme", groups: S.themes, key: g => g.theme },
+  phase: { name: "Course lifecycle", groups: S.phases, key: g => g.phase },
+  actor: { name: "Who it addresses", groups: S.actors, key: g => g.actor },
+  prevalence: {
+    name: "How widely shared",
+    groups: [
+      { id: "wide", label: "Widely shared", desc: "Stated by 10 or more institutions." },
+      { id: "common", label: "Common", desc: "Stated by 4 to 9 institutions." },
+      { id: "distinct", label: "Distinctive", desc: "Stated by 1 to 3 institutions; often a local innovation worth noticing." },
+    ],
+    key: g => { const n = instCount(g.members); return n >= 10 ? "wide" : n >= 4 ? "common" : "distinct"; },
+  },
+};
+function currentGrouping() {
+  if (BUILTIN[st.scheme]) {
+    const b = BUILTIN[st.scheme];
+    return { custom: false, groups: b.groups.map(x => ({ ...x, items: G.filter(g => b.key(g) === x.id) })) };
+  }
+  const sc = schemes[st.scheme];
+  if (!sc) { st.scheme = "theme"; return currentGrouping(); }
+  const valid = new Set(sc.groups.map(x => x.id));
+  const groups = sc.groups.map(x => ({ ...x, items: G.filter(g => sc.assign[g.id] === x.id) }));
+  groups.push({ id: "__none", label: "Not yet grouped", desc: "Drag cards from here into a group, or use the Move menu on each card.", items: G.filter(g => !valid.has(sc.assign[g.id])) });
+  return { custom: true, sc, groups };
+}
+
+// ---------- render: chrome ----------
+function renderStats() {
+  const inst = new Set(DOCS.map(d => d.university));
+  const ver = EX.filter(e => e.verified === "exact").length;
+  document.getElementById("stats").innerHTML =
+    `<span><b>${inst.size}</b> institutions</span><span><b>${DOCS.length}</b> documents</span>` +
+    `<span><b>${EX.length}</b> verbatim statements (${ver} matched to source)</span><span><b>${G.length}</b> reconciled guidelines</span>` +
+    `<span>Corpus built ${esc(C.built)}</span>`;
+}
+function renderTabs() {
+  document.getElementById("tabs").innerHTML = TABS.map(t =>
+    `<button role="tab" id="tab-${t.id}" aria-selected="${st.tab === t.id}" data-tab="${t.id}">${t.label}</button>`).join("");
+}
+function filterBar(withSearch = true) {
+  const countries = [...new Set(DOCS.map(d => d.country))].sort();
+  return `${withSearch ? `<input type="search" id="q" placeholder="Search statements or institutions" value="${esc(st.q)}" aria-label="Search">` : ""}
+  <label class="field"><span class="lbl">Country</span><select id="f-country"><option value="all">All</option>${countries.map(c => `<option ${st.country === c ? "selected" : ""}>${esc(c)}</option>`).join("")}</select></label>
+  ${JEV ? `<label class="field"><span class="lbl">Jev vs analyst</span><select id="f-agree"><option value="all">All statements</option><option value="agree" ${st.agree === "agree" ? "selected" : ""}>Jev agrees</option><option value="disagree" ${st.agree === "disagree" ? "selected" : ""}>Jev disagrees</option></select></label>` : ""}
+  <label class="field"><span class="lbl">Level</span><select id="f-level"><option value="all">All</option>${Object.entries(LABEL.level).map(([k, v]) => `<option value="${k}" ${st.level === k ? "selected" : ""}>${v}</option>`).join("")}</select></label>`;
+}
+
+// ---------- render: synthesis ----------
+function guidelineCard(g, grouping) {
+  const mem = g.members.map(id => exById.get(id)).filter(passes).filter(e => matchesQ(exText(e) + " " + g.label, st.q));
+  if (!mem.length) return "";
+  let lead = exById.get(g.exemplar);
+  if (!lead || !mem.includes(lead)) lead = mem[0];
+  const others = mem.filter(e => e !== lead);
+  const n = new Set(mem.map(e => e.doc.university)).size;
+  const move = grouping.custom ? `<label class="move">Move to <select data-move="${g.id}">
+      ${grouping.sc.groups.map(x => `<option value="${x.id}" ${grouping.sc.assign[g.id] === x.id ? "selected" : ""}>${esc(x.label)}</option>`).join("")}
+      <option value="" ${!grouping.sc.groups.some(x => x.id === grouping.sc.assign[g.id]) ? "selected" : ""}>Not yet grouped</option></select></label>` : "";
+  return `<article class="g" id="g-${g.id}" data-gid="${g.id}" ${grouping.custom ? 'draggable="true"' : ""}>
+    <div class="g-head"><span class="gid">${g.id}</span><h3>${esc(g.label)}</h3>
+      <span class="count"><b>${n}</b> ${n === 1 ? "institution" : "institutions"} · ${plural(mem.length, "statement")}</span></div>
+    ${quote(lead, "lead")}
+    <div class="tags"><span class="tag">${esc(LABEL.theme[g.theme] || g.theme)}</span><span class="tag">${esc(LABEL.phase[g.phase] || g.phase)}</span><span class="tag">${esc(LABEL.actor[g.actor] || g.actor)}</span></div>
+    ${jevGroupLine(g)}
+    ${g.note ? `<div class="analyst">Analyst note: ${esc(g.note)}</div>` : ""}
+    ${others.length ? `<details class="all"><summary>All ${mem.length} statements in this guideline</summary><ol class="stmts">${others.map(e => `<li>${quote(e)}</li>`).join("")}</ol></details>` : ""}
+    ${move}
+  </article>`;
+}
+function renderSynthesis() {
+  const grouping = currentGrouping();
+  const builtinBtns = Object.entries(BUILTIN).map(([k, b]) => `<button aria-pressed="${st.scheme === k}" data-scheme="${k}">${b.name}</button>`).join("");
+  const customBtns = Object.entries(schemes).sort((a, b) => (a[1].name || "").localeCompare(b[1].name || ""))
+    .map(([k, s]) => `<button aria-pressed="${st.scheme === k}" data-scheme="${k}">${esc(s.name)}</button>`).join("");
+  let html = `<div class="toolbar"><span class="lbl">Group by</span><div class="seg" role="group" aria-label="Grouping">${builtinBtns}${customBtns}</div>
+    <button class="btn" id="new-scheme">New grouping…</button><span class="grow"></span>${filterBar()}</div>`;
+  if (st.creating) {
+    html += `<form class="inline-form" id="create-form"><label class="field"><span class="lbl">Name</span><input type="text" id="new-name" required maxlength="60" placeholder="e.g. Burden on students"></label>
+      <label class="field"><span class="lbl">Start from</span><select id="new-from"><option value="empty">Empty groups</option>${Object.entries(BUILTIN).map(([k, b]) => `<option value="${k}">${b.name}</option>`).join("")}</select></label>
+      <button class="btn primary" type="submit">Create grouping</button><button class="btn" type="button" id="cancel-create">Cancel</button>
+      <span class="note">${db ? "Saved groupings are shared with everyone who can open this page." : "Saved in this browser only."}</span></form>`;
+  }
+  if (grouping.custom) {
+    html += `<div class="scheme-bar"><span><b>${esc(grouping.sc.name)}</b> is your grouping. Drag cards between groups or use each card's Move menu. Rename groups in place.</span>
+      <span class="grow"></span><button class="btn small" id="add-group">Add group</button>
+      ${st.confirmDelete ? `<span>Delete this grouping for everyone?</span><button class="btn small danger" id="del-yes">Delete</button><button class="btn small" id="del-no">Keep</button>` : `<button class="btn small danger" id="del-scheme">Delete grouping</button>`}
+      <span class="status" id="scheme-status">${esc(schemeStatus)}</span></div>`;
+  }
+  const rail = grouping.groups.map(x => {
+    const n = x.items.filter(g => guidelineVisible(g)).length;
+    return `<a href="#" data-jump="grp-${x.id}"><span>${esc(x.label)}</span><span class="n">${n}</span></a>`;
+  }).join("");
+  const body = grouping.groups.map(x => {
+    const cards = x.items.map(g => guidelineCard(g, grouping)).filter(Boolean);
+    if (!cards.length && !grouping.custom) return "";
+    const title = grouping.custom && x.id !== "__none"
+      ? `<input type="text" value="${esc(x.label)}" data-rename="${x.id}" aria-label="Group name"><button class="btn small" data-delgroup="${x.id}" title="Remove group; its cards move to Not yet grouped">Remove</button>`
+      : `<h2>${esc(x.label)}</h2>`;
+    return `<section class="group" id="grp-${x.id}" data-group="${x.id}"><header>${title}<span class="count">${plural(cards.length, "guideline")}</span>${x.desc ? `<div class="desc">${esc(x.desc)}</div>` : ""}</header>
+      <div class="cards">${cards.join("") || `<div class="empty-drop">Drop guideline cards here.</div>`}</div></section>`;
+  }).join("");
+  return html + `<div class="syn"><nav class="rail" aria-label="Groups">${rail}</nav><div>${body || `<p class="note">No statements match these filters.</p>`}</div></div>`;
+}
+function guidelineVisible(g) {
+  return g.members.some(id => { const e = exById.get(id); return passes(e) && matchesQ(exText(e) + " " + g.label, st.q); });
+}
+
+// ---------- render: patterns ----------
+function renderPatterns() {
+  const kinds = [
+    { id: "consensus", h: "Patterns that hold", p: "Positions that recur across many institutions, often in nearly the same words." },
+    { id: "tension", h: "Tensions and contradictions", p: "Places where institutions answer the same question in opposite ways. Each side is shown in the institutions' own words." },
+    { id: "gap", h: "Gaps and rare provisions", p: "Topics that few documents address, or that appear only as local innovations." },
+  ];
+  const chipFor = gid => { const g = gById.get(gid); return g ? `<button class="chip" data-goto="${g.id}">${g.id} · ${esc(g.label)} (${instCount(g.members)})</button>` : ""; };
+  const exList = (ids, max = 3) => {
+    const items = ids.map(id => exById.get(id)).filter(Boolean);
+    const head = items.slice(0, max).map(e => quote(e)).join("");
+    const rest = items.slice(max);
+    return head + (rest.length ? `<details class="all"><summary>${rest.length} more</summary><div class="stmts">${rest.map(e => quote(e)).join("")}</div></details>` : "");
+  };
+  return kinds.map(k => {
+    const ps = S.patterns.filter(p => p.kind === k.id);
+    if (!ps.length) return "";
+    return `<section class="pat-section"><h2>${k.h}</h2><p>${k.p}</p>${ps.map(p => {
+      let inner = "";
+      if (p.sides) {
+        inner = `<div class="sides">${p.sides.map((s, i) => `<div class="side ${i ? "b" : ""}"><h4>${esc(s.label)} <span class="count">· ${plural(new Set(s.excerpts.filter(id => exById.has(id)).map(id => exById.get(id).doc.university)).size, "institution")}</span></h4>${exList(s.excerpts)}</div>`).join("")}</div>`;
+      } else if (p.excerpts) inner = exList(p.excerpts, 2);
+      return `<article class="pat"><h3>${esc(p.title)}</h3><p class="body">${esc(p.body)}</p>${inner}
+        ${p.guidelines?.length ? `<div class="chips">${p.guidelines.map(chipFor).join("")}</div>` : ""}</article>`;
+    }).join("")}</section>`;
+  }).join("");
+}
+
+// ---------- render: corpus ----------
+function renderCorpus() {
+  const q = st.q.toLowerCase();
+  let rows = DOCS.filter(d => (st.country === "all" || d.country === st.country) && (st.level === "all" || d.level === st.level))
+    .filter(d => !q || `${d.university} ${d.unit} ${d.course || ""} ${d.title}`.toLowerCase().includes(q));
+  const k = st.sortKey;
+  const val = d => k === "n" ? (d.excerpts || []).length : String(d[k] ?? "").toLowerCase();
+  rows.sort((a, b) => (val(a) > val(b) ? 1 : val(a) < val(b) ? -1 : 0) * st.sortDir);
+  const th = (key, label) => `<th data-sort="${key}" aria-sort="${st.sortKey === key ? (st.sortDir > 0 ? "ascending" : "descending") : "none"}">${label}${st.sortKey === key ? (st.sortDir > 0 ? " ↑" : " ↓") : ""}</th>`;
+  const body = rows.map(d => {
+    const n = (d.excerpts || []).length, v = (d.excerpts || []).filter(e => e.verified === "exact").length;
+    const open = st.openDoc === d.id;
+    return `<tr class="doc-row"><td><div class="inst">${esc(d.university)}</div><div class="sub">${esc([d.region, d.country].filter(Boolean).join(", "))}</div></td>
+      <td>${esc(d.unit)}${d.course ? `<div class="sub">${esc(d.course)}</div>` : ""}</td>
+      <td>${esc(LABEL.level[d.level] || d.level)}<div class="sub">Tier ${d.tier || 1}</div></td>
+      <td><span class="tag stance">${esc(LABEL.stance[d.stance] || d.stance)}</span></td>
+      <td><a href="${esc(d.url)}" target="_blank" rel="noopener">${esc(d.title)} ↗</a>${d.date_or_term ? `<div class="sub">${esc(d.date_or_term)}</div>` : ""}</td>
+      <td class="num">${v}/${n}</td>
+      <td><button class="btn small" data-open="${d.id}" aria-expanded="${open}">${open ? "Hide" : "Details"}</button></td></tr>
+      ${open ? `<tr class="detail"><td colspan="7"><div class="detail-grid"><div><span class="lbl">What it covers (analyst summary)</span><p style="margin:4px 0 0">${esc(d.summary)}</p></div>
+        <div><span class="lbl">Statements coded from this document</span><div class="stmts" style="border:0;padding:0">${(d.excerpts || []).map(e => `${quote(e)}<div class="tags">${(e.topics || []).map(t => `<span class="tag">${esc(LABEL.code[t] || t)}</span>`).join("")}${gOfEx.get(e.id) ? `<button class="chip" data-goto="${gOfEx.get(e.id)}">in ${gOfEx.get(e.id)}</button>` : ""}</div>`).join("")}</div></div></div></td></tr>` : ""}`;
+  }).join("");
+  const none = C.searched_universities.filter(s => s.result !== "included");
+  const byResult = {};
+  for (const s of none) (byResult[s.result] ||= []).push(s);
+  const RES = { "none-found": "No computing-specific policy found", "only-generic-university-policy": "Only a university-wide policy (no computing section)", inaccessible: "Behind a login or not retrievable", "out-of-frame": "Out of frame: no computing degree programs" };
+  const TIERS = [
+    [1, "Computer science", "A CS department policy or CS course policies."],
+    [2, "CS-related unit", "No CS policy; an information science, informatics, AI, or data science unit instead."],
+    [3, "School or college", "No computing-unit policy; a school or college policy that covers computing."],
+    [4, "University-wide", "No computing or school policy; the university's general AI policy."],
+  ];
+  const instTier = {};
+  for (const d of DOCS) instTier[d.university] = Math.min(instTier[d.university] || 9, d.tier || 1);
+  const tierCount = t => Object.values(instTier).filter(x => x === t).length;
+  const tierPanel = `<section class="tiers" aria-label="Source tiers"><div><span class="lbl">Source tiers</span><p class="note" style="margin:4px 0 0">Each university’s documents come from the highest tier that exists. Tiers 1 and 2 are both computing units and are kept together; tiers 3 and 4 are fallbacks used only when a university has no computing-unit policy.</p></div>
+    <ol class="tier-list">${TIERS.map(([n, name, desc]) => `<li><span class="tier-n">${n}</span><div><b>${name}</b> <span class="count">${plural(tierCount(n), "institution")}</span><div class="sub">${desc}</div></div></li>`).join("")}</ol></section>`;
+  return tierPanel + `<div class="toolbar"><input type="search" id="q" placeholder="Search institutions, units, courses" value="${esc(st.q)}" aria-label="Search corpus">${filterBar(false)}
+    <span class="grow"></span><span class="note">${rows.length} of ${DOCS.length} documents · "Verified" counts statements matched word for word against the fetched page.</span></div>
+    <div class="tbl-wrap"><table><thead><tr>${th("university", "Institution")}${th("unit", "Unit / course")}${th("level", "Level")}${th("stance", "Default stance")}${th("title", "Document")}${th("n", "Verified")}<th></th></tr></thead><tbody>${body}</tbody></table></div>
+    <section class="pat-section" style="margin-top:34px"><h2 style="font-family:var(--f-quote);font-size:var(--s-xl)">Searched but not included</h2>
+    <p class="note">Institutions checked during corpus building whose material did not meet the inclusion criteria. Useful for the coverage statement in the paper.</p>
+    ${Object.entries(byResult).map(([r, list]) => `<h3 class="lbl" style="margin:16px 0 6px">${esc(RES[r] || r)} (${list.length})</h3><ul class="coverage">${list.sort((a, b) => a.university.localeCompare(b.university)).map(s => `<li>${esc(s.university)}${s.notes ? `<span class="sub">${esc(s.notes)}</span>` : ""}</li>`).join("")}</ul>`).join("")}</section>`;
+}
+
+// ---------- render: explorer ----------
+const FACETS = {
+  topic: { name: "Code", keys: e => e.topics || [], label: k => LABEL.code[k] || k },
+  guideline: { name: "Guideline", keys: e => [gOfEx.get(e.id) || "—"], label: k => k === "—" ? "Not assigned" : `${k} · ${gById.get(k)?.label}` },
+  phase: { name: "Lifecycle phase", keys: e => [e.phase], label: k => LABEL.phase[k] || k },
+  actor: { name: "Actor", keys: e => [e.actor], label: k => LABEL.actor[k] || k },
+  university: { name: "Institution", keys: e => [e.doc.university], label: k => k },
+  stance: { name: "Document stance", keys: e => [e.doc.stance], label: k => LABEL.stance[k] || k },
+  level: { name: "Document level", keys: e => [e.doc.level], label: k => LABEL.level[k] || k },
+  country: { name: "Country", keys: e => [e.doc.country], label: k => k },
+};
+function renderExplorer() {
+  const f = FACETS[st.xFacet] || FACETS.topic;
+  const groups = new Map();
+  for (const e of EX) {
+    if (!passes(e) || !matchesQ(exText(e), st.xq)) continue;
+    for (const k of f.keys(e)) { if (!groups.has(k)) groups.set(k, []); groups.get(k).push(e); }
+  }
+  const sorted = [...groups.entries()].sort((a, b) => b[1].length - a[1].length);
+  return `<div class="toolbar"><span class="lbl">Group statements by</span><div class="seg" role="group">${Object.entries(FACETS).map(([k, x]) => `<button aria-pressed="${st.xFacet === k}" data-facet="${k}">${x.name}</button>`).join("")}</div>
+    <span class="grow"></span><input type="search" id="xq" placeholder="Search statements" value="${esc(st.xq)}" aria-label="Search statements">${filterBar(false)}</div>
+    <p class="note">Every coded statement in the corpus, regrouped by any facet. A statement with several codes appears under each.</p>
+    ${sorted.map(([k, list]) => `<details class="xg"><summary>${esc(f.label(k))}<span class="count">${plural(list.length, "statement")} · ${plural(new Set(list.map(e => e.doc.university)).size, "institution")}</span></summary>
+      <ul class="xlist">${list.map(e => `<li>${quote(e)}</li>`).join("")}</ul></details>`).join("")}`;
+}
+
+// ---------- render: method ----------
+function renderMethod() {
+  const m = S.method || {};
+  return `<div class="prose">${(m.sections || []).map(s => `<h2>${esc(s.h)}</h2>${s.p.map(p => `<p>${esc(p)}</p>`).join("")}${s.list ? `<ol>${s.list.map(x => `<li>${esc(x)}</li>`).join("")}</ol>` : ""}${(s.after || []).map(p => `<p>${esc(p)}</p>`).join("")}`).join("")}
+  ${JEV ? `<h2>Second coder: Jev</h2><p>Every statement was also classified independently by TypeSafe's Jev model (${esc(JEV.summary.model)}), a model trained to return calibrated probabilities. It chose among all ${G.length} guidelines plus “none of these”, asked twice with the options in opposite orders and the two distributions averaged. Jev's top choice matched the analyst's assignment for ${(JEV.summary.agreement * 100).toFixed(1)}% of ${JEV.summary.n_statements} statements (Cohen's κ = ${JEV.summary.cohen_kappa}). Its answer was the same under both option orders for ${(JEV.summary.order_stable_share * 100).toFixed(1)}% of statements. Guideline-to-group placement agreed with the analyst for ${(JEV.summary.guideline_theme_agreement * 100).toFixed(0)}% of guidelines by theme, ${(JEV.summary.guideline_phase_agreement * 100).toFixed(0)}% by lifecycle phase, and ${(JEV.summary.guideline_actor_agreement * 100).toFixed(0)}% by addressee.</p><p>The “Jev” chip on each statement is Jev's probability that the statement belongs to the guideline it sits under. Use the “Jev vs analyst” filter to review disagreements.</p>` : ""}
+  <h2>Codebook</h2><div class="codebook">${S.codebook.map(c => `<code>${esc(c.code)}</code><span>${esc(c.definition)}</span>`).join("")}</div>
+  <h2>Lifecycle phases</h2><div class="codebook">${S.phases.map(c => `<code>${esc(c.id)}</code><span><b>${esc(c.label)}.</b> ${esc(c.desc)}</span>`).join("")}</div></div>`;
+}
+
+// ---------- main render ----------
+function render() {
+  renderTabs();
+  const v = { synthesis: renderSynthesis, patterns: renderPatterns, corpus: renderCorpus, explorer: renderExplorer, method: renderMethod }[st.tab];
+  const main = document.getElementById("main");
+  const active = document.activeElement;
+  const focusId = active && active.id;
+  const sel = focusId && active.selectionStart != null ? [active.selectionStart, active.selectionEnd] : null;
+  main.innerHTML = v();
+  main.setAttribute("role", "tabpanel");
+  main.setAttribute("aria-labelledby", "tab-" + st.tab);
+  if (focusId) { const el = document.getElementById(focusId); if (el) { el.focus(); if (sel && el.setSelectionRange) try { el.setSelectionRange(...sel); } catch {} } }
+}
+
+// ---------- custom schemes persistence ----------
+function newId() { return "s" + Math.random().toString(36).slice(2, 10); }
+let saveTimers = {};
+function saveScheme(id) {
+  schemeStatus = "Saving…"; updateStatus();
+  clearTimeout(saveTimers[id]);
+  saveTimers[id] = setTimeout(async () => {
+    const sc = schemes[id];
+    if (!sc) return;
+    sc.updated = new Date().toISOString();
+    if (db) {
+      try { await db.collection("schemes").doc(id).set(JSON.parse(JSON.stringify(sc))); schemeStatus = "Saved for everyone"; }
+      catch (err) { schemeStatus = err && err.code === "invalid_argument" ? "You can view groupings but not save changes here" : "Could not save; try again"; }
+    } else {
+      localSchemes[id] = sc; store.set("schemes", localSchemes); schemeStatus = "Saved in this browser";
+    }
+    updateStatus();
+  }, 600);
+}
+function updateStatus() { const el = document.getElementById("scheme-status"); if (el) el.textContent = schemeStatus; }
+async function deleteScheme(id) {
+  delete schemes[id];
+  if (db) { try { await db.collection("schemes").doc(id).delete(); } catch {} }
+  else { delete localSchemes[id]; store.set("schemes", localSchemes); }
+  st.scheme = "theme"; store.set("scheme", st.scheme); render();
+}
+async function initDb() {
+  schemes = { ...localSchemes };
+  try {
+    db = window.claude && window.claude.use ? await window.claude.use("db") : null;
+  } catch { db = null; }
+  if (!db) { render(); return; }
+  try { userCap = await window.claude.use("user"); } catch {}
+  db.collection("schemes").onSnapshot(snap => {
+    const next = {};
+    for (const d of snap.docs) if (d.exists) next[d.id] = JSON.parse(JSON.stringify(d.data()));
+    // keep a scheme being edited locally until its write lands
+    for (const id of Object.keys(saveTimers)) if (schemes[id] && !next[id]) next[id] = schemes[id];
+    schemes = next;
+    if (st.tab === "synthesis" && !isEditingText()) render();
+  }, () => { db = null; schemes = { ...localSchemes }; render(); });
+}
+function isEditingText() { const a = document.activeElement; return a && a.matches && a.matches("input[data-rename], #new-name"); }
+
+// ---------- events ----------
+document.addEventListener("click", e => {
+  const t = e.target.closest("button, a[data-jump]");
+  if (!t) return;
+  if (t.dataset.tab) { st.tab = t.dataset.tab; store.set("tab", st.tab); history.replaceState(null, "", "#" + st.tab); render(); window.scrollTo(0, 0); return; }
+  if (t.dataset.scheme) { st.scheme = t.dataset.scheme; st.confirmDelete = false; store.set("scheme", st.scheme); render(); return; }
+  if (t.dataset.jump) { e.preventDefault(); document.getElementById(t.dataset.jump)?.scrollIntoView({ behavior: "smooth", block: "start" }); return; }
+  if (t.dataset.facet) { st.xFacet = t.dataset.facet; store.set("xFacet", st.xFacet); render(); return; }
+  if (t.dataset.open) { st.openDoc = st.openDoc === t.dataset.open ? null : t.dataset.open; render(); return; }
+  if (t.dataset.goto) {
+    st.tab = "synthesis"; st.q = ""; st.country = "all"; st.level = "all";
+    if (!BUILTIN[st.scheme] && !schemes[st.scheme]) st.scheme = "theme";
+    render();
+    const el = document.getElementById("g-" + t.dataset.goto);
+    if (el) { el.scrollIntoView({ behavior: "smooth", block: "center" }); const d = el.querySelector("details"); if (d) d.open = true; }
+    return;
+  }
+  if (t.id === "new-scheme") { st.creating = true; render(); document.getElementById("new-name")?.focus(); return; }
+  if (t.id === "cancel-create") { st.creating = false; render(); return; }
+  if (t.id === "add-group") {
+    const sc = schemes[st.scheme]; if (!sc) return;
+    sc.groups.push({ id: "g" + Math.random().toString(36).slice(2, 7), label: "New group" });
+    saveScheme(st.scheme); render(); return;
+  }
+  if (t.dataset.delgroup) {
+    const sc = schemes[st.scheme]; if (!sc) return;
+    sc.groups = sc.groups.filter(x => x.id !== t.dataset.delgroup);
+    for (const k of Object.keys(sc.assign)) if (sc.assign[k] === t.dataset.delgroup) delete sc.assign[k];
+    saveScheme(st.scheme); render(); return;
+  }
+  if (t.id === "del-scheme") { st.confirmDelete = true; render(); return; }
+  if (t.id === "del-no") { st.confirmDelete = false; render(); return; }
+  if (t.id === "del-yes") { st.confirmDelete = false; deleteScheme(st.scheme); return; }
+  if (t.dataset.sort) { st.sortDir = st.sortKey === t.dataset.sort ? -st.sortDir : 1; st.sortKey = t.dataset.sort; render(); return; }
+});
+document.addEventListener("click", e => {
+  const th = e.target.closest("th[data-sort]");
+  if (th) { st.sortDir = st.sortKey === th.dataset.sort ? -st.sortDir : 1; st.sortKey = th.dataset.sort; render(); }
+});
+document.addEventListener("submit", async e => {
+  if (e.target.id !== "create-form") return;
+  e.preventDefault();
+  const name = document.getElementById("new-name").value.trim();
+  const from = document.getElementById("new-from").value;
+  if (!name) return;
+  const sc = { name, groups: [], assign: {}, updated: new Date().toISOString() };
+  if (BUILTIN[from]) {
+    const b = BUILTIN[from];
+    sc.groups = b.groups.map(x => ({ id: x.id, label: x.label }));
+    for (const g of G) sc.assign[g.id] = b.key(g);
+  } else {
+    sc.groups = [{ id: "g1", label: "Group 1" }, { id: "g2", label: "Group 2" }];
+  }
+  try { if (userCap) sc.createdBy = await userCap.id(); } catch {}
+  const id = newId();
+  schemes[id] = sc; st.scheme = id; st.creating = false; store.set("scheme", id);
+  saveScheme(id); render();
+});
+let renameTimer;
+document.addEventListener("input", e => {
+  const t = e.target;
+  if (t.id === "q") { st.q = t.value; render(); return; }
+  if (t.id === "xq") { st.xq = t.value; render(); return; }
+  if (t.dataset.rename) {
+    const sc = schemes[st.scheme]; if (!sc) return;
+    const g = sc.groups.find(x => x.id === t.dataset.rename); if (g) g.label = t.value;
+    clearTimeout(renameTimer); renameTimer = setTimeout(() => saveScheme(st.scheme), 400);
+  }
+});
+document.addEventListener("change", e => {
+  const t = e.target;
+  if (t.id === "f-country") { st.country = t.value; render(); return; }
+  if (t.id === "f-level") { st.level = t.value; render(); return; }
+  if (t.id === "f-agree") { st.agree = t.value; render(); return; }
+  if (t.dataset.move) {
+    const sc = schemes[st.scheme]; if (!sc) return;
+    if (t.value) sc.assign[t.dataset.move] = t.value; else delete sc.assign[t.dataset.move];
+    saveScheme(st.scheme); render();
+    document.getElementById("g-" + t.dataset.move)?.scrollIntoView({ block: "center" });
+  }
+});
+document.addEventListener("focusout", e => { if (e.target.dataset && e.target.dataset.rename) render(); });
+// drag and drop between groups (custom groupings)
+let dragGid = null;
+document.addEventListener("dragstart", e => {
+  const card = e.target.closest && e.target.closest(".g[draggable]");
+  if (!card) return;
+  dragGid = card.dataset.gid; card.classList.add("dragging");
+  e.dataTransfer.effectAllowed = "move"; e.dataTransfer.setData("text/plain", dragGid);
+});
+document.addEventListener("dragend", e => { dragGid = null; document.querySelectorAll(".dragging,.drop-target").forEach(n => n.classList.remove("dragging", "drop-target")); });
+document.addEventListener("dragover", e => {
+  if (!dragGid) return;
+  const grp = e.target.closest(".group[data-group]");
+  if (!grp) return;
+  e.preventDefault();
+  document.querySelectorAll(".drop-target").forEach(n => n !== grp && n.classList.remove("drop-target"));
+  grp.classList.add("drop-target");
+});
+document.addEventListener("drop", e => {
+  const grp = e.target.closest(".group[data-group]");
+  if (!grp || !dragGid) return;
+  e.preventDefault();
+  const sc = schemes[st.scheme]; if (!sc) return;
+  if (grp.dataset.group === "__none") delete sc.assign[dragGid]; else sc.assign[dragGid] = grp.dataset.group;
+  dragGid = null; saveScheme(st.scheme); render();
+});
+window.addEventListener("hashchange", () => { const h = location.hash.slice(1); if (TABS.some(t => t.id === h)) { st.tab = h; render(); } });
+
+renderStats();
+render();
+initDb();
+})();
+</script>

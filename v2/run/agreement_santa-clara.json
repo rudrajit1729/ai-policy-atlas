@@ -1,0 +1,16 @@
+{
+ "documents": 5,
+ "units_A": 224,
+ "units_B": 193,
+ "matched": 180,
+ "only_A": 44,
+ "only_B": 13,
+ "kept_only_A": 43,
+ "kept_only_B": 7,
+ "agree_actor": 0.933,
+ "agree_phase": 0.956,
+ "agree_modality": 0.933,
+ "agree_policy_type": 0.894,
+ "agree_stance_docs": 1.0,
+ "notes": "All five documents and all five document stances matched (delegates). Alignment was by overlapping anchors and sentence spans; coder A split sentences into more units than coder B, so most single-coder units are A's finer cuts, and I forced one re-pairing (A 'Take responsibility for the content' with B 'What you submit is your responsibility') and split two mismatched pairs into separate kept units (faculty-responsibility sentence on the guidelines page; weekly-assignments purpose vs unfair-advantage clause). Main disagreements: (1) unit_stance (agreement 0.739), mostly A neutral or B require/restrict for duties attached to allowed use; resolved to permit for disclosure, verification, ownership and responsibility duties, restrict where the passage limits AI substitution or allows use only for designated work, prohibit where use 'is considered a violation', neutral for rationale, analogies and procedures. (2) policy_type between near neighbours: P05 vs P04 and P12/P14 for the sample syllabus tiers (resolved to P05/P14), P24/P62 and P50/P62 for research rules (disclosure to P24, data to P50), P53 vs P31 for bias-related output checks, P77 vs P78 for the Student Conduct Code, P02 vs P79 for 'welcome/expected to use', P10 vs P04 for prior-permission rules (P04), P19 vs P29 for 'may not claim as your own' (P19). (3) actor and phase for 'no university-wide policy' statements and the university's own provisional-guidance statements, resolved to instructor/general and admin respectively. (4) modality for 'considered a violation' sentences: must for duties to cite, informs for plain consequences. Dropped 7 single-coder units as page descriptions, resource pointers, repeats, or part of a rule already coded: B library-page description, B repository pointer, B detector-list repeat, B 'even when properly attributed' (same COEN 11 ban), B linked-article annotation, A ChatGPT-flowchart description, B AI^2 website description. The other 50 single-coder units were real statements and were kept. Policy wording differed rarely; where one coder gave a normalized policy and the other left it null I kept the fuller wording that stays within the passage, and removed clauses that were their own units. One UNCOVERED unit (instructors testing assignments against AI tools) kept with its note; fit notes from both coders were kept."
+}

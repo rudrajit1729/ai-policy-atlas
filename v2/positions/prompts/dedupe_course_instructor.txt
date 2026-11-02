@@ -1,0 +1,97 @@
+Below are policies found in US computer-science course syllabi (generative-AI policies), all addressed to instructors. Each line:
+policy id | topic (policy type) | stage | universities | policy sentence.
+
+Task 1. MERGE policies that say the same thing, even when they sit under different topics or use different words.
+Judge both semantic equivalence (the same requirement, permission, prohibition or fact, worded differently) and latent
+equivalence (the same underlying intent and the same act asked of the same people, even if one is phrased as a rule and
+the other as advice). Examples of the same policy: "Students disclose any AI use in their submissions" and "Students
+acknowledge AI assistance on each assignment". Do NOT merge when the action differs, the object differs (code vs prose,
+data vs output), a condition differs materially (with permission vs always), or the direction differs (prohibit vs
+permit). Merely related or co-occurring policies stay separate. Be exhaustive: check every policy against all others.
+For each merged group give the member ids, one merged "sentence" (at most 20 words, naming the actor, stating the policy
+directly, adding nothing) and a one-line "why" they are the same.
+
+Task 2. Each policy whose stage is "general" has no stage yet. Give it one:
+  - if it asks someone to do or not do something at an identifiable point, its stage: before-course | course-start |
+    during-work | during-assessment | when-misuse | over-time;
+  - if it is a definition, scope statement, reason, value or fact with no time of action: "background".
+
+Return ONLY this JSON, no prose, no code fence:
+{"merges": [{"members": ["P24.03", "P96.02"], "sentence": "...", "why": "..."}],
+  "stages": [{"pid": "P61.01", "stage": "background"}]}
+List only groups of 2 or more in "merges". List every "general" policy in "stages".
+
+CT01.c09 | Default stance: AI not allowed | course-start | 1 | ChatGPT and other generative AI tools are not part of the official toolkit.
+CT02.c02 | Default stance: AI allowed or encouraged | course-start | 7 | The instructor welcomes, embraces or does not ban AI tools.
+CT02.c13 | Default stance: AI allowed or encouraged | course-start | 1 | The instructor recommends Claude.
+CT04.c02 | Rules vary by assignment or deliverable | before-course | 1 | Individual instructors may disallow AI entirely for assignments.
+CT04.c03 | Rules vary by assignment or deliverable | before-course | 6 | Instructors may permit AI use or grant exceptions for specific assignments.
+CT04.c04 | Rules vary by assignment or deliverable | before-course | 1 | Class AI policies are decided by individual faculty.
+CT04.c05 | Rules vary by assignment or deliverable | course-start | 7 | Instructors must state in assignment instructions when and how AI may be used.
+CT04.c10 | Rules vary by assignment or deliverable | during-work | 2 | Some assignments may require students to use AI.
+CT04.c11 | Rules vary by assignment or deliverable | course-start | 1 | Specific assignments where AI is not appropriate will be clearly marked.
+CT06.c05 | Ask staff when unsure | during-work | 1 | Students are not penalized for asking about the accuracy of LLM output on course platforms.
+CT06.c06 | Ask staff when unsure | during-work | 3 | The instructor invites students to reach out with questions or when stuck.
+CT08.c04 | AI for understanding concepts and material | course-start | 1 | The instructor encourages students to use AI to deepen understanding and review challenging material.
+CT16.c04 | Course-provided AI tutor | course-start | 1 | The course offers its own AI chatbot as a resource.
+CT16.c05 | Course-provided AI tutor | during-work | 2 | The course AI tutor guides students without solving, limiting hints per exercise.
+CT21.c07 | Agentic coding tools | background | 1 | Current coding agents can produce complete projects without human help.
+CT24.c02 | Own attempt first, then AI | during-work | 1 | The course first has students write and debug code themselves before using tools.
+CT25.c17 | Disclosing AI use | course-start | 1 | The instructor gives examples of what a proper attribution looks like.
+CT27.c08 | Prompts, transcripts and logs | when-misuse | 1 | The instructional team may ask students for their prompt transcripts.
+CT28.c03 | Reflection on AI use | during-work | 1 | Each assignment includes a section for students to reflect on their use of generative AI.
+CT29.c03 | Disclosure safe harbor and nondisclosure | when-misuse | 5 | Disclosed or permitted AI use is not penalized and is not misconduct.
+CT29.c04 | Disclosure safe harbor and nondisclosure | during-work | 1 | The instructor provides an anonymized open drop box for reporting AI use.
+CT30.c05 | Understand and explain every line | during-work | 11 | Instructors may require students to explain code orally, in a code review or at a meeting.
+CT30.c06 | Understand and explain every line | when-misuse | 5 | Students who cannot explain their submitted code face penalties, a lower grade or an integrity charge.
+CT35.c01 | Assessment designed around AI | during-assessment | 7 | Grades rest largely on in-person, proctored or paper, closed-book exams and quizzes.
+CT35.c02 | Assessment designed around AI | before-course | 2 | The instructor minimizes unproctored code assessment and runs assignments in controlled environments.
+CT35.c04 | Assessment designed around AI | during-assessment | 1 | The instructor reviews screen recordings as one way to see students' work.
+CT35.c05 | Assessment designed around AI | during-work | 1 | The instructor may conduct random code interviews for all projects.
+CT35.c06 | Assessment designed around AI | during-work | 1 | The instructor asks live questions to check students' understanding.
+CT35.c07 | Assessment designed around AI | background | 2 | AI can solve nearly any exercise instantly, so submitted code no longer shows understanding.
+CT35.c08 | Assessment designed around AI | before-course | 2 | The instructor reduces program weight and designs projects for humans with minimal AI.
+CT35.c09 | Assessment designed around AI | during-assessment | 1 | The instructor grades projects on functionality and correctness.
+CT35.c13 | Assessment designed around AI | during-work | 1 | Every AI assistant is blocked on the classroom network.
+CT35.c16 | Assessment designed around AI | during-assessment | 1 | Assessment values team-specific detail about how the team was impacted.
+CT35.c18 | Assessment designed around AI | during-assessment | 1 | Students are graded on progress, learning outcomes and collaboration, not the product.
+CT36.c04 | AI misuse as misconduct | when-misuse | 13 | Instructors and staff pursue suspected AI misuse as academic misconduct or integrity violations through formal channels.
+CT37.c01 | Penalties for AI misuse | when-misuse | 13 | AI misuse earns a zero or no credit on the assignment, exam or project.
+CT37.c02 | Penalties for AI misuse | when-misuse | 3 | Uncited AI use or missing AI documentation earns a zero.
+CT37.c03 | Penalties for AI misuse | when-misuse | 10 | AI misuse can lead to a failing grade for the assignment or the course.
+CT37.c04 | Penalties for AI misuse | when-misuse | 7 | AI misuse can lead to other grade reductions, including negative or escalating grade penalties.
+CT37.c05 | Penalties for AI misuse | when-misuse | 10 | AI misuse can bring academic sanctions, disciplinary action, reporting or expulsion.
+CT37.c06 | Penalties for AI misuse | when-misuse | 1 | Students who knowingly help others use AI to cheat also receive a penalty.
+CT38.c01 | Detecting AI use | during-work | 10 | The instructor runs similarity and plagiarism tools on submissions, including AI-generated solutions and code found online.
+CT38.c02 | Detecting AI use | during-work | 3 | The instructor uses AI detectors such as Turnitin on student submissions.
+CT38.c03 | Detecting AI use | when-misuse | 1 | Work flagged as less than 5% AI-generated can be ignored.
+CT38.c04 | Detecting AI use | course-start | 2 | The instructor does not use AI detectors or actively look for AI use, because detectors are unreliable.
+CT38.c05 | Detecting AI use | course-start | 7 | Instructors and TAs can easily recognize AI-generated work, and students will be caught.
+CT38.c06 | Detecting AI use | when-misuse | 3 | The instructor checks homework to enforce the AI policy, and the ban is strictly enforced.
+CT39.c01 | Reporting and referral | when-misuse | 14 | The instructor reports or refers AI violations to the dean, conduct office or academic integrity office.
+CT39.c02 | Reporting and referral | when-misuse | 1 | Multiple violations lead to a report to the Honor Code council and harsher sanctions.
+CT39.c03 | Reporting and referral | when-misuse | 2 | The instructor may report suspected AI work to the dean or file an Honor Code charge.
+CT39.c04 | Reporting and referral | when-misuse | 1 | The instructor may talk with the student before any report.
+CT39.c05 | Reporting and referral | when-misuse | 1 | AI-generated or unauthorized AI work goes through academic review under existing disciplinary processes.
+CT39.c06 | Reporting and referral | background | 1 | Reporting students for cheating is exhausting for the instructor.
+CT40.c04 | AI undermines learning | background | 8 | The course is designed to build students' own skills, understanding and independent problem-solving.
+CT40.c05 | AI undermines learning | course-start | 6 | The course's AI restrictions exist to protect learning, original thought and authentic understanding.
+CT43.c04 | AI homework hurts exam performance | course-start | 1 | Homework problems are practice for proctored quizzes that students take without help.
+CT43.c05 | AI homework hurts exam performance | background | 1 | In a previous semester, students flagged for AI use scored lower.
+CT46.c04 | Ethics, privacy and cost | course-start | 1 | The instructor does not consent to class being recorded by AI tools.
+CT46.c12 | Ethics, privacy and cost | course-start | 1 | The instructor judges the resource costs of students using AI on this task to be acceptable.
+CT47.c02 | Opt-out and equal access | course-start | 2 | The course is designed so students can earn full marks without using AI.
+CT47.c04 | Opt-out and equal access | course-start | 1 | Exceptions to the AI policy are made only for approved circumstances, including accommodations case by case.
+CT48.c07 | Pointer to other policies | background | 2 | Future or advanced CS courses will likely have stricter or different AI policies.
+CT49.c01 | AI as course content | course-start | 3 | The course teaches students to use AI tools and coding agents to build software, with emphasis on experimentation.
+CT49.c03 | AI as course content | course-start | 1 | The course is not about writing prompts to have an AI do your work.
+CT49.c04 | AI as course content | course-start | 1 | Responsible use of AI is part of what the course teaches.
+OTHER.c02 | Other | during-work | 2 | The instructor discloses when and where the instructor uses AI.
+OTHER.c03 | Other | during-assessment | 1 | The instructor will never use AI to grade.
+OTHER.c06 | Other | during-work | 3 | The instructor provides guidance on AI through course materials and office hours and welcomes discussion or disagreement.
+OTHER.c08 | Other | course-start | 1 | The instructor provides no explicit support or training in using AI tools.
+OTHER.c09 | Other | over-time | 3 | The instructor may amend the AI policy during the semester; the current policy may be only interim.
+OTHER.c18 | Other | background | 3 | Fair evaluation of student work needs work not assisted by AI; past bans disadvantaged honest students.
+OTHER.c20 | Other | background | 1 | The instructor wants students' own ideas, not what a chatbot says.
+OTHER.c21 | Other | background | 1 | A generous late policy is designed in part to reduce the temptation to use AI.
+OTHER.c22 | Other | during-assessment | 1 | Citing AI use will not prevent a low score.

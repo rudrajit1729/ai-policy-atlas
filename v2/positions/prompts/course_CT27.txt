@@ -1,0 +1,66 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT27 "Prompts, transcripts and logs" (Keep or submit prompts, full chat transcripts or session logs (prompts file, unedited transcripts, committed to the repository).).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..41 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | brown | C5 | student | must | must include prompts or chat link | a TA-accessible link to the conversation history or a list of the prompts used must be included with the hand-in.
+1 | bucknell | C4 | student | must | must include significant prompts | Include prompts if significant
+2 | california-riverside | C3 | student | must-not | cite full AI conversation | directly use answers obtained by AI tools without citing the full conversation
+3 | california-riverside | C3 | student | must | cite full AI conversation | If you use any AI-based resources (e.g., ChatGPT), you need to provide the full conversation with it
+4 | california-san-diego | C4 | student | must | submit full conversation history | you must document your usage of these tools by submitting (i.e., turning in) the complete conversation history
+5 | carleton-college | C3 | student | must | cite LLM name version prompts | the name and version of the specific LLM you used, as well as the exact prompts you used to generate the text
+6 | carleton-college | C6 | student | must | log exact prompts | What exact prompt(s) did you use to generate the output?
+7 | colby-college | C1 | student | must | list prompts and incorporation | Include all prompts that you used and how you incorporated them into your project or report.
+8 | colorado-boulder | C4 | student | must | must include prompts and responses | you need to include the prompt and the significant parts of the response.
+9 | columbia | C6 | student | must | citation must include all prompts | the citation provided must include the full set of prompts
+10 | columbia | C6 | student | must-not | log links not accepted | links to logs are not accepted.
+11 | cornell | C2 | student | must | submit complete chat logs | as well as the submission of a file titled
+12 | georgia-tech | C4 | instructor | may | staff may request prompt transcripts | the instructional team reserves the right to ask
+13 | harvard | C6 | student | must | must submit chat transcripts | you must check in full transcripts of relevant chats with
+14 | james-madison | C6 | student | must | must document prompts used | you must clea rly document
+15 | kansas | C4 | student | must | must cite prompts used | The specific prompts you entered
+16 | memphis | C2 | student | must | must submit AI transcript | A transcript or export of your interaction with the tool
+17 | north-carolina-state | C2 | student | must | must include AI transcript in README | Include a transcript of your interaction with AI in the project’s README file.
+18 | north-carolina-state | C3 | student | must | must report each AI session | You must report each conversation/session in which you use NCSU
+19 | north-carolina-state | C3 | student | must | must submit full AI transcript | The full transcript of the conversation/session must be submitted in the report.
+20 | north-carolina-state | C3 | student | must-not | transcript must be unedited | The content of the prompts and responses must not be edited or truncated in any way.
+21 | north-carolina-state | C3 | student | must | report within 24 hours | The report must be submitted according to these policies within 24 hours of each conversation/session.
+22 | oberlin-college | C5 | student | should | document tool, prompts, and output | All uses of AI tools on homeworks or the final project should document in a README file
+23 | old-dominion | C3 | student | should | keep prompts in aiPrompts file | the prompts used to query the AI assistant should be copied to a file aiPrompts.txt
+24 | old-dominion | C3 | student | should | commit prompt file to git | committed and pushed to your git repository along with your regular code
+25 | old-dominion | C4 | student | must | keep prompts supplied to AI | Students must retain a copy of the prompts supplied to the AI engine
+26 | old-dominion | C4 | student | must | submit prompts file in project | must supply that as a file PROMPT.txt in the root directory of the assignment/project
+27 | old-dominion | C6 | student | must | must include conversation link or screenshot | You must include the website for the tool and either a link to, or screenshot of, the conversation you had with the tool.
+28 | old-dominion | C6 | student | must | must report initial prompt | You must also write out in your homework
+29 | princeton | C3 | student | must | keep complete AI interaction records | you must keep complete records of your AI engagement for possible review
+30 | princeton | C3 | student | must-not | scrubbing AI history is violation | Scrubbing your history of your interactions will be considered prima facie evidence of a violation
+31 | rochester-institute-technology | C3 | student | must | must report prompts and results | or the specific online/genAI prompts you used and the obtained results
+32 | rochester-institute-technology | C4 | student | must | must submit prompts file | Submit your prompts for GPT (as a separate file) as part of your work
+33 | texas-tyler | C2 | student | must | include AI prompt in comments | If AI generated, include the prompt in the
+34 | uiuc | C1 | student | informs | integrity policies cover agent transcripts | apply to the independent project, including your Claude Code session transcripts and the activity your Claude Code hooks report as you work.
+35 | uiuc | C1 | student | must-not | no tampering with session logs | Editing, manufacturing, or otherwise tampering with Claude Code session logs, or with the activity your Claude Code hooks report,
+36 | uiuc | C2 | student | must | must submit full AI transcript | together with the complete transcript
+37 | uiuc | C2 | student | should | specstory-cli encouraged for logging | we encourage you to use
+38 | uiuc | C2 | student | must-not | no AI-regenerated transcripts | Never ask the AI to reproduce the conversation for you
+39 | uiuc | C2 | student | must | attest transcript is complete | The submitted transcript(s) represent the complete and unaltered record of your AI interactions for this
+40 | vanderbilt | C5 | student | must | submit significant prompts used | the most significant prompts you used to co-create the code with an AI collaborator, if applicable
+41 | washington-in-st-louis | C6 | student | must | provide exact prompts used | the exact prompts you used, and an explanation (in your own words!) of what

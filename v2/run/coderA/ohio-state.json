@@ -1,0 +1,561 @@
+{
+ "university": "The Ohio State University",
+ "slug": "ohio-state",
+ "state": "OH",
+ "type": "R1",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "ohio-state-oaa-ai-integrity",
+   "layer": "university",
+   "unit": "Office of Academic Affairs, Faculty Affairs",
+   "course": null,
+   "title": "Artificial intelligence and academic integrity",
+   "url": "https://faculty.osu.edu/news/2023/04/06/artificial-intelligence-and-academic-integrity",
+   "date_or_term": "2023-04-06",
+   "stance": "restrict",
+   "tiers": [],
+   "summary": "A 2023 Provost-office news item telling students that generative AI is off limits for coursework unless the individual instructor authorizes it. It grounds the rule in the Code of Student Conduct and academic integrity.",
+   "stance_why": "The statement says generative AI tools 'should not be used in the completion of course assignments unless an instructor for a given course specifically authorizes their use'. That is a default ban lifted only by explicit instructor permission, so restrict rather than delegates, because the default is stated.",
+   "units": [
+    {
+     "why": "The sentence says 'these generative AI tools should not be used in the completion of course assignments unless an instructor ... specifically authorizes their use', a default ban lifted only by authorization. I chose P01 (default prohibition) over P04 because the main content is the default ban; the instructor-decides part is coded in the next units.",
+     "anchor": "should not be used in the completion of course assignments unless an instructor",
+     "frag_start": "these generative AI tools should",
+     "frag_end": "specifically authorizes their use",
+     "policy": "Generative AI tools should not be used in the completion of course assignments unless the instructor for the course specifically authorizes their use",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should-not",
+     "policy_type": "P01",
+     "unit_stance": "restrict",
+     "topics": [
+      "default-stance",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "'Some instructors may approve of using generative AI tools in the academic setting for specific goals' places the permission decision with individual instructors, so it is coded P04 rather than as a blanket permission.",
+     "anchor": "Some instructors may approve of using generative AI tools in the academic setting",
+     "frag_start": "Some instructors may approve",
+     "frag_end": "for specific goals",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P04",
+     "unit_stance": "permit",
+     "topics": [
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "The text requires 'explicit and clear permission of each individual instructor, and then only in the ways allowed'. Permission is per instructor and confined to what was allowed; P04 fits. P10 (ask when unsure) is not what is said.",
+     "anchor": "only with the explicit and clear permission of each individual instructor",
+     "frag_start": "However, these tools should be",
+     "frag_end": "ways allowed by the instructor.",
+     "policy": "AI tools are used only with explicit and clear permission of each individual instructor, and only in the ways the instructor allows",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P04",
+     "unit_stance": "restrict",
+     "topics": [
+      "instructor-discretion",
+      "permitted-uses"
+     ],
+     "fit_note": "Adds that permission must be explicit and clear and that use is confined to the ways the instructor allows."
+    },
+    {
+     "why": "The phrase 'when used in the wrong way, they can stand in conflict with academic integrity' gives integrity as the reason for limiting AI, not skill-building, so P95 (fairness and honesty) rather than P41.",
+     "anchor": "they can stand in conflict with academic integrity at Ohio State",
+     "frag_start": "These tools will help shape",
+     "frag_end": "integrity at Ohio State.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P95",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale",
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The phrase 'these tools will help shape the future of work, research and technology' is a statement about AI's professional importance. It is nearest to P44 but does not say courses teach AI use or employers expect it, so I record a fit note.",
+     "anchor": "These tools will help shape the future of work, research and technology",
+     "frag_start": "These tools will help shape",
+     "frag_end": "research and technology",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P44",
+     "unit_stance": "neutral",
+     "topics": [
+      "ai-literacy-career"
+     ],
+     "fit_note": "Only observes that AI will shape the future of work and research; it does not say students should learn to use AI."
+    },
+    {
+     "why": "Students are 'not to use unauthorized assistance in the laboratory, on field work, in scholarship or on a course assignment' unless the instructor authorized it. It is a general integrity rule that AI falls under; P36 fits better than P04 because the focus is the obligation under the Code.",
+     "anchor": "unauthorized assistance in the laboratory, on field work, in scholarship or on a course assignment",
+     "frag_start": "Specifically, students are not",
+     "frag_end": "authorized specifically by the course instructor.",
+     "policy": "Students may not use unauthorized assistance in the laboratory, on field work, in scholarship or on a course assignment unless the course instructor has specifically authorized it",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions",
+      "instructor-discretion"
+     ],
+     "fit_note": "States the obligation under the Code of Student Conduct but does not itself name misconduct classification or process."
+    },
+    {
+     "why": "'students are not to submit their work without acknowledging any word-for-word use and/or paraphrasing of writing, ideas or other work that is not your own' requires acknowledgment of others' work, which the document applies to AI. P24 is nearest but the passage speaks of sources generally, so a fit note.",
+     "anchor": "acknowledging any word-for-word use and/or paraphrasing",
+     "frag_start": "In addition, students are not",
+     "frag_end": "that is not your own.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "restrict",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "fit_note": "Requires acknowledging any word-for-word or paraphrased use of others' work; AI is not named in this sentence."
+    },
+    {
+     "why": "'These requirements apply to all students' (undergraduate, graduate, and professional) sets the scope of the rules, so it is a scope statement (P61) addressed to all.",
+     "anchor": "These requirements apply to all students",
+     "frag_start": "These requirements apply to all",
+     "frag_end": "and professional.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance"
+     ],
+     "fit_note": "Sets who is covered (undergraduate, graduate, professional students); it does not define AI."
+    },
+    {
+     "why": "'Our professional students also have the responsibility to uphold the professional and ethical standards found in their respective academic honor codes' ties professional programs to existing honor codes, so P77 (follow existing university policy).",
+     "anchor": "Our professional students also have the responsibility to uphold the professional and ethical standards",
+     "frag_start": "Our professional students also have",
+     "frag_end": "academic honor codes.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "fit_note": "Refers to professional honor codes of programs rather than laws or university-wide policy."
+    },
+    {
+     "why": "The 'Learn More' list points readers to the Teaching and Learning Resource Center, the Drake Institute and the Committee on Academic Misconduct. It offers resources but no rule, and no existing type covers a pointer to teaching-center and integrity-committee resources, so UNCOVERED.",
+     "anchor": "Resources from the Teaching and Learning Resource Center",
+     "frag_start": "Resources from the Teaching",
+     "frag_end": "Drake Institute for Teaching and Learning",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "uncovered_note": "Points readers to teaching-center, Drake Institute and academic-misconduct committee resources on AI and integrity."
+    }
+   ]
+  },
+  {
+   "id": "ohio-state-code-3335-23-04",
+   "layer": "university",
+   "unit": "Code of Student Conduct (Ohio Admin. Code 3335-23-04)",
+   "course": null,
+   "title": "Prohibited conduct, 3335-23-04",
+   "url": "https://codes.ohio.gov/ohio-administrative-code/rule-3335-23-04",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance": "restrict",
+   "tiers": [],
+   "summary": "The prohibited-conduct rule of Ohio State's Code of Student Conduct. Among its academic-misconduct examples is unauthorized use of generative AI; the rest of the rule covers unrelated conduct.",
+   "stance_why": "Clause (5) makes 'Unauthorized use of generative artificial intelligence systems or similar technologies to complete academic activities' academic misconduct, so AI is barred unless authorized. Restrict fits because authorized use is implicitly allowed.",
+   "units": [
+    {
+     "why": "Clause (A)(5) lists 'Unauthorized use of generative artificial intelligence systems or similar technologies to complete academic activities' as academic misconduct. This classifies unauthorized AI use as misconduct under the Code, so P36; 'unauthorized' means authorized use is not covered.",
+     "anchor": "Unauthorized use of generative artificial intelligence systems or similar technologies to complete academic activities",
+     "frag_start": "Unauthorized use of generative artificial",
+     "frag_end": "complete academic activities;",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "prohibit",
+     "topics": [
+      "integrity-sanctions",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "The opening says any student who engaged 'in any of the following conduct' 'will be subject to disciplinary action by the university', so AI misconduct (item A5) leads to discipline. No specific penalty is named, so P36 not P37.",
+     "anchor": "will be subject to disciplinary action by the university",
+     "frag_start": "Any student found to have engaged",
+     "frag_end": "by the university.",
+     "policy": "Any student found to have engaged, or attempted to engage, in the listed conduct, including unauthorized use of generative AI to complete academic activities, is subject to disciplinary action by the university",
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The rule defines 'attempt' as 'conduct that, if successful, would constitute or result in the prohibited conduct', so attempted unauthorized AI use is also punishable. No type covers attempt liability, so UNCOVERED.",
+     "anchor": "attempt shall be defined as conduct that, if successful, would constitute",
+     "frag_start": "For the purposes of this",
+     "frag_end": "prohibited conduct.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "uncovered_note": "Attempting prohibited conduct, including unauthorized AI use, is treated the same as completing it."
+    },
+    {
+     "why": "Item (A)(1), 'Violation of course rules and/or assignment guidelines as contained in the course syllabus', makes breaking a course's AI rules misconduct. It is not AI-specific but gives instructor-set AI rules their force, so P36.",
+     "anchor": "Violation of course rules and/or assignment guidelines as contained in the course syllabus",
+     "frag_start": "Violation of course rules and/or",
+     "frag_end": "provided to the student;",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions",
+      "instructor-discretion"
+     ],
+     "fit_note": "General rule on course rules and assignment guidelines; AI is not named."
+    },
+    {
+     "why": "Item (A)(12), 'Violation of program regulations and/or policies as established by departmental committees', extends misconduct to program rules, which would cover departmental AI rules. P85 is closest in subject but the item is about enforcement, so P36.",
+     "anchor": "Violation of program regulations and/or policies as established by departmental committees",
+     "frag_start": "Violation of program regulations and/or",
+     "frag_end": "made available to students; and",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "fit_note": "General rule on departmental program regulations; AI is not named."
+    },
+    {
+     "why": "Under (N), 'Students are responsible for reviewing and undertstanding the rules, standards and guidelines provided to them by their academic programs and colleges' puts the duty to learn local rules (here including AI rules) on students. That is P78.",
+     "anchor": "Students are responsible for reviewing and undertstanding the rules, standards and guidelines",
+     "frag_start": "Students are responsible for reviewing",
+     "frag_end": "academic programs and colleges.",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "must",
+     "policy_type": "P78",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "accountability-understanding"
+     ],
+     "fit_note": "General duty to know program and college rules; AI is not named."
+    }
+   ]
+  },
+  {
+   "id": "ohio-state-ug-syllabus-statements",
+   "layer": "university",
+   "unit": "Office of Undergraduate Education",
+   "course": null,
+   "title": "Recommended Syllabus Statements",
+   "url": "https://ugeducation.osu.edu/sites/default/files/documents/Recommended-Syllabus-Statements.pdf",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance": "restrict",
+   "tiers": [],
+   "summary": "A Recommended Syllabus Statements document from the Office of Undergraduate Education. It supplies a COAM academic-misconduct statement and the same AI-and-integrity text as the Provost notice; its other statements (counseling, disability, religion) do not concern AI.",
+   "stance_why": "The 'Artificial Intelligence and Academic Integrity' section says 'these generative AI tools should not be used in the completion of course assignments unless an instructor ... specifically authorizes their use', a default ban lifted by instructor authorization. The rest of the document is general misconduct and unrelated syllabus statements.",
+   "units": [
+    {
+     "why": "The sentence says 'these generative AI tools should not be used in the completion of course assignments unless an instructor ... specifically authorizes their use', a default ban lifted only by authorization. I chose P01 (default prohibition) over P04 because the main content is the default ban; the instructor-decides part is coded in the next units.",
+     "anchor": "should not be used in the completion of course assignments unless an instructor",
+     "frag_start": "these generative AI tools should",
+     "frag_end": "specifically authorizes their use",
+     "policy": "Generative AI tools should not be used in the completion of course assignments unless the instructor for the course specifically authorizes their use",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should-not",
+     "policy_type": "P01",
+     "unit_stance": "restrict",
+     "topics": [
+      "default-stance",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "'Some instructors may approve of using generative AI tools in the academic setting for specific goals' places the permission decision with individual instructors, so it is coded P04 rather than as a blanket permission.",
+     "anchor": "Some instructors may approve of using generative AI tools in the academic setting",
+     "frag_start": "Some instructors may approve",
+     "frag_end": "for specific goals",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P04",
+     "unit_stance": "permit",
+     "topics": [
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "The text requires 'explicit and clear permission of each individual instructor, and then only in the ways allowed'. Permission is per instructor and confined to what was allowed; P04 fits. P10 (ask when unsure) is not what is said.",
+     "anchor": "only with the explicit and clear permission of each individual instructor",
+     "frag_start": "However, these tools should be",
+     "frag_end": "ways allowed by the instructor.",
+     "policy": "AI tools are used only with explicit and clear permission of each individual instructor, and only in the ways the instructor allows",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P04",
+     "unit_stance": "restrict",
+     "topics": [
+      "instructor-discretion",
+      "permitted-uses"
+     ],
+     "fit_note": "Adds that permission must be explicit and clear and that use is confined to the ways the instructor allows."
+    },
+    {
+     "why": "The phrase 'when used in the wrong way, they can stand in conflict with academic integrity' gives integrity as the reason for limiting AI, not skill-building, so P95 (fairness and honesty) rather than P41.",
+     "anchor": "they can stand in conflict with academic integrity at Ohio State",
+     "frag_start": "These tools will help shape",
+     "frag_end": "integrity at Ohio State.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P95",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale",
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The phrase 'these tools will help shape the future of work, research and technology' is a statement about AI's professional importance. It is nearest to P44 but does not say courses teach AI use or employers expect it, so I record a fit note.",
+     "anchor": "These tools will help shape the future of work, research and technology",
+     "frag_start": "These tools will help shape",
+     "frag_end": "research and technology",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P44",
+     "unit_stance": "neutral",
+     "topics": [
+      "ai-literacy-career"
+     ],
+     "fit_note": "Only observes that AI will shape the future of work and research; it does not say students should learn to use AI."
+    },
+    {
+     "why": "Students are 'not to use unauthorized assistance in the laboratory, on field work, in scholarship or on a course assignment' unless the instructor authorized it. It is a general integrity rule that AI falls under; P36 fits better than P04 because the focus is the obligation under the Code.",
+     "anchor": "unauthorized assistance in the laboratory, on field work, in scholarship or on a course assignment",
+     "frag_start": "Specifically, students are not",
+     "frag_end": "authorized specifically by the course instructor.",
+     "policy": "Students may not use unauthorized assistance in the laboratory, on field work, in scholarship or on a course assignment unless the course instructor has specifically authorized it",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions",
+      "instructor-discretion"
+     ],
+     "fit_note": "States the obligation under the Code of Student Conduct but does not itself name misconduct classification or process."
+    },
+    {
+     "why": "'students are not to submit their work without acknowledging any word-for-word use and/or paraphrasing of writing, ideas or other work that is not your own' requires acknowledgment of others' work, which the document applies to AI. P24 is nearest but the passage speaks of sources generally, so a fit note.",
+     "anchor": "acknowledging any word-for-word use and/or paraphrasing",
+     "frag_start": "In addition, students are not",
+     "frag_end": "that is not your own.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "restrict",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "fit_note": "Requires acknowledging any word-for-word or paraphrased use of others' work; AI is not named in this sentence."
+    },
+    {
+     "why": "'These requirements apply to all students' (undergraduate, graduate, and professional) sets the scope of the rules, so it is a scope statement (P61) addressed to all.",
+     "anchor": "These requirements apply to all students",
+     "frag_start": "These requirements apply to all",
+     "frag_end": "and professional.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance"
+     ],
+     "fit_note": "Sets who is covered (undergraduate, graduate, professional students); it does not define AI."
+    },
+    {
+     "why": "'Our professional students also have the responsibility to uphold the professional and ethical standards found in their respective academic honor codes' ties professional programs to existing honor codes, so P77 (follow existing university policy).",
+     "anchor": "Our professional students also have the responsibility to uphold the professional and ethical standards",
+     "frag_start": "Our professional students also have",
+     "frag_end": "academic honor codes.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "fit_note": "Refers to professional honor codes of programs rather than laws or university-wide policy."
+    },
+    {
+     "why": "The statement says 'COAM recommends that every faculty member, instructor, and graduate teaching associate ... prepare and distribute ... a course syllabus that contains a statement concerning academic misconduct'. It asks for a syllabus statement, so P09, though it names academic misconduct and not AI.",
+     "anchor": "every faculty member, instructor, and graduate teaching associate who is teaching a course prepare",
+     "frag_start": "The Committee on Academic Misconduct",
+     "frag_end": "academic integrity\".",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "fit_note": "Recommends a statement on academic misconduct or integrity in the syllabus; AI is covered only through the AI section below it."
+    },
+    {
+     "why": "The university 'does not have a standardized statement on academic misconduct' and COAM's text may be used 'with or without modification', so wording is left to instructors. P04 is nearest but this concerns wording, not the AI decision; fit note recorded.",
+     "anchor": "instructors are free to use (with or without modification) for their syllabi",
+     "frag_start": "Thus, COAM has prepared the",
+     "frag_end": "for their syllabi:",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P04",
+     "unit_stance": "permit",
+     "topics": [
+      "instructor-discretion",
+      "syllabus-communication"
+     ],
+     "fit_note": "Instructors may adapt the recommended misconduct statement; says nothing about who decides AI use."
+    },
+    {
+     "why": "'Ignorance of the University's Code of Student Conduct is never considered an excuse for academic misconduct' puts the burden of knowing the rules on students. P78 is nearest; AI is not named.",
+     "anchor": "Ignorance of the University's Code of Student Conduct is never considered an excuse",
+     "frag_start": "Ignorance of the University's Code",
+     "frag_end": "academic misconduct, so I",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "informs",
+     "policy_type": "P78",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "fit_note": "Says ignorance is no excuse and asks students to review the Code; AI is not named."
+    },
+    {
+     "why": "The statement says the instructor 'is obligated by University Rules to report my suspicions to the Committee on Academic Misconduct'. This is a required reporting procedure, P81, not a classification of misconduct.",
+     "anchor": "I am obligated by University Rules to report my suspicions",
+     "frag_start": "If I suspect that a student",
+     "frag_end": "Committee on Academic Misconduct.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P81",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "fit_note": "Covers suspected academic misconduct in general; AI is not named."
+    },
+    {
+     "why": "'the sanctions for the misconduct could include a failing grade in this course and suspension or dismissal from the University' states concrete penalties in advance, so P37, though as possibilities rather than fixed penalties.",
+     "anchor": "could include a failing grade in this course and suspension or dismissal",
+     "frag_start": "could include a failing grade",
+     "frag_end": "dismissal from the University.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "fit_note": "Penalties are listed as possibilities for academic misconduct generally; AI is not named."
+    },
+    {
+     "why": "'If you have any questions about the above policy or what constitutes academic misconduct in this course, please contact me' tells students to ask the instructor when unsure, matching P10.",
+     "anchor": "what constitutes academic misconduct in this course, please contact me",
+     "frag_start": "If you have any questions about",
+     "frag_end": "please contact me.",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P10",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "fit_note": "Directs questions about academic misconduct generally, not specifically about whether AI use is allowed."
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Doc 3 repeats the AI paragraph of doc 1 verbatim; each document is coded on its own as instructed. Units from the code and syllabus documents that are general academic-misconduct rules (no AI named) carry fit_notes because the AI rules rely on them. Non-AI syllabus statements (counseling, disability, religion, weather, etc.) were skipped."
+}

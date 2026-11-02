@@ -1,0 +1,841 @@
+{
+ "university": "Indiana University Indianapolis",
+ "slug": "indiana-indianapolis",
+ "state": "IN",
+ "type": "R1",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "indiana-indianapolis-teachiu-policies",
+   "layer": "university",
+   "unit": "Teaching.IU (Indiana University teaching centers)",
+   "course": null,
+   "title": "Policies and Guidance: Generative AI",
+   "url": "https://teaching.iu.edu/resources/generative-ai/policies.html",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance_why": "The page says \"IU does not currently have any specific policies around the use of generative AI\" and offers two sample syllabus templates (\"Least restrictive\", \"Most restrictive\") that instructors \"may consider as starting templates\", so it sets no stance itself and hands the decision to instructors with tiers.",
+   "stance": "delegates",
+   "tiers": [
+    "Least restrictive: GAI permitted for all work with acknowledgement and citation",
+    "Most restrictive: GAI strictly prohibited for any part of assignments"
+   ],
+   "summary": "IU-wide teaching page that says IU has no AI-specific policy beyond data security and privacy, prefers Copilot, and leaves course terms to instructors. It offers two sample syllabus statements (least and most restrictive) as templates and advice on communicating the policy.",
+   "units": [
+    {
+     "why": "The page says \"IU does not currently have any specific policies around the use of generative AI\", an institution-level statement of what framework exists; coded P56 as informs because it states the absence of one, and P04 does not fit since the sentence does not itself hand the choice to instructors.",
+     "anchor": "IU does not currently have any specific policies around the use of generative AI",
+     "frag_start": "IU does not currently have",
+     "frag_end": "data security and privacy.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance",
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "\"Microsoft Copilot ... is IU's preferred generative AI service for faculty and staff\" recommends a vetted tool to instructors, so P50 (prefer vetted tools) rather than P17, which concerns a course-specific tool; it is a recommendation, so should.",
+     "anchor": "is IU's preferred generative AI service for faculty and staff",
+     "frag_start": "Microsoft Copilot (formerly Bing",
+     "frag_end": "for faculty and staff.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "permit",
+     "topics": [
+      "privacy-data",
+      "course-provided-tools"
+     ]
+    },
+    {
+     "why": "\"When using public tools, usage of data is more restrictive, even when the data are anonymized\" states data limits by tool type; this is a data-protection fact, so P50 with informs.",
+     "anchor": "usage of data is more restrictive, even when the data are anonymized",
+     "frag_start": "When using public tools, usage",
+     "frag_end": "are anonymized.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"IU provides a Data Classification Matrix to help faculty make the most appropriate decisions\" points faculty to a data-protection resource; P50 informs.",
+     "anchor": "IU provides a Data Classification Matrix to help faculty",
+     "frag_start": "Understanding the way data",
+     "frag_end": "with using data.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"Students are expected to adhere to the Code of Student Rights, Responsibilities, and Conduct, which addresses Academic Misconduct\" places AI under existing misconduct rules, so P36 and not a new AI-specific rule.",
+     "anchor": "Students are expected to adhere to the Code of",
+     "frag_start": "Students are expected to adhere",
+     "frag_end": "Academic Misconduct.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions",
+      "default-stance"
+     ]
+    },
+    {
+     "why": "\"it may be useful for instructors to address generative AI more specifically, such as in their syllabi\" recommends instructors state AI expectations; P09 (syllabus statement) with a soft modality, may.",
+     "anchor": "it may be useful for instructors to address generative AI more specifically",
+     "frag_start": "However, it may be useful",
+     "frag_end": "in their syllabi.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "Sample \"Least restrictive\" template: \"The use of generative AI (GAI) is permitted in this course for all assignments and assessments with no penalty\" is a default-permit rule, P02.",
+     "anchor": "is permitted in this course for all assignments and assessments with no penalty",
+     "frag_start": "The use of generative AI",
+     "frag_end": "with no penalty.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P02",
+     "unit_stance": "permit",
+     "topics": [
+      "default-stance",
+      "permitted-uses"
+     ]
+    },
+    {
+     "why": "\"You will be responsible for any inaccurate, biased, offensive, or otherwise unethical content you submit\" makes students answerable for submissions regardless of source, P29 (not P31, which is about verifying output).",
+     "anchor": "You will be responsible for any inaccurate, biased, offensive, or otherwise unethical content you submit",
+     "frag_start": "You will be responsible for",
+     "frag_end": "a GAI platform.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P29",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "\"all large language models ... still have a large tendency to make up incorrect facts or fake citations\" warns that output is unreliable, P31 as informs.",
+     "anchor": "have a large tendency to make up incorrect facts or fake citations",
+     "frag_start": "However, students should note",
+     "frag_end": "highly offensive products.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "informs",
+     "policy_type": "P31",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding",
+      "ethics-bias-environment"
+     ]
+    },
+    {
+     "why": "\"Any use of such tools must be appropriately acknowledged and cited\" requires disclosure with submissions, P24.",
+     "anchor": "Any use of such tools must be appropriately acknowledged and cited.",
+     "frag_start": "Any use of such tools",
+     "frag_end": "acknowledged and cited.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "require",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "\"The disclosure of use of GAI for spelling and grammar checkers is not necessary, but all other uses of GAI require proper acknowledgment\" carves out an exemption within the disclosure rule; P24 fits better than P18 because it defines the scope of disclosure.",
+     "anchor": "The disclosure of use of GAI for spelling and grammar checkers is not necessary",
+     "frag_start": "The disclosure of use",
+     "frag_end": "acknowledgment and citations.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation",
+      "writing-assistance"
+     ]
+    },
+    {
+     "why": "The \"APA Citation Example: OpenAI. (2024). ChatGPT (Mar 14 version) [Large language model]\" shows a citation naming tool, version and date, P25.",
+     "anchor": "OpenAI. (2024). ChatGPT (Mar 14 version) [Large language model].",
+     "frag_start": "OpenAI. (2024). ChatGPT",
+     "frag_end": "chat.openai.com/chat",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "informs",
+     "policy_type": "P25",
+     "unit_stance": "neutral",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "\"Use of GAI without acknowledgement will result in a penalty\" makes failure to disclose itself the violation, P28.",
+     "anchor": "Use of GAI without acknowledgement will result in a penalty.",
+     "frag_start": "Use of GAI without",
+     "frag_end": "result in a penalty.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P28",
+     "unit_stance": "restrict",
+     "topics": [
+      "disclosure-citation",
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "\"The use of GAI platforms without disclosure will be considered plagiarism and/or cheating and will be reported to the Dean of Students\" classifies undisclosed use as misconduct, P36.",
+     "anchor": "considered plagiarism and/or cheating and will be reported to the Dean of Students",
+     "frag_start": "The use of GAI platforms",
+     "frag_end": "university policies.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "\"Sanctions for academic misconduct in this course may include a failing grade on the assignment, a reduction in your final course grade, or a failing grade in the course\" lists concrete penalties, P37.",
+     "anchor": "a reduction in your final course grade, or a failing grade in the course",
+     "frag_start": "Sanctions for academic misconduct",
+     "frag_end": "among other possibilities.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "\"please consult with the instructor before submitting your work\" tells students to ask when unsure about acceptable use, P10.",
+     "anchor": "please consult with the instructor before submitting your work",
+     "frag_start": "If you have any questions",
+     "frag_end": "before submitting your work.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P10",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"we encourage the use of GAI as a means for you to submit higher quality assignments in less time\" welcomes AI use, P02 (encourage).",
+     "anchor": "we encourage the use of GAI as a means for you to submit higher quality",
+     "frag_start": "With the understanding of the",
+     "frag_end": "in less time.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P02",
+     "unit_stance": "encourage",
+     "topics": [
+      "default-stance",
+      "permitted-uses"
+     ]
+    },
+    {
+     "why": "\"Learning how to use Gen AI is an emerging skill, and it would be to your advantage to learn how to use it well\" gives a career-skill rationale, P44.",
+     "anchor": "Learning how to use Gen AI is an emerging skill",
+     "frag_start": "Learning how to use Gen",
+     "frag_end": "how to use it well.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P44",
+     "unit_stance": "encourage",
+     "topics": [
+      "ai-literacy-career",
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "\"it is not a replacement for critical thinking\" says AI must not replace the student's thinking, P32.",
+     "anchor": "it is not a replacement for critical thinking",
+     "frag_start": "GAI can be a valuable",
+     "frag_end": "critical thinking.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "should-not",
+     "policy_type": "P32",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding",
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "Sample \"Most restrictive\" template: \"you are expected to do your own work and properly cite any sources you use\" requires submitted work to be the student's own, P29.",
+     "anchor": "you are expected to do your own work and properly cite any sources you use",
+     "frag_start": "In this course, you are",
+     "frag_end": "any sources you use.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P29",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding",
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "\"The use of generative AI (GAI) tools, such as chatbots, text generators, paraphrasers, summarizers, or solvers, is strictly prohibited for any part of your assignments\" is a blanket ban, P01.",
+     "anchor": "is strictly prohibited for any part of your assignments",
+     "frag_start": "The use of generative AI",
+     "frag_end": "your assignments.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P01",
+     "unit_stance": "prohibit",
+     "topics": [
+      "default-stance",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "\"Students must complete all work independently and without GAI-generated content\" forbids submitting AI-generated work, P19 (P01 covers the default ban; this states the content may not be AI-produced).",
+     "anchor": "Students must complete all work independently and without GAI-generated content.",
+     "frag_start": "Students must complete all work",
+     "frag_end": "GAI-generated content.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P19",
+     "unit_stance": "prohibit",
+     "topics": [
+      "prohibited-uses",
+      "code-generation"
+     ]
+    },
+    {
+     "why": "\"you should always check with your department, school, or campus to see if there are specific GenAI statements or policies that should be included\" directs instructors to higher-level syllabus statements; P09 is the nearest type.",
+     "anchor": "you should always check with your department, school, or campus",
+     "frag_start": "Of course, you should always",
+     "frag_end": "should be included.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "The Hodgson-cited disclaimer says AI generators \"should not be used for any work for this class without explicit permission of the instructor and appropriate attribution\", a fallback of no AI unless permitted, P06.",
+     "anchor": "should not be used for any work for this class without explicit permission",
+     "frag_start": "AI generators/programs such as ChatGPT,",
+     "frag_end": "Undergraduate Academic Affairs",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "should-not",
+     "policy_type": "P06",
+     "unit_stance": "restrict",
+     "topics": [
+      "default-stance",
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"Repeat policies frequently\" and putting the policy in the syllabus, in class and on assignment handouts is advice on communicating expectations, P09.",
+     "anchor": "Repeat policies frequently.",
+     "frag_start": "Repeat policies frequently.",
+     "frag_end": "Repeat policies frequently.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"Students have multiple classes, each which may have some variation in generative AI policy\" notes that policies differ across courses, P11 as informs.",
+     "anchor": "each which may have some variation in generative AI policy",
+     "frag_start": "Students have multiple classes, each",
+     "frag_end": "generative AI policy.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "informs",
+     "policy_type": "P11",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "\"students need to learn how to use these tools and to do so responsibly. Banning them outright is not only likely a losing battle\" argues for teaching responsible AI use as a professional skill, P44.",
+     "anchor": "students need to learn how to use these tools and to do so responsibly",
+     "frag_start": "Focus on an ethics",
+     "frag_end": "responsibly.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P44",
+     "unit_stance": "encourage",
+     "topics": [
+      "ai-literacy-career",
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "\"There are some clear cases where banning these tools make sense (e.g., language acquisition courses)\" lets the decision vary by course, P04.",
+     "anchor": "There are some clear cases where banning these tools make sense (e.g., language acquisition courses)",
+     "frag_start": "There are some clear cases",
+     "frag_end": "in the long run.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "default-stance"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "indiana-indianapolis-ctl-faqs",
+   "layer": "university",
+   "unit": "Center for Teaching and Learning, IU Indianapolis",
+   "course": null,
+   "title": "Generative AI in the Classroom FAQs",
+   "url": "https://ctl.indianapolis.iu.edu/Resources/Generative-AI-FAQs",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance_why": "The FAQ gives advice and tool/data rules but states no default rule for student AI use; it tells instructors to check syllabus policy with \"your department\" and says \"instructors cannot require that students use AI tools\", leaving use decisions to instructors.",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "Campus teaching-center FAQ for faculty that points to the IU Copilot approval and data rules, advises against detectors, and recommends a learner-centered, proactive approach. It bars requiring AI use and tells instructors to align syllabus statements with department guidance.",
+   "units": [
+    {
+     "why": "\"Indiana University has approved the use of Microsoft Copilot for faculty, staff, and students aged 18 and older\" names a sanctioned tool, P17.",
+     "anchor": "approved the use of Microsoft Copilot for faculty, staff, and students aged 18 and older",
+     "frag_start": "Indiana University has approved",
+     "frag_end": "aged 18 and older.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P17",
+     "unit_stance": "permit",
+     "topics": [
+      "course-provided-tools",
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"This is the only generative AI tool approved for use that involves university internal data\" limits which tool may touch internal data, P50.",
+     "anchor": "This is the only generative AI tool approved for use that involves",
+     "frag_start": "This is the only",
+     "frag_end": "university internal data",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"you must be logged in through your institution\" requires access through IU authentication, P50.",
+     "anchor": "you must be logged in through your institution",
+     "frag_start": "Please note you must",
+     "frag_end": "through your institution.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"IU has also established an AI Taskforce that has developed AI recommendations\" describes an institutional body, P56.",
+     "anchor": "IU has also established an AI Taskforce",
+     "frag_start": "IU has also established",
+     "frag_end": "AI recommendations.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "\"We recommend adopting a learner-centered approach when talking with students about their use of AI\" advises instructors to talk with students about suspected misuse, P57.",
+     "anchor": "We recommend adopting a learner-centered approach when talking with students about their use of AI.",
+     "frag_start": "We recommend adopting a learner-centered",
+     "frag_end": "use of AI.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P57",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Instructors can use AI for \"creating rubrics and course learning objectives\" and \"increasing the relevancy of your content\", a list of teaching uses, P59.",
+     "anchor": "creating rubrics and course learning objectives",
+     "frag_start": "There are many ways that",
+     "frag_end": "make up your class",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P59",
+     "unit_stance": "permit",
+     "topics": [
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "\"make sure to consider IU's Acceptable Uses of Generative AI\" tells instructors to follow the university acceptable-use rules when using AI, P50.",
+     "anchor": "make sure to consider IU’s",
+     "frag_start": "As you integrate these tools",
+     "frag_end": "Acceptable Uses of Generative AI",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use",
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"IU has not approved any IU detection tools for use\" states no detector is sanctioned, P39.",
+     "anchor": "IU has not approved any IU detection tools for use",
+     "frag_start": "IU has not approved",
+     "frag_end": "tools for use",
+     "policy": null,
+     "actor": "admin",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P39",
+     "unit_stance": "restrict",
+     "topics": [
+      "detection-tools"
+     ]
+    },
+    {
+     "why": "\"AI detection tools are unreliable, which can cause students to be falsely accused of academic misconduct\" gives the reliability reason, P39.",
+     "anchor": "AI detection tools are unreliable",
+     "frag_start": "AI detection tools are unreliable",
+     "frag_end": "academic misconduct.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P39",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ]
+    },
+    {
+     "why": "\"AI detection software targets specific demographics, especially non-native English writers\" is a bias concern about detectors; P53 rather than P39 because the point is harm to a group.",
+     "anchor": "detection software targets specific demographics, especially non-native English writers",
+     "frag_start": "In addition, studies show",
+     "frag_end": "non-native English writers",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P53",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools",
+      "ethics-bias-environment"
+     ]
+    },
+    {
+     "why": "\"It is essential to ensure that students use AI tools to help develop and hone critical thinking skills as opposed to circumvent learning\" keeps AI from replacing student thinking, P32.",
+     "anchor": "help develop and hone critical thinking skills as opposed to circumvent learning",
+     "frag_start": "It is essential to ensure",
+     "frag_end": "circumvent learning.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P32",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale",
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "\"ensure your syllabus policy aligns with any policies and/or recommendations your department may have\" tells instructors to align syllabus statements with department guidance, P09.",
+     "anchor": "ensure your syllabus policy aligns with any policies and/or recommendations your department",
+     "frag_start": "It is important to check with",
+     "frag_end": "may have.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"early research indicates AI has not increased cheating\" cites evidence about AI and student behavior, P55.",
+     "anchor": "early research indicates AI has not increased cheating",
+     "frag_start": "It may surprise you to",
+     "frag_end": "not increased cheating",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P55",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "\"We recommend faculty adopt a proactive rather than punitive approach to the use of AI\" advises a stance toward student AI use that fits no type (P57 is about talking before escalating), so UNCOVERED.",
+     "anchor": "adopt a proactive rather than punitive approach to the use of AI",
+     "frag_start": "adopt a proactive rather",
+     "frag_end": "use of AI",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions",
+      "learning-rationale"
+     ],
+     "uncovered_note": "Instructors should take a proactive rather than punitive approach to student AI use."
+    },
+    {
+     "why": "\"Students who understand the purpose of their assignments and are invested in their own learning are less likely to over rely on AI tools\" explains that reliance undermines learning, P41 as the nearest rationale type.",
+     "anchor": "are less likely to over rely on AI tools.",
+     "frag_start": "Students who understand the purpose",
+     "frag_end": "over rely on AI tools.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P41",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "\"Several factors make a strong prompt, including specificity, plenty of context, and clear roles\" gives instructors advice on prompting, P63 (support for faculty learning AI).",
+     "anchor": "Several factors make a strong prompt",
+     "frag_start": "Several factors make a",
+     "frag_end": "audience is).",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "ai-literacy-career"
+     ]
+    },
+    {
+     "why": "\"instructors cannot require that students use AI tools\" bars mandatory AI use because Copilot is not available to all students, P51.",
+     "anchor": "instructors cannot require that students use AI tools",
+     "frag_start": "Because this tool is not",
+     "frag_end": "use AI tools",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "must-not",
+     "policy_type": "P51",
+     "unit_stance": "restrict",
+     "topics": [
+      "equity-access",
+      "default-stance"
+     ]
+    },
+    {
+     "why": "\"Always advise students to exercise caution and consider the data privacy risks associated with generative AI use\" tells instructors to warn students about privacy, P50.",
+     "anchor": "Always advise students to exercise caution and consider the data privacy",
+     "frag_start": "Always advise students to exercise",
+     "frag_end": "generative AI use",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"Should you choose to use AI in your class, make sure to have a disclaimer regarding privacy\" requires a privacy disclaimer when instructors use AI in class, P50.",
+     "anchor": "make sure to have a disclaimer regarding privacy",
+     "frag_start": "Should you choose to use",
+     "frag_end": "regarding privacy",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"ensure there are alternative ways for students to engage should they not wish to use AI\" provides for opt-out alternatives, P51.",
+     "anchor": "ensure there are alternative ways for students to engage",
+     "frag_start": "ensure there are alternative",
+     "frag_end": "wish to use AI.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P51",
+     "unit_stance": "neutral",
+     "topics": [
+      "equity-access"
+     ]
+    },
+    {
+     "why": "\"there are inherent biases within the algorithms\" and \"biases within the data on which AI models are trained\" name bias as a concern, P53.",
+     "anchor": "there are inherent",
+     "frag_start": "While AI tools cannot have",
+     "frag_end": "models are trained",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P53",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment"
+     ]
+    },
+    {
+     "why": "\"It is imperative to verify AI outputs and always consider the limitations of these tools\" requires verification of output, P31.",
+     "anchor": "verify AI outputs and always consider the limitations of these tools",
+     "frag_start": "It is imperative to",
+     "frag_end": "of these tools",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P31",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "\"Make sure to read user agreements before using AI tools\" addresses terms of use and training on user data, P52 (not P50 because the focus is user agreements).",
+     "anchor": "Make sure to read user agreements before using AI tools",
+     "frag_start": "Make sure to read user",
+     "frag_end": "IU generative AI policy",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P52",
+     "unit_stance": "neutral",
+     "topics": [
+      "intellectual-property",
+      "privacy-data"
+     ]
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Luddy and course layers not coded (none-found / deferred in collect file). Both documents are university-level teaching-center guidance; the Teaching.IU templates are samples from IU Bloomington FACET and are coded as stated offerings, not binding rules. The kb.iu.edu acceptable-use page was inaccessible."
+}

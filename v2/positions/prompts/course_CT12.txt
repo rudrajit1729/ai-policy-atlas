@@ -1,0 +1,42 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT12 "AI for documentation, comments and formatting" (AI for docstrings, comments, type hints, formatting, boilerplate or editing non-code documents.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..17 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | brigham-young-idaho | C4 | student | must-not | no AI for English cleanup | Use AI to clean up your English.
+1 | california-santa-cruz | C2 | student | may | AI-written documentation if cited | AI-generated text may be used for code comments, explanations, and other documentation if properly cited
+2 | colorado-boulder | C3 | student | may | AI allowed for formatting only | Students may use tools, including AI tools, for formatting and LaTeX assistance
+3 | grinnell-college | C2 | student | may | grammar checkers ok without genAI | It is fine to use those as long as you DO NOT
+4 | grinnell-college | C4 | student | may | grammar checkers ok without genAI | It is fine to use those as long as you DO NOT
+5 | illinois-chicago | C5 | student | may | spell-checkers allowed | checkers are allowed) – unless explicitly allowed to do so
+6 | loyola-marymount | C1 | student | may | AI allowed for docstrings and type hints | Generating short documentation strings and type hints.
+7 | loyola-marymount | C2 | student | may | AI allowed for docstrings and type hints | Generating short documentation strings and type hints.
+8 | loyola-marymount | C3 | student | may | AI allowed for docstrings and type hints | Generating short documentation strings and type hints.
+9 | loyola-marymount | C5 | student | may | AI allowed for docstrings | Generating short documentation strings and type hints.
+10 | loyola-marymount | C6 | student | may | AI allowed for docstrings | Generating short documentation strings and type hints.
+11 | north-carolina-state | C2 | student | may | AI document editing where assigned | assist in document editing once as allowed in specific assignments
+12 | north-texas | C3 | student | must-not | writing aids banned | Grammarly, spellcheck, predictive text, speech -to-text, and translation tools, etc. are not
+13 | pomona | C6 | student | may | spell checkers allowed | Tools that automatically flag spelling and grammatical errors as you write are allowed
+14 | pomona | C6 | student | must-not | no sentence-revision tools | but not tools that offer suggested revisions of your sentences
+15 | rose-hulman-institute-technology | C1 | student | may | AI allowed for non-code documents | Asking an AI to help you write some document (NOT code).
+16 | texas-tyler | C2 | student | must-not | no AI-written comments | not just have AI generate the comments.
+17 | vermont | C5 | student | may | AI allowed as proofreader | it is permissible to use AI as a proofreader for writing you have produced.

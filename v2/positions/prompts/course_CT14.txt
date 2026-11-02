@@ -1,0 +1,43 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT14 "AI for brainstorming and planning" (AI for ideas, breaking down an assignment, or planning an approach or design.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..18 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | austin-community-college | C4 | student | may | AI allowed for research and ideas | GAI can be used for initial research, idea generation, and learning coding practices.
+1 | california-santa-cruz | C2 | student | may | AI for brainstorming and snippets | You may use GenAI tools to brainstorm project ideas, generate initial code snippets, and explore different problem-solving approaches
+2 | colby-college | C5 | student | should | AI for alternative implementations | Ask AI for more readable or efficient implementations.
+3 | emory | C2 | student | may | AI allowed for brainstorming approaches | to a problem before writing your own solution.
+4 | johns-hopkins | C2 | student | may | AI allowed for brainstorming and boilerplate | AI tools can help with brainstorming, boilerplate generation, and learning alternative approaches to coding problems.
+5 | kansas | C4 | student | may | AI for brainstorming and drafts | appropriately, they may assist in brainstorming, exploring
+6 | louisville | C6 | student | must-not | AI-generated pseudocode counts as assistance | Generating pseudocode, algorithms, implementation plans, or similar solution
+7 | minnesota | C4 | student | must-not | no AI brainstorming | Using AI to brainstorm, formulate arguments, or template ideas for assignments
+8 | north-carolina-chapel-hill | C1 | student | may | AI allowed for brainstorming and research | You may be able to use these tools to brainstorm ideas, research topics, and analyze problems,
+9 | north-carolina-state | C4 | student | may | AI allowed to find topics | You may use AI to help you find something to write about.
+10 | old-dominion | C2 | student | may | AI allowed for ideas | the use of ChatGPT and such tools may be used to get some ideas
+11 | rhode-island | C5 | student | should | AI encouraged for brainstorming, code analysis | Students are encouraged to leverage these technologies for brainstorming, concept exploration, code analysis, and problem-solving approaches.
+12 | stony-brook | C4 | student | must | AI for implementation not design | Keep architecture decisions human. Use AI for implementation, not for deciding what to build or why.
+13 | texas-christian | C5 | student | must-not | no AI brainstorming | Using AI to brainstorm, formulate arguments, or template ideas for assignments;
+14 | texas-christian | C6 | student | must-not | no AI brainstorming | Using AI to brainstorm, formulate arguments, or template ideas for assignments;
+15 | texas-el-paso | C1 | student | may | AI welcome for brainstorming | can be beneficial during the early brainstorming stages of an activity, and you are welcome to
+16 | texas-el-paso | C6 | student | may | AI allowed for early brainstorming | and you are welcome to explore
+17 | uiuc | C2 | student | may | AI for planning approach | Use the AI to help you formulate a high-level approach
+18 | uiuc | C2 | student | may | AI to break down assignments | Ask the AI to help you understand what an assignment is asking,

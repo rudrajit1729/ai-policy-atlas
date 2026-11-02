@@ -1,0 +1,791 @@
+{
+ "university": "Boston University",
+ "slug": "boston",
+ "state": "MA",
+ "type": "R1",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "bu-aida-classroom",
+   "layer": "university",
+   "unit": "AI Development Accelerator (AIDA)",
+   "course": null,
+   "title": "Generative AI Guidelines for Classroom Use",
+   "url": "https://www.bu.edu/aida/ai-education/classroom/generative-ai-guidelines-for-classroom-use/",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance_why": "The page sets no AI rule itself. It says \"BU faculty must proactively guide\" use and asks faculty to \"State your policy on GenAI use explicitly in the course syllabus\", with recommendations only. That hands the decision to instructors, so delegates.",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "University-level AIDA recommendations telling faculty to set and explain a GenAI policy in the syllabus, verify AI output, design AI-integrated and process-focused assignments, and be cautious about unreliable detectors. Points to the free TerrierGPT platform for equity and data security.",
+   "units": [
+    {
+     "why": "The opening says \"BU faculty must proactively guide appropriate and ethical use in coursework\", a duty on instructors to set AI guidance; coded P04 (instructor decides) rather than P09 because it does not yet name the syllabus.",
+     "anchor": "BU faculty must proactively guide appropriate and ethical use in coursework",
+     "frag_start": "With students having easy access",
+     "frag_end": "ethical use in coursework",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "default-stance"
+     ]
+    },
+    {
+     "why": "\"It is therefore important for faculty to review what constitutes allowable versus misuse of GenAI in their course\" leaves the allowed/misuse line to each course; P04 fits better than P09 since it concerns deciding, not communicating.",
+     "anchor": "review what constitutes allowable versus misuse of GenAI in their course",
+     "frag_start": "It is therefore important for",
+     "frag_end": "misuse of GenAI in their course",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "permitted-uses"
+     ]
+    },
+    {
+     "why": "\"State your policy on GenAI use explicitly in the course syllabus\" is a syllabus-statement requirement addressed to faculty, so P09.",
+     "anchor": "State your policy on GenAI use explicitly in the course syllabus",
+     "frag_start": "State your policy on GenAI",
+     "frag_end": "in the course syllabus",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"disclosing how the instructors (faculty and student teachers) will use GenAI for lecture preparation, presentations, grading\" asks instructors to tell students about their own AI use, so P47 (not P59, which is about what they may use AI for).",
+     "anchor": "disclosing how the instructors (faculty and student teachers) will use GenAI",
+     "frag_start": "This includes disclosing how the",
+     "frag_end": "other course related tasks",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P47",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use",
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"Take time in the first week of class to explain your policy and its rationale\" is about communicating expectations at course start; P09 (state expectations) is the closest type though the channel is oral explanation.",
+     "anchor": "Take time in the first week of class to explain your policy and its rationale",
+     "frag_start": "Take time in the first week",
+     "frag_end": "policy and its rationale",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"Make clear distinctions between acceptable and unacceptable uses\" tells instructors to make the allowed/disallowed line explicit to students at course start, so it is communicating expectations (P09).",
+     "anchor": "Make clear distinctions between acceptable and unacceptable uses",
+     "frag_start": "Make clear distinctions between acceptable",
+     "frag_end": "and unacceptable uses",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "permitted-uses"
+     ],
+     "resolution_why": "Coder A coded P09, coder B coded P05. The passage names no tiers, levels or categories of use (P05 definition); it only asks instructors to make the line clear to students, as the neighbouring syllabus and first-week items do. P09 follows."
+    },
+    {
+     "why": "\"They are responsible for verifying the accuracy of any AI-generated content\" tells students to check AI output, P31.",
+     "anchor": "responsible for verifying the accuracy of any AI-generated content",
+     "frag_start": "They are responsible for verifying",
+     "frag_end": "of any AI-generated content",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P31",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "resolution_why": "Coder A coded modality should, coder B must. The source says students 'are responsible for verifying the accuracy' of AI content, a stated duty on students rather than a suggestion to them, though it sits in a list of what faculty should make students aware of. Final modality is must, matching the wording of the duty."
+    },
+    {
+     "why": "\"Submitting GenAI-generated work as their own original work may constitute plagiarism\" is a statement students are to be made aware of, classing passing off AI output as plagiarism, so it is P36 with modality informs, not an outright ban.",
+     "anchor": "Submitting GenAI-generated work as their own original work may constitute plagiarism",
+     "frag_start": "Submitting GenAI-generated work as their",
+     "frag_end": "constitute plagiarism",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "prohibit",
+     "topics": [
+      "integrity-sanctions",
+      "prohibited-uses"
+     ],
+     "resolution_why": "Coder A coded P36/informs/when-misuse; coder B coded P19/must-not/during-work. The source says such submission 'may constitute plagiarism' under 'Students should be made aware that', so it classifies the act as misconduct and does not itself state a prohibition. P36, informs and when-misuse follow; unit_stance stays prohibit because the passage treats the act as impermissible."
+    },
+    {
+     "why": "\"Misuse of GenAI can lead to violations of the university's academic conduct policies\" classes misuse as an academic-conduct matter, P36.",
+     "anchor": "Misuse of GenAI can lead to violations of the university’s academic conduct policies",
+     "frag_start": "Misuse of GenAI can lead",
+     "frag_end": "academic conduct policies",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "\"faculty are encouraged to: Design assignments that integrate GenAI in a way that enhances learning, such as using it for brainstorming, editing, or reflection\" recommends AI-integrated assignments; P35 (redesign) fits over P15 because it asks faculty to redesign assignments.",
+     "anchor": "Design assignments that integrate GenAI in a way that enhances learning",
+     "frag_start": "Design assignments that integrate GenAI",
+     "frag_end": "editing, or reflection exercises",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P35",
+     "unit_stance": "encourage",
+     "topics": [
+      "assessment-design",
+      "permitted-uses"
+     ]
+    },
+    {
+     "why": "\"Emphasize learning goals over performance metrics, which can help reduce misuse\" recommends a grading emphasis to reduce misuse, a redesign of assessment (P35).",
+     "anchor": "Emphasize learning goals over performance metrics, which can help reduce misuse",
+     "frag_start": "Emphasize learning goals over performance",
+     "frag_end": "help reduce misuse",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design",
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "\"Consider process-focused assignments and assessing intermediate milestones\" asks for process-based assessment (drafts, reflections), P35; P26 does not fit as it concerns faculty design, not a student transcript duty.",
+     "anchor": "Consider process-focused assignments and assessing intermediate milestones towards a final product",
+     "frag_start": "Consider process-focused assignments and assessing",
+     "frag_end": "way of working towards a final product",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P35",
+     "unit_stance": "encourage",
+     "topics": [
+      "assessment-design"
+     ]
+    },
+    {
+     "why": "\"all detection tools are highly fallible, both with respect to false positives and false negatives\" says detectors are unreliable and asks caution, P39.",
+     "anchor": "all detection tools are highly fallible, both with respect to false positives and false negatives",
+     "frag_start": "Be very cautious with accusations of",
+     "frag_end": "companies that sell these products",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P39",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools",
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "\"Apply enforcement policies uniformly to minimize bias\" is an enforcement-fairness instruction to instructors. No type covers it: P64 is the student's right to respond and P53 names bias harms, so UNCOVERED.",
+     "anchor": "Apply enforcement policies uniformly to minimize bias",
+     "frag_start": "Apply enforcement policies uniformly to",
+     "frag_end": "cannot eliminate bias",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions",
+      "ethics-bias-environment"
+     ],
+     "uncovered_note": "Apply enforcement of AI policies uniformly across students to minimize bias."
+    },
+    {
+     "why": "\"those students who are digitally savvy are more likely to evade detection, and those who are less knowledgeable are more likely to end up in the dragnet\" names an unequal-detection harm of enforcement, so P53 (bias and harms), as a fact for instructors to recognize (informs).",
+     "anchor": "those who are less knowledgeable are more likely to end up in the dragnet",
+     "frag_start": "And recognize that even a",
+     "frag_end": "end up in the dragnet.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P53",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment",
+      "detection-tools"
+     ]
+    },
+    {
+     "why": "\"Focus on teaching students how to ethically and thoughtfully engage with GenAI, rather than only punishing misuse\" favors teaching responsible use, i.e. AI use as a skill to teach (P44).",
+     "anchor": "Focus on teaching students how to ethically and thoughtfully engage with GenAI",
+     "frag_start": "Focus on teaching students how",
+     "frag_end": "rather than only punishing misuse",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P44",
+     "unit_stance": "encourage",
+     "topics": [
+      "ai-literacy-career",
+      "learning-rationale"
+     ],
+     "resolution_why": "Coders agreed on P44 but coder A set phase during-work and coder B general. The sentence is a general orientation under the misconduct heading ('rather than only punishing misuse'), not tied to a stage of the work. Phase is general."
+    },
+    {
+     "why": "\"Consider issues of equity, access, and security when promoting GenAI usage\" asks instructors to weigh equity of access, P51.",
+     "anchor": "Consider issues of equity, access, and security when promoting GenAI usage",
+     "frag_start": "Consider issues of equity, access, and",
+     "frag_end": "GenAI usage in your courses",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P51",
+     "unit_stance": "neutral",
+     "topics": [
+      "equity-access",
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"create assignments on the TerrierGPT platform, to which all BU students and faculty have free access\" points to a university-provided tool with free access, P17 (P51 is secondary).",
+     "anchor": "create assignments on the TerrierGPT platform",
+     "frag_start": "If at all possible,",
+     "frag_end": "free access",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P17",
+     "unit_stance": "encourage",
+     "topics": [
+      "course-provided-tools",
+      "equity-access"
+     ]
+    },
+    {
+     "why": "\"a high level of data security, up through confidential data ... not approved for use with restricted use data\" states TerrierGPT's data-protection limits, P50 (vetted tools, data protection).",
+     "anchor": "high level of data security, up through confidential data",
+     "frag_start": "This has the additional benefit of",
+     "frag_end": "restricted use data",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data",
+      "course-provided-tools"
+     ],
+     "resolution_why": "Coder A coded actor all, general; coder B instructor, before-course. The sentence is part of the 'Support and Resources' advice to faculty on where to build assignments, and it describes the data-protection limits of the platform they are told to use. Actor instructor and phase before-course follow."
+    },
+    {
+     "why": "\"We invite your feedback\" invites input on the guidance, P54 (policy is revisited, feedback invited).",
+     "anchor": "We invite your feedback.",
+     "frag_start": "We invite your feedback.",
+     "frag_end": "with your input and insights.",
+     "policy": null,
+     "actor": "all",
+     "phase": "over-time",
+     "modality": "informs",
+     "policy_type": "P54",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "\"For policies on GenAI use in broader academic and research contexts, please refer to: Generative AI Guidelines for Faculty & Staff\" defers research and broader use to another document, P62 (defers to other rules), rather than P56.",
+     "anchor": "For policies on GenAI use in broader academic and research contexts, please refer to",
+     "frag_start": "For policies on GenAI use in",
+     "frag_end": "Guidelines for Faculty & Staff",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P62",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ],
+     "resolution_why": "Coders agreed on P62; coder A set actor all and coder B instructor. The page addresses faculty throughout, and the pointer is to the 'Faculty & Staff' guidelines, so the actor is instructor. Phase general."
+    }
+   ]
+  },
+  {
+   "id": "bu-cds-gaia",
+   "layer": "computing",
+   "unit": "Faculty of Computing & Data Sciences (CDS)",
+   "course": null,
+   "title": "CDS Generative AI Assistance (GAIA) Policy",
+   "url": "https://www.bu.edu/cds-faculty/culture-community/gaia-policy/",
+   "date_or_term": "adopted March 2023",
+   "stance_why": "The policy describes \"an otherwise embracing approach to AI tools\" but binds students to credit AI, append the full exchange, and not use AI \"during in-class examinations, or assignments, unless explicitly permitted\". AI is welcome with disclosure and limits, so permit.",
+   "stance": "permit",
+   "tiers": [],
+   "summary": "Student-drafted CDS policy that embraces AI tools under transparency rules: credit any use, attach the whole exchange and an explanation, and no AI in exams or assignments unless allowed. Instructors grade declared AI use against a lower baseline, may use detectors, and may impose stricter rules.",
+   "units": [
+    {
+     "why": "\"Students should learn how to use AI text generators ... to enhance rather than damage their developing abilities\" states the purpose: learn to use AI to build skill, an AI-use-as-skill rationale (P44) over P41 since it is framed positively.",
+     "anchor": "Students should learn how to use AI text generators",
+     "frag_start": "Students should learn how to use",
+     "frag_end": "writers, coders, communicators, and thinkers.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P44",
+     "unit_stance": "encourage",
+     "topics": [
+      "learning-rationale",
+      "ai-literacy-career"
+     ],
+     "resolution_why": "Coder A coded actor student and modality should; coder B all and informs. The sentence is in the 'Intent' section and states what the policy is for, not a duty the policy imposes, so informs; it names students as learners but is a statement of purpose for the whole unit, so actor all. P44 stands for both."
+    },
+    {
+     "why": "\"Instructors should ensure fair grading for both those who do and do not use AI tools\" is a grading-fairness principle; closest is P35 (grading designed around AI).",
+     "anchor": "ensure fair grading for both those who do and do not use AI tools",
+     "frag_start": "Instructors should ensure fair grading",
+     "frag_end": "do not use AI tools.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design"
+     ],
+     "resolution_why": "Coders agreed on P35; coder A set phase during-work and coder B general. The sentence is a principle in the 'Intent' paragraph, not an instruction about a stage of grading. Phase general."
+    },
+    {
+     "why": "\"adopts a few commonsense limitations on an otherwise embracing approach to AI tools\" sets the default as embracing AI with limits, P02.",
+     "anchor": "commonsense limitations on an otherwise embracing approach to AI tools",
+     "frag_start": "To that end, the GAIA",
+     "frag_end": "approach to AI tools.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P02",
+     "unit_stance": "permit",
+     "topics": [
+      "default-stance"
+     ]
+    },
+    {
+     "why": "\"Give credit to AI tools whenever used, even if only to generate ideas\" requires acknowledging any AI use, P24.",
+     "anchor": "Give credit to AI tools whenever used, even if only to generate ideas",
+     "frag_start": "Give credit to AI tools whenever",
+     "frag_end": "usable text or illustrations.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "require",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "\"add an appendix showing (a) the entire exchange\" requires submitting the full AI transcript with the assignment, P26.",
+     "anchor": "add an appendix showing (a) the entire exchange, highlighting the most relevant sections",
+     "frag_start": "When using AI tools on assignments,",
+     "frag_end": "highlighting the most relevant sections;",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P26",
+     "unit_stance": "require",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "\"a description of precisely which AI tools were used (e.g. ChatGPT private subscription version or DALL-E free version)\" requires naming the tool and version in the disclosure, P25.",
+     "anchor": "a description of precisely which AI tools were used",
+     "frag_start": "(b) a description of precisely",
+     "frag_end": "DALL-E free version),",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P25",
+     "unit_stance": "require",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "\"an explanation of how the AI tools were used (e.g. to generate ideas, turns of phrase ... long stretches of text\" requires explaining the manner of use; reflection on use fits P26 over P25 since it is not tool or prompt detail.",
+     "anchor": "an explanation of how the AI tools were used",
+     "frag_start": "(c) an explanation of how",
+     "frag_end": "illustrations of key concepts, etc.);",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P26",
+     "unit_stance": "require",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "\"an account of why AI tools were used (e.g. to save time, to surmount writer's block ...)\" requires a reason for use, a reflection, P26.",
+     "anchor": "an account of why AI tools were used",
+     "frag_start": "(d) an account of why",
+     "frag_end": "to experiment for fun, etc.).",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P26",
+     "unit_stance": "require",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "\"Not use AI tools during in-class examinations, or assignments, unless explicitly permitted and instructed\" bans AI in exams; coded P22 for the exam half, with the assignment half coded separately below.",
+     "anchor": "Not use AI tools during in-class examinations",
+     "frag_start": "Not use AI tools during in-class",
+     "frag_end": "permitted and instructed.",
+     "policy": "AI tools are not used during in-class examinations",
+     "actor": "student",
+     "phase": "during-assessment",
+     "modality": "must-not",
+     "policy_type": "P22",
+     "unit_stance": "prohibit",
+     "topics": [
+      "exams-in-person",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "The same sentence bans AI on assignments \"unless explicitly permitted and instructed\", a fallback when no permission is given, P06; coded separately from the exam ban because it governs assignments.",
+     "anchor": "or assignments, unless explicitly permitted and instructed",
+     "frag_start": "Not use AI tools during in-class",
+     "frag_end": "permitted and instructed.",
+     "policy": "AI tools are not used on assignments unless explicitly permitted and instructed",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P06",
+     "unit_stance": "restrict",
+     "topics": [
+      "default-stance",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "Students shall \"Employ AI detection tools and originality checks prior to submission, ensuring that their submitted work is not mistakenly flagged\". This is a student self-check duty. P40 covers detectors used to identify misuse and P39 says detectors are not relied on, so neither says this: UNCOVERED.",
+     "anchor": "Employ AI detection tools and originality checks prior to submission",
+     "frag_start": "Employ AI detection tools and originality",
+     "frag_end": "not mistakenly flagged.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "require",
+     "topics": [
+      "detection-tools"
+     ],
+     "uncovered_note": "Students must run AI detection tools and originality checks on their own work before submitting, so that it is not mistakenly flagged.",
+     "resolution_why": "Coder A coded UNCOVERED; coder B coded P40. P40 'covers' similarity and detection tools 'used to identify misuse', which is staff-side. The source tells students to run detectors on their own work to avoid a false flag, which P40 does not say. Compared with the P40 definition it does not match, so UNCOVERED is kept and counted as a codebook finding."
+    },
+    {
+     "why": "\"Use AI tools wisely and intelligently, aiming to deepen understanding of subject matter and to support learning\" asks students to use AI to support understanding, P12 (AI for understanding), as P32 (stay the thinker) is not stated.",
+     "anchor": "Use AI tools wisely and intelligently, aiming to deepen understanding",
+     "frag_start": "Use AI tools wisely and intelligently,",
+     "frag_end": "to support learning.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P12",
+     "unit_stance": "encourage",
+     "topics": [
+      "permitted-uses",
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "\"Seek to understand how AI tools work, including their strengths and weaknesses\" asks instructors to learn about AI, P63.",
+     "anchor": "Seek to understand how AI tools work, including their strengths and weaknesses",
+     "frag_start": "Seek to understand how AI tools",
+     "frag_end": "value for student learning.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use",
+      "ai-literacy-career"
+     ]
+    },
+    {
+     "why": "\"Treat work by students who declare no use of AI tools as the baseline for grading\" sets a grading baseline tied to declared AI use, P35.",
+     "anchor": "students who declare no use of AI tools as the baseline for grading",
+     "frag_start": "Treat work by students who declare",
+     "frag_end": "baseline for grading.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design",
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "\"Use a lower baseline for students who declare use of AI tools, depending on how extensive the usage\" grades declared AI use lower, P35; it also implies disclosed use is penalized (P28) but the grading scheme is the main content.",
+     "anchor": "Use a lower baseline for students who declare use of AI tools",
+     "frag_start": "Use a lower baseline for students",
+     "frag_end": "suggestions made by AI tools.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design",
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "\"Employ AI detection tools to evaluate the degree to which AI tools have likely been employed\" tells instructors to use detectors, P40.",
+     "anchor": "Employ AI detection tools to evaluate the degree to which AI tools",
+     "frag_start": "Employ AI detection tools to evaluate",
+     "frag_end": "have likely been employed.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P40",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ]
+    },
+    {
+     "why": "\"Impose a significant penalty for low-energy or unreflective reuse ... assigning zero points for merely reproducing the output\" states concrete penalties, P37.",
+     "anchor": "assigning zero points for merely reproducing the output",
+     "frag_start": "Impose a significant penalty for low-energy",
+     "frag_end": "output from AI tools.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "\"This policy depends on goodwill, a sense of fairness, and honorable character\" states the principle the policy rests on, which is a principle statement (P56). It does not say staff will not police use.",
+     "anchor": "This policy depends on goodwill, a sense of fairness, and honorable character.",
+     "frag_start": "This policy depends on goodwill",
+     "frag_end": "honorable character.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance",
+      "policy-evolution"
+     ],
+     "resolution_why": "Coder A coded P56; coder B coded P60. P60 requires staff to state they will not police or detect AI use, and this same policy tells instructors to 'Employ AI detection tools'. The sentence only names the trust the policy depends on, a principle, so P56 follows."
+    },
+    {
+     "why": "\"Some instructors may prefer stronger restrictions ... and they are free to impose them\" lets instructors set stricter rules, P04.",
+     "anchor": "free to impose them so long as care is taken to maintain transparency",
+     "frag_start": "Some instructors may prefer stronger",
+     "frag_end": "transparency and fairness in grading.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P04",
+     "unit_stance": "restrict",
+     "topics": [
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "\"subscription versions of AI tools, which are not affordable for some students\" raises affordability, P51; the revision half is a separate unit.",
+     "anchor": "subscription versions of AI tools, which are not affordable for some students",
+     "frag_start": "This policy takes account of the",
+     "frag_end": "free versions become better understood.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P51",
+     "unit_stance": "neutral",
+     "topics": [
+      "equity-access"
+     ]
+    },
+    {
+     "why": "\"the policy may need to be revised as the differences between subscription and free versions become better understood\" says the policy is provisional, P54.",
+     "anchor": "the policy may need to be revised as the differences between subscription and free versions",
+     "frag_start": "This policy takes account of the",
+     "frag_end": "free versions become better understood.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "informs",
+     "policy_type": "P54",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution",
+      "equity-access"
+     ],
+     "resolution_why": "Only coder B coded this as a separate unit; coder A folded it into its P51 unit. The sentence says 'the policy may need to be revised as the differences between subscription and free versions become better understood', a distinct rule from the affordability statement (one policy per unit). Kept as P54."
+    },
+    {
+     "why": "\"This policy may be revised in light of other policies and novel technological developments in AI tools\" is a revision statement, P54.",
+     "anchor": "This policy may be revised in light of other policies and novel technological developments",
+     "frag_start": "This policy may be revised in",
+     "frag_end": "developments in AI tools.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "informs",
+     "policy_type": "P54",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "\"instructors may adjust it as needed in support of the learning outcomes in their courses\" lets instructors adapt the unit policy, P04.",
+     "anchor": "instructors may adjust it as needed in support of the learning outcomes",
+     "frag_start": "noting that instructors may adjust",
+     "frag_end": "outcomes in their courses.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "\"tools that may rely on ... technologies that do not (or make it impossible to) adhere to standards that CDS expects ... appropriation of others work and proper attribution\" flags attribution/IP concerns about AI tools, P52.",
+     "anchor": "do not (or make it impossible to) adhere to standards that CDS expects",
+     "frag_start": "This policy pertains to the use of tools",
+     "frag_end": "should not be construed as endorsing this practice.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P52",
+     "unit_stance": "neutral",
+     "topics": [
+      "intellectual-property",
+      "ethics-bias-environment"
+     ],
+     "resolution_why": "Coder A coded P53; coder B coded P52. The passage concerns tools that fail to meet attribution standards 'with respect to appropriation of others work and proper attribution' and says the policy 'should not be construed as endorsing this practice'. The concern is attribution and appropriation of others' work, an intellectual-property matter, so P52 fits better than the general ethics type P53."
+    },
+    {
+     "why": "\"Faculty members in CDS voted unanimously to adopt this policy on March 21, 2023\" records adoption by the unit, governance; P56.",
+     "anchor": "Faculty members in CDS voted unanimously to adopt this policy on March 21, 2023.",
+     "frag_start": "Faculty members in CDS voted",
+     "frag_end": "on March 21, 2023.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ],
+     "resolution_why": "Only coder B coded this. The sentence records that CDS faculty adopted the policy, which sets the policy's authority and scope, so it is kept as P56/informs. Weakly a policy statement; a reviewer may drop it."
+    },
+    {
+     "why": "\"stresses transparency, fairness, and honoring relevant stakeholders such as students ... professors ... employers\" states the principles of the policy, P56.",
+     "anchor": "stresses transparency, fairness, and honoring relevant stakeholders",
+     "frag_start": "The GAIA policy stresses transparency, fairness,",
+     "frag_end": "valuable resources.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale",
+      "policy-evolution"
+     ]
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Course layer deferred in collect file. Two UNCOVERED units: uniform enforcement of AI-misuse policies (AIDA) and students self-running AI detectors (GAIA). GAIA 'lower baseline' unit is P35 though P28 also fits. Reconciled from coders A and B; topics use the AGENT_BRIEF vocabulary. Dropped one B-only unit (DS-380 case-study provenance / committee endorsement) as not a policy statement."
+}

@@ -1,0 +1,327 @@
+Below are policies found in US university, school and computing-department generative-AI policies, all addressed to everyone (the whole community). Each line:
+policy id | topic (policy type) | stage | universities | policy sentence.
+
+Task 1. MERGE policies that say the same thing, even when they sit under different topics or use different words.
+Judge both semantic equivalence (the same requirement, permission, prohibition or fact, worded differently) and latent
+equivalence (the same underlying intent and the same act asked of the same people, even if one is phrased as a rule and
+the other as advice). Examples of the same policy: "Students disclose any AI use in their submissions" and "Students
+acknowledge AI assistance on each assignment". Do NOT merge when the action differs, the object differs (code vs prose,
+data vs output), a condition differs materially (with permission vs always), or the direction differs (prohibit vs
+permit). Merely related or co-occurring policies stay separate. Be exhaustive: check every policy against all others.
+For each merged group give the member ids, one merged "sentence" (at most 20 words, naming the actor, stating the policy
+directly, adding nothing) and a one-line "why" they are the same.
+
+Task 2. Each policy whose stage is "general" has no stage yet. Give it one:
+  - if it asks someone to do or not do something at an identifiable point, its stage: before-course | course-start |
+    during-work | during-assessment | when-misuse | over-time;
+  - if it is a definition, scope statement, reason, value or fact with no time of action: "background".
+
+Return ONLY this JSON, no prose, no code fence:
+{"merges": [{"members": ["P24.03", "P96.02"], "sentence": "...", "why": "..."}],
+  "stages": [{"pid": "P61.01", "stage": "background"}]}
+List only groups of 2 or more in "merges". List every "general" policy in "stages".
+
+P01.12 | Default stance: AI not allowed | general | 2 | Neither instructors nor students use AI tools in this course.
+P02.11 | Default stance: AI allowed or encouraged | general | 33 | Everyone in the university community is encouraged to explore and experiment with AI responsibly.
+P02.12 | Default stance: AI allowed or encouraged | general | 30 | Universities support, embrace, and value AI use and responsible experimentation.
+P03.08 | Default stance: AI discouraged but not banned | general | 2 | Everyone avoids generative AI use where it is not suited to the task or leads to excessive reliance.
+P05.12 | Named levels or tiers of AI use | general | 24 | Frameworks such as the AI Assessment Scale, traffic lights and numbered levels classify AI use, from none to full.
+P06.03 | Fallback rule when no AI rule is stated | course-start | 11 | Courses without their own AI policy fall back to the school, department or university default policy.
+P07.09 | AI built into everyday tools (writing assistants, editors, IDEs, agents) | general | 2 | Autonomous AI agents are prohibited, and agentic AI used to complete assessments without human interaction is cheating.
+P10.09 | Asking when unsure about AI use | general | 17 | Staff and others who are unsure about AI use consult their supervisor, unit leadership or IT.
+P100.09 | Routine or minor AI uses outside the rules | general | 5 | Everyone need not disclose AI embedded in larger software or used for minor, routine tasks like grammar editing.
+P102.05 | Staying informed about AI developments | over-time | 10 | Everyone stays informed about AI advancements, best practices and institutional guidelines as they evolve.
+P102.08 | Staying informed about AI developments | over-time | 1 | Everyone keeps abreast of changes in the law, including copyright law, affecting AI use.
+P102.09 | Staying informed about AI developments | general | 15 | Everyone stays informed about AI, learns its benefits and risks, and reviews university policies and resources.
+P102.10 | Staying informed about AI developments | general | 5 | Staying informed about AI and learning about it is valuable, and resources are offered for doing so.
+P103.02 | Notice when AI is used in interactions or decisions | during-work | 2 | Meeting organizers tell participants if AI tools will be used in meetings or shared engagements.
+P103.05 | Notice when AI is used in interactions or decisions | general | 6 | Everyone discloses AI use to affected stakeholders when AI is used in decision-making processes.
+P103.06 | Notice when AI is used in interactions or decisions | general | 4 | Users have the right to know when they are working with AI, and AI use is disclosed to those affected.
+P103.07 | Notice when AI is used in interactions or decisions | general | 3 | Chatbots and AI chat assistants disclose their scope, non-official status, and potential for incorrect information, and AI is not presented as human.
+P107.02 | Prior approval or a closed list of permitted uses | before-course | 8 | Users must get prior approval or review from the relevant university body before using certain AI tools or data.
+P108.02 | No institution-wide AI policy exists | general | 28 | The university has no university-wide or single AI policy.
+P108.03 | No institution-wide AI policy exists | general | 10 | Existing university policies, such as academic integrity rules, already apply to AI use without AI-specific clauses.
+P109.12 | Aligning AI rules across sections, departments and disciplines | general | 3 | Students are confused by differing AI rules across courses, and consistent language clarifies expectations.
+P109.13 | Aligning AI rules across sections, departments and disciplines | general | 2 | This guidance supplements or sits alongside other institutional AI policies and guidelines.
+P11.07 | AI rules vary by course; permission does not carry over | over-time | 1 | Permitted uses of generative AI may change over time.
+P11.08 | AI rules vary by course; permission does not carry over | general | 21 | AI rules and permitted uses vary between courses, instructors and assignments; what is acceptable in one may be a violation in another.
+P114.01 | Personal responsibility for self-chosen AI tools | during-work | 1 | Everyone reviews the terms and conditions of AI software before using it.
+P114.02 | Personal responsibility for self-chosen AI tools | when-misuse | 1 | Users whose AI outputs violate others' intellectual property are responsible for the damage and may face disciplinary sanctions.
+P114.03 | Personal responsibility for self-chosen AI tools | when-misuse | 1 | A person unlinked to the university who causes damage alone answers for it, exonerating the university, and is barred from using the technology there.
+P114.04 | Personal responsibility for self-chosen AI tools | general | 5 | Users are personally responsible for their own use of AI tools and for what happens with the accounts or agents they use.
+P114.05 | Personal responsibility for self-chosen AI tools | general | 3 | The university is not responsible for personal data, consequences or negligence arising from users' use of external or unsanctioned AI tools.
+P114.06 | Personal responsibility for self-chosen AI tools | general | 2 | People who accept click-through agreements with university credentials without delegated signature authority may face personal consequences.
+P115.09 | Pointers to further AI guidance and resources | during-work | 3 | Everyone uses library databases and approved AI tools and data allowances.
+P115.12 | Pointers to further AI guidance and resources | general | 34 | Everyone consults institutional AI policies, hubs and guidance pages and reviews the university's AI guidelines.
+P115.14 | Pointers to further AI guidance and resources | general | 10 | Everyone is pointed to data classification, privacy and security standards for AI use.
+P115.15 | Pointers to further AI guidance and resources | general | 9 | Everyone consults the security, privacy or data offices when unsure about data use with AI.
+P115.17 | Pointers to further AI guidance and resources | general | 6 | Researchers are directed to separate guidance on AI in research.
+P115.19 | Pointers to further AI guidance and resources | general | 4 | Everyone can find the list of approved AI tools and where to access them.
+P115.20 | Pointers to further AI guidance and resources | general | 4 | Anyone may contact the named office for questions or more information about AI.
+P116.04 | General expectation of ethical, responsible use | during-work | 2 | Everyone is cautious with AI content that has legal, ethical or reputational implications.
+P116.05 | General expectation of ethical, responsible use | general | 18 | Everyone uses AI ethically and responsibly.
+P116.07 | General expectation of ethical, responsible use | general | 5 | Staff and researchers ensure their AI use is ethical and responsible.
+P116.08 | General expectation of ethical, responsible use | general | 4 | Ethical AI use requires attention to harm, bias, accuracy and shared values.
+P117.01 | Evaluating an AI tool before choosing it | before-course | 1 | Users carefully evaluate an AI tool's capabilities and review institutional policies before using it.
+P117.05 | Evaluating an AI tool before choosing it | during-work | 6 | Users choose AI tools from reputable, legitimate and trustworthy providers.
+P117.07 | Evaluating an AI tool before choosing it | during-work | 4 | Users verify that a tool has adequate security and is appropriate for their data before using it.
+P117.08 | Evaluating an AI tool before choosing it | general | 10 | Users review a tool's terms of service, privacy policies and data handling practices before using it.
+P117.11 | Evaluating an AI tool before choosing it | general | 3 | Frameworks and guidance exist to help users evaluate and select AI tools.
+P118.03 | Weighing benefits and risks before using AI | general | 21 | Everyone using AI weighs its potential benefits and risks, and considers its impacts, before and while using it.
+P118.04 | Weighing benefits and risks before using AI | general | 3 | Everyone decides whether to use AI deliberately, considering necessity, resource cost and goals; availability alone does not justify use.
+P118.06 | Weighing benefits and risks before using AI | general | 3 | Whether and how AI use is acceptable depends on the specific use, and people may make informed decisions or use it for personal exploration.
+P119.06 | AI for career and personal tasks outside coursework | general | 1 | Everyone may make occasional personal use of university AI resources if it does not interfere with university business use.
+P121.04 | AI displacing human interaction and feedback | general | 5 | Overreliance on AI can reduce human interaction, support, and feedback between students and instructors or peers.
+P121.05 | AI displacing human interaction and feedback | general | 4 | AI is a supplementary tool, not a replacement for human interaction, relationships, or instructors' guidance.
+P122.06 | Institutional investment in AI capacity | general | 5 | The university encourages and supports AI research, education and exploration by faculty and students.
+P126.02 | Security of AI accounts, systems and AI-written code | during-work | 5 | Users must not share passwords, credentials, API keys, tokens or other secrets with AI tools or agents.
+P126.03 | Security of AI accounts, systems and AI-written code | during-work | 4 | Code generated by AI is reviewed and approved before use in production or institutional IT systems.
+P126.05 | Security of AI accounts, systems and AI-written code | during-work | 1 | Users restrict permissions granted to AI applications to only what is necessary.
+P126.06 | Security of AI accounts, systems and AI-written code | during-work | 1 | Users sandbox and clearly scope AI agents and bots used for university purposes.
+P126.07 | Security of AI accounts, systems and AI-written code | general | 5 | Users secure AI systems and university resources, and consult the security office.
+P126.09 | Security of AI accounts, systems and AI-written code | general | 2 | Users must not connect AI tools or agents to university systems or data without approval.
+P126.11 | Security of AI accounts, systems and AI-written code | general | 1 | AI-generated code may contain bugs, security vulnerabilities or logic errors.
+P131.04 | What AI can and cannot do (capabilities and limits) | general | 5 | AI struggles with deep understanding, synthesis and higher-level tasks, and gives less original results.
+P131.05 | What AI can and cannot do (capabilities and limits) | general | 3 | Everyone using generative AI is responsible for understanding its capabilities, limits and risks and for using it appropriately.
+P131.07 | What AI can and cannot do (capabilities and limits) | general | 2 | AI cannot access recent events or paywalled and subscription resources.
+P132.01 | Status of the guidance (advisory or binding, precedence) | general | 5 | The document is guidance only and is not official university policy.
+P132.02 | Status of the guidance (advisory or binding, precedence) | general | 3 | Where the guidance conflicts with formal university policy, the policy governs and takes precedence.
+P132.03 | Status of the guidance (advisory or binding, precedence) | general | 2 | The guidance offers general advice and is not legal advice or an exhaustive set of best practices.
+P133.08 | Accountability for AI-assisted output | general | 50 | Everyone is responsible for the content they produce, publish or share with AI assistance.
+P133.09 | Accountability for AI-assisted output | general | 17 | Everyone is accountable for the decisions, actions and outcomes that result from their use of AI.
+P133.10 | Accountability for AI-assisted output | general | 13 | Responsibility stays with the human author and cannot be shifted to the AI tool or the university.
+P134.07 | Career and workplace readiness as a reason to learn AI | general | 40 | Employers and workplaces increasingly expect graduates to be able to use AI tools.
+P134.08 | Career and workplace readiness as a reason to learn AI | general | 37 | The university is preparing students for an AI-shaped workforce and future careers.
+P135.04 | Environmental cost of AI | during-work | 2 | Everyone considers environmental impact and uses the most efficient or sustainable AI tools and models for the task.
+P135.06 | Environmental cost of AI | general | 23 | AI use consumes significant energy, water and other resources, with negative environmental impacts and carbon costs.
+P136.02 | Labor, consent and credit behind AI | general | 9 | AI models were trained on writers' and creators' work without consent, credit or compensation, raising ethical objections.
+P136.03 | Labor, consent and credit behind AI | general | 3 | AI companies use exploited or poorly paid workers to build and monitor AI systems.
+P137.01 | AI records retention and public-records duties | general | 2 | Users furnish AI-related information and records when requested under public-records laws, and retain AI-related content such as prompts and outputs.
+P137.02 | AI records retention and public-records duties | general | 1 | AI use and related content may be subject to public-records laws such as freedom of information acts.
+P138.02 | AI is widespread and here to stay | general | 4 | Generative AI is already widespread, inevitable and here to stay, and people regularly use it.
+P138.03 | AI is widespread and here to stay | general | 1 | Using AI as a writing assistant may become as commonplace as using a calculator.
+P139.02 | Purpose and context of the policy document | general | 55 | These policies provide a framework for the responsible and ethical use of AI.
+P139.03 | Purpose and context of the policy document | general | 24 | AI is spreading rapidly, bringing both opportunities and risks to education.
+P139.04 | Purpose and context of the policy document | general | 23 | The guidance offers a shared starting point and language to support community discussion and decisions about AI.
+P139.05 | Purpose and context of the policy document | general | 20 | These policies set requirements and expectations for acceptable AI use that the community must follow.
+P139.07 | Purpose and context of the policy document | general | 12 | These policies aim to protect institutional data and reduce privacy, security and reputational risks from AI.
+P139.09 | Purpose and context of the policy document | general | 8 | The guidance is not a formal policy or mandate but a set of guardrails.
+P17.05 | Course-specific or institution-provided AI tools | during-work | 5 | Students may use university-provided AI tools in coursework when permitted, and are encouraged to use them for research and writing.
+P17.08 | Course-specific or institution-provided AI tools | general | 46 | The university provides approved, licensed generative AI tools with data protections to students, faculty and staff through university accounts.
+P24.06 | Disclosing and acknowledging AI use | during-work | 72 | Everyone is transparent about their AI use and cites or discloses it.
+P24.14 | Disclosing and acknowledging AI use | general | 2 | Community members do not hide or conceal their use of AI.
+P25.13 | What an AI citation or disclosure records (tool, prompt, output, format) | during-work | 6 | Everyone documents AI use in detail, including model versions, prompts and limitations, for transparency and reproducibility.
+P25.19 | What an AI citation or disclosure records (tool, prompt, output, format) | during-work | 2 | Everyone takes care to avoid plagiarism when using AI and does not use AI to plagiarize without citation.
+P25.21 | What an AI citation or disclosure records (tool, prompt, output, format) | during-work | 1 | Writers may cite the original source directly instead of the AI tool once they have confirmed it.
+P26.11 | Process records: AI logs, drafts and reflections | during-work | 11 | Everyone using AI keeps records of AI use, such as tools, prompts and decisions.
+P27.05 | Marking which parts of a submission are AI-derived | during-work | 1 | Everyone documents AI-derived code sections, including who reviewed them.
+P31.03 | Verifying AI output | during-work | 117 | Everyone reviews and verifies AI output for accuracy before using, sharing or relying on it.
+P31.09 | Verifying AI output | during-work | 12 | Everyone should not treat AI output as automatically accurate or rely on it without critical scrutiny.
+P32.12 | AI supports, and does not replace, human thinking | general | 21 | Everyone should use AI to augment, not replace, human judgment, thinking, creativity and learning.
+P36.14 | AI misuse as academic misconduct | general | 2 | Using AI is not inherently misconduct; concerns arise when use breaks course expectations.
+P37.09 | Consequences and sanctions for AI-rule violations | when-misuse | 12 | Policy violations may lead to disciplinary action, loss of AI access, termination, or legal liability for all users.
+P40.12 | Detection and similarity tools for AI misuse | general | 2 | Available detection tools exist, and federal agencies and others use them.
+P41.09 | AI shortcuts the practice that builds skill | general | 33 | Overreliance on AI weakens critical thinking, problem-solving and other skills.
+P44.08 | Teaching AI use in courses | general | 15 | AI skills are needed for future careers, professions and everyday life.
+P45.09 | AI under the existing rules for human help and sources | general | 16 | AI is analogous to a person, collaborator, classmate or knowledgeable friend whose help is treated like human help.
+P46.10 | Human responsibility for grades | general | 3 | Everyone must not let AI make the final decision on matters needing human judgment, such as grades, admissions or hiring.
+P48.05 | Disclosure and review of AI-made materials and communications | during-work | 11 | Everyone clearly discloses or labels AI use and AI-generated content in their work.
+P48.08 | Disclosure and review of AI-made materials and communications | general | 14 | Everyone is transparent about AI use and clearly indicates AI-generated content in documents and communications.
+P49.03 | Uploading course materials and protected content to AI | during-work | 21 | Everyone must not upload copyrighted, licensed or others' intellectual property into AI tools without the owner's permission.
+P49.06 | Uploading course materials and protected content to AI | during-work | 4 | Everyone uses only licensed or university-approved AI tools, or has permission, when uploading materials.
+P49.07 | Uploading course materials and protected content to AI | general | 12 | Uploading copyrighted, licensed or protected content to AI tools may violate copyright, licensing terms or intellectual property rights.
+P50.04 | Keeping personal and sensitive data out of AI tools | during-work | 126 | Users do not enter confidential, sensitive, personally identifiable or restricted data into AI tools.
+P50.05 | Keeping personal and sensitive data out of AI tools | during-work | 85 | Sensitive or confidential data goes only into AI tools the university has approved, licensed or contractually protected, not public or unapproved ones.
+P50.07 | Keeping personal and sensitive data out of AI tools | during-work | 46 | Users enter only public information into AI tools, assuming anything entered becomes public; public data may be used freely.
+P50.09 | Keeping personal and sensitive data out of AI tools | during-work | 36 | Users check the data's classification and consult the data owner or IT before entering non-public data into AI tools.
+P50.10 | Keeping personal and sensitive data out of AI tools | during-work | 30 | Users minimize, anonymize or de-identify data before entering it into AI tools.
+P50.11 | Keeping personal and sensitive data out of AI tools | during-work | 23 | Users opt out of data training, adjust privacy settings and read privacy policies before using AI tools.
+P50.12 | Keeping personal and sensitive data out of AI tools | during-work | 14 | Researchers and staff do not enter unpublished research, intellectual property or proprietary material into AI tools.
+P50.14 | Keeping personal and sensitive data out of AI tools | general | 108 | AI tools may store, reuse or train on what users enter, so entered information may not stay private.
+P50.15 | Keeping personal and sensitive data out of AI tools | general | 68 | Users protect data and privacy and follow university data and privacy policies and laws when using AI.
+P50.16 | Keeping personal and sensitive data out of AI tools | general | 51 | Entering sensitive data into AI tools can violate FERPA, HIPAA or other privacy rules and expose institutional or student data.
+P50.17 | Keeping personal and sensitive data out of AI tools | general | 38 | University-approved or licensed AI tools protect entered data and do not use it to train models.
+P51.13 | Equitable access to AI (cost, alternatives, opt-out) | during-work | 3 | Everyone can opt out of AI use without negative consequences.
+P51.18 | Equitable access to AI (cost, alternatives, opt-out) | general | 26 | Paid AI tools and unequal access create inequity among students.
+P51.21 | Equitable access to AI (cost, alternatives, opt-out) | general | 9 | The university provides students free access to some AI tools and support spaces.
+P51.24 | Equitable access to AI (cost, alternatives, opt-out) | general | 5 | Approved disability accommodations and assistive technologies are not restricted by AI rules.
+P52.01 | Copyright, intellectual property and terms of use | before-course | 10 | Users read and understand an AI tool's terms of service and what it does with their content.
+P52.03 | Copyright, intellectual property and terms of use | during-work | 29 | Users verify that AI output does not infringe copyright, plagiarize or violate third-party intellectual property before using or sharing it.
+P52.05 | Copyright, intellectual property and terms of use | during-work | 5 | Users read and comply with the terms of use of AI tools and vendors.
+P52.06 | Copyright, intellectual property and terms of use | during-work | 4 | Users do not ask AI to reproduce or mimic copyrighted works or claim such output as their own.
+P52.09 | Copyright, intellectual property and terms of use | general | 46 | AI output may contain, resemble or reproduce copyrighted material, sometimes without attribution.
+P52.10 | Copyright, intellectual property and terms of use | general | 31 | Ownership and copyrightability of AI-generated content are unclear, unresolved or limited under current law.
+P52.11 | Copyright, intellectual property and terms of use | general | 27 | Users comply with copyright and intellectual property laws and respect creators' rights when using AI.
+P52.12 | Copyright, intellectual property and terms of use | general | 17 | Users do not use AI in ways that infringe copyright or intellectual property rights.
+P52.13 | Copyright, intellectual property and terms of use | general | 14 | Entering unpublished research or intellectual property into AI tools may count as disclosure and risk losing IP or patent rights.
+P52.14 | Copyright, intellectual property and terms of use | general | 7 | AI vendors' terms and click-through agreements can bind individuals personally or restrict how AI may be used.
+P52.15 | Copyright, intellectual property and terms of use | general | 7 | Users seek guidance from relevant offices and policies on AI and copyright.
+P52.16 | Copyright, intellectual property and terms of use | general | 6 | People keep ownership of their own prompts, work and course materials.
+P52.17 | Copyright, intellectual property and terms of use | general | 3 | Users clarify who owns AI-generated content and assume it may not be copyright eligible.
+P52.18 | Copyright, intellectual property and terms of use | general | 2 | Fair use permits some use of copyrighted material, and AI may be used for compliant educational purposes.
+P53.02 | Bias, fairness and general ethical concerns about AI | during-work | 25 | Users identify, check and mitigate bias in AI output when using it.
+P53.04 | Bias, fairness and general ethical concerns about AI | general | 63 | AI models reflect and can amplify biases from their training data and design, so outputs may be biased.
+P53.05 | Bias, fairness and general ethical concerns about AI | general | 39 | AI raises ethical concerns, including privacy, labor, environmental cost, access and misinformation.
+P53.07 | Bias, fairness and general ethical concerns about AI | general | 15 | Everyone uses AI in ways that promote fairness, inclusion and diversity and reduce bias.
+P53.08 | Bias, fairness and general ethical concerns about AI | general | 14 | AI training data and tools can be unrepresentative and non-transparent, and can flatten or suppress diverse voices.
+P53.09 | Bias, fairness and general ethical concerns about AI | general | 12 | AI can produce offensive, stereotyped, racist or sexist content.
+P53.11 | Bias, fairness and general ethical concerns about AI | general | 8 | AI may make biased or discriminatory decisions that treat people or groups unfairly.
+P53.12 | Bias, fairness and general ethical concerns about AI | general | 8 | Users must not rely on AI output that shows bias, and must not use AI in discriminatory ways.
+P54.03 | Policy review and revision over time | over-time | 31 | Community members may submit feedback, suggestions and comments on the policy.
+P54.07 | Policy review and revision over time | over-time | 22 | AI tools, practices and citation norms are changing quickly, so rules cannot cover everything.
+P54.16 | Policy review and revision over time | over-time | 2 | Everyone in teaching, learning and research adapts to the growing field of AI.
+P55.04 | Evidence on AI use and its effects | over-time | 4 | Research on the effects of AI on learning is still early and many universities have no policy yet.
+P55.06 | Evidence on AI use and its effects | general | 14 | Surveys report how many students use generative AI tools and how often.
+P55.07 | Evidence on AI use and its effects | general | 7 | Research shows AI use can harm learning, including reduced critical thinking, cognitive debt and overreliance.
+P55.08 | Evidence on AI use and its effects | general | 7 | Research shows structured, intentional AI use can support learning and produce equal or better outcomes.
+P56.04 | Institutional values and principles for AI use | general | 47 | The university supports and is committed to responsible, ethical exploration and use of AI.
+P56.05 | Institutional values and principles for AI use | general | 38 | Everyone uses AI responsibly and ethically, in line with university values, fairness, privacy, academic integrity and policy principles.
+P56.07 | Institutional values and principles for AI use | general | 28 | AI is human-centered and supports, rather than replaces, human judgment, relationships, critical thinking and teaching.
+P56.08 | Institutional values and principles for AI use | general | 25 | Core principles and concerns for AI use include integrity, privacy, security, fairness, copyright and values.
+P56.10 | Institutional values and principles for AI use | general | 16 | AI brings both opportunities and risks, requiring a balance of innovation against integrity and learning.
+P56.11 | Institutional values and principles for AI use | general | 8 | Transparency and honest communication about AI use are expected and essential.
+P56.12 | Institutional values and principles for AI use | general | 7 | Everyone protects data, privacy and security and complies with applicable laws when using AI.
+P56.15 | Institutional values and principles for AI use | general | 4 | Everyone does not use AI in ways that undermine learning objectives, assessment integrity or evaluation of student work.
+P56.16 | Institutional values and principles for AI use | general | 3 | Users are accountable for the AI outputs they generate or rely on and account for AI's limitations.
+P60.07 | Trust and course design over policing AI use | general | 1 | Clarity and ongoing dialogue are more effective than policing.
+P61.03 | Definitions and scope of the policy | general | 112 | Generative AI means AI systems that create new content such as text, images, audio, video or code.
+P61.04 | Definitions and scope of the policy | general | 58 | The policy applies to all members of the university community, including students, faculty, staff and affiliates.
+P61.05 | Definitions and scope of the policy | general | 55 | Artificial intelligence means computer systems that perform tasks normally requiring human intelligence.
+P61.06 | Definitions and scope of the policy | general | 30 | The policy covers academic work such as coursework, teaching, research, theses and assessments.
+P61.07 | Definitions and scope of the policy | general | 30 | The policy names example tools it covers, such as ChatGPT, Claude, Gemini, Copilot and DALL-E.
+P61.08 | Definitions and scope of the policy | general | 21 | The policy covers AI features embedded in other software as well as standalone tools.
+P61.09 | Definitions and scope of the policy | general | 19 | A tool counts as AI when it generates, rewrites, summarizes or substantively edits work, including help with brainstorming or outlining.
+P61.10 | Definitions and scope of the policy | general | 18 | Sensitive, confidential and personally identifiable data and prompts or inputs to AI tools are defined.
+P61.11 | Definitions and scope of the policy | general | 16 | Related terms such as hallucination, disclosure, AI literacy, human oversight and responsible AI are defined.
+P61.12 | Definitions and scope of the policy | general | 15 | Agentic AI means AI systems that act autonomously, pursue goals across multiple steps and make decisions with little human intervention.
+P61.13 | Definitions and scope of the policy | general | 14 | The policy does not apply to certain uses or groups, such as personal use, research, clinical or administrative work, or other schools.
+P61.14 | Definitions and scope of the policy | general | 9 | All community members follow and comply with the policy.
+P61.15 | Definitions and scope of the policy | general | 9 | Non-generative tools such as basic spell-checkers, calculators and search or sorting tools are not counted as generative AI.
+P61.16 | Definitions and scope of the policy | general | 8 | Large language models are AI models that process and generate human language, and they are a subset of generative AI.
+P61.17 | Definitions and scope of the policy | general | 7 | The policy covers all AI tools, including new ones released later, and focuses on uses rather than specific tools.
+P62.02 | AI in research, publication and review | before-course | 14 | Researchers obtain or consult the IRB and follow its rules before using AI with human-subject data.
+P62.05 | AI in research, publication and review | during-work | 54 | Researchers comply with the AI rules of journals, publishers, sponsors, funders, disciplines and institutions that apply to their work.
+P62.07 | AI in research, publication and review | during-work | 16 | Researchers may use AI to support tasks such as drafting, editing, coding, analysis, idea development and research design.
+P62.08 | AI in research, publication and review | during-work | 9 | Researchers are responsible for the accuracy of any content AI creates for them.
+P62.10 | AI in research, publication and review | during-work | 8 | Do not upload submitted manuscripts, grant proposals or other material under confidential review into AI tools.
+P62.11 | AI in research, publication and review | during-work | 8 | Researchers validate AI outputs, keep human oversight and avoid over-reliance on AI.
+P62.12 | AI in research, publication and review | during-work | 8 | Researchers obtain informed consent and protect participants' rights and privacy when using AI.
+P62.13 | AI in research, publication and review | during-work | 7 | Do not enter unpublished, confidential or personal research data into AI tools.
+P62.14 | AI in research, publication and review | during-work | 7 | Researchers keep records documenting their AI methods, prompts and verification steps, and share research outputs.
+P62.15 | AI in research, publication and review | during-work | 6 | Reviewers do not use generative AI in peer review of manuscripts or grant proposals.
+P62.16 | AI in research, publication and review | during-work | 6 | Researchers disclose their use of AI in IRB applications.
+P62.17 | AI in research, publication and review | during-work | 5 | Researchers use only approved AI tools suited to the sensitivity of their research data.
+P62.24 | AI in research, publication and review | general | 11 | Journals, funders, sponsors and review bodies may restrict AI use or require its disclosure.
+P62.25 | AI in research, publication and review | general | 8 | The scope and context of AI in research vary, and expectations differ across settings.
+P62.26 | AI in research, publication and review | general | 7 | Disclosure of AI use is made in places such as acknowledgments or methods, and transparency matters.
+P62.27 | AI in research, publication and review | general | 6 | Major funders and journals prohibit the use of generative AI in peer review.
+P62.28 | AI in research, publication and review | general | 2 | Many publishers do not accept AI as an author, and AI sources cannot be cited.
+P65.01 | Review and approval of AI tools and vendors | before-course | 53 | Everyone must submit AI tools for IT or governance review and get approval before acquiring or using them, even free ones.
+P65.09 | Review and approval of AI tools and vendors | during-work | 11 | Everyone may use university information with AI tools only if the tool is approved for that data type and use.
+P65.13 | Review and approval of AI tools and vendors | general | 8 | Vendors and third parties must not use university data to train or improve AI models unless explicitly authorized.
+P66.14 | Explaining and discussing AI rules with students | general | 8 | Institutions support open, ongoing dialogue about AI and its risks and impacts among faculty, students and the community.
+P67.04 | Co-creating course AI policy with students | course-start | 2 | The class co-creates a class agreement on AI use with students early in the semester.
+P68.11 | Educative response to misuse | general | 2 | Educators' primary work is to support students' development and foster exploration rather than to surveil, discipline or punish them.
+P70.09 | AI literacy training and resources | general | 29 | AI literacy is an essential skill that students, faculty and staff need to develop.
+P70.11 | AI literacy training and resources | general | 15 | Community members attend AI training, workshops and use available AI resources.
+P70.13 | AI literacy training and resources | general | 11 | All students, faculty and staff complete required AI training, often every year or at onboarding.
+P70.14 | AI literacy training and resources | general | 2 | Completion of AI training may be required before people are given access to certain AI tools.
+P71.03 | Reporting AI incidents and misuse | when-misuse | 19 | Everyone immediately reports suspected data breaches, security incidents, or unauthorized disclosure of sensitive data involving AI tools to the designated office.
+P71.04 | Reporting AI incidents and misuse | when-misuse | 7 | Everyone reports suspected security issues, misuse, or ethical and compliance concerns about AI use through proper university channels.
+P71.05 | Reporting AI incidents and misuse | when-misuse | 4 | Everyone reports conduct that violates AI policy, and failing to report a known violation is itself a violation.
+P71.10 | Reporting AI incidents and misuse | when-misuse | 1 | Researchers report adverse events or unanticipated problems to the IRB.
+P71.11 | Reporting AI incidents and misuse | general | 4 | Anyone may report AI-related risks, issues, or concerns through a university form, anonymous tool, or office.
+P71.12 | Reporting AI incidents and misuse | general | 2 | Users report AI tool malfunctions, vulnerabilities, or performance and accuracy problems to the designated office or incident database.
+P72.04 | Contact points and human help for AI questions | when-misuse | 4 | Academic integrity questions and suspected AI misuse go to conduct, honor code or student rights offices.
+P72.06 | Contact points and human help for AI questions | general | 13 | Everyone directs questions about AI security, privacy, compliance, tools or data to IT, information security or the CISO.
+P72.07 | Contact points and human help for AI questions | general | 10 | Questions about AI policy are directed to designated university officials, offices or committees.
+P72.08 | Contact points and human help for AI questions | general | 5 | Everyone contacts a librarian to confirm citations, licensed content, copyright or whether a resource may be uploaded to AI.
+P73.02 | Human oversight of AI-influenced decisions | general | 17 | Everyone keeps a human in the loop for important decisions, and AI supports rather than replaces human judgment.
+P73.03 | Human oversight of AI-influenced decisions | general | 15 | Everyone must not let AI be the sole basis for consequential decisions about individuals, such as admissions, academic standing or discipline.
+P73.04 | Human oversight of AI-influenced decisions | general | 13 | Humans retain final decision-making authority, accountability and responsibility for decisions, which cannot be delegated to AI.
+P73.05 | Human oversight of AI-influenced decisions | general | 10 | AI supports and does not replace human judgment and decision-making.
+P73.06 | Human oversight of AI-influenced decisions | general | 6 | Everyone should not use AI for recruitment, personnel or disciplinary decision making.
+P73.08 | Human oversight of AI-influenced decisions | general | 5 | Everyone must not let AI replace human judgment, critical thinking or professional judgment.
+P74.01 | Harmful, deceptive or fabricating AI uses | during-work | 13 | Nobody uses AI to create or distribute malware, phishing or other malicious content, or uploads data that helps do so.
+P74.09 | Harmful, deceptive or fabricating AI uses | general | 11 | Nobody uses AI to create discriminatory, defamatory, harmful or obscene content.
+P74.10 | Harmful, deceptive or fabricating AI uses | general | 10 | Nobody uses AI for illegal, fraudulent or unlawful activity.
+P74.11 | Harmful, deceptive or fabricating AI uses | general | 9 | Nobody uses AI to harass, bully, stalk, intimidate or sexually exploit others.
+P74.12 | Harmful, deceptive or fabricating AI uses | general | 9 | Everyone avoids using AI to deceive, mislead, manipulate or misrepresent others, including fraudulent deepfakes.
+P74.13 | Harmful, deceptive or fabricating AI uses | general | 6 | Nobody uses AI to threaten, bypass or gain unauthorized access to university systems, security or controls.
+P74.14 | Harmful, deceptive or fabricating AI uses | general | 6 | Everyone does not use AI to fabricate, falsify or alter data, research results, academic content or other information.
+P74.16 | Harmful, deceptive or fabricating AI uses | general | 3 | Nobody uses AI for unauthorized surveillance, monitoring or collection of personal information about individuals.
+P74.17 | Harmful, deceptive or fabricating AI uses | general | 3 | AI can be used to deceive, spread misinformation, or harm people and the university's work.
+P74.18 | Harmful, deceptive or fabricating AI uses | general | 2 | Nobody uses AI tools to facilitate academic dishonesty or gain an unfair advantage.
+P74.19 | Harmful, deceptive or fabricating AI uses | general | 2 | Nobody uses AI to impersonate real people, including instructors or students, through text, images, audio or video.
+P74.20 | Harmful, deceptive or fabricating AI uses | general | 1 | AI can access, manipulate or disrupt university systems.
+P75.01 | AI-enabled phishing and security threats | during-work | 2 | Everyone stays vigilant against phishing schemes that exploit passwords, emails and other sensitive information, including when interacting with AI tools.
+P75.02 | AI-enabled phishing and security threats | during-work | 2 | Everyone uses safe computing practices, such as caution with links and good antivirus protection, when working with AI.
+P75.03 | AI-enabled phishing and security threats | general | 11 | Everyone reports suspicious messages and communications to the designated IT or security office.
+P75.04 | AI-enabled phishing and security threats | general | 7 | Generative AI makes it easier for malicious actors to create sophisticated phishing emails, scams, deepfakes and other cybersecurity threats.
+P75.05 | AI-enabled phishing and security threats | general | 6 | Everyone stays vigilant against AI-enabled phishing attacks and scams, and is aware of how generative AI can be exploited.
+P75.06 | AI-enabled phishing and security threats | general | 2 | Everyone is cautious of deceptive or fake AI-generated images, videos and audio, and when creating or altering them.
+P76.02 | Administrative and operational AI use | before-course | 9 | Staff check with or consult their supervisor before using AI tools or new AI uses in their roles.
+P76.04 | Administrative and operational AI use | during-work | 10 | Everyone has a human review AI-generated content for official use before it is sent, published or used.
+P76.05 | Administrative and operational AI use | during-work | 4 | Everyone follows university communications standards and approval processes for public-facing and official communications and materials.
+P77.07 | Existing law and university policy apply to AI | during-work | 5 | Everyone follows copyright and intellectual property laws when using AI.
+P77.08 | Existing law and university policy apply to AI | when-misuse | 21 | AI use can create public records or violate law and policy, bringing disciplinary or legal consequences.
+P77.09 | Existing law and university policy apply to AI | general | 101 | Everyone complies with existing university policies and applicable laws when using AI.
+P77.10 | Existing law and university policy apply to AI | general | 65 | Existing university policies and laws continue to apply to AI use and are not replaced by AI guidance.
+P77.12 | Existing law and university policy apply to AI | general | 28 | Everyone follows university data privacy, information security, IT acceptable use and data governance policies when using AI.
+P77.13 | Existing law and university policy apply to AI | general | 21 | Everyone does not use AI in ways that are illegal or violate university policy or academic integrity.
+P78.12 | Finding out and following each course's AI rules | general | 6 | Everyone follows the AI guidelines set by their institution, dean, instructor or supervisor.
+P80.08 | Governance roles, ownership and exceptions | when-misuse | 4 | Denials, disputes and unresolved questions are escalated to a named committee, leader or program head.
+P80.09 | Governance roles, ownership and exceptions | when-misuse | 4 | Academic misconduct involving AI is handled by the conduct office or instructor, who determine violations.
+P82.09 | Limits of preventing and detecting AI use | general | 8 | AI is already widely used and embedded in everyday tools, so students will use it regardless.
+P84.04 | How the policy was made (body, process, sources, AI assistance) | before-course | 2 | Everyone, including schools, instructors, students and stakeholder groups, has input into creating AI policies and guidance.
+P86.01 | Consent for AI recording, transcription and likeness | during-work | 8 | Meeting hosts obtain consent from all participants before recording or transcribing with AI, and recording does not begin until everyone consents.
+P86.02 | Consent for AI recording, transcription and likeness | during-work | 5 | Everyone announces at the start of a meeting that AI recording or transcription is active.
+P86.04 | Consent for AI recording, transcription and likeness | during-work | 4 | Hosts disable AI recording or transcription features when inappropriate or when a participant does not consent.
+P86.05 | Consent for AI recording, transcription and likeness | during-work | 4 | Everyone does not use AI recording or transcription tools in confidential, sensitive or HR meetings, or allow unfamiliar bots to join meetings.
+P86.06 | Consent for AI recording, transcription and likeness | during-work | 3 | Participants ask the host whether recording or AI transcription is enabled, and decline to take part if the host insists.
+P86.09 | Consent for AI recording, transcription and likeness | general | 3 | AI recording raises privacy concerns and may violate wiretapping laws; existing rules on recording classes apply.
+P86.11 | Consent for AI recording, transcription and likeness | general | 1 | Everyone balances productivity and convenience with respect for privacy and treats recordings as private among those who took part.
+P87.03 | Benefits of AI for learning and teaching | general | 23 | AI is a valuable, powerful tool that supports and enhances student learning.
+P87.04 | Benefits of AI for learning and teaching | general | 21 | AI can help students understand concepts, summarize sources, practice, and improve their writing and coding.
+P87.05 | Benefits of AI for learning and teaching | general | 18 | AI can personalize and adapt learning to each student's needs.
+P87.06 | Benefits of AI for learning and teaching | general | 16 | AI saves time and raises efficiency and productivity by taking over routine tasks.
+P87.07 | Benefits of AI for learning and teaching | general | 14 | AI can enhance teaching, learning, research and operations across the institution.
+P87.09 | Benefits of AI for learning and teaching | general | 12 | AI has benefits for learning when it is used responsibly, appropriately and thoughtfully.
+P87.10 | Benefits of AI for learning and teaching | general | 12 | AI can help students with disabilities, language barriers or special needs take part more fully and equitably.
+P87.11 | Benefits of AI for learning and teaching | general | 11 | AI can foster creativity and innovation.
+P87.13 | Benefits of AI for learning and teaching | general | 9 | AI can speed up research, discovery and data analysis.
+P87.14 | Benefits of AI for learning and teaching | general | 7 | Generative AI is transformative and will change how people teach, learn and research.
+P87.16 | Benefits of AI for learning and teaching | general | 6 | The university wants to explore and embrace AI rather than ignore it.
+P87.17 | Benefits of AI for learning and teaching | general | 3 | Everyone should leverage AI to personalize learning and advance learning and creativity.
+P87.18 | Benefits of AI for learning and teaching | general | 3 | Generative AI brings both benefits and challenges.
+P88.02 | Engaging peers, partners and the community on AI | over-time | 6 | Campus-wide discussions, summits, and stakeholder forums on AI build shared understanding.
+P88.07 | Engaging peers, partners and the community on AI | general | 3 | Faculty and staff take part in university-wide conversations on AI and share effective practices and concerns.
+P89.04 | AI for data analysis and visualization | during-work | 6 | Everyone may use AI for data analysis, pattern recognition and visualization in research and coursework.
+P89.07 | AI for data analysis and visualization | during-work | 1 | Everyone uses extreme caution when using AI tools to analyze data.
+P91.08 | AI for editing, proofreading and outlining one's own work | during-work | 5 | AI can help with editing and grammar, but it may rewrite text or fall short of other help.
+P92.02 | University-licensed or approved AI tools | before-course | 6 | Users check with IT or get a review before adopting, purchasing or adding AI tools that are not approved.
+P92.05 | University-licensed or approved AI tools | during-work | 52 | Everyone uses only university-approved or licensed AI tools, logged in with their university account.
+P92.07 | University-licensed or approved AI tools | during-work | 12 | Sensitive, non-public or institutional data is used only in approved AI tools.
+P92.10 | University-licensed or approved AI tools | general | 37 | Approved tools are vetted and come with data protection and security safeguards that other tools may lack.
+P92.11 | University-licensed or approved AI tools | general | 33 | The university provides, licenses or gives access to specific AI tools for its community.
+P92.12 | University-licensed or approved AI tools | general | 19 | Approved or licensed AI tools may be used within the data limits set for each tool.
+P92.13 | University-licensed or approved AI tools | general | 18 | A list of approved AI tools is published on university web pages or through IT.
+P92.14 | University-licensed or approved AI tools | general | 13 | Users do not use unapproved, personal or third-party AI tools or accounts for university work.
+P92.16 | University-licensed or approved AI tools | general | 4 | Only university-approved AI meeting and transcription tools are used; unapproved third-party bots are not permitted.
+P93.04 | Prompting advice | during-work | 12 | Effective use of AI requires thoughtful, well-crafted prompting, and prompt quality determines output quality.
+P93.06 | Prompting advice | during-work | 5 | Everyone structures prompts with elements such as a role or persona, task, context and format.
+P93.10 | Prompting advice | during-work | 3 | Everyone takes care that bias in prompts can skew AI output, and uses specificity to get more diverse outputs.
+P93.11 | Prompting advice | during-work | 2 | Everyone provides examples of the desired output or of their own writing so the AI can adapt.
+P93.13 | Prompting advice | general | 7 | Everyone learns about prompt engineering and how to write prompts that work.
+P94.08 | Careers and professional norms as reasons to build skills without AI | general | 2 | Many industries require professionals to document AI-assisted work, and transparent use is part of AI fluency.
+P95.05 | Integrity, honesty and fairness as grounds for AI rules | general | 32 | Academic integrity is a core value and foundation of the academic community and its education.
+P95.08 | Integrity, honesty and fairness as grounds for AI rules | general | 7 | Students uphold academic integrity, honesty and fairness in their AI use.
+P96.03 | AI is not an author, source or collaborator | general | 4 | Generative AI tools cannot be listed as authors, because journals and publishers do not permit it.
+P96.05 | AI is not an author, source or collaborator | general | 4 | Everyone must not list or credit AI models and tools as authors.
+P97.03 | Accessibility and AI | before-course | 3 | Instructors apply universal design principles to their teaching and AI-supported materials.
+P97.05 | Accessibility and AI | before-course | 2 | Everyone completes a required accessibility review and Equally Effective Alternative Access Plan before AI tools are used.
+P97.07 | Accessibility and AI | during-work | 8 | Everyone may use AI to create accessible materials, such as alt text, captions, alternative formats and screen-reader-friendly documents.
+P97.08 | Accessibility and AI | during-work | 1 | Everyone avoids relying on AI tools that are not accessible.
+P97.10 | Accessibility and AI | general | 9 | AI can improve accessibility and serve as an assistive technology for students with disabilities.
+P97.11 | Accessibility and AI | general | 8 | AI tools and their output may be inaccessible and create barriers for people with disabilities.
+P97.12 | Accessibility and AI | general | 4 | Everyone designs AI tools and systems to be accessible to all and to broaden access to learning materials.

@@ -1,0 +1,44 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT23 "AI-written prose deliverables" (AI writing essays, reports, reflections, analyses or other written deliverables.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..19 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | austin-community-college | C2 | student | may | AI allowed for drafting if disclosed | You may use AI to assist with drafting, proofreading, coding, or creating visual elements, provided you disclose this use.
+1 | california-san-diego | C4 | student | may | AI allowed for non-code materials | it is permissible to use ChatGPT or other generative AI on your non-code project materials
+2 | colgate | C3 | student | must-not | no AI for justification doc | Use the model to write any aspect of the justification of correctness document.
+3 | georgetown | C3 | student | must-not | AI text tools banned on assignments | The use of AI text generating tools at any point when working on the assignments will be treated as academic dishonesty.
+4 | grinnell-college | C2 | student | must | write own messages without AI | are expected to compose their own messages
+5 | illinois-chicago | C5 | student | should-not | no paraphrasing software | you should not use paraphrasing software like
+6 | illinois-chicago | C5 | student | should-not | no AI writing or generation tools | or AI software for writing (like ChatGPT), or any AI tool for content generation
+7 | johns-hopkins | C5 | student | must-not | no LLM for essay | Do not use LLMs such as GPT to write your essay.
+8 | massachusetts-boston | C6 | student | must-not | no AI-generated project readme | Proj4 readMe.txt may not be AI
+9 | north-carolina-state | C4 | student | must-not | no AI writing analysis | You may not use it to write the analysis.
+10 | north-texas | C4 | student | must-not | no AI for evaluations or reflection | AI cannot be used for peer evaluations or reflection
+11 | oberlin-college | C5 | student | must-not | no AI answers or technical reports | Impermissible uses include generating answers to research questions or reflections, writing technical reports
+12 | princeton | C5 | student | must-not | no AI for English writing | To help with any form of English writing (i.e. non-code), including proofreading and editing
+13 | swarthmore-college | C5 | student | must-not | no AI for reading questions | You may not use generative AI to respond to reading questions or questions on Ed.
+14 | vermont | C1 | student | must-not | no AI on metacognition essays | metacognition essays yes n/a no no no
+15 | vermont | C5 | student | must-not | no AI for writing prose | While the use of generative AI for producing prose—reflections, essays, or similar writing—is pro-
+16 | vermont | C5 | student | should-not | never AI for first draft | you should never use it to produce a first draft.
+17 | virginia-tech | C3 | student | must-not | AI discussion posts need attribution | the creation of discussion posts using generative AI isforbidden without proper
+18 | virginia | C4 | student | should-not | AI discouraged for writing deliverables | For artifact documents and other writing prompts, generative AI is discouraged
+19 | washington | C1 | student | must-not | no AI writing or editing submissions | Using AI to write, modify, or extend assignment reflections, code, comments, etc.

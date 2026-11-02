@@ -1,0 +1,79 @@
+{
+ "university": "University of Toledo",
+ "slug": "toledo",
+ "state": "OH",
+ "type": "R1",
+ "searched": {"university": "found", "school": "none-found", "computing": "none-found", "course": "deferred"},
+ "documents": [
+  {
+   "id": "toledo-1",
+   "layer": "university",
+   "unit": "Center for Excellence in Teaching and Learning (Provost)",
+   "course": null,
+   "title": "Assignments, AI Tool and Policies (syllabus builder)",
+   "url": "https://www.utoledo.edu/offices/provost/utc/syllabus/assignments-ai-tool-usage.html",
+   "date_or_term": "current page",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "A syllabus-builder help page from the provost's teaching center. It makes an AI Tool Usage statement a required syllabus section but leaves the content of the rule (used, limited or prohibited) entirely to each instructor, and offers example language.",
+   "stance_why": "The page sets no AI rule of its own: it says instructors 'must select or enter a statement explaining how generative AI tools may be used, limited, or prohibited in the course', so the decision is handed to each instructor and the university only requires that a statement exist.",
+   "units": [
+    {
+     "why": "The page makes the AI statement mandatory: 'Instructors must select or enter a statement'. It binds instructors, at syllabus-design time, as a duty, which is a syllabus-statement requirement (P09) and not a stance on AI itself.",
+     "anchor": "Instructors must select or enter a statement explaining how generative AI tools may",
+     "frag_start": "Instructors must select or enter",
+     "frag_end": "prohibited in the course.",
+     "policy": "Instructors must select or enter, in the required AI Tool Usage section of the syllabus, a statement explaining how generative AI tools may be used, limited, or prohibited in the course.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P09",
+     "topics": ["syllabus-communication"],
+     "unit_stance": "neutral"
+    },
+    {
+     "why": "The same sentence leaves the range of outcomes open: AI 'may be used, limited, or prohibited in the course'. The university picks no default, so the decision sits with each instructor (P04), not tiers (P05) since no named levels are given.",
+     "anchor": "how generative AI tools may be used, limited, or prohibited in the course",
+     "frag_start": "Instructors must select or enter",
+     "frag_end": "prohibited in the course.",
+     "policy": "Each instructor decides whether generative AI tools may be used, limited, or prohibited in their course.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P04",
+     "topics": ["instructor-discretion", "default-stance"],
+     "unit_stance": "neutral"
+    },
+    {
+     "why": "'Clear AI guidance helps set expectations for academic integrity and responsible use of AI tools' gives the reason for requiring the statement. It is rationale (informs), not a rule; no type covers clarity as a reason for AI statements, and P95 (fairness/honesty) or P116 (generic ethical use) would stretch it, so it is UNCOVERED.",
+     "anchor": "Clear AI guidance helps set expectations for academic integrity and responsible use",
+     "frag_start": "Clear AI guidance helps set",
+     "frag_end": "responsible use of AI tools.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "UNCOVERED",
+     "uncovered_note": "States that clear AI guidance in the syllabus helps set expectations for academic integrity and responsible AI use, as the reason for requiring the statement.",
+     "topics": ["syllabus-communication", "learning-rationale"],
+     "unit_stance": "neutral"
+    },
+    {
+     "why": "'Examples and optional language for both sections are provided in the Help Text panel' means the university supplies sample syllabus language that instructors may adopt, which is P110 (templates), not P63 (learning about AI).",
+     "anchor": "Examples and optional language for both sections are provided in the Help Text panel.",
+     "frag_start": "Examples and optional language for",
+     "frag_end": "in the Help Text panel.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P110",
+     "topics": ["syllabus-communication"],
+     "unit_stance": "neutral"
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Thin page: only the AI Tool Usage paragraph is AI-specific. Recording-policy, accommodation and other preloaded policy text is not about AI and was not coded. The 'required and private ... must be completed before submission' note on the AI section was treated as part of the P09 unit, not a separate unit."
+}

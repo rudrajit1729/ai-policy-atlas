@@ -1,0 +1,202 @@
+{
+ "university": "Stanford University",
+ "slug": "stanford",
+ "state": "CA",
+ "type": "R1",
+ "searched": {"university": "found", "school": "none-found", "computing": "none-found", "course": "deferred"},
+ "documents": [
+  {
+   "id": "stanford-ocs-genai-guidance",
+   "layer": "university",
+   "unit": "Office of Community Standards / Board on Conduct Affairs",
+   "course": null,
+   "title": "Generative AI Policy Guidance",
+   "url": "https://communitystandards.stanford.edu/generative-ai-policy-guidance",
+   "date_or_term": "adopted 2023-02-16",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "The Board on Conduct Affairs sets a university-wide default that AI use is treated like help from another person and may not be used to substantially complete work. Instructors are free to allow or disallow uses in their syllabi. Students acknowledge non-incidental use and ask when unsure; instructors are advised to announce possible detection software.",
+   "stance_why": "The document says \"Individual course instructors are free to set their own policies\" including \"allowing or disallowing some or all uses\", so the decision rests with instructors. The default (\"treated analogously to assistance from another person\") applies only \"Absent a clear statement from a course instructor\", so the document itself sets no fixed stance and has no tiers.",
+   "units": [
+    {
+     "why": "The passage states the purpose of the guidance: \"set clear guidelines to students about what uses are and are not consistent with the Stanford Honor Code\". It is an institution-level statement of purpose and scope, so P56 (framework/preamble), not a rule for any one course.",
+     "anchor": "set clear guidelines to students about what uses are and are not consistent",
+     "frag_start": "To give sufficient space for",
+     "frag_end": "consistent with the Stanford Honor Code",
+     "policy": null,
+     "actor": "admin", "phase": "general", "modality": "informs",
+     "policy_type": "P56", "unit_stance": "neutral",
+     "topics": ["policy-evolution", "default-stance"]
+    },
+    {
+     "why": "The sentence \"these tools can also be used in ways that bypass key learning objectives\" gives the reason AI limits are needed: some uses skip the learning. P41 is nearest (AI shortcuts what builds skill), but it speaks of learning objectives rather than practice, hence a fit note.",
+     "anchor": "these tools can also be used in ways that bypass key learning objectives",
+     "frag_start": "While these tools have applications",
+     "frag_end": "bypass key learning objectives",
+     "policy": null,
+     "actor": "all", "phase": "general", "modality": "informs",
+     "policy_type": "P41", "unit_stance": "neutral",
+     "fit_note": "Frames the concern as bypassing learning objectives, not explicitly as lost practice or skill-building.",
+     "topics": ["learning-rationale"]
+    },
+    {
+     "why": "\"these tools have applications that foster student learning and understanding\" names a benefit of AI without stating a rule or a career claim, which is P87 and not P44.",
+     "anchor": "these tools have applications that foster student learning and understanding",
+     "frag_start": "While these tools have applications",
+     "frag_end": "learning and understanding",
+     "policy": null,
+     "actor": "all", "phase": "general", "modality": "informs",
+     "policy_type": "P87", "unit_stance": "encourage",
+     "topics": ["learning-rationale", "permitted-uses"]
+    },
+    {
+     "why": "The passage lists \"ChatGPT, Bard, DALL-E, and Stable Diffusion\" as the tools covered. It defines the scope of the guidance by example, which is P61.",
+     "anchor": "generative AI tools such as ChatGPT, Bard, DALL-E, and Stable Diffusion",
+     "frag_start": "The Board on Conduct Affairs (BCA)",
+     "frag_end": "and Stable Diffusion",
+     "policy": null,
+     "actor": "all", "phase": "general", "modality": "informs",
+     "policy_type": "P61", "unit_stance": "neutral",
+     "fit_note": "Scope is defined only by named examples, including image generators, not by a formal definition.",
+     "topics": ["default-stance"]
+    },
+    {
+     "why": "\"Absent a clear statement from a course instructor\" opens the fallback default for when the instructor says nothing, so P06 is the right type. The content of the fallback (analogy to another person) is coded separately as P45.",
+     "anchor": "Absent a clear statement from a course instructor",
+     "frag_start": "Absent a clear statement from",
+     "frag_end": "assistance from another person.",
+     "policy": "When a course instructor gives no clear statement on generative AI, the default rule applies: use of or consultation with generative AI is treated analogously to assistance from another person.",
+     "actor": "student", "phase": "course-start", "modality": "informs",
+     "policy_type": "P06", "unit_stance": "restrict",
+     "topics": ["default-stance", "syllabus-communication"]
+    },
+    {
+     "why": "\"shall be treated analogously to assistance from another person\" says AI is handled under the rules that govern help from a person. That is P45; the fallback framing of the same sentence is P06 above.",
+     "anchor": "generative AI shall be treated analogously to assistance from another person",
+     "frag_start": "Absent a clear statement from",
+     "frag_end": "assistance from another person.",
+     "policy": null,
+     "actor": "student", "phase": "general", "modality": "must",
+     "policy_type": "P45", "unit_stance": "neutral",
+     "topics": ["collaboration-analogy", "default-stance"]
+    },
+    {
+     "why": "\"using generative AI tools to substantially complete an assignment or exam ... is not permitted\" bans having AI produce the work submitted. P19 fits; it also names exams, but the core is producing the work, so not P22. The ban is limited to substantial completion.",
+     "anchor": "using generative AI tools to substantially complete an assignment or exam",
+     "frag_start": "In particular, using generative AI tools",
+     "frag_end": "is not permitted.",
+     "policy": "Using generative AI tools to substantially complete an assignment or exam is not permitted.",
+     "actor": "student", "phase": "during-work", "modality": "must-not",
+     "policy_type": "P19", "unit_stance": "prohibit",
+     "fit_note": "Bans only substantial completion, not all use; also names exams.",
+     "topics": ["prohibited-uses", "code-generation"]
+    },
+    {
+     "why": "The parenthetical \"e.g. by entering exam or assignment questions\" gives a named example of prohibited use: putting questions into an AI tool. P20 (do not feed assignment specs to AI) matches.",
+     "anchor": "by entering exam or assignment questions",
+     "frag_start": "(e.g. by entering exam or",
+     "frag_end": "or assignment questions)",
+     "policy": "Entering exam or assignment questions into a generative AI tool is an example of using it to substantially complete an assignment or exam, which is not permitted.",
+     "actor": "student", "phase": "during-work", "modality": "must-not",
+     "policy_type": "P20", "unit_stance": "prohibit",
+     "topics": ["prohibited-uses"]
+    },
+    {
+     "why": "\"Students should acknowledge the use of generative AI\" asks for acknowledgment of AI use in submitted work, so P24; the modality is should, not must.",
+     "anchor": "Students should acknowledge the use of generative AI",
+     "frag_start": "Students should acknowledge the use",
+     "frag_end": "when in doubt.",
+     "policy": "Students should acknowledge the use of generative AI, other than incidental use.",
+     "actor": "student", "phase": "during-work", "modality": "should",
+     "policy_type": "P24", "unit_stance": "permit",
+     "topics": ["disclosure-citation"]
+    },
+    {
+     "why": "\"(other than incidental use)\" exempts incidental use from acknowledgment, so minor AI use does not need disclosure. P100 (exempt routine features) is nearest; it does not name spell-check or similar features, hence the fit note.",
+     "anchor": "(other than incidental use)",
+     "frag_start": "Students should acknowledge the use",
+     "frag_end": "when in doubt.",
+     "policy": "Incidental use of generative AI does not need to be acknowledged.",
+     "actor": "student", "phase": "during-work", "modality": "informs",
+     "policy_type": "P100", "unit_stance": "permit",
+     "fit_note": "Exempts 'incidental use' generally rather than named routine features such as spell-check.",
+     "topics": ["disclosure-citation"]
+    },
+    {
+     "why": "\"default to disclosing such assistance when in doubt\" tells students to err toward disclosure when unsure. It is a disclosure rule (P24) with a doubt tiebreaker, which the type does not capture, so a fit note. P10 (ask before using) is about permission, not disclosure.",
+     "anchor": "default to disclosing such assistance when in doubt",
+     "frag_start": "and default to disclosing such",
+     "frag_end": "when in doubt.",
+     "policy": null,
+     "actor": "student", "phase": "during-work", "modality": "should",
+     "policy_type": "P24", "unit_stance": "permit",
+     "fit_note": "Adds a tiebreaker: disclose when unsure whether acknowledgment is required.",
+     "topics": ["disclosure-citation"]
+    },
+    {
+     "why": "\"Individual course instructors are free to set their own policies ... including allowing or disallowing some or all uses\" hands the decision to instructors, which is P04.",
+     "anchor": "Individual course instructors are free to set their own policies regulating the use",
+     "frag_start": "Individual course instructors are free",
+     "frag_end": "some or all uses of such tools.",
+     "policy": "Individual course instructors are free to set their own policies regulating the use of generative AI tools in their courses, including allowing or disallowing some or all uses of such tools.",
+     "actor": "instructor", "phase": "before-course", "modality": "may",
+     "policy_type": "P04", "unit_stance": "neutral",
+     "topics": ["instructor-discretion"]
+    },
+    {
+     "why": "\"Course instructors should set such policies in their course syllabi and clearly communicate such policies to students\" tells instructors to put AI rules in the syllabus: P09.",
+     "anchor": "Course instructors should set such policies in their course syllabi",
+     "frag_start": "Course instructors should set such",
+     "frag_end": "communicate such policies to students.",
+     "policy": "Course instructors should set their generative AI policies in their course syllabi and clearly communicate them to students.",
+     "actor": "instructor", "phase": "course-start", "modality": "should",
+     "policy_type": "P09", "unit_stance": "neutral",
+     "topics": ["syllabus-communication"]
+    },
+    {
+     "why": "\"Students who are unsure of policies regarding generative AI tools are encouraged to ask their instructors for clarification\" is the ask-when-unsure rule, P10.",
+     "anchor": "Students who are unsure of policies regarding generative AI tools are encouraged to ask",
+     "frag_start": "Students who are unsure of policies",
+     "frag_end": "instructors for clarification.",
+     "policy": null,
+     "actor": "student", "phase": "course-start", "modality": "should",
+     "policy_type": "P10", "unit_stance": "neutral",
+     "topics": ["syllabus-communication"]
+    },
+    {
+     "why": "\"OCS recommends course instructors provide clear advance notice that they may use detection software\" is about telling students that detectors may be used. It concerns detection tools (P40), but the unit is the advance-notice duty, so a fit note.",
+     "anchor": "provide clear advance notice that they may use detection software",
+     "frag_start": "As part of the BCA's guidance",
+     "frag_end": "submitted for use of generative AI.",
+     "policy": "OCS recommends that course instructors provide clear advance notice that they may use detection software to review submitted work for use of generative AI.",
+     "actor": "instructor", "phase": "course-start", "modality": "should",
+     "policy_type": "P40", "unit_stance": "permit",
+     "fit_note": "Concerns advance notice to students that detection software may be used, not the use of the tool itself.",
+     "topics": ["detection-tools", "syllabus-communication"]
+    },
+    {
+     "why": "\"The BCA will continue to monitor developments in these tools ... and may update this guidance\" says the guidance is provisional and will be revisited: P54.",
+     "anchor": "The BCA will continue to monitor developments in these tools",
+     "frag_start": "The BCA will continue to monitor",
+     "frag_end": "may update this guidance.",
+     "policy": "The BCA will continue to monitor developments in generative AI tools and their use in academic settings and may update this guidance.",
+     "actor": "admin", "phase": "over-time", "modality": "informs",
+     "policy_type": "P54", "unit_stance": "neutral",
+     "topics": ["policy-evolution"]
+    },
+    {
+     "why": "\"Members of the community are encouraged to contact the BCA to provide input, suggestions, and comments\" invites feedback on the policy, which P54 covers (\"feedback is invited\").",
+     "anchor": "encouraged to contact the BCA to provide input, suggestions, and comments",
+     "frag_start": "Members of the community are encouraged",
+     "frag_end": "comments on this policy.",
+     "policy": null,
+     "actor": "all", "phase": "over-time", "modality": "should",
+     "policy_type": "P54", "unit_stance": "neutral",
+     "topics": ["policy-evolution"]
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Only the Generative AI Policy Guidance section of the OCS page was coded; the rest of the saved page (hearing panels, proctoring, penalty code, enrollment holds) does not concern AI. The proctoring guidance bans remote proctoring but never mentions AI. The 'if you are in doubt ... talk with the instructor' line near the top repeats the later ask-the-instructor sentence and was coded once."
+}

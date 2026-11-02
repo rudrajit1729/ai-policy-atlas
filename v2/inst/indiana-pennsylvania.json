@@ -1,0 +1,130 @@
+{
+ "university": "Indiana University of Pennsylvania",
+ "slug": "indiana-pennsylvania",
+ "state": "PA",
+ "type": "R2",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "indiana-pennsylvania-integrity-violations",
+   "layer": "university",
+   "unit": "Academic Affairs (Academic Integrity)",
+   "course": null,
+   "title": "Types of Violations (Academic Integrity Policy, incl. AI-Generated Work)",
+   "url": "https://www.iup.edu/academicaffairs/for-faculty/academic-integrity/types-of-violations.html",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance": "restrict",
+   "tiers": [],
+   "summary": "IUP's academic integrity page defines violation types; its only AI content is that plagiarism covers AI-generated sources and that AI-generated work is unacceptable unless the instructor or administrator authorizes it.",
+   "stance_why": "The document says AI-generated work \"is not acceptable, unless authorized specifically by the instructor/administrator\", a ban by default with permission possible, which is restrict rather than delegates.",
+   "units": [
+    {
+     "why": "The plagiarism definition says it \"applies to any type of source, whether published or unpublished, human or AI-generated\". It sets the scope of an existing rule to cover AI output as an outside source; it imposes no sanction, so P45 fits and P36 does not.",
+     "resolution_why": "Coder A coded P36, when-misuse, must-not; coder B coded P45, general, informs. The source sentence only extends the definition of plagiarism to AI-generated sources and names no consequence, so B's P45/general/informs follows. Policy normalized to match the sentence.",
+     "anchor": "whether published or unpublished, human or AI-generated",
+     "frag_start": "Plagiarism applies to any type",
+     "frag_end": "written, verbal, or otherwise",
+     "policy": "Plagiarism applies to any type of source, including AI-generated sources.",
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P45",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions",
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "The policy requires that any work containing \"the words, ideas, data, or creative works of another must include complete, accurate, and specific references\"; since plagiarism covers AI-generated sources, this is a citation duty (P24), not P25 because no tool, prompt or date is named.",
+     "resolution_why": "Both coders chose P24, student, during-work, must. They differed only on policy wording: A null, B normalized. The anchor omits the AI link, which comes from the preceding sentence, so a normalized policy is kept; the final wording stays within the source text.",
+     "anchor": "must include complete, accurate, and specific references",
+     "frag_start": "Any assignment submitted by a student",
+     "frag_end": "accurate, and specific references",
+     "policy": "Any assignment submitted by a student that includes the words, ideas, data, or creative works of another must include complete, accurate, and specific references; plagiarism applies to AI-generated sources.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "\"AI-generated work ... is not acceptable, unless authorized specifically by the instructor/administrator\" sets a default ban absent explicit permission, which is the fallback rule (P06); the instructor authority is coded separately as P04.",
+     "resolution_why": "Both coders chose P06, student, must-not. They differed on phase (A during-work, B general) and on policy wording (A normalized, B null). The sentence bars students' submitted work, which is work done during assignments, so during-work. The anchor lacks its subject, so a normalized policy is kept.",
+     "anchor": "is not acceptable, unless authorized specifically by the instructor/administrator",
+     "frag_start": "AI-generated work is not reflective",
+     "frag_end": "by the instructor/administrator",
+     "policy": "AI-generated work is not acceptable unless authorized specifically by the instructor/administrator.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P06",
+     "unit_stance": "restrict",
+     "topics": [
+      "default-stance",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "The same sentence makes the instructor or administrator the authority who may authorize AI-generated work, so permission is decided per instructor rather than by one university rule (P04).",
+     "resolution_why": "Found only by coder A; B folded it into the P06 unit. Re-reading the source, the clause \"unless authorized specifically by the instructor/administrator\" does state a separate fact, that authorization rests with the instructor or administrator, so the unit is kept as P04. Policy wording kept close to the source.",
+     "anchor": "unless authorized specifically by the instructor/administrator",
+     "frag_start": "AI-generated work is not reflective",
+     "frag_end": "by the instructor/administrator",
+     "policy": "Whether AI-generated work is acceptable depends on specific authorization by the instructor/administrator.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P04",
+     "unit_stance": "permit",
+     "topics": [
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "The policy gives its reason: AI-generated work \"is not reflective of a student’s own understanding and effort\". Submitted work must reflect the student's own understanding, so P29; P41 would need a claim that practice builds skill, which the passage does not make.",
+     "resolution_why": "Both coders coded a rationale (informs, neutral, general). A chose P29, B chose P41. The source speaks of work reflecting the student's own understanding and effort, not of practice building skill, so P29 follows.",
+     "anchor": "not reflective of a student’s own understanding and effort",
+     "frag_start": "AI-generated work is not reflective",
+     "frag_end": "by the instructor/administrator",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P29",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale",
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "The page lists AI-Generated Work among the categories of violations of \"IUP’s standards of academic integrity\", classing unauthorized AI use as academic misconduct (P36).",
+     "resolution_why": "Both coders chose P36, when-misuse, informs. A coded actor all with anchor on the page intro, B coded actor student. The listed violation binds students, so student. Policy wording follows B and stays within the source.",
+     "anchor": "Violations of IUP’s standards of academic integrity include",
+     "frag_start": "Violations of IUP’s standards of academic",
+     "frag_end": "broadly defined categories",
+     "policy": "AI-Generated Work is one of the categories of violations of IUP's standards of academic integrity.",
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Thin source: one AI sentence plus the AI mention in the plagiarism definition. Reconciled from coders A and B."
+}

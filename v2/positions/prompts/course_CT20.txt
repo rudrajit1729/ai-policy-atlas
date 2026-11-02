@@ -1,0 +1,59 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT20 "AI in the editor (autocomplete, Copilot, IDE assistants)" (Rules on AI built into editors and IDEs: disable code completion, Copilot or AI extensions, or allow them.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..34 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | brown | C5 | student | must-not | no AI autocomplete coding tools | The use of ***autocomplete*** tools, such as GitHub Copilot or any other AI-assisted coding tools, **is strictly prohibited.**
+1 | california-berkeley | C2 | student | must | browser chatbots only | this interaction must take place exclusively through browser-based chatbots
+2 | carleton-college | C1 | student | should-not | avoid coding assistants | You should refrain from using coding tools such as GitHub Copilot to help with your code
+3 | carnegie-mellon | C1 | student | must | disable AI extensions | We require that you disable AI extensions from your programming environment
+4 | carnegie-mellon | C3 | student | must | disable code completion tools | AI-editing and code completion tools such as GitHub CoPilot must be turned off and avoided
+5 | colby-college | C2 | student | must-not | code completion tools banned | The use of AI code completion tools, such as GitHub Copilot or other similar platforms, is completely prohibited
+6 | drexel | C1 | student | must | disable IDE code completion | disable any code completion features in their IDE.
+7 | drexel | C2 | student | must | disable IDE code completion | Students must disable any code completion features in their IDE.
+8 | duke | C2 | student | should-not | disable Copilot | not install, or disable CoPilot
+9 | duke | C2 | all | informs | reason: Copilot autocompletes solutions | CoPilot can almost fully autocomplete code when you start typing.
+10 | duke | C6 | student | should | disable code suggestion tools | these tools should be disabled (if installed) when completing work for this course.
+11 | george-mason | C6 | student | must-not | AI-enabled IDEs prohibited | The use of AI-enhanced IDEs, such as VisualStudio Code, Cursor, Augment, Aider, Windsurf, Cline
+12 | george-mason | C6 | student | may | IDE ok with AI disabled | You can disable AI features in IDEs and then use those IDEs without any issues.
+13 | georgia-tech | C6 | student | should-not | avoid AI built into editor | you should avoid using tools that directly add
+14 | harvey-mudd-college | C5 | student | may | Colab AI suggestions allowed | make use of this feature if you wish (unless otherwise specified)
+15 | harvey-mudd-college | C6 | student | must | know if AI completion is on | It is your responsibility to ensure that you can tell whether AI code completions are enabled or not
+16 | harvey-mudd-college | C6 | student | must-not | no AI autocomplete | This prohibition includes using coding assistants like GitHub Copilot to “autocomplete” code.
+17 | harvey-mudd-college | C6 | student | must | disable AI code completion | and ensure that they are
+18 | james-madison | C6 | student | must | show Copilot code is own work | You must be especially careful if you are using the Copilo t plugin for VS
+19 | massachusetts-institute-technology | C2 | student | must-not | AI-produced code counts like others' code | and to code produced by advanced code-completion tools (e.g., Cursor, GitHub Copilot)
+20 | massachusetts-institute-technology | C2 | student | must | must disable editor AI features | if your editor does this, it is your responsibility to disable those features.
+21 | north-carolina-state | C2 | student | must-not | no AI integrated in workspace | Although you are prohibited from having AI tools directly integrated into your workspace or from copying content from these AI assistants directly into your submission,
+22 | pomona | C2 | student | should | write own code without AI tools | You should be writing all of your code on your own without any additional tools beyond VS Code (without AI tools installed).
+23 | rose-hulman-institute-technology | C1 | student | may | IDE autocomplete ok, AI assistant not | out-of-the-box auto-completion is fine (just not its optional
+24 | rose-hulman-institute-technology | C6 | student | must-not | Copilot-style plugins also banned | generative AI to complete code fragments (mainly GitHub Copilot) also fall under
+25 | southern-california | C1 | student | must-not | editor AI extensions count as AI | Use of AI-generated work applies to extensions and other add-ins to apps
+26 | stony-brook | C4 | student | should | use AI assistants productively | Use AI coding assistants (autocomplete and agentic tools) productively and responsibly,
+27 | swarthmore-college | C5 | student | must | disable AI tools in IDE | any generative AI tools in your development environment.
+28 | texas-austin | C2 | student | must-not | no AI coding assistants in IDE | You may NOT use an AI coding assistant in the
+29 | uiuc | C2 | student | must-not | no inline completion tools like Copilot | that cannot produce a transcript, e.g., GitHub Copilot, may not be
+30 | vermont | C5 | student | should | turn autocomplete off recommended | recommend turning it off.
+31 | vermont | C5 | student | informs | autocomplete advice not binding | That said, this is only a recommendation.
+32 | wellesley-college | C1 | student | must | only course IDEs, no AI extensions | We ask that you only use the IDEs that we have asked you: Thonny and Jupyter,
+33 | wellesley-college | C6 | student | must | no AI extensions in IDEs | use in this course that you do not use extensions that involve AI assistance.
+34 | williams-college | C2 | student | must | disable built-in LLM | students are using a code environment with a built-in LLM, it should be turned off.

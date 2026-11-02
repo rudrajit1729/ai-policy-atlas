@@ -1,0 +1,16 @@
+{
+ "documents": 5,
+ "units_A": 213,
+ "units_B": 193,
+ "matched": 182,
+ "only_A": 31,
+ "only_B": 11,
+ "kept_only_A": 31,
+ "kept_only_B": 11,
+ "agree_actor": 0.929,
+ "agree_phase": 0.89,
+ "agree_modality": 0.918,
+ "agree_policy_type": 0.956,
+ "agree_stance_docs": 0.8,
+ "notes": "Alignment by overlapping anchors or sentence spans, then hand-checked; a greedy first pass mis-paired some CTE units, so pairing was redone on sentence overlap, with two forced merges (GenAI Guidelines definition of AI; syllabus P31 verify-output sentences) and one unpair (English advice sentence, coded P70 by A and P53 by B, kept as two units). Main disagreements: phase of the ask-when-unsure rule (P10) and of informs statements (resolved to during-work and general); actor all versus a named role (resolved by whether the sentence addresses one role); unit_stance on disclosure duties (A used require, B permit; require is reserved for AI use itself being required, so mostly permit, neutral where the unit takes no position on AI use); near-miss types (P63/P70, P82/P02, P19/P32, UNCOVERED/P102, and a P24/P19 sentence split into two units). Units found by only one coder (A 31, mostly split allowed-use lists and sample-syllabus sentences; B 11) were re-read against the source and all kept as real policy statements. Document stance differed once (GenAI Guidelines: A permit, B delegates; final permit), so stance agreement is 4 of 5 documents. One extra unit came from splitting a two-rule sentence, so the final file has 225 units."
+}

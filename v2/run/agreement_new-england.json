@@ -1,0 +1,16 @@
+{
+ "documents": 3,
+ "units_A": 193,
+ "units_B": 194,
+ "matched": 173,
+ "only_A": 20,
+ "only_B": 21,
+ "kept_only_A": 19,
+ "kept_only_B": 21,
+ "agree_actor": 0.931,
+ "agree_phase": 0.809,
+ "agree_modality": 0.832,
+ "agree_policy_type": 0.861,
+ "agree_stance_docs": 1.0,
+ "notes": "Main disagreements: (1) modality for 'expected to' statements (A used must, B should; resolved to should when the source says expected, must when it says must); (2) unit_stance for disclosure, documentation, evidence and detector-procedure units (A often require/prohibit, B neutral; resolved to neutral because the unit does not itself permit, restrict or require AI use); (3) phase for rationale and general statements (resolved by whether the passage is tied to a course step); (4) policy_type for close pairs: P83 vs P04/P35, P37 vs P36, P40 vs P47 for detector notice, P39 vs P53 for detector bias, P09 vs P66 for clarity, P65 vs P50, P18 vs P100, P31 vs P53 where A merged accuracy and bias into one unit, P88 vs UNCOVERED for internal sharing (resolved to UNCOVERED), P56 vs P87 for the intro aims (both kept); (5) actor for instructor options and procedural statements; (6) granularity: A sometimes merged a list into one unit (generating ideas / refining writing / understanding concepts; the privacy sentence) or the fallback-plus-ask sentence, and these were split so each unit has one rule. Only-one-coder units were checked against the source: all kept except one A-only checklist restatement, dropped as an exact repeat. Counts: matched includes 1 pair realigned by hand (enterprise-tool definition). Some matched pairs cover two distinct clauses of a sentence and both clauses were kept (A0/B29 institutional, A2/B7 and A70/B73 faculty, A4/B4 student), so the final unit count exceeds matched plus kept-only by those extras plus one split unit."
+}

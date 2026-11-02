@@ -1,0 +1,764 @@
+{
+ "university": "University of Arkansas at Little Rock",
+ "slug": "arkansas-little-rock",
+ "state": "AR",
+ "type": "R2",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "arkansas-little-rock-faculty-resources",
+   "layer": "university",
+   "unit": "Office of the Executive Vice Chancellor and Provost",
+   "course": null,
+   "title": "Resources for Faculty on Student Use of AI",
+   "url": "https://ualr.edu/provost/artificial-intelligence/resources-for-faculty-on-student-use-of-ai/",
+   "date_or_term": "not dated on page",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "Provost guidance for faculty on stating AI expectations, recognizing signs of AI use, using detectors only as one input, and reporting suspected misuse through integrity procedures. It leaves the actual AI rule to each instructor.",
+   "stance_why": "The page tells faculty to 'explicitly state your policies on AI tools' and to give 'specific examples of acceptable and unacceptable uses', so the rule is set by each instructor in the syllabus; the page itself sets no ban or permission, hence delegates.",
+   "units": [
+    {
+     "why": "Faculty are told to \"explicitly state your policies on AI tools\" at course start; this is a duty to communicate expectations, so P09 (statement in the syllabus/course) rather than P04, since the rule is about stating, not about who decides.",
+     "anchor": "At the beginning of each course, explicitly state your policies on AI tools",
+     "frag_start": "At the beginning of each",
+     "frag_end": "writing assistants.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "resolution_why": "Coder A: must; coder B: should. Both: instructor, course-start, P09. The page is provost guidance (resource page, no enforcement language), and the sentence is advice to faculty to 'explicitly state your policies on AI tools'; the binding syllabus duty is in LR 404.8, coded separately. Final: should, P09, anchor kept from B because it includes 'At the beginning of each course'."
+    },
+    {
+     "why": "'Include these guidelines in your syllabus' tells instructors where the AI policy goes, so P09 (AI statement in syllabus), addressed to instructors at course start.",
+     "anchor": "Include these guidelines in your syllabus",
+     "frag_start": "Include these guidelines in your",
+     "frag_end": "emphasize their importance.",
+     "policy": "Instructors include their AI guidelines in the syllabus.",
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "resolution_why": "Coder A: must; coder B: should. Same passage and type (P09). 'Include these guidelines in your syllabus' is guidance on a resource page, not a binding rule of this document, so should, consistent with the neighbouring unit."
+    },
+    {
+     "why": "'discuss them in class to emphasize their importance' asks instructors to talk through the rules beyond listing them, which is P66 rather than P09.",
+     "anchor": "discuss them in class to emphasize their importance",
+     "frag_start": "Include these guidelines in your",
+     "frag_end": "emphasize their importance.",
+     "policy": "Instructors discuss their AI guidelines in class to emphasize their importance.",
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P66",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "'providing specific examples of acceptable and unacceptable uses' advises concrete examples so students avoid 'unintentional violations'; this is explaining rules beyond the bare statement (P66).",
+     "anchor": "specific examples of acceptable and unacceptable uses of AI",
+     "frag_start": "By providing specific examples",
+     "frag_end": "unintentional violations of academic integrity.",
+     "policy": "Instructors provide specific examples of acceptable and unacceptable uses of AI to help students avoid unintentional violations of academic integrity.",
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P66",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "permitted-uses"
+     ]
+    },
+    {
+     "why": "The page says 'Detecting the use of AI in student work can be challenging', acknowledging limits on verification, so P82 (informs).",
+     "anchor": "Detecting the use of AI in student work can be challenging",
+     "frag_start": "Detecting the use of AI",
+     "frag_end": "may suggest AI involvement.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P82",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ],
+     "resolution_why": "Coder A: phase when-misuse; coder B: general. Both: P82, informs, instructor. The sentence opens the 'Recognizing Signs of AI Use' section and is about detection, which the codebook places in when-misuse (suspicion, detection). The anchor alone states the fact, so policy is null."
+    },
+    {
+     "why": "The list of signs ('unusual consistency in tone or style', 'overly generic or repetitive phrases') names kinds of evidence to weigh when judging AI misuse, which is P69; it is not P40 because no tool is involved.",
+     "anchor": "Look for unusual consistency in tone or style",
+     "frag_start": "Look for unusual consistency",
+     "frag_end": "expected from human authors.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P69",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools",
+      "integrity-sanctions"
+     ],
+     "fit_note": "Lists indicators of AI use (generic phrasing, lack of analysis, too-advanced work) rather than a standard of proof. Also states the kinds of evidence to weigh (style, generic phrasing, unexplained errors) but no standard of proof."
+    },
+    {
+     "why": "'Platforms like Turnitin now offer AI-detection features' presents detectors as available tools to identify AI content, so P40 (detectors used to identify misuse).",
+     "anchor": "Platforms like Turnitin now offer AI-detection features that can flag sections of text",
+     "frag_start": "Platforms like Turnitin now",
+     "frag_end": "generated by AI.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P40",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ],
+     "resolution_why": "Coder A: unit_stance neutral; coder B: permit. Same actor, phase, modality (may) and type (P40). The sentence says Turnitin 'offer[s] AI-detection features that can flag sections of text'; it describes a detection tool and takes no position on AI use itself, so neutral."
+    },
+    {
+     "why": "Grammarly is named as a plagiarism and AI-detection tool, a listed means of identifying misuse, so P40.",
+     "anchor": "Grammarly and other writing assistants with plagiarism detection capabilities may also indicate potential AI use",
+     "frag_start": "Grammarly and other writing assistants",
+     "frag_end": "indicate potential AI use.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P40",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ],
+     "resolution_why": "Coder A found the Grammarly sentence in the 'Using Detection Tools' paragraph; coder B found the 'Plagiarism Detection Tools' list entry ('Grammarly - A tool that not only checks grammar but also provides AI-generated content detection'). Same rule (Grammarly named as a detector), two passages in one page; treated as a match and the paragraph version kept as the fuller one. Both P40, may. unit_stance neutral (B: permit) because it names a tool and takes no position on AI use."
+    },
+    {
+     "why": "'use these tools as part of a broader assessment rather than relying on them exclusively' says detector output is supporting evidence only, matching the broadened P69 (not P39, which says detectors are unreliable or not used).",
+     "anchor": "use these tools as part of a broader assessment rather than relying on them exclusively",
+     "frag_start": "However, it",
+     "frag_end": "work to make a well-informed decision.",
+     "policy": "Detection tools are used as part of a broader assessment, not relied on exclusively, and combined with the instructor's judgment and knowledge of students' work.",
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P69",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ],
+     "resolution_why": "Coder A: unit_stance neutral; coder B: restrict. Same type (P69) and modality. The sentence limits reliance on detector output ('rather than relying on them exclusively'); it constrains detectors, not AI use, so neutral."
+    },
+    {
+     "why": "'Begin by discussing your concerns with the student' tells instructors to talk with the student before reporting, i.e. P57.",
+     "anchor": "Begin by discussing your concerns with the student",
+     "frag_start": "Begin by discussing your concerns",
+     "frag_end": "process and intentions.",
+     "policy": "Instructors begin by discussing their concerns with the student when they suspect improper AI use.",
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P57",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "'giving them an opportunity to explain their process and intentions' gives the accused student a chance to respond, so P64 (right to respond).",
+     "anchor": "giving them an opportunity to explain their process and intentions",
+     "frag_start": "Begin by discussing your concerns",
+     "frag_end": "process and intentions.",
+     "policy": "Students suspected of improper AI use are given an opportunity to explain their process and intentions.",
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P64",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "'follow your institution's procedures for addressing academic integrity violations' sends suspected AI misuse into the formal procedure, so P81 (procedural steps) over P36 because it is about process rather than classifying misuse.",
+     "anchor": "follow your institution’s procedures for addressing academic integrity violations",
+     "frag_start": "If you suspect a student has",
+     "frag_end": "integrity violations.",
+     "policy": "Instructors who suspect improper AI use follow the institution's procedures for addressing academic integrity violations.",
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P81",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "resolution_why": "Coder A: P81, must; coder B: P36, should. The sentence tells instructors who suspect improper AI use to 'follow your institution's procedures for addressing academic integrity violations'. It sends the case into the formal procedure (a process step, P81) rather than classifying the conduct as misconduct (P36, which is covered by LR 501.13). Modality should because this page is advisory guidance."
+    },
+    {
+     "why": "'report the incident to the appropriate academic integrity office or committee, providing documentation' is a reporting step with required documentation, so P81.",
+     "anchor": "report the incident to the appropriate academic integrity office or committee",
+     "frag_start": "If necessary, report the incident",
+     "frag_end": "evidence from detection tools.",
+     "policy": "If necessary, instructors report the incident to the appropriate academic integrity office or committee, providing documentation of their findings and any relevant evidence from detection tools.",
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P81",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions",
+      "detection-tools"
+     ]
+    },
+    {
+     "why": "'clearly explain how the student’s use of AI violated your course policies' is a content requirement of the report and ties the case to the instructor's own stated policy, so P81.",
+     "anchor": "clearly explain how the student’s use of AI violated your course policies",
+     "frag_start": "In your report, clearly explain",
+     "frag_end": "violated your course policies.",
+     "policy": "In the report, instructors clearly explain how the student's use of AI violated their course policies.",
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P81",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "'Maintaining transparency and fairness throughout this process is essential' states a fairness principle for AI-misuse cases, closest to P64 (fairness and transparency in AI-related integrity cases).",
+     "anchor": "Maintaining transparency and fairness throughout this process is essential",
+     "frag_start": "Maintaining transparency and fairness",
+     "frag_end": "misusing AI in their academic work.",
+     "policy": "Maintaining transparency and fairness throughout the process of addressing AI misuse is essential to uphold academic standards.",
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P64",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "fit_note": "States a general fairness and transparency principle rather than a student right to respond."
+    },
+    {
+     "why": "States the purpose of the page: support faculty so \"students and instructors can leverage these technologies responsibly and effectively\". A scope and purpose statement, P56.",
+     "anchor": "support faculty in navigating the complex landscape of AI and LLMs in academia",
+     "frag_start": "These resources are intended",
+     "frag_end": "responsibly and effectively.",
+     "policy": "The resources are intended to support faculty in navigating AI and LLMs in academia so that students and instructors can leverage these technologies responsibly and effectively.",
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "governance"
+     ],
+     "fit_note": "Purpose statement for a resource page, not a full institution-wide framework.",
+     "resolution_why": "Coder A: unit_stance encourage; coder B: neutral. Both P56, admin, general, informs; anchors are two spans of the same closing sentence. The sentence states the purpose of the resources ('support faculty in navigating the complex landscape of AI and LLMs'); 'leverage ... responsibly and effectively' is aspirational wording, not an encouragement of AI use, so neutral. Anchor from B (names the purpose), policy wording from A."
+    },
+    {
+     "why": "Gives the reason for clear expectations: \"crucial for maintaining academic integrity\". The rationale is integrity, not skill-building, so P95 rather than P41.",
+     "anchor": "crucial for maintaining academic integrity",
+     "frag_start": "Setting clear expectations about",
+     "frag_end": "appropriate AI use.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P95",
+     "unit_stance": "neutral",
+     "topics": [
+      "academic-integrity",
+      "learning-rationale"
+     ],
+     "resolution_why": "Only coder B coded this. The source sentence says 'Setting clear expectations about the use of AI in your classroom is crucial for maintaining academic integrity'. This is a real statement of rationale for the P09/P66 guidance, so kept. P95 (ground AI limits in academic honesty) fits; informs, general."
+    }
+   ]
+  },
+  {
+   "id": "arkansas-little-rock-purpose-statement",
+   "layer": "university",
+   "unit": "Office of the Executive Vice Chancellor and Provost",
+   "course": null,
+   "title": "Purpose Statement on Artificial Intelligence",
+   "url": "https://ualr.edu/provost/artificial-intelligence/purpose-statement-on-artificial-intelligence/",
+   "date_or_term": "not dated on page",
+   "stance": "encourage",
+   "tiers": [],
+   "summary": "A university-wide principles statement presenting AI as an opportunity for teaching, research and administration, naming risks (privacy, bias, misuse), and listing goals including AI literacy. It sets no rules for coursework.",
+   "stance_why": "The statement sets out to 'foster a culture of technological proficiency' and to 'Encourage the development of AI literacy and skills' while 'safeguarding against its risks'; it welcomes responsible AI use but sets no student-level rules, so encourage rather than delegates.",
+   "units": [
+    {
+     "why": "'establish a comprehensive framework for the responsible use of Artificial Intelligence' states the scope and purpose for faculty, staff and students, so P56.",
+     "anchor": "establish a comprehensive framework for the responsible use of Artificial Intelligence",
+     "frag_start": "The purpose of this information is to",
+     "frag_end": "at the University of Arkansas at Little Rock.",
+     "policy": "The purpose is to establish a comprehensive framework for the responsible use of AI among faculty, staff, and students.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "governance"
+     ],
+     "resolution_why": "Coder A: unit_stance encourage; coder B: neutral. Both P56, all, general, informs. The sentence states the purpose of the page ('establish a comprehensive framework for the responsible use of AI'), a scope statement with no position on AI use, so neutral."
+    },
+    {
+     "why": "'enhance learning experiences through personalized education, streamline administrative tasks, and drive innovative research' lists benefits of AI, so P87 rather than a rule.",
+     "anchor": "It can enhance learning experiences through personalized education",
+     "frag_start": "AI and machine learning (ML) has the potential",
+     "frag_end": "innovative research across disciplines.",
+     "policy": "AI and ML can enhance learning experiences through personalized education, streamline administrative tasks, and drive innovative research across disciplines.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P87",
+     "unit_stance": "encourage",
+     "topics": [
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "'preparing our community for future careers and societal contributions' gives career readiness as the reason for integrating AI, which is P44.",
+     "anchor": "preparing our community for future careers and societal contributions",
+     "frag_start": "By integrating AI responsibly",
+     "frag_end": "societal contributions.",
+     "policy": "By integrating AI responsibly, the university aims to foster a culture of technological proficiency, creativity, and critical thinking, preparing the community for future careers and societal contributions.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P44",
+     "unit_stance": "encourage",
+     "topics": [
+      "ai-literacy-career",
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "'data privacy, algorithmic bias, and the potential for misuse require careful consideration' names ethical risks, so P53; privacy is also mentioned but bias is the main ethical concern named.",
+     "anchor": "Issues such as data privacy, algorithmic bias, and the potential for misuse require careful consideration",
+     "frag_start": "Alongside these opportunities",
+     "frag_end": "proactive management.",
+     "policy": "Issues such as data privacy, algorithmic bias, and the potential for misuse require careful consideration and proactive management.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P53",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment",
+      "privacy-data"
+     ],
+     "fit_note": "Also names data privacy and misuse, not only bias, harms and environmental cost."
+    },
+    {
+     "why": "'ensure that AI applications align with our core values of equity, transparency, and accountability' sets principles for AI applications, so P56.",
+     "anchor": "ensure that AI applications align with our core values of equity, transparency, and accountability",
+     "frag_start": "It is imperative to ensure",
+     "frag_end": "transparency, and accountability.",
+     "policy": "AI applications must align with the university's core values of equity, transparency, and accountability.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment",
+      "equity-access"
+     ],
+     "resolution_why": "Coder A: must; coder B: should. Same type (P56). The source says 'It is imperative to ensure that AI applications align with our core values of equity, transparency, and accountability', which is stronger than a recommendation, so must. unit_stance neutral (a values principle, no position on use)."
+    },
+    {
+     "why": "'Promote the ethical and effective use of AI in teaching, research, and administration' is a stated goal covering all three domains, so P56.",
+     "anchor": "Promote the ethical and effective use of AI in teaching, research, and administration",
+     "frag_start": "Promote the ethical",
+     "frag_end": "research, and administration.",
+     "policy": "The information is designed to promote the ethical and effective use of AI in teaching, research, and administration.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P56",
+     "unit_stance": "encourage",
+     "topics": [
+      "governance",
+      "permitted-uses"
+     ],
+     "fit_note": "Also expresses a positive stance toward AI use, which P56 does not capture.",
+     "resolution_why": "Coder A: informs; coder B: should. Same type (P56) and unit_stance (encourage). The item sits in a list of goals introduced by 'The available information is designed to'; the other list goals are coded should, so this one follows for consistency. Fit note from B kept."
+    },
+    {
+     "why": "'Encourage the development of AI literacy and skills among all members' commits the university to AI literacy, matching P70.",
+     "anchor": "Encourage the development of AI literacy and skills among all members of our university community",
+     "frag_start": "Encourage the development of AI",
+     "frag_end": "university community.",
+     "policy": "The information is designed to encourage the development of AI literacy and skills among all members of the university community.",
+     "actor": "admin",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P70",
+     "unit_stance": "encourage",
+     "topics": [
+      "ai-literacy-career"
+     ],
+     "fit_note": "Goal to encourage AI literacy; no specific training or module is named."
+    },
+    {
+     "why": "'Ensure that AI technologies are deployed in a manner that upholds our commitment to diversity, equity, and inclusion' is an equity goal for AI deployment; no existing type covers deployment under DEI commitments (P51 is cost and access, P53 is harms).",
+     "anchor": "deployed in a manner that upholds our commitment to diversity, equity, and inclusion",
+     "frag_start": "Ensure that AI technologies",
+     "frag_end": "equity, and inclusion.",
+     "policy": "AI technologies are deployed in a manner that upholds the university's commitment to diversity, equity, and inclusion.",
+     "actor": "admin",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "equity-access",
+      "ethics-bias-environment"
+     ],
+     "uncovered_note": "AI deployment must uphold the institution's diversity, equity and inclusion commitments.",
+     "resolution_why": "Coder A: must; coder B: should. Both UNCOVERED, same wording of the gap. This is an item in the 'designed to' goal list ('Ensure that AI technologies are deployed in a manner that upholds our commitment to diversity, equity, and inclusion'), so should, in line with the other list goals. UNCOVERED stays: P51 is cost and access, P53 is harms; none covers AI deployment bound to DEI commitments."
+    },
+    {
+     "why": "\"Foster interdisciplinary collaboration in AI research and application\" is a goal for research collaboration; not a rule about teaching AI use, and P88 is for external partners, so UNCOVERED.",
+     "anchor": "Foster interdisciplinary collaboration in AI research and application",
+     "frag_start": "Foster interdisciplinary collaboration",
+     "frag_end": "and application.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "encourage",
+     "topics": [
+      "research-use"
+     ],
+     "uncovered_note": "The university aims to foster interdisciplinary collaboration in AI research and application.",
+     "resolution_why": "Coder A: modality informs, topic policy-evolution; coder B: should, topic research-use. Both UNCOVERED. A goal-list item ('Foster interdisciplinary collaboration in AI research and application'); should by the same list convention, and research-use is the closer topic. Not P88 (external partners). Anchor states the goal, so policy null."
+    },
+    {
+     "why": "'Provide a framework for addressing ethical, legal, and societal implications of AI' is a stated goal of the institution, addressed to the university (admin) as general scope. P56 (institution-wide framework) rather than P53 because it promises a framework and names no specific harms.",
+     "anchor": "Provide a framework for addressing ethical, legal, and societal implications of AI",
+     "frag_start": "Provide a framework for addressing",
+     "frag_end": "implications of AI.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment",
+      "governance"
+     ],
+     "fit_note": "States an aim to provide a framework for ethical, legal and societal implications rather than naming specific harms.",
+     "resolution_why": "Only coder B coded this (as P53 with a fit note). The goal 'Provide a framework for addressing ethical, legal, and societal implications of AI' is a real policy aim, kept. The unit names no specific harms, so P53 (name bias, harms, environmental costs) fits worse than P56 (set an institution-wide framework), which is what the sentence promises; retyped to P56 and B's note kept."
+    }
+   ]
+  },
+  {
+   "id": "arkansas-little-rock-student-resources",
+   "layer": "university",
+   "unit": "Office of the Executive Vice Chancellor and Provost",
+   "course": null,
+   "title": "Resources for Students on Use of AI",
+   "url": "https://ualr.edu/provost/artificial-intelligence/resources-for-students-on-use-of-ai/",
+   "date_or_term": "not dated on page",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "A short student resource page pointing to an ethics course, plagiarism and AI-detection tools, citation guidance and the Academic Offenses policy, and telling students to check each syllabus and ask instructors when unsure.",
+   "stance_why": "The page tells students to 'review your syllabus carefully for any specific guidelines your instructors have set', so AI rules are set by individual instructors and the page sets none itself.",
+   "units": [
+    {
+     "why": "'Review your syllabus carefully for any specific guidelines' makes students responsible for finding the course's AI rules, which is P78 rather than P10 (ask when unsure).",
+     "anchor": "Review your syllabus carefully for any specific guidelines your instructors have set regarding AI use",
+     "frag_start": "Understanding Course-Specific AI Policies",
+     "frag_end": "disclosing AI contributions.",
+     "policy": "Students review their syllabus carefully for any specific guidelines their instructors have set regarding AI use.",
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P78",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "'guidelines your instructors have set regarding AI use ... restrictions on AI assistance or requirements for disclosing' shows that individual instructors set AI rules, so P04.",
+     "anchor": "This could include restrictions on AI assistance or requirements for disclosing AI contributions",
+     "frag_start": "Review your syllabus carefully",
+     "frag_end": "disclosing AI contributions.",
+     "policy": "Instructors set course-specific guidelines on AI use, which may include restrictions on AI assistance or requirements for disclosing AI contributions.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "disclosure-citation"
+     ],
+     "resolution_why": "Coder A: instructor, before-course; coder B: student, course-start. Both P04, informs. The passage says what instructors' guidelines 'could include' ('restrictions on AI assistance or requirements for disclosing AI contributions'); the party that sets the rule is the instructor, so the actor is instructor and the phase is rule-setting before the course. The student-facing instruction to read the syllabus is the separate P78 unit."
+    },
+    {
+     "why": "'If you are unsure ... reach out to your professor for clarification and guidance' is the ask-first rule, P10.",
+     "anchor": "reach out to your professor for clarification and guidance",
+     "frag_start": "If you’re unsure about how to use",
+     "frag_end": "clarification and guidance.",
+     "policy": "Students who are unsure how to use AI tools in a course reach out to their professor for clarification and guidance.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P10",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "The page lists 'Kaggle: Intro to Ethics Free Online Course with Certificate of Completion' under 'Understanding Ethical AI Use / Online Learning Modules' for students. It is an optional training pointer (may) for students, so P70 with general phase; it is not a mandate.",
+     "anchor": "Kaggle: Intro to Ethics Free Online Course with Certificate of Completion",
+     "frag_start": "Kaggle: Intro to Ethics",
+     "frag_end": "Certificate of Completion",
+     "policy": "Students may take the Kaggle Intro to Ethics free online course with certificate of completion, listed as an online learning module under 'Understanding Ethical AI Use'.",
+     "actor": "student",
+     "phase": "general",
+     "modality": "may",
+     "policy_type": "P70",
+     "unit_stance": "neutral",
+     "topics": [
+      "ai-literacy-career",
+      "ethics-bias-environment"
+     ],
+     "fit_note": "A pointer to an external ethics course, not a mandate or institutional module.",
+     "resolution_why": "Coder A: admin, informs; coder B: student, may. Both P70, general. The page lists the course for students under 'Understanding Ethical AI Use / Online Learning Modules', so the policy is addressed to students and is an optional pointer (may), not a mandate. A's fit note kept. unit_stance neutral (B: encourage) because no encouragement of AI use is stated."
+    },
+    {
+     "why": "Grammarly is offered to students for 'plagiarism checking and alerts for potential AI-generated content, helping students ensure their work is original', a student self-check tool that no existing type covers (P40 is staff-side identification of misuse).",
+     "anchor": "alerts for potential AI-generated content, helping students ensure their work is original",
+     "frag_start": "Offers plagiarism checking and",
+     "frag_end": "work is original.",
+     "policy": "Grammarly offers plagiarism checking and alerts for potential AI-generated content, helping students ensure their work is original.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "permit",
+     "topics": [
+      "detection-tools",
+      "permitted-uses"
+     ],
+     "uncovered_note": "Students are pointed to a tool that checks their own work for plagiarism and AI-generated content. (Coder B coded P40 with the note: a self-check aid offered to students rather than a tool used by staff to identify misuse.)",
+     "resolution_why": "Coder A: UNCOVERED; coder B: P40 with a fit note. P40 is about instructors and staff using similarity checks and process evidence to identify misuse. Here Grammarly is offered to students as 'plagiarism checking and alerts for potential AI-generated content, helping students ensure their work is original', a self-check. That is a different rule, so UNCOVERED, as constant comparison requires. Both: student, during-work, may, permit."
+    },
+    {
+     "why": "Pointing students to 'Purdue Information on Citing AI' signals that AI use should be cited and gives citation guidance, P24 loosely.",
+     "anchor": "Purdue Information on Citing AI",
+     "frag_start": "Purdue Information on Citing AI",
+     "frag_end": "Purdue Information on Citing AI",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "informs",
+     "policy_type": "P24",
+     "unit_stance": "neutral",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "fit_note": "Only a link to external citation guidance; no stated requirement to cite."
+    }
+   ]
+  },
+  {
+   "id": "arkansas-little-rock-lr501-13",
+   "layer": "university",
+   "unit": "Board-approved university policy (Student Academic Integrity)",
+   "course": null,
+   "title": "LR 501.13 Academic Offenses (academic integrity and grievance)",
+   "url": "https://ualr.edu/policy/student/academic-integrity-and-grievance/",
+   "date_or_term": "most recent revision 04/10/2026",
+   "stance": "restrict",
+   "tiers": [],
+   "summary": "The Faculty Senate academic offenses policy covers all academic dishonesty; it names unauthorized generative AI as cheating and unacknowledged generative AI as plagiarism, then sets the report, conference, grade-penalty, hearing and appeal procedure. Only two sentences mention AI, but the procedure applies to AI cases.",
+   "stance_why": "The policy lists 'Using unauthorized notes or materials (including any form of generative AI)' as cheating and treats AI content 'without proper acknowledgement' as plagiarism, so generative AI is barred unless authorized or acknowledged; that is restrict.",
+   "units": [
+    {
+     "why": "Listing 'Using unauthorized notes or materials (including any form of generative AI)' under cheating makes unauthorized generative AI misconduct, P36 over P22 because it is not limited to exams.",
+     "anchor": "Using unauthorized notes or materials (including any form of generative AI)",
+     "frag_start": "Using unauthorized notes or materials",
+     "frag_end": "any form of generative AI)",
+     "policy": "Using unauthorized notes or materials, including any form of generative AI, is cheating.",
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions",
+      "prohibited-uses"
+     ],
+     "resolution_why": "Coder A: during-assessment, unit_stance prohibit; coder B: when-misuse, restrict. Both: student, must-not, P36. The line is an example under the definition of Cheating ('Using unauthorized notes or materials (including any form of generative AI)'), not limited to exams, so not during-assessment (A's own why says so). It defines misconduct, hence when-misuse. Generative AI is barred only when unauthorized, so restrict, matching the document stance."
+    },
+    {
+     "why": "The sentence defines plagiarism as including 'using ideas, words, or products produced by any form of Generative AI without proper acknowledgement'. It binds students (must), applies to submitted work (during-work), and makes unacknowledged AI use the offense. P28 (nondisclosure is the violation) rather than P24 because no per-submission disclosure step is prescribed.",
+     "anchor": "using ideas, words, or products produced by any form of Generative AI without proper acknowledgement",
+     "frag_start": "This includes using ideas, words",
+     "frag_end": "published work as new without disclosure (self-plagiarism).",
+     "policy": "Using ideas, words, or products produced by any form of Generative AI without proper acknowledgement is plagiarism.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P28",
+     "unit_stance": "restrict",
+     "topics": [
+      "disclosure-citation",
+      "integrity-sanctions"
+     ],
+     "fit_note": "Also classifies unacknowledged generative AI use as plagiarism (an academic offense).",
+     "resolution_why": "Coder A: P24; coder B: P28. Same passage, actor, modality (must). The sentence defines plagiarism as 'using ideas, words, or products produced by any form of Generative AI without proper acknowledgement'. It does not require a disclosure on each submission (P24); it makes the missing acknowledgement the offense, implying acknowledged use is not, which is P28. A's fit note kept: it also classes unacknowledged use as plagiarism."
+    },
+    {
+     "why": "'Academic offenses are not permitted under any circumstances and are a violation of student conduct standards' is the general rule under which the AI items fall, P36.",
+     "anchor": "Academic offenses are not permitted under any circumstances",
+     "frag_start": "Academic offenses are not permitted",
+     "frag_end": "student conduct standards.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "prohibit",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "fit_note": "General academic-offense rule; AI is covered only through the cheating and plagiarism definitions.",
+     "resolution_why": "Only coder A coded this. 'Academic offenses are not permitted under any circumstances' is the general rule under which the AI cheating and plagiarism items fall. Kept as scope for the AI items; it is not AI-specific (A's note kept)."
+    },
+    {
+     "why": "'A finding that work resulted from dishonest action may affect the grading of the specific assignment and/or the overall final grade' states possible grade consequences, P37.",
+     "anchor": "may affect the grading of the specific assignment and/or the overall final grade",
+     "frag_start": "A finding that work resulted",
+     "frag_end": "Grade Appeals Committee (AOGAC).",
+     "policy": "A finding that work resulted from dishonest action may affect the grading of the specific assignment and/or the overall final grade in the course, and disciplinary action may be imposed by the Office of the Dean of Students or AOGAC.",
+     "actor": "admin",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "fit_note": "Lists possible consequences without fixing a penalty for each offense.",
+     "resolution_why": "Only coder A coded this. Coder B coded only the two AI-specific sentences. The consequence sentence ('may affect the grading of the specific assignment and/or the overall final grade') is the sanction that applies to AI cases, since AI misuse is defined as cheating and plagiarism, so kept. Not AI-specific (A's note kept). unit_stance neutral (A: restrict) because it states a consequence, not a position on AI."
+    },
+    {
+     "why": "'Grade Penalties May Include F in the course / F on the assignment or exam' lists concrete penalties, P37.",
+     "anchor": "F in the course",
+     "frag_start": "Grade Penalties May Include",
+     "frag_end": "No credit for material presented",
+     "policy": "Grade penalties may include F in the course, F on the assignment or exam, grade adjustment, or no credit for material presented.",
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "resolution_why": "Only coder A coded this. The list 'Grade Penalties May Include: F in the course, F on the assignment or exam, ...' is the sanction menu that applies to AI cases; kept. Not AI-specific (A's note kept)."
+    },
+    {
+     "why": "'Within five class days of identifying the suspected offense, the instructor must' complete the form is a deadline-bound reporting step, P81.",
+     "anchor": "Within five class days of identifying the suspected offense, the instructor must",
+     "frag_start": "Within five class days of identifying",
+     "frag_end": "Retain a copy",
+     "policy": "Within five class days of identifying a suspected offense, the instructor must complete the Allegation of Academic Offense Form, send it to the student, retain a copy, and send copies to the department chair and the Office of the Dean of Students.",
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P81",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "resolution_why": "Only coder A coded this. The five-class-day filing duty is the core step by which an AI-related allegation is processed, and the faculty page sends AI cases into this procedure; kept. Not AI-specific."
+    },
+    {
+     "why": "The conference exists to 'Allow the student to present an explanation or response', giving the accused a right to respond, P64.",
+     "anchor": "Allow the student to present an explanation or response",
+     "frag_start": "Allow the student to present",
+     "frag_end": "explanation or response",
+     "policy": "The student-instructor conference exists to ensure the student understands the allegation and evidence and to allow the student to present an explanation or response.",
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P64",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "resolution_why": "Only coder A coded this. The conference that lets the student 'present an explanation or response' is the procedural protection in AI-misuse cases (see the faculty page's 'opportunity to explain'); kept. Not AI-specific (A's note kept)."
+    }
+   ]
+  },
+  {
+   "id": "arkansas-little-rock-lr404-8",
+   "layer": "university",
+   "unit": "Board-approved university policy (Faculty/Staff)",
+   "course": null,
+   "title": "LR 404.8 Course Syllabus",
+   "url": "https://ualr.edu/policy/facstaff/course-syllabus/",
+   "date_or_term": "most recent revision 2026-02-02",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "The syllabus policy lists required elements of every course syllabus. One element is the instructor's statement on whether students may use generative AI (such as large language models) for assignments and other course activities; the policy sets no rule itself.",
+   "stance_why": "The policy requires each syllabus to contain 'The instructor’s statement on the permissibility of student use of generative AI', handing the permit-or-ban decision to the instructor, so delegates.",
+   "units": [
+    {
+     "why": "The syllabus must contain 'The instructor’s statement on the permissibility of student use of generative AI'; this requires an AI statement in every syllabus (P09) and leaves the decision to the instructor (P04). I chose P09 because the sentence is a required element, not a statement of who decides.",
+     "anchor": "statement on the permissibility of student use of generative AI",
+     "frag_start": "The instructor’s statement on the permissibility",
+     "frag_end": "other course activities.",
+     "policy": "The syllabus must contain the instructor's statement on the permissibility of student use of generative AI (such as large language models) for completion of assignments and other course activities.",
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "must",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "instructor-discretion"
+     ],
+     "fit_note": "Also delegates the AI decision to the instructor (P04).",
+     "resolution_why": "Coder A: course-start; coder B: before-course. Both: instructor, must, P09. The policy says the syllabus must contain 'The instructor's statement on the permissibility of student use of generative AI', and the syllabus is delivered to students at the start of the course, so the unit is about communicating expectations: course-start. P09 over P04 because the operative rule is the required statement; the delegation is recorded in fit_note (B)."
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Reconciled from coders A and B. No school, computing or course documents found or in scope (course layer deferred). LR 501.13 is a general academic-offense procedure with only two AI-specific sentences; coder B coded only those, coder A also coded process lines. Kept the two AI sentences plus the general offense rule, sanctions, filing step and student-response conference that apply to AI cases; dropped coder A's other generic units (fairness principle, instructor duties to prevent and report, general acknowledgement duty, evidence in notice, penalty-timing rule, appeal attendance, penalty factors) as not about AI. No new types proposed. Merged fit_notes and uncovered_notes from both coders; no note dropped."
+}

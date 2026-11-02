@@ -1,0 +1,130 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT40 "AI undermines learning" (Using AI to do the work skips the practice that builds skill and understanding.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..105 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | austin-community-college | C1 | all | informs | ban protects original thought | Rationale: The prohibition is in place to encourage original thought, manual problem-solving skills, and to
+1 | boston | C3 | instructor | informs | AI can harm learning | However, in the context of this course, we believe that using these tools can harm your learning.
+2 | brigham-young-idaho | C1 | all | informs | AI code prevents learning | If you use AI to generate your code for you, you will not learn how to program
+3 | bryn-mawr-college | C3 | instructor | informs | AI learning shortcut warning | Beware however, that it is easy to underestimate the effort it takes.
+4 | bucknell | C4 | all | informs | AI supplements not replaces learning | AI tools are not replacements for human creativity, originality, and critical thinking.
+5 | bucknell | C4 | student | must-not | no replacing own learning | Any use that replaces your own learning
+6 | california-berkeley | C3 | instructor | informs | learning best without AI | We believe that the most effective way to learn the course content is by engaging with it without the use of LLMs
+7 | california-berkeley | C5 | instructor | informs | AI shortcuts harm understanding | this may harm your understanding
+8 | carleton-college | C3 | student | should-not | don't outsource understanding to AI | find yourself outsourcing the job of understanding to an LLM
+9 | carnegie-mellon | C1 | instructor | informs | AI undermines learning | These tools may give a quick answer but they undermine learning and retention.
+10 | carnegie-mellon | C1 | instructor | informs | AI undermines learning | Using generative AI or other improper help for this practice negates learning and mastering new skills
+11 | carnegie-mellon | C3 | instructor | informs | AI undermines learning | Any usage of AI tools is truly only doing yourself a long-term disservice
+12 | colby-college | C5 | student | should | AI should enhance not replace learning | use AI to enhance your learning, not replace it
+13 | colby-college | C5 | student | should-not | AI doing heavy lifting too far | If AI does that heavy lifting for you, you have gone too far.
+14 | colgate | C3 | instructor | informs | growth needs own problem solving | intellectual growth you can get from working through a difficult problem and discovering the answer for yourself
+15 | colorado-boulder | C3 | all | informs | reason: learning requires own thinking | The reason behind the policies is that students learn the material by thinking it through themselves.
+16 | colorado-state | C2 | all | informs | reason: AI undermines learning | They rob you of the ability to think and learn the concepts for yourself
+17 | cornell | C3 | student | should | urged to solve problems themselves | we urge you to work on the problems yourself
+18 | cornell | C3 | all | informs | reason: delegation shallows understanding | If you delegate the hard work to AI, the consequence is that you will have a shallower understanding of the subject.
+19 | dartmouth-college | C2 | student | should | urged to write solutions yourself | I strongly urge you to write the solutions yourself
+20 | depaul | C2 | all | informs | reason: skills need own practice | skills that are important to practice on your own and using
+21 | duke | C1 | student | should | AI complements not replaces learning | it should be used to complement your learning, not replace it.
+22 | duke | C1 | all | informs | reason: AI answers bypass learning | Directly obtaining solutions from AI bypasses this learning process
+23 | georgetown | C5 | instructor | informs | AI use harms domain expertise | students who use AI for coursework do not gain domain expertise necessary to ultimately become critical users of AI.
+24 | georgia-tech | C4 | all | informs | AI risk: reduced learning | the more you rely on AI to write for you
+25 | grinnell-college | C3 | instructor | informs | AI inhibits learning | any tool that would delay or inhibit that learning is actively harmful to you both in this course
+26 | grinnell-college | C6 | instructor | informs | ban protects learning | This policy is designed to incentivize the activities that best support your learning
+27 | hawaii-manoa | C1 | student | should | reliance harms learning | You may want to think about how much you will learn if you just use ChatGPT to do your homework for you.
+28 | kansas | C4 | all | informs | course builds student skills | This course is designed to build your skills—not evaluate
+29 | kansas | C4 | all | informs | reliance harms learning | Overreliance on AI undermines both your learning and
+30 | loyola-marymount | C1 | student | must-not | never use AI to avoid learning | your learning; NEVER use technology to
+31 | loyola-marymount | C1 | student | should | AI only if learning preserved | should therefore employ GenAI only when its use does not rob you of the stretch-zone learning
+32 | loyola-marymount | C2 | student | must-not | never use AI to avoid learning | your learning; NEVER use technology to
+33 | loyola-marymount | C2 | student | should | AI only if learning preserved | should therefore employ GenAI only when its use does not rob you of the stretch-zone learning
+34 | loyola-marymount | C3 | student | must-not | never use AI to avoid learning | your learning; NEVER use technology to
+35 | loyola-marymount | C3 | student | should | AI only if learning preserved | should therefore employ GenAI only when its use does not rob you of the stretch-zone learning
+36 | macalester-college | C2 | all | informs | learning comes from own effort | The exercises and homeworks in this class ask you to puzzle out for yourself things that
+37 | macalester-college | C2 | all | informs | AI regurgitates others' solutions | AI can easily regurgitate other people’s solutions to familiar problems; for familiar questions, it
+38 | macalester-college | C2 | all | informs | AI lifting weights analogy | If you had a machine lift weights for you, would you expect
+39 | maryland-baltimore-county | C3 | all | informs | homework is for practice | The purpose of homework assignments is to practice problem solving.
+40 | maryland-baltimore-county | C3 | all | informs | bypassing homework hurts quizzes | Students who bypass this training (whether through Google searches, the use of AI,
+41 | maryland-baltimore-county | C3 | student | must | student responsible to learn | It is the student's responsibility to learn from this process.
+42 | massachusetts-amherst | C1 | student | should | AI assists not substitutes | The use of AI technologies like ChatGPT should be seen as a tool for assistance, not a substitute for your own efforts.
+43 | massachusetts-amherst | C1 | all | informs | reliance harms learning | doing so will not help you develop the critical thinking and problem-solving skills that are essential for success in computer science.
+44 | massachusetts-amherst | C2 | all | informs | AI harms introductory learning | using AI is contrary to your best learning.
+45 | massachusetts-amherst | C3 | all | informs | no incentive to use AI | There is also no incentive to do so,
+46 | massachusetts-institute-technology | C2 | student | informs | AI code tools harm learning | will rob you of the chance to engage deeply
+47 | massachusetts-institute-technology | C2 | all | informs | reason: hand coding builds understanding | pedagogically, we believe that learning how to develop algorithms, write code, and debug it "by hand"
+48 | massachusetts-institute-technology | C6 | instructor | informs | labs teach through own effort | You will only learn from the labs through
+49 | michigan | C3 | all | informs | reason: AI gives too much help | they lack the nuance needed to provide the right level of guidance and are likely to give you too much
+50 | minnesota | C4 | all | informs | reason: learn design and testing steps | the objective of this course is for you to learn in detail the steps characterizing design, development, and testing of fairly large programs.
+51 | new-york | C2 | student | should-not | warning: AI doing all coding harms learning | Using AI to do all of your coding work for you will be a detriment to your learning.
+52 | new-york | C6 | instructor | informs | ban justified by learning purpose | the purpose of this class is to teach
+53 | north-carolina-chapel-hill | C1 | student | should | AI helps thinking, not replaces | AI should help you think, not think for you.
+54 | north-texas | C1 | student | should | AI complements course materials | However, GenAI should complement, not replace, our course materials.
+55 | north-texas | C3 | all | informs | reason: independent thinking | I want you to engage deeply with the materials and develop your own critical
+56 | northeastern | C3 | all | informs | reason: no gain outsourcing homework | Homework is graded on completion, so there is nothing to gain by outsourcing
+57 | northwestern | C3 | instructor | informs | vibe coding undermines learning | will make it unlikely that you learn anything
+58 | northwestern | C3 | instructor | informs | labs weighted heavily for learning | The labs and homeworks are a substantial portion of the grade for a good reason.
+59 | northwestern | C6 | instructor | should-not | LLM reliance on labs harms learning | Just LLMing your way through labs is a great way to not learn anything.
+60 | northwestern | C6 | instructor | informs | systems skill comes from doing | generally gained by doing, not just by
+61 | oberlin-college | C5 | instructor | informs | banned uses are core learning tasks | Each of these impermissible uses are core components of the assignments in the course
+62 | oklahoma | C1 | instructor | informs | no evidence AI builds programming understanding | there is no evidence that allowing students to use AI to complete programming assignments develops the necessary conceptual understanding of programming
+63 | oklahoma | C2 | instructor | informs | active engagement aids learning | Even the brainstorming and initial draft phase is a time of discovery that is an integral part of your learning.
+64 | oklahoma | C6 | all | informs | goal is independent problem-solving | This course aims to develop independent problem-solving skills, so while AI can be a
+65 | old-dominion | C6 | all | informs | blind AI use harms learning | If you use them to blindly do your homework for you, your learning will suffer
+66 | princeton | C3 | student | should | use AI to assist not outsource | use it to assist your efforts, not to outsource them
+67 | princeton | C5 | all | informs | over-reliance harms learning | over-reliance on AI is known to negatively affect learning
+68 | princeton | C6 | instructor | informs | AI replacing thinking unwelcome | AI has no place in the classroom
+69 | rensselaer-polytechnic-institute | C2 | instructor | informs | AI reliance is a crutch | relianace on these tools for introductory program is a crutch
+70 | rhode-island | C5 | student | should | AI complements not replaces thinking | it should complement rather than replace students' critical thinking and problem-solving skills
+71 | rochester-institute-technology | C4 | instructor | informs | skills not gained by prompting | are not ones that can be gained by prompting for an automated response.
+72 | rochester | C5 | all | informs | AI on projects undermines learning | using AI to complete the projects is likely to undermine the learning process
+73 | rose-hulman-institute-technology | C6 | instructor | informs | ban so students learn the work | we want you to learn how to do it
+74 | rowan | C1 | instructor | informs | AI defeats assignment purpose | defeat that purpose and misrepresent your mastery of the material.
+75 | rowan | C1 | instructor | informs | AI defeats assignment purpose | defeat that purpose and misrepresent your mastery of the material.
+76 | southern-california | C1 | instructor | informs | critical thinking skills rationale | Since analytical, and critical thinking skills are part of the learning outcomes of this course
+77 | southern-california | C2 | student | must-not | no AI on homework | Because use of generative AI would remove any of that benefit, we do not allow its use.
+78 | stanford | C1 | instructor | informs | AI gives away the solution | virtually any AI would give you too much information about the problem,
+79 | stanford | C2 | instructor | informs | develop own coding skills | it is important that you develop your own skills and abilities to write, debug and think critically
+80 | stanford | C2 | instructor | informs | process matters more than product | it will be the effort and process (not just the product) that is most valuable to your learning
+81 | stanford | C6 | student | informs | skills developed without AI | students develop their own skills and abilities to write, debug and think critically, without the use of this technology
+82 | stanford | C6 | instructor | informs | AI inhibits learning process | AI tools can inhibit the gains from working through this process
+83 | stony-brook | C2 | instructor | informs | AI undermines educational goals | Utilizing AI tools to generate or complete your code undermines the educational goals of this course
+84 | stony-brook | C3 | instructor | informs | discourage AI replacing thinking | to discourage the use of AI systems at the expense of thinking.
+85 | stony-brook | C3 | instructor | informs | AI can solve homework | Modern AI systems are quite capable of solving standard algorithm homework problems.
+86 | temple | C2 | student | must | practice needed to build skill | essential that you spend time practicing problem solving and writing
+87 | temple | C2 | all | informs | getting stuck is expected | It's expected that you'll get stuck from time to time.
+88 | texas-arlington | C1 | all | informs | ban protects authentic understanding | To ensure that all submitted work accurately reflects personal understanding
+89 | texas-el-paso | C1 | student | should | rely on own thinking not AI | creative thinking skills to complete tasks and not rely on computer-generated ideas.
+90 | texas-el-paso | C1 | student | informs | AI ideas may hinder thinking | and may hinder your ability to think critically and creatively about a problem.
+91 | texas-el-paso | C6 | student | informs | AI ideas hinder own thinking | ideas are not your own and may hinder your ability to think criti-
+92 | texas-tyler | C5 | student | informs | own work best for learning | Doing your own work, without human or artificial intelligence assistance, is best for your efforts
+93 | uiuc | C3 | instructor | informs | course measures understanding not prompting | This course seeks to impart and measure a solid understanding of course material
+94 | uiuc | C3 | student | informs | AI use can mask gaps | Mask gaps in your understanding
+95 | villanova | C2 | instructor | informs | learning requires doing it yourself | students learn best by writing, debugging, and reasoning through code on your own.
+96 | virginia | C6 | instructor | informs | instructor skeptical of AI help | However, I [Reiss] am skeptical that using generative AI in this way
+97 | washington | C3 | student | must-not | no AI blocking own growth | Any use that may prevent your personal academic growth
+98 | washington | C3 | all | informs | AI reliance blocks learning | relying on AI tools to complete tasks denies you the
+99 | wellesley-college | C6 | all | informs | AI prevents internalizing details | Have AI-powered tools “do the work for you” would relieve you from having
+100 | wellesley-college | C6 | instructor | informs | slippery slope to AI answers | However, there is a slippery slope from
+101 | wellesley-college | C6 | instructor | informs | downsides outweigh benefits | downsides of generative AI greatly outweigh any benefits for an introductory
+102 | west-chester-pennsylvania | C4 | instructor | informs | process drives learning | It is the process of carrying out these activities that help you learn
+103 | williams-college | C1 | instructor | informs | goal is learning to code | One of the major goals of this course is to learn how to write code.
+104 | williams-college | C2 | instructor | informs | goal is code-writing skill | the purpose of this class is not to simply to write code,
+105 | yale | C3 | instructor | informs | homework is for learning | The homework is your opportunity to learn the material.

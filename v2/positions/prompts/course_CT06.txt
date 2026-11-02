@@ -1,0 +1,76 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT06 "Ask staff when unsure" (Students should ask the instructor or TAs when unsure whether an AI use is allowed.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..51 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | appalachian-state | C4 | student | should | ask instructor when unsure | If you are not sure if something you are doing would violate the policy
+1 | arizona-state | C1 | student | should | ask instructor when unsure | If at any point you have questions about what is permitted, contact the instructor to discuss before submitting work.
+2 | bowdoin-college | C6 | student | should | ask instructor when unsure | If you have any questions regarding the use of generative AI, please ask!
+3 | brigham-young-idaho | C2 | student | should | ask instructor when unsure | If you need help on the assignment or have questions about AI use, please ask your instructor.
+4 | brown | C5 | student | should | ask TA for design or debugging help | we recommend you ask a TA.
+5 | california-berkeley | C2 | instructor | informs | no penalty for asking about AI accuracy | we will not penalize asking about the accuracy of LLM output on course platforms
+6 | california-berkeley | C2 | student | should | seek staff help instead | we encourage you to find our staff at office hours or lab
+7 | california-berkeley | C3 | instructor | informs | no penalty for asking about AI accuracy | will not penalize asking about reasonable LLM output on course platforms
+8 | carnegie-mellon | C2 | student | informs | ask staff about AI | If you have any questions about using generative AI in this course please email or talk to course staff.
+9 | depaul | C2 | student | should | ask instructor if tool allowed | specific tool is permitted for use on assignments in this course,
+10 | florida-atlantic | C4 | student | should | ask instructor if AI unclear | ask your instructor before starting the assignment.
+11 | georgia-tech | C2 | student | should | consult Head TA if unsure | If you are uncertain if a tool or an application of one is allowed, consult with a Head TA
+12 | harvey-mudd-college | C6 | student | should | ask staff if unsure | If you're unsure about whether your use of an LLM is acceptable, consult with the instructor or grutors.
+13 | harvey-mudd-college | C6 | student | should | use human help instead | Talking to a grutor or your professor, or posting your about your issue on Piazza
+14 | illinois-chicago | C5 | student | should | ask instructor when unsure | If in doubt about a specific tool, ask.
+15 | louisville | C6 | student | should | ask instructor when unsure | When in doubt, quickly ask the course instructor
+16 | massachusetts-boston | C1 | student | should | ask instructor if unsure | If students are unsure about whether or not a source is appropriate to
+17 | massachusetts-boston | C2 | student | should | ask instructor if unsure | If students are unsure about whether or not a source is appropriate to
+18 | massachusetts-institute-technology | C4 | student | should | ask instructor if unsure | If you are unsure whether a code-generation tool is appropriate for use in 6.102, please ask us before using it.
+19 | memphis | C2 | student | should | ask instructor if unsure | If in doubt, ask the instructor before using an AI tool.
+20 | minnesota | C4 | student | should | ask instructor if in doubt | I encourage you to discuss your situation with me.
+21 | new-york | C2 | student | should | prefer office hours sometimes | Sometimes it may be wiser and safer to visit instructors' office hours or tutoring hours
+22 | new-york | C6 | student | should | ask when unsure if tool is AI | If you are unsure about whether a particular tool or app uses generative AI, you should ask before using the tool
+23 | north-carolina-chapel-hill | C1 | student | should | ask instructor if unsure | If you are unsure, check with me.
+24 | north-carolina-state | C3 | student | should | ask instructor if unsure | If you have any questions about what constitutes acceptable use of AI tools, please consult with the instructor before
+25 | north-texas | C2 | student | should | ask instructor if unsure | Again, if uncertain contact the instructor prior to using AI tools.
+26 | northwestern | C2 | student | must | ask instructor about unlisted sources | ask the instructor before using any source not explicitly listed above
+27 | oklahoma | C2 | student | should | ask instructor with questions | I also want you to reach out to me if you have any questions or concerns.
+28 | oklahoma | C4 | student | should | ask instructor when unsure | If you’re unsure about academic integrity, ask me.
+29 | oklahoma | C6 | student | should | ask instructor when unsure | Students should consult the instructor if they have questions about
+30 | pomona | C6 | student | should | ask instructor about translation tools | ask your instructor about whether tools for translating words or texts between languages are allowed.
+31 | pomona | C6 | student | should | use staff not AI for help | you are to use your professor and TAs as the primary resource for out-of-class help rather than AI tools
+32 | princeton | C6 | student | should | ask staff when unsure | Please contact course staff beforehand if you are unsure whether your intended AI usage is allowed in this class.
+33 | rhode-island | C5 | student | should | ask instructor when unsure | Students are encouraged to seek instructor guidance if uncertain about appropriate AI tool usage.
+34 | rutgers-new-brunswick | C3 | instructor | informs | ask instructor when stuck | if you ever feel stuck or need help, please reach out to me!
+35 | south-carolina | C1 | instructor | informs | ask instructor about AI use | Please feel free to reach out to me with any questions you may have about the use of generative AI tools
+36 | south-carolina | C2 | instructor | informs | ask instructor about AI use | Please feel free to reach out to me with any questions you may have about the use of generative AI tools
+37 | southern-california | C1 | student | should | course staff help preferred over AI | Again, we prefer you just get help from course staff.
+38 | stanford | C2 | instructor | informs | use staff support instead | please take advantage of the support resources above - we are eager to help!
+39 | swarthmore-college | C2 | student | may | ask instructor for AI permission | If you feel these tools would be appropriate in a given context, feel free to ask Joshua.
+40 | swarthmore-college | C5 | student | should | ask instructor before using AI | If you feel these tools would be appropriate in a given context, please contact the instructor to ask.
+41 | texas-austin | C2 | student | should | ask instructor when unsure | If you have any doubts about what is allowed, ask
+42 | texas-christian | C5 | student | must | ask instructor when in doubt | then it is your responsibility to discuss your situation with the instructor.
+43 | texas-christian | C6 | student | must | ask instructor when in doubt | then it is your responsibility to discuss your situation with the instructor.
+44 | washington-state | C6 | student | should | ask instructor when in doubt | If you are in doubt of what is permitted and what is not, ask the instructor!
+45 | washington | C1 | student | may | ask or give feedback on policy | If you believe the policy disallows something that should be allowed, please let us know via email or the
+46 | washington | C3 | student | should | ask staff when unsure | If you are unsure about what may constitute
+47 | wellesley-college | C2 | student | should | ask instructors when unsure | please ask the instructors before using it!
+48 | wesleyan | C6 | student | should | consult instructor before using | particular AI tool or use, please consult with me before using.
+49 | williams-college | C2 | student | should | ask instructors about AI | Students should direct any questions on this topic to one of the instructors.
+50 | williams-college | C3 | student | should | seek course staff help | If you need guidance on the problem sets, please seek help from the course staff.
+51 | wright-state | C6 | student | should | ask instructor if tool unclear | If you have any questions about whether or not use of a particular tool or technology is allowed, check with your instructor first.

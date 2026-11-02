@@ -1,0 +1,893 @@
+{
+ "university": "The University of Tennessee Health Science Center",
+ "slug": "tennessee-health-science-center",
+ "state": "TN",
+ "type": "R1",
+ "searched": {
+  "university": "found",
+  "school": "found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "tennessee-health-science-center-1",
+   "layer": "university",
+   "unit": "Teaching and Learning Center",
+   "course": null,
+   "title": "Syllabus Course Policies and Procedures (Generative AI section)",
+   "url": "https://uthsc.edu/tlc/course-syllabus-guide/policies-procedures.php",
+   "date_or_term": null,
+   "stance": "delegates",
+   "tiers": [
+    "AI permitted in the course with acknowledgment",
+    "AI permitted on certain assignments with acknowledgment",
+    "AI not permitted"
+   ],
+   "summary": "The TLC syllabus guide asks instructors to state a generative AI policy and offers three model statements. Each statement says the rule applies to that course only and that violations count as academic dishonesty.",
+   "stance_why": "The page sets no rule itself: it asks \"What is your policy on how students should engage with generative AI\" and offers three model statements (permitted, permitted on certain assignments, \"strictly prohibited\"), so it delegates with tiers.",
+   "units": [
+    {
+     "why": "The page asks instructors to state a policy: \"What is your policy on how students should engage with generative AI\". That is a syllabus-statement requirement for instructors, so P09 (an AI statement in the syllabus).",
+     "anchor": "What is your policy on how students should engage with generative AI",
+     "frag_start": "What is your policy on how",
+     "frag_end": "for your class.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "instructor-discretion"
+     ],
+     "fit_note": "It is phrased as a prompt among suggested syllabus topics, not a hard mandate."
+    },
+    {
+     "why": "The page offers three model statements headed \"Usage permitted...\" / \"Usage not permitted\", i.e. a menu of named levels; P05 fits since it names categories of permitted use, and the stance is left to the instructor.",
+     "anchor": "Usage permitted on certain assignments with appropriate acknowledgment",
+     "frag_start": "Usage permitted on certain assignments",
+     "frag_end": "appropriate acknowledgment",
+     "policy": "The guide offers three model syllabus statements: AI permitted in the course with acknowledgment, permitted on certain assignments with acknowledgment, and not permitted.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P05",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance",
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "Model statement 1 says AI \"is permitted to augment the learning experience\"; this is a default-permit rule for the course, so P02 and permit.",
+     "anchor": "is permitted to augment the learning experience",
+     "frag_start": "In this course, the use of",
+     "frag_end": "augment the learning experience.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P02",
+     "unit_stance": "permit",
+     "topics": [
+      "default-stance",
+      "permitted-uses"
+     ]
+    },
+    {
+     "why": "Model statement 1 says \"the use of AI must be appropriately acknowledged and cited\", a disclosure duty, so P24; it does not name tool, prompt or log, so not P25.",
+     "anchor": "the use of AI must be appropriately acknowledged and cited",
+     "frag_start": "As such, the use of AI",
+     "frag_end": "acknowledged and cited.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "require",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "\"It is the student's responsibility to ensure the accuracy of the output including references\" tells students to check AI output, so P31 rather than P29 because accuracy checking is the specific duty.",
+     "anchor": "responsibility to ensure the accuracy of the output including references",
+     "frag_start": "It is the student's responsibility",
+     "frag_end": "Generative AI tool",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P31",
+     "unit_stance": "require",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "The statement requires that usage \"complies with the UTHSC Honor Code and ideals of academic integrity\", tying AI use to existing university rules, so P77.",
+     "anchor": "complies with the UTHSC Honor Code and ideals of academic integrity",
+     "frag_start": "and that its usage complies",
+     "frag_end": "of academic integrity.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P77",
+     "unit_stance": "require",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "\"Violations of this policy will be considered academic dishonesty\" classifies misuse as misconduct, so P36; it states no concrete penalty so not P37.",
+     "anchor": "Violations of this policy will be considered academic dishonesty.",
+     "frag_start": "Violations of this policy will",
+     "frag_end": "academic dishonesty.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "\"this policy is specifically for this course and other courses may have more restrictive policies\" says a course rule does not carry over, so P11.",
+     "anchor": "this policy is specifically for this course and other courses may have more restrictive policies",
+     "frag_start": "Keep in mind that this policy",
+     "frag_end": "more restrictive policies",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "informs",
+     "policy_type": "P11",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "Model statement 2 allows AI \"only on certain assignments as indicated by the instructor/faculty\", so the decision is per assignment: P04, restrictive.",
+     "anchor": "permitted only on certain assignments as indicated by the instructor/faculty",
+     "frag_start": "In this course, the use of",
+     "frag_end": "by the instructor/faculty.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P04",
+     "unit_stance": "restrict",
+     "topics": [
+      "instructor-discretion",
+      "permitted-uses"
+     ]
+    },
+    {
+     "why": "Model statement 3 says AI \"is strictly prohibited\", a blanket course ban, so P01.",
+     "anchor": "ChatGPT is strictly prohibited",
+     "frag_start": "In this course, the use of",
+     "frag_end": "strictly prohibited.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P01",
+     "unit_stance": "prohibit",
+     "topics": [
+      "default-stance",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "The page tells instructors to \"provide the rationale behind them [policies] and frame expectations in positive, action-oriented language\"; this is advice to explain rules to students, so P66. It is general to all syllabus policies, including the AI one.",
+     "anchor": "provide the rationale behind them and frame expectations in positive, action-oriented language",
+     "frag_start": "Policies are built into the Simple",
+     "frag_end": "collaborative learning environment.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P66",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "fit_note": "Applies to all syllabus policies, not specifically AI."
+    }
+   ]
+  },
+  {
+   "id": "tennessee-health-science-center-2",
+   "layer": "university",
+   "unit": "Office of CyberSecurity",
+   "course": null,
+   "title": "GP-004.02 Acceptable Use of Generative AI",
+   "url": "https://policy.tennessee.edu/wp-content/uploads/GP-004.02.pdf",
+   "date_or_term": "2023-10-26",
+   "stance": "permit",
+   "tiers": [],
+   "summary": "An IT-security standard on responsible use of generative AI across UTHSC. It mostly governs what data may be entered into AI tools, plus verification, bias and disclosure advice. It has little on coursework.",
+   "stance_why": "AI use is allowed with conditions on data: \"Generative AI can safely process publicly available information\" at Level 1 but \"Do not enter private or confidential data\" at Levels 2 and 3, so permit with limits.",
+   "units": [
+    {
+     "why": "The purpose is \"leveraging generative artificial intelligence (AI) responsibly and ethically across all UTHSC environments\", an institution-level framework statement, so P56.",
+     "anchor": "leveraging generative artificial intelligence (AI) responsibly and ethically across all UTHSC environments",
+     "frag_start": "To give guidance as a foundation",
+     "frag_end": "all UTHSC environments.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution",
+      "ethics-bias-environment"
+     ]
+    },
+    {
+     "why": "The scope names who the standard binds: \"members of the UTHSC community who have a need to access UTHSC IT Resources\", so P61 (scope).",
+     "anchor": "members of the UTHSC community who have a need to access UTHSC IT Resources",
+     "frag_start": "This standard applies to members",
+     "frag_end": "UTHSC IT Resources.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance"
+     ]
+    },
+    {
+     "why": "The definition \"a branch of artificial intelligence that enables machines to create original content\" fixes what generative AI means here: P61.",
+     "anchor": "enables machines to create original content",
+     "frag_start": "Generative Artificial Intelligence (AI) – a branch",
+     "frag_end": "create original content.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance"
+     ]
+    },
+    {
+     "why": "The IP definition covers entering \"proprietary or confidential information into generative AI\" \"without express written consent from all stakeholders\"; it restricts what data goes into AI, so P50 (P52 is about licensing and ownership of outputs, a worse fit).",
+     "anchor": "without express written consent from all stakeholders",
+     "frag_start": "Intellectual Property - proprietary or confidential",
+     "frag_end": "from all stakeholders.",
+     "policy": "Entering proprietary or confidential information into generative AI, including unpublished research findings, internal university data or documents, or information protected by intellectual property rights, requires express written consent from all stakeholders.",
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data",
+      "intellectual-property"
+     ],
+     "fit_note": "Also an intellectual-property rule (consent for IP inputs)."
+    },
+    {
+     "why": "\"Researchers must consider the nature and sensitivity of scholarly data before using generative AI to support research\" governs AI use in research, so P62.",
+     "anchor": "Researchers must consider the nature and sensitivity of scholarly data before using generative AI",
+     "frag_start": "Researchers must consider the nature",
+     "frag_end": "to support research.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P62",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "Data Owners must \"Review and categorize data and information collected by their area of responsibility\", an assignment of duties to a named role, so P80.",
+     "anchor": "Review and categorize data and information collected by their area of responsibility",
+     "frag_start": "Review and categorization — Review",
+     "frag_end": "area of responsibility.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P80",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ],
+     "fit_note": "Role duty is data classification, a prerequisite for AI data rules."
+    },
+    {
+     "why": "\"The Chief Information Security Officer (CISO) is responsible for providing strategy and direction\" for security standards and compliance; it names who owns and enforces the policy, so P80.",
+     "anchor": "The Chief Information Security Officer (CISO) is responsible for providing strategy and direction",
+     "frag_start": "The Chief Information Security Officer",
+     "frag_end": "compliance to same.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P80",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "\"Researchers cannot put data that are confidential, contain sensitive information, or are subject to specific legal or ethical requirements ... into any generative AI\" without anonymization and consent, so a data-protection ban: P50.",
+     "anchor": "Researchers cannot put data that are confidential, contain sensitive information",
+     "frag_start": "Researchers cannot put data that",
+     "frag_end": "necessary parties.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"Users of UTHSC IT Resources are responsible for complying with this Standard\" puts the duty to follow the policy on users; the nearest type is P77 (comply with policy).",
+     "anchor": "Users of UTHSC IT Resources are responsible for complying with this Standard.",
+     "frag_start": "Users of UTHSC IT Resources",
+     "frag_end": "this Standard.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "\"must adhere to the University of Tennessee System Administration (UTSA) acceptable use policy and UTHSC acceptable use standard\" says AI use must follow existing policy: P77.",
+     "anchor": "must adhere to the University of Tennessee System Administration (UTSA) acceptable use policy",
+     "frag_start": "UTHSC Community members must adhere",
+     "frag_end": "acceptable use standard.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "\"Users should assume that all consumer generative AI products make data publicly available\" warns about data exposure, so P50.",
+     "anchor": "assume that all consumer generative AI products make data publicly available",
+     "frag_start": "Users should assume that all",
+     "frag_end": "University of Tennessee.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"all data that has not been explicitly classified is considered Level 3 or high-risk data by default\" sets a default data-handling rule that decides what may be entered into AI: P50.",
+     "anchor": "has not been explicitly classified is considered Level 3 or high-risk data by default",
+     "frag_start": "All UTHSC data need to be",
+     "frag_end": "high-risk data by default.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "For Level 1 data, \"Generative AI can safely process publicly available information, general academic concepts, and non-sensitive data\", a permission with conditions: P50 (data protection) is the nearest group.",
+     "anchor": "Generative AI can safely process publicly available information, general academic concepts",
+     "frag_start": "Level 1 confidentially-ranked data – Generative",
+     "frag_end": "reputational implication s.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P50",
+     "unit_stance": "permit",
+     "topics": [
+      "privacy-data",
+      "permitted-uses"
+     ],
+     "fit_note": "States a permission for low-risk data rather than a protection."
+    },
+    {
+     "why": "\"Do not enter private or confidential data, including ... PII ... FERPA, HIPAA ... into any generative AI product\" is a direct ban on sensitive inputs: P50.",
+     "anchor": "Do not enter private or confidential data",
+     "frag_start": "Level 2 or Level 3 confidentially-ranked data",
+     "frag_end": "Level 2 or 3 data.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "prohibit",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"once data is entered, neither the individual who entered it nor the institution can directly remove it\" is a factual warning behind the data rules: P50.",
+     "anchor": "neither the individual who entered it nor the institution can directly remove it",
+     "frag_start": "Thoroughly anticipate the impact of",
+     "frag_end": "can directly remove it.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "informs",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"be cautious of claims by product providers\" about products being \"AI\"-enhanced; no existing type covers skepticism of vendor claims (P65 is institutional vendor review, P31 is output verification), so UNCOVERED.",
+     "anchor": "be cautious of claims by product providers",
+     "frag_start": "Furthermore, be cautious of claims",
+     "frag_end": "standards for output.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment"
+     ],
+     "uncovered_note": "Users should be skeptical of vendor claims that a product uses AI or performs better."
+    },
+    {
+     "why": "\"Think critically. Evaluate and corroborate information obtained from generative AI tools\" tells users to verify AI output: P31.",
+     "anchor": "Evaluate and corroborate information obtained from generative AI tools",
+     "frag_start": "Think critically. Evaluate and corroborate",
+     "frag_end": "seeking expert advice",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P31",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "Users should \"review the requirements of the publisher/reviewer/recipient ... regarding disclosure requirements\"; this points to disclosure but does not itself mandate it, so P24 with a fit note.",
+     "anchor": "review the requirements of the publisher/reviewer/recipient of the finished product",
+     "frag_start": "Understand expectations. When using generative",
+     "frag_end": "potentially in different ways.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P24",
+     "unit_stance": "neutral",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "fit_note": "Tells users to check the recipient's disclosure rules instead of requiring disclosure itself."
+    },
+    {
+     "why": "\"Stay informed. Follow conversations around AI technology and further updates and guidance from the university\" is a duty to keep up with guidance: P102.",
+     "anchor": "Follow conversations around AI technology and further updates and guidance from the university",
+     "frag_start": "Stay informed. Follow conversations around",
+     "frag_end": "generative AI continues to develop.",
+     "policy": null,
+     "actor": "all",
+     "phase": "over-time",
+     "modality": "should",
+     "policy_type": "P102",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "\"Users should independently verify the information provided by generative AI\" because it \"may generate responses that are not always accurate\": P31.",
+     "anchor": "Users should independently verify the information provided by generative AI",
+     "frag_start": "Misinformation and inaccuracies: Generative AI",
+     "frag_end": "rapidly evolving subjects.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P31",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "\"Generative AI can inadvertently reflect biases present in the training data\" names bias as a risk: P53.",
+     "anchor": "Generative AI can inadvertently reflect biases present in the training data",
+     "frag_start": "Bias and unintentional harm: Generative",
+     "frag_end": "unbiased information dissemination.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P53",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment"
+     ]
+    },
+    {
+     "why": "Notes that AI \"may produce or respond to content that is offensive, inappropriate, or violates ethical standards\", a harm statement: P53.",
+     "anchor": "may produce or respond to content that is offensive, inappropriate, or violates ethical standards",
+     "frag_start": "Inappropriate content: Although generative AI",
+     "frag_end": "ethical standards.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P53",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment"
+     ]
+    },
+    {
+     "why": "\"if certain populations are underrepresented in the data used to train AI algorithms, results may be skewed\" names algorithmic bias: P53.",
+     "anchor": "certain populations are underrepresented in the data used to train AI algorithms",
+     "frag_start": "Algorithmic implications: AI can deduce",
+     "frag_end": "results may be skewed.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P53",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment"
+     ]
+    },
+    {
+     "why": "The header gives \"Next Review: 10/26/2025\", a scheduled review date: P54 (revisit regularly). The date has passed per the collect notes.",
+     "anchor": "Next Review: 10/26/2025",
+     "frag_start": "Next Review:",
+     "frag_end": "10/26/2025",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "informs",
+     "policy_type": "P54",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "\"Resp. Office: Office of CyberSecurity\" names the office responsible for the standard: P80.",
+     "anchor": "Resp. Office: Office of CyberSecurity",
+     "frag_start": "Resp. Office: Office of",
+     "frag_end": "CyberSecurity",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P80",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tennessee-health-science-center-3",
+   "layer": "school",
+   "unit": "College of Graduate Health Sciences",
+   "course": null,
+   "title": "Artificial Intelligence (AI) Tools",
+   "url": "https://cghs1.uthsc.edu/exist/apps/CGHSwebsite/data/CollegeInfo/Policies/Artificial-Intelligence-(AI)-Tools.pdf",
+   "date_or_term": "2024-03-26",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "The College of Graduate Health Sciences policy makes instructors decide AI use in courses and research advisors with committees decide it for theses. Misuse falls under the Honor Code.",
+   "stance_why": "The policy states \"The ultimate decision for the use of AI tools in a course lies with the instructor(s)\" and gives theses to advisors and committees, so it sets no stance itself and delegates.",
+   "units": [
+    {
+     "why": "The purpose says the policy \"addresses the use (or lack thereof) of AI tools such as ChatGTP in courses, thesis, and dissertations\", setting scope: P61.",
+     "anchor": "addresses the use (or lack thereof) of AI tools such as ChatGTP in courses, thesis",
+     "frag_start": "This policy addresses the use",
+     "frag_end": "thesis, and dissertations.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance"
+     ]
+    },
+    {
+     "why": "\"Additional guidance may be forthcoming as these technologies evolve\" says the policy will be updated: P54.",
+     "anchor": "Additional guidance may be forthcoming as these technologies evolve.",
+     "frag_start": "Additional guidance may be forthcoming",
+     "frag_end": "technologies evolve.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "informs",
+     "policy_type": "P54",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "\"Irresponsible or impermissible use ... will be considered a violation of the Honor Code and adjudicated by the Honor Council\" classes misuse as misconduct: P36.",
+     "anchor": "will be considered a violation of the Honor Code and adjudicated by the Honor Council",
+     "frag_start": "Irresponsible or impermissible use of",
+     "frag_end": "Honor Council.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Irresponsible use \"includes ... failure to critically evaluate the accuracy of the generated content\", so students must verify output: P31.",
+     "anchor": "failure to critically evaluate the accuracy of the generated content",
+     "frag_start": "Irresponsible use of generative AI tools",
+     "frag_end": "video, or audio).",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P31",
+     "unit_stance": "require",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "Impermissible use includes \"inappropriate citation of generated content\", so AI content must be cited appropriately: P24, with a fit note that no citation format is given.",
+     "anchor": "inappropriate citation of generated content",
+     "frag_start": "Impermissible use of generative AI tools",
+     "frag_end": "violation of course instructions.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P24",
+     "unit_stance": "restrict",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "fit_note": "Frames improper citation as a violation without stating what a proper citation includes."
+    },
+    {
+     "why": "Impermissible use includes \"the use of generated content in violation of course instructions\", making course instructions binding: P04 (instructor sets the rule).",
+     "anchor": "the use of generated content in violation of course instructions",
+     "frag_start": "Impermissible use of generative AI tools",
+     "frag_end": "violation of course instructions.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P04",
+     "unit_stance": "restrict",
+     "topics": [
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "\"the impermissible use may constitute plagiarism or cheating\" classifies misuse as plagiarism or cheating: P36.",
+     "anchor": "the impermissible use may constitute plagiarism or cheating",
+     "frag_start": "Irresponsible use of generative AI tools may",
+     "frag_end": "plagiarism or cheating.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "\"Generative AI tools do have the potential to both assist the student in the learning process and enhance their work\" states a benefit: P87.",
+     "anchor": "potential to both assist the student in the learning process and enhance their work",
+     "frag_start": "Generative AI tools do have the",
+     "frag_end": "enhance their work.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P87",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "\"achieving these benefits requires the student to use generative AI tools in an appropriate and responsible manner\" puts responsibility on students: P29.",
+     "anchor": "requires the student to use generative AI tools in an appropriate and responsible manner",
+     "frag_start": "However, achieving these benefits requires",
+     "frag_end": "responsible manner.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P29",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "fit_note": "Responsibility is about appropriate use, not ownership of submitted work."
+    },
+    {
+     "why": "\"The ultimate decision for the use of AI tools in a course lies with the instructor(s)\" gives the rule to instructors: P04.",
+     "anchor": "ultimate decision for the use of AI tools in a course lies with the instructor(s)",
+     "frag_start": "The ultimate decision for the",
+     "frag_end": "with the instructor(s).",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "\"The instructor should be clear and transparent about which tools are allowed and which ones are not\" is a duty to communicate rules: P09 (nearest, as it concerns clarity of the AI statement).",
+     "anchor": "The instructor should be clear and transparent about which tools",
+     "frag_start": "The instructor should be clear",
+     "frag_end": "ones are not.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"The instructor must clearly state in the course syllabus to what degree students may use AI tools or if the use of such tools is prohibited\": P09.",
+     "anchor": "The instructor must clearly state in the course syllabus to what degree students",
+     "frag_start": "The instructor must clearly state",
+     "frag_end": "use of such tools is prohibited.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "must",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"A student's research advisor in consultation with the student's faculty committee will decide on the use of AI tools in thesis/dissertations\" governs research work: P62.",
+     "anchor": "will decide on the use of AI tools in thesis/dissertations",
+     "frag_start": "A student's research advisor in consultation",
+     "frag_end": "thesis/dissertations.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P62",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "\"The student must be informed in writing by the research advisor the extent to which AI tools may or may not be used ... no later than the student's inaugural committee meeting\" sets a communication deadline for thesis work: P62.",
+     "anchor": "no later than the student's inaugural committee meeting",
+     "frag_start": "The student must be informed in",
+     "frag_end": "inaugural committee meeting.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "must",
+     "policy_type": "P62",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "Procedure 2: \"A student's research advisor will discuss with the student their expectations regarding the use of AI tools\", a conversation requirement for thesis work: P62.",
+     "anchor": "research advisor will discuss with the student their expectations regarding the use of AI tools",
+     "frag_start": "A student's research advisor will discuss",
+     "frag_end": "use of AI tools.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "must",
+     "policy_type": "P62",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "fit_note": "Stresses discussion with the student, which also resembles P66."
+    },
+    {
+     "why": "\"Applies to all enrolled students\" sets who the policy binds: P61.",
+     "anchor": "Applies to all enrolled students.",
+     "frag_start": "Applies to all enrolled",
+     "frag_end": "enrolled students.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance"
+     ]
+    },
+    {
+     "why": "The definition \"Any tool that appears to be able to accomplish activities that could be attributed to natural intelligence\" defines AI for the policy: P61.",
+     "anchor": "Any tool that appears to be able to accomplish activities that could be attributed",
+     "frag_start": "Artificial Intelligence. Any tool that",
+     "frag_end": "to natural intelligence.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance"
+     ]
+    },
+    {
+     "why": "\"Approved by Graduate Studies Council March 26, 2024\" states the body and date that adopted the policy: P84.",
+     "anchor": "Approved by Graduate Studies Council March 26, 2024",
+     "frag_start": "Approved by Graduate Studies Council",
+     "frag_end": "March 26, 2024",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P84",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "No computing-unit or course documents were coded (none collected). Doc 2 review date (2025-10-26) has passed."
+}

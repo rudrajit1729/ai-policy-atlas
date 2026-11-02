@@ -1,0 +1,1184 @@
+Each numbered statement below comes from a US university generative-AI policy document but fit none of the
+policy topics during coding. Decide for each:
+  "place": it states one of the existing policies listed under POLICIES (same meaning, same actor) -> give that policy id;
+  "not_ai": it is not about AI (generic rules, unrelated content);
+  "not_policy": it is about AI but states no rule, recommendation, reason or fact a policy would keep (navigation text,
+               headings, event notices, contact lines);
+  "unique": it is an AI policy that none of the listed policies states (a rare, specific policy).
+Return ONLY this JSON, no prose, no code fence:
+{"decisions": [{"n": 0, "decision": "place", "pid": "P31.02"}, {"n": 1, "decision": "unique"}]}
+Decide every statement.
+
+STATEMENTS (n | actor | AI-normalized statement | original wording)
+0 | admin | we do not take a position at this time on the challenging problem of detecting | we do not take a position at this time on the challenging problem of detecting
+1 | student | Preparing thoughtful questions for office hours | Preparing thoughtful questions for office hours
+2 | instructor | When describing limits on AI use, faculty and staff consider the use cases of Learning (definitions, facts, summaries), Creating (text, images, video) and Analyzing (patterns in quantitative or qualitative data). | Faculty/Staff shall consider, among other things, the following use cases
+3 | all | progression of learner engagement with AI tools in education | progression of learner engagement with AI tools in education
+4 | student | copy everything into a spreadsheet and ask an AI to subtract the numbers | copy everything into a spreadsheet and ask an AI to subtract the numbers
+5 | all | AI systems are transparent and explainable to professors and students | AI systems are transparent and explainable to professors and students
+6 | ta-staff | Partner with faculty, researchers, and IT professionals to leverage their expertise in AI | Partner with faculty, researchers, and IT professionals to leverage their expertise in AI
+7 | student | Students may not use AI to brainstorm, formulate arguments, or template ideas for assignments. | Using AI to brainstorm, formulate arguments, or template ideas for assignments
+8 | student | Students may consult AI generative tools to serve as an editor to review their writing style for grammar, spelling, and organization. | to serve as an editor to review your writing style for grammar, spelling, and organization
+9 | instructor | Clarify the expectations for TAs and Graders regarding the use of AI | Clarify the expectations for TAs and Graders regarding the use of AI
+10 | instructor | activities and assignments that do not promote AI use, or that promote an ethical | activities and assignments that do not promote AI use, or that promote an ethical
+11 | instructor | The best way to guard against such extensions is to utilize proctoring tools | The best way to guard against such extensions is to utilize proctoring tools
+12 | instructor | the HCC receives information from TopHat for in-class questions, homework assignments, or unmonitored tests | the HCC receives information from TopHat for in-class questions, homework assignments, or unmonitored tests
+13 | student | many platforms used by faculty are monitoring the use of Chrome extensions | many platforms used by faculty are monitoring the use of Chrome extensions
+14 | instructor | consider maintaining an “AI-use ledger” for institutional due-diligence | consider maintaining an “AI-use ledger” for institutional due-diligence
+15 | instructor | Instructors who incorporate generative AI should adopt a developmental, co-learning approach | Instructors who incorporate generative AI should adopt a developmental, co-learning approach
+16 | admin | should not be imposed through top- down mandates or driven by commercial hype | should not be imposed through top- down mandates or driven by commercial hype
+17 | student | may not be shared, posted, distributed, uploaded to another AI system, or retained beyond the | may not be shared, posted, distributed, uploaded to another AI system, or retained beyond the
+18 | instructor | consider maintaining an “AI-use ledger” for institutional due-diligence | consider maintaining an “AI-use ledger” for institutional due-diligence
+19 | instructor | Instructors who incorporate generative AI should adopt a developmental, co-learning approach | Instructors who incorporate generative AI should adopt a developmental, co-learning approach
+20 | admin | should not be imposed through top-down mandates or driven by commercial hype | should not be imposed through top-down mandates or driven by commercial hype
+21 | all | explicitly forbid their use for certain categories of activity, including fraud and illegal activities | explicitly forbid their use for certain categories of activity, including fraud and illegal activities
+22 | student | You can use AI tools to revise and edit your work | You can use AI tools to revise and edit your work
+23 | student | Overreliance may lead to a lack of voice and distinctive style | Overreliance may lead to a lack of voice and distinctive style
+24 | instructor | add a blanket AI policy to your syllabus, but this is not advised | add a blanket AI policy to your syllabus, but this is not advised
+25 | student | AI tools may be used to assist with engineering design as long as proper attribution | AI tools may be used to assist with engineering design as long as proper attribution
+26 | all | AI can assist in translating text between languages | AI can assist in translating text between languages
+27 | instructor | AI can convert formats, such as from YAML to Markdown tables. | AI can convert formats, such as from YAML to Markdown tables.
+28 | student | they will quickly develop the skill of recognizing the style that LLMs use | they will quickly develop the skill of recognizing the style that LLMs use
+29 | all | A great use of AI tools is to help draft content | A great use of AI tools is to help draft content
+30 | all | AI tools can be used to draft content such as outlines for agendas and memos, social media posts, and HTML code for web pages. | AI tools can be used to draft content
+31 | instructor | Use of SimCheck or another plagiarism detection service is entirely in the discretion of the instructor, but requires advance notice in the syllabus and a signed consent form from each student. | entirely in the discretion of the instructor
+32 | instructor | Before submitting student work to a generative AI detection tool, an instructor obtains a signed consent that notifies students of the tool and provides FERPA consent and copyright permission. | obtain a signed consent before submitting student work to a generative AI detection tool
+33 | all | Unauthorized distribution, copying, or modification of AI-related resources is prohibited. | Unauthorized distribution, copying, or modification of AI-related resources is prohibited.
+34 | all | Label synthetic media and use content provenance measures | Label synthetic media and use content provenance measures
+35 | instructor | concerns related to academic integrity predate Generative AI | concerns related to academic integrity predate Generative AI
+36 | all | Where attribution is expected, provide it | Where attribution is expected, provide it
+37 | all | Do not acquire a service that USU already provides. | Do not acquire a service that USU already provides.
+38 | all | whether a use of AI is appropriate also depends on the data you put in | whether a use of AI is appropriate also depends on the data you put in
+39 | all | that is the approved method of acquisition | that is the approved method of acquisition
+40 | all | Using AI tools operated by entities subject to the laws of foreign adversary countries | Using AI tools operated by entities subject to the laws of foreign adversary countries
+41 | all | Any use of AI that would discriminate against individuals on bases protected by | Any use of AI that would discriminate against individuals on bases protected by
+42 | all | Using AI to infer emotional state, affect, or sensitive traits | Using AI to infer emotional state, affect, or sensitive traits
+43 | all | AI should never be used as a substitute for peer-reviewed research or professional recommendations. | AI should never be used as a substitute for peer-reviewed research or professional recommendations.
+44 | student | Textual comparison and analysis | Textual comparison and analysis
+45 | student | At Level 0, no AI disclosure is required. | No AI disclosure is required.
+46 | student | At Level 1, no disclosure is required unless specified. | No disclosure, unless specified. Draft of a lab report where you write methods
+47 | student | At Level 2, no disclosure is required unless specified, because the material generated is the student's own. | No disclosure, unless specified. The material generated is your own.
+48 | student | you implement the function within the assignment context | you implement the function within the assignment context
+49 | instructor | Instructors should be careful not to drop students into a challenging assignment | Instructors should be careful not to drop students into a challenging assignment
+50 | instructor | it is reasonable to be concerned that your students may abuse or misuse these tools | it is reasonable to be concerned that your students may abuse or misuse these tools
+51 | instructor | check out our resource on Incorporating Generative AI in the Classroom | check out our resource on Incorporating Generative AI in the Classroom
+52 | instructor | proactively addressing the use of generative AI and minimizing opportunities for the misuse of these | proactively addressing the use of generative AI and minimizing opportunities for the misuse of these
+53 | student | you can request an example or description that can inform how you approach the genre | you can request an example or description that can inform how you approach the genre
+54 | student | students could ask AI to provide an example of that genre, explain what the genre | students could ask AI to provide an example of that genre, explain what the genre
+55 | instructor | Do you make a distinction between AI assistance and AI text generation? | Do you make a distinction between AI assistance and AI text generation?
+56 | all | should be cautious when engaging with AI-generated content | should be cautious when engaging with AI-generated content
+57 | all | Do not trust AI data to give medical, legal, financial advice | Do not trust AI data to give medical, legal, financial advice
+58 | all | the internal processes it uses to generate content are still unclear | the internal processes it uses to generate content are still unclear
+59 | admin | GHS decisions about any potential violation will be based on what guidance faculty provided | GHS decisions about any potential violation will be based on what guidance faculty provided
+60 | admin | The Visual Media Policy (Policy 8205) must be reviewed to consider the growing challenges of AI-generated imagery and deepfake technology. | The Visual Media Policy (Policy 8205) must be reviewed to consider the growing challenges
+61 | admin | Virginia Tech will develop metrics to strategically monitor the impact and progress of AI adoption | Virginia Tech will develop metrics to strategically monitor the impact and progress of AI adoption
+62 | all | limited formal agreements with most external AI tool providers, meaning standard university security and privacy protections may not apply | limited formal agreements with most external AI tool providers, meaning standard university security and privacy
+63 | admin | Need clear definitions of acceptable AI use in assignments | Need clear definitions of acceptable AI use in assignments
+64 | student | if a student's work is substantially identical to another student's work, that constitutes grounds for | if a student's work is substantially identical to another student's work, that constitutes grounds for
+65 | admin | The College and each school should ensure that existing processes and criteria in judicial frameworks and academic honor codes are adequate to address academic misconduct with GAI. | the College and each school should ensure that existing processes and criteria in judicial frameworks
+66 | admin | GAI may impact learning contexts and assessments in ways that require new structures for producing authentic student work that are distinct from those described in existing honor codes and definitions. | GAI may impact learning contexts and assessments in ways that require new structures
+67 | all | Instructors and students share responsibility for communicating about GAI use. | Instructors and students share responsibility for communicating about GAI use.
+68 | all | isn’t necessarily cheating or academically dishonesty | isn’t necessarily cheating or academically dishonesty
+69 | all | some students might misuse AI or otherwise go against explicit instructions to not use AI | some students might misuse AI or otherwise go against explicit instructions to not use AI
+70 | all | you should inform your co-authors and ensure that all content is carefully verified | you should inform your co-authors and ensure that all content is carefully verified
+71 | all | you should always make sure that your collaborators and coauthors are fully aware of the | you should always make sure that your collaborators and coauthors are fully aware of the
+72 | student | Students are expected to discuss AI usage with their advisors and to proactively disclose | Students are expected to discuss AI usage with their advisors and to proactively disclose
+73 | student | You may use AI for general course questions and ungraded work | You may use AI for general course questions and ungraded work
+74 | all | Document relevant processes in the TrustArc personal data inventory | Document relevant processes in the TrustArc personal data inventory
+75 | admin | Asking applicants to disclose whether they used AI in any aspect of the application process | Asking applicants to disclose whether they used AI in any aspect of the application process
+76 | admin | the high school counselor will be contacted to discuss the situation | the high school counselor will be contacted to discuss the situation
+77 | admin | expectations for how AI should or should not be used in the composition | expectations for how AI should or should not be used in the composition
+78 | admin | expectations for how AI should or should not be used in the application process | expectations for how AI should or should not be used in the application process
+79 | admin | a change to the BOG statute that includes authenticity | a change to the BOG statute that includes authenticity
+80 | all | concerns from faculty about academic misconduct issues with AI | concerns from faculty about academic misconduct issues with AI
+81 | student | some students have used AI to write papers for classes | some students have used AI to write papers for classes
+82 | admin | orientation would be a good moment to discuss academic integrity | orientation would be a good moment to discuss academic integrity
+83 | admin | adding a question to an application as to whether AI was used | adding a question to an application as to whether AI was used
+84 | admin | asks an applicant whether they have used AI in any way | asks an applicant whether they have used AI in any way
+85 | admin | We furthermore draw a distinction between undergraduate- and graduate-level courses | We furthermore draw a distinction between undergraduate- and graduate-level courses
+86 | instructor | in graduate courses, the use of AI must be approached with more caution | in graduate courses, the use of AI must be approached with more caution
+87 | instructor | Violations of academic conduct should be assessed according to each syllabus | Violations of academic conduct should be assessed according to each syllabus
+88 | instructor | Taking a prohibitive classroom policy stance against the use of AI tools is problematic (and potentially unethical). | it may be tempting to take a prohibitive classroom policy stance against the use of
+89 | student | please use the “AI Acknowledgement” to highlight your non-AI approach | please use the “AI Acknowledgement” to highlight your non-AI approach
+90 | all | allowing departments and individual faculty members to exercise discretion in tailoring policies | allowing departments and individual faculty members to exercise discretion in tailoring policies
+91 | admin | Establishing community & peer support systems for different levels of AI use | Establishing community & peer support systems for different levels of AI use
+92 | admin | developing or adopting vetted, in -house GenAI tools as a way to reduce privacy risks | developing or adopting vetted, in -house GenAI tools as a way to reduce privacy risks
+93 | all | any one-size-fits-all AI policy could undercut course-level innovation | any one-size-fits-all AI policy could undercut course-level innovation
+94 | admin | Exclude non-native English speakers’ work from detector-heavy evaluations. | Exclude non-native English speakers’ work from detector-heavy evaluations.
+95 | admin | Regular honor council workshops on AI writing patterns and detector limitations | Regular honor council workshops on AI writing patterns and detector limitations
+96 | instructor | Confirm their understanding of AI policies before assignment; | Confirm their understanding of AI policies before assignment;
+97 | instructor | Faculty have discretion over whether students can view SafeAssign Originality Reports | Faculty have discretion over whether students can view SafeAssign Originality Reports
+98 | admin | an anonymous ethics portal that responds to inquiries from campus members | an anonymous ethics portal that responds to inquiries from campus members
+99 | admin | William & Mary must invest strategically in AI focused programs, courses, and tools. | William & Mary must invest strategically in AI focused programs, courses, and tools.
+100 | admin | William & Mary should provide a listing of syllabi language from which faculty may choose | William & Mary should provide a listing of syllabi language from which faculty may choose
+101 | admin | Integrate AI-specific scenarios into Honor Code training and case procedures | Integrate AI-specific scenarios into Honor Code training and case procedures
+102 | instructor | take a proactive approach to prevent misconduct using the teaching and communication strategies | take a proactive approach to prevent misconduct using the teaching and communication strategies
+103 | admin | The colleges neither prohibit AI outright nor require it. | The colleges neither prohibit AI outright nor require it.
+104 | student | A good-faith question will never be held against you | A good-faith question will never be held against you
+105 | student | A good-faith question about whether an AI use is permitted will never be held against | A good-faith question about whether an AI use is permitted will never be held against
+106 | instructor | Instructors should answer AI permission questions promptly | Instructors should answer AI permission questions promptly
+107 | all | The safe harbor in Section 5.5 applies in full to any integrity inquiry. | The safe harbor in Section 5.5 applies in full to any integrity inquiry.
+
+POLICIES (id | actor group | sentence)
+P04.01 | instructor | Instructors decide whether and how generative AI is used in their courses, from prohibiting to encouraging it.
+P63.02 | staff | The institution provides faculty with AI training, workshops, consultations and support.
+P05.01 | instructor | Sample AI syllabus statements span positions from prohibiting to freely permitting AI.
+P04.02 | instructor | Instructors develop a clear course AI policy.
+P63.01 | instructor | Guides, toolkits and curated resources on teaching with AI are available to faculty.
+P110.02 | instructor | Instructors may adopt or adapt the provided sample AI syllabus statements.
+P83.01 | instructor | Instructors base AI decisions on their course learning objectives.
+P65.02 | staff | Administrators or designated offices review AI tools for security, privacy and compliance before approving them.
+P70.07 | staff | The institution offers AI courses, workshops and resources to its whole community.
+P79.01 | instructor | Instructors design assignments that build in student AI use.
+P65.01 | all | Everyone gets IT or governance review and approval before acquiring or using AI tools not already approved.
+P35.01 | instructor | Instructors redesign or adapt their assignments, assessments and learning outcomes in response to generative AI.
+P85.01 | staff | Colleges, departments and programs may set their own discipline-specific AI rules.
+P05.02 | instructor | Instructors choose one of the offered AI policy options or use levels for their course or individual assignments.
+P110.01 | instructor | Sample AI syllabus statements are available to instructors on university resource pages.
+P35.02 | instructor | Instructors assess the learning process, through reflection, process documentation and metacognition, not only the final product.
+P59.01 | instructor | Instructors may use AI to draft and refine course materials such as syllabi, lesson plans, rubrics, quiz questions and assignments.
+P63.03 | instructor | Instructors may consult teaching centers or support offices about AI.
+P35.05 | instructor | Instructors break large assignments into smaller staged parts.
+P35.04 | instructor | Instructors design assignments that AI cannot easily complete for students.
+P35.03 | instructor | Instructors make assignments personal, local, current or tied to specific course materials and discussions, so generic AI output is less useful.
+P63.04 | instructor | Instructors run their own assignments through AI tools to see how AI handles them.
+P134.01 | instructor | Instructors integrate AI into their courses and teaching where appropriate.
+P63.05 | instructor | Instructors learn what AI can and cannot do before using or teaching with it.
+P05.03 | instructor | AI use is described in named tiers, from no AI, to limited or conditional use, to open or encouraged use.
+P34.01 | instructor | Instructors build oral explanation or defense of work into assessments.
+P115.12 | all | Everyone consults institutional AI policies, hubs and guidance pages and reviews the university's AI guidelines.
+P115.01 | instructor | Instructors draw on the institution's AI teaching guides and resources.
+P24.01 | instructor | Instructors may require students to disclose, cite or explain their AI use.
+P67.01 | instructor | Instructors co-create course AI guidelines with their students.
+P59.02 | instructor | AI can support instructors in course design, materials, assessment and grading.
+P44.07 | staff | The institution integrates AI literacy into curricula so students use AI responsibly.
+P83.04 | instructor | Instructors weigh whether AI would support or hinder student learning in each course or task.
+P51.01 | instructor | Instructors provide an alternative assignment or non-AI pathway with the same learning goals for students who cannot or do not want to use AI.
+P92.01 | instructor | Instructors use only approved or university-licensed AI tools.
+P77.01 | instructor | Instructors align course AI policies with university policies and principles.
+P65.03 | staff | Administrators ensure AI vendor contracts include data protection, privacy and security terms, and that vendors disclose their AI use.
+P48.02 | instructor | Instructors tell students when course materials were created with AI.
+P117.08 | all | Users read and understand an AI tool's terms of service and data practices before using it.
+P35.06 | instructor | Instructors design authentic, real-world assessments that require application, analysis and higher-order thinking.
+P04.06 | instructor | Instructors may prohibit AI use in their courses.
+P04.03 | instructor | Instructors may set different AI rules for different assignments within the same course.
+P35.08 | instructor | Instructors use in-class activities, discussion, group work, peer review, presentations and flipped formats so students show learning in person.
+P51.02 | instructor | Instructors consider equity, access, cost and accessibility when designing policies or choosing AI tools.
+P63.08 | instructor | Instructors discuss AI approaches with colleagues and seek shared practice.
+P110.03 | staff | The institution provides sample syllabus language and templates for instructors to use.
+P63.07 | instructor | Instructors attend AI workshops, training sessions or courses offered by their institution.
+P85.03 | instructor | Instructors align course AI policies with department and program guidelines.
+P63.10 | instructor | Instructors weigh AI's benefits, risks, ethics and their own values before setting policy.
+P110.06 | instructor | Instructors may use provided tools and guides to draft their course AI policy.
+P35.09 | instructor | Instructors let students submit work in varied formats such as video, audio, podcasts or multimedia instead of only written text.
+P84.01 | staff | Policies state their purpose or scope: to build frameworks, principles, guidelines and resources for responsible AI use.
+P51.03 | instructor | Instructors ensure all students have equitable access to the AI tools used in their course.
+P65.05 | staff | Staff acquire AI tools only through the university's standard procurement process.
+P77.02 | staff | Administrators ensure AI systems, units' policies and implementation comply with laws and existing university policies.
+P09.01 | staff | Programs, units and administrators set and communicate AI expectations and syllabus requirements for faculty and students.
+P33.01 | instructor | Instructors have students complete writing assignments and other coursework in class rather than outside class.
+P50.01 | staff | The university vets AI tools and puts data protection measures in place.
+P62.01 | staff | Universities develop AI guidelines, standards, templates, training and resources for researchers.
+P54.11 | staff | Administrators establish standing AI committees or councils to address AI issues.
+P35.10 | instructor | Instructors use frequent low-stakes assessments instead of heavily weighted high-stakes ones.
+P62.02 | all | Researchers obtain or consult the IRB and follow its rules before using AI with human-subject data.
+P97.09 | staff | AI tools and systems must meet accessibility standards.
+P83.06 | staff | Departments and administrators review learning outcomes in light of AI.
+P17.01 | staff | Universities are exploring, piloting or expanding AI services and tools on campus, including AI tutoring add-ons.
+P62.03 | student | Students get advisor or committee approval before using AI in theses or research.
+P65.15 | staff | The university maintains and publishes a list of approved AI tools.
+P102.02 | instructor | Instructors read university and school AI guidelines before teaching.
+P15.01 | instructor | Instructors may allow or encourage students to use AI for brainstorming and idea generation.
+P65.06 | instructor | Instructors must get an AI tool reviewed or approved by IT before requiring it in a course or using it with student work.
+P76.01 | staff | Administrators develop frameworks, policies, guidelines and expectations for AI use in university operations and ensure proposals are reviewed and governed.
+P61.01 | instructor | Instructors define what counts as generative AI for their course.
+P84.02 | staff | The draft was shaped by consultation, feedback or public comment from faculty, students, staff and other stakeholders.
+P42.01 | instructor | Instructors restrict AI where it would undermine foundational skills, as in introductory courses.
+P35.11 | instructor | Instructors require students to cite specific, verifiable sources, including links or DOIs, in their assignments.
+P35.12 | instructor | Instructors write clear rubrics that reward critical thinking, application and original thought.
+P66.01 | instructor | Instructors word AI policies with care: welcoming, explanatory and non-punitive in tone, in plain language and without anthropomorphic wording.
+P83.05 | instructor | Instructors identify the skills and knowledge students must practice or demonstrate without AI.
+P110.07 | instructor | Instructors may browse policies and statements from other institutions and educators for ideas.
+P50.02 | instructor | Instructors do not require students to enter personal information or original work into AI tools.
+P76.02 | all | Staff check with or consult their supervisor before using AI tools or new AI uses in their roles.
+P97.02 | instructor | Instructors coordinate with disability services on how accommodations fit AI expectations.
+P107.01 | instructor | Instructors may permit AI only for specific tasks or assignments and clearly state those limits.
+P17.02 | instructor | Faculty and staff may build custom AI tutors, chatbots or assistants for students in the university's AI platform.
+P52.02 | instructor | Instructors consider copyright and intellectual property when designing course AI policies and discuss them with students.
+P62.04 | instructor | Advisors and research supervisors set, discuss and document expectations for AI use with their students.
+P98.01 | staff | Administrators maintain an inventory or registry of all AI tools and systems used at the institution.
+P117.09 | instructor | Users research or critically evaluate a tool, including its reliability and bias, before choosing it.
+P14.01 | instructor | Instructors may allow or use AI for study aids, practice problems and practice exams, and students may use it for self-study.
+P26.01 | instructor | Instructors decide and state what documentation, such as prompts, outputs or drafts, students must keep or submit.
+P35.14 | instructor | Instructors include AI use or the permitted AI level in the grading rubric and grading criteria.
+P80.02 | staff | AI governance bodies are appointed with set membership, including faculty, student and unit representatives.
+P84.03 | staff | Administrators publish baseline principles and a shared framework for generative AI use.
+P36.01 | staff | Administrators update honor codes and conduct policies to cover generative AI.
+P51.04 | instructor | Instructors do not require students to pay for AI tools.
+P08.01 | instructor | Instructors teach students foundational skills without AI first, then allow or introduce AI once those basics are mastered.
+P101.01 | instructor | Instructors get prior approval before using AI or software to assist with grading, and use only approved or university-licensed tools.
+P109.03 | staff | Departments and academic units discuss, encourage and facilitate consistent AI approaches and statements among faculty.
+P37.01 | instructor | Instructors decide and set appropriate penalty levels, including for first-time and repeat offenders, before the course begins.
+P93.01 | instructor | Instructors learn effective prompting techniques and teach students to write and refine prompts, including through assignments.
+P97.01 | instructor | Instructors weigh accessibility, including vendor accessibility documentation, when choosing and integrating AI tools into their courses.
+P98.02 | staff | AI systems undergo ethical review, risk analysis, impact assessment, and accuracy and robustness testing before adoption.
+P115.03 | staff | Administrators compile and maintain central AI resource portals and tell instructors about them.
+P16.01 | instructor | Instructors may permit or expect students to use AI for drafting, outlines, content development or code tasks.
+P29.01 | instructor | Instructors make clear that original, personal student work is what counts for assessment.
+P51.23 | staff | The university provides no-cost or affordable AI tools and computing resources to students.
+P59.03 | instructor | Instructors may use AI to translate course materials or convert them into other formats for diverse learners.
+P70.03 | staff | The institution requires students to take AI literacy courses, workshops or orientation.
+P80.03 | staff | Designated offices develop guidance, policies and protocols on AI use.
+P05.04 | staff | Administrators develop a clear, consistent menu or tier system of AI use policies for instructors.
+P100.01 | instructor | Instructors may choose not to require documentation or acknowledgement of AI use and are not expected to catalog incidental uses.
+P122.01 | staff | Administrators allocate funding and resources for AI infrastructure, institutional AI tool subscriptions, pilot programs, and secure environments.
+P123.01 | instructor | Instructors plan, before the course, how they will detect and handle suspected violations of the AI policy.
+P59.04 | instructor | Instructors do not rely on AI alone to produce whole courses or critical course content.
+P79.04 | instructor | Instructors require AI only when necessary, state how it is used, and follow local requirements.
+P82.01 | instructor | Instructors do not prohibit AI in their courses.
+P85.04 | instructor | Instructors may set their own AI rules, and may vary from department policy if the variation is documented.
+P97.12 | all | Everyone designs AI tools and systems to be accessible to all and to broaden access to learning materials.
+P98.03 | staff | AI systems are evaluated and tested for bias and fairness before deployment.
+P51.08 | instructor | Instructors do not require students to create accounts with non-university AI tools.
+P60.01 | instructor | Instructors do not design courses around surveillance or policing AI use.
+P08.02 | instructor | Instructors allow AI such as tutoring or programming help in advanced courses, with fewer AI restrictions at higher course levels.
+P109.04 | instructor | Instructors discuss and agree with department colleagues on appropriate penalties for unauthorized AI use.
+P109.05 | instructor | Instructors coordinate AI expectations across course sequences, shared curricula and graduate committees so students meet consistent expectations.
+P117.10 | instructor | Users are cautious of claims made by vendors and product providers.
+P122.02 | staff | Administrators establish a dedicated AI research center or institute that supports interdisciplinary collaboration.
+P139.01 | staff | Instructors and units adopt and apply the recommended guidance and considerations.
+P17.04 | staff | University IT maintains, expands and promotes secure enterprise-level AI tools and platforms for the campus.
+P24.02 | staff | Administrators or unit policies set up disclosure requirements and frameworks for AI use.
+P51.05 | instructor | Instructors do not prohibit or replace approved accommodations and assistive technologies.
+P51.06 | staff | Faculty and the university ensure AI use has no disparate impact on students with disabilities.
+P65.07 | staff | Everyone may submit requests for new AI tools to be reviewed or integrated.
+P68.10 | instructor | Instructors adopt a teaching-oriented, proactive rather than punitive approach to AI before any misuse occurs.
+P72.01 | staff | Universities provide students and advisors with contact information, resource lists and a designated referral point for human assistance.
+P80.04 | staff | Units designate AI leads, ambassadors or defined roles to coordinate AI work.
+P81.01 | instructor | Instructors learn the reporting and student conduct procedures before misuse occurs.
+P81.02 | staff | The institution establishes and communicates procedures and guidelines for handling AI misuse.
+P83.07 | instructor | Instructors tailor AI policies to their discipline and local course context.
+P93.02 | instructor | Prompts with more specificity, context and clear roles give better AI output.
+P97.03 | all | Instructors apply universal design principles to their teaching and AI-supported materials.
+P97.04 | instructor | Instructors ensure AI use does not exclude students with disabilities and provide accommodations or accessible alternatives.
+P99.03 | instructor | Instructors use sound teaching practice and proactive course design to reduce the temptation to misuse AI.
+P08.03 | instructor | Instructors may set AI use as excluded or permitted at different stages of an assignment, which scaffolding helps clarify.
+P107.04 | instructor | Instructors must approve AI use before it is allowed in their classes.
+P109.06 | instructor | Instructors develop shared syllabus language specific to the discipline or course.
+P110.08 | instructor | Instructors may write their own AI policy instead of using a template.
+P111.01 | instructor | Instructors may consider integrity pledges or statements that AI was not used as an additional option.
+P114.07 | staff | Everyone should not use university accounts to sign up for AI tools, and staff must not use tools not cleared by InfoSec.
+P116.01 | instructor | Instructors include a notice about ethical and responsible AI use in the syllabus.
+P116.02 | instructor | Instructors make ethical use a main consideration and ensure AI integration in their class promotes it.
+P122.03 | staff | Administrators explore enterprise AI and privacy-protecting options to secure research and other data.
+P51.09 | instructor | Instructors do not mandate that students use AI tools.
+P70.14 | all | Completion of AI training may be required before people are given access to certain AI tools.
+P78.01 | staff | Instructors and staff share academic integrity policies with students and align with instructor guidance on AI.
+P79.05 | instructor | Instructors may let students choose between completing an assignment with or without AI.
+P79.06 | staff | Departments may include AI components in capstone courses.
+P80.05 | instructor | Instructors review or discuss their AI policy with their dean, chair or program director.
+P84.04 | all | Everyone, including schools, instructors, students and stakeholder groups, has input into creating AI policies and guidance.
+P95.01 | instructor | Instructors build a culture of academic integrity in their classroom.
+P97.05 | all | Everyone completes a required accessibility review and Equally Effective Alternative Access Plan before AI tools are used.
+P01.02 | instructor | Instructors should assign writing in writing-intensive courses to be completed without generative AI.
+P100.02 | instructor | Instructors may restrict basic AI features only when they are central to what the assignment assesses.
+P108.01 | instructor | There is no single university-level syllabus statement about generative AI use.
+P109.07 | staff | Faculty and administrators hold ongoing department conversations about appropriate penalties for unauthorized AI use.
+P109.08 | staff | Programs may encourage teaching assistants to connect with supervising faculty so student AI use complies with class guidelines.
+P109.09 | instructor | Faculty follow the agreed syllabus learning outcomes.
+P110.09 | instructor | Instructors who use a provided university statement must include it in the syllabus exactly as written.
+P113.01 | staff | The institution establishes a clear policy on what logging and auditing of AI use takes place.
+P117.01 | all | Users carefully evaluate an AI tool's capabilities and review institutional policies before using it.
+P117.02 | instructor | Faculty and administrators adopt AI tools that meet trustworthiness criteria.
+P117.03 | staff | Staff consult department leadership and colleagues before choosing AI tools.
+P119.01 | student | Students confirm what is acceptable before using AI tools for resumes, cover letters, and interviewing.
+P121.01 | instructor | Instructors and departments increase human interactions in their courses.
+P122.04 | staff | Administrators develop new AI-related certificate programs.
+P126.01 | staff | Administrators give AI agents unique non-human identities and enforce least-privilege access to systems, data and tools.
+P126.12 | staff | Administrators require multi-factor authentication and encryption for AI access and environments.
+P127.01 | instructor | Instructors offer practical guidance and structures for group work in courses with extensive group projects.
+P127.09 | instructor | Instructors may enroll in the Teaching and Learning with Generative AI self-paced Canvas course.
+P128.01 | instructor | Instructors decide whether English language learners may write their original drafts in another language.
+P135.01 | staff | Administrators provide information about the environmental cost of AI models and may publish estimates.
+P138.01 | instructor | Instructors assume that students are already proficient in generative AI tools.
+P33.03 | staff | The university invests in staffed, AI-free in-person spaces where students complete extended assignments or exams.
+P59.13 | instructor | Instructors may choose not to use AI.
+P63.12 | staff | Faculty who teach with AI must be trained.
+P65.16 | staff | Administrators do not authorize licensing or sharing university data or intellectual property externally for AI purposes, and AI agreements need General Counsel review.
+P80.06 | instructor | Instructors get prior written approval from the program director before setting an individual course AI policy.
+P82.03 | instructor | Banning AI harms students by making work harder and cutting them off from useful technologies.
+P89.01 | instructor | Instructors ensure student work focuses on their own interpretation and critical analysis of AI results.
+P94.01 | instructor | Instructors set AI limits that mirror those likely to apply in students' post-graduation professional settings.
+P98.04 | instructor | Instructors select or develop AI tools that preserve usage data.
+P99.04 | instructor | Instructors normalize struggle in learning and give students many options to get help.
+P99.05 | instructor | Students who understand the purpose of their assignments and are invested in learning are less likely to over-rely on AI.
+P09.03 | instructor | Instructors clearly tell students whether and how AI may be used, leaving no ambiguity.
+P09.02 | instructor | Instructors include a generative AI statement in their course syllabus.
+P09.05 | instructor | Clear AI expectations help students understand the rules and reduce confusion.
+P24.03 | instructor | Instructors tell students how to cite or acknowledge AI use.
+P09.04 | instructor | Instructors specify permitted and prohibited AI uses with concrete examples.
+P66.02 | instructor | Instructors discuss the AI policy with students in class, beyond the written syllabus.
+P66.03 | instructor | Instructors explain to students the learning rationale behind their AI rules.
+P47.01 | instructor | Instructors disclose to students whether and how they use generative AI.
+P66.04 | instructor | Instructors discuss AI's ethical issues, risks and biases with students.
+P78.02 | student | Students read the syllabus and assignment instructions to learn what AI use is allowed.
+P41.03 | student | Course assignments and goals are designed to build students' own skills, and AI use would undermine them.
+P66.08 | instructor | Instructors invite students to ask questions about AI use and the policy.
+P31.01 | instructor | Instructors teach, remind and discuss with students that AI output can be wrong and must be verified.
+P66.06 | instructor | Instructors explain the purpose and value of assignments to students.
+P66.07 | instructor | Instructors discuss academic integrity with students at the start of the course.
+P37.02 | instructor | Instructors state the consequences of AI misuse in the course policy.
+P134.02 | student | Students learn to use AI because it prepares them for their careers.
+P09.06 | instructor | Instructors communicate AI policies early, at course start, and often, both in writing and orally.
+P05.05 | instructor | Instructors clearly state in the syllabus and assignments which AI uses are permitted, specifying an AI use category for each assignment or course.
+P50.03 | instructor | Instructors tell students about AI data privacy risks, for example in the syllabus.
+P70.04 | instructor | Instructors share AI literacy guides and resources with students.
+P115.13 | student | Students are pointed to student guides and library pages on AI and review the named AI guidelines before using AI.
+P44.02 | student | Course learning goals include developing students' skills in using AI effectively, responsibly and critically.
+P07.02 | instructor | Instructors tell students which AI-embedded everyday tools, such as Grammarly, are acceptable.
+P123.02 | instructor | Instructors tell students in advance whether and how they will use AI detection tools.
+P66.10 | instructor | Instructors may use optional activities such as debates, scenarios or short comments to start AI conversations with students.
+P09.07 | instructor | Instructors may choose their own approach to AI, add optional policy statements, and repeat policies elsewhere.
+P32.02 | instructor | Instructors tell students that AI is a tool that supports learning and does not substitute for their thinking.
+P92.04 | instructor | Instructors direct students to university-approved AI tools and how to access them.
+P83.09 | student | Syllabus statements tell students the AI policy exists to protect and promote their learning and the course's goals.
+P05.06 | instructor | Instructors may use icons, color labels, tables or scales to show the permitted AI level for each assignment.
+P05.07 | student | Students are informed that each assignment states its AI level, from no AI to full AI collaboration.
+P36.02 | instructor | Instructors state in their syllabus or remind students that unauthorized AI use is academic misconduct.
+P06.03 | all | Courses without their own AI policy fall back to the school, department or university default policy.
+P40.02 | student | Students' work in the course will be submitted to AI-detection or plagiarism tools as a condition of the course.
+P05.08 | instructor | Tier frameworks help instructors communicate to students what AI use is acceptable.
+P123.03 | instructor | Instructors tell students at course start how AI misuse will be handled under the applicable misconduct procedures.
+P54.01 | student | Course rules and AI policies are provisional and may change during the term.
+P02.03 | instructor | Instructors allow and encourage students to use AI as a tool.
+P49.01 | instructor | Instructors state whether students may upload course materials to AI tools.
+P42.02 | student | Students are told that this course requires developing fundamental skills and knowledge without AI.
+P72.02 | instructor | Instructors remind students of available academic support resources.
+P11.02 | instructor | Instructors tell students that AI policies differ between courses and write course-specific policy statements.
+P133.01 | instructor | Instructors state in the syllabus or remind students that they are responsible for the work they submit.
+P51.10 | student | Students talk to their instructor about access concerns, accommodations or alternatives.
+P101.02 | instructor | Students may opt out of AI-assisted grading and request human review.
+P11.03 | instructor | Students face varying AI policies across courses and may wrongly assume other courses' rules apply in an instructor's course.
+P134.03 | instructor | Instructors tell students at the start of the course that AI is a professional skill they will likely use in their careers.
+P45.01 | instructor | Instructors base AI rules on their existing collaboration norms and tell students how AI fits within them.
+P51.11 | instructor | Instructors tell students in the syllabus or course description what required AI tools will cost.
+P67.02 | instructor | Instructors discuss appropriate AI use with students or co-design AI-related work, as shown in policy examples and resources.
+P77.03 | student | Students familiarize themselves with university and course AI policies before using AI tools.
+P91.01 | instructor | Instructors may permit AI for editing, proofreading, grammar help or style adjustment in their course.
+P115.04 | instructor | Instructors consult syllabus statement guidance and state their AI expectations clearly to students.
+P22.01 | instructor | Instructors may state in the syllabus or in advance whether AI is allowed on exams and quizzes.
+P44.03 | instructor | Instructors provide tutorials, resources and office-hour help so students can learn to use AI tools.
+P66.11 | student | Students ask questions, discuss expectations and reflect on the ethics of AI use.
+P03.02 | student | Students are discouraged from using generative AI tools unless the instructor directs or explicitly allows it.
+P111.03 | student | Students sign an academic integrity agreement or AI contract and agree to abide by its terms at the start of the course.
+P130.01 | instructor | Instructors collect an in-person or handwritten baseline writing sample from students early in the course.
+P45.02 | student | Students treat generative AI use like assistance from another person when the instructor has given no guidance on AI.
+P111.04 | instructor | Instructors have students sign a statement acknowledging course expectations at the start.
+P02.04 | student | Generative AI use is neither encouraged nor prohibited on assignments in this course.
+P06.04 | instructor | Instructors state explicitly in the syllabus or assignment what AI use is allowed and tell students AI is unauthorized otherwise.
+P100.03 | instructor | Instructors state which conventional tools, accessibility features, or exceptions are not counted as AI or remain permitted.
+P105.01 | instructor | Instructors may permit AI summarization of readings or content they have provided, as set in course policies.
+P115.07 | instructor | Instructors link their course AI policy to the academic honesty policy or honor code and campus AI guidance.
+P131.06 | student | Students understand what AI tools can and cannot do, including their limitations.
+P47.05 | instructor | Instructors will not use generative AI for teaching, grading or evaluating student work, or upload student work to AI tools.
+P68.01 | instructor | Course policies are educational, not punitive, and misuse is a chance to learn and adapt.
+P97.06 | student | Students using AI for accommodations work with the disability services office and their instructor; other AI uses are prohibited unless approved.
+P03.03 | student | Students are discouraged from using AI tools to generate content such as text, code, images or audio that ends up in their work.
+P109.10 | staff | Administrators ensure students receive consistent, clear information about permissible AI use across syllabi, assignments and university communications.
+P110.14 | instructor | Consistent syllabus language helps students understand their responsibilities across courses.
+P12.01 | instructor | Instructors may allow AI support for researching problems and explaining concepts.
+P19.01 | instructor | Instructors make students aware of the limits of AI-generated content and of prohibited uses such as submitting it as their own.
+P19.02 | instructor | Instructors may state in their course which uses of AI to produce student work are prohibited.
+P39.01 | instructor | Instructors state in the course that they will not run student work through AI detection software.
+P46.02 | instructor | Instructors tell students at the start of the course that they will not use AI to grade their work.
+P56.03 | student | Certain core expectations for AI use apply in every course.
+P67.04 | all | The class co-creates a class agreement on AI use with students early in the semester.
+P69.01 | instructor | Instructors should be able to show students knew the course rules; departures from stated restrictions can be evidence of violations.
+P91.02 | instructor | Instructors decide and tell students whether AI editing tools are allowed in the course.
+P99.07 | instructor | Instructors help students regulate their behavior and discuss what to do if they need help, giving support from the start.
+P06.05 | student | If an instructor gives no AI statement, students may use AI but must disclose all use.
+P100.04 | instructor | Instructors resist using basic generative AI functions such as spelling and grammar assistants.
+P103.01 | instructor | Instructors who implement a chatbot in their course use the provided disclosure statement.
+P111.07 | student | Students have already signed the Honor Code pledge.
+P113.02 | instructor | Instructors clearly label and advertise assignments where AI usage logs are shared with them.
+P117.04 | instructor | Instructors tell students which tools and resources are reliable sources of information.
+P124.01 | instructor | Instructors make AI expectations transparent and apply them consistently.
+P127.02 | instructor | Instructors tell students how to respond if a group member is using AI explicitly.
+P135.03 | instructor | Instructors may state that environmental concerns justify not using AI tools in their courses.
+P40.03 | instructor | Syllabi state requirements for process tracking software and possible use of detection tools.
+P87.02 | instructor | Instructors describe to students how generative AI use can enhance their learning.
+P89.02 | instructor | Instructors may define in course policies which AI data analysis uses are permitted.
+P99.08 | student | Students ask the instructor for help, even at the last minute, rather than misusing AI.
+P36.07 | student | Students must not use AI unless and only as the instructor explicitly authorizes.
+P10.04 | student | Students ask their instructor when unsure whether or how AI use is allowed.
+P24.04 | student | Students cite or attribute AI-generated content and AI tools they use, like any other source.
+P31.02 | student | Students verify AI output before relying on, using or submitting it.
+P01.04 | student | Students must not use generative AI for any work in the course.
+P24.05 | student | Students disclose their AI use in a statement describing how, where and why they used it.
+P77.09 | all | Existing university policies and laws apply to AI use, and everyone complies with them.
+P50.04 | all | Users do not enter confidential, sensitive, personally identifiable or restricted data into AI tools.
+P31.03 | all | Everyone critically reviews and verifies AI output for accuracy before relying on it.
+P133.02 | student | Students are responsible for the accuracy and content of AI-assisted work they submit.
+P15.02 | student | Students may use AI to brainstorm and generate ideas.
+P78.06 | student | Students follow the AI rules their instructor sets for each course and assignment.
+P50.05 | all | Everyone puts sensitive or non-public data only into AI tools approved for that data type.
+P19.03 | student | Students must not use AI to generate content for, or include AI output in, their assignments.
+P32.04 | student | Students must not use AI to replace their own thinking, effort or learning.
+P19.04 | student | Students must not present AI-generated work as their own.
+P24.06 | all | Everyone is transparent about their AI use and discloses or labels AI-generated content.
+P09.09 | instructor | Instructors state AI expectations at the assignment level, not only course-wide.
+P50.15 | all | Everyone protects data, privacy and security and follows university data and privacy policies and laws when using AI.
+P02.05 | student | Students may use generative AI tools in this course and on assignments.
+P29.03 | student | Students submit only work that is entirely their own.
+P32.03 | student | Students use AI to support their learning, not as a shortcut or replacement.
+P02.06 | student | Students are encouraged to use generative AI tools to support their learning and work.
+P50.06 | student | Students do not enter personal, confidential or sensitive information into AI tools.
+P62.05 | all | Researchers follow journal, publisher and funder rules that restrict AI use or require its disclosure.
+P77.11 | student | Students follow the university's academic integrity policy, honor code and conduct rules when using AI.
+P56.05 | all | Everyone uses AI ethically and responsibly, in line with university values.
+P79.07 | student | Students use AI in course assignments as the instructor specifies.
+P92.05 | all | Everyone uses only university-approved or licensed AI tools, logged in with their university account.
+P12.02 | student | Students may use AI to explain, clarify, or give alternative explanations of difficult concepts and course material.
+P91.03 | student | Students may use AI to check grammar, spelling and proofread their own writing.
+P52.11 | all | Users comply with copyright and intellectual property law and do not use AI to infringe it.
+P50.07 | all | Users enter only public information into AI tools, assuming anything entered becomes public; public data may be used freely.
+P62.06 | student | Researchers disclose and cite their use of AI in research outputs, theses and proposals, and are transparent about it.
+P44.04 | instructor | Instructors teach students how AI works, including its capabilities and limitations.
+P02.07 | student | Students may use AI if they document, cite or disclose the use as required.
+P25.05 | student | Students identify the specific AI tool, provider, version and access date in disclosures.
+P31.05 | instructor | Instructors review AI output they produce for accuracy and remain responsible for it.
+P26.03 | instructor | Instructors may require students to submit AI prompts, transcripts, drafts or process reflections.
+P25.03 | student | Students include the prompts they used when citing, acknowledging or disclosing AI use.
+P115.08 | student | Students consult guidance on how to cite or disclose AI use.
+P50.08 | instructor | Instructors do not enter student work or identifiable student information into AI tools without student consent or approved tools.
+P91.04 | student | Students may use AI to revise and edit their own drafts.
+P107.05 | student | Students get instructor permission before using AI for coursework, and discuss in advance how and why they plan to use it.
+P72.03 | student | Students seek help from instructors, librarians, writing centers and tutoring.
+P14.02 | student | Students may use AI to generate practice questions, quizzes, flashcards or self-tests, and are encouraged to do so to support their learning.
+P50.09 | all | Users check the data's classification and consult the data owner or IT before entering non-public data into AI tools.
+P44.06 | instructor | Instructors teach and encourage students to use AI ethically and responsibly.
+P19.06 | student | Students must not use AI to complete assignments or assessments meant to show their own understanding.
+P91.05 | student | Students may use AI to outline, plan and organize their ideas.
+P116.03 | student | Students use AI ethically and responsibly.
+P15.03 | student | Students may use AI to brainstorm topics, narrow and refine research questions, and do initial research.
+P29.04 | student | Submitted work reflects the student's own understanding, thinking, voice, effort and skills.
+P31.04 | student | Students check that sources and citations produced by AI exist and are accurate.
+P45.10 | student | Students treat AI like help from another person under existing plagiarism and integrity rules.
+P73.02 | all | Humans keep final authority and accountability for important decisions; AI only supports them.
+P50.10 | all | Users minimize, anonymize or de-identify data before entering it into AI tools.
+P52.03 | all | Users verify that AI output does not infringe copyright, plagiarize or violate third-party intellectual property before using or sharing it.
+P32.05 | student | Even when AI is allowed, students remain primary authors of their ideas, analysis and final work.
+P31.08 | instructor | Instructors assign students to critique, evaluate or verify AI output.
+P02.08 | student | Students may use generative AI freely, with no restrictions and no need to cite or document it.
+P25.06 | student | Sample disclosure and acknowledgment statements show how students can describe their AI use.
+P26.06 | student | Students keep their prompts, chats and AI use logs and be ready to provide them.
+P24.08 | student | Students follow their instructor's requirements for citing and disclosing AI use.
+P26.04 | student | Students submit their AI prompts and outputs or chat transcripts with their work.
+P30.01 | student | Students can explain and defend their submitted work when asked.
+P27.01 | student | Students clearly identify which parts of their work AI generated.
+P53.02 | all | Users identify, check and mitigate bias in AI output when using it.
+P30.02 | student | Students understand everything they submit and do not submit AI output they do not comprehend.
+P12.04 | student | Students may use AI as a personal tutor or study aid.
+P26.07 | student | Students reflect in writing on their AI use and its effect on their learning.
+P25.07 | student | Students cite AI using an accepted citation style such as APA, MLA or Chicago, as their discipline or class requires.
+P50.11 | all | Users opt out of data training, adjust privacy settings and read privacy policies before using AI tools.
+P92.06 | student | Students use university-approved or provided AI tools, signed in with their university account, for academic work.
+P100.05 | student | Students may use basic spelling and grammar tools, which are not counted as generative AI.
+P72.06 | all | Everyone directs AI security, privacy and data questions to IT, information security or privacy offices.
+P76.03 | staff | Staff and units may use generative AI for routine administrative and operational tasks such as drafting emails, summarizing meetings and scheduling.
+P26.11 | all | Everyone keeps detailed records of their AI use, such as tools, versions and prompts.
+P50.12 | all | Researchers and staff do not enter unpublished or confidential research data or intellectual property into AI tools.
+P118.03 | all | Everyone using AI weighs its potential benefits and risks, and considers its impacts, before and while using it.
+P49.03 | all | Everyone must not upload copyrighted, licensed or others' intellectual property into AI tools without the owner's permission.
+P129.01 | student | Students may ask AI for feedback or critique on their own drafts and writing to find gaps and improve them.
+P105.02 | student | Students may use AI to summarize readings and sources.
+P21.02 | student | Students do not use AI to draft, edit, revise or proofread their work.
+P12.03 | student | Students may use AI to find information, background knowledge, or a topic overview, like a search engine or reference source.
+P79.09 | student | Students are expected to use AI tools in this course.
+P59.10 | instructor | Instructors use AI to augment, not replace, their teaching, expertise and judgment.
+P73.03 | all | Everyone does not let AI make the sole or final decision on consequential matters about individuals, such as grades or admissions.
+P16.02 | student | Students may use AI to generate outlines, first drafts or content for their assignments.
+P49.04 | student | Students must not upload course materials, including instructor-created lectures, slides and assignments, into AI tools without the instructor's permission.
+P16.05 | student | Students may use AI where the course or instructor permits it.
+P32.07 | student | Students ask themselves whether their AI use supports or undermines their learning.
+P26.08 | student | Students may be required to submit their prompts, transcripts or AI documentation.
+P29.07 | student | By submitting work, students attest it is their own original work.
+P112.03 | instructor | Instructors model responsible, transparent AI use for students.
+P10.09 | all | Staff and others who are unsure about AI use consult their supervisor, unit leadership or IT.
+P118.02 | student | Students make informed choices, weighing benefits and risks, about when and how to use AI.
+P14.03 | student | Students may use AI to create study guides, summaries and other study aids from their notes or course materials.
+P32.06 | student | Students do not rely solely on AI output, and treat it as a starting point to evaluate and build on.
+P36.03 | student | Students do not use AI to fabricate information, evade detection, conceal use, or circumvent learning goals.
+P59.05 | instructor | Instructors may use approved AI tools to draft feedback on student work, give an initial review, or score against a rubric.
+P59.09 | instructor | Instructors use AI to enhance teaching and save time.
+P62.07 | all | Researchers may use AI to support tasks such as drafting, editing, coding, analysis, idea development and research design.
+P89.03 | student | Students may use generative AI to analyze data, find patterns and draw insights from it.
+P07.05 | student | Students need not disclose routine or embedded AI uses such as spell-check or autocomplete.
+P53.07 | all | Everyone uses AI in ways that promote fairness, inclusion and diversity and reduce bias.
+P78.10 | student | Students understand and follow the university, school, program and departmental AI guidelines.
+P91.06 | student | Students may use AI as a general writing aid or assistant.
+P05.10 | student | Students may use AI freely or extensively where the policy is open.
+P25.10 | student | Example reference formats show how to cite AI tools in APA, MLA or similar styles.
+P62.23 | student | Researchers use AI ethically, with integrity and in line with disciplinary and research ethics standards.
+P93.03 | student | Students refine and revise their prompts through repeated trial and error and do not expect the best result on the first try.
+P53.13 | student | Students consider the environmental and ethical impacts of their AI use.
+P62.09 | student | Graduate students discuss their AI use with their advisor or committee.
+P72.07 | all | Anyone may direct questions about AI and AI policy to designated university offices, officials or committees.
+P13.01 | student | Students use generative AI to debug their code.
+P15.04 | student | Students may use AI for brainstorming only, and the final work must be their own.
+P74.01 | all | Nobody uses AI to create or distribute malware, phishing or other malicious content, or uploads data that helps do so.
+P92.14 | all | Users do not use unapproved, personal or third-party AI tools or accounts for university work.
+P07.03 | student | Students must not use AI writing assistants such as Grammarly in coursework.
+P74.02 | student | Students do not use AI to fabricate data, citations or evidence.
+P62.15 | all | Reviewers do not use generative AI in peer review, which major funders and journals prohibit.
+P104.01 | student | Students may use AI tools to find, search for and research sources and information on their topic.
+P120.01 | student | Students check that AI output is not plagiarized or a direct copy of existing work, verify original sources, and cite them.
+P128.02 | student | Students may use AI to translate text from one language to another.
+P14.04 | student | Students may use AI as a tutor, study partner or role-play partner to rehearse skills, interviews, presentations and likely questions.
+P73.01 | staff | AI-assisted decisions must include human review, approval and oversight by qualified people who can override the AI output.
+P77.05 | instructor | Instructors follow FERPA, privacy and university policies when using AI.
+P93.04 | all | Effective use of AI requires thoughtful, well-crafted prompting, and prompt quality determines output quality.
+P65.12 | staff | Administrators may block or disable unauthorized or risky AI tools.
+P03.04 | student | Students are discouraged from using generative AI tools for coursework, though AI is not banned.
+P103.04 | staff | Administrators tell people how and why AI is used, including where it affects them, and are open about its use.
+P14.05 | student | Students may use AI for general studying, exam preparation, reviewing concepts and preparing for assignments.
+P26.10 | student | Students keep drafts, notes and version histories as evidence of their own work process.
+P52.04 | student | Users avoid uploading confidential, proprietary, unpublished or others' work to AI tools.
+P74.09 | all | Nobody uses AI to create discriminatory, defamatory, harmful or obscene content.
+P32.10 | student | Students must not use AI summaries in place of doing the readings.
+P29.11 | student | Students revise and adapt AI output rather than pasting it into their work as-is.
+P48.06 | staff | Staff disclose how they use AI in their work and materials.
+P103.05 | all | Everyone discloses AI use to the people affected when AI is used in interactions or decisions.
+P15.06 | student | Students may use AI to explore alternative approaches, options, and examples, including for prototyping and coding problems.
+P16.03 | student | Students may use AI to write small code snippets, starter code or routine code structures.
+P19.09 | student | Students must not use AI to generate code.
+P74.10 | all | Nobody uses AI for illegal, fraudulent or unlawful activity.
+P76.04 | all | Everyone has a human review AI-generated content for official use before it is sent, published or used.
+P93.05 | student | Students write clear, specific and detailed prompts that give context, and avoid vague, minimal prompts.
+P11.06 | student | AI permission in one course or assignment does not apply elsewhere.
+P127.03 | student | Group members agree on AI use together and disclose it to the instructor.
+P95.08 | all | Students uphold academic integrity and do not use AI for academic dishonesty or unfair advantage.
+P105.03 | student | Students must not use AI to summarize or contextualize assigned readings or source materials.
+P16.04 | student | AI-generated content should not exceed a set share of a student's work, such as 25%.
+P20.01 | student | Students do not enter or paste assignment questions, prompts, instructions or exam questions into AI tools.
+P27.02 | student | Students show AI-generated text in a different font color, highlight or red marking.
+P31.10 | student | Everyone tests and verifies AI-generated code before using it.
+P59.11 | instructor | Instructors use AI ethically and in line with institutional standards, and departments discuss acceptable uses.
+P62.08 | all | Researchers are responsible for the accuracy of any content AI creates for them.
+P74.11 | all | Nobody uses AI to harass, bully, stalk, intimidate or sexually exploit others.
+P74.12 | all | Everyone avoids using AI to deceive, mislead, manipulate or misrepresent others, including fraudulent deepfakes.
+P78.11 | student | Students are responsible for using AI ethically and for knowing what is permitted.
+P80.16 | staff | Leaders and units ensure their teams understand, implement and comply with the AI policy.
+P80.17 | staff | Exceptions to the AI policy are approved by a designated office or committee through a defined request process.
+P92.08 | staff | Employees and staff use only approved or licensed AI tools when working with university data or business.
+P47.06 | instructor | Instructors get student permission before putting student work into AI tools.
+P40.04 | instructor | Instructors may require students to work on platforms that record version history.
+P75.05 | all | Everyone stays vigilant against phishing and scams, including AI-enabled ones.
+P07.04 | student | Students do not use embedded, built-in, or plug-in AI tools for core assignments or to generate or heavily change text.
+P107.07 | student | Students must explain or submit, in writing, how they plan to use AI before using it.
+P140.01 | student | Students do not have another person, entity or generative AI write or do any substantive part of their assignment or course work.
+P44.05 | student | Students get hands-on experience working with AI tools in class.
+P53.12 | all | Users must not rely on AI output that shows bias, and must not use AI in discriminatory ways.
+P58.01 | student | Students do not use generative AI to impersonate themselves in classroom contexts, such as discussion board posts or Zoom or Teams chat.
+P62.10 | all | Do not upload submitted manuscripts, grant proposals or other material under confidential review into AI tools.
+P62.12 | all | Researchers obtain informed consent and protect participants' rights and privacy when using AI.
+P65.13 | all | Vendors and third parties must not use university data to train or improve AI models unless explicitly authorized.
+P76.09 | staff | Administrators may use AI in institutional functions such as student services, advising, retention and operations, subject to authorization and privacy.
+P86.01 | all | Meeting hosts obtain consent from all participants before recording or transcribing with AI, and recording does not begin until everyone consents.
+P97.07 | all | Everyone may use AI to create accessible materials, such as alt text, captions, alternative formats and screen-reader-friendly documents.
+P06.08 | student | Students may use AI where the instructor permits it, with disclosure or attribution.
+P86.02 | all | Meeting organizers tell participants when AI tools such as recording or transcription are used in meetings.
+P10.06 | student | When unsure whether AI use is allowed, students avoid using AI or assume it is not allowed.
+P101.04 | instructor | Instructors take extra review, consultation or caution before using AI to grade or assess student work.
+P106.01 | student | Students may use AI to generate images, illustrations, figures, and other visuals for their assignments.
+P115.16 | student | Students review the academic integrity policy or contact the named office with questions.
+P13.02 | student | Students use generative AI to explain error messages, diagnose errors, and suggest debugging approaches.
+P14.06 | student | AI is commonly used for self-quizzing, study guides, practice and supplemental learning, and can increase practice.
+P32.08 | student | Everyone must keep human judgment in the loop and not rely solely on AI for decisions.
+P45.04 | student | Students complete each assignment without substantive assistance from others, including automated tools.
+P52.15 | all | Users seek guidance from relevant offices and policies on AI and copyright.
+P74.03 | student | Students do not use AI to hide plagiarism, evade detection, or mislead others about where their work came from.
+P91.07 | student | Students may use AI to format citations, references, bibliographies and documents.
+P105.06 | student | Students may use AI to summarize readings only with instructor permission.
+P129.04 | student | Students may use AI to raise counterarguments and gaps in their own thinking.
+P59.08 | staff | Teaching assistants and staff use AI in their roles only as the instructor authorizes.
+P101.05 | instructor | Instructors may use AI to help draft formative feedback, flag patterns and generate ideas, provided they personalize the feedback.
+P117.05 | all | Users choose AI tools from reputable, legitimate and trustworthy providers.
+P117.06 | student | Users choose a tool designed for the task and consider whether AI is the most appropriate tool.
+P133.05 | student | Human authors are responsible for the accuracy and integrity of AI-assisted code and research outputs.
+P134.04 | instructor | Instructors help students develop critical thinking and ethical judgment about AI use to prepare for the workplace.
+P16.07 | student | Students may use AI to generate, debug and refine code, with the output reviewed.
+P32.09 | student | Students make their final submission show how they developed and refined ideas and directed AI with their own critical thinking.
+P62.16 | all | Researchers disclose their use of AI in IRB applications.
+P73.06 | all | Everyone should not use AI for recruitment, personnel or disciplinary decision making.
+P74.04 | student | Nobody uses AI to generate or spread misinformation or false, misleading or harmful content, including deepfakes.
+P74.13 | all | Nobody uses AI to threaten, bypass or gain unauthorized access to university systems, security or controls.
+P74.14 | all | Everyone does not use AI to fabricate, falsify or alter data, research results, academic content or other information.
+P77.06 | student | Students comply with privacy, data protection, FERPA, HIPAA and export laws when using AI.
+P78.12 | all | Everyone follows the AI guidelines set by their institution, dean, instructor or supervisor.
+P89.04 | all | Everyone may use AI for data analysis, pattern recognition and visualization in research and coursework.
+P100.09 | all | Everyone need not disclose AI embedded in larger software or used for minor, routine tasks like grammar editing.
+P120.02 | student | Students must not use AI to generate bibliographies, references or citations, and must do their own research.
+P126.02 | all | Users must not share passwords, credentials, API keys, tokens or other secrets with AI tools or agents.
+P126.07 | all | Users secure AI systems and university resources, and consult the security office.
+P129.02 | student | Students may compare their own work or solution with AI output, or check it against a rubric or by verification.
+P15.07 | student | Students may use AI for brainstorming only if their instructor allows or approves it.
+P17.05 | all | Students may use university-provided AI tools in coursework when permitted, and are encouraged to use them for research and writing.
+P26.13 | student | Students provide their original pre-AI draft or original assignment alongside the AI-assisted version.
+P29.10 | student | Students do their own work and properly cite any sources they use.
+P34.02 | instructor | Instructors check in with students about their process and how they arrive at their work while it is underway.
+P45.06 | student | Students may use AI for anything they are allowed to do with another person, such as discussing work or generating ideas.
+P49.05 | student | Students consider copyright, ethics and whether they have permission before uploading others' content to AI tools.
+P59.07 | instructor | Instructors may use AI to draft course announcements, emails and other communications with students.
+P72.08 | all | Everyone contacts a librarian to confirm citations, licensed content, copyright or whether a resource may be uploaded to AI.
+P73.07 | staff | Administrators must not use AI to make final personnel, hiring or employment decisions.
+P86.03 | student | Students obtain the instructor's permission before recording class sessions or lectures, including with AI tools.
+P91.08 | all | AI can help with editing and grammar, but it may rewrite text or fall short of other help.
+P93.06 | all | Everyone structures prompts with elements such as a role or persona, task, context and format.
+P117.07 | all | Users verify that a tool has adequate security and is appropriate for their data before using it.
+P12.06 | instructor | Instructors encourage or assign students to use AI as a Socratic tutor or to explore and learn course topics.
+P125.01 | student | Students run AI-detection, similarity or originality checks on their drafts before submitting them.
+P126.03 | all | Code generated by AI is reviewed and approved before use in production or institutional IT systems.
+P128.03 | student | Students must not use translation software to translate or transform their own work, and must write directly in English.
+P14.07 | student | Students may use AI to plan their studying, such as study schedules, work plans, checklists and organized notes.
+P16.08 | student | Students may use AI to revise their own work, get feedback and develop ideas.
+P17.06 | student | Course-specific AI tools guide students through research questions, citation and writing feedback during their work.
+P27.03 | student | Students state AI use in code comments, including which tool was used, and mark AI-generated code portions.
+P32.13 | student | AI use must support learning, and the intellectual effort and ownership must remain with the person.
+P49.06 | all | Everyone uses only licensed or university-approved AI tools, or has permission, when uploading materials.
+P52.06 | all | Users do not ask AI to reproduce or mimic copyrighted works or claim such output as their own.
+P62.18 | student | Researchers do not use AI for certain tasks such as generating data, literature searches or heavy thesis writing.
+P76.05 | all | Everyone follows university communications standards and approval processes for public-facing and official communications and materials.
+P77.15 | staff | Staff use AI in compliance with institutional guidelines, export rules and applicable policy.
+P86.04 | all | Hosts disable AI recording or transcription features when inappropriate or when a participant does not consent.
+P86.05 | all | Everyone does not use AI recording or transcription tools in confidential, sensitive or HR meetings, or allow unfamiliar bots to join meetings.
+P90.01 | student | Students do their own thinking, develop their ideas and attempt the assignment before turning to AI.
+P90.02 | student | Students write their own first draft or make an independent attempt before using AI, and do not use AI for that first draft.
+P91.10 | student | Students are encouraged to use AI to proofread, outline, revise and edit their work.
+P92.16 | all | Only university-approved AI meeting and transcription tools are used; unapproved third-party bots are not permitted.
+P96.01 | student | Students do not cite or use AI as a source, including as a scholarly source for facts or assignments.
+P97.13 | student | Students may use AI as assistive technology or as part of an approved disability accommodation.
+P98.05 | staff | Faculty, staff and instructors monitor and validate AI tools and their outputs to ensure they work as intended.
+P02.10 | student | Students may use AI tools but should do so with caution.
+P02.15 | instructor | Instructors help students engage with AI, consider its ethical implications, and explore what they can create.
+P07.06 | student | Students turn off or restrict AI features when a ban applies, and confirm and limit what data AI tools can access.
+P103.07 | all | Chatbots and AI chat assistants disclose their scope, non-official status, and potential for incorrect information, and AI is not presented as human.
+P104.02 | student | Students may use AI to summarize research and generate annotated bibliographies.
+P106.02 | student | Students may submit multimedia assignment material containing AI-generated images, audio, music or video if the use is properly documented.
+P107.09 | staff | Staff and faculty must consult a supervisor, administrator or chair before using AI, including non-approved tools.
+P111.09 | student | Students include a statement with their work, such as an integrity statement, a note on permitted GenAI use, or responsibility for accuracy.
+P115.09 | all | Everyone uses library databases and approved AI tools and data allowances.
+P118.04 | all | Everyone decides whether to use AI deliberately, considering necessity, resource cost and goals; availability alone does not justify use.
+P119.02 | student | Students may use AI to prepare for careers, such as exploring occupations and skillsets, resumes, cover letters, and job interviews.
+P121.02 | instructor | Instructors keep feedback and faculty-student engagement human-centered and personal rather than AI-generated.
+P126.08 | staff | Users use university-authenticated or managed accounts and compliant devices, not personal accounts, for AI tools.
+P127.04 | student | Students list all team members who participated in the assignment.
+P128.04 | student | Students may use AI to learn writing conventions such as vocabulary, sentence structure and genres, or to transform their own work into another genre.
+P129.05 | instructor | Instructors may encourage or ask students to use AI to get feedback on their work.
+P131.02 | student | AI-generated content, including code, may be of low quality, inaccurate or not meet standards for a passing grade.
+P131.05 | all | Everyone using generative AI is responsible for understanding its capabilities, limits and risks and for using it appropriately.
+P134.05 | instructor | Instructors bring in industry guest speakers and real-world scenarios showing how AI is used in professions.
+P140.02 | student | Students do not copy from another person or from a generative AI system; doing so is cheating.
+P15.09 | student | Students must not use AI for brainstorming.
+P16.09 | student | Students may use AI to write code comments and documentation.
+P23.02 | student | Students close or turn off the AI tool before writing their assignment independently.
+P25.17 | student | Students describe how they verified or reviewed AI-generated content.
+P35.16 | student | Students may use AI in structured assignment tasks such as revising a draft or critiquing an AI response.
+P35.17 | instructor | Course-specific assignments have students compare or surpass AI-generated solutions, with guidelines for AI use at each stage.
+P40.05 | instructor | Instructors monitor student process through drafts, checkpoints, and reflections instead of relying on detectors.
+P40.06 | student | Students write their work in Google Docs or Office 365 so editing history can be viewed.
+P51.13 | all | Everyone can opt out of AI use without negative consequences.
+P52.07 | student | Students document AI use in their intellectual property contributions and consider commercialization implications.
+P52.17 | all | Users clarify who owns AI-generated content and assume it may not be copyright eligible.
+P56.17 | instructor | Instructors use AI to support learning outcomes and balance academic integrity with its benefits, prioritizing human agency.
+P70.06 | instructor | Instructors and staff may help students learn about AI through hands-on activities and demonstrations.
+P74.15 | student | Nobody uses AI to create false or forged records, such as academic records, recommendations or medical excuses.
+P74.16 | all | Nobody uses AI for unauthorized surveillance, monitoring or collection of personal information about individuals.
+P86.06 | all | Participants ask the host whether recording or AI transcription is enabled, and decline to take part if the host insists.
+P86.07 | student | Everyone does not create or distribute images, audio, video or likenesses of real people, including deepfakes, without their explicit consent.
+P87.17 | all | Everyone should leverage AI to personalize learning and advance learning and creativity.
+P89.05 | student | Students may use AI for calculations and spreadsheet manipulation only as specified in assignments.
+P93.07 | student | Students break complex tasks into parts, set context in the first prompt, and ask follow-up questions or multiple versions.
+P93.08 | student | Users may ask the AI to explain its reasoning, critique its own output or suggest changes with explanations.
+P93.09 | student | Students experiment with different AI tools and familiar subjects to learn their strengths and weaknesses.
+P93.10 | all | Everyone takes care that bias in prompts can skew AI output, and uses specificity to get more diverse outputs.
+P128.06 | student | Students do not present AI-translated text as their own original work.
+P01.12 | all | Neither instructors nor students use AI tools in this course.
+P03.05 | student | Students are discouraged from using AI as a research or academic source when its output cannot be properly cited or sourced.
+P03.08 | all | Everyone avoids generative AI use where it is not suited to the task or leads to excessive reliance.
+P04.11 | staff | Teaching assistants and consultants follow the instructor's AI decisions and expectations.
+P06.09 | student | Where no policy is given, students may use AI tools unless specifically prohibited, and individuals decide for themselves.
+P101.06 | instructor | Instructors do not rely on AI as the primary source of feedback, automate full feedback, or use it for grading written work.
+P105.08 | student | Students may use AI to summarize readings if they write their own synthesis and cite accordingly, or verify the summary.
+P112.04 | instructor | Instructors model curiosity, critical evaluation and adaptability by engaging with generative AI themselves.
+P116.04 | all | Everyone is cautious with AI content that has legal, ethical or reputational implications.
+P119.03 | student | Students may use AI for everyday personal tasks, such as deciphering email tone, creating recipes, and planning meals.
+P121.03 | student | Students do not use AI tutoring to replace human interaction with instructors or teaching assistants.
+P126.04 | student | Users enable extra security such as VPN or additional authentication when accessing AI tools.
+P126.09 | all | Users must not connect AI tools or agents to university systems or data without approval.
+P126.10 | staff | Administrators limit information access to authorized personnel and protect AI systems against cyber threats.
+P128.05 | student | AI translation can benefit language learners and help show refined linguistic ability.
+P13.03 | student | Students use AI to explain code syntax or specific code snippets and provide examples.
+P135.04 | all | Everyone considers environmental impact and uses the most efficient or sustainable AI tools and models for the task.
+P21.03 | student | Students do not use AI to fix bugs, rewrite proofs, or perform analytical tasks for them.
+P25.18 | student | Students cite the specific AI writing tool when they present more than one sentence of minimally edited AI text.
+P25.19 | all | Everyone takes care to avoid plagiarism when using AI and does not use AI to plagiarize without citation.
+P25.20 | student | Students who cannot save or share an AI chat cite it as personal communication, in the text only.
+P27.04 | student | Example code comments or notes credit an AI tool for the work.
+P35.18 | student | Students follow assignment-specific rules, such as working in a monitored workspace, sending outlines, and not using AI on final papers.
+P37.03 | student | AI-generated submissions cannot receive a passing grade.
+P51.15 | student | Students use only AI tools that are free or provided to them.
+P51.16 | student | Students are expected to obtain an AI account or pay for the most advanced version.
+P62.20 | student | Disclosure of AI use may be optional for minor uses such as finding references, brainstorming or grammar checking.
+P71.01 | staff | Employees and meeting participants promptly report AI concerns, problems, or issues to the host, IT, or the designated office.
+P74.19 | all | Nobody uses AI to impersonate real people, including instructors or students, through text, images, audio or video.
+P75.02 | all | Everyone uses safe computing practices, such as caution with links and good antivirus protection, when working with AI.
+P75.06 | all | Everyone is cautious of deceptive or fake AI-generated images, videos and audio, and when creating or altering them.
+P76.11 | staff | Administrators do not use AI for sensitive functions such as legal advice, facial recognition security, vendor bid review or financial and HR projects.
+P83.12 | student | Students may use AI tools when the use aligns with or complements the course learning outcomes.
+P86.08 | student | Students do not use AI tools to transcribe, record, take notes on or summarize course lectures, unless approved as an accommodation.
+P90.03 | student | Students may use AI to write, revise or summarize only after they have engaged with the work or materials themselves.
+P90.04 | instructor | Instructors introduce AI engagement only after students have done their own cognitive work, and ask students to edit their own work after using AI.
+P91.11 | student | Students must not use AI to generate, rewrite, restructure or make major revisions to their content.
+P93.11 | all | Everyone provides examples of the desired output or of their own writing so the AI can adapt.
+P03.06 | instructor | Instructors may discourage student use of generative AI by encouraging other tools.
+P06.10 | student | When no policy is stated, only routine grammar corrections are allowed; substantive AI use requires prior approval.
+P06.11 | instructor | Instructors will assume students have not used AI except in the explicitly allowed cases.
+P08.05 | student | Students do not use AI during the peer review stage or on the final draft.
+P10.08 | student | When unsure, students err on the side of full disclosure of their AI use.
+P101.08 | instructor | Instructors use AI feedback mainly for low-stakes or ungraded assignments.
+P103.03 | staff | A warning about proper AI use and user responsibilities is displayed in the interface when interactive AI use begins.
+P104.04 | instructor | Instructors may use AI to support literature exploration or summary.
+P106.03 | student | Students may use AI to generate preliminary visual concepts, design ideas, slide layouts, or presentation structures.
+P106.04 | student | Students may use AI to generate non-technical concept illustrations only with the course instructor's permission.
+P107.12 | instructor | Instructors approve AI use based on how appropriate it is and its educational value.
+P107.13 | student | AI use in the course will be limited and specific.
+P110.15 | student | Students do not use GenAI tools to summarize, generate or interpret thoughts in their work.
+P112.02 | instructor | Researchers reinforce responsible AI practices with their mentees.
+P119.04 | student | Students personalize and customize their application materials to stand out.
+P119.06 | all | Everyone may make occasional personal use of university AI resources if it does not interfere with university business use.
+P12.07 | student | Students must not use AI chatbots to get answers to conceptual questions about course content at the most restrictive level.
+P120.04 | student | Students should not submit or lightly edit AI text that closely mirrors existing sources.
+P121.07 | staff | Teaching assistants and staff do not let AI replace the human element needed for reflective conversations, though it may handle mundane questions.
+P124.02 | instructor | Instructors grant or deny AI permission to all students in a course alike.
+P125.02 | student | Students perform due diligence on their work before submitting it.
+P126.05 | all | Users restrict permissions granted to AI applications to only what is necessary.
+P126.06 | all | Users sandbox and clearly scope AI agents and bots used for university purposes.
+P127.06 | student | Students are strongly discouraged from using generative AI in group work.
+P127.07 | student | Group work guidelines on AI depend on the type of assignment.
+P128.07 | student | Students who use AI for translation discuss its implications and limitations with the instructor.
+P129.06 | instructor | Instructors may use generative AI to get feedback on their own writing.
+P13.04 | instructor | Instructors show students how to use generative AI to get help with code syntax and debugging.
+P13.05 | instructor | Instructors use AI to identify errors in student code and suggest possible fixes.
+P130.02 | instructor | Instructors may use rubric descriptors or tags to mark repetitive or generic writing while grading.
+P135.10 | instructor | Instructors use AI judiciously and purposefully rather than casually.
+P136.01 | student | Students consider whether the datasets used to train an AI model were collected ethically.
+P14.08 | student | Students may not use generative AI to develop their understanding of a concept.
+P140.03 | student | Students do not have generative AI take their place for any academic performance without the instructor's knowledge and permission.
+P16.10 | student | Students write code comments in their own words.
+P16.11 | student | Students generate at least three iterations of limited length.
+P17.07 | instructor | Instructors invite students to use custom course AI chatbots during their coursework.
+P19.10 | student | Students may use AI to help generate drafts, write code, analyze data or build project components.
+P20.02 | student | Students may break problems into steps and paraphrase those steps in their own words.
+P20.03 | student | Students do not enter assignment or exam answers into generative AI tools.
+P20.04 | student | Students do not prompt AI to get solutions or reusable code for an assignment.
+P23.03 | student | Students take notes in their own words while interacting with the AI tool.
+P23.04 | student | Students type AI-generated material manually into their composition.
+P25.21 | all | Writers may cite the original source directly instead of the AI tool once they have confirmed it.
+P27.05 | all | Everyone documents AI-derived code sections, including who reviewed them.
+P27.06 | student | Students put AI-generated text in quotation marks with citation and never include it verbatim without them.
+P27.08 | student | Students disclose AI use in data analysis methods and figure captions.
+P27.09 | student | Students may acknowledge AI use through in-text citations, quotations, references or comments.
+P31.11 | student | Students document the steps they took to verify AI output.
+P43.01 | student | Students slow down and reconsider their AI use if they cannot complete a similar task without AI support.
+P48.07 | staff | Staff are not permitted to use generative AI to produce materials.
+P68.02 | instructor | Instructors encourage students to ask for extensions when struggling, to reduce pressures that lead to cheating.
+P71.02 | instructor | Instructors report discrepancies or issues with AI tools to IIT or the University AI Committee.
+P74.05 | instructor | Instructors do not misrepresent AI-generated content as original work.
+P74.06 | student | Students take care to avoid unintentional plagiarism or data fabrication when using AI.
+P74.07 | instructor | Instructors and researchers may intentionally use AI to produce deceptive content for pedagogical or research purposes.
+P80.07 | student | Students get instructor approval for accommodations or exceptions to course AI rules and contact the instructor to discuss them.
+P86.11 | all | Everyone balances productivity and convenience with respect for privacy and treats recordings as private among those who took part.
+P89.06 | student | AI use for data analysis is permitted only with oversight and under transparency policies.
+P89.07 | all | Everyone uses extreme caution when using AI tools to analyze data.
+P89.08 | student | Students must not use AI to analyze data, draw conclusions or interpret simulation results in graded work.
+P93.12 | student | With instructor approval, students may use AI platforms to learn prompt engineering.
+P96.02 | student | Using generative AI tools crosses the boundary of acceptable collaboration.
+P97.08 | all | Everyone avoids relying on AI tools that are not accessible.
+P99.10 | student | Students give themselves enough time to complete their work to avoid academic integrity violations.
+P22.02 | student | Students do not use unauthorized AI during exams, quizzes or tests.
+P46.09 | instructor | Instructors keep human oversight of AI-assisted grading and feedback and remain accountable for grades.
+P01.09 | student | Students must not use AI on graded work, assessments, exams or work submitted for evaluation.
+P46.03 | instructor | Instructors do not use AI to grade or assign grades for student work.
+P33.04 | instructor | Instructors move exams and major assessments to in-person, supervised formats.
+P05.11 | student | Students must not use AI on assignments or assessments designated as no-AI.
+P33.05 | instructor | Instructors may use lockdown browsers or proctoring tools for assessments.
+P22.03 | student | Students do not use unauthorized notes, devices or outside resources during an exam; doing so is cheating.
+P35.19 | instructor | Instructors use controlled assessment conditions such as timed work, handwriting, in-class exams or randomized questions.
+P14.09 | student | Students may use AI for study only when the output is practice material and is not submitted as graded work.
+P82.04 | instructor | AI undermines the reliability of take-home work and other assessments of student learning.
+P33.06 | instructor | Instructors may have students work in front of them or restrict the devices and technology students can have during exams.
+P111.11 | instructor | Instructors have students affirm an honesty pledge on each assignment or exam.
+P46.04 | instructor | Instructors review student work and confirm that grades are accurate, consistent and explainable from the student's evidence.
+P56.15 | all | Everyone does not use AI in ways that undermine learning objectives, assessment integrity or evaluation of student work.
+P101.09 | instructor | Instructors create a quality assurance process so AI grading tools produce accurate, explainable and defendable grades, and avoid tools that cannot be validated.
+P79.12 | student | Students are assessed on the value they add to AI output.
+P07.07 | instructor | AI agents and browser plugins can act on students' behalf, such as answering quizzes and discussion posts.
+P07.09 | all | Autonomous AI agents are prohibited, and agentic AI used to complete assessments without human interaction is cheating.
+P22.05 | student | Students do not use AI wearables such as smart glasses during assessments, and bring standard glasses if needed.
+P22.06 | student | Students complete in-class quizzes solely as their own work.
+P33.08 | student | Students complete all assessments in the classroom, by hand and without digital devices or technology.
+P62.21 | instructor | Advisory committees attest to or approve the authenticity of the student's work and AI disclosure.
+P19.13 | instructor | Instructors should not allow students to turn in unedited chatbot output as original work.
+P22.07 | student | Students check with their instructor before using AI on take-home quizzes, exams or assignments.
+P22.09 | student | Using AI to answer quiz or exam questions is a potential misuse.
+P33.09 | instructor | Instructors base at least half of course points on demonstrations of understanding.
+P82.05 | instructor | Proctoring may reduce AI use in assessments.
+P36.05 | student | Unauthorized AI use is academic misconduct, cheating or dishonesty.
+P28.03 | student | Presenting uncited or undisclosed AI content as one's own is plagiarism or an integrity violation.
+P39.02 | instructor | AI detection tools are unreliable and do not prove misconduct.
+P36.06 | student | AI violations are handled through existing academic integrity and conduct processes, with possible disciplinary action.
+P36.09 | student | Students do not submit AI-generated content without acknowledging or citing it.
+P57.01 | instructor | Instructors hold a supportive, non-accusatory conversation with the student before escalating suspected misuse.
+P69.02 | instructor | Instructors do not treat AI detector results as the sole evidence of misconduct.
+P39.03 | instructor | Instructors do not run student work through AI detection tools.
+P81.03 | instructor | Instructors report suspected AI misuse promptly to the academic integrity office.
+P40.07 | instructor | Instructors may use AI detection or plagiarism tools on student work.
+P34.05 | instructor | Instructors ask students to explain their work and process when AI misuse is suspected.
+P39.06 | instructor | AI detectors are biased against non-native English speakers and other student groups.
+P37.04 | student | Students who misuse AI face a zero or failing grade on the assignment.
+P130.03 | instructor | Instructors compare suspicious work with the student's earlier writing to spot style changes.
+P82.06 | instructor | AI use in student work is hard or impossible to detect or prove, and no detection method is foolproof.
+P39.05 | instructor | Instructors use AI detection tools with caution.
+P77.08 | all | AI use can create public records or violate law and policy, bringing disciplinary or legal consequences.
+P81.04 | instructor | Suspected AI misuse is handled through the institution's academic integrity process.
+P71.03 | all | Everyone immediately reports suspected data breaches, security incidents, or unauthorized disclosure of sensitive data involving AI tools to the designated office.
+P81.05 | staff | The designated office or dean investigates and resolves reported AI violations under established integrity procedures.
+P130.06 | instructor | Instructors check citations, since fabricated sources can signal AI-written work.
+P37.05 | student | Students who misuse AI may face a reduced grade, grade penalty, required revision, or other academic consequences.
+P69.05 | instructor | Instructors may use detector results only as preliminary or supporting evidence.
+P69.03 | instructor | Instructors may gather drafts, revision histories and process records when misuse is suspected.
+P37.08 | instructor | Instructors decide the consequences of AI misuse at their discretion.
+P37.06 | student | Students who misuse AI may fail the course, with penalties escalating for serious or repeated violations.
+P39.08 | instructor | False positives risk false accusations, harm students, and erode trust.
+P28.05 | student | Undisclosed or uncited AI use carries penalties, such as a failing grade or disciplinary action.
+P37.07 | student | Students who misuse AI may face disciplinary action, up to suspension, expulsion or dismissal, and misconduct reports.
+P115.11 | instructor | Instructors consult the conduct or academic integrity office about suspected misuse.
+P69.07 | instructor | Instructors base AI misconduct cases on documented evidence, not suspicion alone.
+P37.09 | all | Policy violations may lead to disciplinary action, loss of AI access, termination, or legal liability for all users.
+P36.12 | instructor | Instructors enforce academic integrity policies against unauthorized AI use.
+P71.04 | all | Everyone reports AI-related risks, misuse or concerns through university channels.
+P115.10 | instructor | Everyone is pointed to academic integrity and misconduct policies, processes and support resources.
+P130.05 | instructor | Instructors review submitted work for unusual, inconsistent or suspicious features when they suspect AI use.
+P39.14 | instructor | Instructors note other advice about detection tools, such as tool behavior, privacy, and teaching students instead.
+P75.03 | all | Everyone reports suspicious messages and communications to the designated IT or security office.
+P68.03 | staff | Misconduct processes favor educational responses over punitive charges.
+P69.06 | instructor | Instructors weigh multiple forms of evidence, since no single indicator establishes AI use.
+P64.01 | instructor | Students accused of AI misuse have the opportunity to respond to the allegation and present their explanation or evidence.
+P69.04 | staff | Detector output alone is insufficient to find a student responsible and does not determine responsibility.
+P10.11 | student | Not knowing or not asking about AI rules is no excuse for a violation.
+P68.05 | instructor | Instructors treat first AI misuse as a teachable moment with educative sanctions.
+P09.11 | instructor | Unclear or absent AI statements make it hard to address academic misconduct.
+P39.09 | instructor | Administrators do not use detection scores or results as evidence in academic misconduct cases.
+P39.10 | instructor | AI detectors can be evaded through editing, rewording, or humanizing tools.
+P62.22 | student | Misuse of AI or lack of attribution can count as research misconduct.
+P24.12 | student | Students honestly explain their AI use when asked.
+P133.07 | student | Inaccurate or poor AI-assisted work will be graded accordingly, with reduced credit.
+P40.08 | staff | The university provides and monitors AI-detection and plagiarism tools to detect AI misuse.
+P63.13 | instructor | Support and consultation are available on AI detection, academic integrity and reporting suspected misuse.
+P64.02 | student | Students may appeal an AI misuse decision through the university's appeal process.
+P81.06 | instructor | Instructors include evidence, documentation and an explanation of the suspected violation in their report.
+P69.08 | instructor | Instructors review and verify suspected cases carefully and objectively, with human analysis, before reporting or taking action.
+P37.10 | instructor | Instructors and administrators apply proportionate responses to AI misuse, taking account of intent, policy clarity and prior offenses.
+P40.09 | instructor | Instructors use only AI-detection tools that the university has approved or that meet set conditions.
+P68.06 | instructor | Instructors offer the student a chance to revise, rewrite, redo or resubmit the work after suspected misuse.
+P69.09 | staff | Misconduct findings require a standard of proof, such as clear and convincing evidence or more likely than not.
+P81.08 | instructor | Instructors submit the required report form within the stated deadline, one per violation.
+P60.04 | instructor | Instructors teach responsible AI use rather than banning or policing it.
+P130.09 | instructor | Instructors may run their assignment prompt through an AI tool and compare the output with student work.
+P130.10 | instructor | Content beyond or outside the course material or assignment requirements can signal AI use.
+P28.06 | student | Instructors set documentation and disclosure requirements; work that does not follow them is treated as an attestation of no AI use or a violation.
+P60.02 | instructor | Policing AI use and using AI detectors harms trust and the relationship between students and instructors.
+P64.03 | staff | Students receive fair, transparent treatment and due process in AI misuse cases.
+P69.11 | instructor | Instructors judge suspected misuse using course expectations, assignment requirements, student work and context.
+P71.05 | all | Everyone reports conduct that violates AI policy, and failing to report a known violation is itself a violation.
+P71.06 | staff | Administrators provide channels for reporting, complaints and redress, and receive and review the reports.
+P71.07 | staff | Administrators activate incident response, document and investigate incidents, notify affected parties and regulators, and refer violations to proper bodies.
+P72.04 | all | Academic integrity questions and suspected AI misuse go to conduct, honor code or student rights offices.
+P80.08 | all | Denials, disputes and unresolved questions are escalated to a named committee, leader or program head.
+P80.09 | all | Academic misconduct involving AI is handled by the conduct office or instructor, who determine violations.
+P81.10 | instructor | Instructors may resolve concerns informally or impose an academic sanction under the applicable guidelines.
+P124.03 | instructor | Instructors apply academic misconduct enforcement and grading consistently across students, so similar cases receive similar outcomes.
+P130.11 | instructor | A student's inability to explain or defend their submitted work can signal AI use.
+P28.07 | student | Disclosing AI use does not shield students from misconduct findings, since the use may still be misuse or a violation.
+P34.06 | instructor | Instructors may require a short in-person or supervised oral exam or redo of the work when unauthorized AI use is suspected.
+P37.11 | instructor | Instructors apply the stated penalty when AI misuse occurs, such as a zero or a grade penalty.
+P37.12 | staff | Employees who violate AI policy may face disciplinary action up to termination, and violations may be noted in evaluations.
+P60.03 | staff | Instructors will increasingly need to trust students to follow AI policies voluntarily, because prohibitions cannot be enforced.
+P64.04 | student | Students accused of AI misuse may contest the allegation or defend themselves, including through a meeting with the instructor.
+P68.08 | instructor | Instructors can establish progressive remedial steps giving students prevention, clarification and corrective intervention before formal disciplinary action.
+P81.11 | instructor | Instructors do not impose their own sanction or grade penalty before the deciding office makes a finding.
+P124.04 | staff | Administrators document rules and develop precedents for AI-related academic misconduct.
+P34.07 | student | Students meet with the instructor to discuss the assignment when AI use is suspected or not acknowledged.
+P64.05 | instructor | Instructors notify the student and offer the available resolution options after suspecting AI misuse.
+P64.06 | student | Students can seek support from campus staff, such as Community Standards or the Disability Access Center, when handling an allegation.
+P69.15 | staff | The burden of proof in academic misconduct cases lies with the university.
+P71.08 | student | Students report unethical AI use or AI misinformation and hallucinations to their instructor or supervisor.
+P71.12 | all | Users report AI tool malfunctions, vulnerabilities, or performance and accuracy problems to the designated office or incident database.
+P81.12 | instructor | Instructors notify the student of the allegation and gather evidence before submitting the report.
+P81.13 | instructor | Instructors do not discuss the suspected violation with the student or their chair.
+P95.04 | student | Academic dishonesty with AI is considered wrong and leads to penalties.
+P113.03 | student | AI interactions and records could be accessed during formal misconduct investigations.
+P114.02 | all | Users whose AI outputs violate others' intellectual property are responsible for the damage and may face disciplinary sanctions.
+P114.03 | all | A person unlinked to the university who causes damage alone answers for it, exonerating the university, and is barred from using the technology there.
+P123.05 | instructor | Instructors act promptly when AI policy violations occur or are suspected.
+P124.05 | instructor | Instructors must not allow grading practices that conflict with stated integrity requirements.
+P127.08 | student | All students in a group are held equally responsible for a violation.
+P130.12 | staff | These signs are not certain proof of AI use.
+P38.01 | student | Students report inadvertent use of generative AI.
+P46.08 | staff | Grades without proper instructor review could be successfully appealed by students.
+P60.06 | staff | Administrators ensure students do not feel policed.
+P64.07 | student | Students must submit their written statement within the set deadline after an allegation.
+P64.08 | staff | Reports of suspected AI misuse go to the department chair, who gathers information.
+P68.09 | staff | The university develops and deploys educational modules to help students who commit violations.
+P71.09 | student | Students may need to take further action together with their instructor or supervisor after reporting.
+P71.10 | all | Researchers report adverse events or unanticipated problems to the IRB.
+P81.15 | student | Students may receive informal violations, which are not stored in the university database, and formal ones, which are.
+P54.02 | staff | Guidance is a living document that will be updated and will evolve as AI technology and practice change.
+P54.04 | staff | A named body regularly reviews and updates the AI policy and guidance.
+P66.13 | instructor | Instructors remind students of the AI policy throughout the semester.
+P70.10 | student | Students use guides, tutorials and training to build AI literacy.
+P54.03 | all | Community members may submit feedback, suggestions and comments on the policy.
+P54.08 | staff | Policy documents state their publication and revision dates and version history.
+P102.09 | all | Everyone stays informed about AI developments, its benefits and risks, and university guidance.
+P54.06 | staff | The AI policy is interim or under development, and fuller policy is forthcoming.
+P54.07 | all | AI tools, practices and citation norms are changing quickly, so rules cannot cover everything.
+P98.06 | staff | Administrators regularly reassess deployed AI systems for performance, accuracy, security and compliance.
+P54.09 | instructor | Instructors revisit and update their course AI policy over time.
+P102.03 | instructor | Instructors keep learning about AI over time through professional development.
+P54.10 | staff | Administrators gather community feedback and survey input to inform AI policy.
+P63.14 | instructor | Communities of practice, forums and peer events let faculty learn about AI together over time.
+P70.11 | all | Community members attend AI training, workshops and use available AI resources.
+P42.04 | student | Students master fundamentals without AI before using it.
+P66.14 | all | The university supports ongoing campus-wide dialogue about AI to build shared understanding.
+P55.01 | staff | Administrators evaluate and track the impact of AI on student learning and outcomes through rigorous, continuous assessment.
+P102.04 | student | Students stay informed of updates to AI guidance and policies.
+P65.10 | staff | Administrators review approved AI tools again periodically or when they change.
+P70.13 | all | All students, faculty and staff complete required AI training, often every year or at onboarding.
+P53.10 | staff | Administrators mitigate AI bias, evaluate AI systems for bias, and promote awareness of AI ethics.
+P65.11 | staff | The university is continuing to evaluate AI tools, and current agreements and detection tools have limits.
+P98.07 | staff | Administrators regularly audit AI systems for bias, fairness and discrimination, and correct problems found.
+P82.07 | instructor | Detecting AI use will become harder as AI tools improve and as students learn to evade detectors.
+P80.11 | staff | Designated offices monitor and audit campus AI use for compliance.
+P93.13 | all | Everyone learns about prompt engineering and how to write prompts that work.
+P102.06 | staff | Teaching assistants, staff and administrators stay informed about evolving AI developments.
+P52.08 | staff | The university protects ownership of research and course materials, reviews its guidance regularly and fosters dialogue on AI and IP.
+P88.05 | staff | Universities forge partnerships with industry, government agencies, and academic institutions to share knowledge and support AI work.
+P55.03 | staff | Academic misconduct and honor code cases involving generative AI have increased.
+P88.06 | staff | Universities engage students, faculty, staff, and the broader community in discussions and forums on AI.
+P98.09 | staff | Administrators maintain documentation such as model cards, approvals and records for AI systems, stored in approved repositories.
+P135.08 | staff | Administrators consider, understand, measure and limit the environmental costs of AI, including in technology evaluation and sustainability plans.
+P54.12 | staff | Designated bodies recommend revisions or updates to the policy.
+P54.13 | staff | Policy changes are documented, archived and communicated to the campus.
+P55.04 | all | Research on the effects of AI on learning is still early and many universities have no policy yet.
+P88.03 | staff | Universities consult employers, alumni, and advisory boards and track workforce needs to keep AI guidance current.
+P39.12 | staff | Administrators keep monitoring and reviewing AI detection tools over time.
+P54.14 | instructor | Instructors communicate any changes to the course AI policy to students in writing.
+P63.16 | instructor | Instructors share their AI assignments, syllabus statements and approaches with colleagues.
+P80.12 | staff | Final authority to interpret the AI policy and decide on it rests with the president or governing board.
+P88.04 | staff | Universities build or join a coalition of peer institutions to help set shared standards for AI.
+P88.07 | all | Faculty and staff take part in university-wide conversations on AI and share effective practices and concerns.
+P98.11 | staff | Administrators keep AI data accurate and maintained, and AI systems transparent, auditable and aligned with public record laws.
+P122.09 | staff | Administrators foster and promote interdisciplinary AI research and its application.
+P134.06 | student | Students build an AI portfolio, and instructors keep evaluating and refining their teaching over time.
+P137.01 | all | Users furnish AI-related information and records when requested under public-records laws, and retain AI-related content such as prompts and outputs.
+P35.22 | instructor | Instructors periodically revisit and replace assignments that AI handles too easily.
+P51.17 | instructor | Instructors keep revisiting how they ask students to use AI with respect to access.
+P54.16 | all | Everyone in teaching, learning and research adapts to the growing field of AI.
+P55.05 | instructor | Instructors regularly assess the impact of AI use in their courses on learning outcomes and skills, and adjust based on student feedback.
+P94.06 | student | Students should become competent enough to surpass generative AI in the future, in academia, research and the workplace.
+P98.10 | staff | Administrators keep an audit trail and logs of AI inputs, outputs, decisions and agent actions, and retain records for audit.
+P102.08 | all | Everyone keeps abreast of changes in the law, including copyright law, affecting AI use.
+P11.07 | all | Permitted uses of generative AI may change over time.
+P122.05 | staff | Administrators assess over time whether IT services are sufficiently resourced to support AI use.
+P122.10 | instructor | Faculty are encouraged to seek grants and support for AI work.
+P135.05 | staff | Administrators audit the institution's own AI footprint over time.
+P137.03 | staff | Administrators retain applicable records and then destroy them in accordance with the state's records retention requirements.
+P40.11 | instructor | Instructors may reserve the right to scrutinize work, with time-based dated reviews at any point.
+P76.06 | staff | Safety and surveillance guidelines would benefit from attention to AI-enhanced systems.
+P31.12 | student | AI output can be inaccurate, biased or fabricated, and students should be aware of this.
+P04.13 | student | AI rules differ across courses and instructors, so students check each course's expectations.
+P61.03 | all | Generative AI means AI systems that create new content such as text, images, audio, video or code.
+P50.14 | all | AI tools may store, reuse or train on what users enter, so entered information may not stay private.
+P56.04 | all | The university encourages and supports responsible exploration, experimentation and use of AI by its community.
+P17.08 | all | The university provides licensed AI tools to its students, faculty and staff.
+P50.17 | all | University-approved AI tools are vetted and protect entered data, including from model training.
+P41.08 | student | Using AI can replace, bypass or shortcut the practice and work through which students learn and build skills.
+P53.04 | all | AI models reflect and can amplify biases from their training data and design, so outputs may be biased.
+P133.08 | all | Everyone remains responsible for the content they produce with AI; responsibility cannot shift to the tool.
+P61.04 | all | The policy applies to all members of the university community, including students, faculty, staff and affiliates.
+P139.02 | all | These policies provide a framework for the responsible and ethical use of AI.
+P61.05 | all | Artificial intelligence means computer systems that perform tasks normally requiring human intelligence.
+P56.07 | all | Everyone uses AI to support, not replace, human judgment, critical thinking and creativity.
+P134.07 | all | AI skills are increasingly needed for careers and expected by employers.
+P50.16 | all | Entering sensitive data into AI tools can violate FERPA, HIPAA or other privacy rules and expose institutional or student data.
+P52.09 | all | AI output may contain, resemble or reproduce copyrighted material, sometimes without attribution.
+P139.03 | all | Generative AI brings both opportunities and risks to education.
+P84.07 | staff | A named committee, task force or working group, convened or charged by university leaders, drafted the AI policy or guidance.
+P53.05 | all | AI raises ethical concerns, including privacy, labor, environmental cost, access and misinformation.
+P41.09 | all | Overreliance on AI can weaken critical thinking and harm learning.
+P134.08 | all | The university is preparing students for an AI-shaped workforce and future careers.
+P24.13 | student | Transparency and citation of AI use are valued; norms and benefits are described, and minor uses may need no disclosure.
+P87.03 | all | AI is a valuable tool that can enhance student learning when used responsibly.
+P95.05 | all | Academic integrity is a core value and foundation of the academic community and its education.
+P52.10 | all | Ownership and copyrightability of AI-generated content are unclear, unresolved or limited under current law.
+P61.06 | all | The policy covers academic work such as coursework, teaching, research, theses and assessments.
+P61.07 | all | The policy names example tools it covers, such as ChatGPT, Claude, Gemini, Copilot and DALL-E.
+P51.19 | staff | The university commits to equitable, inclusive access to AI tools for everyone.
+P70.09 | all | AI literacy is an essential skill that students, faculty and staff need to develop.
+P108.02 | all | The university has no university-wide or single AI policy.
+P56.06 | staff | The university aims to use AI to advance its mission, innovation, teaching, research and student preparation.
+P139.05 | all | All community members must follow this policy's requirements for AI use.
+P51.18 | all | Paid AI tools and unequal access create inequity among students.
+P04.14 | staff | The university sets no single AI policy and leaves AI-use decisions to faculty.
+P39.13 | staff | The university provides no AI detection tool.
+P56.08 | all | Core principles and concerns for AI use include integrity, privacy, security, fairness, copyright and values.
+P82.08 | instructor | AI use cannot be fully prevented, and bans or prohibitions are impractical and hard to enforce.
+P05.12 | all | Frameworks such as the AI Assessment Scale, traffic lights and numbered levels classify AI use, from none to full.
+P84.08 | staff | A named body approved, adopted, ratified or endorsed the AI policy, on a stated date.
+P135.06 | all | AI use consumes significant energy, water and other resources, with negative environmental impacts and carbon costs.
+P139.04 | all | The guidance offers a shared starting point and language to support community discussion and decisions about AI.
+P41.11 | student | Struggle and effort are necessary for learning and cannot be skipped.
+P84.09 | staff | Generative AI tools were used to help draft, edit or refine the policy document.
+P07.08 | instructor | AI features are often built into tools without clear labeling, so users may not know.
+P92.13 | all | The university publishes a list of approved AI tools and where to access them.
+P44.09 | student | Students build skills to use AI effectively, an important emerging skill.
+P84.10 | staff | Universities build their AI guidance on peer institutions' policies.
+P133.09 | all | Everyone is personally accountable for their use of AI and the actions and outcomes it produces.
+P11.08 | all | AI rules and permitted uses vary between courses, instructors and assignments; what is acceptable in one may be a violation in another.
+P61.08 | all | The policy covers AI features embedded in other software as well as standalone tools.
+P80.13 | staff | AI committees and councils provide oversight, strategy, advice, risk review and policy guidance.
+P87.04 | all | AI can help students understand concepts, summarize sources, practice, and improve their writing and coding.
+P87.10 | all | AI can serve as assistive technology helping students with disabilities participate more fully.
+P25.22 | student | AI citation resources exist, and citing AI differs from citing traditional sources.
+P61.09 | all | A tool counts as AI when it generates, rewrites, summarizes or substantively edits work, including help with brainstorming or outlining.
+P76.07 | staff | The university encourages AI use to improve administrative efficiency.
+P56.09 | staff | This framework states the purpose and scope of university AI guidance and affirms shared community values.
+P61.10 | all | Sensitive, confidential and personally identifiable data and prompts or inputs to AI tools are defined.
+P77.14 | staff | University AI policy is required by, aligned with or subordinate to state, system or board regulations.
+P87.05 | all | AI can personalize and adapt learning to each student's needs.
+P139.06 | staff | These policies offer guidance to help faculty and instructors handle AI in teaching.
+P26.15 | student | Documentation, logs and reflections on AI use are used in various ways, and some instructors require them.
+P45.09 | all | AI is analogous to a person, collaborator, classmate or knowledgeable friend whose help is treated like human help.
+P61.11 | all | Related terms such as hallucination, disclosure, AI literacy, human oversight and responsible AI are defined.
+P87.06 | all | AI saves time and raises efficiency and productivity by taking over routine tasks.
+P94.03 | student | The course's competencies prepare students for future careers.
+P29.14 | student | Passing off work that is not one's own as one's own is dishonest, and students remain its authors.
+P61.12 | all | Agentic AI means AI systems that act autonomously, pursue goals across multiple steps and make decisions with little human intervention.
+P120.06 | student | AI output can use sources without citation, risking plagiarism and false attribution.
+P52.13 | all | Entering unpublished research or intellectual property into AI tools may count as disclosure and risk losing IP or patent rights.
+P53.08 | all | AI training data and tools can be unrepresentative and non-transparent, and can flatten or suppress diverse voices.
+P55.06 | all | Surveys report how many students use generative AI tools and how often.
+P61.13 | all | The policy does not apply to certain uses or groups, such as personal use, research, clinical or administrative work, or other schools.
+P87.07 | all | AI can enhance teaching, learning, research and operations across the institution.
+P02.13 | student | AI can support and improve students' learning and work.
+P139.09 | all | The document is guidance, not formal university policy or a mandate.
+P82.09 | all | Generative AI is already widespread and here to stay, and people will use it regardless.
+P139.07 | all | These policies aim to protect institutional data and reduce privacy, security and reputational risks from AI.
+P41.12 | student | Writing is a way of thinking and learning, and outsourcing writing outsources thinking.
+P49.07 | all | Uploading copyrighted, licensed or protected content to AI tools may violate copyright, licensing terms or intellectual property rights.
+P53.09 | all | AI can produce offensive, stereotyped, racist or sexist content.
+P80.14 | staff | IT, security or compliance offices are responsible for implementing and enforcing the AI policy.
+P133.11 | student | Everyone is the author and owner of AI-assisted work and owns it as their own.
+P139.08 | staff | These policies aim to clarify which AI uses are allowed in coursework so academic integrity is upheld.
+P42.03 | student | Novices cannot judge AI output because they lack the fundamentals to recognize errors.
+P80.15 | staff | The provost or academic affairs office is responsible for academic AI policy and standards.
+P87.11 | all | AI can foster creativity and innovation.
+P95.06 | student | Students' AI use must be fair to peers and not give unfair advantage.
+P96.03 | all | Everyone does not list AI tools as authors; publishers do not accept AI authorship.
+P115.14 | all | Everyone is pointed to data classification, privacy and security standards for AI use.
+P52.14 | all | Individuals who accept AI vendors' click-through agreements may be personally bound and face consequences.
+P136.02 | all | AI models were trained on writers' and creators' work without consent, credit or compensation, raising ethical objections.
+P28.08 | student | Disclosed, permitted AI use is not penalized or graded differently, and disclosure protects students from suspicion.
+P61.15 | all | Non-generative tools such as basic spell-checkers, calculators and search or sorting tools are not counted as generative AI.
+P87.13 | all | AI can speed up research, discovery and data analysis.
+P51.22 | student | AI use is optional; students may choose not to use or pay for it.
+P53.11 | all | AI may make biased or discriminatory decisions that treat people or groups unfairly.
+P61.16 | all | Large language models are AI models that process and generate human language, and they are a subset of generative AI.
+P62.25 | all | The scope and context of AI in research vary, and expectations differ across settings.
+P65.14 | staff | Vendor contracts exist or restrict training on university data, and data entered into some AI products is retained.
+P95.07 | student | Honest work and disclosure let others trust that submissions reflect the student's own knowledge.
+P97.11 | all | AI tools and their output may be inaccessible and create barriers for people with disabilities.
+P96.04 | student | AI cannot be credited as an author.
+P101.10 | instructor | AI grading has limits and ethical concerns, though some tools can ease grading, and student data privacy matters.
+P55.08 | all | Research shows structured, intentional AI use can support learning and produce equal or better outcomes.
+P56.13 | staff | The university deploys and governs AI to serve its values, such as equity and autonomy, in proportion to risk.
+P61.17 | all | The policy covers all AI tools, including new ones released later, and focuses on uses rather than specific tools.
+P62.26 | all | Disclosure of AI use is made in places such as acknowledgments or methods, and transparency matters.
+P75.04 | all | Generative AI makes it easier for malicious actors to create sophisticated phishing emails, scams, deepfakes and other cybersecurity threats.
+P87.14 | all | Generative AI is transformative and will change how people teach, learn and research.
+P115.17 | all | Researchers are directed to separate guidance on AI in research.
+P35.23 | staff | Institutions aim to support assessment practices that stay meaningful despite AI.
+P47.08 | instructor | Instructor transparency about AI use builds trust and reinforces shared norms, and faculty and students are held to the same standard.
+P52.16 | all | People keep ownership of their own prompts, work and course materials.
+P87.15 | instructor | AI can act as a tutor, giving students instant feedback, practice and round-the-clock support.
+P02.14 | staff | The university promotes and encourages AI adoption and responsible use among its members.
+P121.04 | all | Overreliance on AI can reduce human interaction, support, and feedback between students and instructors or peers.
+P131.04 | all | AI struggles with deep understanding, synthesis and higher-level tasks, and gives less original results.
+P139.10 | student | These policies set out what students need to know about permitted and prohibited AI use.
+P42.05 | instructor | Courses and beginners need foundational skill development without AI, which unrestricted AI use can hinder.
+P43.02 | instructor | AI use can create an illusion of learning or improved work, and a false sense of ease, while skills actually decline.
+P51.24 | all | Approved disability accommodations and assistive technologies are not restricted by AI rules.
+P67.05 | instructor | Involving students in policy development builds understanding, goodwill, trust and buy-in.
+P94.04 | student | Relying on AI as a shortcut or outsourcing thinking leaves students less prepared, with less learning and weaker future prospects.
+P109.11 | staff | Appropriate AI use differs across disciplines, courses, programs and contexts.
+P113.05 | staff | The institution reserves the right to access, review and audit prompts, outputs and other information on its AI tools.
+P116.08 | all | Ethical AI use requires attention to harm, bias, accuracy and shared values.
+P121.05 | all | AI is a supplementary tool, not a replacement for human interaction, relationships, or instructors' guidance.
+P122.07 | staff | The university is committed to investing in AI, integrating it across its operations, and leading in AI research.
+P16.12 | student | AI tools can help with writing, outlines, and coding problems.
+P35.24 | student | Students' AI use is documented and graded, and AI use makes their work harder to evaluate.
+P59.12 | instructor | Automating teaching, feedback or reporting with AI raises concerns and should not rest on AI output alone.
+P109.12 | all | Students are confused by differing AI rules across courses, and consistent language clarifies expectations.
+P114.05 | all | The university is not responsible for personal data, consequences or negligence arising from users' use of external or unsanctioned AI tools.
+P117.11 | all | Frameworks and guidance exist to help users evaluate and select AI tools.
+P118.06 | all | Whether and how AI use is acceptable depends on the specific use, and people may make informed decisions or use it for personal exploration.
+P122.08 | staff | The university has existing AI research groups, labs and coordinating units.
+P132.02 | all | Where the guidance conflicts with formal university policy, the policy governs and takes precedence.
+P134.11 | student | Employers value responsible, ethical AI use and judgment, not just technical skill.
+P136.03 | all | AI companies use exploited or poorly paid workers to build and monitor AI systems.
+P74.17 | all | AI can be used to deceive, spread misinformation, or harm people and the university's work.
+P86.09 | all | AI recording raises privacy concerns and may violate wiretapping laws; existing rules on recording classes apply.
+P99.12 | staff | Most students who violate integrity rules do so out of stress, anxiety and academic pressure.
+P109.13 | all | This guidance supplements or sits alongside other institutional AI policies and guidelines.
+P131.07 | all | AI cannot access recent events or paywalled and subscription resources.
+P132.03 | all | The guidance offers general advice and is not legal advice or an exhaustive set of best practices.
+P135.09 | student | A search engine or other tools have a lighter environmental footprint than a chatbot.
+P30.06 | student | Students lose out or take on responsibility when they do not understand the content they submit.
+P34.08 | instructor | Oral examinations and code reviews are growing practices for checking that students understand their submitted work.
+P36.14 | all | Using AI is not inherently misconduct; concerns arise when use breaks course expectations.
+P40.12 | all | Available detection tools exist, and federal agencies and others use them.
+P51.25 | student | Alternatives are usually provided to students with concerns about access or privacy.
+P52.18 | all | Fair use permits some use of copyrighted material, and AI may be used for compliant educational purposes.
+P61.18 | staff | Administrators define generative and agentic AI and include AI-related terms in institutional definitions.
+P68.11 | all | Educators' primary work is to support students' development and foster exploration rather than to surveil, discipline or punish them.
+P84.11 | staff | The document was written without generative AI assistance.
+P94.05 | student | The university's goal is to prepare students for a career in industry, including problems AI cannot solve.
+P94.07 | student | Professional settings may not give immediate access to AI and have varied norms and strict rules on AI use.
+P94.08 | all | Many industries require professionals to document AI-assisted work, and transparent use is part of AI fluency.
+P98.12 | staff | Frameworks and standards such as NIST guide AI implementation, evaluation and monitoring.
+P03.09 | staff | The institution is reluctant to promote or endorse AI tools and systems.
+P113.06 | staff | Individual user interactions with the institution's AI tool are not monitored.
+P119.05 | student | Application reviewers who suspect or can tell AI was used may count it against the application.
+P119.07 | student | Generative AI can be a good starting point for research.
+P122.11 | staff | The university has not yet established a dedicated AI center.
+P126.11 | all | AI-generated code may contain bugs, security vulnerabilities or logic errors.
+P132.04 | staff | Administrators note that sample syllabus statements show individual instructors' own uses and are not institutional policies.
+P136.04 | staff | Administrators respect community authority, Indigenous sovereignty, and culturally grounded knowledge, data, and expression.
+P137.02 | all | AI use and related content may be subject to public-records laws such as freedom of information acts.
+P138.03 | all | Using AI as a writing assistant may become as commonplace as using a calculator.
+P60.07 | all | Clarity and ongoing dialogue are more effective than policing.
+P68.12 | staff | The university avoids highly restrictive and punitive rules on generative AI use.
+P74.20 | all | AI can access, manipulate or disrupt university systems.
+P86.10 | student | Students have the right to attend classes without being recorded by AI tools.
+P89.09 | student | AI advances research capabilities by automating data analysis.

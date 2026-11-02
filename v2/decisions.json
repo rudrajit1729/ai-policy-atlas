@@ -1,0 +1,578 @@
+{
+ "_note": "Register of study-design decisions, written for the paper's methods section. Add new decisions here; tools/render_decisions.py writes METHODS_DECISIONS.md and export_xlsx.py adds a Decisions sheet.",
+ "sections": [
+  "Sampling frame",
+  "Inclusion and exclusion criteria",
+  "Document layers",
+  "Data collection",
+  "Document screening",
+  "Coding scheme",
+  "Coding procedure",
+  "Reliability",
+  "Corpus audit",
+  "Models and budget",
+  "Deviations and incidents"
+ ],
+ "decisions": [
+  {
+   "id": "D01",
+   "date": "2026-10-05",
+   "section": "Sampling frame",
+   "by": "PI",
+   "decision": "Study generative-AI policies for computing education at North American universities, modeled on Amershi et al.'s guideline synthesis.",
+   "rationale": "Every institution is writing AI rules independently; a cross-institution synthesis shows what they share and where they differ."
+  },
+  {
+   "id": "D02",
+   "date": "2026-10-05",
+   "section": "Sampling frame",
+   "by": "PI",
+   "decision": "Mexico excluded.",
+   "rationale": "Outside the intended comparison set."
+  },
+  {
+   "id": "D03",
+   "date": "2026-10-25",
+   "section": "Sampling frame",
+   "by": "PI",
+   "decision": "v2 restricted to US institutions; Canada dropped.",
+   "rationale": "Focus the analysis and the paper on US higher education."
+  },
+  {
+   "id": "D04",
+   "date": "2026-10-25",
+   "section": "Sampling frame",
+   "by": "PI",
+   "decision": "Frame = all Carnegie 2025 R1 and R2 universities (326, from the Wikipedia table of the classification because Carnegie's site blocked automated access) plus US liberal-arts colleges, HBCUs/MSIs and community colleges found in earlier passes: 342 institutions in v2/queue.json.",
+   "rationale": "A citable research-university frame, broadened to institution types that teach CS differently."
+  },
+  {
+   "id": "D05",
+   "date": "2026-10-05",
+   "section": "Sampling frame",
+   "by": "Claude",
+   "decision": "Health-sciences-only institutions with no computing degree programs are out of frame.",
+   "rationale": "Their AI policies concern medical education and would skew a computing synthesis; mirrors the 'offers a computing degree' rule used for the Canadian frame."
+  },
+  {
+   "id": "D06",
+   "date": "2026-10-05",
+   "section": "Inclusion and exclusion criteria",
+   "by": "PI",
+   "decision": "Any CS-like unit counts as computing: CS, CSE, EECS, ECE, information science/iSchools, informatics, AI, data science, software engineering, and combined units such as UCI ICS. CS-related units are collected even where a CS department exists.",
+   "rationale": "Units teaching computing go by many names; restricting to 'CS' would miss them."
+  },
+  {
+   "id": "D07",
+   "date": "2026-10-05",
+   "section": "Inclusion and exclusion criteria",
+   "by": "PI",
+   "decision": "Capture all AI-use provisions: student use (code and writing), faculty and TA use, use levels or categories, disclosure, assessment, enforcement, rationale, privacy, equity, IP, governance.",
+   "rationale": "Policies regulate far more than plagiarism; the synthesis must cover the whole policy space."
+  },
+  {
+   "id": "D08",
+   "date": "2026-10-05",
+   "section": "Inclusion and exclusion criteria",
+   "by": "Claude",
+   "decision": "Exclude news articles, research papers, workshop or event pages, tool lists, and pages that only link elsewhere (the linked policy is followed instead).",
+   "rationale": "They describe or point to policy rather than stating it."
+  },
+  {
+   "id": "D09",
+   "date": "2026-10-05",
+   "section": "Inclusion and exclusion criteria",
+   "by": "PI",
+   "decision": "Harvey Mudd College's college-wide AI Use Levels pilot included as an influential source, although it has no computing section.",
+   "rationale": "Pomona College's CS tier system is modeled on it."
+  },
+  {
+   "id": "D10",
+   "date": "2026-10-05",
+   "section": "Inclusion and exclusion criteria",
+   "by": "PI",
+   "decision": "Course documents with no AI-use rules (e.g. AI as course topic only) are excluded.",
+   "rationale": "They state no policy."
+  },
+  {
+   "id": "D11",
+   "date": "2026-10-25",
+   "section": "Document layers",
+   "by": "PI",
+   "decision": "Each university keeps every layer that exists, separately: university-wide (always collected), school/college, computing units, and courses as an add-on layer.",
+   "rationale": "Policy is set at several levels; collapsing them hides who decides what."
+  },
+  {
+   "id": "D12",
+   "date": "2026-10-25",
+   "section": "Document layers",
+   "by": "PI",
+   "decision": "Course syllabi never characterize a university; course-level collection is deferred in v2.",
+   "rationale": "A handful of syllabi is not representative of an institution, and course volume would dominate the corpus."
+  },
+  {
+   "id": "D13",
+   "date": "2026-10-25",
+   "section": "Data collection",
+   "by": "PI",
+   "decision": "Collect documents for all institutions before coding any; collection runs in batches on Sonnet 5.5.",
+   "rationale": "Screen the corpus as a whole before committing coding effort."
+  },
+  {
+   "id": "D14",
+   "date": "2026-10-05",
+   "section": "Data collection",
+   "by": "Claude",
+   "decision": "Every document is fetched as plain text with a recorded source URL; JavaScript-only pages are read through their public data endpoints (Simple Syllabus JSON, Canvas pages API, Google Docs/Drive export) or verified in a browser; dead pages are read from Internet Archive snapshots.",
+   "rationale": "Quotes must be checkable against exactly what was read."
+  },
+  {
+   "id": "D15",
+   "date": "2026-10-25",
+   "section": "Document screening",
+   "by": "PI",
+   "decision": "Claude screens document quality against the inclusion criteria with a deterministic script plus a review of every flagged document; decisions are logged in v2/screening_log.json. The PI is consulted only on decisions that are genuinely theirs.",
+   "rationale": "Screening hundreds of documents by hand is not feasible for the PI; scripted checks make the screen reproducible."
+  },
+  {
+   "id": "D16",
+   "date": "2026-10-25",
+   "section": "Coding scheme",
+   "by": "PI",
+   "decision": "Code every policy in every included document (no sampling). Each policy is a normalized statement shown beside a verbatim anchor of at most 15 words and a link that highlights the full passage; when the anchor alone states the policy, it is the policy text.",
+   "rationale": "Partial excerpting misrepresents documents; normalization makes policies comparable while the anchor keeps them faithful; republishing long passages of others' text is avoided."
+  },
+  {
+   "id": "D17",
+   "date": "2026-10-25",
+   "section": "Coding scheme",
+   "by": "PI",
+   "decision": "Code each policy once with all reusable tags: actor, lifecycle phase, modality, the unit's own stance, a single primary policy type, topics, plus its document's layer and stance.",
+   "rationale": "Later analyses regroup tags instead of recoding."
+  },
+  {
+   "id": "D18",
+   "date": "2026-10-25",
+   "section": "Coding scheme",
+   "by": "PI",
+   "decision": "Document stance has six values: prohibit, restrict, permit, encourage, require, delegates (to instructors).",
+   "rationale": "Separates documents that set a rule from those that hand the decision down."
+  },
+  {
+   "id": "D19",
+   "date": "2026-10-25",
+   "section": "Coding scheme",
+   "by": "PI",
+   "decision": "Policies are grouped, never invented; grouping uses constant comparison against type definitions and existing members; codebook changes are logged in v2/CODEBOOK_MEMO.md.",
+   "rationale": "The synthesis reports what institutions say, not new guidelines."
+  },
+  {
+   "id": "D20",
+   "date": "2026-10-25",
+   "section": "Coding procedure",
+   "by": "PI",
+   "decision": "Adapt the PI's TACT procedure: rationale written before every code; closed codebook in the main run with UNCOVERED + note; deterministic provenance check of every quote; coders never see each other's output.",
+   "rationale": "Makes every assignment checkable and stops codes being chosen first and justified after."
+  },
+  {
+   "id": "D21",
+   "date": "2026-10-25",
+   "section": "Coding procedure",
+   "by": "Claude (delegated by PI)",
+   "decision": "Two independent coders plus one reconciler per university (TACT-Lite shape), not one coder plus reviewer and not three coders.",
+   "rationale": "In the 6-university dry run each single coder missed 5-11% of policies the other found; two independent codings are needed for Krippendorff's alpha; agreement was already 0.87-0.97, so a third coder adds little."
+  },
+  {
+   "id": "D22",
+   "date": "2026-10-25",
+   "section": "Reliability",
+   "by": "Claude",
+   "decision": "Report agreement per field (actor, phase, modality, policy type, document stance) between the two coders, as Krippendorff's alpha and raw agreement, before reconciliation.",
+   "rationale": "Follows TACT Stage 5 and standard qualitative reliability reporting."
+  },
+  {
+   "id": "D23",
+   "date": "2026-10-25",
+   "section": "Corpus audit",
+   "by": "PI",
+   "decision": "After coding, an Opus audit by policy type across all universities verifies every tag and proposes moves, merges and splits; corrections are stored as overrides with rationale, never by editing coded files.",
+   "rationale": "Per-university reconcilers cannot see cross-institution consistency."
+  },
+  {
+   "id": "D24",
+   "date": "2026-10-25",
+   "section": "Corpus audit",
+   "by": "PI",
+   "decision": "GPT (via Codex) critiques Opus's audit proposals as an adversary from another model family; Opus accepts, partly accepts or rejects each critique with a reason, logged in v2/audit/critique_log.jsonl.",
+   "rationale": "TACT-Full: no single model family's blind spots dominate."
+  },
+  {
+   "id": "D25",
+   "date": "2026-10-25",
+   "section": "Models and budget",
+   "by": "PI",
+   "decision": "Collection and coding agents run on Sonnet 5.5; the audit runs on Opus; work runs in batches and stops at 40% of the PI's weekly Max-plan usage, with a notification.",
+   "rationale": "Opus is not needed for collection and first-pass coding; protect the PI's usage for other work."
+  },
+  {
+   "id": "D26",
+   "date": "2026-10-25",
+   "section": "Deviations and incidents",
+   "by": "Claude",
+   "decision": "Dry-run outputs (6 universities) are calibration only and are recoded in the main run.",
+   "rationale": "The rationale-first rule was introduced mid-dry-run, and one coder wrote rationales after coding (disclosed)."
+  },
+  {
+   "id": "D27",
+   "date": "2026-10-25",
+   "section": "Deviations and incidents",
+   "by": "Claude",
+   "decision": "A network outage interrupted all dry-run agents; they were resumed with context and no saved output was lost.",
+   "rationale": "Recorded for transparency."
+  },
+  {
+   "id": "D28",
+   "date": "2026-10-25",
+   "section": "Coding scheme",
+   "by": "Claude (delegated by PI)",
+   "decision": "The codebook was closed after the dry run: P01–P57 seeded from the v1 synthesis plus 8 inductively added types (P58–P65), one proposal merged into P35, and three proposals folded into P59/P62/P63. In the main run, coders cannot add types; non-fitting policies are coded UNCOVERED and reviewed between batches.",
+   "rationale": "Dry-run coders proposed these types independently and reconcilers confirmed them; a closed codebook keeps early and late batches coded against the same scheme."
+  },
+  {
+   "id": "D29",
+   "date": "2026-10-25",
+   "section": "Reliability",
+   "by": "Claude",
+   "decision": "Dry-run agreement (4 reconciled universities, 1,000+ units): actor 0.87–0.98, phase 0.90–0.97, modality 0.85–0.92, policy type 0.89–0.95, document stance 0.90–1.00 (raw agreement over matched units). Each single coder missed 5–11% of the policies the other found.",
+   "rationale": "Calibration evidence for the coding design (D21)."
+  },
+  {
+   "id": "D30",
+   "date": "2026-10-25",
+   "section": "Document screening",
+   "by": "Claude (delegated by PI)",
+   "decision": "Screening rules: exclude documents with under 400 characters of text, duplicates within the same university, and documents the collector marked generic or superseded. Include documents that pass all checks (≥3 AI mentions, ≥2 normative phrases within 300 characters of an AI mention, not news/event/workshop, not duplicate). 'Thin' documents (one or two AI sentences) are included when they state at least one normative rule near an AI mention. Everything else is reviewed manually by Claude, and each decision is logged with a reason.",
+   "rationale": "A single AI clause in an integrity code is still the institution's AI policy; system-wide policies shared by campuses belong to each campus."
+  },
+  {
+   "id": "D31",
+   "date": "2026-10-25",
+   "section": "Coding procedure",
+   "by": "PI",
+   "decision": "The Excel record (v2/exports/atlas_v2.xlsx) separates ORIGINAL WORDING columns (anchor and source passage, cut by script from the saved document text, with character offset, URL and file) from MODEL-WRITTEN columns (rationale, normalized policy). Every anchor is verified against the source; rows that fail go to an Unverified sheet. Quotations inside rationales must exist in the source, and normalized policies with under 50% key-word overlap with their passage are flagged.",
+   "rationale": "Co-authors work from the Excel file, so no field presented as source text may contain text absent from the original document."
+  },
+  {
+   "id": "D32",
+   "date": "2026-10-25",
+   "section": "Coding scheme",
+   "by": "Claude (chief of staff)",
+   "decision": "[SUPERSEDED by D33 on PI feedback] The policy-type list (P01–P65) stays closed for the rest of coding. UNCOVERED units are resolved at the audit: a cluster becomes a new type only there, and each reassignment is logged as an audit override.",
+   "rationale": "At 104 universities, UNCOVERED was 2.7% of units (175/6,449) with no cluster above 6. Changing the list mid-run would code batches against different codebooks."
+  },
+  {
+   "id": "D33",
+   "date": "2026-10-26",
+   "section": "Coding scheme",
+   "by": "PI (feedback) → Claude",
+   "decision": "The policy-type list is provisional and grows with the data, replacing the closed list of D32. After every batch, all UNCOVERED notes and fit notes are read (not sampled). A pattern seen at 3 or more universities, which no existing type captures, becomes a new type with a definition and its evidence. Smaller patterns are kept as candidate types in CODEBOOK_MEMO.md. Coders now write a fit_note when a type fits only partly, and are told to prefer UNCOVERED over a stretched fit. The first review (119 universities, 204 UNCOVERED) added P66–P77.",
+   "rationale": "PI: be open to creating new themes when the data supports it, and do not miss anything. A closed list risks forcing new kinds of policy into old types, where they disappear from the findings."
+  },
+  {
+   "id": "D34",
+   "date": "2026-10-26",
+   "section": "Coding scheme",
+   "by": "PI (feedback) → Claude",
+   "decision": "Types and themes are final only after a theme review of the full corpus, run once coding is complete and before the audit. It reads every unit of every type and every UNCOVERED or fit-noted unit, then: (a) splits types whose members say different things, (b) merges types that say the same thing, (c) creates types from remaining clusters, (d) reassigns earlier units to types added mid-run, and (e) builds themes bottom-up from the final types. Every change is logged as an override with its reason.",
+   "rationale": "PI: see all the data before making themes. Types added mid-run (D33) were not available to earlier batches, so earlier units must be rechecked against them."
+  },
+  {
+   "id": "D35",
+   "date": "2026-10-26",
+   "section": "Coding scheme",
+   "by": "PI (feedback) → Claude",
+   "decision": "A definitions step: v2/DEFINITIONS.md defines every term used in counts, columns and the paper (university, layer, document, policy unit, anchor, normalized statement, rationale, each code, policy type, UNCOVERED, fit note, candidate type, theme, representative, theme review, audit). It is also the Definitions sheet in the Excel file.",
+   "rationale": "PI: be explicit about what is called what, e.g. that '6,449 coded policies' means 6,449 policy units."
+  },
+  {
+   "id": "D36",
+   "date": "2026-10-26",
+   "section": "Data collection",
+   "by": "Claude (chief of staff), prompted by PI question",
+   "decision": "Computing-layer recheck. The first collection found a computing-unit policy at only 24/342 universities, so a focused recheck searches only computing units and their schools: at least 4 site-restricted searches per unit, handbooks, integrity pages and syllabus templates, with every query and page logged. It runs on a random stratified sample of 20 of the 316 'none-found' universities (12 R1, 5 R2, 3 other; seed 20261026) plus 6 large CS departments chosen purposively and reported separately. If the sample finds missed unit-level policies at a meaningful rate, the recheck is extended to every university and the new documents are screened and coded like all others.",
+   "rationale": "Tells a true absence of department-level policy apart from collector under-search before the finding '96% of policy statements come from university-wide documents' is reported. v1 found only 19 department-level documents against 256 course syllabi, which suggests CS policy lives mostly in syllabi, but this has to be tested."
+  },
+  {
+   "id": "D37",
+   "date": "2026-10-26",
+   "section": "Coding scheme",
+   "by": "PI (feedback) → Claude",
+   "decision": "New and candidate types are tracked in the Excel file (TypeLog sheet: every type, whether it was in the initial list or added from the data, when, and its current counts; plus every candidate with its universities). The theme review (D34) is a final read of every coded statement, including all statements coded before the open-codebook change, not only the unmatched ones.",
+   "rationale": "PI: statements coded before themes were opened up may hide themes that were missed, and new themes must be visible and accumulating in the Excel file."
+  },
+  {
+   "id": "D38",
+   "date": "2026-10-26",
+   "section": "Coding scheme",
+   "by": "Claude (chief of staff)",
+   "decision": "Three structural fixes come out of reading all 1,027 fit notes from batch 3, and the theme review (D34) will apply them. (1) Types are defined by content only. Several type names build in a modality or an actor (e.g. P09 'Require…', P50 'prefer…', P24 read as a student duty). Since modality and actor are separate tags, these names will be rewritten as content (e.g. P09 → 'Communicate AI expectations in the syllabus or course'), so that a recommendation and a requirement on the same content share a type and differ in modality. (2) A new unit tag, ai_specific (yes/no), marks general integrity or conduct rules that apply to AI only by extension (about 60 fit notes say 'not AI-specific'). (3) A new unit tag, binding (rule | template | recommendation | description), marks sample or template statements offered to instructors, as distinct from the institution's own rules. The theme-review agents assign both tags to every unit in the corpus, so all batches are treated alike.",
+   "rationale": "Most fit notes were not about new content. They came from type names that mix content with modality or actor, from integrity rules not written for AI, and from template text. All three affect how findings are read, e.g. 'how many universities require X' versus 'offer X as a template'."
+  },
+  {
+   "id": "D39",
+   "date": "2026-10-26",
+   "section": "Coding scheme",
+   "by": "Claude (chief of staff)",
+   "decision": "Review 2 (after batch 3, 174 universities): read all 124 new UNCOVERED notes and all 1,027 fit notes. Added 26 types, P78–P103. Broadened P65 (any AI tool or system review, not only vendor contracts) and P69 (detector output as supporting evidence only); a broadening adds to a type's scope, so earlier members still fit. Promoted 3 candidates (recording consent → P86, coalitions → P88, learning objectives → P83) and logged 11 new candidates. The type list now has 103 types.",
+   "rationale": "Applies D33 to batch 3. Every pattern seen at 3 or more universities becomes a type, so nothing recurring is lost before the theme review."
+  },
+  {
+   "id": "D40",
+   "date": "2026-10-26",
+   "section": "Data collection",
+   "by": "Claude (chief of staff)",
+   "decision": "Result of the computing recheck sample (D36), and the decision to extend it. Random sample: 1 of 20 universities had a missed unit-level document (San José State School of Information; about 5%, 95% CI roughly 0.1–25%). Purposive set of large CS departments: CMU, Stanford, Michigan and Princeton confirmed to have no unit-wide policy, and each has course syllabi with AI policies (3–5 seen). Cornell had a missed College of Engineering policy (4 pages). UW gained an Allen School AI-in-research guideline and a College of Engineering paragraph; UW's first collection already had an Allen School document. Because the recheck is cheap (26 universities used about 2% of a 5-hour window and under 1% of the weekly limit), it is extended to every university. New documents are merged into the collect files (merge_recheck.py, logged in recheck_merge_log.json) and screened. Already-coded universities that gain documents are recoded in full, and their old coding is kept in v2/run/superseded/.",
+   "rationale": "The sample shows the low computing-layer count is mostly real: CS-specific AI policy lives mainly in course syllabi. The misses are real but rare, and they concentrate in school-level and non-CS computing units (iSchools, engineering colleges). Rechecking everyone costs little and removes the sampling caveat from the finding."
+  },
+  {
+   "id": "D41",
+   "date": "2026-10-26",
+   "section": "Document layers",
+   "by": "PI",
+   "decision": "Course layer: syllabi are collected now and stored, but not coded yet, on a fixed frame at every university so the layer is systematic, not convenience-sampled. Frame: C1 = CS1 (first required programming course of the CS major), C2 = CS2 (next required programming course), C3 = required algorithms course (else required systems course), C4 = required software engineering course (else capstone), identified from the official catalog or degree requirements. The most recent public syllabus is used (2025–26 or later preferred; up to 3 sections when they differ). Each frame course gets a status: public-ai-policy, public-no-ai, public-generic-only, not-public or not-found. Syllabi are saved as text, and their AI passages are cut verbatim by script between collector-chosen start and end markers into v2/exports/course_layer.xlsx, so later qualitative analysis works from that file without rereading documents. A department profile needs public syllabi for at least 3 of the 4 frame courses. A 20-university stratified pilot (10 R1, 6 R2, 2 liberal-arts, 2 other; seed 41) measures availability before the full run. Instructor names are not recorded.",
+   "rationale": "Department-level policy is sparse (25/342 universities), and CS-specific rules live mostly in syllabi. A bottom-up view needs a comparable course sample at every university; one or two courses picked ad hoc would not represent a department. Missing syllabi are recorded as data, so availability bias can be reported."
+  },
+  {
+   "id": "D42",
+   "date": "2026-10-26",
+   "section": "Sampling frame",
+   "by": "PI",
+   "decision": "The study has two linked parts. Part 1 is general US higher-education AI policy, top-down: the university, school and computing layers. 93% of coded statements are university-wide, and only 3.8% of those mention code or programming, so these findings apply to higher education across all disciplines. Part 2 is computing education, bottom-up: CS policy reconstructed from the fixed course frame (D41). It is then contrasted with Part 1 to show where courses follow, tighten, loosen or go beyond the policies above them. CS-specific school and department policies form the layer between the two. To make the contrast possible, course passages will be coded later with the same codebook, types and tags as Parts 1's units.",
+   "rationale": "The corpus is mostly general higher-education policy, and CS-specific rules are sparse above the course level (school about 3%, computing unit about 3.5% of statements). Two views, a general top-down one and a CS bottom-up one, and the contrast between them, give a computing-education contribution without overstating what the university layer says about CS."
+  },
+  {
+   "id": "D43",
+   "date": "2026-10-26",
+   "section": "Coding procedure",
+   "by": "PI",
+   "decision": "Analysis plan for the two parts (D42). Policies are synthesized into guidelines separately for each part: higher education from the top-down layers, CS from the course layer built bottom-up. The two sets are then compared type by type and tag by tag (stance, actor, phase, modality). If they barely differ, the finding is that CS education sits at the same level as higher-education AI policy. If they differ, the paper reports where higher education stands, where CS education stands, and what each can learn from the other.",
+   "rationale": "States the comparison in advance, so either outcome is a reportable finding and the result is not shaped after the fact."
+  },
+  {
+   "id": "D44",
+   "date": "2026-10-26",
+   "section": "Coding procedure",
+   "by": "Claude (chief of staff)",
+   "decision": "Between-batch review 3 (after 282 universities). Read all 230 UNCOVERED notes from the 115 universities coded since review 2. Added 24 types (P104-P127) for patterns at 3 or more universities, 7 of them promoted from earlier candidates whose evidence reached 3 universities (P105, P111, P123, P124, P125, P126, P127). Logged 20 new candidates at 1-2 universities. The 2,838 fit notes in the same set were tallied by type, not read one by one; the most frequent (P24 172, P09 149, P04 125, P50 102, P31 92) are the same over-broad types review 2 flagged, and every fit note is read in the theme review (D34, D37).",
+   "rationale": "Keeps the type list growing with the data (D33). Universities coded before a type existed keep their UNCOVERED or nearest-type codes until the theme review reassigns them."
+  },
+  {
+   "id": "D45",
+   "date": "2026-10-26",
+   "section": "Coding procedure",
+   "by": "PI",
+   "decision": "Statements and documents that do not talk about AI are kept but not quoted and not counted. In the Excel file their ORIGINAL WORDING cells read 'Not about AI (kept, not quoted)' and they are left out of PolicyTypes, TypeLog and Matrix counts; an 'about AI' column records the judgment. Until the theme review, a statement is marked 'no (coder note)' only when a coder's fit or uncovered note says it is not about AI or not AI-specific (120 statements); every other statement is judged yes/no in the theme review (the D38 ai_specific tag, stored as about_ai). Documents with fewer than 3 AI-term mentions that screening excluded are listed in a new Screening sheet as not about AI.",
+   "rationale": "A keyword test is not used for statements: 7,434 of 22,260 verified source passages contain no AI word, yet a sample shows most are AI rules whose AI context is in the surrounding text (e.g. lists of permitted uses inside an AI policy). Hiding them by keyword would drop real AI policy."
+  },
+  {
+   "id": "D46",
+   "date": "2026-10-26",
+   "section": "Coding procedure",
+   "by": "PI (timing); Claude (design)",
+   "decision": "The theme review runs now, before the weekly reset, in two steps. Step 1: Sonnet reviewer agents read every verified coded statement once more, grouped by current type in packets of up to 200 (v2/THEME_REVIEW.md, v2/tools/theme_review.py), and tag each with about_ai (yes/no, D45), binding (rule, template, recommendation, description, D38), and type (keep, a better existing type, or NEW: label); per packet they also report content subgroups, coherence and a content-only name suggestion. Step 2: Claude (Opus) synthesizes the tags into the revised type list (content-only names, splits, merges, new types at 3 or more universities, reassigned UNCOVERED units) and builds themes bottom-up; every change is logged. The review is a separate layer keyed by unit id and never edits the coded files. Universities coded later are reviewed incrementally before synthesis is final. A two-packet pilot is checked before the full run.",
+   "rationale": "Open themes were introduced after about 120 universities were coded (D33), so every statement must be re-read against the full type list (PI request, D37). One reviewer per statement keeps the cost within the weekly budget; the Opus audit and Codex critique (pending) check the review afterwards."
+  },
+  {
+   "id": "D47",
+   "date": "2026-10-26",
+   "section": "Coding procedure",
+   "by": "Claude (chief of staff)",
+   "decision": "Theme review step 2 (synthesis), recorded in v2/theme_review/synthesis.json and applied by v2/tools/theme_apply.py. (1) Every type gets a content-only name (D38); the v2 name is kept as name_v2. (2) Twelve new types: P128 translation, P129 AI feedback on own work, P130 signs of AI-written work, P131 AI capabilities and limits, P132 status of the guidance, P133 accountability for AI-assisted output (split from P29), P134 career readiness as a reason to learn AI (split from P44), P135 environmental cost and P136 labor/consent/credit (split from P53), P137 AI records and public-records duties, P138 AI is widespread and here to stay, P139 purpose and context of the policy (split from P56); each has 3+ universities. (3) P18 retired: its units were writing rules, now in P91, P16, P128 and P100. (4) 130 reviewer NEW labels mapped to types (815 units); 371 units whose labels occur at 1-2 universities stay UNCOVERED as candidates. (5) A second reviewer pass assigned every unit of ten types (P14, P18, P24, P29, P40, P44, P53, P56, P69, P91) to the split options. (6) Fifteen themes built from the reviewed types' content (T01-T15), replacing the 12 initial themes. Final: 24,536 statements, 23,994 about AI, 348 UNCOVERED, 138 types in use. The coded files are unchanged; the Excel shows the coded type and the final type side by side.",
+   "rationale": "Validity check: in 128 types with 10+ documents, 47 co-occur most with types of their own theme (chance about 7%). The rest follow document genre (a syllabus statement mixes stance, permitted uses and disclosure; faculty guidance mixes syllabus advice and assessment design), so themes are kept as content groupings and document genre is reported as a separate lens."
+  },
+  {
+   "id": "D48",
+   "date": "2026-10-26",
+   "section": "Coding procedure",
+   "by": "Claude (chief of staff)",
+   "decision": "Inter-coder agreement (v2/tools/agreement_alpha.py, deterministic). Coder A and Coder B units are paired within each document by anchor-span overlap of at least 50% of the shorter span; Krippendorff's alpha (nominal) with 95% bootstrap CIs over universities. Results (342 universities, 18,363 pairs): actor 0.891 [0.881, 0.900]; modality 0.881 [0.873, 0.888]; policy_type 0.884 [0.879, 0.890]; phase 0.816 [0.805, 0.827]; unit_stance 0.723 [0.709, 0.737]; document stance 0.719 [0.656, 0.777] (n=773, 89.8% raw agreement; alpha is lowered by the skewed stance distribution). Unitizing agreement 0.684: coders often split or merged compound sentences differently; the reconciler resolved these against the source (agreement files in v2/run).",
+   "rationale": "Krippendorff's thresholds: alpha >= 0.80 supports conclusions; 0.667-0.80 supports tentative conclusions. Actor, modality, type and phase meet 0.80. Unit and document stance are tentative, so stance findings are reported with that caveat and checked in the Opus audit."
+  },
+  {
+   "id": "D49",
+   "date": "2026-10-26",
+   "section": "Course layer",
+   "by": "PI",
+   "decision": "Course passages are NOT coded with the institutional codebook. They get their own codebook, built inductively from the course passages alone (rationale-first, two coders + reconciler, same verbatim rules). Only after both codebooks exist are they compared: which course-level types align with institutional types, which institutional types never reach syllabi, and which course-level practices have no institutional counterpart. This replaces the 'same codebook' part of D42.",
+   "rationale": "Coding syllabi with the institutional codebook would force CS course practice into categories built from university documents and hide anything new or different at the course level; separate coding lets alignment and mismatch be findings rather than assumptions."
+  },
+  {
+   "id": "D50",
+   "date": "2026-10-26",
+   "section": "Audit",
+   "by": "PI (go-ahead); Claude (design)",
+   "decision": "Opus audit plus GPT critique now (PI approved, including sending coded rows from public documents to OpenAI via Codex). Stratified random sample of about 500 statements (seed 20261026): proportional by layer and final theme, with oversamples of the computing and school layers, statements moved in the theme review, statements marked not about AI, and UNCOVERED statements. Claude Opus audits each statement against its source passage and wider context: normalized-statement fidelity, final type, about AI, binding, actor, modality, phase, unit stance. Codex (GPT) then critiques every Opus correction plus a random 10% of Opus confirmations. Error rates are reported per field with 95% CIs, weighted back to the corpus.",
+   "rationale": "A sample audit by a stronger model from the same family plus a cross-family critic gives error estimates within the weekly budget; a full audit would need the next week's budget."
+  },
+  {
+   "id": "D51",
+   "date": "2026-10-26",
+   "section": "Dissemination",
+   "by": "PI",
+   "decision": "After the audit and the course-layer analysis, the atlas becomes an interactive app: people can browse what institutions and CS courses actually say (with original wording and links), record their own decisions on each policy question, and generate a policy document (e.g. a syllabus AI statement or a department guideline) from their choices. Design to be proposed and rendered locally before anything is published.",
+   "rationale": "Turns the descriptive atlas into a decision aid grounded in real policies."
+  },
+  {
+   "id": "D52",
+   "date": "2026-10-26",
+   "section": "Audit",
+   "by": "Claude (chief of staff)",
+   "decision": "Opus audit results (510 sampled statements; representative base n=300): per-field error rates binding 11.0%, final type 7.3%, statement stance 3.0%, normalized statement 2.7%, modality 1.0%, actor 0.3%, about AI 0.3%, phase 0%; 21.7% of statements have at least one field wrong. Two systematic errors were found and are corrected by a targeted pass (v2/CORRECTION.md, v2/tools/correction_pass.py): (1) sentences inside sample syllabus statements or quoted from other institutions tagged rule instead of template (30 of 55 binding errors; 28 of the 30 are in documents that already contain a template statement), so every rule-tagged statement in such documents (3,077) is re-judged; (2) generic honor-code text in school and computing documents tagged about AI (computing oversample: 11.7%), so all 1,442 school and computing statements are re-judged. Old values are kept beside the new ones. The GPT critique (Codex) could not run: the Codex program is not installed on this machine; it waits for the PI.",
+   "rationale": "The binding and about-AI tags drive two headline findings (how much institutions write is binding; computing units write more rules), so systematic errors in them must be fixed before reporting, not only caveated."
+  },
+  {
+   "id": "D53",
+   "date": "2026-10-26",
+   "section": "Course layer",
+   "by": "PI",
+   "decision": "Course frame extended: C5 = AI / machine learning course (the required AI or ML course if the major requires one, else the most-offered undergraduate intro to AI or ML); C6 = an upper-level systems or security course different from C3 (required OS/systems, else required security, else the most-offered OS, networks or security elective). C1-C4 are unchanged and still define the department profile (3 of 4). Courses left out of the frame (other electives, non-major intro, graduate) and every course seen during collection but not in the frame are kept in an 'Out of frame' sheet of course_layer.xlsx so they can be collected and coded later. The frame rationale is shown on the findings site.",
+   "rationale": "C5 adds the course where AI is the subject as well as a tool; C6 adds code-heavy upper-level work beyond the intro sequence. Keeping out-of-frame courses preserves them for later coding without breaking the comparable frame."
+  },
+  {
+   "id": "D54",
+   "date": "2026-10-26",
+   "section": "Audit",
+   "by": "Claude (chief of staff)",
+   "decision": "Correction pass (D52) applied: 1,459 statements rule -> template, 47 rule -> recommendation, 30 rule -> description, 42 about-AI yes -> no (and smaller changes); old values kept as *_before_correction. On the 300-statement representative audit sample, binding error fell from 11.0% to 5.3% (95% CI 3.3-8.5%) and about-AI error is 0.7%. Corrected binding mix of AI statements: university-wide rule 20.7%, template 18.6%, recommendation 32.9%, description 27.9%; school rule 12.6%, template 31.2%; computing rule 45.5%, template 4.6%.",
+   "rationale": "The post-correction rate is measured on the same sample that revealed the error, so it is optimistic; a fresh audit sample after the reset will confirm it."
+  },
+  {
+   "id": "D55",
+   "date": "2026-10-26",
+   "section": "Dissemination",
+   "by": "PI (ordering, features); Claude (implementation)",
+   "decision": "App v1 (v2/site/index.html, data from v2/tools/build_v2.py; static site whose front end fetches JSON, size not a constraint). Everything is ordered by the policy lifecycle, not by date: general, before the course, course start, during work, during assessment, when misuse is suspected, over time. Each type's lifecycle rank is the mean phase index of its statements; themes are ordered by the same measure. Matrix cells open a collapsible list of their policies grouped by type in lifecycle order; every cell and every policy has a link (#matrix/view~layer~cell, #policy/id). Counts show statements about AI only (23,960). Each view carries a 'Reading this view' note computed from the data. New tabs: CS courses (frame C1-C6, statuses, verbatim AI passages, open-coding labels as they arrive) and Draft a policy (answers become a syllabus statement or department guideline from template sentences, organized by lifecycle, with real wording and links under each sentence; copy or download as Markdown). Statement and document ids are now prefixed with the university (23 duplicates fixed). Document dates are extracted by v2/tools/doc_dates.py for display only (383 of 774 dated).",
+   "rationale": "The PI asked that guidelines read coherently along the course lifecycle; template sentences keep generated documents free of AI-written policy text, while the examples show real institutional wording."
+  },
+  {
+   "id": "D56",
+   "date": "2026-10-26",
+   "section": "Course layer",
+   "by": "Claude (chief of staff), per PI (D49)",
+   "decision": "Course layer coded with its own codebook. (1) Open coding: 386 verbatim syllabus AI passages (C1-C4 plus the first C5/C6) split into 1,765 statements with exact anchors (script-checked), each given a free label (1,478 distinct), stance, actor, modality and a CS-specific flag (44% CS-specific); coders were barred by tool permissions from reading the institutional type lists. (2) Course codebook: 50 types in 9 themes (v2/course_codebook.json), grouped by Claude from the labels. (3) Coding: coder A all statements, coder B a 25% random sample; Krippendorff's alpha 0.878 (441 pairs, 88.2% agreement). (4) Only then an alignment map course type -> institutional types (v2/course_alignment.json, with reasons) and a deterministic comparison (v2/tools/compare_layers.py -> v2/exports/layer_comparison.json). Findings: 91% of course statements fall in types institutions also write about, 4% in related but more specific types (line caps on AI code, coding agents, AI for docstrings), 3% in types with no institutional counterpart (ask AI for explanations not code: 12 universities; AI homework hurts exam readiness: 14; AI for test cases: 5; sharing AI sessions: 2), 2% OTHER. Course stance tightens toward the start of the degree: AI is banned in 48% of CS1 passages, 43% CS2, 32% algorithms, 11% software engineering. Where the university delegates the decision, 37% of CS course passages ban AI. Institutional topics common at 100+ universities that never appear in syllabi: faculty support, policy review, definitions, values and principles, sample language, AI literacy, tool approval, research, learning objectives.",
+   "rationale": "Separate codebooks let alignment and mismatch be findings (PI, D49). The alignment map is a judgment and is published with reasons so others can contest it."
+  },
+  {
+   "id": "D57",
+   "date": "2026-10-26",
+   "section": "Audit",
+   "by": "PI (use GPT/Codex, keep Claude usage low); Claude (design)",
+   "decision": "OpenAI Codex (GPT, via the Codex CLI bundled with the ChatGPT app, run by v2/tools/codex_run.py) runs three jobs: (1) the GPT critique of the Opus audit (129 corrections, 38 confirmations); (2) a fresh audit of a new simple random sample of 300 statements about AI (seed 20261027, excluding the first sample), using the same audit brief and checker, to measure error after the D52 correction with an auditor from another model family; (3) the remaining C5/C6 course collection (213 universities) with the same brief and validator as the Claude collectors.",
+   "rationale": "Cross-family checks are part of the plan (D50); moving the remaining collection to Codex keeps the Claude weekly usage under the PI's cap."
+  },
+  {
+   "id": "D58",
+   "date": "2026-10-26",
+   "section": "Dissemination",
+   "by": "PI (review of app and outline)",
+   "decision": "(1) P140 'Having another person or AI do your course work' split from P19 (15 statements, 12 universities): P19 is submitting AI output as one's own; P140 is the outsourcing frame where AI is among the outside parties. (2) Stance labels made distinct and defined everywhere (app, findings page, Excel Definitions): Prohibit; Only listed uses (restrict); Allowed with conditions (permit); Encourage; Instructor decides (delegates). 'Require' is not shown because no document takes it; empty stance columns are dropped in the matrix and the Excel Matrix sheet. (3) Each policy is shown as the plain statement with the institution's original wording under it (no highlight); when the original states the policy, only the original is shown. (4) Policies are presented in seven lifecycle stages (why the policy exists, setting up, telling students, while students work, assessment, suspected misuse, beyond the classroom), themes inside stages, kinds of policy inside themes ordered by how many universities have them; long lists show 12 with 'Show all'. (5) Matrix cells show the count with its unit and the three most common kinds of policy, and grow as needed; drawers group by theme then kind. (6) Draft a policy renders as a full document. (7) Paper outline revised: title, gap (no shared vocabulary), RQ1 policies in higher education, RQ2 CS as a case; course frame listed as six courses; audit item removed; 'syllabi are hard to see' moved to threats (access behind logins); 'new ideas' list dropped.",
+   "rationale": "PI review: the app must tell a coherent lifecycle story, show original wording plainly, and match the Excel file."
+  },
+  {
+   "id": "D59",
+   "date": "2026-10-27",
+   "section": "Synthesis: policy positions",
+   "by": "PI (approach), Claude (design)",
+   "decision": "Below each policy type, statements are grouped into policy positions: one policy each, defined by who is asked to do what, and when (actor, required action, force and lifecycle phase). A Sonnet worker groups each type's about-AI statements and writes one plain policy sentence per position, labelled AI-written; every position keeps its supporting statement ids, and up to 3 example original wordings are picked by id and re-checked verbatim against the saved source text. Positions are ordered by lifecycle phase (D55) and shown in the Policies tab, matrix drawer, Draft a policy examples and the Excel Positions sheet.",
+   "rationale": "A type is a topic and holds different policies (e.g. P31 mixes 'students must verify', 'instructors should teach verification' and warnings that AI can be wrong). Readers and institutions need the policies themselves, each tethered to real wording. Pilot on P31, P10, P30 (1,462 statements, 34 positions, every statement assigned) was checked before the full run. Lines a worker leaves unassigned are placed by matching actor, modality and phase and recorded as repaired."
+  },
+  {
+   "id": "D60",
+   "date": "2026-10-27",
+   "section": "Synthesis: policy positions",
+   "by": "PI",
+   "decision": "Policies inside a type are consolidated: fine positions that ask the same actor for the same action merge across force (must, should, may to do it) into one policy; positions for different actors stay separate, as do different actions or objects (teaching verification vs verifying; checking AI-cited sources; testing AI code) and prohibitions vs permissions. Each policy sentence names its actor and states the policy or fact directly (no 'Policies warn that'). In the app the sentence is shown as the policy, with who and how strongly it is asked (e.g. 'Students must 189, should 104') and its original wordings; the app does not tag it as AI-written. The Excel README and this register record that a Claude Sonnet worker wrote the sentences from the grouped statements.",
+   "rationale": "PI review of the D59 pilot: must and should wordings of the same action read as duplicates, while policies aimed at different actors are different policies. The fine positions are kept (v2/positions/positions_fine.json) as the parts of each merged policy, and a script rejects any merge that mixes actors."
+  },
+  {
+   "id": "D61",
+   "date": "2026-10-27",
+   "section": "Course layer",
+   "by": "PI (go-ahead), Claude (method)",
+   "decision": "C5 (AI/ML) and C6 (systems or security) syllabus passages are coded with the existing course codebook (D56) by the same two-step procedure (open coding, then codebook assignment), added incrementally: earlier statements keep their codes and their second-coder sample; coder B codes a 25% sample of the new statements.",
+   "rationale": "Keeps the D56 codes and alpha sample stable while extending the comparison to all six course slots. Fit check: 5% (C5) and 2% (C6) of new statements needed an OTHER label, so the codebook was not extended. Overall alpha .870 (n=541 pairs)."
+  },
+  {
+   "id": "D62",
+   "date": "2026-11-02",
+   "section": "Synthesis: policies",
+   "by": "PI (approach), Claude (method)",
+   "decision": "Policies that say the same thing are merged across types, judged by semantic equivalence (same requirement, permission, prohibition or fact in other words) and latent equivalence (same intent and act asked of the same people); different actions, objects, material conditions or directions stay separate. A merged policy is listed under each of its types. Each coded-'general' policy is given a stage, or 'background' when it is a definition, scope statement, reason, value or fact with no time of action. Run by Claude Opus per actor group (v2/tools/synthesis.py dedupe); the merged parts and a one-line reason are kept for review.",
+   "rationale": "PI: redundant policies that say the same thing in different words should be merged and referenced under each topic; stage-less policies need a home. Result: 1,430 -> 1,062 institutional policies (238 merges; 173 span 2+ types); 176 background."
+  },
+  {
+   "id": "D63",
+   "date": "2026-11-02",
+   "section": "Course layer: policies",
+   "by": "PI (go-ahead), Claude (method)",
+   "decision": "Course statements (2,167, course codebook D56) are grouped into course policies per course type with the same rules as the institutional layer (one actor and action, force merged, D60), each with a stage of the course or background, then merged across course types (D62). Statements not about AI are set aside. Example wordings are syllabus anchors already checked verbatim against the saved passages.",
+   "rationale": "PI: the CS bottom-up layer needs the same structure as the institutional layer. Result: 390 grouped policies (19 not about AI) -> 315 course policies after merging, 45 background."
+  },
+  {
+   "id": "D64",
+   "date": "2026-11-02",
+   "section": "Coding: unplaced statements",
+   "by": "PI (rule), Claude (method)",
+   "decision": "Each UNCOVERED statement is placed in an existing policy when it states that policy (same meaning and actor), else set aside as not about AI (no longer counted), not a policy (no rule, recommendation, reason or fact), or unique (a rare policy kept as a candidate). Placements flagged as loose by the coder were kept as unique.",
+   "rationale": "PI: unplaced statements that are not about AI or not policies should be set aside. Result: 90 placed, 226 unique, 20 not a policy, 12 not about AI."
+  },
+  {
+   "id": "D65",
+   "date": "2026-11-02",
+   "section": "Coding: actor groups",
+   "by": "PI",
+   "decision": "Actors are shown in four groups: students; instructors; staff and administrators (coded ta-staff and admin combined); everyone (a rule addressed to the whole community rather than one role). The coded actor is kept (actor_coded).",
+   "rationale": "PI: TAs/staff and administrators are each small; combining them reduces sparsity. 'Everyone' stays separate because such rules bind all roles at once."
+  },
+  {
+   "id": "D66",
+   "date": "2026-11-02",
+   "section": "Synthesis: policy kinds and presentation",
+   "by": "PI (request), Claude (method)",
+   "decision": "Every policy is labelled by the kind of text behind it: rule, recommendation, template (sample syllabus language), description, or background; institutional kinds come from the majority binding of its statements, course kinds from their majority force (should = recommendation, informs = description, otherwise rule). Background policies are classified as definition, reason, fact or resource (15 that were actually rules were moved back to action policies). All policies stay in the set regardless of how many universities hold them. The findings page shows the pipeline from documents to policies with the count at each step, the kinds table, background kinds with examples, and a browser of every policy that opens to all its statements.",
+   "rationale": "PI: advisors need a synthesized policy set and a clear view of how it was built; coding was exhaustive, so not everything coded is a policy and readers should see what is. Result: institutional 207 rules, 404 recommendations, 162 templates, 123 descriptions, 166 background (21 definitions, 60 reasons, 64 facts, 21 resources); course 164 rules, 35 recommendations, 76 descriptions, 40 background."
+  },
+  {
+   "id": "D67",
+   "date": "2026-11-02",
+   "section": "Synthesis: policy core",
+   "by": "PI",
+   "decision": "The synthesized policy set is read by kind. Rules and recommendations form the policy core (611 institutional, 199 course). Facts and warnings about AI are kept beside the core. Templates (sample syllabus language), descriptions, and the other background (reasons, definitions, resources) are kept and shown in separate tabs for reference; definitions and resources are not analysed further.",
+   "rationale": "PI: templates, descriptions, definitions and resources add little as policies; facts explain why rules exist; everything stays visible so advisors can see what was coded."
+  },
+  {
+   "id": "D68",
+   "date": "2026-11-02",
+   "section": "Presentation: website",
+   "by": "PI",
+   "decision": "The policy set counted everywhere is rules, recommendations, and facts and warnings (institutional 675 = 611 + 64; course 228 = 199 + 29). Templates, descriptions and reasons/definitions/resources are kept on an 'Other coded text' page and never counted. The atlas is one local website with separate pages: Overview (status, a pipeline diagram of what each step kept and set aside, heatmaps of the policy set by level, group and stage, thin-cell findings), Policy set, CS course policies, Matrix (counts distinct policies, placed by each policy's own group and stage; statements and universities as alternatives), Other coded text, Universities, CS course coverage, Draft a policy, Policy label, and Method and reliability (the findings content as sub-pages). Everything is collapsed until opened. Each page links to the CSV files behind it (v2/site/data/csv, written by export_site_csv.py) so collaborators can edit and return them.",
+   "rationale": "PI: advisors need a navigable, proper website shown from the PI's laptop, numbers based on policies only, and editable data behind each page."
+  },
+  {
+   "id": "D69",
+   "date": "2026-11-02",
+   "section": "Presentation: website",
+   "by": "PI (request), Claude (design)",
+   "decision": "A 'By role' page shows one role's policy set (students, instructors, staff and administrators, everyone; institutional or CS course) by stage, each policy sorted into Do (must or should), Don't (must not or should not), May (allowed) or Know (facts and warnings). Direction is the majority force of the policy's statements for that role. Open item for later (PI): a matrix by direction (what to do vs. not to do) that surfaces conflicting policies, e.g. 'students may' vs. 'students must not' for the same act; how to present and treat conflicts is to be decided.",
+   "rationale": "PI: 'if I'm a student, what are my AI policies?' The direction split also prepares the conflict analysis the PI flagged for later."
+  },
+  {
+   "id": "D70",
+   "date": "2026-11-02",
+   "section": "Presentation: website",
+   "by": "PI",
+   "decision": "A shareable report (site Report tab, printable HTML, Word file) holds where things stand, the pipeline, the numbers by level, group and stage, what the policies show (incl. CS vs. university and school) and two advisor decisions (size of the 675 + 229 set; how to run human review on a sample), followed by every policy in the set grouped by who it addresses and stage. No method section. Conflicting policies are handled by direction (Do / Don't / May / Know), not as a separate decision.",
+   "rationale": "The advisors asked for a synthesized policy set they can read, print and share; built by tools/build_report.py from the same data as the site so the numbers stay in step."
+  }
+ ]
+}

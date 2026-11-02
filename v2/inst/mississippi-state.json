@@ -1,0 +1,412 @@
+{
+ "university": "Mississippi State University",
+ "slug": "mississippi-state",
+ "state": "MS",
+ "type": "R1",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "mississippi-state-its-guidelines",
+   "layer": "university",
+   "unit": "Information Technology Services",
+   "course": null,
+   "title": "Generative AI Guidelines for MSU",
+   "url": "https://servicedesk.its.msstate.edu/TDClient/45/Portal/KB/PrintArticle?ID=2168",
+   "date_or_term": null,
+   "text_file": "/Users/rudrajit/Documents/Current-Research/AI in education policy guidelines/.cache/text/v2-msstate-itsguidelines.txt",
+   "stance": "permit",
+   "tiers": [],
+   "summary": "ITS guidance on responsible generative AI use focused on data security: only public data in AI tools, vetted and contracted products for confidential data, and compliance with OP 01.12. It says nothing about coursework or academic integrity.",
+   "stance_why": "Coder A coded delegates, coder B permit. The text allows generative AI use with conditions (\"Only publicly available information ... may be used\"; confidential data requires tools that \"Must ... have undergone a comprehensive security risk review\") and never hands decisions to instructors or courses, so permit-with-conditions fits better than delegates.",
+   "units": [
+    {
+     "why": "Scope statement: the document says it gives \"general guidelines for the responsible use of generative AI\", an institution-level framework with no course focus; P56 fits as the preamble of purpose and scope.",
+     "anchor": "general guidelines for the responsible use of generative AI at Mississippi State University",
+     "frag_start": "This document provides general guidelines",
+     "frag_end": "generative AI at Mississippi State University",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "governance"
+     ],
+     "resolution_why": "Both P56/informs/general. Agreement."
+    },
+    {
+     "why": "Frames AI tools as \"posting data on a public website\", a privacy principle that tells users what to assume when using a tool; P50 (protect data) fits better than P56 because the point is data exposure.",
+     "anchor": "AI tools and services should be viewed as posting data on a public website",
+     "frag_start": "AI tools and services should be viewed",
+     "frag_end": "posting data on a public website",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "Both P50/should/restrict. Agreement."
+    },
+    {
+     "why": "\"Only publicly available information ... may be used\" in AI tools is a data-use limit binding all users; 'Only' turns the permission into a requirement, so must. P50 (protect confidential data), not P49, because it concerns any non-public data.",
+     "anchor": "Only publicly available information",
+     "frag_start": "Only publicly available information (data that",
+     "frag_end": "may be used in generative AI tools and services",
+     "policy": "Only publicly available information (data with no legal or other requirement for confidentiality, integrity, or availability under the Freedom of Information Act) may be used in generative AI tools and services.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "A coded must, B coded may. The sentence reads \"Only publicly available information ... may be used\"; grammatically 'may', but 'Only' makes it a binding limit on all other data, so it works as a requirement. Final must. Policy keeps A's full wording because the anchor omits the FOIA parenthetical."
+    },
+    {
+     "why": "Warns users to \"expect these AI tools and services to use input data for its training\", a fact about tool data practices supporting the privacy rule; P50 covers \"AI tools store prompts\".",
+     "anchor": "expect these AI tools and services to use input data for its training",
+     "frag_start": "Users should expect",
+     "frag_end": "including the derivative use of any data submitted",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "Both P50/informs/neutral. Agreement."
+    },
+    {
+     "why": "Where source information requires authentication, this \"is an indicator that permission from the respective division VP may be needed\" before using it in AI tools; the text signals a possible approval step rather than ordering one, so informs. Coded P50 as data protection.",
+     "anchor": "permission from the respective division VP may be needed to use this information",
+     "frag_start": "If students, faculty, staff, or affiliates need",
+     "frag_end": "information in AI tools and services",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "A: should/general; B: informs/during-work. The text says authentication is \"an indicator that permission ... may be needed\", an advisory heuristic, so informs (B). No stage of coursework is mentioned, so phase is general (A)."
+    },
+    {
+     "why": "Directs questions about data standards and security to the \"Chief Information Security Officer\"; it names a contact. P50 is the closest home (data-security guidance), though it is mainly a referral.",
+     "anchor": "security should be directed to the Chief Information Security Officer",
+     "frag_start": "Questions about university data standards",
+     "frag_end": "security@msstate.edu or 662-325-3709",
+     "policy": "Questions about university data standards and security are directed to the Chief Information Security Officer.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data",
+      "governance"
+     ],
+     "resolution_why": "Only A coded this. Source: \"Questions about university data standards and security should be directed to the Chief Information Security Officer\". It is a real directive (should) though minor, so kept as P50 with A's policy wording."
+    },
+    {
+     "why": "\"Generative AI should be used in accordance with the existing university policies (OP 01.12)\" ties AI use to an existing institutional framework, so P56, should; the anchor states the rule, so policy is null.",
+     "anchor": "Generative AI should be used in accordance with the existing university policies",
+     "frag_start": "Follow university policies and procedures",
+     "frag_end": "information security program.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "governance",
+      "privacy-data"
+     ],
+     "resolution_why": "Both coded P56/should/general; A wrote a normalized policy, B used null. The anchor already states the rule, so null."
+    },
+    {
+     "why": "\"Understand if informed consent and approval of the data subjects is required\" asks users to consider data subjects before using AI, a privacy duty; P50, should. It does not itself limit AI use, so unit_stance neutral.",
+     "anchor": "Understand if informed consent and approval of the data subjects is required",
+     "frag_start": "Understand if informed consent",
+     "frag_end": "data subjects is required",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "A: during-work/restrict; B: general/neutral. The sentence tells users to check whether consent is required; it names no coursework stage and does not restrict AI use by itself. Final general, neutral (B)."
+    },
+    {
+     "why": "Users handling proprietary or confidential information \"Must use products or services that have undergone a comprehensive security risk review\"; this is the vetted-tools rule in P50.",
+     "anchor": "Must use products or services that have undergone a comprehensive security risk review",
+     "frag_start": "Must use products or services that have undergone",
+     "frag_end": "data classification by MSU Chief Information Security Officer",
+     "policy": "For MSU proprietary or confidential information, students, faculty, staff and affiliates must use products or services that have undergone a comprehensive security risk review based on use case and data classification by the MSU Chief Information Security Officer.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "Both P50/must; A wrote a normalized policy and B null. The anchor omits the confidential-information scope and the CISO, so A's policy is kept."
+    },
+    {
+     "why": "Users handling confidential information \"Must use products or services that have a university contract in place\" covering training use; a vetted/licensed tool requirement, P50 rather than P65 because it binds users, not institutional review.",
+     "anchor": "have a university contract in place that protects university data",
+     "frag_start": "Must use products or services that have a university",
+     "frag_end": "accessible to any external parties",
+     "policy": "For MSU proprietary or confidential information, students, faculty, staff and affiliates must use products or services that have a university contract in place that protects university data and specifically addresses how MSU information will be used by training models and whether it is accessible to external parties.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "Both P50/must; A wrote a normalized policy and B null. Anchor omits the confidential-information scope, so A's policy is kept."
+    }
+   ]
+  },
+  {
+   "id": "mississippi-state-syllabus-statements",
+   "layer": "university",
+   "unit": "CITE (Center for Instructional Technology and Excellence)",
+   "course": null,
+   "title": "Suggested MSU Generative AI Syllabus Statements",
+   "url": "https://www.cite.msstate.edu/sites/www.ctl.msstate.edu/files/2026-01/AI%20Syllabus%20Guidelines_CITE_2026.docx",
+   "date_or_term": "January 2026",
+   "text_file": "/Users/rudrajit/Documents/Current-Research/AI in education policy guidelines/.cache/text/v2-msstate-syllabus.txt",
+   "stance": "delegates",
+   "tiers": [
+    "Open use",
+    "Moderate use",
+    "Strict use"
+   ],
+   "summary": "CITE offers three suggested syllabus statements ranging from open use with citation to moderate (instructor-designated assignments, disclosure, detection) to strict (AI use is academic dishonesty). Instructors pick one; the statements are suggestions, not binding rules.",
+   "stance_why": "The document is a menu of \"Option 1: Open\", \"Option 2: Moderate\" and \"Option 3: Strict\" statements, so it sets no single stance and hands the choice to instructors.",
+   "units": [
+    {
+     "why": "The document lists three named levels of AI use (open, moderate, strict) that instructors pick from, a tier scheme (P05). It offers options and orders nothing, so informs, neutral.",
+     "anchor": "Suggested Mississippi State University Generative AI Syllabus Statements",
+     "frag_start": "Suggested Mississippi State University Generative",
+     "frag_end": "AI Syllabus Statements",
+     "policy": "Three suggested syllabus statements are offered: Option 1 Open Use, Option 2 Moderate Use, Option 3 Strict Use.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P05",
+     "unit_stance": "neutral",
+     "topics": [
+      "use-categories-levels",
+      "syllabus-communication"
+     ],
+     "resolution_why": "Matched: A anchored the 'Option 1: Open Use Guidelines' heading, B the title. A also coded a separate P04 unit for the same title (choice among statements), which is only an inference from the title and the P05 unit already covers the offering; dropped. Modality A informs vs B may; the list describes options and imposes nothing, so informs. Wording follows B."
+    },
+    {
+     "why": "Option 1 says \"students are encouraged to use Generative AI Tools such as ChatGPT to support their work\", a default encouragement within that tier; P02.",
+     "anchor": "students are encouraged to use Generative AI Tools such as ChatGPT to support their work",
+     "frag_start": "In [course name], students are encouraged",
+     "frag_end": "to support their work",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P02",
+     "unit_stance": "encourage",
+     "topics": [
+      "default-stance",
+      "permitted-uses"
+     ],
+     "resolution_why": "Both coded P02/encourage/should for Option 1 (\"students are encouraged to use Generative AI Tools such as ChatGPT\"). Agreement."
+    },
+    {
+     "why": "Option 1 requires students to \"give credit and cite any AI-generated material\" under documentation rules; a disclosure/citation duty, P24.",
+     "anchor": "Students must give credit and cite any AI-generated material",
+     "frag_start": "Students must give credit and cite",
+     "frag_end": "references.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "require",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "resolution_why": "Both P24/must; A wrote a policy, B null. The anchor states the rule, so null."
+    },
+    {
+     "why": "Option 1 requires the quoted acknowledgement \"The author acknowledges the use of [Generative AI Tool Name]\", naming tool and purpose; a statement with each submission, P24 (P25 would need prompt/output detail, which is absent).",
+     "anchor": "include the following statement in assignments to indicate use of a Generative AI Tool",
+     "frag_start": "Students must also include the following",
+     "frag_end": "grammatical correction, citation, etc.]",
+     "policy": "Students must include in assignments a statement acknowledging the use of the named Generative AI tool and the purpose, such as brainstorming, grammatical correction or citation.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "require",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "resolution_why": "Both P24/must for the Option 1 acknowledgement statement. A's policy wording (tool and purpose) is kept since the anchor does not carry the content of the statement. A also coded the same statement again under Option 2; dropped as an exact repeat."
+    },
+    {
+     "why": "Option 2 says \"students are permitted to use Generative AI tools ... for specific assignments, as designated by the instructor\"; AI is allowed only where the instructor designates, so the moderate tier is a per-assignment rule, P04.",
+     "anchor": "for specific assignments, as designated by the instructor",
+     "frag_start": "In [course name], students are permitted",
+     "frag_end": "as designated by the instructor",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P04",
+     "unit_stance": "permit",
+     "topics": [
+      "instructor-discretion",
+      "permitted-uses"
+     ],
+     "resolution_why": "Both P04/may for Option 2 (\"permitted ... for specific assignments, as designated by the instructor\"). Agreement."
+    },
+    {
+     "why": "Option 2 requires citing AI-generated material \"according to [APA, MLA, etc.] rules\"; a citation duty (P24), with the style left for the instructor to fill.",
+     "anchor": "Students must give credit and cite any AI-generated material according to [APA, MLA, etc.] rules",
+     "frag_start": "Students must give credit and cite",
+     "frag_end": "quotations, and references.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "require",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "resolution_why": "Both P24/must for the Option 2 citation rule naming APA/MLA. A wrote a policy, B null; the anchor states the rule, so null."
+    },
+    {
+     "why": "Option 2 states \"Submitted work may be filtered through an AI Writing Detection tool\", an announced use of detection software, P40.",
+     "anchor": "Submitted work may be filtered through an AI Writing Detection tool",
+     "frag_start": "Submitted work may be filtered",
+     "frag_end": "AI Writing Detection tool",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P40",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ],
+     "resolution_why": "Both P40/may/instructor. Anchor states the rule, so null. A also coded the identical sentence in Option 3; dropped as an exact repeat within the document."
+    },
+    {
+     "why": "The detection review \"may initiate further discussion about the authenticity of the submission\"; the instructor opens a conversation about authenticity, so P57 (talk before escalating) fits though the text says it may also lead to formal review.",
+     "anchor": "This review may initiate further discussion about the authenticity of the submission",
+     "frag_start": "This review may initiate further discussion",
+     "frag_end": "more formal review through the Honor Code Council",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P57",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions",
+      "detection-tools"
+     ],
+     "resolution_why": "Both P57/may. Identical sentence in Option 3 coded once (A's second copy dropped as exact repeat)."
+    },
+    {
+     "why": "The review \"could result in a more formal review through the Honor Code Council\", routing suspected misuse into the integrity process; P36.",
+     "anchor": "a more formal review through the Honor Code Council",
+     "frag_start": "which could result in a more formal review",
+     "frag_end": "through the Honor Code Council",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "resolution_why": "Both P36/may/instructor. A wrote a policy, B null; the anchor alone states that the review could lead to a formal Honor Code Council review, so null."
+    },
+    {
+     "why": "Option 3 says \"it is expected that all submitted work is produced by students themselves\"; this sets ownership of submitted work, which is P29, and 'expected' is should. The ban on AI generation is the next sentence.",
+     "anchor": "it is expected that all submitted work is produced by students themselves",
+     "frag_start": "In [course name], it is expected that all",
+     "frag_end": "produced by students themselves",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P29",
+     "unit_stance": "restrict",
+     "topics": [
+      "accountability-understanding",
+      "academic-integrity"
+     ],
+     "resolution_why": "A: P19/must-not/prohibit; B: P29/should/restrict. The sentence only says work is expected to be the students' own and does not mention AI; the AI ban is the following sentence (coded separately). P29 matches 'submitted work must be their own'; 'expected' is should. Final follows B."
+    },
+    {
+     "why": "\"Use of a Generative AI tool to complete an assignment constitutes academic dishonesty\" classifies AI use for the assignment as misconduct, which is P36; it also implies the ban (P19) but states it as a classification, so P36.",
+     "anchor": "Use of a Generative AI tool to complete an assignment constitutes academic dishonesty",
+     "frag_start": "Use of a Generative AI tool",
+     "frag_end": "will be reported as an Honor Code Violation",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "prohibit",
+     "topics": [
+      "integrity-sanctions",
+      "academic-integrity"
+     ],
+     "resolution_why": "A: P36/when-misuse; B: P19/during-work with a policy reading 'is not allowed'. The text never says 'not allowed'; it says such use \"constitutes academic dishonesty\", the P36 definition. Policy set to null so the anchor carries the words. Final follows A."
+    },
+    {
+     "why": "Option 3 says such use \"will be reported as an Honor Code Violation\", a stated consequence; coded P36 rather than P37 because no specific penalty (grade, failure) is named.",
+     "anchor": "will be reported as an Honor Code Violation",
+     "frag_start": "Use of a Generative AI tool",
+     "frag_end": "Honor Code Violation",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P36",
+     "unit_stance": "prohibit",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "resolution_why": "Both P36/must/instructor/when-misuse. unit_stance: A prohibit, B restrict; reporting enforces the strict-tier ban, so prohibit. Anchor states the rule, so null."
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Reconciled from coders A and B. ITS document: stance resolved to permit (data-security conditions, no delegation). Syllabus options are alternative templates; sentences repeated across options (acknowledgement, detection, discussion) are coded once. No school or computing-unit policy found; courses deferred. Topics use the vocabulary of earlier v2/inst files."
+}

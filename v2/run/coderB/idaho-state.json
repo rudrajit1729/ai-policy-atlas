@@ -1,0 +1,37 @@
+{
+ "university": "Idaho State University", "slug": "idaho-state", "state": "ID", "type": "R2",
+ "searched": {"university": "inaccessible", "school": "none-found", "computing": "none-found", "course": "deferred"},
+ "documents": [
+  {"id": "isu-its-ai-faq", "layer": "university", "unit": "Information Technology Services (TigerTracks knowledge base)", "course": null,
+   "title": "Artificial Intelligence (AI)", "url": "https://tigertracks.isu.edu/TDClient/1950/Portal/KB/PrintArticle?ID=170601",
+   "date_or_term": "undated; accessed 2026-10-25",
+   "stance": "delegates", "tiers": [],
+   "summary": "An ITS FAQ saying ISU is forming an AI Steering Committee and that formal guidelines are still in development. It notes Gemini is enabled on ISU Google accounts and asks departments not to buy their own AI licenses. It sets no teaching or classroom AI-use rule.",
+   "stance_why": "The article sets no rule on student or instructor AI use. It says 'While these policy documents are in development' and defers to a steering committee that will 'define guidelines and policies', so it takes no stance and leaves the decision to future guidance.",
+   "units": [
+    {"why": "The article states the institution is forming a committee to 'define guidelines and policies', which is an institution-level framework statement about the purpose of governing AI; it fits P56 better than P54 because it announces the framework rather than a review cycle.",
+     "anchor": "ISU is forming an AI Steering Committee to define guidelines and policies", "frag_start": "ISU is forming an", "frag_end": "addressing potential risks.",
+     "policy": null, "actor": "admin", "phase": "before-course", "modality": "informs", "policy_type": "P56", "unit_stance": "neutral", "topics": ["governance"]},
+    {"why": "The note says the guidance is provisional: 'While these policy documents are in development' the FAQ answers questions. This signals the policy will change, so P54 fits; it is informational, not a rule.",
+     "anchor": "While these policy documents are in development", "frag_start": "While these policy documents are", "frag_end": "submitted to ITS.",
+     "policy": null, "actor": "all", "phase": "over-time", "modality": "informs", "policy_type": "P54", "unit_stance": "neutral", "topics": ["governance"]},
+    {"why": "'Gemini for Education has been enabled on all ISU Google Accounts' describes a university-provided AI tool available to users, which is P17 (sanctioned institutional tool) and not a statement of default permission.",
+     "anchor": "Gemini for Education has been enabled on all ISU Google Accounts.", "frag_start": "Gemini for Education has been", "frag_end": "all ISU Google Accounts.",
+     "policy": null, "actor": "all", "phase": "general", "modality": "informs", "policy_type": "P17", "unit_stance": "permit", "topics": ["institutional-tool"]},
+    {"why": "'Please refrain from purchasing individual AI licenses for your departments' is a directive to departments, so actor is admin and modality should-not. It points to vetted tools, so P50 (prefer vetted tools) fits better than P65, which concerns vendor contract review.",
+     "anchor": "Please refrain from purchasing individual AI licenses for your departments.", "frag_start": "Please refrain from purchasing individual", "frag_end": "for your departments.",
+     "policy": null, "actor": "admin", "phase": "before-course", "modality": "should-not", "policy_type": "P50", "unit_stance": "restrict", "topics": ["privacy-data", "governance"]},
+    {"why": "The passage explains that unreviewed tools 'can expose student or institutional data and introduce security risks', a data-privacy and security rationale for the licensing restriction; P50 (protect data) fits.",
+     "anchor": "can expose student or institutional data and introduce security risks", "frag_start": "AI tools that have not", "frag_end": "to ISU networks.",
+     "policy": null, "actor": "admin", "phase": "general", "modality": "informs", "policy_type": "P50", "unit_stance": "neutral", "topics": ["privacy-data"]},
+    {"why": "ISU says generative AI use must 'honor our existing commitments to security and privacy' and its values in ISU Policies and Procedures. This is a principle for institution-wide responsible AI use, so P56.",
+     "anchor": "ensuring that use of generative AI honors our existing commitments to security and privacy", "frag_start": "ISU also recognizes the", "frag_end": "Policies and Procedures.",
+     "policy": null, "actor": "all", "phase": "general", "modality": "informs", "policy_type": "P56", "unit_stance": "neutral", "topics": ["privacy-data", "governance"]},
+    {"why": "The sentence lists issues 'being considered by the AI steering committee' (confidentiality, PII, academic integrity). It shows the policy is still being worked out, so P54 fits; the issue list is not itself a rule.",
+     "anchor": "Concerns about confidentiality, protecting personally identifiable information (PII), academic integrity, and more are being considered", "frag_start": "Concerns about confidentiality, protecting", "frag_end": "by the AI steering committee.",
+     "policy": null, "actor": "admin", "phase": "over-time", "modality": "informs", "policy_type": "P54", "unit_stance": "neutral", "topics": ["governance", "privacy-data", "academic-integrity"]}
+   ]}
+ ],
+ "new_types": [],
+ "notes": "Only one included document (ITS FAQ); official ISU General Counsel and Academic Integrity Center pages returned 403 so were not available. No computing-unit policy found."
+}

@@ -1,0 +1,34 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT11 "AI for tests and test cases" (AI to design, generate or brainstorm test cases (allowed, limited or banned).).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..9 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | colgate | C3 | student | must-not | no AI test case generation | ask the model to generate test cases for you
+1 | loyola-marymount | C1 | student | may | AI allowed for unit tests | Generating unit tests for edge cases.
+2 | loyola-marymount | C2 | student | may | AI allowed for unit tests | Generating unit tests for edge cases.
+3 | loyola-marymount | C3 | student | may | AI allowed for unit tests | Generating unit tests for edge cases.
+4 | loyola-marymount | C5 | student | may | AI allowed for unit tests | Generating unit tests for edge cases.
+5 | loyola-marymount | C6 | student | may | AI allowed for unit tests | Generating unit tests for edge cases.
+6 | michigan | C1 | student | may | AI allowed for brainstorming edge cases | Brainstorming and identifying potential edge cases for testing
+7 | michigan | C1 | student | must-not | no AI list of test cases | Asking for a list of test cases (even if they aren't written out as code)
+8 | stony-brook | C4 | student | must | write own tests | Write your own tests. Do not outsource verification to the same tool that wrote the code.
+9 | uiuc | C2 | student | may | AI helps design test cases | Work with the AI to identify the scenarios, boundary conditions, and

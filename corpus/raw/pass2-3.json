@@ -1,0 +1,386 @@
+{
+  "group": "pass2-3",
+  "searched_universities": [
+    {"university": "Drexel University — College of Computing & Informatics", "result": "included", "notes": "pass2. WebSearch found CCI course pages on cs.drexel.edu: CS 172 (Fall 2026), SE 310 (Fall 2026), CS 430 (Fall 2025). These are the same three documents listed under Drexel University. No CCI-level AI policy page found."},
+    {"university": "Drexel University", "result": "included", "notes": "pass2. Three CCI course documents included (CS 172, SE 310, CS 430). Provost AI pages are generic. INFO 693 Human-AI Interaction syllabus (timgorichanaz.com) has no AI-use policy and was not included."},
+    {"university": "Harvard University — Data Science Initiative / IACS", "result": "none-found", "notes": "pass2. Searched CS1090A/CS109A/AC209 and IACS GitHub sites; only pre-2023 syllabi or student repos, no AI-use policy text found."},
+    {"university": "Harvard University", "result": "included", "notes": "pass2. Added CS 61 (2026 course description), which has detailed AI-tools policy. CS50 was already in the corpus. Bok Center and OUE pages are generic."},
+    {"university": "University of California, Irvine — Department of Informatics", "result": "none-found", "notes": "pass2. site:ics.uci.edu and IN4MATX course searches returned only pre-2016 informatics syllabi; current syllabi are not public (Canvas). Campus requires a GenAI syllabus statement (generic)."},
+    {"university": "University of British Columbia — iSchool (School of Information)", "result": "none-found", "notes": "pass2. Searched ischool.ubc.ca syllabi; the public LIBR/ARST syllabi date from 2019-2023 and have no GenAI statements. UBC's CTLT syllabus language is generic."},
+    {"university": "McGill University", "result": "included", "notes": "pass2. COMP 480 (Winter 2024 draft course outline) has a Use of Generative AI clause. McGill teaching KB and Senate guidance are generic. COMP 424 outline has no AI-use clause."},
+    {"university": "University of Ottawa", "result": "only-generic-university-policy", "notes": "pass2. English and French searches (ITI/CSI/SEG, 'intelligence artificielle générative' plan de cours). Only TLSS/library/IT and Faculty of Medicine pages found; no EECS course or school policy is public."},
+    {"university": "Dalhousie University", "result": "only-generic-university-policy", "notes": "pass2. Only the Dal GenAI libguide and teaching guidance were found. web.cs.dal.ca course pages (CSCI 1110, 2110, 4150) have no AI-use text or are pre-2023."},
+    {"university": "Bryn Mawr College", "result": "included", "notes": "pass2. CS 109 Introduction to Computing (Spring 2026) has a one-line Collaboration/AI rule. CMSC 373 slides cover AI as content only."},
+    {"university": "Northwestern University", "result": "only-generic-university-policy", "notes": "pass2. Only university IT/Provost guidance and McCormick magazine coverage were found; no public CS syllabus with AI text. The NU-Qatar GenAI policy PDF is outside USA/Canada and was excluded."},
+    {"university": "University of Iowa", "result": "only-generic-university-policy", "notes": "pass2. Only Provost/OTLT 'AI in the classroom' and library guides were found. homepage.cs.uiowa.edu course pages (e.g., CS:2630 policies) have no AI text."},
+    {"university": "Rensselaer Polytechnic Institute", "result": "none-found", "notes": "pass2. Beyond the CSCI 1200 page already in the corpus, searches found only pre-2024 CS syllabi and the generic undergrad teaching resources page."},
+    {"university": "University of Colorado Boulder", "result": "included", "notes": "pass2. CSCI 3308 syllabus (Fall 2026, pages.dev) has a 'Usage of Gen AI tools' section. The CU AI syllabus-statement pages are generic."},
+    {"university": "Howard University", "result": "only-generic-university-policy", "notes": "pass2. Only University AI Policy 100-022 and CETLA guidance were found. A CSCI 135 S2025 syllabus with AI text exists only on Studocu (not an official public page), so it was not used."},
+    {"university": "University of Texas at San Antonio", "result": "only-generic-university-policy", "notes": "pass2. Only UTSA sample syllabus statements and the faculty GenAI guide were found. One CS 5463/4953 Simple Syllabus page is JS-only and empty via curl and WebFetch."},
+    {"university": "University of Houston", "result": "included", "notes": "pass2. COSC 4368 Fundamentals of AI syllabus (dated January 20, 2024) has an AI-tools section. COSC 1336 syllabi found are 2023 and have no AI text. UH AI FAQ is generic."},
+    {"university": "Wake Forest University", "result": "only-generic-university-policy", "notes": "pass2. Only ai.wfu.edu and CAT faculty resources were found. CS graduate syllabi are restricted to WFU students."},
+    {"university": "Old Dominion University", "result": "included", "notes": "pass2. Three course syllabi included: CS 355 (Spring 2026), CS 312 (Summer 2025), CS 422/522 (Spring 2026). The ODU CS Systems Group 'AI Resources' page describes department-hosted LLM services but sets no use policy and was excluded."},
+    {"university": "Louisiana State University", "result": "only-generic-university-policy", "notes": "pass2. Only the Faculty Senate GenAI Committee syllabus-statement guidelines (Fall 2025) were found. Public csc.lsu.edu course pages are old or have no AI text."},
+    {"university": "University of New Hampshire", "result": "only-generic-university-policy", "notes": "pass2. Only the teaching-learning hub GenAI page and catalog course descriptions were found."},
+    {"university": "James Madison University", "result": "included", "notes": "pass2. Three w3.cs.jmu.edu syllabi included: CS 149 (Fall 2026), CS 240 (Fall 2024), CS 470 (Spring 2025). CS 361, CS 343 and CS 354 also have AI text, but were not used because of the 3-course cap."},
+    {"university": "California Institute of Technology", "result": "only-generic-university-policy", "notes": "pass2. Only Institute GenAI/LLM guidance and HSS division policy were found. The ACM 95a/100a syllabus (Winter 2026) has an AI clause, but it is an applied-math course and was excluded."},
+    {"university": "California Polytechnic State University, San Luis Obispo", "result": "included", "notes": "pass2. CSC 248 Discrete Structures (Winter 2025) and CPE 453 Operating Systems (Spring 2026) syllabi on users.csc.calpoly.edu. The CTLT syllabus-statement page is generic."},
+    {"university": "University at Albany", "result": "only-generic-university-policy", "notes": "pass2. Only the 'AI basics for university teachers' page was found. No public ICSI/informatics syllabus with AI text."},
+    {"university": "UAB", "result": "only-generic-university-policy", "notes": "pass2. Only CTL AI resources and a Reporter article on CS curriculum were found. No public CS syllabus with AI text."},
+    {"university": "Oklahoma State University", "result": "only-generic-university-policy", "notes": "pass2. Only ITLE ChatGPT support page with sample statements was found. No public CS syllabus with AI text."},
+    {"university": "University of South Carolina", "result": "included", "notes": "pass2. CSCE 763 Digital Image Processing (Spring 2026) and CSCE 491 Capstone Computer Engineering Project (Spring 2026) syllabi on cse.sc.edu. CTE and Academic Integrity AI pages are generic."},
+    {"university": "University of Idaho", "result": "none-found", "notes": "pass2. Searches found no CS syllabus with AI text. www2.cs.uidaho.edu and marvin.cs.uidaho.edu course pages timed out or refused connections, so they could not be checked."},
+    {"university": "Boston College", "result": "only-generic-university-policy", "notes": "pass2. Only the BC Generative AI site guidelines and CTE resources were found. cs.bc.edu course pages found are pre-2023."},
+    {"university": "Santa Clara University", "result": "included", "notes": "pass2. School of Engineering 'AI Squared in Student Learning' page with tiered sample statements and CSE course examples (COEN 11, COEN 346). Included as university-computing (school-level). Library syllabus-policy guide is generic."},
+    {"university": "University of Manitoba", "result": "only-generic-university-policy", "notes": "pass2. Only CATL GenAI syllabus statements and the academic-integrity page were found. home.cs.umanitoba.ca course pages (e.g., COMP 3010 ROASS) have no AI text."},
+    {"university": "Memorial University of Newfoundland", "result": "only-generic-university-policy", "notes": "pass2. Only CITL GenAI syllabus statements and CIO guidance were found. COMP course pages have no AI text."},
+    {"university": "UQAM", "result": "included", "notes": "pass2. French searches found the public Département d'informatique course-plan index (Automne 2026). Included INF1120, INF2050 and INF3105. INF2120 repeats INF1120's AI sentence word for word and was skipped as a duplicate. INF3191 also has an AI clause but was not used because of the 3-course cap."},
+    {"university": "Spelman College", "result": "none-found", "notes": "pass2. Searches found no Spelman CS syllabus or policy page with AI text."},
+    {"university": "Jackson State University", "result": "only-generic-university-policy", "notes": "pass2. Only the JSU AI policy/initiatives page was found. No public CSC syllabus with AI text."},
+    {"university": "Foothill College", "result": "none-found", "notes": "pass2. The public CS syllabi directory has only old (e.g., W19) syllabi. AI Fellows and senate pages are not course policies."},
+    {"university": "Bellevue College", "result": "inaccessible", "notes": "pass2. bellevuecollege.edu returns a Cloudflare block to curl and 403 to WebFetch. Search snippets show only generic faculty-commons and student AI guidance."}
+  ],
+  "documents": [
+    {
+      "id": "drexel-cs172",
+      "university": "Drexel University", "country": "USA", "region": "PA",
+      "unit": "College of Computing & Informatics, Department of Computer Science", "level": "course",
+      "course": "CS 172 Computer Programming II", "title": "CS 172 - Department of Computer Science - Drexel University",
+      "url": "https://www.cs.drexel.edu/~aalban/CS172/index.htm", "date_or_term": "Fall 2026", "accessed": "2026-10-05",
+      "verbatim_source": "curl", "stance": "prohibit-by-default",
+      "summary": "Second-term programming course page. It requires students to turn off IDE code completion, and all graded code must be written without AI help. Using LLM services such as ChatGPT, Copilot or DeepSeek to write or debug solutions is listed as academic dishonesty.",
+      "excerpts": [
+        {"text": "Students must disable any code completion features in their IDE.", "frag_start": "Students must disable any code", "frag_end": "features in their IDE.", "section": "Course Policies", "topics": ["code-generation", "prohibited-uses"], "phase": "during-work", "actor": "student"},
+        {"text": "Code submitted for a grade must be written by the student without assistance from AI.", "frag_start": "Code submitted for a grade", "frag_end": "without assistance from AI.", "section": "Course Policies", "topics": ["default-stance", "code-generation"], "phase": "during-work", "actor": "student"},
+        {"text": "You use an LLM service (e.g., ChatGPT, CoPilot, DeepSeek, etc.) to help you write", "frag_start": "You use an LLM service", "frag_end": "the assignment, quiz, or exam.", "section": "Academic Honesty Policy - Examples (NOT acceptable)", "topics": ["prohibited-uses", "code-generation", "integrity-sanctions"], "phase": "during-work", "actor": "student"}
+      ]
+    },
+    {
+      "id": "drexel-se310",
+      "university": "Drexel University", "country": "USA", "region": "PA",
+      "unit": "College of Computing & Informatics (Software Engineering)", "level": "course",
+      "course": "SE 310 Software Design", "title": "SE310 - Software Design Fall 2026 Drexel University",
+      "url": "https://www.cs.drexel.edu/~aalban/SE310/SE_310_syllabus.pdf", "date_or_term": "Fall 2026", "accessed": "2026-10-05",
+      "verbatim_source": "curl", "stance": "prohibit-by-default",
+      "summary": "Software design syllabus with a section on AI and code generation tools. Using ChatGPT, Copilot or similar tools for any part of graded work is prohibited unless the instructor explicitly allows it. Unauthorized use counts as a violation of the University's Academic Integrity Policy.",
+      "excerpts": [
+        {"text": "is prohibited unless explicitly authorized by the instructor.", "frag_start": "The use of ChatGPT, Microsoft", "frag_end": "authorized by the instructor.", "section": "Use of Artificial Intelligence and Code Generation Tools", "topics": ["default-stance", "prohibited-uses", "code-generation"], "phase": "during-work", "actor": "student"},
+        {"text": "Unauthorized use of such tools will be treated as a violation", "frag_start": "Unauthorized use of such tools", "frag_end": "Academic Integrity Policy.", "section": "Use of Artificial Intelligence and Code Generation Tools", "topics": ["integrity-sanctions"], "phase": "when-misuse", "actor": "student"}
+      ]
+    },
+    {
+      "id": "drexel-cs430",
+      "university": "Drexel University", "country": "USA", "region": "PA",
+      "unit": "College of Computing & Informatics, Department of Computer Science", "level": "course",
+      "course": "CS 430 Computer Graphics", "title": "Computer Graphics Class Page (Fall 2025)",
+      "url": "https://www.cs.drexel.edu/~deb39/Classes/CS430/", "date_or_term": "Fall 2025", "accessed": "2026-10-05",
+      "verbatim_source": "curl", "stance": "prohibit-by-default",
+      "summary": "Computer graphics course page whose academic honesty section bans generative tools for producing programs. Using them for any part of an assignment is listed as unacceptable. Honesty violations lead to an F in the course.",
+      "excerpts": [
+        {"text": "You may not use generative tools to produce your programs.", "frag_start": "You may not use generative", "frag_end": "to produce your programs.", "section": "Academic Honesty", "topics": ["prohibited-uses", "code-generation"], "phase": "during-work", "actor": "student"},
+        {"text": "You use generative tools to create portions of your assignments.", "frag_start": "You use generative tools to", "frag_end": "portions of your assignments.", "section": "Academic Honesty - Examples (NOT acceptable)", "topics": ["prohibited-uses"], "phase": "during-work", "actor": "student"},
+        {"text": "found in violation of the Academic Honesty policy will receive an 'F' in the class.", "frag_start": "Students found in violation of", "frag_end": "an 'F' in the class.", "section": "Academic Honesty", "topics": ["integrity-sanctions"], "phase": "when-misuse", "actor": "student"}
+      ]
+    },
+    {
+      "id": "harvard-cs61",
+      "university": "Harvard University", "country": "USA", "region": "MA",
+      "unit": "John A. Paulson School of Engineering and Applied Sciences (Computer Science)", "level": "course",
+      "course": "CS 61 Systems Programming and Machine Organization", "title": "Course Description – CS 61",
+      "url": "https://cs61.seas.harvard.edu/site/2026/CourseDescription/", "date_or_term": "2026", "accessed": "2026-10-05",
+      "verbatim_source": "curl", "stance": "permit-with-conditions",
+      "summary": "Systems programming course description. Students may ask generative AI tools questions during problem sets, but they must understand and explain their code, may be quizzed orally, and must disclose AI use with transcripts. Because AI is allowed on psets, grading leans on exams, and AI is banned during tests.",
+      "excerpts": [
+        {"text": "We aren’t prohibiting AI use for problem sets.", "frag_start": "We aren’t prohibiting AI use", "frag_end": "for problem sets.", "section": "Problem sets", "topics": ["default-stance", "permitted-uses"], "phase": "course-start", "actor": "instructor"},
+        {"text": "we are planning to evaluate problem set turnins only at a high level;", "frag_start": "For that reason, we are", "frag_end": "primarily through exams.", "section": "Problem sets", "topics": ["assessment-design", "exams-in-person"], "phase": "before-course", "actor": "instructor"},
+        {"text": "When doing problem sets, you may ask questions of generative AI tools,", "frag_start": "When doing problem sets, you", "frag_end": "ChatGPT or GitHub Copilot.", "section": "AI tools", "topics": ["permitted-uses", "code-generation"], "phase": "during-work", "actor": "student"},
+        {"text": "you must be able to explain your code without the help of an AI assistant.", "frag_start": "But you still must understand", "frag_end": "of an AI assistant.", "section": "AI tools", "topics": ["accountability-understanding"], "phase": "during-work", "actor": "student"},
+        {"text": "We may quiz you orally to check your understanding.", "frag_start": "We may quiz you orally", "frag_end": "check your understanding.", "section": "AI tools", "topics": ["accountability-understanding", "assessment-design"], "phase": "during-assessment", "actor": "instructor"},
+        {"text": "generative AI tools can provide information that is subtly or dramatically wrong.", "frag_start": "Furthermore, we care about correctness,", "frag_end": "subtly or dramatically wrong.", "section": "AI tools", "topics": ["ai-literacy-career", "accountability-understanding"], "phase": "during-work", "actor": "student"},
+        {"text": "your turnin must mention this and describe the interaction (e.g., include a transcript", "frag_start": "If you do use generative", "frag_end": "transcript of the sessions).", "section": "AI tools", "topics": ["disclosure-citation"], "phase": "during-work", "actor": "student"},
+        {"text": "Again, no collaboration, including with generative AI, is allowed on tests and exams.", "frag_start": "Again, no collaboration, including with", "frag_end": "on tests and exams.", "section": "AI tools", "topics": ["exams-in-person", "prohibited-uses"], "phase": "during-assessment", "actor": "student"}
+      ]
+    },
+    {
+      "id": "mcgill-comp480",
+      "university": "McGill University", "country": "Canada", "region": "QC",
+      "unit": "School of Computer Science", "level": "course",
+      "course": "COMP 480 Advanced algorithms, data structures, and techniques for competitive programming", "title": "McGill University School of Computer Science COMP 480 Course Outline - Draft",
+      "url": "https://www.cs.mcgill.ca/~dbecer/assets/files/COMP480-Winter24.pdf", "date_or_term": "Winter 2024 (draft outline)", "accessed": "2026-10-05",
+      "verbatim_source": "curl", "stance": "permit-with-conditions",
+      "summary": "Course outline for a competitive-programming course. It discourages AI tools, including generative AI, for assignments unless stated otherwise, and gives a learning rationale. Students remain accountable for their submissions, and any AI-produced content must be cited.",
+      "excerpts": [
+        {"text": "Students are not encouraged, unless otherwise stated, to make use of artificial intelligence tools,", "frag_start": "Students are not encouraged, unless", "frag_end": "to help produce assignments.", "section": "Use of Generative AI", "topics": ["default-stance", "instructor-discretion"], "phase": "during-work", "actor": "student"},
+        {"text": "working through the assignments on your own will help you gain a better understanding", "frag_start": "We believe that working through", "frag_end": "internships, research opportunities, and jobs.", "section": "Use of Generative AI", "topics": ["learning-rationale", "ai-literacy-career"], "phase": "course-start", "actor": "instructor"},
+        {"text": "However, students are ultimately accountable for the work they submit.", "frag_start": "However, students are ultimately accountable", "frag_end": "the work they submit.", "section": "Use of Generative AI", "topics": ["accountability-understanding"], "phase": "during-work", "actor": "student"},
+        {"text": "Any content produced by an artificial intelligence tool must be cited appropriately.", "frag_start": "Any content produced by an", "frag_end": "must be cited appropriately.", "section": "Use of Generative AI", "topics": ["disclosure-citation"], "phase": "during-work", "actor": "student"}
+      ]
+    },
+    {
+      "id": "brynmawr-cs109",
+      "university": "Bryn Mawr College", "country": "USA", "region": "PA",
+      "unit": "Department of Computer Science", "level": "course",
+      "course": "CS 109 Introduction to Computing", "title": "CS 109 - Spring 2026",
+      "url": "https://cs.brynmawr.edu/cs109/", "date_or_term": "Spring 2026", "accessed": "2026-10-05",
+      "verbatim_source": "curl", "stance": "prohibit-by-default",
+      "summary": "Intro computing course page. Its Collaboration/AI section encourages discussing material together but bars AI tools from completing programming assignments. Exams must be individual work.",
+      "excerpts": [
+        {"text": "AI tools may not be used to complete any programming assignments.", "frag_start": "AI tools may not be", "frag_end": "any programming assignments.", "section": "Collaboration/AI", "topics": ["prohibited-uses", "code-generation"], "phase": "during-work", "actor": "student"}
+      ]
+    },
+    {
+      "id": "cuboulder-csci3308",
+      "university": "University of Colorado Boulder", "country": "USA", "region": "CO",
+      "unit": "Department of Computer Science", "level": "course",
+      "course": "CSCI 3308 Software Development Methods & Tools", "title": "Syllabus - Fall 2026 | CSCI 3308",
+      "url": "https://cuboulder-csci3308.pages.dev/docs/syllabus/", "date_or_term": "Fall 2026", "accessed": "2026-10-05",
+      "verbatim_source": "curl", "stance": "permit-with-conditions",
+      "summary": "Software development course syllabus that discourages generative AI but allows AI-generated code if the prompt and key parts of the response are documented in comments. Students must test and validate generated code. Undocumented use is treated as plagiarism, with a zero and escalation to the Honor Code process for repeat cases.",
+      "excerpts": [
+        {"text": "generative AI tools to complete any aspect of assignments for this course are discouraged.", "frag_start": "Developing strong competencies in the", "frag_end": "for this course are discouraged.", "section": "Usage of Gen AI tools", "topics": ["default-stance", "learning-rationale"], "phase": "course-start", "actor": "instructor"},
+        {"text": "you may submit AI-generated code, or code that is based on or derived from", "frag_start": "However, in principle you may", "frag_end": "significant parts of the response.", "section": "Usage of Gen AI tools", "topics": ["code-generation", "permitted-uses"], "phase": "during-work", "actor": "student"},
+        {"text": "you need to include the prompt and the significant parts of the response.", "frag_start": "However, in principle you may", "frag_end": "significant parts of the response.", "section": "Usage of Gen AI tools", "topics": ["disclosure-citation"], "phase": "during-work", "actor": "student"},
+        {"text": "It is your responsibility to identify errors in program logic through comprehensive, documented testing.", "frag_start": "It is your responsibility to", "frag_end": "comprehensive, documented testing.", "section": "Usage of Gen AI tools", "topics": ["accountability-understanding", "code-generation"], "phase": "during-work", "actor": "student"},
+        {"text": "It will also be counted as plagiarism and will result in a 0.", "frag_start": "It will also be counted", "frag_end": "will result in a 0.", "section": "Usage of Gen AI tools", "topics": ["integrity-sanctions"], "phase": "when-misuse", "actor": "instructor"},
+        {"text": "Multiple violations will lead to a report to the Honor Code council", "frag_start": "Multiple violations will lead to", "frag_end": "more severe Academic sanctions.", "section": "Usage of Gen AI tools", "topics": ["integrity-sanctions"], "phase": "when-misuse", "actor": "instructor"}
+      ]
+    },
+    {
+      "id": "uh-cosc4368",
+      "university": "University of Houston", "country": "USA", "region": "TX",
+      "unit": "Department of Computer Science", "level": "course",
+      "course": "COSC 4368 Fundamentals of AI", "title": "COSC 4368 - Department of Computer Science (syllabus)",
+      "url": "https://www2.cs.uh.edu/~ceick/ai/COSC4368Syllabus.pdf", "date_or_term": "January 20, 2024 (Spring 2024)", "accessed": "2026-10-05",
+      "verbatim_source": "curl", "stance": "permit-with-conditions",
+      "summary": "AI course syllabus that permits ChatGPT and similar tools. Student reports must cite every AI tool used and say what it was used for. Failing to acknowledge AI use is a serious academic honesty violation.",
+      "excerpts": [
+        {"text": "The use of AI-related tools, such ChatGPT, is permitted in this course.", "frag_start": "The use of AI-related tools,", "frag_end": "is permitted in this course.", "section": "S. Use of AI related and Other Tools", "topics": ["default-stance", "permitted-uses"], "phase": "course-start", "actor": "student"},
+        {"text": "student reports must cite all AI-related tools and other tools and documents", "frag_start": "However, student reports must cite", "frag_end": "for what they were used.", "section": "S. Use of AI related and Other Tools", "topics": ["disclosure-citation"], "phase": "during-work", "actor": "student"},
+        {"text": "Not acknowledging the use of AI and related other tools in course tasks", "frag_start": "Not acknowledging the use of", "frag_end": "serious academic honesty violation.", "section": "S. Use of AI related and Other Tools", "topics": ["integrity-sanctions", "disclosure-citation"], "phase": "when-misuse", "actor": "student"}
+      ]
+    },
+    {
+      "id": "odu-cs355",
+      "university": "Old Dominion University", "country": "USA", "region": "VA",
+      "unit": "Department of Computer Science", "level": "course",
+      "course": "CS 355 Principles of Programming Languages", "title": "CS 355: Syllabus (Spring 2026)",
+      "url": "https://www.cs.odu.edu/~tkennedy/cs355/s26/Public/syllabus/index.html", "date_or_term": "Spring 2026 (last modified Jan 7, 2026)", "accessed": "2026-10-05",
+      "verbatim_source": "curl", "stance": "permit-with-conditions",
+      "summary": "Programming languages syllabus that does not prohibit ChatGPT and similar tools. Any use must be cited the same way as other online resources, inside a broader rule that all graded work must be the student's own.",
+      "excerpts": [
+        {"text": "ChatGPT and similar tools are not prohibited.", "frag_start": "ChatGPT and similar tools are", "frag_end": "tools are not prohibited.", "section": "7.2.2 ChatGPT and Similar Tools", "topics": ["default-stance", "permitted-uses"], "phase": "course-start", "actor": "student"},
+        {"text": "any use must be properly cited in a form similar to all other online resources.", "frag_start": "However, any use must be", "frag_end": "all other online resources.", "section": "7.2.2 ChatGPT and Similar Tools", "topics": ["disclosure-citation"], "phase": "during-work", "actor": "student"}
+      ]
+    },
+    {
+      "id": "odu-cs312",
+      "university": "Old Dominion University", "country": "USA", "region": "VA",
+      "unit": "Department of Computer Science", "level": "course",
+      "course": "CS 312 Internet Concepts", "title": "Syllabus - CS 312 - Internet Concepts",
+      "url": "https://www.cs.odu.edu/~narif/CS312/Sum25/syllabus/", "date_or_term": "Summer 2025", "accessed": "2026-10-05",
+      "verbatim_source": "curl", "stance": "prohibit-by-default",
+      "summary": "Internet concepts syllabus that bans ChatGPT and other AI tools. The rationale is that school should build workplace skills. The syllabus notes that this rule applies only to CS 312.",
+      "excerpts": [
+        {"text": "The use of ChatGPT or other AI tools is not permitted in this class.", "frag_start": "The use of ChatGPT or", "frag_end": "permitted in this class.", "section": "Use of ChatGPT and other AI Tools", "topics": ["default-stance", "prohibited-uses"], "phase": "course-start", "actor": "student"},
+        {"text": "Using aids just to complete an assignment in the quest for high marks", "frag_start": "Using aids just to complete", "frag_end": "after you leave school.", "section": "Use of ChatGPT and other AI Tools", "topics": ["learning-rationale", "ai-literacy-career"], "phase": "course-start", "actor": "instructor"},
+        {"text": "This policy applies only for CS 312.", "frag_start": "This policy applies only for", "frag_end": "only for CS 312.", "section": "Use of ChatGPT and other AI Tools", "topics": ["instructor-discretion"], "phase": "course-start", "actor": "instructor"}
+      ]
+    },
+    {
+      "id": "odu-cs422",
+      "university": "Old Dominion University", "country": "USA", "region": "VA",
+      "unit": "Department of Computer Science", "level": "course",
+      "course": "CS 422/522 Introduction to Machine Learning", "title": "Course Syllabus CS 422/522 Introduction to Machine Learning - Spring 2026",
+      "url": "https://courseinfo.cs.odu.edu/assets/spring_2026/syllabi/CS422%20-%20Rana%20-%20Spring%202026.pdf", "date_or_term": "Spring 2026", "accessed": "2026-10-05",
+      "verbatim_source": "curl", "stance": "permit-with-conditions",
+      "summary": "Machine learning syllabus that bans copying homework code from ChatGPT or similar tools and treats it as an honor code violation. Students may use these tools to get ideas, but submitted work must be their own.",
+      "excerpts": [
+        {"text": "simple sharing and copying from other students, ChatGPT, and similar tools are prohibited,", "frag_start": "However, for all homework assignments,", "frag_end": "violation of honor code.", "section": null, "topics": ["prohibited-uses", "code-generation", "integrity-sanctions"], "phase": "during-work", "actor": "student"},
+        {"text": "ChatGPT and such tools may be used to get some ideas,", "frag_start": "Similar wise, ChatGPT and such", "frag_end": "be students' own.", "section": null, "topics": ["permitted-uses", "accountability-understanding"], "phase": "during-work", "actor": "student"}
+      ]
+    },
+    {
+      "id": "jmu-cs149",
+      "university": "James Madison University", "country": "USA", "region": "VA",
+      "unit": "Department of Computer Science", "level": "course",
+      "course": "CS 149 Introduction to Programming", "title": "Syllabus - CS 149 Fall 2026",
+      "url": "https://w3.cs.jmu.edu/mayfiecs/cs149/syllabus/", "date_or_term": "Fall 2026", "accessed": "2026-10-05",
+      "verbatim_source": "curl", "stance": "permit-with-conditions",
+      "summary": "Intro programming syllabus that makes learning to use AI in support of understanding a course-wide goal. AI is encouraged as a study aid outside class and is strictly banned on quizzes and exams. Students must be able to explain and defend all project code.",
+      "excerpts": [
+        {"text": "learning to use AI in ways that build your understanding rather than replace it.", "frag_start": "Two additional goals run through", "frag_end": "rather than replace it.", "section": "Course objectives", "topics": ["ai-literacy-career", "learning-rationale"], "phase": "course-start", "actor": "instructor"},
+        {"text": "You are encouraged to use AI as a study aid outside of class,", "frag_start": "You are encouraged to use", "frag_end": "whether it is helping you.", "section": "Generative AI", "topics": ["permitted-uses"], "phase": "during-work", "actor": "student"},
+        {"text": "The use of AI is strictly prohibited during quizzes and exams", "frag_start": "The use of AI is", "frag_end": "you can program without it.", "section": "Generative AI", "topics": ["exams-in-person", "prohibited-uses"], "phase": "during-assessment", "actor": "student"},
+        {"text": "you must be able to explain and defend every part of the program you submit.", "frag_start": "On the project, you must", "frag_end": "the program you submit.", "section": "Generative AI", "topics": ["accountability-understanding"], "phase": "during-work", "actor": "student"}
+      ]
+    },
+    {
+      "id": "jmu-cs240",
+      "university": "James Madison University", "country": "USA", "region": "VA",
+      "unit": "Department of Computer Science", "level": "course",
+      "course": "CS 240 Algorithms and Data Structures", "title": "Data Structures And Algorithms: Syllabus",
+      "url": "https://w3.cs.jmu.edu/spragunr/CS240_F24/syllabus.shtml", "date_or_term": "Fall 2024", "accessed": "2026-10-05",
+      "verbatim_source": "curl", "stance": "mixed",
+      "summary": "Data structures syllabus that forbids AI code generators for labs and programming assignments, explaining that they short-circuit the learning goals. AI may not generate solutions or hints. It may be used to understand concepts. Quizzes allow no AI.",
+      "excerpts": [
+        {"text": "explicitly forbidden from using AI-based code generation tools such as ChatGPT or GitHub copilot", "frag_start": "You are explicitly forbidden from", "frag_end": "or programming assignments.", "section": "Academic Honesty", "topics": ["prohibited-uses", "code-generation"], "phase": "during-work", "actor": "student"},
+        {"text": "will tend to be short-circuited by the use of code generation tools.", "frag_start": "Both of those goals will", "frag_end": "of code generation tools.", "section": "Academic Honesty", "topics": ["learning-rationale"], "phase": "course-start", "actor": "instructor"},
+        {"text": "AI to generate solutions, hints, or otherwise do your work for you is explicitly forbidden.", "frag_start": "Using AI to generate solutions,", "frag_end": "is explicitly forbidden.", "section": "AI Policy", "topics": ["prohibited-uses"], "phase": "during-work", "actor": "student"},
+        {"text": "You may use AI to help you understand concepts and as a general learning resource,", "frag_start": "You may use AI to", "frag_end": "advantage of the teaching assistants.", "section": "AI Policy", "topics": ["permitted-uses"], "phase": "during-work", "actor": "student"},
+        {"text": "No use of AI or other forms of collaboration is allowed.", "frag_start": "No use of AI or", "frag_end": "of collaboration is allowed.", "section": "Quizzes", "topics": ["exams-in-person", "prohibited-uses"], "phase": "during-assessment", "actor": "student"}
+      ]
+    },
+    {
+      "id": "jmu-cs470",
+      "university": "James Madison University", "country": "USA", "region": "VA",
+      "unit": "Department of Computer Science", "level": "course",
+      "course": "CS 470 Parallel and Distributed Systems", "title": "CS 470 - Syllabus",
+      "url": "https://w3.cs.jmu.edu/lam2mo/cs470_2025_01/syllabus.html", "date_or_term": "Spring 2025", "accessed": "2026-10-05",
+      "verbatim_source": "curl", "stance": "permit-with-conditions",
+      "summary": "Parallel and distributed systems syllabus that allows AI code-generation tools such as GitHub Copilot on labs and projects. Every project needs an 'AI-Assist Statement', including when no AI was used. The policy is labeled experimental, and changes will be announced at least 72 hours before deadlines.",
+      "excerpts": [
+        {"text": "AI-assisted code generation tools such as Github Copilot are allowed on the labs and projects", "frag_start": "The use of AI-assisted code", "frag_end": "for this course this semester.", "section": "Academic Honesty", "topics": ["permitted-uses", "code-generation"], "phase": "during-work", "actor": "student"},
+        {"text": "must include an \"AI-Assist Statement\" that discloses the extent of your use of AI-assist technologies", "frag_start": "In the comments at the", "frag_end": "AI-assist technologies on the assignment.", "section": "Academic Honesty", "topics": ["disclosure-citation"], "phase": "during-work", "actor": "student"},
+        {"text": "you may simply state \"I did not use any AI-assist tools while creating this solution.\"", "frag_start": "If you did not use", "frag_end": "tools while creating this solution.", "section": "Academic Honesty", "topics": ["disclosure-citation"], "phase": "during-work", "actor": "student"},
+        {"text": "This policy is experimental and will be re-evaluated throughout the semester,", "frag_start": "This policy is experimental and", "frag_end": "potentially with modifications mid-semester.", "section": "Academic Honesty", "topics": ["policy-evolution"], "phase": "over-time", "actor": "instructor"},
+        {"text": "Any revisions to the policy will be broadcast via Canvas announcement and discussed in class", "frag_start": "Any revisions to the policy", "frag_end": "the next applicable deadline.", "section": "Academic Honesty", "topics": ["policy-evolution", "syllabus-communication"], "phase": "over-time", "actor": "instructor"}
+      ]
+    },
+    {
+      "id": "calpoly-csc248",
+      "university": "California Polytechnic State University, San Luis Obispo", "country": "USA", "region": "CA",
+      "unit": "Computer Science and Software Engineering Department", "level": "course",
+      "course": "CSC 248 Discrete Structures", "title": "Discrete Structures Winter 2025 Course Syllabus",
+      "url": "https://users.csc.calpoly.edu/~dfrishbe/w25-csc248/syllabus.pdf", "date_or_term": "Winter 2025", "accessed": "2026-10-05",
+      "verbatim_source": "curl", "stance": "prohibit-by-default",
+      "summary": "Discrete structures syllabus that bans ChatGPT and similar tools for graded work and calls their use academic dishonesty. It notes that most of the grade comes from in-class assessments, so skipping homework practice will show up on exams.",
+      "excerpts": [
+        {"text": "Do not use ChatGPT or similar tools for graded work in this class.", "frag_start": "Do not use ChatGPT or", "frag_end": "graded work in this class.", "section": "ChatGPT and other generative AI", "topics": ["default-stance", "prohibited-uses"], "phase": "during-work", "actor": "student"},
+        {"text": "I consider this academic dishonesty.", "frag_start": "I consider this academic dishonesty.", "frag_end": "this academic dishonesty.", "section": "ChatGPT and other generative AI", "topics": ["integrity-sanctions"], "phase": "when-misuse", "actor": "instructor"},
+        {"text": "miss out on the educational benefit of working through homework problems on your own,", "frag_start": "If you use ChatGPT, even", "frag_end": "the assessments and the final exam.", "section": "ChatGPT and other generative AI", "topics": ["learning-rationale", "exams-in-person"], "phase": "course-start", "actor": "instructor"}
+      ]
+    },
+    {
+      "id": "calpoly-cpe453",
+      "university": "California Polytechnic State University, San Luis Obispo", "country": "USA", "region": "CA",
+      "unit": "Computer Science and Software Engineering Department", "level": "course",
+      "course": "CPE 453 Introduction to Operating Systems", "title": "cpe453 Syllabus 30 March 2026",
+      "url": "https://users.csc.calpoly.edu/~pnico/class/now/cpe453/syllabus/syllabus.pdf", "date_or_term": "Spring 2026", "accessed": "2026-10-05",
+      "verbatim_source": "curl", "stance": "prohibit-by-default",
+      "summary": "Operating systems syllabus whose collaboration policy counts generative AI output as 'someone else's work'. Students may not refer to it while writing their own code. Uncredited collaboration counts as cheating.",
+      "excerpts": [
+        {"text": "including the use of generative AI", "frag_start": "In this case, “someone else’s work”", "frag_end": "including the use of generative AI .", "section": "Collaboration", "topics": ["prohibited-uses", "collaboration-analogy"], "phase": "during-work", "actor": "student"}
+      ]
+    },
+    {
+      "id": "usc-csce763",
+      "university": "University of South Carolina", "country": "USA", "region": "SC",
+      "unit": "Department of Computer Science and Engineering", "level": "course",
+      "course": "CSCE 763 Digital Image Processing", "title": "Tentative Syllabus CSCE 763: Digital Image Processing (Spring 2026)",
+      "url": "https://www.cse.sc.edu/~tongy/csce763/csce763syl.pdf", "date_or_term": "Spring 2026", "accessed": "2026-10-05",
+      "verbatim_source": "curl", "stance": "mixed",
+      "summary": "Graduate image processing syllabus requiring credit for any AI use. Students must add an appendix with the full exchange, the exact tools, how they were used and why. AI is barred from quizzes, exams and homework unless permitted, and students are urged to use it reflectively.",
+      "excerpts": [
+        {"text": "students shall give credit to AI tools whenever used, even if only to generate ideas", "frag_start": "In this course, students shall", "frag_end": "usable text or illustrations.", "section": "Generative Artificial Intelligence Policy", "topics": ["disclosure-citation"], "phase": "during-work", "actor": "student"},
+        {"text": "add an appendix showing (a) the entire exchange, highlighting the most relevant sections;", "frag_start": "When using AI tools , add", "frag_end": "to experiment for fun, etc.).", "section": "Generative Artificial Intelligence Policy", "topics": ["disclosure-citation", "writing-assistance"], "phase": "during-work", "actor": "student"},
+        {"text": "shall not use AI tools during quizzes, exams , or homework assignments", "frag_start": "Students shall not use AI", "frag_end": "unless explicitly permitted and instructed.", "section": "Generative Artificial Intelligence Policy", "topics": ["prohibited-uses", "exams-in-person", "default-stance"], "phase": "during-assessment", "actor": "student"},
+        {"text": "AI tools should be used wisely and reflectively with an aim to deepen understanding", "frag_start": "Overall, AI tools should be", "frag_end": "understanding of subject matter.", "section": "Generative Artificial Intelligence Policy", "topics": ["learning-rationale"], "phase": "during-work", "actor": "student"}
+      ]
+    },
+    {
+      "id": "usc-csce491",
+      "university": "University of South Carolina", "country": "USA", "region": "SC",
+      "unit": "Department of Computer Science and Engineering", "level": "course",
+      "course": "CSCE 491 Capstone Computer Engineering Project", "title": "CSCE 491: Capstone Computer Engineering Project Spring 2026",
+      "url": "https://cse.sc.edu/~jbakos/491/syllabus.pdf", "date_or_term": "Spring 2026 (updated 4/15/26)", "accessed": "2026-10-05",
+      "verbatim_source": "curl", "stance": "permit-with-conditions",
+      "summary": "Capstone syllabus that allows generative AI as a development tool. Students must explain their project code in demos, and some lab code is tested on closed-book written exams.",
+      "excerpts": [
+        {"text": "You may use generative AI as a development tool, but keep the following in mind:", "frag_start": "You may use generative AI", "frag_end": "closed book midterm and final exam.", "section": "14 Generative AI Policy", "topics": ["permitted-uses", "code-generation"], "phase": "during-work", "actor": "student"},
+        {"text": "you will be responsible for explaining your project code during project demonstrations,", "frag_start": "You may use generative AI", "frag_end": "closed book midterm and final exam.", "section": "14 Generative AI Policy", "topics": ["accountability-understanding", "assessment-design"], "phase": "during-assessment", "actor": "student"},
+        {"text": "will be covered by the in-class, written closed book midterm and final exam.", "frag_start": "You may use generative AI", "frag_end": "closed book midterm and final exam.", "section": "14 Generative AI Policy", "topics": ["exams-in-person"], "phase": "during-assessment", "actor": "student"}
+      ]
+    },
+    {
+      "id": "scu-engineering-ai2",
+      "university": "Santa Clara University", "country": "USA", "region": "CA",
+      "unit": "School of Engineering (AI Squared initiative; includes Computer Science and Engineering)", "level": "university-computing",
+      "course": null, "title": "AI Squared in Student Learning - School of Engineering - Santa Clara University",
+      "url": "https://www.scu.edu/engineering/ai2/ai-squared-in-student-learning/", "date_or_term": null, "accessed": "2026-10-05",
+      "verbatim_source": "curl", "stance": "tiered",
+      "summary": "School of Engineering guidance for instructors with four sample scenarios (prohibited, allowed for specific tasks, allowed with permission, allowed with attribution) and statements from each department. It is school-level rather than a CS department page, but it has a Computer Science and Engineering section (COEN 11 bans code generators, COEN 346 expects GenAI with attribution), an ECE section on AI-generated Verilog, and notes on AI detectors and code.",
+      "excerpts": [
+        {"text": "a \"one-size-fits-all\" approach to syllabus statements is not suitable", "frag_start": "We understand that a", "frag_end": "our own policies in the syllabus", "section": "General Guidance", "topics": ["instructor-discretion", "syllabus-communication"], "phase": "before-course", "actor": "instructor"},
+        {"text": "Where and how should students disclose their use of AI?", "frag_start": "Where and how should students", "frag_end": "their use of AI?", "section": "General Guidance", "topics": ["disclosure-citation", "syllabus-communication"], "phase": "before-course", "actor": "instructor"},
+        {"text": "There currently isn’t any tool that I found that is geared towards detecting written code.", "frag_start": "There currently isn’t any tool", "frag_end": "towards detecting written code.", "section": "AI Detection Tools", "topics": ["detection-tools", "code-generation"], "phase": "when-misuse", "actor": "instructor"},
+        {"text": "Since gaining basic programming skills are part of the learning outcomes of this course,", "frag_start": "Since gaining basic programming skills", "frag_end": "should be prepared by the student.", "section": "Computer Science and Engineering - COEN 11 Advanced Programming", "topics": ["learning-rationale"], "phase": "course-start", "actor": "instructor"},
+        {"text": "code generation tools (AI-based or otherwise), such as ChatGPT, GPT4, CoPilot, are strictly prohibited", "frag_start": "Therefore, code generation tools (AI-based", "frag_end": "even when properly attributed.", "section": "Computer Science and Engineering - COEN 11 Advanced Programming", "topics": ["prohibited-uses", "code-generation"], "phase": "during-work", "actor": "student"},
+        {"text": "welcome and expected to use generative AI tools (e.g. ChatGPT, GPT-4, etc.) in this class", "frag_start": "You are welcome and expected", "frag_end": "technologies in natural language processing.", "section": "Computer Science and Engineering - COEN 346 Natural Language Processing", "topics": ["permitted-uses", "ai-literacy-career"], "phase": "during-work", "actor": "student"},
+        {"text": "a clear description of how you incorporated their input into your work is required.", "frag_start": "Proper attribution and a clear", "frag_end": "into your work is required.", "section": "Computer Science and Engineering - COEN 346 Natural Language Processing", "topics": ["disclosure-citation"], "phase": "during-work", "actor": "student"},
+        {"text": "for generating Verilog Hardware Description Language (HDL) code will be explored.", "frag_start": "Code generation tools (AI-based or otherwise),", "frag_end": "(HDL) code will be explored.", "section": "Electrical and Computer Engineering - ELEN/COEN 21 Intro to Logic Design", "topics": ["code-generation", "ai-literacy-career"], "phase": "during-work", "actor": "instructor"}
+      ]
+    },
+    {
+      "id": "uqam-inf1120",
+      "university": "Université du Québec à Montréal (UQAM)", "country": "Canada", "region": "QC",
+      "unit": "Département d'informatique", "level": "course",
+      "course": "INF1120 Programmation I", "title": "INF1120 — Programmation I (UQAM) - Plan de cours",
+      "url": "https://info.uqam.ca/plan_cours/Automne%202026/INF1120.html", "date_or_term": "Automne 2026", "accessed": "2026-10-05",
+      "verbatim_source": "curl", "stance": "prohibit-by-default",
+      "summary": "French-language course plan for the intro programming course. External generative AI tools such as ChatGPT are banned unless stated otherwise, for both writing and code. The instructor may ask students to explain their work, and the reproduced Règlement no 18 counts unauthorized AI use as an academic offence.",
+      "excerpts": [
+        {"text": "outils externes d’IA générative (comme ChatGPT) dans le cadre de ce cours est strictement interdite", "frag_start": "L’utilisation d’outils externes d’IA générative", "frag_end": "est strictement interdite, sauf mention contraire.", "section": null, "topics": ["default-stance", "prohibited-uses"], "phase": "during-work", "actor": "student"},
+        {"text": "la rédaction de contenu, la production de code informatique.", "frag_start": "Ceci concerne plusieurs activités académiques", "frag_end": "la production de code informatique.", "section": null, "topics": ["code-generation", "writing-assistance"], "phase": "during-work", "actor": "student"},
+        {"text": "l’enseignant peut demander à rencontrer la personne étudiante pour lui demander d’expliquer", "frag_start": "À moins d’avis contraire, les", "frag_end": "a fait dans son travail.", "section": null, "topics": ["accountability-understanding", "assessment-design"], "phase": "when-misuse", "actor": "instructor"},
+        {"text": "ce qui inclut l’utilisation d’outils d’intelligence artificielle", "frag_start": "l’obtention de toute aide non autorisée,", "frag_end": "d’outils d’intelligence artificielle ;", "section": "Règlement no 18 sur les infractions de nature académique", "topics": ["integrity-sanctions"], "phase": "when-misuse", "actor": "student"}
+      ]
+    },
+    {
+      "id": "uqam-inf2050",
+      "university": "Université du Québec à Montréal (UQAM)", "country": "Canada", "region": "QC",
+      "unit": "Département d'informatique", "level": "course",
+      "course": "INF2050 Outils et pratiques de développement logiciel", "title": "INF2050 — Outils et pratiques de développement logiciel (UQAM) - Plan de cours",
+      "url": "https://info.uqam.ca/plan_cours/Automne%202026/INF2050.html", "date_or_term": "Automne 2026", "accessed": "2026-10-05",
+      "verbatim_source": "curl", "stance": "prohibit-by-default",
+      "summary": "French-language course plan for a software development tools course that bans all generative AI use and says detection tools will be used. Any detected use on an assessment is treated as attempted plagiarism and reported. Ungraded team labs are meant to be done without AI to prepare for the exams.",
+      "excerpts": [
+        {"text": "Toute forme d’utilisation d’IA generative est strictément et formellement interdit.", "frag_start": "Toute forme d’utilisation d’IA generative", "frag_end": "strictément et formellement interdit.", "section": null, "topics": ["default-stance", "prohibited-uses"], "phase": "course-start", "actor": "student"},
+        {"text": "Différents outils de détection seront utilisés.", "frag_start": "Différents outils de détection seront", "frag_end": "de détection seront utilisés.", "section": null, "topics": ["detection-tools"], "phase": "when-misuse", "actor": "instructor"},
+        {"text": "sans exception, considérée comme une tentative de plagiat et signalée au comité des infractions", "frag_start": "La détection de l’utilisation d’outils", "frag_end": "signalée au comité des infractions", "section": null, "topics": ["integrity-sanctions", "detection-tools"], "phase": "when-misuse", "actor": "instructor"},
+        {"text": "leur réalisation sérieuse (complète, sans utilisation d’IA générative) est essentielle pour réussir les examens.", "frag_start": "Bien que les TPs ne", "frag_end": "essentielle pour réussir les examens.", "section": null, "topics": ["learning-rationale", "exams-in-person", "assessment-design"], "phase": "during-work", "actor": "student"}
+      ]
+    },
+    {
+      "id": "uqam-inf3105",
+      "university": "Université du Québec à Montréal (UQAM)", "country": "Canada", "region": "QC",
+      "unit": "Département d'informatique", "level": "course",
+      "course": "INF3105 Structures de données et algorithmes", "title": "INF3105 — Structures de données et algorithmes (UQAM) - Plan de cours",
+      "url": "https://info.uqam.ca/plan_cours/Automne%202026/INF3105.html", "date_or_term": "Automne 2026", "accessed": "2026-10-05",
+      "verbatim_source": "curl", "stance": "permit-with-conditions",
+      "summary": "French-language course plan with a dedicated generative AI section. It recommends avoiding AI so students master data structures, but does not formally ban it because use is hard to detect and prove. Students must be able to explain their code, and paper exams test similar programming.",
+      "excerpts": [
+        {"text": "maitriser les fondements de base demeure important, notamment pour réviser le code généré par l’IA.", "frag_start": "Même si l’usage d’outils d’IA", "frag_end": "généré par l’IA.", "section": "Politique sur l’usage d’outils d’intelligence artificielle (IA) générative", "topics": ["learning-rationale", "ai-literacy-career"], "phase": "course-start", "actor": "instructor"},
+        {"text": "Il est donc recommandé d’éviter d’utiliser l’IA dans ce cours.", "frag_start": "Il est donc recommandé d’éviter", "frag_end": "l’IA dans ce cours.", "section": "Politique sur l’usage d’outils d’intelligence artificielle (IA) générative", "topics": ["default-stance"], "phase": "course-start", "actor": "student"},
+        {"text": "L’usage de l’IA peut être difficile à détecter et à prouver.", "frag_start": "L’usage de l’IA peut être", "frag_end": "à détecter et à prouver.", "section": "Politique sur l’usage d’outils d’intelligence artificielle (IA) générative", "topics": ["detection-tools"], "phase": "when-misuse", "actor": "instructor"},
+        {"text": "l’IA n’est pas formellement interdite dans le cours, elle est seulement déconseillée.", "frag_start": "Pour ces raisons, l’IA n’est", "frag_end": "elle est seulement déconseillée.", "section": "Politique sur l’usage d’outils d’intelligence artificielle (IA) générative", "topics": ["default-stance", "permitted-uses"], "phase": "course-start", "actor": "student"},
+        {"text": "vous devez toujours être capable de comprendre et d’expliquer votre code source.", "frag_start": "Que vous utilisiez ou non", "frag_end": "d’expliquer votre code source.", "section": "Politique sur l’usage d’outils d’intelligence artificielle (IA) générative", "topics": ["accountability-understanding"], "phase": "during-work", "actor": "student"},
+        {"text": "vous aurez à programmer de petites parties de code pour résoudre des problèmes", "frag_start": "Dans les examens en classe", "frag_end": "ceux dans les travaux pratiques.", "section": "Politique sur l’usage d’outils d’intelligence artificielle (IA) générative", "topics": ["exams-in-person", "assessment-design"], "phase": "during-assessment", "actor": "student"}
+      ]
+    }
+  ],
+  "excluded": [
+    {"university": "Northwestern University", "title": "Generative Artificial Intelligence Policy for Teaching and Coursework (NU-Q)", "url": "https://my.qatar.northwestern.edu/docs/other/Generative-Artificial-Intelligence-Policy-for-Teaching-and-Coursework_NU-Q.pdf", "reason": "Northwestern University in Qatar campus policy; outside USA/Canada scope and not computing-specific."},
+    {"university": "California Institute of Technology", "title": "ACM 95a/100a Syllabus (Winter 2026)", "url": "https://www.its.caltech.edu/~zuev/teaching/2026Winter/SyllabusACM95a100a.pdf", "reason": "Applied and computational mathematics (ODE/PDE) course, not a CS-like course."},
+    {"university": "Old Dominion University", "title": "AI Resources at ODU CS - Systems Group", "url": "https://systems.cs.odu.edu/services/ai/", "reason": "Describes department-hosted LLM services (ChatCS, llm.cs.odu.edu) but sets no use policy."},
+    {"university": "Université du Québec à Montréal (UQAM)", "title": "INF2120 — Programmation II (Automne 2026)", "url": "https://info.uqam.ca/plan_cours/Automne%202026/INF2120.html", "reason": "AI sentence is identical to INF1120 (duplicate policy text)."},
+    {"university": "Drexel University", "title": "Syllabus Info693 Human-AI Interaction", "url": "https://timgorichanaz.com/pdf/syllabus-info693.pdf", "reason": "AI is course content only; no AI-use policy."},
+    {"university": "University of Houston", "title": "UH AI Tools FAQ", "url": "https://www.uh.edu/ai/ai-tools/faq.php", "reason": "Generic university-wide guidance."},
+    {"university": "Howard University", "title": "Howard University Policy 100-022 Artificial Intelligence", "url": "https://secretary.howard.edu/sites/secretary.howard.edu/files/2026-05/100-022%20Artificial%20Intelligence%20Policy.pdf", "reason": "Generic university-wide policy with nothing computing-specific."},
+    {"university": "Louisiana State University", "title": "Faculty Senate Generative AI Committee Guidelines (Fall 2025)", "url": "https://www.lsu.edu/senate/standing-committees/gai_committee/2025_2026ay/gai_guidelines_fall2025.pdf", "reason": "Generic university-wide syllabus-statement guidance."},
+    {"university": "University of Manitoba", "title": "UM syllabus statements on GenAI (CATL)", "url": "https://umanitoba.ca/centre-advancement-teaching-learning/um-syllabus-statements-genai", "reason": "Generic university-wide syllabus statements."},
+    {"university": "Memorial University of Newfoundland", "title": "Generative Artificial Intelligence Syllabus Statements (CITL)", "url": "https://blog.citl.mun.ca/instructionalresources/generative-artificial-intelligence-syllabus-statements/", "reason": "Generic university-wide syllabus statements."},
+    {"university": "Bellevue College", "title": "Artificial Intelligence :: BAS Software Development", "url": "https://www.bellevuecollege.edu/softwaredevelopment/ai/", "reason": "Blocked by Cloudflare (curl) and 403 (WebFetch); content could not be verified."},
+    {"university": "University of Texas at San Antonio", "title": "CS 5463/4953 SP: Develop AI Tools for K-12 (Simple Syllabus)", "url": "https://utsa.simplesyllabus.com/en-US/doc/rszrik3im", "reason": "JS-only page; no text retrievable via curl or WebFetch."}
+  ],
+  "new_codes": []
+}

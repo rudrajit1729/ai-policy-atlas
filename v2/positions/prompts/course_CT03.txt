@@ -1,0 +1,45 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT03 "Default stance: AI discouraged but allowed" (AI is permitted but students are advised against it ("AI allowed but not advisable", "asked to avoid AI on homework").).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..20 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | bucknell | C6 | student | must | AI only as supplemental aid | AI and LLMs may only be used as supplemental learning aids
+1 | california-berkeley | C5 | student | should-not | avoid AI shortcuts on projects | We advise you to not use GenAI as a shortcut on the projects
+2 | colby-college | C1 | student | should-not | AI use discouraged | the use of generative AI (like ChatGPT) in CS 151 is discouraged
+3 | colorado-boulder | C4 | student | should-not | AI use discouraged generally | the use of generative AI tools to complete any aspect of assignments for this course are discouraged.
+4 | cornell | C1 | student | should-not | AI outside class not recommended | We strongly recommend against it
+5 | cornell | C3 | student | should-not | discourage overreliance on AI | we discourage the use of external sources, including but not limited to overreliance on Generative AI.
+6 | cornell | C3 | student | should | use AI sparingly for learning | the staff recommends you use these tools sparingly, as a resource for learning
+7 | grinnell-college | C1 | student | should-not | prefer no AI writing assistants | While I would prefer that you not use AI-based writing assistants
+8 | northeastern | C3 | student | may | AI allowed but discouraged on homework | On homework, use of AI tools is
+9 | pennsylvania | C1 | student | may | AI allowed but not advisable | Although it is generally not advisable, you may consult web resources, ask questions online, or use LLM/AI resources to help you complete the project.
+10 | princeton | C2 | instructor | should-not | discourage AI substituting own work | we strongly discourage using them in ways that substitute for doing the programming work yourself
+11 | princeton | C2 | student | should-not | discourage sharing code or asking solutions | sharing assignment code with an LLM; asking an LLM how to proceed on the assignment (even in general terms); asking it to generate solution code or significant code snippets
+12 | princeton | C6 | student | may | AI allowed but discouraged | we are allowing (albeit strongly discouraging) students to use AI to assist them on their assignments if they wish
+13 | san-francisco-state | C3 | student | should-not | AI use discouraged | Use of AI tools, such as ChatGPT, is discouraged.
+14 | southern-california | C1 | student | should | asked to avoid AI on homework | we OFFICIALLY ask that you do the assignments yourself without the help of others or AI -assistance.
+15 | southern-california | C1 | student | may | AI discouraged but permitted on homework | For HW/Portfolio: While we dissuade the use of AI-generated work, it is permissible and no penalties will be applied
+16 | swarthmore-college | C5 | student | should | AI only as a supplement | use generative AI tools only as a supplement to your learning.
+17 | texas-dallas | C2 | student | should-not | avoid ChatGPT and similar for projects | Students should avoid using resources like GitHub, Chegg, ChatGPT, or Grok for help on projects.
+18 | texas-el-paso | C2 | student | should | use AI with caution | Exercise caution when utilizing AI tools like ChatGPT.
+19 | uiuc | C3 | student | may | sparing AI use allowed | You may sparingly use generative AI tools
+20 | west-chester-pennsylvania | C4 | student | should | AI sparingly for minor obstacles | it should be used sparingly and for the purpose of getting you through minor obstacles

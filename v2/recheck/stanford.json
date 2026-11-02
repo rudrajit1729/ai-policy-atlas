@@ -1,0 +1,22 @@
+{"slug": "stanford", "university": "Stanford University",
+ "units_searched": [
+  {"unit": "Department of Computer Science (School of Engineering)", "layer": "computing", "site": "https://cs.stanford.edu",
+   "queries": ["site:cs.stanford.edu generative AI policy", "site:cs.stanford.edu academic integrity honor code AI ChatGPT", "Stanford Computer Science undergraduate handbook use of AI tools coursework policy", "\"cs.stanford.edu\" AI tools policy CS majors coding assistants", "Stanford Computer Science department \"generative AI\" policy students CS courses honor code department-wide"],
+   "pages_checked": ["https://cs.stanford.edu/academics (WebFetch: connection refused)", "https://cs.stanford.edu/academics/ (fetch_text.py: curl exit 7, connection refused)"],
+   "result": "inaccessible",
+   "note": "cs.stanford.edu could not be reached from this machine (ECONNREFUSED), so the department's own pages and handbook were not read. Search results returned no department-wide CS AI policy; CS hits were only course honor-code pages (CS103, CS106B, CS166) and course sites (CS221, CS336), all course-level. Not a confirmed none-found."},
+  {"unit": "School of Engineering (contains CS, EE, ICME, MS&E)", "layer": "school", "site": "https://engineering.stanford.edu",
+   "queries": ["site:engineering.stanford.edu generative AI policy students", "site:ee.stanford.edu OR site:icme.stanford.edu OR site:hai.stanford.edu AI use policy students coursework"],
+   "pages_checked": ["https://engineering.stanford.edu/students/programs/engineering-undergraduate-programs (404)"],
+   "result": "none-found",
+   "note": "Search surfaced only university-level guidance (Office of Community Standards, Teaching Commons, CTL AIMES) and a Stanford Law policy; no Engineering school, EE, ICME or HAI student AI policy. Other CS-related units (EE, ICME, HAI, Data Science) were searched only through the one combined query above; their own sites were not fetched."}
+ ],
+ "documents": [],
+ "course_examples": [
+  "https://web.stanford.edu/class/archive/cs/cs106b/cs106b.1248/honor_code (CS106B honor code; AI use on graded code is an Honor Code violation; not collected)",
+  "https://web.stanford.edu/class/archive/cs/cs103/cs103.1272/honor_code (CS103 honor code; not collected)",
+  "https://web.stanford.edu/class/archive/cs/cs166/cs166.1266/honor_code (CS166 honor code; not collected)",
+  "https://stanford-cs221.github.io/spring2026/ (CS221; AI tools allowed as a human collaborator; not collected)",
+  "https://github.com/stanford-cs336/assignment1-basics/blob/main/CLAUDE.md (CS336; AI assistants may not write code; not collected)"
+ ],
+ "notes": "No computing-unit or school-level AI policy was found, but the CS department site itself was unreachable, so the computing-layer result is inaccessible and not a clean none-found. Retry cs.stanford.edu from another network. Related non-computing pages seen: Academic Integrity Working Group news (https://studentaffairs.stanford.edu/news/academic-integrity-working-group-addresses-generative-ai-and-exam-policies), Teaching Commons course-policy guide (https://teachingcommons.stanford.edu/teaching-guides/artificial-intelligence-teaching-guide/creating-your-course-policy-ai), and the CTL AIMES library (https://ctl.stanford.edu/aimes/aimes-library-examples); these are university-level and not collected here. The university-level OCS guidance is already in the first collection."}

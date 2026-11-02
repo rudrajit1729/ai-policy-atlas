@@ -1,0 +1,40 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT13 "AI for study and practice" (AI for practice problems, mock quizzes, study questions and exam preparation.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..15 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | carnegie-mellon | C1 | student | must-not | no AI on practice problems | You may not use AI tools for practice problems.
+1 | colby-college | C5 | student | should | AI mock quizzes | Have AI quiz you on concepts, code, or results.
+2 | emory | C2 | student | may | AI allowed for studying | for quizzes and exams.
+3 | james-madison | C1 | student | should | AI encouraged as study aid | You are encouraged to use AI as a study aid outside of class
+4 | michigan | C1 | student | may | AI allowed for study practice | Generating additional practice exam questions or other use for studying
+5 | michigan | C3 | student | may | AI allowed for practice problems | for additional practice problems
+6 | oberlin-college | C5 | student | may | AI allowed for study and outlines | creating and refining study materials, creating outlines for organizing your thoughts or scheduling class activities, or exploring existing APIs for code development
+7 | oklahoma | C3 | student | may | AI allowed as study aid | You are allowed to use AI LLM as an study aid.
+8 | pomona | C2 | student | may | AI allowed for exam study | You may use it to help you study for exams
+9 | princeton | C5 | student | may | AI allowed for studying | Reviewing concepts Studying for assessments (quizzes, exams)
+10 | washington | C3 | student | may | AI may make similar examples | Produce an example that is similar to assignment questions.
+11 | wellesley-college | C2 | student | may | AI for self-testing | You can test your knowledge of the material.
+12 | wellesley-college | C2 | student | may | AI generates study questions | Ask generative AI to produce questions for you as you study CS230 materials.
+13 | wellesley-college | C2 | student | may | AI to practice asking help | Practice asking for help.
+14 | williams-college | C2 | student | should-not | LLM study discouraged | Students are strongly discouraged from using LLMs for studying at home.
+15 | williams-college | C2 | student | should | use course materials instead | slides and handouts from class, use the recommended textbook,

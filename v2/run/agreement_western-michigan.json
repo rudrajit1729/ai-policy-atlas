@@ -1,0 +1,16 @@
+{
+ "documents": 2,
+ "units_A": 53,
+ "units_B": 58,
+ "matched": 51,
+ "only_A": 2,
+ "only_B": 7,
+ "kept_only_A": 2,
+ "kept_only_B": 4,
+ "agree_actor": 0.882,
+ "agree_phase": 0.843,
+ "agree_modality": 0.784,
+ "agree_policy_type": 0.804,
+ "agree_stance_docs": 1.0,
+ "notes": "Matching was by anchor and rule; B split two passages into two units each (built-in buttons; acknowledgement requirement vs content), so one A unit matches two B units and only_B counts the extra ones. Main disagreements: (1) actor all vs instructor for facts on a page written for instructors, resolved to instructor; (2) modality, mostly informs vs must/may/should for hedged or optional statements, resolved by the source wording (hedged = informs, optional = may, 'we will' = must); (3) policy type where a rationale sentence was coded as the rule it supports (P95 vs P36, P53 vs P39, P24 vs P26, P66 vs P09), resolved by what the sentence itself says; (4) phase before-course vs course-start or general. Single-coder units were checked against the source and kept (A: 2 incl. the benchmarking sentence and the Student Code reference; B: 4), except two B-only units dropped as non-policy and one B-only unit merged into an A unit. Both coders' fit_notes and uncovered_notes were kept or merged. Both documents delegate the decision to instructors (stance agreed)."
+}

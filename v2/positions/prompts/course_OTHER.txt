@@ -1,0 +1,77 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: OTHER "Other course statements (no course type fits)" (statements the coders labelled OTHER).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..52 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | austin-community-college | C1 | all | informs | defines generative AI | Generative AI refers to artificial intelligence systems that can generate text, images, or
+1 | austin-community-college | C4 | instructor | informs | guidance provided by course | Guidance on the ethical and effective use of GAI will be provided through designated course materials and office hours.
+2 | carleton-college | C3 | instructor | informs | citation does not prevent low score | it will not, however, prevent you from getting a low score
+3 | carleton-college | C6 | student | should | share AI stories | share your stories of AI successes, failures, or madcap adventures
+4 | colorado-state | C2 | student | should | ask staff when stuck | If you are stuck on the assignments, reach out to the course staff.
+5 | florida | C1 | student | must-not | no searching online for solutions | searching for solutions found online
+6 | grinnell-college | C2 | instructor | must | instructor discloses own AI use | your instructor will disclose when
+7 | grinnell-college | C3 | instructor | informs | instructor open to discuss AI | I am happy to talk to anyone about the issues with AI usage
+8 | harvey-mudd-college | C5 | student | should | share helpful resources with class | share it with the whole class!
+9 | loyola-marymount | C1 | ta-staff | informs | staff steer students back | The teaching staff will try to steer you back on track should we feel like you are giving up on your learning.
+10 | loyola-marymount | C2 | ta-staff | informs | staff steer students back | The teaching staff will try to steer you back on track should we feel like you are giving up on your learning.
+11 | loyola-marymount | C3 | ta-staff | informs | staff steer students back | The teaching staff will try to steer you back on track should we feel like you are giving up on your learning.
+12 | loyola-marymount | C5 | ta-staff | informs | staff redirect over-reliant students | The teaching staff will try to steer you back on track
+13 | loyola-marymount | C6 | ta-staff | informs | staff redirect over-reliant students | The teaching staff will try to steer you back on track
+14 | maryland-college-park | C2 | student | should | ask office hours instead of AI | you are strongly encourag ed to ask any questions about the course material in
+15 | massachusetts-institute-technology | C2 | student | must | student must prevent AI code responses | it is your responsibility to prevent such interactions.
+16 | memphis | C2 | all | informs | pointer to detailed AI policy | AI Tools: See below for detailed policy.
+17 | michigan-state | C1 | instructor | informs | no staff training on AI tools | We do not provide explicit support or training in the use of these tools.
+18 | new-hampshire | C5 | all | informs | class decides AI policy | what the policy will be on using AI coding assistants
+19 | north-carolina-state | C2 | instructor | may | instructor may amend policy | the instructor reserves the right to amend this policy to protect academic integrity and ethical standards.
+20 | north-carolina-state | C2 | ta-staff | informs | staff grading is final | The evaluation of assignments in the course as defined by the teaching staff is the final determination of your assignment grade.
+21 | north-texas | C2 | instructor | informs | interim policy only | A more complete policy will be made available soon, but for now be aware the
+22 | oberlin-college | C1 | student | may | course resources always allowed | You are always allowed to use the textbook and any resources provided by me.
+23 | oberlin-college | C2 | student | may | course resources always allowed | You are always allowed to use the textbook and any resources provided by me.
+24 | oberlin-college | C6 | student | may | textbook and course resources allowed | You are always allowed to use the textbook and any resources provided by me.
+25 | pittsburgh | C2 | instructor | informs | integrity needed for fair evaluation | Intellectual integrity is vital to an academic community and for my fair evaluation of your work.
+26 | pittsburgh | C3 | instructor | informs | integrity needed for fair evaluation | Intellectual integrity is vital to an academic community and for my fair evaluation of your work.
+27 | princeton | C3 | instructor | informs | past ban unfair to honest students | this put honest students at a disadvantage, or at least gave the perception of such
+28 | rochester-institute-technology | C5 | all | informs | office hours beat AI | you will likely spend more time trying to get it to work correctly than you would spend getting help in office hours
+29 | rochester | C5 | instructor | informs | policy may change mid-semester | The instructor may adjust this policy during the semester if necessary.
+30 | swarthmore-college | C2 | all | informs | policy covers all coursework | The spirit of this policy applies to all course work, including
+31 | temple | C2 | ta-staff | informs | staff and peer tutors available | tutors are here to help you
+32 | texas-austin | C2 | student | may | may post short syntax-error snippets | You are also allowed to post short segments of code (2 lines or less) of code
+33 | texas-el-paso | C3 | instructor | informs | off-spec solutions not graded | Solutions that solve a different problem or that do not follow the
+34 | tufts | C2 | student | should | feedback on chatbot invited | we would love to hear any honest feedback you might have about it.
+35 | uiuc | C1 | student | informs | ten-minute cap per prompt | each prompt earns at most ten minutes of the time Claude spends working on it.
+36 | vermont | C5 | all | informs | broad definition of AI tools | Here AI is understood to mean any generative AI, which includes but is not limited to ChatGPT,
+37 | vermont | C5 | student | must-not | no AI note-taking | Use of AI for note-taking is prohibited.
+38 | vermont | C5 | instructor | must | instructor discloses own AI use | I will indicate clearly where and when AI has been used (if at all)
+39 | vermont | C5 | instructor | must-not | instructor never AI-grades | I guarantee that I will never use AI to
+40 | vermont | C5 | all | informs | course-built models exempt | Explicitly excluded from the above are the models we build or use in class or homework.
+41 | vermont | C5 | student | must-not | no AI in class discussions | Use of AI is prohibited for use in in-class discussions, unless explicitly
+42 | vermont | C5 | instructor | informs | want student's own ideas | We’re interested in what you think, not what a chatbot says.
+43 | virginia | C6 | student | should | prefer course staff help | to consider using help from the course staff (Piazza, office hours,
+44 | washington-state | C6 | student | may | may fix flagged parts and resubmit | and you’ll be able to change them and resubmit as necessary.
+45 | wellesley-college | C1 | all | informs | informed consent for new tech | the use of powerful technology in education should
+46 | wellesley-college | C1 | all | informs | cautious until benefits shown | only use it very cautiously, until the evidence shows that the benefits outweigh the risks.
+47 | wellesley-college | C1 | student | should | report observed AI bias | Please do bring to our attention any biases that you see
+48 | wellesley-college | C5 | instructor | informs | invite disagreement discussion | If you disagree with this policy, please talk to me!
+49 | wellesley-college | C6 | instructor | informs | late policy reduces AI temptation | The generous late policy for deadlines used in this course is designed in part
+50 | wesleyan | C1 | student | should | ask humans before AI | even then, I encourage you to
+51 | wesleyan | C1 | all | informs | AI empowers bad actors | Generative AI tools massively increase the prevalence and creativity of bad actors.
+52 | wright-state | C6 | instructor | informs | ban justified by fair evaluation | the professor can only fairly and accurately evaluate work that is not assisted by generative AI.

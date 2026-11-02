@@ -1,0 +1,17 @@
+{"slug": "columbia", "university": "Columbia University",
+ "units_searched": [
+  {"unit": "Department of Computer Science", "layer": "computing", "site": "https://www.cs.columbia.edu/",
+   "queries": ["site:cs.columbia.edu generative AI policy", "site:cs.columbia.edu academic honesty collaboration policy ChatGPT", "site:engineering.columbia.edu OR site:cs.columbia.edu AI tools policy students handbook", "Columbia Computer Science department \"AI\" policy courses default syllabus generative AI allowed COMS instructors"],
+   "pages_checked": ["https://www.cs.columbia.edu/education/", "https://www.cs.columbia.edu/academic/academic-honesty/", "https://www.cs.columbia.edu/education/ms/"],
+   "result": "none-found",
+   "note": "The CS Academic Honesty page (last updated 07/25/2023) covers unauthorized aids and collaboration and does not mention AI. The MS page links to it. Searches returned only the Provost Generative AI Policy (university layer; inaccessible, see first collection)."},
+  {"unit": "Columbia Engineering (Fu Foundation School of Engineering and Applied Science)", "layer": "school", "site": "https://engineering.columbia.edu/ ; https://bulletin.columbia.edu/columbia-engineering",
+   "queries": ["Columbia Engineering SEAS generative AI policy academic integrity computer science", "Columbia Engineering \"Fu Foundation\" undergraduate \"academic integrity\" \"generative AI\" site:bulletin.engineering.columbia.edu"],
+   "pages_checked": ["https://bulletin.columbia.edu/columbia-engineering", "https://engineering.columbia.edu/ (HTTP 403)"],
+   "result": "none-found",
+   "note": "The SEAS bulletin landing page had no AI statement; engineering.columbia.edu returned 403 to WebFetch, so the school site itself was not read. The full academic-standards pages of the bulletin were not reached."}
+ ],
+ "documents": [],
+ "course_examples": [],
+ "notes": "No computing-layer or school-layer AI policy found. The university Provost policy applies to all units and remains inaccessible (Cloudflare) per the first collection. The 'Academic Honesty' page was judged by a summarizing fetch, not fetch_text.py, since it had no AI content."
+}

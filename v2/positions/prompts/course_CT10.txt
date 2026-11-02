@@ -1,0 +1,48 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT10 "AI feedback on one's own code or work" (AI reviews or critiques code, proofs or drafts the student wrote.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..23 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | boston | C3 | student | may | AI allowed for feedback | feedback on your solutions.
+1 | brigham-young-idaho | C1 | student | may | AI allowed for feedback | Use AI for suggestions and feedback.
+2 | carleton-college | C3 | student | may | AI feedback on own proof allowed | You write your own proof for a homework assignment and ask the LLM for suggestions on improving it, and you cite the LLM
+3 | colby-college | C5 | student | should | AI for code review | Write a method yourself, then have AI help you check your work.
+4 | colgate | C3 | student | may | AI to critique own algorithm | Given a problem description and your proposed algorithm and
+5 | cornell | C3 | student | should | AI to fortify not substitute | Use LLMs to fortify your own ideas, not to substitute for them.
+6 | loyola-marymount | C1 | student | may | AI allowed to review own code | written yourself for errors, inefficiencies, vulnerabilities, or potential improvements.
+7 | loyola-marymount | C2 | student | may | AI allowed to review own code | written yourself for errors, inefficiencies, vulnerabilities, or potential improvements.
+8 | loyola-marymount | C3 | student | may | AI allowed to review own code | written yourself for errors, inefficiencies, vulnerabilities, or potential improvements.
+9 | loyola-marymount | C5 | student | may | AI allowed to review own code | for errors, inefficiencies, vulnerabilities, or potential improvements.
+10 | loyola-marymount | C6 | student | may | AI allowed to review own code | for errors, inefficiencies, vulnerabilities, or potential improvements.
+11 | michigan | C1 | student | must-not | no AI exhaustive code proofreading | Exhaustively proofreading your code to find and/or correct any mistakes
+12 | michigan | C3 | student | must-not | no AI grading before deadline | to grade your homework before the deadline has passed (even if you have already submitted it)
+13 | michigan | C3 | student | may | AI allowed for past homework solutions | from a previous week's homework
+14 | michigan | C3 | student | may | AI grading allowed after deadline | after the deadline has passed
+15 | michigan | C3 | student | may | AI allowed to check rubric scoring | whether it thinks your graded solution should earn more points on our rubric
+16 | minnesota | C4 | student | must-not | no AI improving own work | Submitting your own work for this class to an online learning support platform for iteration or improvement
+17 | new-york | C2 | student | may | AI as code feedback generator | Use AI to review your code and offer suggestions for improvement, just as a peer would.
+18 | north-carolina-state | C2 | student | may | AI allowed for code suggestions, one method | get suggestions for code improvement [Note: no more than a method can be provided to the AI]; or
+19 | stanford | C5 | student | must-not | no AI checking of own work | you may not use generative AI tools to "check" your work, even if you wrote it yourself
+20 | texas-christian | C5 | student | must-not | no AI iteration on own work | Submitting your own work for this class to an AI or unapproved assignment-help tool
+21 | texas-christian | C6 | student | must-not | no AI iteration on own work | Submitting your own work for this class to an AI or unapproved assignment-help tool
+22 | uiuc | C2 | student | may | AI reviews code you wrote | After you have written code yourself, use the AI to help you
+23 | wellesley-college | C6 | student | must-not | no AI to review solutions | use AI to review or improve a solution that you have written.

@@ -1,0 +1,107 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT30 "Understand and explain every line" (Students must understand and be able to explain any submitted code, sometimes orally or in a code review, with penalties if they cannot.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..82 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | brown | C6 | student | must | must understand own work | you are responsible for understanding your work well enough to replicate it on your own, without collaboration or AI assistance.
+1 | brown | C6 | student | must | must explain own code | work you submit: you must be able to explain your code without the
+2 | bucknell | C4 | student | must | must understand AI code | Never blindly copy code! You MUST understand everything these tools suggest.
+3 | bucknell | C4 | student | must-not | no copying code without understanding | Direct code copying without understanding
+4 | bucknell | C6 | instructor | may | in-person code review possible | the instructors reserve the right to require an
+5 | bucknell | C6 | student | must | must explain own code | The ability to explain your code is a core requirement for receiving credit.
+6 | california-berkeley | C2 | instructor | informs | must explain own code | verify that you are able to explain your code and are capable of generating similar code unassisted
+7 | california-san-diego | C3 | student | must | must understand and explain code | You must understand your submitted code and be able to explain its design
+8 | california-san-diego | C3 | instructor | informs | oral follow-up on AI use | The instructor reserves the right to follow up with a student to assess orally the process
+9 | california-santa-cruz | C2 | student | should | must explain AI material | You should be able to fully explain and justify the AI-generated material you use during evaluations or discussions
+10 | colby-college | C2 | student | must | must explain solutions verbally | Students must be able to demonstrate their understanding of solutions through verbal explanations
+11 | colby-college | C5 | student | must-not | no un-understood AI code | If you cannot read and understand them, do not include them!
+12 | columbia | C6 | student | must | responsible for understanding submitted code | You are responsible for understanding any
+13 | cornell | C3 | student | must-not | no submitting ununderstood solutions | Do not submit solutions that you do not understand
+14 | cornell | C3 | student | should | able to explain own solution | you should be able to explain your solution, in your own words
+15 | cornell | C3 | student | should | prepared to explain submission | you should be prepared to explain, evaluate, and modify any part of the submission
+16 | dartmouth-college | C2 | student | must | explain every line of code | Be able to explain every line of code in your solution
+17 | emory | C2 | student | should | prepared to explain and modify code | You should be prepared to explain how your program works, trace your code on a small example,
+18 | emory | C2 | instructor | informs | inability to explain suggests misconduct | Inability to explain or modify submitted work may be treated as evidence that the submission is not your own.
+19 | georgia-tech | C4 | student | should | must understand AI-written code | 2. Ensure understanding of code. For the larger topics being used in code, do
+20 | harvard | C5 | student | must | student accountable for AI content | You must take full responsibility for anything you submit
+21 | harvey-mudd-college | C5 | student | should | understand all submitted code | You should of course always seek to understand the code that you submit
+22 | james-madison | C1 | student | must | explain and defend submitted code | On the project, you must be able to explain and defend every part of the program you submit
+23 | james-madison | C4 | student | should | explain AI code or penalty | be ready to explain what this code does if asked or assume a grading penalty.
+24 | james-madison | C6 | student | must | explain generated code integration | explain how any generated code relates to oth er parts of the
+25 | johns-hopkins | C2 | student | must | understand every submitted line | You must understand every line of code that you submit in assignments, projects, and exams.
+26 | johns-hopkins | C2 | student | must | explain how code works | You must be able to explain how and why your code works.
+27 | johns-hopkins | C2 | student | must | explain all submitted code | understanding and being able to explain all code in your solutions.
+28 | louisville | C6 | student | must | students responsible for understanding | Students remain responsible for learning and understand-
+29 | loyola-marymount | C1 | student | must | understand and explain generated code | be able to understand, validate, and explain the generated code,
+30 | loyola-marymount | C1 | student | must-not | no code you do not understand | The use of code you do not understand is unethical and dangerous.
+31 | loyola-marymount | C1 | student | must | understand every line of code | You have a moral and ethical responsibility to deeply understand every line of software you produce, whether by hand or by directing an agent
+32 | loyola-marymount | C2 | student | must | understand and explain generated code | be able to understand, validate, and explain the generated code,
+33 | loyola-marymount | C2 | student | must-not | no code you do not understand | The use of code you do not understand is unethical and dangerous.
+34 | loyola-marymount | C2 | student | must | understand every line of code | You have a moral and ethical responsibility to deeply understand every line of software you produce, whether by hand or by directing an agent
+35 | loyola-marymount | C3 | student | must | understand and explain generated code | be able to understand, validate, and explain the generated code,
+36 | loyola-marymount | C3 | student | must-not | no code you do not understand | The use of code you do not understand is unethical and dangerous.
+37 | loyola-marymount | C3 | student | must | understand every line of code | You have a moral and ethical responsibility to deeply understand every line of software you produce, whether by hand or by directing an agent
+38 | loyola-marymount | C5 | student | must | must explain generated code | you must (1) be able to understand, validate, and explain the generated code
+39 | loyola-marymount | C5 | student | must | must understand all submitted code | You have a moral and ethical responsibility to deeply understand every line of software you produce
+40 | loyola-marymount | C6 | student | must | must explain generated code | you must (1) be able to understand, validate, and explain the generated code
+41 | loyola-marymount | C6 | student | must | must understand all submitted code | You have a moral and ethical responsibility to deeply understand every line of software you produce
+42 | maryland-college-park | C5 | student | must | must explain and comment code | You are still expected to explain the output of any code and comment it to explain what the
+43 | massachusetts-amherst | C2 | student | must-not | no AI without understanding | using chatGPT without clearly understanding what it does is
+44 | memphis | C4 | student | must | must explain and validate code | you must be able to explain and validate any code you produce, and
+45 | michigan-state | C1 | ta-staff | informs | no staff help with AI code | Course staff will not assist you if you do not understand your own code.
+46 | michigan-state | C1 | student | should | must understand AI-generated code | Debugging and understanding code generated by AI is part of the challenge of using these tools.
+47 | new-york | C2 | student | must | must understand AI-produced code | you need to know why certain data structures, algorithms and programming language features are used.
+48 | north-carolina-chapel-hill | C3 | student | must | must understand AI answers | you are wholly responsible for understanding the answers they produce.
+49 | north-texas | C4 | student | must | must explain submitted code | You must understand and be able to explain all submitted code.
+50 | oklahoma | C1 | instructor | informs | student explains solution in office | Dr. Mackay will invite the student to her office to explain the assignment solution in detail
+51 | oklahoma | C1 | instructor | informs | integrity charge if cannot explain | Students who choose not to come within 48 hours or who cannot explain the work they submitted will be charged with an academic integrity violation.
+52 | oklahoma | C4 | student | must-not | uncritical copy-paste is misconduct | any direct copy-pasting without reading, understanding, analyzing, and actively working to enhance your skills will be considered academic misconduct
+53 | oklahoma | C6 | student | must-not | no uncomprehended AI code copying | without comprehension or modification is not acceptable and may be considered academic
+54 | princeton | C2 | instructor | informs | code reviews check understanding | code reviews ask you to demonstrate that you understand how your code works
+55 | rhode-island | C5 | student | must | understand AI code before using | a thorough comprehension of any AI-suggested code is essential before incorporation
+56 | rochester-institute-technology | C6 | instructor | informs | may be asked to explain code | If your authorship of the code is in doubt, you may be asked to
+57 | san-francisco | C6 | student | should | submit only work you can explain | You should only submit work you fully understand and can explain.
+58 | san-francisco | C6 | ta-staff | may | may be asked to explain code | instructor may ask you to walk through code you submitted; being unable to is
+59 | san-jose-state | C1 | instructor | informs | may be asked to explain code | Students may be asked to explain their code or reasoning to demonstrate their understanding.
+60 | san-jose-state | C1 | instructor | informs | grade penalty if cannot explain | to do so may result in a penalty, including a reduction in grade.
+61 | san-jose-state | C6 | instructor | may | instructor may ask for explanation | instructor may, at any time, ask a student to explain the meaning of any part of any answer that they
+62 | south-florida | C4 | student | should | must understand beyond AI | Demonstrating a deep understanding of the subject matter
+63 | south-florida | C4 | instructor | informs | shallow understanding lowers grade | A shallow understanding from AI-generated content leads to a low grade.
+64 | stony-brook | C4 | student | must | must understand AI code before commit | Understand before you ship. Never commit code you cannot explain to a teammate.
+65 | texas-el-paso | C3 | student | must | must understand and explain submissions | Please be aware that you must fully understand and be able to
+66 | texas-tyler | C2 | student | must | comment each imported line | Comment on each line of code in the imported method so I can see you understand what is happening (do
+67 | texas-tyler | C2 | instructor | may | may be asked to explain code orally | I may have you appear personally to explain how a method works
+68 | uiuc | C1 | student | informs | ownership means direction and judgment | What makes the project yours is everything the agent cannot do for you.
+69 | uiuc | C1 | student | must | put in hours and understand app | You put in the hours, and you come away understanding what you made.
+70 | uiuc | C1 | student | informs | explain project to tutor as test | if you can sit down with a tutor and walk them through your app
+71 | uiuc | C2 | student | must | solve it yourself and understand it | you must solve the problem, and you must understand every line you submit.
+72 | uiuc | C2 | student | informs | later understanding doesn't excuse violation | understanding the result afterward does not repair the failure,
+73 | uiuc | C2 | student | must-not | no submitting unexplainable code | Submitting code you cannot fully explain.
+74 | uiuc | C2 | student | must-not | no prompting until tests pass | Iteratively prompting the AI until the tests pass, without comprehending what changed or why.
+75 | uiuc | C2 | student | must | write own code and explain every line | you must write your own code, and you must be able to explain every line of it.
+76 | uiuc | C2 | student | should | explain any line on demand | you should be able to answer immediately and confidently, without consulting any resource
+77 | uiuc | C6 | student | must | must explain every submitted line | both of you must be able to explain every line you submit
+78 | vermont | C5 | student | should | must understand submitted work | You should be able to read, understand, and explain in detail
+79 | vermont | C5 | instructor | may | instructor may require oral account | the right to have you come to a meeting in which you give an account of your work and how it
+80 | virginia-commonwealth | C3 | student | must | verify and explain submitted code | verifying, and being able to explain all code they submit
+81 | virginia-tech | C3 | instructor | may | may require oral defense of AI work | we may require you to explain, defend, revise, or orally demonstrate
+82 | washington | C3 | student | should | understand generated code | It is important that you understand how any generated code works

@@ -1,0 +1,651 @@
+{
+ "university": "Emory University",
+ "slug": "emory",
+ "state": "GA",
+ "type": "R1",
+ "searched": {
+  "university": "none-found",
+  "school": "found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "emory-college-syllabus-additions",
+   "layer": "school",
+   "unit": "Emory College of Arts and Sciences (Academic Affairs and Faculty Partnerships)",
+   "course": null,
+   "title": "Emory College Syllabus Additions (AI statement)",
+   "url": "https://oue.college.emory.edu/faculty-resources/documents/syllabus-add.pdf",
+   "date_or_term": "undated",
+   "stance_why": "The document says \"It is up to the instructor to determine whether student use of Artificial Intelligence is allowed\", so it sets no college-wide stance and hands the decision to instructors. The only template offered is a no-AI one, but it is optional ('you may use') and 'adapt as needed', so there are no tiers.",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "A College syllabus-additions sheet telling instructors what to paste into syllabi. Its AI section leaves the decision to each instructor, asks for a syllabus statement on AI, and supplies a no-AI template that frames unauthorized AI use as plagiarism and an Honor Code violation.",
+   "units": [
+    {
+     "why": "The sentence says \"It is up to the instructor to determine\" whether AI is allowed, so the rule is delegated per instructor and per assignment; this is P04, the stance-setting type, not P09 which concerns the statement itself.",
+     "anchor": "It is up to the instructor to determine whether student use of",
+     "frag_start": "It is up to the instructor",
+     "frag_end": "for any assignments.",
+     "policy": "It is up to the instructor to determine whether student use of Artificial Intelligence is allowed for any assignments.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "default-stance"
+     ]
+    },
+    {
+     "why": "Tells instructors the syllabus \"should include a statement\" on the extent of AI use. This is a syllabus-statement requirement (P09), addressed to instructors and communicated at course start.",
+     "anchor": "syllabus should include a statement that addresses the extent to which AI use is appropriate",
+     "frag_start": "The syllabus should include",
+     "frag_end": "any speciﬁc assignments.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "resolution_why": "Coder A normalized the sentence and Coder B left policy null; codes agree (instructor, course-start, should, P09). The source sentence 'The syllabus should include a statement that addresses the extent to which AI use is appropriate for the course and/or any specific assignments' is fully stated by a fuller anchor, so policy is null."
+    },
+    {
+     "why": "The statement \"may be included as part of the Honor Code statement for the course or listed as its own course policy\" is a permission about where the AI statement goes; it fits P09 (syllabus AI statement) better than P04 because it concerns communication format, not who decides.",
+     "anchor": "may be included as part of the Honor Code statement for the course",
+     "frag_start": "This may be included as part",
+     "frag_end": "as its own course policy.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "may",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "The passage is the Honor Council's suggested syllabus language for courses where AI 'is not permitted at all': 'Using an artificial intelligence program to generate any content for any assignment in this course (including, but not limited to examinations, papers, homework, and creative work)'. It bans AI use course-wide on all assignments, so it is a default ban (P01) rather than only a rule against submitting AI work as one's own (P19), and it binds students while they do assignments.",
+     "anchor": "Using an artificial intelligence program to generate any content for any assignment in this course",
+     "frag_start": "Using an artificial intelligence program",
+     "frag_end": "and creative work)",
+     "policy": "In a course where AI is not permitted at all, students may not use an artificial intelligence program to generate any content for any assignment, including examinations, papers, homework, and creative work.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P01",
+     "unit_stance": "prohibit",
+     "topics": [
+      "prohibited-uses",
+      "default-stance",
+      "code-generation"
+     ],
+     "resolution_why": "Coders disagreed on phase (A course-start, B during-work) and type (A P01, B P19). The source offers this as optional suggested syllabus language 'if the use of Artificial Intelligence is not permitted at all'; 'any content for any assignment' is a course-wide blanket ban, not only a ban on submitting AI output as one's own, so P01 fits better than P19. The rule governs what students do on assignments, so phase is during-work; the act of communicating it is coded separately under P09 units. The normalized policy is rewritten to state the conditional scope of the template."
+    },
+    {
+     "why": "The template says such use \"constitutes plagiarism and is a violation of the Honor Code\", classifying AI generation as misconduct handled by the integrity process, so P36.",
+     "anchor": "constitutes plagiarism and is a violation of the Honor Code",
+     "frag_start": "constitutes plagiarism and is",
+     "frag_end": "violation of the Honor Code.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "prohibit",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The template adds that use \"without permission from the instructor may also constitute seeking unauthorized assistance\"; this is another misconduct classification (P36) and implies instructor permission can authorize use, but its main job is the integrity classification.",
+     "anchor": "without permission from the instructor may also constitute seeking unauthorized assistance",
+     "frag_start": "The use of an artificial",
+     "frag_end": "provisions of the Honor Code.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions",
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "\"Any suspicion of academic misconduct will be reported to the Honor Council\" is a mandatory enforcement step in the template, so P36 (handled by integrity processes) with a must modality.",
+     "anchor": "Any suspicion of academic misconduct will be reported to the Honor Council.",
+     "frag_start": "Any suspicion of academic misconduct",
+     "frag_end": "reported to the Honor Council.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "emory-college-honor-ai-detection",
+   "layer": "school",
+   "unit": "Emory College Honor Council",
+   "course": null,
+   "title": "Considerations for Detection: Artificial Intelligence",
+   "url": "https://oue.college.emory.edu/includes/documents/honor-council/artificial-intelligence-hc.pdf",
+   "date_or_term": "undated",
+   "stance_why": "The sheet sets no rule on whether students may use AI; it advises faculty on evidence for \"unauthorized or unattributed use of a GenAI program\", which presupposes that authorization is set elsewhere (by instructors), so it is coded delegates.",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "A short Honor Council sheet on detecting AI misuse. It cautions about AI detectors and lists indicators of generative AI use that faculty can look for, and it points to a holistic review that includes asking the student about their work. It does not itself say whether AI is permitted.",
+   "units": [
+    {
+     "why": "\"Emory does not currently license an AI detection program\" is a fact about institutional tooling that underlies the detection guidance; closest type is P39 (detectors not relied upon), as no detector is provided.",
+     "anchor": "Emory does not currently license an AI detection program.",
+     "frag_start": "Emory does not currently license",
+     "frag_end": "AI detection program.",
+     "policy": null,
+     "actor": "all",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P39",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ]
+    },
+    {
+     "why": "Notes \"not a solid consensus\" on detector accuracy; a statement that detectors are unreliable, which is P39.",
+     "anchor": "There is not a solid consensus in the educational and academic integrity communities",
+     "frag_start": "There is not a solid",
+     "frag_end": "highly critical of the tools.",
+     "policy": "There is not a solid consensus in the educational and academic integrity communities about the accuracy of detection programs.",
+     "actor": "all",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P39",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ],
+     "resolution_why": "Coder A left policy null on a truncated anchor; Coder B wrote the full statement. Codes agree. The anchor alone omits what the consensus concerns (accuracy of detection programs), so B's normalized policy is kept."
+    },
+    {
+     "why": "\"Detection programs may produce false negatives or false positives\" states unreliability, P39.",
+     "anchor": "Detection programs may produce false negatives or false positives.",
+     "frag_start": "Detection programs may produce false",
+     "frag_end": "or false positives.",
+     "policy": null,
+     "actor": "all",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P39",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ]
+    },
+    {
+     "why": "A detector result alone \"would not ordinarily be sufficient\" for a finding of responsibility; this limits detectors as proof (P39) and requires other indicators.",
+     "anchor": "results of a detection program alone would not ordinarily be sufficient",
+     "frag_start": "The results of a detection",
+     "frag_end": "presence of other indicators.",
+     "policy": "The results of a detection program alone would not ordinarily be sufficient to find a student responsible for a violation without the presence of other indicators.",
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P39",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools",
+      "integrity-sanctions"
+     ],
+     "resolution_why": "Coders disagreed on actor (A all, B instructor) and modality (A should-not, B informs). The sheet is written for faculty, and the sentence says detector results 'would not ordinarily be sufficient to find a student responsible'; it states an evidentiary standard and does not tell anyone not to do something, so instructor/informs. Type P39 (do not rely on AI detectors) agreed."
+    },
+    {
+     "why": "Faculty using detectors \"should be transparent and ask students to acknowledge in writing\": disclosure of the instructor's own AI-tool use to students (P47).",
+     "anchor": "Faculty who use AI detection programs should be transparent",
+     "frag_start": "Faculty who use AI detection",
+     "frag_end": "submitted to these programs.",
+     "policy": "Faculty who use AI detection programs should be transparent and ask students to acknowledge in writing that their work may be submitted to these programs.",
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P47",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools",
+      "instructor-staff-use",
+      "privacy-data"
+     ],
+     "resolution_why": "Codes agree (instructor, should, P47). Coder A anchored on a fragment without the subject; Coder B anchored on the subject clause and wrote the full policy, which is faithful to the sentence. B kept."
+    },
+    {
+     "why": "Faculty \"should exclude the student's name or other personally identifiable information from submission\" is a data-protection rule, P50.",
+     "anchor": "Faculty should exclude the student’s name or other personally identifiable information from submission.",
+     "frag_start": "Faculty should exclude the student’s",
+     "frag_end": "information from submission.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data",
+      "detection-tools"
+     ]
+    },
+    {
+     "why": "\"Faculty should treat these results with caution\" repeats the unreliability theme as advice, P39.",
+     "anchor": "Faculty should treat these results with caution.",
+     "frag_start": "Faculty should treat these results",
+     "frag_end": "results with caution.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P39",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ]
+    },
+    {
+     "why": "Hallucinations are called \"one of the most obvious signs of GenAI usage\", an indicator for identifying misuse by process evidence, so P40.",
+     "anchor": "These are one of the most obvious signs of GenAI usage.",
+     "frag_start": "Hallucinations (false information, quotations, and",
+     "frag_end": "signs of GenAI usage.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P40",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ]
+    },
+    {
+     "why": "Fabricated quotations or citations \"may also be an honor code violation in and of itself\", classifying hallucinated citations as misconduct, P36.",
+     "anchor": "may also be an honor code violation in and of itself",
+     "frag_start": "The inclusion of fabricated quotations",
+     "frag_end": "in and of itself.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions",
+      "accountability-understanding"
+     ],
+     "resolution_why": "Coders disagreed on unit_stance only (A restrict, B prohibit). Source: fabricated quotations or citations 'may also be an honor code violation in and of itself'; the 'may' makes it conditional, so restrict. Actor, phase, modality and P36 agreed."
+    },
+    {
+     "why": "A paper containing a phrase like \"Is there anything else I can help you with?\" is a direct sign of AI generation, an indicator for P40.",
+     "anchor": "Direct signs that the work was generated by AI",
+     "frag_start": "Direct signs that the work",
+     "frag_end": "I can help you with?”).",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P40",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ]
+    },
+    {
+     "why": "\"Writing style that is markedly different from the student's previous work\" is a stated indicator used to identify misuse, P40.",
+     "anchor": "Writing style that is markedly different from the student’s previous work.",
+     "frag_start": "Writing style that is markedly",
+     "frag_end": "student’s previous work.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P40",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ]
+    },
+    {
+     "why": "Writing \"vastly different from the class or the expectations for undergraduates\" is another indicator, P40.",
+     "anchor": "Writing that is vastly different from the class or the expectations for undergraduates.",
+     "frag_start": "Writing that is vastly different",
+     "frag_end": "for undergraduates.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P40",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ]
+    },
+    {
+     "why": "Grammar or vocabulary \"beyond the course level (for languages)\" is an indicator of AI use, P40.",
+     "anchor": "Advanced grammatical structures or vocabulary that is beyond the course level",
+     "frag_start": "Advanced grammatical structures or vocabulary",
+     "frag_end": "course level (for languages)",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P40",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ]
+    },
+    {
+     "why": "\"Inclusion of material that is not germane to the course\" is listed as an indicator, P40.",
+     "anchor": "Inclusion of material that is not germane to the course.",
+     "frag_start": "Inclusion of material that is",
+     "frag_end": "germane to the course.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P40",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ]
+    },
+    {
+     "why": "Instructors can submit the assignment to a GenAI program and compare; \"Work that is very similar to known GenAI output\" is an indicator, a process-evidence check, P40.",
+     "anchor": "Work that is very similar to known GenAI output.",
+     "frag_start": "Work that is very similar",
+     "frag_end": "work under suspicion?",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P40",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ],
+     "resolution_why": "Codes agree. Coder B wrote a policy that added 'faculty may submit the assignment to a GenAI program and compare', which is the next sentence's question, not this one. Anchor alone states the indicator, so policy is null (A)."
+    },
+    {
+     "why": "\"Student's inability to discuss their own work\" is an indicator; P40 fits (evidence of misuse), while P30 is about students' duty to explain, which this does not state directly.",
+     "anchor": "Student’s inability to discuss their own work.",
+     "frag_start": "Student’s inability to discuss",
+     "frag_end": "discuss their own work.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P40",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools",
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "The honor code \"allows faculty to ask a student questions about their work\" to clarify suspicion; talking with the student before escalating (P57).",
+     "anchor": "allows faculty to ask a student questions about their work",
+     "frag_start": "The honor code allows faculty",
+     "frag_end": "honor code violation.",
+     "policy": "The honor code allows faculty to ask a student questions about their work for the purpose of clarifying a suspicion of an honor code violation.",
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P57",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions",
+      "detection-tools"
+     ],
+     "resolution_why": "Codes agree (instructor, may, P57). Coder A left policy null; the anchor omits the purpose stated in the source ('for the purpose of clarifying a suspicion of an honor code violation'), so B's policy is kept."
+    },
+    {
+     "why": "Advocates a \"holistic approach\" using course context and prior work to decide on \"unauthorized or unattributed use of a GenAI program\"; guidance on weighing evidence (P40) rather than P36.",
+     "anchor": "advocates for a holistic approach in determining whether an assignment may violate the honor code",
+     "frag_start": "The Emory College Honor Council",
+     "frag_end": "full picture for the Honor Council.",
+     "policy": "The Emory College Honor Council advocates for a holistic approach in determining whether an assignment may violate the honor code through the unauthorized or unattributed use of a GenAI program.",
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P40",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions",
+      "detection-tools"
+     ],
+     "resolution_why": "Codes agree. Coder B's normalized policy is faithful to the sentence and adds the object ('unauthorized or unattributed use of a GenAI program') that the anchor omits; B's policy kept with A's fuller anchor."
+    }
+   ]
+  },
+  {
+   "id": "emory-college-online-ai",
+   "layer": "school",
+   "unit": "Emory College Learning Design",
+   "course": null,
+   "title": "Artificial Intelligence (AI) policy page",
+   "url": "https://online.college.emory.edu/policies/AI.html",
+   "date_or_term": "undated",
+   "stance_why": "The page says \"It is important to clearly state whether any use of AI is permitted or not\" and gives guidance for both the no-AI and the permitted case, so it leaves the stance to instructors and is coded delegates.",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "A Learning Design policy page on AI for Emory College online courses. It defines AI and generative AI, notes concerns, repeats the Honor Council no-AI template, and offers advice for instructors who permit AI. It asks instructors to state clearly whether AI is allowed.",
+   "units": [
+    {
+     "why": "\"Artificial Intelligence (AI) is the use of computer systems to simulate human processes\" is a definition setting scope, P61.",
+     "anchor": "Artificial Intelligence (AI) is the use of computer systems to simulate human processes.",
+     "frag_start": "Artificial Intelligence (AI) is the",
+     "frag_end": "simulate human processes.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance"
+     ],
+     "resolution_why": "Found only by Coder A. Source opens with 'Artificial Intelligence (AI) is the use of computer systems to simulate human processes.' This is a definition of AI that sets the scope of the page, the same kind of statement both coders coded as P61 for the generative-AI definition next to it. Kept as a real policy-page unit (P61, informs)."
+    },
+    {
+     "why": "The definition of generative AI as models that \"produce content in various forms\" is a second definition of scope, P61.",
+     "anchor": "Generative AI is a form of artificial intelligence that",
+     "frag_start": "Generative AI is a form",
+     "frag_end": "in response to prompts.",
+     "policy": "Generative AI is a form of artificial intelligence that uses machine learning models to produce content in various forms, including text, images, sounds, animations, and other types of data, often in response to prompts.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance"
+     ],
+     "resolution_why": "Codes agree (all, general, informs, P61). Coder A normalized the definition and Coder B left policy null; the anchor stops at 'a form of artificial intelligence that', so the definition is not stated by the anchor alone and A's faithful paraphrase of the full sentence is kept."
+    },
+    {
+     "why": "\"concerns relate to academic integrity, ethics, access, and bias\" names ethical, access and bias concerns about AI, P53 (the closest type, covering ethics and bias).",
+     "anchor": "concerns relate to academic integrity, ethics, access, and bias",
+     "frag_start": "Generative AI is a new",
+     "frag_end": "access, and bias.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P53",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment",
+      "equity-access"
+     ]
+    },
+    {
+     "why": "\"It is important to clearly state whether any use of AI is permitted or not\" tells instructors to state their AI rule, P09.",
+     "anchor": "It is important to clearly state whether any use of AI is permitted or not.",
+     "frag_start": "It is important to clearly",
+     "frag_end": "permitted or not.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "instructor-discretion"
+     ],
+     "resolution_why": "Codes agree (instructor, course-start, should, P09). Coder B's anchor stopped before 'or not' and carried a policy to compensate; Coder A's anchor is the whole sentence and states the rule, so policy is null (A)."
+    },
+    {
+     "why": "The page gives the Honor Council's suggested language 'when AI is not allowed': 'Using an artificial intelligence program to generate any content for any assignment in this course (including, but not limited to examinations, papers, homework, and creative work)'. It bans AI course-wide on every assignment, so it is a default ban (P01) rather than only a rule against submitting AI output as one's own (P19), and it binds students during assignment work.",
+     "anchor": "Using an artificial intelligence program to generate any content for any assignment",
+     "frag_start": "Using an artificial intelligence program",
+     "frag_end": "and creative work)",
+     "policy": "When AI is not allowed, students may not use an artificial intelligence program to generate any content for any assignment, including examinations, papers, homework, and creative work.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P01",
+     "unit_stance": "prohibit",
+     "topics": [
+      "prohibited-uses",
+      "default-stance"
+     ],
+     "resolution_why": "Coders disagreed on phase (A course-start, B during-work) and type (A P01, B P19), as in the syllabus-additions copy of the same template. Resolved identically: blanket course-wide ban 'any content for any assignment' fits P01; the rule governs work on assignments (during-work). Policy rewritten to keep the template's conditional ('when AI is not allowed')."
+    },
+    {
+     "why": "The language states such use \"constitutes plagiarism and is a violation of the Honor Code\", P36.",
+     "anchor": "constitutes plagiarism and is a violation of the Honor Code",
+     "frag_start": "constitutes plagiarism and is",
+     "frag_end": "violation of the Honor Code.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "prohibit",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Use \"without permission from the instructor may also constitute seeking unauthorized assistance\" is a misconduct classification, P36.",
+     "anchor": "without permission from the instructor may also constitute seeking unauthorized assistance",
+     "frag_start": "The use of an artificial",
+     "frag_end": "provisions of the Honor Code.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "\"Any suspicion of academic misconduct will be reported to the Honor Council\" is a required enforcement step, P36.",
+     "anchor": "Any suspicion of academic misconduct will be reported to the Honor Council.",
+     "frag_start": "Any suspicion of academic misconduct",
+     "frag_end": "reported to the Honor Council.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Advises instructors to \"Generate responses to your own assignments\" to see what AI does; advice to learn about AI before setting policy (P63).",
+     "anchor": "Generate responses to your own assignments to see what an AI response might look like.",
+     "frag_start": "Generate responses to your own",
+     "frag_end": "response might look like.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use"
+     ],
+     "resolution_why": "Coders disagreed on type (A P59 instructor use of AI in teaching work, B P63 support faculty in learning AI). The advice 'Generate responses to your own assignments to see what an AI response might look like' is the page telling instructors to try AI on their own assignments before deciding how to handle it, which is the P63 definition (instructors try AI tools before setting course policy); P59 covers AI used to do teaching tasks (drafting rubrics, feedback), which this is not. Actor, phase and modality agreed."
+    },
+    {
+     "why": "\"Be very clear about your expectations for when students can use it and when they cannot\" asks permitting instructors to communicate rules, P09.",
+     "anchor": "Be very clear about your expectations for when students can use it",
+     "frag_start": "Be very clear about your",
+     "frag_end": "when they cannot.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "permitted-uses"
+     ],
+     "resolution_why": "Coders disagreed on unit_stance only (A permit, B neutral). The sentence is advice to state expectations 'when students can use it and when they cannot'; it takes no position on AI use itself, so neutral."
+    },
+    {
+     "why": "\"Have students turn in the original AI generated work along with their edited work\" requires submitting the AI output, a keep-and-submit of AI material (P26).",
+     "anchor": "Have students turn in the original AI generated work along with their edited work.",
+     "frag_start": "Have students turn in the",
+     "frag_end": "their edited work.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P26",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation",
+      "assessment-design"
+     ],
+     "resolution_why": "Codes agree (instructor, during-work, should, P26). Coder A merged two sentences into one unit with a long policy; Coder B coded 'Have students turn in the original AI generated work along with their edited work' alone, which is the P26 rule. The preceding sentence (demonstrate how work was edited) is a separate unit found only by Coder B and kept below. Anchor alone states the rule, so policy is null."
+    },
+    {
+     "why": "For permissive courses, instructors are told to \"Ask students to submit work generated by AI and demonstrate how they edited or adapted it\"; an assignment design built around AI (P35).",
+     "anchor": "Ask students to submit work generated by AI and demonstrate how they edited",
+     "frag_start": "Ask students to submit work",
+     "frag_end": "edited or adapted it.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P35",
+     "unit_stance": "permit",
+     "topics": [
+      "assessment-design",
+      "disclosure-citation"
+     ],
+     "resolution_why": "Found only by Coder B. The source sentence 'Ask students to submit work generated by AI and demonstrate how they edited or adapted it' is a real recommendation about assignment design and is distinct from the follow-on 'turn in the original AI generated work' (P26): it asks for a demonstration of editing. Kept; coded P35 (assignment redesign around AI), instructor, before-course, should."
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Reconciled from Coder A and Coder B. No university-wide or computing-unit policy was found; all three documents are Emory College (school layer). The three documents reuse the same Honor Council no-AI template (syllabus additions and Learning Design page); each is coded in its own document. Source text contains ligature characters, which anchors copy verbatim."
+}

@@ -1,0 +1,722 @@
+{
+ "themes": [
+  {
+   "id": "stance",
+   "label": "Default stance and who decides",
+   "desc": "Whether AI is allowed by default, who sets the rule (department, instructor, assignment), and whether uses are sorted into levels or categories."
+  },
+  {
+   "id": "communicate",
+   "label": "Communicating expectations",
+   "desc": "How and where the rules are made explicit to students."
+  },
+  {
+   "id": "permitted",
+   "label": "What students may use AI for",
+   "desc": "Uses that are allowed or encouraged: explanation, debugging help, brainstorming, writing support, course-provided tools."
+  },
+  {
+   "id": "prohibited",
+   "label": "What students may not use AI for",
+   "desc": "Uses that are ruled out, especially generating code or solutions that are submitted as one's own."
+  },
+  {
+   "id": "disclosure",
+   "label": "Disclosure and attribution",
+   "desc": "Whether and how AI use must be acknowledged, cited, or documented (prompts, transcripts, reflections)."
+  },
+  {
+   "id": "accountability",
+   "label": "Student accountability and understanding",
+   "desc": "Students remain responsible for what they submit and must be able to explain and defend it."
+  },
+  {
+   "id": "assessment",
+   "label": "Assessment design",
+   "desc": "How assignments, exams, weighting, and formats change in response to AI."
+  },
+  {
+   "id": "enforcement",
+   "label": "Detection and enforcement",
+   "desc": "Detectors, evidence, academic-integrity processes, sanctions, and amnesty."
+  },
+  {
+   "id": "rationale",
+   "label": "Why: learning and careers",
+   "desc": "The reasons given: protecting skill-building and productive struggle, and preparing students for AI-rich professional work."
+  },
+  {
+   "id": "faculty",
+   "label": "Faculty and staff use of AI",
+   "desc": "AI use by instructors and TAs for grading, feedback, materials, and course operations."
+  },
+  {
+   "id": "responsible",
+   "label": "Equity, privacy, ethics, and IP",
+   "desc": "Access and cost, data and privacy, bias and environmental concerns, and intellectual property."
+  },
+  {
+   "id": "governance",
+   "label": "Governance and change over time",
+   "desc": "Acknowledging that policy will change, review cycles, and who maintains the policy."
+  }
+ ],
+ "types": [
+  {
+   "id": "P01",
+   "name": "Prohibit AI on graded work by default",
+   "theme": "stance",
+   "covers": "The default rule bans generative AI on graded work (or on all work) in the course or unit."
+  },
+  {
+   "id": "P02",
+   "name": "Permit or encourage AI by default",
+   "theme": "stance",
+   "covers": "The default rule allows, welcomes, encourages, or expects generative AI use."
+  },
+  {
+   "id": "P03",
+   "name": "Discourage AI without forbidding it",
+   "theme": "stance",
+   "covers": "AI is discouraged or not recommended, but not formally prohibited."
+  },
+  {
+   "id": "P04",
+   "name": "Let each instructor or assignment set the rule",
+   "theme": "stance",
+   "covers": "Whether AI is allowed is decided per instructor, per assignment, or per activity rather than by one rule."
+  },
+  {
+   "id": "P05",
+   "name": "Name explicit tiers or levels of AI use",
+   "theme": "stance",
+   "covers": "The policy defines named tiers, levels, colors, or categories of permitted AI use (e.g. no AI / limited / open), or a table of uses per assessment."
+  },
+  {
+   "id": "P06",
+   "name": "Define the fallback rule when a syllabus is silent",
+   "theme": "stance",
+   "covers": "States what applies when a syllabus or assignment says nothing about AI (e.g. 'unless explicitly allowed, AI is prohibited')."
+  },
+  {
+   "id": "P07",
+   "name": "Cover AI built into editors, IDEs, and agents",
+   "theme": "stance",
+   "covers": "Rules that cover AI built into editors and IDEs (Copilot, Cursor, autocomplete), operating systems, browsers, or autonomous coding agents, including requiring students to disable them."
+  },
+  {
+   "id": "P08",
+   "name": "Stage AI permission as skills develop",
+   "theme": "stance",
+   "covers": "AI permission changes over the course: forbidden early, allowed later once fundamentals are mastered or in later projects or advanced courses."
+  },
+  {
+   "id": "P09",
+   "name": "Require an AI statement in every syllabus",
+   "theme": "communicate",
+   "covers": "Instructors or departments must state AI expectations in the syllabus or assignment instructions."
+  },
+  {
+   "id": "P10",
+   "name": "When unsure, students should ask before using AI",
+   "theme": "communicate",
+   "covers": "Students who are unsure whether a use is allowed should ask the instructor first, or err on the side of not using AI."
+  },
+  {
+   "id": "P11",
+   "name": "Each course's policy governs only that course",
+   "theme": "communicate",
+   "covers": "One course's AI permissions do not carry over to other courses or assignments."
+  },
+  {
+   "id": "P12",
+   "name": "Allow AI as a tutor for understanding concepts",
+   "theme": "permitted",
+   "covers": "AI may be used like a tutor or search engine to understand concepts, lecture material, or general questions, not to produce graded answers."
+  },
+  {
+   "id": "P13",
+   "name": "Allow AI to explain errors and help debug",
+   "theme": "permitted",
+   "covers": "AI may be used to explain error messages, help debug, or clarify syntax."
+  },
+  {
+   "id": "P14",
+   "name": "Allow AI for practice, study aids, and review",
+   "theme": "permitted",
+   "covers": "AI may be used to generate practice problems, study guides, summaries, reviews, or self-checks of knowledge."
+  },
+  {
+   "id": "P15",
+   "name": "Allow AI for brainstorming and exploring approaches",
+   "theme": "permitted",
+   "covers": "AI may be used for brainstorming, idea generation, or exploring alternative approaches."
+  },
+  {
+   "id": "P16",
+   "name": "Allow AI-generated code under stated conditions",
+   "theme": "permitted",
+   "covers": "Students may submit or use AI-generated code under explicit conditions (small snippets, line or percentage caps, cited, specific projects, or freely)."
+  },
+  {
+   "id": "P17",
+   "name": "Provide a sanctioned, course-specific AI tool",
+   "theme": "permitted",
+   "covers": "The course or university provides its own sanctioned AI tool (a course chatbot, tutor bot, or licensed assistant), sometimes the only AI allowed."
+  },
+  {
+   "id": "P18",
+   "name": "Treat AI for prose separately from AI for code",
+   "theme": "permitted",
+   "covers": "Specific rules for AI in prose and writing (reports, essays, comments, grammar or translation tools), separate from code."
+  },
+  {
+   "id": "P19",
+   "name": "Do not have AI produce the work you submit",
+   "theme": "prohibited",
+   "covers": "Students may not have AI generate the code, solutions, text, or answers they submit as their own."
+  },
+  {
+   "id": "P20",
+   "name": "Do not feed assignment specs or your code to AI",
+   "theme": "prohibited",
+   "covers": "Students may not paste or upload assignment specifications, questions, their own code, or the codebase into an AI tool."
+  },
+  {
+   "id": "P21",
+   "name": "Do not use AI to debug or check graded work",
+   "theme": "prohibited",
+   "covers": "Students may not use AI to debug, fix, proofread, reformat, or check graded work."
+  },
+  {
+   "id": "P22",
+   "name": "No AI on exams, quizzes, or in-class assessments",
+   "theme": "prohibited",
+   "covers": "No AI on exams, quizzes, tests, or in-class assessments; closed-device rules during exams."
+  },
+  {
+   "id": "P23",
+   "name": "Keep AI conversations apart from the work itself",
+   "theme": "prohibited",
+   "covers": "Keep AI conversations separate from the work: close the AI before writing, never copy-paste from it, never have both open, or use only browser chat interfaces."
+  },
+  {
+   "id": "P24",
+   "name": "Disclose AI use with each submission",
+   "theme": "disclosure",
+   "covers": "Students must disclose, acknowledge, or cite any AI use in their submission (a statement or citation)."
+  },
+  {
+   "id": "P25",
+   "name": "Cite the tool, the prompt, and the output",
+   "theme": "disclosure",
+   "covers": "Citations of AI must include specific details such as the tool or model, the exact prompt, the output, or the date."
+  },
+  {
+   "id": "P26",
+   "name": "Keep and submit transcripts, logs, or reflections",
+   "theme": "disclosure",
+   "covers": "Students must keep and submit full transcripts, chat logs, journals, drafts, or reflections on their AI use."
+  },
+  {
+   "id": "P27",
+   "name": "Mark AI-derived code where it is used",
+   "theme": "disclosure",
+   "covers": "AI-derived code must be marked at the exact place it is used (code comments, README, acknowledgments file, top of file)."
+  },
+  {
+   "id": "P28",
+   "name": "Make disclosure safe and nondisclosure the violation",
+   "theme": "disclosure",
+   "covers": "How disclosure affects grading or integrity: disclosed use is not penalized, or failure to disclose is itself the violation (or, conversely, disclosed use is still penalized)."
+  },
+  {
+   "id": "P29",
+   "name": "Students own everything they submit",
+   "theme": "accountability",
+   "covers": "Students are responsible for and must own all work they submit; submitted work must be their own."
+  },
+  {
+   "id": "P30",
+   "name": "Students must be able to explain every line",
+   "theme": "accountability",
+   "covers": "Students must understand and be able to explain or defend every line and part of what they submit."
+  },
+  {
+   "id": "P31",
+   "name": "Verify AI output; it is often wrong",
+   "theme": "accountability",
+   "covers": "AI output can be wrong, biased, or hallucinated; students must verify and critically evaluate it."
+  },
+  {
+   "id": "P32",
+   "name": "Students stay the primary problem-solver",
+   "theme": "accountability",
+   "covers": "Students should remain the primary thinker and decision-maker; AI must not replace their thinking."
+  },
+  {
+   "id": "P33",
+   "name": "Shift weight to proctored, unassisted assessment",
+   "theme": "assessment",
+   "covers": "Assessment weight shifts toward proctored, in-class, or unassisted evaluation because of AI."
+  },
+  {
+   "id": "P34",
+   "name": "Check understanding through code reviews, interviews, or oral exams",
+   "theme": "assessment",
+   "covers": "Understanding is checked through code reviews, interviews, oral exams, demos, or meetings where students explain their work."
+  },
+  {
+   "id": "P35",
+   "name": "Redesign assignments and grading around AI",
+   "theme": "assessment",
+   "covers": "Assignments, grading schemes, or course structure are redesigned around AI (e.g. two-pass submissions, grading on process or hours, baselines for declared AI use). Includes assignment-specific AI interaction protocols, e.g. a required prompt header (UIUC CS 128)."
+  },
+  {
+   "id": "P36",
+   "name": "Treat unauthorized AI use as academic misconduct",
+   "theme": "enforcement",
+   "covers": "Unauthorized or improper AI use is classified as academic misconduct, plagiarism, or cheating and handled by integrity processes."
+  },
+  {
+   "id": "P37",
+   "name": "State concrete penalties in advance",
+   "theme": "enforcement",
+   "covers": "Specific penalties for AI misuse are stated (zero, negative score, letter-grade reduction, course failure, escalation by offense)."
+  },
+  {
+   "id": "P38",
+   "name": "Offer a self-report window or amnesty",
+   "theme": "enforcement",
+   "covers": "Students can self-report, withdraw a submission, or come forward within a window for reduced consequences."
+  },
+  {
+   "id": "P39",
+   "name": "Do not rely on AI detectors",
+   "theme": "enforcement",
+   "covers": "AI detectors are unreliable or will not be used or relied upon as proof."
+  },
+  {
+   "id": "P40",
+   "name": "Use similarity checks and process evidence instead",
+   "theme": "enforcement",
+   "covers": "Similarity checking, plagiarism software, AI-detection tools, commit histories, or activity logs are used to identify misuse."
+  },
+  {
+   "id": "P41",
+   "name": "Explain that AI shortcuts the practice that builds skill",
+   "theme": "rationale",
+   "covers": "AI use is limited because doing the work yourself builds skill; outsourcing practice undermines learning."
+  },
+  {
+   "id": "P42",
+   "name": "Protect novices; fundamentals come first",
+   "theme": "rationale",
+   "covers": "Beginners and foundational courses especially need to learn fundamentals without AI; novices cannot judge AI output."
+  },
+  {
+   "id": "P43",
+   "name": "Warn that AI gives a false sense of mastery",
+   "theme": "rationale",
+   "covers": "Relying on AI creates a false sense of mastery that is exposed on exams or later work."
+  },
+  {
+   "id": "P44",
+   "name": "Teach effective AI use as a professional skill",
+   "theme": "rationale",
+   "covers": "Learning to use AI effectively is a professional skill employers expect; courses teach or demonstrate AI use."
+  },
+  {
+   "id": "P45",
+   "name": "Treat AI like a human collaborator under existing rules",
+   "theme": "rationale",
+   "covers": "AI is treated like a human collaborator, peer, or outside source under existing collaboration or citation rules."
+  },
+  {
+   "id": "P46",
+   "name": "Humans, not AI, assign grades",
+   "theme": "faculty",
+   "covers": "Grades must be assigned by human instructors; AI will not grade or determine grades."
+  },
+  {
+   "id": "P47",
+   "name": "Disclose instructor AI use to students",
+   "theme": "faculty",
+   "covers": "Instructors disclose or describe their own use of AI (in grading, feedback, demos, or communication) to students, or commit to limits on it."
+  },
+  {
+   "id": "P48",
+   "name": "Review and disclose AI-made course materials",
+   "theme": "faculty",
+   "covers": "Course materials created with AI are disclosed and reviewed by instructors."
+  },
+  {
+   "id": "P49",
+   "name": "Do not upload course materials to AI tools",
+   "theme": "responsible",
+   "covers": "Students may not upload course materials, assignment descriptions, or protected works into AI tools."
+  },
+  {
+   "id": "P50",
+   "name": "Protect personal data and prefer vetted tools",
+   "theme": "responsible",
+   "covers": "Protect personal and confidential data; AI tools store prompts; prefer university-vetted or licensed tools."
+  },
+  {
+   "id": "P51",
+   "name": "Do not require paid tools; keep access equitable",
+   "theme": "responsible",
+   "covers": "Equity and access: AI is optional or not required, free access is provided, paid tools are not required, accommodations and alternatives exist."
+  },
+  {
+   "id": "P52",
+   "name": "Consider licensing and copyright of AI output",
+   "theme": "responsible",
+   "covers": "Copyright, licensing, terms of use, and ownership of AI inputs and outputs."
+  },
+  {
+   "id": "P53",
+   "name": "Name bias, harms, and environmental costs",
+   "theme": "responsible",
+   "covers": "Ethical, bias, labor, and environmental concerns about AI."
+  },
+  {
+   "id": "P54",
+   "name": "Revisit the policy regularly",
+   "theme": "governance",
+   "covers": "The policy is provisional and will be revisited, revised, or updated; feedback is invited."
+  },
+  {
+   "id": "P55",
+   "name": "Gather evidence on how AI affects learning",
+   "theme": "governance",
+   "covers": "Evidence or data about how AI use affects student learning or performance is collected or cited."
+  },
+  {
+   "id": "P56",
+   "name": "Set an institution-wide framework for responsible AI use",
+   "theme": "governance",
+   "covers": "An institution-level framework or preamble stating the purpose, scope, and principles for AI use."
+  },
+  {
+   "id": "P57",
+   "name": "Talk with the student before escalating suspected misuse",
+   "theme": "enforcement",
+   "covers": "Instructors should talk with the student and gather context before escalating suspected AI misuse."
+  },
+  {
+   "id": "P58",
+   "name": "Students write their own course communication",
+   "theme": "accountability",
+   "covers": "Messages, emails or posts that students send to course staff must be written by the student, not generated by AI (source: UC Irvine ICS 33/H32)."
+  },
+  {
+   "id": "P59",
+   "name": "Instructor use of AI for teaching work",
+   "theme": "faculty",
+   "covers": "What instructors or staff may, should or should not use AI for in their own teaching work: drafting syllabi, rubrics, quiz items, examples, feedback drafts, translations, letters. Final grading decisions are P46; disclosure to students is P47; AI-made course materials are P48 (sources: UIUC CITL and Grainger; Oregon State EECS)."
+  },
+  {
+   "id": "P60",
+   "name": "Decline to police AI use",
+   "theme": "enforcement",
+   "covers": "Staff state they will not actively police or detect AI use, relying instead on unassisted assessments or student responsibility (source: UIUC ECE 220)."
+  },
+  {
+   "id": "P61",
+   "name": "Define AI and the policy's scope",
+   "theme": "governance",
+   "covers": "Definitions of AI, generative AI, AI tools or agentic systems that set what a policy covers (sources: Oregon State, Howard)."
+  },
+  {
+   "id": "P62",
+   "name": "Govern AI use in research and scholarship",
+   "theme": "governance",
+   "covers": "AI rules for theses, dissertations, manuscripts, grants and peer review, including deferring to venue, funder, sponsor or IRB rules (sources: Oregon State EECS, Howard Policy 100-022)."
+  },
+  {
+   "id": "P63",
+   "name": "Support faculty in learning AI",
+   "theme": "faculty",
+   "covers": "Workshops, consultations, faculty communities, and advice that instructors try AI tools and learn their implications before setting course policy (sources: Oregon State, Howard)."
+  },
+  {
+   "id": "P64",
+   "name": "Students may respond to AI-misuse allegations",
+   "theme": "enforcement",
+   "covers": "Students accused of AI misuse have a right to respond or present evidence; fairness and transparency in AI-related integrity cases (source: Howard)."
+  },
+  {
+   "id": "P65",
+   "name": "Review and approve AI tools, vendors and data sharing",
+   "theme": "responsible",
+   "covers": "Institutional review of AI contracts and partnerships, and limits on licensing or sharing university data and IP with AI providers (source: Howard Policy 100-022). Broadened 2026-10-26 (D33): also covers review and approval of any AI tool or system before purchase or deployment (security, risk, accessibility, legal), and periodic re-evaluation of approved tools. Evidence: Morehouse, Old Dominion, Rutgers (3), Santa Clara, Oakland, Penn State, Northwestern, Purdue."
+  },
+  {
+   "id": "P66",
+   "name": "Explain and discuss the AI rules with students",
+   "theme": "communicate",
+   "covers": "Instructors give students the reasons behind their AI rules, discuss AI in class, or word the rules with care (tone, avoiding anthropomorphic language), going beyond listing the rule in the syllabus. Evidence before adding: Carleton, Brown, Boston College, Case Western, IU Indianapolis, Binghamton, George Mason, Michigan State.",
+   "added": "2026-10-26 between-batch review (D33)"
+  },
+  {
+   "id": "P67",
+   "name": "Co-create the AI policy with students",
+   "theme": "communicate",
+   "covers": "Instructors set the course's AI expectations together with students, for example through class discussion, to build understanding and buy-in. Evidence: Cal Poly Pomona, Cal State LA, Georgetown, Georgia State.",
+   "added": "2026-10-26 between-batch review (D33)"
+  },
+  {
+   "id": "P68",
+   "name": "Respond to misuse educatively, not only punitively",
+   "theme": "enforcement",
+   "covers": "Treat suspected or confirmed AI misuse, especially first offenses, as a learning opportunity; prefer educative or remedial responses; presume good faith; reduce the pressures that lead to cheating. Different from P60 (declining to police) and P57 (talking before escalating). Evidence: Austin CC, East Tennessee State, Florida State, IU Indianapolis, George Washington, Clemson, Case Western.",
+   "added": "2026-10-26 between-batch review (D33)"
+  },
+  {
+   "id": "P69",
+   "name": "Set evidence standards for AI-misuse findings",
+   "theme": "enforcement",
+   "covers": "What evidence is needed, or not sufficient, to find AI misuse: a standard of proof, the kinds of evidence to weigh, or the statement that a hunch that work 'does not sound like the student' is not enough. Evidence: Cornell, Grinnell, Iowa State, Clark, Georgetown. Broadened 2026-10-26 (D33): also covers rules that detector output may be used only as supporting evidence, not as proof. Evidence: Oberlin, Rice, Santa Clara, Old Dominion, Rowan.",
+   "added": "2026-10-26 between-batch review (D33)"
+  },
+  {
+   "id": "P70",
+   "name": "Provide or require AI training for students and staff",
+   "theme": "governance",
+   "covers": "The institution offers or mandates AI-literacy training, modules, guides or curricular AI-literacy for students, staff or the whole community. Faculty-only support is P63. Evidence: Georgia Southern, Kennesaw State, Clark, East Tennessee State, Florida International, Brown, Baylor, Cleveland State.",
+   "added": "2026-10-26 between-batch review (D33)"
+  },
+  {
+   "id": "P71",
+   "name": "Report AI incidents, data exposure and misuse",
+   "theme": "responsible",
+   "covers": "A duty or channel to report AI-related problems: accidental exposure of sensitive data, tool malfunctions, policy violations or misconduct by others. Evidence: Augusta, Case Western, Georgia State, Kansas State, Marquette.",
+   "added": "2026-10-26 between-batch review (D33)"
+  },
+  {
+   "id": "P72",
+   "name": "Point students to human help alongside AI",
+   "theme": "communicate",
+   "covers": "Students are directed to instructors, librarians, writing centers, advisors or other human support, alongside or instead of AI tools. Evidence: Marquette, Harvey Mudd, Cal State, Florida International, BYU, Clemson.",
+   "added": "2026-10-26 between-batch review (D33)"
+  },
+  {
+   "id": "P73",
+   "name": "Keep humans responsible for decisions about people",
+   "theme": "governance",
+   "covers": "AI may not be the sole basis for consequential decisions about individuals, such as hiring, admissions, discipline, evaluation or academic standing; a human reviews and decides. Grading alone is P46. Evidence: Austin CC, Clark, Colby, Hampton, Michigan State.",
+   "added": "2026-10-26 between-batch review (D33)"
+  },
+  {
+   "id": "P74",
+   "name": "Ban deceptive, fabricated or malicious AI use",
+   "theme": "responsible",
+   "covers": "General conduct rules against using AI to deceive, impersonate, fabricate or falsify data or records, harass, spread misinformation, write malware or breach security. Evidence: Cal State, East Tennessee State, George Mason, Kansas State, LSU, Michigan State, Colby.",
+   "added": "2026-10-26 between-batch review (D33)"
+  },
+  {
+   "id": "P75",
+   "name": "Guard against AI-enabled phishing and security threats",
+   "theme": "responsible",
+   "covers": "Security awareness: watch for AI-crafted phishing, scams and deepfakes, and report suspicious messages. Evidence: Bowdoin, Bucknell, Colby, East Carolina, Georgia Tech, Howard, Lamar.",
+   "added": "2026-10-26 between-batch review (D33)"
+  },
+  {
+   "id": "P76",
+   "name": "Govern administrative and operational AI use",
+   "theme": "governance",
+   "covers": "Rules for AI in university operations outside teaching, such as staff administrative work, student services, official communications, chatbots or AI-built apps shared with others. Evidence: Brandeis, Hampton, Davidson, Kansas State, DePaul, Cal State.",
+   "added": "2026-10-26 between-batch review (D33)"
+  },
+  {
+   "id": "P77",
+   "name": "Comply with existing law and university policy",
+   "theme": "governance",
+   "covers": "AI use must follow laws (records, privacy, IP) and existing university policies (conduct, acceptable use, branding), and violations fall under those policies. Different from P45, which treats AI like a human collaborator under integrity rules. Evidence: Amherst, Boise State, Kansas State, Arizona State, Cal State, Davidson.",
+   "added": "2026-10-26 between-batch review (D33)"
+  },
+  {
+   "id": "P78",
+   "name": "Students learn and follow each course's AI rules",
+   "theme": "communicate",
+   "covers": "Students are responsible for finding out, reading and following the AI rules that apply to them in each course, program or assignment (check the syllabus first). Different from P10 (ask when unsure) and P11 (a course's rule binds only that course). Evidence: Georgetown, Harvey Mudd, Rutgers-Camden, Rutgers-Newark, Princeton, Oakland, San José State, NIU, Northwestern, NAU, Portland State.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P79",
+   "name": "Require AI use in some coursework",
+   "theme": "permitted",
+   "covers": "AI use is built into, expected in or required for an assignment or course, or instructors are told they may require it. Evidence: Ohio State, RIT, Brown, Oregon State, Pepperdine, Oakland, Northeastern, Sam Houston State.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P80",
+   "name": "Name who owns, enforces and grants exceptions to the AI policy",
+   "theme": "governance",
+   "covers": "Names the office, officer, council or committee that interprets, implements, monitors or enforces the AI policy, or the process for granting exceptions to it. Evidence: Purdue, Rowan, Oakland, Morehouse, Northeastern, Northwestern, Portland State, Santa Clara.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P81",
+   "name": "Follow the formal integrity-reporting procedure",
+   "theme": "enforcement",
+   "covers": "Procedural steps once misuse is suspected or sanctioned: instructors file a report with a central office, meet deadlines, use a required form, and leave sanctions to the deciding body. Different from P36 (classifying misuse as misconduct) and P57 (talking with the student first). Evidence: San José State, RPI, Rowan, SMU, Santa Clara, Oregon State, Rice, Oberlin, Portland State.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P82",
+   "name": "Acknowledge that AI use cannot be fully prevented or verified",
+   "theme": "rationale",
+   "covers": "States limits on control: bans are impractical or counterproductive, AI use cannot be fully eliminated, faculty cannot always verify originality, assessments lose reliability. Evidence: Rush, NC A&T, Oregon State, RIT, MIT, NC State.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P83",
+   "name": "Align AI decisions with learning objectives",
+   "theme": "stance",
+   "covers": "Whether and how AI is allowed should follow from the course's or program's learning objectives. Evidence: Rush, Northeastern, Case Western, SF State, Morehouse, Santa Clara, Middle Tennessee State.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P84",
+   "name": "Describe how and by whom the policy was made",
+   "theme": "governance",
+   "covers": "States the process, body or date by which the AI policy or guidance was drafted, consulted on, adopted or ratified. Evidence: New Mexico State, Rice, Northeastern, Santa Clara.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P85",
+   "name": "Let schools or units set their own AI rules",
+   "theme": "stance",
+   "covers": "Colleges, schools, departments or programs may set their own or additional AI rules, or have different expectations from the university-wide rule. P04 is the instructor-level version. Evidence: Santa Clara, Saint Louis, Northeastern, San Diego State, Purdue, Middle Tennessee State, SMU.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P86",
+   "name": "Require consent before AI recording or transcription",
+   "theme": "responsible",
+   "covers": "Class sessions or meetings may not be recorded or transcribed by AI tools without permission or announcement. Evidence: Augusta, Kean, Oregon State, Santa Clara.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P87",
+   "name": "State the benefits of AI for learning",
+   "theme": "rationale",
+   "covers": "Names benefits of AI for teaching and learning (personalization, accessibility, efficiency, creativity) without making it a rule or a career-skill claim (P44). Evidence: New Mexico State, LSU, Ohio State, NC State, Prairie View A&M, Rush, SF State.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P88",
+   "name": "Engage peers, partners and the community on AI",
+   "theme": "governance",
+   "covers": "Coalitions with other universities, benchmarking against peers, partnerships with industry or government, and public forums on AI. Evidence: Brown, EVMS, Kansas State, Old Dominion.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P89",
+   "name": "Allow AI for data analysis and visualization",
+   "theme": "permitted",
+   "covers": "AI may be used to analyze, sort, simulate or visualize data. Evidence: Ohio State, Morehouse, FIU, SMU, NAU, Sam Houston State.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P90",
+   "name": "Do the work yourself first, then use AI",
+   "theme": "accountability",
+   "covers": "A sequencing rule: the student first attempts, drafts or develops the work without AI, and AI help is allowed only afterward. Evidence: Ohio State, North Dakota State, Oregon State, Northwestern.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P91",
+   "name": "Allow AI for editing, proofreading and writing support",
+   "theme": "permitted",
+   "covers": "AI may help with editing, proofreading, grammar, outlining, organizing or revising one's own writing. P18 is about treating prose differently from code; this is the permission itself. Evidence: Morehouse, Rutgers, NAU, Ohio State, Oakland, Rowan, Penn State, Rush, NC State.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P92",
+   "name": "Use university-licensed or approved AI tools",
+   "theme": "responsible",
+   "covers": "Use the AI tools the university licenses, provides or approves (institution-wide, not one course: that is P17), or know the approved list. Evidence: NYU, Morehouse, Rutgers (3 campuses), SUNY ESF, RIT, Nova Southeastern, Rowan, NC State.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P93",
+   "name": "Advise on how to prompt AI effectively",
+   "theme": "rationale",
+   "covers": "Practical advice on writing prompts or probing AI tools to get better results or learn their limits. Evidence: Pepperdine, Oakland, Sam Houston State, Santa Clara, San Diego State, NC State.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P94",
+   "name": "Cite careers as a reason to build skills without AI",
+   "theme": "rationale",
+   "covers": "The reason given for limiting AI is professional readiness: employers expect skills, critical thinking or work in settings without AI. P44 is the opposite argument (learn AI for careers). Evidence: Oregon State, RIT, Santa Clara, Princeton.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P95",
+   "name": "Ground AI limits in fairness and academic honesty",
+   "theme": "rationale",
+   "covers": "The reason given for AI rules is fairness to other students, honest evaluation, or the integrity culture of the community, not skill-building (P41). Evidence: CUNY Graduate Center, Santa Clara, Prairie View A&M, Northeastern Illinois, San José State, Oberlin.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P96",
+   "name": "Treat AI as neither author, source nor collaborator",
+   "theme": "rationale",
+   "covers": "AI is not a person: it cannot be an author, a cited source or a group member, and AI use is not acceptable collaboration. The opposite of P45. Evidence: Princeton, Pepperdine, Santa Clara.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P97",
+   "name": "Make AI use and output accessible",
+   "theme": "responsible",
+   "covers": "Accessibility of AI tools and AI-produced materials for people with disabilities: accessibility reviews, alternative access plans, accessible output, AI as an accessibility aid. P51 covers cost and equal access. Evidence: Nova Southeastern, Ohio State, Penn State, Oregon State, Santa Clara, NAU.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P98",
+   "name": "Document, audit and monitor deployed AI systems",
+   "theme": "governance",
+   "covers": "Institutional AI systems are documented (model cards, records), audited or monitored for bias, accuracy, security and drift over time. Evidence: Morehouse, Georgia Southern, Old Dominion, Saint Louis, Oakland, Northwestern.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P99",
+   "name": "Reduce the pressures that lead to AI misuse",
+   "theme": "enforcement",
+   "covers": "Prevention by easing the causes of misuse: extensions, office hours, support resources, time management, explaining assignment purposes. P68 is the response after misuse. Evidence: Clemson, Rice, Old Dominion, IU Indianapolis, BYU.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P100",
+   "name": "Exempt routine AI features from the rules",
+   "theme": "stance",
+   "covers": "Routine embedded features (spell-check, grammar check, search, autocomplete) are allowed or need no disclosure even under a restrictive rule. Evidence: Oregon State, Morehouse, Pepperdine.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P101",
+   "name": "Set conditions for AI-assisted grading",
+   "theme": "faculty",
+   "covers": "AI-assisted grading or feedback is allowed only under conditions: approval chains, explainability, human review of AI-drafted feedback, closed-form only. P46 is the rule that only humans assign grades. Evidence: Penn State, Purdue, Northeastern, SMU, Old Dominion, Oregon State.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P102",
+   "name": "Stay informed about AI developments and guidance",
+   "theme": "governance",
+   "covers": "A duty or encouragement for users to keep up with AI developments, best practices and the institution's current AI guidance. Evidence: East Tennessee State, San Diego State, NAU.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  },
+  {
+   "id": "P103",
+   "name": "Tell people when they are interacting with AI",
+   "theme": "responsible",
+   "covers": "People have a right to know when they are dealing with an AI system (chatbots, deployed systems), including its scope and limits. P47 is instructor disclosure to students. Evidence: Northwestern, Cal State, Morehouse.",
+   "added": "2026-10-26 between-batch review 2 (D33)"
+  }
+ ]
+}

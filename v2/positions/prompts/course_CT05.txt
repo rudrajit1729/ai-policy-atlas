@@ -1,0 +1,32 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT05 "Fallback when an assignment is silent" (What applies when an assignment does not state an AI rule ("silence means AI not allowed", "ask if assignment silent").).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..7 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | east-texas-aandm | C4 | student | should | default: AI disallowed | no instructions are provided the student should assume that the use
+1 | east-texas-aandm | C5 | student | should | default: AI disallowed | assume that the use of such software is disallowed.
+2 | east-texas-aandm | C6 | student | should | default: AI disallowed | If no instructions are provided the student should assume that
+3 | harvard | C2 | student | should | when in doubt avoid AI | When in doubt about whether a use
+4 | north-carolina-state | C4 | student | should | ask if assignment silent | If an assignment is silent about AI, ask before using it.
+5 | oklahoma | C1 | student | must-not | silence means AI not allowed | If the assignment is silent on the use of generative AI tools, they are not allowed.
+6 | san-jose-state | C1 | student | must-not | default no AI on assignments | The default rule is that AI use is not permitted on assignments unless
+7 | texas-tyler | C3 | student | must-not | AI banned by default | is not allowed during any stage of an assignment.

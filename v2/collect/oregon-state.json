@@ -1,0 +1,103 @@
+{
+ "university": "Oregon State University",
+ "slug": "oregon-state",
+ "state": "OR",
+ "type": "R1",
+ "searched": {
+  "university": "found",
+  "school": "found",
+  "computing": "found",
+  "course": "inaccessible"
+ },
+ "documents": [
+  {
+   "id": "oregon-state-syllabus-policy",
+   "layer": "university",
+   "unit": "Curriculum Management (Faculty Senate / Academic Affairs)",
+   "course": null,
+   "title": "Syllabus Minimum Requirements Policy (Artificial Intelligence (AI) Usage section)",
+   "url": "https://curriculummanagement.oregonstate.edu/pop/syllabus-minimum-requirements-policy",
+   "date_or_term": "revised 06/11/2026",
+   "text_file": "/Users/rudrajit/Documents/Current-Research/AI in education policy guidelines/.cache/text/v2-oregon-state-syllabus-policy.txt",
+   "screen": "include"
+  },
+  {
+   "id": "oregon-state-aa-memo",
+   "layer": "university",
+   "unit": "Division of Academic Affairs (Senior Vice Provost)",
+   "course": null,
+   "title": "University Guidance on the Use of Generative AI in Teaching and Learning (memo to faculty)",
+   "url": "https://academicaffairs.oregonstate.edu/university-guidance-use-generative-ai-teaching-and-learning",
+   "date_or_term": "September 19, 2025",
+   "text_file": "/Users/rudrajit/Documents/Current-Research/AI in education policy guidelines/.cache/text/v2-oregon-state-aa.txt",
+   "screen": "include"
+  },
+  {
+   "id": "oregon-state-ctl-guidance",
+   "layer": "university",
+   "unit": "Center for Teaching and Learning",
+   "course": null,
+   "title": "Guidance for AI Use in Teaching and Learning",
+   "url": "https://ctl.oregonstate.edu/resources/ai-teaching-and-learning/guidance-ai-use-teaching-and-learning",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "text_file": "/Users/rudrajit/Documents/Current-Research/AI in education policy guidelines/.cache/text/v2-oregon-state-ctl.txt",
+   "screen": "include"
+  },
+  {
+   "id": "oregon-state-ctl-syllabus",
+   "layer": "university",
+   "unit": "Center for Teaching and Learning",
+   "course": null,
+   "title": "CTL Guidance for Syllabus Statements about AI Use",
+   "url": "https://canvas.oregonstate.edu/api/v1/courses/1965953/pages/ctl-guidance-for-syllabus-statements-about-ai-use",
+   "date_or_term": "updated 2026-09-11",
+   "text_file": "/Users/rudrajit/Documents/Current-Research/AI in education policy guidelines/.cache/text/v2-oregon-state-ctl-syllabus.txt",
+   "screen": "include"
+  },
+  {
+   "id": "oregon-state-ecampus",
+   "layer": "university",
+   "unit": "Oregon State Ecampus",
+   "course": null,
+   "title": "Generative AI Guidelines for Ecampus Course Development",
+   "url": "https://ecampus.oregonstate.edu/faculty/artificial-intelligence-tools/ai-guidelines-course-development.pdf",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "text_file": "/Users/rudrajit/Documents/Current-Research/AI in education policy guidelines/.cache/text/v2-oregon-state-ecampus.txt",
+   "screen": "include"
+  },
+  {
+   "id": "oregon-state-coe-chatbot",
+   "layer": "school",
+   "unit": "College of Engineering (Academic Integrity Resources for Faculty)",
+   "course": null,
+   "title": "AI Chatbot Policy Example",
+   "url": "https://engineering.oregonstate.edu/tools-services/academic-integrity-resources-faculty/ai-chatbot-policy",
+   "date_or_term": "undated",
+   "text_file": "/Users/rudrajit/Documents/Current-Research/AI in education policy guidelines/.cache/text/v2-oregon-state-coe.txt",
+   "screen": "include"
+  },
+  {
+   "id": "oregon-state-eecs-guidance",
+   "layer": "computing",
+   "unit": "School of Electrical Engineering and Computer Science (EECS)",
+   "course": null,
+   "title": "Guidance on Drafting AI Use Policies",
+   "url": "https://engineering.oregonstate.edu/EECS/MyEECS/EECS-guidance-drafting-ai-use-policies",
+   "date_or_term": "undated",
+   "text_file": "/Users/rudrajit/Documents/Current-Research/AI in education policy guidelines/.cache/text/v2-oregon-state-eecs.txt",
+   "screen": "include"
+  },
+  {
+   "id": "oregon-state-eecs-gradhandbook",
+   "layer": "computing",
+   "unit": "School of Electrical Engineering and Computer Science (EECS), graduate programs (ECE, CS, AI)",
+   "course": null,
+   "title": "EECS Graduate Handbook 2025-2026, Section 2.21 Guidelines for AI writing assistance and proper citation and attribution",
+   "url": "https://engineering.oregonstate.edu/sites/engineering.oregonstate.edu/files/2025-10/EECS-Graduate-Handbook-2025-2026.pdf",
+   "date_or_term": "2025-2026",
+   "text_file": "/Users/rudrajit/Documents/Current-Research/AI in education policy guidelines/.cache/text/v2-oregon-state-eecs-gradhandbook.txt",
+   "screen": "include"
+  }
+ ],
+ "notes": "University layer: the Syllabus Minimum Requirements Policy now requires an AI usage policy in every syllabus (instructor discretion); the May 2026 Faculty Senate draft of this requirement (https://senate.oregonstate.edu/sites/senate.oregonstate.edu/files/2026-05/26%2005%20Faculty%20Senate%20-%20Draft%20AI%20Syllabus%20Statement%20Policy.pdf) was fetched but excluded as superseded by the adopted policy. The CTL syllabus-statement page is a public Canvas page fetched via the Canvas pages API route (canonical page URL https://canvas.oregonstate.edu/courses/1965953/pages/ctl-guidance-for-syllabus-statements-about-ai-use). Ecampus guidelines are a PDF; pypdf extracts it one word per line, so coders should match anchors across line breaks. The EECS graduate handbook is mostly program requirements; only Section 2.21 is AI policy. Excluded: ai.oregonstate.edu/guidelines (hub of links plus tool/data-classification list, no teaching policy text of its own); CTL Canvas page of faculty-submitted sample statements (collection of other instructors' examples). No separate AI or data-science computing unit found: AI and CS degrees sit inside EECS. Course layer: the EECS Fall 2026 class list (classes.engr.oregonstate.edu/eecs/) links no public course sites, Ecampus syllabi are 'available in Canvas to students enrolled', and searches for CS 161/162/261/290 syllabi found none public, so course policies are behind Canvas login (inaccessible)."
+}

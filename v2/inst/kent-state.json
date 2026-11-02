@@ -1,0 +1,536 @@
+{
+ "university": "Kent State University",
+ "slug": "kent-state",
+ "state": "OH",
+ "type": "R1",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "new_types": [],
+ "notes": "Kent State CS department page https://www.kent.edu/cs/academic-dishonesty (fetched as v2-kent-state-cs-dishonesty.txt) is a policy on collaboration in programming assignments and has no AI or GAI text, so it was not collected. Computing therefore counts as none-found, though the page does state the department's cooperation rules. The Kent news item about the policy revision (kent.edu/today/news/adding-ai-cheating-and-plagiarism-policy) is a news article and was not collected. The CTL faculty AI pages (kent.edu/ai/faculty) return 'Access denied'; search snippets say the CTL offers model syllabus language for AI prohibited / permitted / integrated, but the text was not retrieved. Reconciliation: non-AI hearing-panel mechanics (panel composition, annual training, eligibility to sit, recordings) found only by B were dropped; sanction, hearing and appeal rules that apply to GAI misuse via the cheating definition were kept.",
+ "documents": [
+  {
+   "id": "kent-state-cheating-plagiarism-policy",
+   "layer": "university",
+   "unit": "University Policy Register (Office of General Counsel / Provost)",
+   "course": null,
+   "title": "3342-3-01.8 Administrative policy regarding student cheating and plagiarism",
+   "url": "https://www.kent.edu/policyreg/administrative-policy-regarding-student-cheating-and-plagiarism",
+   "date_or_term": "current (accessed 2026-10-25); revised to add generative AI",
+   "stance_why": "Both coders: GAI is cheating on exams ('except as expressly permitted by the instructor in the syllabus, examination, test, or quiz') and on assigned coursework ('except as expressly permitted by the instructor in the syllabus, or applicable assignment'). AI is barred by default and allowed only where the instructor permits, and the document sets that default itself with no tiers, so restrict rather than delegates.",
+   "stance": "restrict",
+   "tiers": [],
+   "summary": "Kent State's administrative policy on student cheating and plagiarism, revised to add generative AI. GAI is defined, barred on exams and coursework unless the instructor expressly permits it, and added to the cheating and plagiarism definitions, with the general sanction, appeal and hearing procedures applying.",
+   "units": [
+    {
+     "why": "The purpose clause says academic work follows \"standards set by faculty members, departments, schools and colleges\", so standards are set below the university level; this is a general principle placing authority with instructors and units, which fits P04 (who decides) better than P56, since it is not an AI-specific framework.",
+     "resolution_why": "Matched (A0, B0). Both code the purpose clause that students work to 'standards set by faculty members, departments, schools and colleges' as P04, student, general, must. B added a normalized policy that stays within the passage; kept it.",
+     "anchor": "standards set by faculty members, departments, schools and colleges",
+     "frag_start": "Students enrolled in the university",
+     "frag_end": "warranted and will be applied",
+     "policy": "Students perform their academic work according to standards set by faculty members, departments, schools and colleges.",
+     "actor": "student",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "States that \"cheating and plagiarism constitute fraudulent misrepresentation for which no credit can be given\" and sanctions \"will be applied\"; it is the general rationale for treating improper work (which includes GAI misuse) as misconduct, so P36.",
+     "resolution_why": "Matched (A9, B1). Both: P36, when-misuse, informs. A said actor all and unit_stance restrict; B said student and neutral. The sentence tells students that cheating gets no credit and sanctions, but it is a statement of consequence, not a restriction on AI itself (the sentence does not mention GAI), so neutral; the purpose clause is addressed to enrolled students, so student. Policy text rewritten to quote the source only.",
+     "anchor": "no credit can be given and for which appropriate sanctions are warranted",
+     "frag_start": "Students enrolled in the university",
+     "frag_end": "warranted and will be applied",
+     "policy": "Cheating and plagiarism constitute fraudulent misrepresentation for which no credit can be given and for which appropriate sanctions are warranted and will be applied.",
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Defines cheating to include \"content generated by internet-based generative artificial intelligence programs (GAI), in examinations, tests and quizzes\" unless the instructor permits it; this is an exam ban with an instructor-permission exception, so P22 (exam ban) rather than P06 (fallback), and it also classifies it as cheating.",
+     "resolution_why": "Matched (A1, B2). Both: P22, student, during-assessment, must-not, restrict. Source: 'content generated by ... (GAI), in examinations, tests and quizzes, except as expressly permitted'. Kept B's policy, which carries the exception.",
+     "anchor": "content generated by internet-based generative artificial intelligence programs (GAI), in examinations, tests and quizzes",
+     "frag_start": "Using notes, textbooks or other information, or content",
+     "frag_end": "or quiz",
+     "policy": "Using content generated by internet-based generative artificial intelligence programs (GAI) in examinations, tests and quizzes is cheating, except as expressly permitted by the instructor in the syllabus, examination, test, or quiz.",
+     "actor": "student",
+     "phase": "during-assessment",
+     "modality": "must-not",
+     "policy_type": "P22",
+     "unit_stance": "restrict",
+     "topics": [
+      "exams-in-person",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "The exception \"except as expressly permitted by the instructor in the syllabus, examination, test, or quiz\" lets each instructor decide whether GAI is allowed on exams, so P04 (instructor sets the rule) is assigned; the exam ban itself is coded separately under P22.",
+     "resolution_why": "Matched (A2, B3). Both: P04, instructor, may, permit. Phase differed: A during-assessment, B before-course. The source says permission is given 'in the syllabus, examination, test, or quiz', that is, it is a communicated expectation, not course design or the exam act itself, so course-start (the same phase A gave the coursework counterpart).",
+     "anchor": "except as expressly permitted by the instructor in the syllabus, examination, test, or quiz",
+     "frag_start": "Using notes, textbooks or other information, or content",
+     "frag_end": "or quiz",
+     "policy": "The instructor may expressly permit GAI use in an examination, test or quiz in the syllabus or in the examination, test or quiz itself.",
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "may",
+     "policy_type": "P04",
+     "unit_stance": "permit",
+     "topics": [
+      "instructor-discretion",
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "The coursework ban holds \"except as expressly permitted by the instructor in the syllabus, or applicable assignment\", so the instructor or assignment sets whether GAI is allowed. This is per-instructor and per-assignment authority, P04. P06 (silent syllabus) is a second fit, but this unit is about who permits.",
+     "resolution_why": "Only coder A coded this. Source: 'Using GAI to generate content in satisfaction of assigned coursework, except as expressly permitted by the instructor in the syllabus, or applicable assignment'. This mirrors the exam permission unit and is a distinct rule (instructor may permit GAI on coursework), so kept as P04 course-start may.",
+     "anchor": "except as expressly permitted by the instructor in the syllabus, or applicable assignment",
+     "frag_start": "Using GAI to generate content",
+     "frag_end": "syllabus, or applicable assignment;",
+     "policy": "The instructor may expressly permit GAI use to generate content for assigned coursework in the syllabus or in the applicable assignment.",
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "may",
+     "policy_type": "P04",
+     "unit_stance": "permit",
+     "topics": [
+      "instructor-discretion",
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"Using GAI to generate content in satisfaction of assigned coursework\" is defined as cheating unless the instructor expressly permits it, i.e. students may not have AI produce the work they submit: P19, not P22 because it concerns coursework not exams.",
+     "resolution_why": "Matched (A3, B4). Both P19, student, during-work, must-not. A said prohibit, B restrict. The prohibition carries the clause 'except as expressly permitted by the instructor', so it is a default ban with an exception: restrict. Topics follow A, since the passage says 'content', not code; B's code-generation tag is dropped.",
+     "anchor": "Using GAI to generate content in satisfaction of assigned coursework",
+     "frag_start": "Using GAI to generate content in satisfaction",
+     "frag_end": "applicable assignment",
+     "policy": "Using GAI to generate content in satisfaction of assigned coursework is cheating, except as expressly permitted by the instructor in the syllabus, or applicable assignment.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P19",
+     "unit_stance": "restrict",
+     "topics": [
+      "prohibited-uses",
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The phrase \"except as expressly permitted\" means AI is banned unless the instructor says otherwise; the default when the syllabus is silent is prohibition. This fallback rule is P06; P01 is close but the document pairs the default with a required express permission.",
+     "resolution_why": "Matched (A5, B5). Both P06 (the default when the syllabus does not permit). A: student, during-work, must-not; B: all, course-start, must. The rule binds students and applies when the work is done and no permission was given, so student, during-work, must-not, restrict. Policy rewritten to match the source's wording ('is cheating').",
+     "anchor": "except as expressly permitted by the instructor in the syllabus, or applicable assignment",
+     "frag_start": "Using GAI to generate content",
+     "frag_end": "syllabus, or applicable assignment;",
+     "policy": "Unless the instructor expressly permits it in the syllabus or applicable assignment, using GAI to generate content for assigned coursework is cheating.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P06",
+     "unit_stance": "restrict",
+     "topics": [
+      "default-stance",
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "Cheating includes \"Presenting data or other material gathered by another person, group, or by GAI, as one's own\", a rule against passing off AI-gathered material as one's own; P29 (submitted work must be own) fits since it targets presentation as own work, not generation.",
+     "resolution_why": "Matched (A6, B6). Both P29, student, during-work, must-not, prohibit; B's policy states it within the passage.",
+     "anchor": "gathered by another person, group, or by GAI, as one's own",
+     "frag_start": "Presenting data or other material gathered",
+     "frag_end": "as one's own",
+     "policy": "Presenting data or other material gathered by GAI as one's own is cheating.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P29",
+     "unit_stance": "prohibit",
+     "topics": [
+      "accountability-understanding",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "Cheating includes \"Having another person, or GAI, take one's place for any academic performance without the specific knowledge and permission of the instructor\"; AI substituting for the student is forbidden unless the instructor knowingly permits, which is a ban on AI producing the submitted performance, P19.",
+     "resolution_why": "Matched (A7, B7). Both P19, student, during-work, must-not. A prohibit, B restrict. The source ends 'without the specific knowledge and permission of the instructor', so restrict.",
+     "anchor": "Having another person, or GAI, take one's place for any academic performance",
+     "frag_start": "Having another person, or GAI",
+     "frag_end": "permission of the instructor",
+     "policy": "Having GAI take one's place for any academic performance without the specific knowledge and permission of the instructor is cheating.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P19",
+     "unit_stance": "restrict",
+     "topics": [
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "The plagiarism definition names GAI as a source: taking and presenting \"the ideas or words of another (e.g. person, persons, or GAI)\" as one's own is plagiarism. It treats GAI like an outside source under existing plagiarism rules, so P45; P36 covers classification as misconduct but this unit is about the source analogy.",
+     "resolution_why": "Matched (A8, B8). Both P45, student/general. A: informs; B: must-not. The passage is a definition of 'plagiarize' that names GAI alongside persons; the prohibition is in the policy's other parts, so the passage informs. Unit stance restrict (GAI treated like another author who must be credited).",
+     "anchor": "the ideas or words of another (e.g. person, persons, or GAI)",
+     "frag_start": "\"Plagiarize\" means to take and present",
+     "frag_end": "proper credit to the source of the ideas, words, or works.",
+     "policy": "Plagiarize means to take and present as one's own a material portion of the ideas or words of another (e.g. person, persons, or GAI) without full and proper credit.",
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P45",
+     "unit_stance": "restrict",
+     "topics": [
+      "accountability-understanding",
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "The definition of GAI as \"internet-based generative artificial intelligence programs that make use of large language model algorithms\" fixes what the policy covers, so P61.",
+     "resolution_why": "Matched (A10, B10). Both P61, all, general, informs, neutral; anchor alone states the definition.",
+     "anchor": "internet-based generative artificial intelligence programs that make use of large language model algorithms",
+     "frag_start": "\"Generative artificial intelligence program (GAI)\" means any",
+     "frag_end": "to make something new",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance"
+     ]
+    },
+    {
+     "why": "The carve-out says \"AI used for auto-complete, minor text-predictions, and/or grammar/spelling/punctuation suggestions\" is \"not considered GAI\", scoping the policy to exclude editor and word-processor assistance; P07 covers AI built into tools but this excludes it, and scope definition is the fit, so P61 with unit_stance permit.",
+     "resolution_why": "Matched (A11, B11). Both: all, general, informs, permit. A coded P07, B P61. The sentence states that AI built into word processors (auto-complete, grammar suggestions) 'is not considered GAI', i.e. the rule on built-in assistive AI that a reader would look for under P07; P61 is covered by the separate GAI definition unit.",
+     "anchor": "is not considered GAI",
+     "frag_start": "AI used for auto-complete, minor text-predictions",
+     "frag_end": "not considered GAI",
+     "policy": "AI used for auto-complete, minor text-predictions, and/or grammar/spelling/punctuation suggestions, commonly found in most word-processing applications, is not considered GAI.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P07",
+     "unit_stance": "permit",
+     "topics": [
+      "permitted-uses",
+      "default-stance"
+     ]
+    },
+    {
+     "why": "Says the university \"affirms that acts of cheating and plagiarism by students constitute a subversion of the goals of the institution\"; a statement of purpose for the integrity policy (including its GAI provisions), so P56.",
+     "resolution_why": "Matched (A22, B12). Both P56, all, general, informs, neutral. Statement of institutional intent that cheating and plagiarism subvert the goals of the institution; B's version kept.",
+     "anchor": "acts of cheating and plagiarism by students constitute a subversion of the goals",
+     "frag_start": "In providing this policy, the university affirms",
+     "frag_end": "rights of fellow students",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "The scope clause says the policy \"applies to all students of the university, graduate and undergraduate, full or part-time\". This sets the scope of the GAI rules, P61.",
+     "resolution_why": "Matched (A23, B13). Both P61, general, informs. A: all; B: student. The passage says it 'applies to all students', so it binds students: student.",
+     "anchor": "applies to all students of the university, graduate and undergraduate, full or part-time",
+     "frag_start": "This policy applies to all students",
+     "frag_end": "prohibited by the policy.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance"
+     ]
+    },
+    {
+     "why": "Instructors may \"Assign a grade of 'F' or zero for the project, test, paper, examination or other work\" or fail the course; these are concrete penalties available for cheating, which includes GAI misuse, so P37.",
+     "resolution_why": "Matched with A12. A merged three coursework sanctions into one unit; the codebook asks for one rule per unit, so B's split is followed. This unit is the F or zero for the work; the anchor alone states it. Both: P37, instructor, when-misuse, may.",
+     "anchor": "Assign a grade of \"F\" or zero for the project, test, paper, examination",
+     "frag_start": "Assign a grade of \"F\" or zero",
+     "frag_end": "cheating or plagiarism took place",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The instructor may assign a course \"F\", an additional stated coursework sanction; kept separate from the zero/F-on-work unit as a different penalty, P37.",
+     "resolution_why": "Only coder B split this out (A12 merged it with the sanction above). Source: 'Assign a grade of \"F\" for the course in which the cheating or plagiarism took place'. A distinct sanction, kept as P37 instructor may.",
+     "anchor": "Assign a grade of \"F\" for the course in which the cheating",
+     "frag_start": "Assign a grade of \"F\" for the course",
+     "frag_end": "plagiarism took place",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Degree-level sanctions such as \"Rejection of the thesis, dissertation or work\" or \"Recommendation for revocation of a degree\" apply where cheating compromises the validity of a degree. They are escalated penalties stated in advance, P37.",
+     "resolution_why": "Matched (A13, B16). Both P37, admin, when-misuse, may. A's normalized policy is faithful to 'Rejection of the thesis, dissertation or work; or Recommendation for revocation of a degree', so kept; the rejection sentence is part of the same degree-sanction list.",
+     "anchor": "Recommendation for revocation of a degree",
+     "frag_start": "Revocation or recommendation to decertify or not to certify",
+     "frag_end": "revocation of a degree.",
+     "policy": "For cheating or plagiarism that compromises the validity of a degree, sanctions include rejection of the thesis, dissertation or work and recommendation for revocation of a degree.",
+     "actor": "admin",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The hearing panel may impose \"Disciplinary probation\", suspension or dismissal; escalating stated penalties for proven misconduct, P37.",
+     "resolution_why": "Only coder B coded this. Source: 'Disciplinary dismissal. This sanction is one of involuntary separation of the student from the university.' The sanction can be imposed by the hearing panel for cheating or plagiarism including GAI misuse, so it is a real concrete-penalty statement; kept as P37 admin may.",
+     "anchor": "This sanction is one of involuntary separation of the student from the university",
+     "frag_start": "Disciplinary dismissal. This sanction is",
+     "frag_end": "from the university",
+     "policy": "Disciplinary dismissal is an involuntary separation of the student from the university.",
+     "actor": "admin",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The AHP section lets the hearing panel assess \"disciplinary probation\", suspension or dismissal when academic sanctions are insufficient. These are advance-stated escalated penalties, P37.",
+     "resolution_why": "Only coder A coded this. Source: if 'the offense is of such nature that the academic sanctions are an insufficient remedy', the matter may be referred to the academic hearing panel, which can consider additional disciplinary sanctions. A real escalation rule that applies to GAI misuse; kept as P37 admin may.",
+     "anchor": "the offense is of such nature that the academic sanctions are an insufficient remedy",
+     "frag_start": "If the instructor feels, or the department chair",
+     "frag_end": "academic hearing panel defined in paragraph (I) of this rule",
+     "policy": "If academic sanctions are an insufficient remedy or not available, the matter may be referred to the academic hearing panel, which can impose additional disciplinary sanctions such as disciplinary probation, suspension or dismissal.",
+     "actor": "admin",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Instructors must \"Inform the student as soon as is practical of the belief that an act of cheating or plagiarism has occurred\", a duty to talk to the student before sanctioning, which is P57.",
+     "resolution_why": "Matched (A15, B18). Both P57, instructor, when-misuse, must; anchor alone states it.",
+     "anchor": "Inform the student as soon as is practical of the belief that an act",
+     "frag_start": "Inform the student as soon as is practical",
+     "frag_end": "steps the instructor has taken",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P57",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The instructor must \"Provide the student an opportunity to explain orally, in writing, or both\", a right to respond to allegations, so P64 (not P57, which is about gathering context before escalating).",
+     "resolution_why": "Matched (A16, B19). Both P64 (student may explain), instructor must provide the opportunity. Kept P64 since it is about the student's chance to respond.",
+     "anchor": "Provide the student an opportunity to explain orally, in writing, or both",
+     "frag_start": "Provide the student an opportunity to explain",
+     "frag_end": "evaluation of the facts is erroneous",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P64",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The instructor acts where \"it is more probable than not\" that cheating occurred, setting an evidentiary standard for misconduct including GAI; it fits P36 (handled by integrity process) best.",
+     "resolution_why": "Only coder B coded this. Source: 'In the event that an instructor determines that it is more probable than not that a student ... has presented work ... which involves an act of cheating, plagiarism ... then the instructor shall' follow the listed steps. It sets the standard of evidence for acting on suspected misuse, so kept as P36 instructor must.",
+     "anchor": "it is more probable than not that a student",
+     "frag_start": "In the event that an instructor determines that",
+     "frag_end": "act of cheating, plagiarism or cooperation in either",
+     "policy": "An instructor who determines that it is more probable than not that a student has presented work involving cheating, plagiarism or cooperation in either follows the stated procedure.",
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Instructors \"shall keep the evidence of cheating or plagiarism in a secure place\" and provide it on request, a procedural evidence rule for integrity cases; P36 as the closest enforcement type.",
+     "resolution_why": "Matched (A20, B21). A: UNCOVERED; B: P36. Keeping evidence of cheating or plagiarism and providing it on request is part of how the university treats unauthorized AI use as misconduct (GAI use is defined as cheating), so P36 fits and the UNCOVERED note is not needed.",
+     "anchor": "keep the evidence of cheating or plagiarism in a secure place",
+     "frag_start": "The instructor shall keep the evidence",
+     "frag_end": "at the student's expense",
+     "policy": "The instructor keeps the evidence of cheating or plagiarism in a secure place and provides it upon request to the department chair, dean, or academic hearing panel, and to the student at the student's expense.",
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The appeals provision gives students a right to appeal \"within fifteen working days\" to the academic hearing panel; a fairness safeguard in integrity cases, P64.",
+     "resolution_why": "Matched (A18, B22). Both P64, student, when-misuse. A: must; B: may. The source says an appeal 'must be filed ... within fifteen working days', a deadline, so must.",
+     "anchor": "by the student within fifteen working days",
+     "frag_start": "An appeal of a sanction imposed",
+     "frag_end": "cheating/plagiarism sanction form",
+     "policy": "A student's appeal of a sanction imposed by an instructor or a dean must be filed with the office of student conduct within fifteen working days of receipt of the cheating/plagiarism sanction form.",
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P64",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Hearing rules say the \"burden of establishing by a preponderance of the evidence\" is on the accuser and the student \"may make a statement\" and examine evidence; fairness for accused students, P64.",
+     "resolution_why": "Only coder B coded this. Source: 'The burden of establishing by a preponderance of the evidence that cheating or plagiarism occurred is on the person who claims the act took place.' A hearing safeguard for accused students, kept as P64 informs.",
+     "anchor": "The burden of establishing by a preponderance of the evidence that cheating",
+     "frag_start": "The burden of establishing by a preponderance",
+     "frag_end": "claims the act took place",
+     "policy": null,
+     "actor": "all",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P64",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Both parties \"have the right to hear all testimony and examine all evidence\", a procedural right of the accused; P64.",
+     "resolution_why": "Matched (A17, B24). Both P64, when-misuse. Actor: A all, B student; modality: A informs, B may. 'Both [the instructor and the student] have the right to hear all testimony and examine all evidence' names both parties and states a right, so all, informs.",
+     "anchor": "Both have the right to hear all testimony and examine all evidence",
+     "frag_start": "Both have the right to hear",
+     "frag_end": "examine all evidence",
+     "policy": null,
+     "actor": "all",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P64",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Plagiarism school offers a \"remedial, private session\" to mitigate sanctions for unintentional plagiarism for students not previously sanctioned; mitigation in return for remediation is closest to P38 (reduced consequences), though it is not a self-report window.",
+     "resolution_why": "Matched (A19, B25). Both P38, instructor, when-misuse, may; B's wording keeps 'less severe cases' and 'acceptable ways to document research'.",
+     "anchor": "attend a remedial, private session administered by university libraries",
+     "frag_start": "the instructor may request that the student attend",
+     "frag_end": "ways to document research",
+     "policy": "For less severe cases of plagiarism, the instructor may request that the student attend a remedial, private session administered by university libraries regarding acceptable ways to document research.",
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P38",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Plagiarism school \"will only be offered to students not previously sanctioned for plagiarism\", limiting the mitigation; the same P38 mechanism with an eligibility condition.",
+     "resolution_why": "Only coder B coded this. Source: 'Plagiarism school will only be offered to students not previously sanctioned for plagiarism.' An eligibility limit on the mitigation option; plagiarism includes GAI, so kept as P38 informs.",
+     "anchor": "Plagiarism school will only be offered to students not previously sanctioned for plagiarism",
+     "frag_start": "Plagiarism school will only be offered",
+     "frag_end": "previously sanctioned for plagiarism",
+     "policy": null,
+     "actor": "all",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P38",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The policy says the AHP \"will conduct hearings based on allegations of academic misconduct\" with severity and \"overall behavior regarding academic honesty\" determining sanctions. This is an integrity process covering unauthorized AI use, P36.",
+     "resolution_why": "Only coder A coded this. Source: 'The AHP will conduct hearings based on allegations of academic misconduct and determine if the accused student is in violation of this policy.' The body that decides GAI cheating cases; kept as P36 admin.",
+     "anchor": "The AHP will conduct hearings based on allegations of academic misconduct",
+     "frag_start": "The AHP will conduct hearings",
+     "frag_end": "assessed against the student.",
+     "policy": "The academic hearing panel (AHP) conducts hearings based on allegations of academic misconduct and determines whether the accused student is in violation of this policy.",
+     "actor": "admin",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Students, faculty and deans \"may appeal the decisions of the hearing board\" to the provost, one final appeal on stated grounds; P64.",
+     "resolution_why": "Only coder B coded this. Source: 'Students, faculty, and deans may appeal the decisions of the hearing board or officers to the provost.' A route of appeal available in GAI misuse cases; kept as P64 all may.",
+     "anchor": "may appeal the decisions of the hearing board or officers to the provost",
+     "frag_start": "Students, faculty, and deans may appeal",
+     "frag_end": "No additional appeal will be heard",
+     "policy": null,
+     "actor": "all",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P64",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The policy states it is intended \"to provide safeguards for any student suspected of cheating or plagiarism\", an explicit fairness commitment, P64.",
+     "resolution_why": "Only coder B coded this. Source: 'It is the intent of this policy to provide appropriate sanctions, to provide fair and realistic procedures ..., to provide safeguards for any student suspected of cheating or plagiarism.' States the policy's aim of safeguarding accused students; kept as P64 informs.",
+     "anchor": "to provide safeguards for any student suspected of cheating or plagiarism",
+     "frag_start": "It is the intent of this policy to provide appropriate sanctions",
+     "frag_end": "suspected of cheating or plagiarism",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P64",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    }
+   ],
+   "text_file": "/Users/rudrajit/Documents/Current-Research/AI in education policy guidelines/.cache/text/v2-kent-state-cheating.txt"
+  }
+ ]
+}

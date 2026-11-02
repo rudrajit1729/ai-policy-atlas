@@ -1,0 +1,67 @@
+{
+ "slug": "texas-san-antonio",
+ "university": "University of Texas at San Antonio",
+ "units_searched": [
+  {
+   "unit": "College of AI, Cyber and Computing (CAICC)",
+   "layer": "school",
+   "site": "https://caicc.utsa.edu/",
+   "queries": [
+    "site:utsa.edu College of AI, Cyber and Computing student handbook generative AI academic integrity",
+    "site:caicc.utsa.edu AI policy OR \"academic integrity\" OR \"generative AI\"",
+    "UTSA College of AI, Cyber and Computing departments Computer Science Electrical and Computer Engineering Data Science"
+   ],
+   "pages_checked": ["https://caicc.utsa.edu/", "https://catalog.utsa.edu/undergraduate/aicybercomputing"],
+   "result": "none-found",
+   "note": "College home and catalog page list programs, math readiness and the Student Success Center; no AI or academic-integrity rule for the college. Search returned no caicc.utsa.edu AI pages."
+  },
+  {
+   "unit": "Department of Computer Science",
+   "layer": "computing",
+   "site": "https://caicc.utsa.edu/computer-science/",
+   "queries": [
+    "site:cs.utsa.edu generative AI policy",
+    "UTSA Department of Computer Science ChatGPT LLM use policy students syllabus statement",
+    "UTSA computer science \"academic integrity\" \"AI\" undergraduate student handbook cs.utsa.edu",
+    "site:utsa.edu computer science department \"generative AI\" students syllabus \"CS 1083\" OR \"CS 1714\" OR \"CS 2073\" AI policy"
+   ],
+   "pages_checked": [
+    "https://www.cs.utsa.edu/",
+    "https://sciences.utsa.edu/computer-science/ (301 to caicc.utsa.edu/computer-science)",
+    "https://caicc.utsa.edu/computer-science/ (redirect; fetch surfaced no policy links)"
+   ],
+   "result": "none-found",
+   "note": "The old cs.utsa.edu site now redirects to CAICC. The only UTSA AI documents surfaced were the university-level Academic Innovation faculty guide (already collected) and sample syllabus statements. The fetch summarizer for the old CS page claimed links to integrity/AI pages but gave no URLs; unverified, so not treated as a finding."
+  },
+  {
+   "unit": "Department of Computer Engineering",
+   "layer": "computing",
+   "site": "https://caicc.utsa.edu/",
+   "queries": ["site:ece.utsa.edu OR site:ds.utsa.edu OR site:ai.utsa.edu AI use policy academic integrity"],
+   "pages_checked": ["https://catalog.utsa.edu/undergraduate/aicybercomputing"],
+   "result": "none-found",
+   "note": "No department-specific page surfaced; only the shared query was run."
+  },
+  {
+   "unit": "Department of Information Systems and Cybersecurity",
+   "layer": "computing",
+   "site": "https://caicc.utsa.edu/",
+   "queries": ["site:ece.utsa.edu OR site:ds.utsa.edu OR site:ai.utsa.edu AI use policy academic integrity"],
+   "pages_checked": ["https://catalog.utsa.edu/undergraduate/aicybercomputing"],
+   "result": "none-found",
+   "note": "Only the shared query was run."
+  },
+  {
+   "unit": "Department of Statistics and Data Science",
+   "layer": "computing",
+   "site": "https://caicc.utsa.edu/",
+   "queries": ["site:ece.utsa.edu OR site:ds.utsa.edu OR site:ai.utsa.edu AI use policy academic integrity"],
+   "pages_checked": ["https://catalog.utsa.edu/undergraduate/aicybercomputing"],
+   "result": "none-found",
+   "note": "Only the shared query was run."
+  }
+ ],
+ "documents": [],
+ "course_examples": [],
+ "notes": "Confirms the first collection's none-found for school and computing. Limits: only WebSearch/WebFetch were used, no student-handbook PDFs were reached, and the CAICC site (formed fall 2025) was only partly crawlable (a caicctest.utsa.edu test host exists). The three departments other than CS received only one shared query each. The only UTSA AI documents surfaced were university-level (Academic Innovation) and are already in the first collection."
+}

@@ -1,0 +1,16 @@
+{
+ "documents": 4,
+ "units_A": 139,
+ "units_B": 146,
+ "matched": 122,
+ "only_A": 17,
+ "only_B": 24,
+ "kept_only_A": 17,
+ "kept_only_B": 23,
+ "agree_actor": 0.934,
+ "agree_phase": 0.91,
+ "agree_modality": 0.934,
+ "agree_policy_type": 0.926,
+ "agree_stance_docs": 0.75,
+ "notes": "Matching by anchor position (overlap or within ~120 characters), with five false pairs undone and one pair of anchors from one passage joined. Main disagreements: (1) phase, where one coder used the instruction's topic and the other the time it is acted on (e.g. course-start vs before-course for syllabus communication, general vs course-start for facts); resolved by what the passage asks the reader to do and when. (2) modality informs vs may on descriptions of instructor options, resolved as informs when the passage only describes an option and may when it grants a permission. (3) policy_type splits between neighbouring types (P04/P05, P36/P19, P20/P21, P56/P61, P68/P99, UNCOVERED vs P47 or P50), resolved against the type definitions with fit_note or uncovered_note recording partial fits. (4) actor for statements by the university or about sanctions, resolved by who the passage binds. (5) unit_stance, where coders often used neutral vs restrict/require on procedural or sanction statements; resolved to neutral unless the unit itself takes a position on AI use. One-sided units were all kept except one fragment (a parenthetical list of FERPA-compliant LLMs inside an already coded sentence). Document stance disagreed once (ORAI guidelines: A restrict, B delegates); resolved as restrict because the page states a default ban unless the instructor approves."
+}

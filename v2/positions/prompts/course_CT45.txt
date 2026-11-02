@@ -1,0 +1,46 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT45 "Benefits of AI for learning" (AI is described as valuable for learning or as a skill worth building.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..21 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | austin-community-college | C4 | all | informs | AI permitted to build fluency | GAI is permitted to foster technological fluency and to leverage advanced tools for research
+1 | bucknell | C6 | student | should | AI encouraged as learning aid | we encourage you to leverage them to support your learning
+2 | carleton-college | C6 | all | should | explore AI opportunities together | let's look for and talk with each other about opportunities to use the LLMs to help us learn
+3 | carnegie-mellon | C6 | instructor | informs | AI valued as support tool | AI Tools are a valuable tool for supporting both novices and experts.
+4 | colorado-boulder | C3 | student | should | external resources encouraged for study | Similarly, we encourage using high-quality external resources to study more and understand the material better.
+5 | duke | C2 | all | informs | AI helpful for learning | AI-assisted tools like ChatGPT will be helpful in learning the material in Compsci 201.
+6 | emory | C2 | all | informs | reason: use AI responsibly | The goal of this policy is to encourage you to use AI responsibly
+7 | harvard | C1 | all | informs | AI can help mastery | interactions with others, as well as with artificial intelligence (AI), can facilitate mastery of the course’s material.
+8 | harvey-mudd-college | C1 | instructor | informs | encourages AI skill development | cs5 encourages the development of these professionally and personally valuable skills (including the use of AI
+9 | kansas | C4 | all | informs | AI valuable for learning | can be valuable resources for learning.
+10 | massachusetts-amherst | C3 | all | informs | AI effective for learning | For curious learners, AI can be a very effective learning tool.
+11 | north-carolina-state | C2 | student | must | AI enhances learning, not replaces | Use AI tools to enhance learning & creativity, not replace them
+12 | north-carolina-state | C4 | instructor | informs | AI is something to learn | CSC 326 treats them as something to learn to use
+13 | north-texas | C4 | all | informs | goal: AI-augmented not dependent | The goal is to become an AI-augmented engineer, not AI-dependent.
+14 | pennsylvania | C1 | instructor | should | responsible AI use encouraged | encourage their responsible and ethical use to enhance your learning experience
+15 | princeton | C5 | all | informs | AI can benefit learning | Gen AI is a powerful tool and some uses of it can be beneficial for learning.
+16 | stony-brook | C2 | instructor | informs | AI helpful for learning | While AI-based resources can be helpful for learning,
+17 | uiuc | C1 | instructor | informs | exposure to frontier AI is a goal | we want CS 124 students to be exposed
+18 | uiuc | C1 | instructor | informs | frontier tools beat copy-paste ChatGPT | At present the best AI coding tools are both much, much better than inferior
+19 | uiuc | C3 | instructor | informs | AI useful for brainstorming and learning | generative AI tools can be useful for brainstorming, ideation and additional learning
+20 | virginia-tech | C3 | student | should | use AI as assistant not master | by using AI as an assistant, not by becoming an assistant to AI.
+21 | washington | C3 | student | should | learn appropriate AI use | Therefore, you should learn to use

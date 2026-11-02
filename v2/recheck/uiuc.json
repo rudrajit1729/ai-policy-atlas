@@ -1,0 +1,25 @@
+{
+ "slug": "uiuc",
+ "university": "University of Illinois Urbana-Champaign",
+ "units_searched": [
+  {"unit": "Siebel School of Computing and Data Science (CS), The Grainger College of Engineering", "layer": "computing", "site": "https://siebelschool.illinois.edu",
+   "queries": ["site:siebelschool.illinois.edu generative AI policy students academic integrity", "Siebel School of Computing and Data Science undergraduate handbook AI tools policy instructors syllabus", "Illinois Siebel School \"CS\" department \"generative AI\" guidelines faculty teaching assistants cheating policy siebelschool.illinois.edu", "Siebel School Computing Data Science \"AI\" policy \"CS\" courses default syllabus statement Illinois students may not use ChatGPT Copilot"],
+   "pages_checked": ["https://siebelschool.illinois.edu/academics/undergraduate", "https://siebelschool.illinois.edu/academics/honor-code", "https://siebelschool.illinois.edu/academics/undergraduate/policies-and-procedures", "https://siebelschool.illinois.edu/academics/graduate/phd-program/qualifying-exam/ai", "https://siebelschool.illinois.edu/academics/undergraduate/policies (404)", "https://siebelschool.illinois.edu/about/policies (404)"],
+   "result": "none-found", "note": "Fetched the Honor Code (15k chars) and Policies and Procedures (44k chars) and searched them for AI/ChatGPT/generative/LLM/Copilot: no AI-use rule, only unrelated mentions of AI courses. The honor code's programming-plagiarism text predates generative AI. 'AI Qualifying Exam Guidelines' concerns the PhD AI-area exam, not AI use."},
+  {"unit": "School of Information Sciences (iSchool)", "layer": "computing", "site": "https://ischool.illinois.edu",
+   "queries": ["site:ischool.illinois.edu generative AI policy students academic integrity", "Illinois iSchool School of Information Sciences student handbook generative AI use academic integrity policy"],
+   "pages_checked": ["https://ischool.illinois.edu/ (fetch returned no usable content)", "https://ischool.illinois.edu/degrees-programs/policies (404)"],
+   "result": "inaccessible", "note": "Home page fetch returned no usable text, a guessed policy URL returned 404, and searches surfaced nothing. Absence is not confirmed."},
+  {"unit": "Department of Electrical and Computer Engineering", "layer": "computing", "site": "https://ece.illinois.edu",
+   "queries": ["site:ece.illinois.edu generative AI policy academic integrity ChatGPT"],
+   "pages_checked": ["https://ece.illinois.edu/", "https://ece.illinois.edu/academics/ugrad/policies (404)"],
+   "result": "none-found", "note": "Home page summary shows no policy link; the guessed policies URL returned 404."},
+  {"unit": "The Grainger College of Engineering", "layer": "school", "site": "https://genai.grainger.illinois.edu",
+   "queries": [],
+   "pages_checked": ["already collected: uiuc-grainger-guidance, uiuc-grainger-using"],
+   "result": "found", "note": "School layer is already in the first collection."}
+ ],
+ "documents": [],
+ "course_examples": ["https://www.cs124.org/ai", "https://cs128.org/go/syllabus", "https://courses.grainger.illinois.edu/cs225/fa2026/policy/integrity/", "https://courses.grainger.illinois.edu/cs473/fa2026/integrity.html (CS 473 Fall 2026 academic integrity page; not collected)"],
+ "notes": "No Siebel-, ECE- or iSchool-wide AI policy found; the first collection's none-found holds for the units that could be read. The iSchool could not be read well (homepage returned nothing usable, guessed URLs 404), so its result is inaccessible, not a confirmed absence. The U of I System EVPAA guidance is Cloudflare-blocked (also noted in the first collection) and is system-level. Siebel instructors appear to set AI policy per course (CS 124, 128, 225 and 473 each have their own)."
+}

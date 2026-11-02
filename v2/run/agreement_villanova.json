@@ -1,0 +1,16 @@
+{
+ "documents": 3,
+ "units_A": 91,
+ "units_B": 90,
+ "matched": 81,
+ "only_A": 10,
+ "only_B": 9,
+ "kept_only_A": 10,
+ "kept_only_B": 3,
+ "agree_actor": 0.852,
+ "agree_phase": 0.914,
+ "agree_modality": 0.951,
+ "agree_policy_type": 0.889,
+ "agree_stance_docs": 1.0,
+ "notes": "Units aligned by source offset, then by hand where the offset match paired different rules from one sentence (e.g. AI-content error vs copyright warning; employee secure-tools vs no-PII vs fact-check). Main disagreements: (1) actor, mostly admin vs all for the guideline's own purpose/scope statements and all vs ta-staff for the Employees sentence, and student vs instructor in the ECE template (resolved by who the sentence binds); (2) unit_stance, where coders were inconsistent on disclosure duties (require vs permit vs neutral), consent rules and deepfake bans; resolved to the corpus convention (disclosure=permit, consent=restrict, deceptive-use ban=prohibit, pointers and procedures=neutral); (3) policy_type, where the source decided: P07 vs P61 (scope definition), P50 vs P65 (user data rule), P53 vs UNCOVERED (data scraping kept UNCOVERED), P52 vs P77 (copyright pointer kept P52), P78 vs P115, P62 vs P77, P75/P73 stretched fits moved to P118/P65; (4) the Code's AI-central-requirements sentence, coded three ways, merged into one P107 unit plus a separate P24 citation unit; (5) modality for definitional sentences (informs) and imperatives (must). Only-A units kept (10) were real statements (definitions, extra rules in multi-rule sentences). Only-B units kept (3): copyright warning, malicious-use warning, automation-evaluation. Only-B units dropped (6, all in the Code): general integrity rules that do not mention AI (fabrication, assisting dishonesty, collaboration directions, consult-instructor purpose line), a revision-history line, and a duplicate of the merged P107 unit. Document stance agreed on all 3 documents."
+}

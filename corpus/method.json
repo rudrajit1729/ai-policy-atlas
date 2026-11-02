@@ -1,0 +1,51 @@
+{
+ "sections": [
+  {
+   "h": "What this is",
+   "p": [
+    "This atlas gathers the generative-AI policies that computing departments and courses at universities in the United States and Canada have published, and reconciles them into a shared set of guidelines. The approach follows Amershi et al.'s 'Guidelines for Human-AI Interaction' (CHI 2019): collect many sources, keep their statements verbatim, cluster statements that make the same point, name each cluster, and offer several ways of organizing the result.",
+    "It is meant for institutions writing or revising their own AI policy. Each guideline shows how many institutions say something similar, and in what words."
+   ]
+  },
+  {
+   "h": "Scope and source tiers",
+   "p": [
+    "Universities in the United States and Canada. Each university’s documents come from the highest of these source tiers that exists. Tiers 1 and 2 are both computing units, so a university with a CS policy and, say, an iSchool policy keeps both. Tiers 3 and 4 are used only when a university has no computing-unit policy at all."
+   ],
+   "list": [
+    "Tier 1: a computer science department policy or CS course policies (including CSE, EECS, and computing colleges).",
+    "Tier 2: if there is no CS policy, a CS-related unit such as information science or an iSchool, informatics, AI, data science, or software engineering.",
+    "Tier 3: otherwise, a school or college policy that covers computing, such as a College of Engineering policy.",
+    "Tier 4: otherwise, the university-wide AI policy."
+   ],
+   "after": [
+    "Course policies are capped at three per unit, favoring introductory courses. One exception to the tier rule is kept on purpose: Harvey Mudd College's AI Use Levels pilot, a college-wide document that Pomona College's CS tier system is modeled on. News coverage and research papers are excluded. Every institution checked is listed on the Corpus tab, including those where nothing qualifying was found."
+   ]
+  },
+  {
+   "h": "How the corpus was built",
+   "p": [],
+   "list": [
+    "Search: parallel research agents searched by region and institution type (northeast, west, midwest, south, Canada, liberal-arts colleges, an open sweep, and computing-adjacent units). A second pass re-searched institutions the first pass could only browse and added new ones. A third pass checked every remaining Carnegie R1 and R2 university in the United States and every Canadian university with a computing degree, and added university-wide policies where no computing policy exists.",
+    "Fetch: each included document was fetched as plain text (HTML, PDF, Word, or Google Docs export). JavaScript-only pages were checked in a real browser, and pages that no longer resolve were checked against an Internet Archive snapshot.",
+    "Excerpt: from each document, up to eight statements that set policy were excerpted as contiguous quotes of at most fifteen words.",
+    "Verify: every excerpt was re-located in an independently re-fetched copy of the page. The page's exact characters replaced the excerpt, and a link was built that opens the original page with the full passage highlighted.",
+    "Code: each statement was coded with one to three topics, one course-lifecycle phase, and one addressee (student, instructor, TA or staff, department)."
+   ]
+  },
+  {
+   "h": "How guidelines were reconciled",
+   "p": [
+    "Each statement was assigned to exactly one guideline. A first assignment used an explicit rule over each statement's primary code and wording. The analyst then reviewed every cluster and moved misassigned statements; each move is recorded as an override, and the Statement explorer's Guideline view shows the final assignment.",
+    "Guideline labels are analyst-written names for clusters, phrased as recommendations. They are not policy text. The evidence for each guideline is always the institutions' own words, and the highlighted quote is the statement judged most representative.",
+    "Guidelines are grouped four ways: by theme, by the course-lifecycle phase they apply to (modeled on Amershi et al.'s 'initially / during interaction / when wrong / over time'), by whom they address, and by how widely they are shared. Readers can build and save their own groupings."
+   ]
+  },
+  {
+   "h": "Limitations",
+   "p": [
+    "Coverage is a snapshot: course policies change every term, and many syllabi sit behind learning-management-system logins, so public documents over-represent courses with public websites. Excerpts are short by design and do not carry the full context of the surrounding policy; follow the source link before citing any statement. Codes and clusters reflect one analyst's reading and should be validated by a second coder before publication."
+   ]
+  }
+ ]
+}

@@ -1,0 +1,678 @@
+{
+ "_note": "Theme review step 2 (D46/D47): Claude's synthesis of the reviewer tags in digest.json. names = content-only type names (D38: modality and actor are separate tags). new_types = types created from NEW labels or splits (3+ universities). retired = types whose units are all reassigned. label_map = reviewer NEW labels (lower-cased) mapped to a type. splits = types whose units get a second reviewer pass choosing among the listed options.",
+ "names": {
+  "P01": "Default stance: AI not allowed",
+  "P02": "Default stance: AI allowed or encouraged",
+  "P03": "Default stance: AI discouraged but not banned",
+  "P04": "Instructor or assignment decides AI use",
+  "P05": "Named levels or tiers of AI use",
+  "P06": "Fallback rule when no AI rule is stated",
+  "P07": "AI built into everyday tools (writing assistants, editors, IDEs, agents)",
+  "P08": "AI permission staged as skills or work develop",
+  "P09": "AI rules stated in the syllabus and assignment instructions",
+  "P10": "Asking when unsure about AI use",
+  "P11": "AI rules vary by course; permission does not carry over",
+  "P12": "AI as a tutor for concepts and background",
+  "P13": "AI for debugging and explaining errors",
+  "P14": "AI for study and practice (quizzes, flashcards, review)",
+  "P15": "AI for brainstorming and early planning",
+  "P16": "AI-generated content or code in submitted work",
+  "P17": "Course-specific or institution-provided AI tools",
+  "P18": "AI for writing versus AI for code (retired: split)",
+  "P19": "Submitting AI-generated work as one's own",
+  "P20": "Entering assignment questions or one's own work into AI",
+  "P21": "AI for checking or debugging graded work",
+  "P22": "AI during exams, quizzes and in-class assessments",
+  "P23": "Keeping AI sessions separate from the submitted work",
+  "P24": "Disclosing and acknowledging AI use",
+  "P25": "What an AI citation or disclosure records (tool, prompt, output, format)",
+  "P26": "Process records: AI logs, drafts and reflections",
+  "P27": "Marking which parts of a submission are AI-derived",
+  "P28": "Nondisclosure as the violation",
+  "P29": "Submitted work must be one's own",
+  "P30": "Explaining and defending one's own work",
+  "P31": "Verifying AI output",
+  "P32": "AI supports, and does not replace, human thinking",
+  "P33": "Supervised, proctored or in-class assessment",
+  "P34": "Explaining work orally (interviews, code reviews, presentations)",
+  "P35": "Assignment and assessment redesign for AI",
+  "P36": "AI misuse as academic misconduct",
+  "P37": "Consequences and sanctions for AI-rule violations",
+  "P38": "Self-report, amnesty or leniency for inadvertent misuse",
+  "P39": "Reliability and use of AI detectors",
+  "P40": "Detection and similarity tools for AI misuse",
+  "P41": "AI shortcuts the practice that builds skill",
+  "P42": "Fundamentals before AI; protecting novices",
+  "P43": "False sense of mastery from AI",
+  "P44": "Teaching AI use in courses",
+  "P45": "AI under the existing rules for human help and sources",
+  "P46": "Human responsibility for grades",
+  "P47": "Instructor disclosure of their own AI and detector use",
+  "P48": "Disclosure and review of AI-made materials and communications",
+  "P49": "Uploading course materials and protected content to AI",
+  "P50": "Keeping personal and sensitive data out of AI tools",
+  "P51": "Equitable access to AI (cost, alternatives, opt-out)",
+  "P52": "Copyright, intellectual property and terms of use",
+  "P53": "Bias, fairness and general ethical concerns about AI",
+  "P54": "Policy review and revision over time",
+  "P55": "Evidence on AI use and its effects",
+  "P56": "Institutional values and principles for AI use",
+  "P57": "Instructor-student conversation before escalating suspected misuse",
+  "P58": "Students' own course communication (posts, messages)",
+  "P59": "Instructor AI use for teaching work",
+  "P60": "Trust and course design over policing AI use",
+  "P61": "Definitions and scope of the policy",
+  "P62": "AI in research, publication and review",
+  "P63": "Faculty support and learning about AI",
+  "P64": "Due process for students accused of misuse",
+  "P65": "Review and approval of AI tools and vendors",
+  "P66": "Explaining and discussing AI rules with students",
+  "P67": "Co-creating course AI policy with students",
+  "P68": "Educative response to misuse",
+  "P69": "Evidence standards for AI-misuse findings",
+  "P70": "AI literacy training and resources",
+  "P71": "Reporting AI incidents and misuse",
+  "P72": "Contact points and human help for AI questions",
+  "P73": "Human oversight of AI-influenced decisions",
+  "P74": "Harmful, deceptive or fabricating AI uses",
+  "P75": "AI-enabled phishing and security threats",
+  "P76": "Administrative and operational AI use",
+  "P77": "Existing law and university policy apply to AI",
+  "P78": "Finding out and following each course's AI rules",
+  "P79": "AI use built into coursework",
+  "P80": "Governance roles, ownership and exceptions",
+  "P81": "Formal integrity procedure (reporting, referral, sanctions process)",
+  "P82": "Limits of preventing and detecting AI use",
+  "P83": "AI decisions grounded in learning objectives",
+  "P84": "How the policy was made (body, process, sources, AI assistance)",
+  "P85": "Units set their own AI rules",
+  "P86": "Consent for AI recording, transcription and likeness",
+  "P87": "Benefits of AI for learning and teaching",
+  "P88": "Engaging peers, partners and the community on AI",
+  "P89": "AI for data analysis and visualization",
+  "P90": "Own attempt first, then AI",
+  "P91": "AI for editing, proofreading and outlining one's own work",
+  "P92": "University-licensed or approved AI tools",
+  "P93": "Prompting advice",
+  "P94": "Careers and professional norms as reasons to build skills without AI",
+  "P95": "Integrity, honesty and fairness as grounds for AI rules",
+  "P96": "AI is not an author, source or collaborator",
+  "P97": "Accessibility and AI",
+  "P98": "Documenting, auditing and monitoring AI systems",
+  "P99": "Reducing pressures that lead to misuse",
+  "P100": "Routine or minor AI uses outside the rules",
+  "P101": "AI in grading and feedback by instructors",
+  "P102": "Staying informed about AI developments",
+  "P103": "Notice when AI is used in interactions or decisions",
+  "P104": "AI for literature search and finding sources",
+  "P105": "AI for reading and summarizing sources",
+  "P106": "AI for images and multimedia",
+  "P107": "Prior approval or a closed list of permitted uses",
+  "P108": "No institution-wide AI policy exists",
+  "P109": "Aligning AI rules across sections, departments and disciplines",
+  "P110": "Sample syllabus language and templates",
+  "P111": "Integrity pledges and signed AI agreements",
+  "P112": "Instructors modeling responsible AI use",
+  "P113": "Institutional monitoring of AI use",
+  "P114": "Personal responsibility for self-chosen AI tools",
+  "P115": "Pointers to further AI guidance and resources",
+  "P116": "General expectation of ethical, responsible use",
+  "P117": "Evaluating an AI tool before choosing it",
+  "P118": "Weighing benefits and risks before using AI",
+  "P119": "AI for career and personal tasks outside coursework",
+  "P120": "Fabricated citations and unattributed sources in AI output",
+  "P121": "AI displacing human interaction and feedback",
+  "P122": "Institutional investment in AI capacity",
+  "P123": "Telling students how misuse will be detected and handled",
+  "P124": "Consistent and transparent application of AI rules",
+  "P125": "Students checking their own work for similarity or AI",
+  "P126": "Security of AI accounts, systems and AI-written code",
+  "P127": "AI in group work"
+ },
+ "new_types": [
+  {
+   "id": "P128",
+   "name": "AI for translation and language support",
+   "covers": "Rules on using AI to translate text or to support language learning (permitted, conditioned or banned). Split out of P18 and from reviewer NEW labels."
+  },
+  {
+   "id": "P129",
+   "name": "AI feedback or critique on one's own work",
+   "covers": "Using AI to get feedback, critique or review of one's own draft, code or solution (not to produce it). From P14, P91 subgroups and NEW labels."
+  },
+  {
+   "id": "P130",
+   "name": "Signs and indicators of AI-written work",
+   "covers": "Manual signs, comparisons and indicators instructors use to suspect AI-written work (style shifts, fabricated citations, comparison with earlier work), as distinct from detector tools (P40) and standards of proof (P69)."
+  },
+  {
+   "id": "P131",
+   "name": "What AI can and cannot do (capabilities and limits)",
+   "covers": "Statements about AI's capabilities and limits beyond wrong output (P31): low quality, shallow reasoning, changing capability, what tools are and are not good for."
+  },
+  {
+   "id": "P132",
+   "name": "Status of the guidance (advisory or binding, precedence)",
+   "covers": "The document says whether it is guidance or binding policy, and which text prevails when guidance and formal policy conflict."
+  },
+  {
+   "id": "P133",
+   "name": "Accountability for AI-assisted output",
+   "covers": "Users are responsible for the accuracy, quality and consequences of AI-assisted work they submit or use (split from P29, which keeps 'submitted work must be one's own')."
+  },
+  {
+   "id": "P134",
+   "name": "Career and workplace readiness as a reason to learn AI",
+   "covers": "Preparing students for an AI-shaped workplace as the rationale for teaching or allowing AI (split from P44, which keeps teaching AI use in courses)."
+  },
+  {
+   "id": "P135",
+   "name": "Environmental cost of AI",
+   "covers": "Energy, water and carbon costs of AI named as a concern (split from P53)."
+  },
+  {
+   "id": "P136",
+   "name": "Labor, consent and credit behind AI",
+   "covers": "Concerns about uncredited labor, training on work without consent, and exploitation in building AI (split from P53)."
+  },
+  {
+   "id": "P137",
+   "name": "AI records retention and public-records duties",
+   "covers": "AI prompts, outputs and logs as records subject to retention rules or public-records requests."
+  },
+  {
+   "id": "P138",
+   "name": "AI is widespread and here to stay",
+   "covers": "Context statements that AI is inevitable, already widespread or here to stay, used to frame the policy."
+  },
+  {
+   "id": "P139",
+   "name": "Purpose and context of the policy document",
+   "covers": "Why the document exists, what problem it addresses and its context (split from P56, which keeps values and principles)."
+  }
+ ],
+ "retired": {
+  "P18": "Split by second pass into P91, P16, P128, P100, P129 and other existing types; reviewers found its units are rules about AI for writing, not a prose-versus-code distinction."
+ },
+ "label_map": {
+  "contact point for ai questions": "P72",
+  "manual signs and comparison for spotting ai-written work": "P130",
+  "instructor states how ai use must be cited or disclosed": "P25",
+  "instructor specifies how ai use is cited": "P25",
+  "ask how to cite or document ai use": "P25",
+  "citation-format guidance for ai": "P25",
+  "form and format of ai citation": "P25",
+  "follow course or discipline citation conventions": "P25",
+  "disclose ai use in producing the policy or guidance document": "P84",
+  "disclosure of ai use in drafting the guidance": "P84",
+  "document discloses its own ai use": "P84",
+  "involve the community in making ai policy": "P84",
+  "rules on ai translation": "P128",
+  "translation and language-learning support": "P128",
+  "instructors invite student questions and say how to ask": "P10",
+  "ask the designated office, supervisor or committee when unsure about ai use": "P10",
+  "ai feedback or critique on own work": "P129",
+  "allow ai-drafted prose under conditions": "P16",
+  "ai-generated drafts and content": "P16",
+  "allow ai-generated content in submissions under conditions": "P16",
+  "cap on share of work ai may generate": "P16",
+  "sanctions for non-compliance with ai or it policy": "P37",
+  "grade consequences for flawed ai output": "P133",
+  "survey data on ai use and attitudes": "P55",
+  "ai-related misconduct case data": "P55",
+  "disclose ai-detector use to students": "P47",
+  "define data classification terms": "P61",
+  "define scope of ai covered by the policy": "P61",
+  "define supporting terms": "P61",
+  "know the applicable university policies before using ai": "P77",
+  "clear assessment criteria and rubrics": "P35",
+  "valid assessment of student learning": "P35",
+  "test assignments against ai": "P35",
+  "in-class activities to guide or promote learning": "P35",
+  "limits, factors and records governing sanctions": "P81",
+  "factors for setting sanctions": "P81",
+  "who may impose or decide academic sanctions": "P81",
+  "keep records of integrity cases to spot repeat offenses": "P81",
+  "institution does not provide or endorse ai detection tools": "P39",
+  "define approved vs public ai tool categories": "P92",
+  "limit course ai use to instructor-named tools": "P92",
+  "treat grammar and paraphrasing tools as ai": "P07",
+  "instructor addresses routine tools in course rules": "P07",
+  "human judgment and control over ai": "P73",
+  "no university-wide ai policy": "P108",
+  "disclose ai involvement in decisions affecting people": "P103",
+  "lockdown browsers and proctoring for exams": "P33",
+  "proctoring and lockdown-browser tools": "P33",
+  "smart wearables and recording devices in assessments": "P33",
+  "consult or get approval from a supervisor before using ai at work": "P76",
+  "supervisor approval for new ai uses": "P76",
+  "policy purpose framed as serving course learning goals": "P83",
+  "ai for outlining and planning work": "P91",
+  "allow ai for citation and reference formatting": "P91",
+  "formatting and citation checking": "P91",
+  "check ai output for bias": "P31",
+  "equity impact of non-ai assessment formats": "P51",
+  "disclose ai tool costs and account requirements to students": "P51",
+  "unequal ai familiarity and literacy as an equity gap": "P51",
+  "ignorance of the rules is no excuse": "P78",
+  "make students familiar with the honor code": "P78",
+  "clear ai statement supports integrity enforcement": "P09",
+  "communicated ai policy as precondition for a misconduct finding": "P09",
+  "refer to academic integrity policy in syllabus": "P09",
+  "ai output is low quality": "P131",
+  "understand ai capabilities and limitations": "P131",
+  "ai capability limits": "P131",
+  "understand the limits of ai tools": "P131",
+  "ai tool capability limits beyond wrong output": "P131",
+  "value of writing and thinking for learning": "P41",
+  "professional norms as rationale for ai rules": "P94",
+  "protect student work and data when using ai detectors": "P50",
+  "planned future policy or guidance": "P54",
+  "policy cannot anticipate every case": "P54",
+  "institutional incident response and handling process": "P71",
+  "complaint and redress channels for people affected by ai": "P71",
+  "ai weakens the reliability of assessments": "P82",
+  "ai suitability varies by discipline": "P109",
+  "students are confused by inconsistent ai rules": "P109",
+  "students can opt out of or consent to ai grading": "P101",
+  "caution about the reliability and ethics of ai grading": "P101",
+  "trace and cite the original source behind ai content": "P120",
+  "do not use ai-generated sources or citations": "P120",
+  "do not have ai generate references or do the research": "P120",
+  "ai supplements rather than replaces teaching and faculty expertise": "P32",
+  "do not create or share outputs derived from course materials": "P49",
+  "student ownership of their own work": "P52",
+  "document status (guidance, not official policy)": "P132",
+  "guidance is not official policy and yields to formal policy": "P132",
+  "state the document's status (binding or advisory)": "P132",
+  "which document prevails when guidance and policy conflict": "P132",
+  "careful review before acting on suspected misuse": "P69",
+  "academic-integrity education module for students (not ai-specific)": "P70",
+  "consent for ai likeness or voice of real people": "P86",
+  "obtain consent from people who interact with ai": "P86",
+  "retain ai records and meet public-records duties": "P137",
+  "ai is here to stay and inevitable": "P138",
+  "ai use is already widespread or becoming commonplace": "P138",
+  "minor or incidental ai use needs no disclosure": "P100",
+  "disclosure waived or not required": "P100",
+  "human review of ai code before use in institutional systems": "P126",
+  "review ai code for security flaws": "P126",
+  "be able to demonstrate your own contribution": "P30",
+  "itemized list of permitted ai uses": "P107",
+  "prior instructor approval required before ai use": "P107",
+  "talk with students about ai expectations generally": "P66",
+  "faculty share ai practices and statements with colleagues": "P63",
+  "fund faculty to redesign courses with ai": "P63",
+  "ethical and impact review of ai projects": "P98",
+  "support for students navigating a misconduct process": "P64",
+  "use only university-approved ai detectors": "P40",
+  "conditions on instructor use of ai detection software": "P40",
+  "label ai-generated institutional content": "P48",
+  "ban ai for brainstorming, research or idea generation": "P15",
+  "stage ai permission within one assignment": "P08",
+  "review vendor terms of use for ai tools": "P52",
+  "required reflection written without ai": "P26",
+  "ai use is not itself misconduct": "P36",
+  "teach human skills that complement ai": "P44",
+  "appoint ai leads or ambassadors": "P80",
+  "avoid vendor lock-in and single-vendor dependence": "P65",
+  "ban discriminatory ai use": "P74",
+  "studying ai tools as an assignment subject": "P79",
+  "institution develops research ai guidance": "P62",
+  "state how coursework will be assessed in the syllabus": "P09"
+ },
+ "splits": {
+  "P18": {
+   "options": [
+    "P91",
+    "P16",
+    "P128",
+    "P100",
+    "P129",
+    "P15",
+    "OTHER"
+   ],
+   "why": "Reviewers found P18 units are writing rules (editing, translation, drafting), not a prose-versus-code distinction."
+  },
+  "P29": {
+   "options": [
+    "P29",
+    "P133",
+    "OTHER"
+   ],
+   "why": "Two contents: submitted work must be one's own vs accountability for AI-assisted output."
+  },
+  "P44": {
+   "options": [
+    "P44",
+    "P134",
+    "P70",
+    "P93",
+    "OTHER"
+   ],
+   "why": "Teaching AI use in courses vs career-readiness rationale vs institutional AI literacy."
+  },
+  "P53": {
+   "options": [
+    "P53",
+    "P135",
+    "P136",
+    "P66",
+    "OTHER"
+   ],
+   "why": "Bias/general ethics vs environmental cost vs labor and consent; teaching ethics belongs to discussing AI with students."
+  },
+  "P56": {
+   "options": [
+    "P56",
+    "P139",
+    "P77",
+    "P80",
+    "P84",
+    "P61",
+    "OTHER"
+   ],
+   "why": "Values and principles vs purpose/context vs compliance, governance, provenance and scope."
+  },
+  "P40": {
+   "options": [
+    "P40",
+    "P130",
+    "P69",
+    "OTHER"
+   ],
+   "why": "Detection tools vs manual signs of AI-written work vs evidence standards."
+  },
+  "P69": {
+   "options": [
+    "P69",
+    "P130",
+    "P39",
+    "OTHER"
+   ],
+   "why": "Evidence standards vs signs of AI-written work vs detector reliability."
+  },
+  "P14": {
+   "options": [
+    "P14",
+    "P129",
+    "P105",
+    "OTHER"
+   ],
+   "why": "Study aids vs feedback on one's own work vs summarizing readings."
+  },
+  "P91": {
+   "options": [
+    "P91",
+    "P129",
+    "P16",
+    "OTHER"
+   ],
+   "why": "Editing and outlining one's own work vs AI feedback vs AI-drafted content."
+  },
+  "P24": {
+   "options": [
+    "P24",
+    "P48",
+    "P62",
+    "P25",
+    "OTHER"
+   ],
+   "why": "Student and user disclosure vs labeling institutional AI content vs research disclosure vs citation details."
+  }
+ },
+ "themes": [
+  {
+   "id": "T01",
+   "label": "Default stance and who decides",
+   "types": [
+    "P01",
+    "P02",
+    "P03",
+    "P04",
+    "P05",
+    "P06",
+    "P08",
+    "P11",
+    "P85",
+    "P100",
+    "P107",
+    "P109"
+   ]
+  },
+  {
+   "id": "T02",
+   "label": "Communicating and learning the rules",
+   "types": [
+    "P09",
+    "P10",
+    "P66",
+    "P67",
+    "P72",
+    "P78",
+    "P110",
+    "P115",
+    "P123",
+    "P124"
+   ]
+  },
+  {
+   "id": "T03",
+   "label": "AI as a learning aid",
+   "types": [
+    "P12",
+    "P13",
+    "P14",
+    "P15",
+    "P89",
+    "P91",
+    "P104",
+    "P105",
+    "P106",
+    "P119",
+    "P128",
+    "P129"
+   ]
+  },
+  {
+   "id": "T04",
+   "label": "AI in producing submitted work",
+   "types": [
+    "P07",
+    "P16",
+    "P19",
+    "P20",
+    "P21",
+    "P22",
+    "P23",
+    "P58",
+    "P79",
+    "P90",
+    "P127"
+   ]
+  },
+  {
+   "id": "T05",
+   "label": "Disclosure and attribution",
+   "types": [
+    "P24",
+    "P25",
+    "P26",
+    "P27",
+    "P28",
+    "P45",
+    "P96"
+   ]
+  },
+  {
+   "id": "T06",
+   "label": "Ownership, understanding and verification",
+   "types": [
+    "P29",
+    "P30",
+    "P31",
+    "P32",
+    "P120",
+    "P131",
+    "P133"
+   ]
+  },
+  {
+   "id": "T07",
+   "label": "Assessment design",
+   "types": [
+    "P33",
+    "P34",
+    "P35",
+    "P60",
+    "P83",
+    "P99"
+   ]
+  },
+  {
+   "id": "T08",
+   "label": "Detection, misconduct and due process",
+   "types": [
+    "P36",
+    "P37",
+    "P38",
+    "P39",
+    "P40",
+    "P57",
+    "P64",
+    "P68",
+    "P69",
+    "P81",
+    "P82",
+    "P111",
+    "P125",
+    "P130"
+   ]
+  },
+  {
+   "id": "T09",
+   "label": "Why: learning, careers and values",
+   "types": [
+    "P41",
+    "P42",
+    "P43",
+    "P87",
+    "P94",
+    "P95",
+    "P121",
+    "P134",
+    "P138"
+   ]
+  },
+  {
+   "id": "T10",
+   "label": "AI literacy and teaching AI use",
+   "types": [
+    "P44",
+    "P70",
+    "P93",
+    "P102"
+   ]
+  },
+  {
+   "id": "T11",
+   "label": "Faculty and staff use of AI",
+   "types": [
+    "P46",
+    "P47",
+    "P48",
+    "P59",
+    "P63",
+    "P73",
+    "P76",
+    "P101",
+    "P103",
+    "P112"
+   ]
+  },
+  {
+   "id": "T12",
+   "label": "Data, privacy, security and approved tools",
+   "types": [
+    "P17",
+    "P49",
+    "P50",
+    "P52",
+    "P65",
+    "P75",
+    "P86",
+    "P92",
+    "P98",
+    "P113",
+    "P114",
+    "P117",
+    "P126",
+    "P137",
+    "P71"
+   ]
+  },
+  {
+   "id": "T13",
+   "label": "Ethics, equity and access",
+   "types": [
+    "P51",
+    "P53",
+    "P74",
+    "P97",
+    "P116",
+    "P118",
+    "P135",
+    "P136"
+   ]
+  },
+  {
+   "id": "T14",
+   "label": "Research and scholarship",
+   "types": [
+    "P62"
+   ]
+  },
+  {
+   "id": "T15",
+   "label": "Governance and the policy itself",
+   "types": [
+    "P54",
+    "P55",
+    "P56",
+    "P61",
+    "P77",
+    "P80",
+    "P84",
+    "P88",
+    "P108",
+    "P122",
+    "P132",
+    "P139"
+   ]
+  }
+ ],
+ "pi_overrides": [
+  {
+   "decision": "D58",
+   "type": "P140",
+   "units": [
+    "california-berkeley:ucb-senate-genai-2025-u58",
+    "california-berkeley:ucb-ctl-communicating-u27",
+    "cuny-city-college:cuny-academic-integrity-policy-u02",
+    "cuny-graduate-school-and-center:cuny-academic-integrity-policy-u03",
+    "cuny-hunter-college:cuny-academic-integrity-policy-u02",
+    "cuny-hunter-college:hunter-academic-integrity-u02",
+    "cuny-hunter-college:hunter-library-ai-integrity-u08",
+    "kent-state:kent-state-cheating-plagiarism-policy-u09",
+    "louisville:louisville-genai-committee-report-u41",
+    "macalester-college:macalester-integrity-u01",
+    "massachusetts-boston:umb-boston-faculty-guidance-ai-u02",
+    "new-mexico-state-main-campus:nmsu-syllabus-ai-statements-u10",
+    "oklahoma-state:okstate-itle-chatgpt-u20",
+    "pittsburgh:pittsburgh-ssoe-integrity-u04",
+    "texas-aandm:texas-aandm-u1-u21"
+   ],
+   "why": "PI: separate submitting AI output as one's own (P19) from having another party, AI included, do the work (P140)."
+  }
+ ]
+}

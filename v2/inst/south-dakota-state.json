@@ -1,0 +1,66 @@
+{
+ "university": "South Dakota State University",
+ "slug": "south-dakota-state",
+ "state": "SD",
+ "type": "R2",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "south-dakota-state-policy23",
+   "layer": "university",
+   "unit": "Office of the Provost (University Policy 2:3)",
+   "course": null,
+   "title": "Policy 2:3 Course Syllabus",
+   "url": "https://www.sdstate.edu/university-policies-procedures/policy-23-course-syllabus",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance_why": "The only AI text says 'Faculty should include a syllabus statement that outlines expectations for the use of generative artificial intelligence tools', so the rule is left to each course; it neither bans nor permits AI itself, which makes it delegates. The example statements 'reflecting different levels of expectation and limitation' are offered to adapt, not imposed.",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "Policy 2:3 on course syllabi contains a single two-sentence AI provision. Faculty should put a syllabus statement on generative AI in each syllabus, and the University will supply example statements at different levels of expectation. The policy itself sets no default for AI use.",
+   "units": [
+    {
+     "why": "Faculty 'should include a syllabus statement' on AI expectations: this asks instructors to communicate AI rules in the syllabus (P09), at course start. 'should' gives the modality; the content is left to the instructor, so unit_stance is neutral.",
+     "anchor": "Faculty should include a syllabus statement that outlines expectations for the use of generative",
+     "frag_start": "Faculty should include a syllabus",
+     "frag_end": "artificial intelligence tools in coursework",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "instructor-discretion"
+     ],
+     "resolution_why": "Both coders: P09, instructor, course-start, should, neutral. Source: 'Faculty should include a syllabus statement that outlines expectations for the use of generative artificial intelligence tools in coursework.' Codes follow directly; no disagreement."
+    },
+    {
+     "why": "The University 'will provide example artificial intelligence syllabus statements reflecting different levels of expectation and limitation'. This is an institutional commitment to supply tiered templates, nearest to P05 (named levels); P09 does not fit because it is not the duty to state a policy. The levels are not named, so a fit_note is added.",
+     "anchor": "The University will provide example artificial intelligence syllabus statements reflecting different levels of expectation",
+     "frag_start": "The University will provide example",
+     "frag_end": "limitation of artificial intelligence use in a course",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P05",
+     "fit_note": "The levels are not named, and the unit is the University's promise to supply example statements, not a defined set of tiers.",
+     "unit_stance": "neutral",
+     "topics": [
+      "use-categories-levels",
+      "syllabus-communication"
+     ],
+     "resolution_why": "Both coders: P05 with fit_note, admin, before-course, informs. Source: 'The University will provide example ... statements reflecting different levels of expectation and limitation'. A university promise of tiered examples is nearest P05; levels unnamed, so fit_note kept. Only topics differed; kept syllabus-communication and A's use-categories-levels, which describes the tiers."
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Both coders found that the second collected document (south-dakota-state-ctl-integrity, ctl.sdsu.edu 'AI and Academic Integrity') is a San Diego State University page (5500 Campanile Drive, San Diego), not South Dakota State; it was not coded and should be reassigned to a San Diego State record (SDSU acronym confusion). Policy 2:3 has only one AI provision (two sentences), so 2 units. No school or computing AI policy found."
+}

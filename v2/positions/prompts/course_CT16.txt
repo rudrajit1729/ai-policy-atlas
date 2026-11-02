@@ -1,0 +1,38 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT16 "Course-provided AI tutor" (The course provides or prescribes its own AI tool or tutor prompt, often designed to guide without solving.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..13 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | brigham-young-idaho | C1 | student | should | use provided tutor prompt | Whenever you use AI in this course, to make sure it is set up to help you learn, you should start with this prompt:
+1 | brigham-young-idaho | C2 | student | should | use provided tutor prompt | Use AI to help you learn. Make sure to copy and paste this prompt to start:
+2 | california-berkeley | C1 | student | must | homework done with AI tutor | Homeworks will be completed alongside an AI tutor called Preceptor
+3 | harvard | C1 | student | may | course's own AI tools allowed | Using CS50’s own AI-based software, including the CS50 Duck (ddb) in
+4 | north-carolina-state | C2 | student | must | approved AI via university login | Students must authenticate using their NCSU credentials to ensure student data remains private
+5 | north-carolina-state | C2 | student | must-not | only approved AI tool allowed | and all other AI tools or services (including ChatGPT, Copilot, etc.) are prohibited in CSC 216.
+6 | north-carolina-state | C3 | student | may | approved AI tool allowed | Students are allowed to use NCSU Gemini Guided Learning Mode (https://gemini.google.com) to support
+7 | north-carolina-state | C3 | student | must | approved AI via university login | Students must authenticate using their NCSU credentials to ensure student
+8 | north-carolina-state | C3 | student | must-not | only approved AI tool allowed | and all other AI tools or services (including ChatGPT, Copilot,
+9 | san-francisco | C6 | instructor | informs | hints limited to two | gives two hints per exercise. The third
+10 | tufts | C2 | instructor | informs | course provides its own AI chatbot | our course offers a new resource: the
+11 | tufts | C2 | student | may | chatbot supports homework and studying | to help you work through homeworks, projects, and studying for exams.
+12 | tufts | C2 | instructor | informs | chatbot guides without solving | It will help guide you through problems, but
+13 | uiuc | C1 | student | may | course AI assistant for explanations | to have a concept explained, ask a tutor to help you find your bug, talk a problem through with a classmate.

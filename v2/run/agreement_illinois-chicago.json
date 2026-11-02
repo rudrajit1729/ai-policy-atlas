@@ -1,0 +1,16 @@
+{
+ "documents": 5,
+ "units_A": 113,
+ "units_B": 106,
+ "matched": 100,
+ "only_A": 13,
+ "only_B": 6,
+ "kept_only_A": 13,
+ "kept_only_B": 6,
+ "agree_actor": 0.88,
+ "agree_phase": 0.94,
+ "agree_modality": 0.84,
+ "agree_policy_type": 0.91,
+ "agree_stance_docs": 1.0,
+ "notes": "Alignment by anchor position in the source, then manual review. Main disagreements: (1) modality in the CATE guide, where 'Consider ...' strategies and example-assignment steps were coded may by one coder and should by the other (resolved: 'Consider' recommendations are should, optional example steps are may); (2) actor on institutional statements (all vs admin; resolved by who is speaking) and on CATE activity lists (student vs instructor; resolved by who performs the activity); (3) policy_type for data-contract sentences (P50 vs P65, resolved P65), draft-before-AI (P90 vs P26, resolved P26), and the 2023 handbook ban (P01 vs P19, resolved P19 with the 'unless explicitly allowed' default as P06); (4) unit_stance, where sentences that only assign responsibility or report facts were set to neutral. Unmatched units: all 13 only-A and 6 only-B units were checked against the source and kept (separate rules that the other coder had folded into a merged unit, or passages it skipped); none dropped. Merged B units were narrowed to one rule (policies for track changes, detector efficacy, prompting tips, WCP ask rule). No stance disagreements."
+}

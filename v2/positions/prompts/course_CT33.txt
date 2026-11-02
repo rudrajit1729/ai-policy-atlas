@@ -1,0 +1,89 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT33 "AI under collaboration rules" (AI is treated like a classmate, friend, outside helper or source under the course's collaboration and citation rules.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..64 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | california-berkeley | C2 | student | should | treat AI like outside peer | Use LLMs in the same way you might use a friend in the class who is not in your group
+1 | carleton-college | C1 | student | must-not | AI unacceptable help source | Unacceptable sources for help when writing code or text for this course include using search engines (e.g., Google, Bing), web forums, or generative AI
+2 | carleton-college | C3 | student | should | cite LLM like any source | you should cite that source. This includes LLMs.
+3 | carnegie-mellon | C6 | student | should | high-level discussion only with AI | you should confine your interaction along the same rules as other external sources, such as only having high-level discussions
+4 | colorado-state | C4 | student | should | treat AI as outsider helper | as if they were a person outside of class who knows nothing about the project
+5 | emory | C3 | student | may | collaboration including AI allowed | I allow collaboration including AI (see
+6 | florida | C1 | student | must-not | no peer code or file sharing | Looking at any piece of your peer’s code, sharing files, searching for solutions
+7 | fordham | C3 | student | should-not | AI tools count as outsourcing | using artificial intelligence tools like ChatGPT
+8 | george-mason | C6 | student | must-not | no discussing code with students | You are not allowed to discuss any implementation (code) or design decisions with any other student.
+9 | george-mason | C6 | student | must-not | no sharing or using others' code | You are not allowed to share or use any code from any other student (including past students)
+10 | george-mason | C6 | student | must-not | no public code repositories | This includes posting your code to a public GitHub repository.
+11 | georgia-tech | C4 | student | may | AI treated like collaborator | you are welcome to talk about your ideas and work with other people, both inside
+12 | georgia-tech | C6 | student | may | AI treated like collaborator | you are welcome to talk about your ideas
+13 | grinnell-college | C3 | student | may | permitted resources listed | The resources you can use include the textbook, class readings, the course website, labs, your peers
+14 | harvard | C1 | all | informs | be reasonable philosophy | The course’s philosophy on academic honesty is best stated as “be reasonable.”
+15 | harvard | C5 | student | should | AI treated like collaborator | Any generative AI tools should be treated as collaborators.
+16 | harvey-mudd-college | C6 | all | informs | AI like extra pair partner | using such a system is like adding a CS senior as a third member of your pair-programming team and just as inappropriate
+17 | harvey-mudd-college | C6 | all | informs | AI treated like helpful friend | using AI (such as ChatGPT or GitHub Copilot) is equivalent to turning to a friend who has already taken the class
+18 | johns-hopkins | C2 | student | may | limited AI collaboration allowed | course and/or AI-assisted tools is permitted.
+19 | kennesaw-state | C1 | student | must | cite sources used | using quotation marks and proper citation for the source(s) you used to help you
+20 | kennesaw-state | C2 | student | must | cite sources used | using quotation marks and proper citation for the source(s) you used to help you
+21 | kennesaw-state | C4 | student | must | cite sources used | unless you indicate otherwise using quotation marks and proper citation for
+22 | massachusetts-amherst | C3 | all | informs | AI covered by collaboration policy | AI use for homework and challenge problems is covered by the
+23 | massachusetts-amherst | C3 | student | must-not | no AI solving homework | at solutions other than your own, and therefore prohibits using AI to
+24 | massachusetts-amherst | C3 | student | may | limited AI use allowed | Limited use of AI tools is allowed in CS 311, in the same way you
+25 | massachusetts-boston | C1 | student | must | cite quoted material | All work submitted must contain citations
+26 | massachusetts-boston | C2 | student | must | cite quoted material | All work submitted must contain citations
+27 | memphis | C4 | student | must | must credit sources including AI | you must credit all sources and collaborators.
+28 | miami | C1 | student | may | AI allowed for general techniques | It is ok to talk to other students or online resources (e.g., generative AI tools) about general
+29 | michigan | C1 | student | may | AI allowed where collaboration allowed | is permitted only in the same contexts where collaboration with another person is allowed, following the guidelines above.
+30 | new-hampshire | C3 | student | may | discussing homework allowed | Talking with others about homework is ﬁne
+31 | new-hampshire | C3 | student | may | outside reading allowed | You are welcome to read additional
+32 | north-carolina-state | C2 | student | may | may consult AI like staff | You are welcome to consult with AI agents just as you would consult with the teaching staff.
+33 | northeastern | C5 | all | informs | AI covered by collaboration policy | This collaboration policy applies equally to recent AI tools such as ChatGPT and other large
+34 | oberlin-college | C6 | student | must-not | no other sources unless specified | You are not allowed to use any other sources except when specified in the assignment.
+35 | old-dominion | C3 | all | informs | AI treated like online resources | This is considered the same as other online resources.
+36 | old-dominion | C4 | all | informs | AI treated as located information | Use of ChatGPT or similar AI-enhanced search engines is considered to fall in the “located” information category.
+37 | old-dominion | C5 | student | should | idea discussion encouraged | discussions of ideas are encouraged
+38 | pomona | C1 | student | may | peer help with debugging allowed | you may help, or receive help, in using systems and tools, in debugging code, and in working with high-level design issues
+39 | princeton | C5 | student | may | AI as collaborator allowed | as you would with a classmate
+40 | rochester-institute-technology | C3 | student | must | AI treated like classmate discussion | Treat information from online searches and generative AI (such as ChatGPT) the same way as discussions with your classmates.
+41 | rochester-institute-technology | C3 | student | should | human discussion preferred over AI | Discussions with other human beings is strongly preferred to other sources.
+42 | san-francisco | C6 | student | may | explaining concepts to peers welcome | a classmate is good and welcome.
+43 | san-jose-state | C1 | student | should | peer concept discussion encouraged | While discussing concepts and helping each other understand challenging topics is encouraged,
+44 | stanford | C1 | student | must | AI treated like human helper | You must treat any artificial intelligence help (e.g., ChatGPT, Claude, etc.) as if it was a real human person.
+45 | stanford | C2 | student | should | AI like asking a friend | you should only use AI tools in the same way that you would ask a friend in the class for help
+46 | stanford | C5 | student | may | AI allowed like human collaborator | You may use generative AI tools such as ChatGPT as you would use a human collaborator.
+47 | stanford | C6 | student | should | AI only like asking a friend | you should only use AI tools in the same way that you would ask a friend in the class for help
+48 | stony-brook | C2 | student | should | human help encouraged | seeking help from teaching assistants, tutors, or study groups is encouraged
+49 | swarthmore-college | C1 | student | must-not | AI is unauthorized collaboration | use of generative AI (e.g., chatGPT or GitHub CoPilot) is also considered to be unauthorized collaboration with an outside source
+50 | swarthmore-college | C2 | student | must | AI treated like any resource | Note that this applies to generative AI tools (e.g. Claude, chatGPT, GitHub CoPilot, etc.) just the same way it does to any other resource.
+51 | swarthmore-college | C2 | student | must-not | AI is unauthorized collaboration | The use of generative AI (e.g., Claude, chatGPT, GitHub CoPilot, etc) is also considered to be unauthorized collaboration with an outside source
+52 | swarthmore-college | C3 | student | must-not | AI is unauthorized collaboration | Use of or consultation with generative AI (e.g., chatGPT or GitHub CoPilot) is considered to be unauthorized collaboration
+53 | swarthmore-college | C5 | all | informs | AI treated like other resources | Note that this applies to generative AI tools (e.g. ChatGPT, GitHub Copilot, etc.)
+54 | swarthmore-college | C6 | student | must-not | AI use is unauthorized collaboration | Use of or consultation with generative AI (e.g., chatGPT or GitHub CoPilot)
+55 | uiuc | C3 | student | should | treat AI as external source | Treat AI assistance like any other external source
+56 | uiuc | C5 | student | informs | AI treated as another person | an AI tool such as ChatGPT is considered to be another
+57 | vanderbilt | C5 | student | informs | AI as extra team member | Think of an AI as an additional team member, smart but flawed, that doesn’t count against your human total.
+58 | virginia | C4 | instructor | informs | AI treated like StackOverflow help | we will treat the use of generative AI the same as we would a student asking for help on StackOverflow
+59 | virginia | C6 | student | may | AI help only if peer-acceptable | Generally, you may only obtain assistance from generative AI tools
+60 | virginia | C6 | student | informs | peer-help standard for AI | that would be acceptable for you to obtain from a fellow student in the
+61 | washington | C1 | student | must-not | no sharing or viewing solution code | Do not share solution code with, or view solution code from, any sources
+62 | washington | C1 | student | must-not | no detailed walkthrough help | Do not provide or receive detailed guidance on, such as being
+63 | washington | C1 | student | must-not | no sample code for graded parts | Do not provide or view samples of code that are intended to solve any specific part of a graded
+64 | wellesley-college | C1 | student | must-not | AI equals banned consultation | such consultations are prohibited, the use of AI-powered tools for learning

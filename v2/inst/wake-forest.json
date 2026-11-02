@@ -1,0 +1,1253 @@
+{
+ "university": "Wake Forest University",
+ "slug": "wake-forest",
+ "state": "NC",
+ "type": "R2",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "wfu-1",
+   "text_file": ".cache/text/v2-wake-forest-academic.txt",
+   "layer": "university",
+   "unit": "AI Working Group for Academics (ai.wfu.edu)",
+   "course": null,
+   "title": "Guidelines for Academic Use",
+   "url": "https://ai.wfu.edu/guidelines-for-academic-use/",
+   "date_or_term": "2025 (hub launched May 2025)",
+   "stance_why": "The page sets no university-wide permission or ban. It says 'permitted uses of GAI may not be the same in every course' and 'instructors set expectations for their classes, and these expectations can differ', while requiring each syllabus to carry expectations. The decision is handed to instructors, so delegates; no named tiers or templates are offered.",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "University-wide guidelines adapted from the March 2025 AI Working Group for Academics report. They require course syllabi to state GAI expectations, leave permitted uses to instructors, and ask schools to update honor codes, treat detectors as insufficient proof, and ensure equitable access. A discussion framework asks programs to coordinate across courses.",
+   "units": [
+    {
+     "why": "The opening frames the page as an institution-level statement of purpose and scope: the guidelines 'articulate expectations and recommendations for academic work' grounded in the vision's principles. P56 (institution-wide framework) fits better than P61 because it states purpose, not definitions.",
+     "anchor": "the following guidelines articulate expectations and recommendations for academic work",
+     "frag_start": "In keeping with those principles",
+     "frag_end": "and recommendations for academic work.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance"
+     ]
+    },
+    {
+     "why": "Headline guideline to put GAI policy on every syllabus: 'Include GAI expectations and policies on each course syllabus'. It is an imperative applied to 'each course', under guidelines that 'articulate expectations', and the page later repeats it as a duty ('Instructors are responsible for communicating their policies'), so modality must; P09 matches exactly.",
+     "anchor": "Include GAI expectations and policies on each course syllabus",
+     "frag_start": "Include GAI expectations and policies",
+     "frag_end": "policies on each course syllabus",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "must",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "fit_note": "Heading phrased as an expectation; the modal is implied rather than stated",
+     "resolution_why": "Coder A coded should (page calls its content 'expectations and recommendations'); coder B coded must and noted the modal is implied. The source states an unqualified imperative for 'each course syllabus' and later says instructors 'are responsible' and materials 'need to include' directions, so the syllabus statement is a requirement. Final: must."
+    },
+    {
+     "why": "Lists what a syllabus statement should cover: 'the types of resources students can use for which assignments; how and when GAI platforms may be used'. It is the content spec of the P09 syllabus requirement, not a separate rule about what is allowed.",
+     "anchor": "the types of resources students can use for which assignments",
+     "frag_start": "Address issues such as: the",
+     "frag_end": "assignments; appropriate citation methods, etc.",
+     "policy": "The syllabus statement addresses the types of resources students can use for which assignments, how and when GAI platforms may be used, how and when students can work together, and appropriate citation methods.",
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "Gives the reason for syllabus statements: they 'provide clarity for all students and support their success'. Nearest type is P09 since it justifies the syllabus requirement.",
+     "anchor": "Syllabus statements provide clarity for all students and support their success.",
+     "frag_start": "Syllabus statements provide clarity for",
+     "frag_end": "students and support their success.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "informs",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "learning-rationale"
+     ],
+     "fit_note": "Rationale for the syllabus requirement rather than the requirement itself. | Coder B (P66): Gives a reason for stating rules, not for the rules themselves",
+     "resolution_why": "Coder A coded P09 (neutral); coder B coded P66 with unit_stance encourage. The sentence 'Syllabus statements provide clarity for all students and support their success' justifies the syllabus requirement, which is P09's subject; P66 is about explaining rules to students, which the sentence does not say. It takes no position on AI use, so unit_stance neutral. Final: P09 with merged fit_notes."
+    },
+    {
+     "why": "Asks instructors to frame expectations in 'academic and professional integrity as well as support for student learning', i.e. to give the reasons rather than only list rules. P66 (explain the rules) is the closest type.",
+     "anchor": "Situate these expectations within the larger context of academic and professional integrity",
+     "frag_start": "Situate these expectations within the",
+     "frag_end": "as support for student learning.",
+     "policy": "Instructors situate GAI expectations within the larger context of academic and professional integrity as well as support for student learning.",
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P66",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "learning-rationale"
+     ],
+     "fit_note": "Asks for framing within integrity and learning support; does not mention discussing the rules with students. | Frames the rules within integrity and learning support rather than telling instructors to explain or discuss them with students"
+    },
+    {
+     "why": "'Consult with peers and other professional resources for best practices' tells instructors to seek outside advice when writing policy. P63 (support faculty in learning AI) is nearest; P109 does not fit because it is about aligning rules, not seeking advice.",
+     "anchor": "Consult with",
+     "frag_start": "Consult with",
+     "frag_end": "Consult with",
+     "policy": "Instructors consult peers and other professional resources for best practices.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ],
+     "fit_note": "Peer consultation by instructors rather than institutional workshops or support. | Coder B (P109): Consultation for best practices, not explicitly alignment of rules across sections",
+     "resolution_why": "Coder A coded P63, coder B P109. The source says only 'Consult with peers and other professional resources for best practices'. P109 requires aligning rules with colleagues or discipline norms, which is not stated; P63 covers advice and peer input before setting course policy. Final: P63, keeping both fit notes."
+    },
+    {
+     "why": "States that 'permitted uses of GAI may not be the same in every course or on every assignment', so one course's permission does not carry over. P11 chosen over P04 because the sentence says rules differ, while the next sentence assigns who decides.",
+     "anchor": "the permitted uses of GAI may not be the same in every course or on",
+     "frag_start": "As courses fulfill various roles",
+     "frag_end": "GAI may change over time.",
+     "policy": "Permitted uses of GAI may not be the same in every course or on every assignment in a course.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P11",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "default-stance"
+     ],
+     "resolution_why": "Coder A coded P11 with actor instructor; coder B coded P04 with actor all. The sentence 'permitted uses of GAI may not be the same in every course or on every assignment in a course' says one course's rules do not carry to another (P11); the next sentence is what assigns the decision to instructors (P04, coded separately). The statement is a general principle not addressed to instructors alone, so actor all. Final: P11, actor all, informs."
+    },
+    {
+     "why": "'permitted uses of GAI may change over time' acknowledges that rules are provisional, which is P54.",
+     "anchor": "permitted uses of GAI may change over time",
+     "frag_start": "As courses fulfill various roles",
+     "frag_end": "GAI may change over time.",
+     "policy": "Permitted uses of GAI may change over time.",
+     "actor": "all",
+     "phase": "over-time",
+     "modality": "informs",
+     "policy_type": "P54",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ],
+     "fit_note": "Says permitted uses change over time, not explicitly that the guidelines themselves will be revised"
+    },
+    {
+     "why": "'instructors set expectations for their classes, and these expectations can differ' places the decision with each instructor, bounded by academic freedom, course coordination and department policy. This is P04; the stance of the whole document is therefore delegates.",
+     "anchor": "instructors set expectations for their classes, and these expectations can differ",
+     "frag_start": "Within the overlapping frameworks of",
+     "frag_end": "and these expectations can differ.",
+     "policy": "Within the overlapping frameworks of academic freedom, course coordination, and department/unit curriculum and policies, instructors set expectations for their classes, and these expectations can differ.",
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "default-stance"
+     ],
+     "resolution_why": "Coder A coded phase general, coder B before-course. The sentence states how authority is divided ('instructors set expectations for their classes, and these expectations can differ'), a standing principle rather than a step in preparing a course. Final: general."
+    },
+    {
+     "why": "Argues why silence is a problem: 'absence of GAI guidance ... undermines the ability to recognize and adjudicate' misconduct. It supports the syllabus requirement (P09); it gives no fallback rule so P06 does not fit.",
+     "anchor": "The absence of GAI guidance in a course undermines the ability to recognize and adjudicate",
+     "frag_start": "The absence of GAI guidance",
+     "frag_end": "adjudicate instances of academic misconduct.",
+     "policy": "The absence of GAI guidance in a course undermines the ability to recognize and adjudicate instances of academic misconduct.",
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "informs",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "integrity-sanctions"
+     ],
+     "fit_note": "Rationale: missing guidance undermines adjudication; no default rule stated. | A reason for the syllabus requirement and a link to enforceability, not the requirement itself"
+    },
+    {
+     "why": "'each school maintains its own system, evidentiary standards, and procedures' states that schools run their own misconduct processes, which is P85 (units set their own rules).",
+     "anchor": "each school maintains its own system, evidentiary standards, and procedures",
+     "frag_start": "While each school maintains its",
+     "frag_end": "address academic misconduct with GAI.",
+     "policy": "Each school maintains its own system, evidentiary standards, and procedures for identifying and adjudicating cases of academic misconduct.",
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P85",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions",
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "Directs schools to check that honor codes and judicial frameworks can 'address academic misconduct with GAI', bringing AI misuse under integrity processes (P36).",
+     "anchor": "the College and each school should ensure that existing processes and criteria in judicial frameworks",
+     "frag_start": "While each school maintains its",
+     "frag_end": "address academic misconduct with GAI.",
+     "policy": "The College and each school should ensure that existing processes and criteria in judicial frameworks and academic honor codes are adequate to address academic misconduct with GAI.",
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "fit_note": "Directs units to update integrity processes; does not itself classify AI misuse as misconduct. | Directs schools to adapt honor codes so GAI misconduct can be handled; does not itself classify misuse"
+    },
+    {
+     "why": "Under the heading 'Clearly state the definition of Academic Misconduct relative to GAI', the page recommends that honor codes define misconduct as GAI use 'without permission' and offers the example 'The unauthorized use of generative AI platforms by a student'. It recommends a definition (P36 over P61, which defines AI rather than misuse). The example makes unauthorized use misconduct, so GAI use is allowed only when authorized: unit_stance restrict.",
+     "anchor": "The unauthorized use of generative AI platforms by a student",
+     "frag_start": "For example: “The unauthorized use",
+     "frag_end": "identified as serving educational goals.”",
+     "policy": "Honor codes and judicial standards clearly state the definition of academic misconduct relative to GAI; an example definition is 'The unauthorized use of generative AI platforms by a student, whether in the classroom, laboratory, studio, intern- and externships, independent research settings, or other spaces identified as serving educational goals.'",
+     "actor": "admin",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions",
+      "prohibited-uses"
+     ],
+     "resolution_why": "Coder A coded modality informs, unit_stance restrict; coder B coded should, unit_stance prohibit. The passage is introduced as a core issue that 'should inform judicial standards and honor codes' and opens 'Clearly state the definition', so it is a recommendation (should), not a bare fact. The example defines misconduct as use without authorization, which bans AI only where not permitted, so restrict rather than prohibit. The normalized policy now states the recommendation and quotes the example. Final: should, restrict."
+    },
+    {
+     "why": "Explains why misconduct definitions need updating: 'GAI may impact learning contexts and assessments in ways that require new structures for producing authentic student work'. A rationale for the P36 recommendation to define GAI misconduct; the sentence itself does not classify misuse.",
+     "anchor": "GAI may impact learning contexts and assessments in ways that require new structures",
+     "frag_start": "GAI may impact learning contexts",
+     "frag_end": "existing honor codes and definitions.",
+     "policy": "GAI may impact learning contexts and assessments in ways that require new structures for producing authentic student work that are distinct from those described in existing honor codes and definitions.",
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions",
+      "assessment-design"
+     ],
+     "fit_note": "Explains why definitions need updating; does not itself classify misuse",
+     "resolution_why": "Found by coder B only. Checked the source: it is the first clause of the 'Clearly state the definition of Academic Misconduct' item and gives the reason existing honor codes need updating. A real statement (rationale), so kept as P36 informs with B's fit note."
+    },
+    {
+     "why": "States a shared-responsibility principle: 'Instructors and students share responsibility for communicating about GAI use'. It spans P09 (instructor) and P78 (student), so neither alone fits.",
+     "anchor": "Instructors and students share responsibility for communicating about GAI use.",
+     "frag_start": "Instructors and students share responsibility",
+     "frag_end": "for communicating about GAI use.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding",
+      "syllabus-communication"
+     ],
+     "uncovered_note": "Principle that instructors and students jointly share responsibility for communicating and clarifying acceptable GAI use. (Coder B coded P78 with fit_note: Shared instructor and student responsibility; the instructor half is also covered in the next unit)",
+     "resolution_why": "Coder A coded UNCOVERED, coder B coded P78. The source says 'Instructors and students share responsibility for communicating about GAI use' and 'the responsibility of both instructors and students for communicating and clarifying'. P78 covers only the student duty to learn the rules, and P09 only the instructor duty; the principle of joint responsibility fits neither fully. Per the codebook (prefer UNCOVERED to a stretched fit), kept UNCOVERED."
+    },
+    {
+     "why": "'Instructors are responsible for communicating their policies and guidelines to students' puts the duty to communicate AI expectations on instructors; P09 fits.",
+     "anchor": "Instructors are responsible for communicating their policies and guidelines to students.",
+     "frag_start": "Instructors are responsible for communicating",
+     "frag_end": "policies and guidelines to students.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "must",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "Says materials 'need to include directions regarding the authorized use of GAI, including method(s) for disclosing or citing', a requirement to state expectations (P09) in syllabus, prompts or verbally.",
+     "anchor": "need to include directions regarding the authorized use of GAI, including method(s) for disclosing or",
+     "frag_start": "In order to substantiate cases",
+     "frag_end": "such use should be acknowledged.",
+     "policy": "Instructional materials such as the course syllabus, assignment prompts, and verbal instructions need to include directions regarding the authorized use of GAI, including method(s) for disclosing or citing such use.",
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "must",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "disclosure-citation"
+     ],
+     "fit_note": "Also requires naming the disclosure or citation method, and ties it to enforceability"
+    },
+    {
+     "why": "Sets a precondition for substantiating misconduct: the instructor 'should be able to demonstrate that students had a reasonable opportunity to know the rules'. This is an evidence standard for findings (P69), not a syllabus rule (P09).",
+     "anchor": "The instructor should be able to demonstrate that students had a reasonable opportunity to know",
+     "frag_start": "The instructor should be able",
+     "frag_end": "expectations of the given context.",
+     "policy": "The instructor should be able to demonstrate that students had a reasonable opportunity to know the rules and expectations of the given context.",
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P69",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions",
+      "syllabus-communication"
+     ],
+     "fit_note": "Coder B (P124): Frames transparency as a burden of proof for instructors before sanctioning, not only consistent application",
+     "resolution_why": "Coder A coded P69, coder B coded P124. The sentence comes right after 'In order to substantiate cases of academic misconduct' and says the instructor 'should be able to demonstrate that students had a reasonable opportunity to know the rules': a condition of proof for a misconduct finding, which P69 (what evidence is needed) covers. P124 is about applying rules consistently and transparently to all students, which the sentence does not say. Final: P69; B's fit_note kept."
+    },
+    {
+     "why": "'Students are responsible for requesting clarification when they are uncertain about the appropriateness of a given use' is the ask-when-unsure rule (P10).",
+     "anchor": "Students are responsible for requesting clarification when they are uncertain",
+     "frag_start": "Students are responsible for requesting",
+     "frag_end": "maintaining academic integrity more broadly).",
+     "policy": "Students are responsible for requesting clarification when they are uncertain about the appropriateness of a given use of GAI for a particular assignment, as well as when they have questions about maintaining academic integrity more broadly.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P10",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding",
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "Students must show 'reasonable steps to know the rules and expectations regarding GAI', i.e. find out and follow the rules that apply (P78), rather than just ask when unsure (P10).",
+     "anchor": "Students should be able to demonstrate that they took reasonable steps to know the rules",
+     "frag_start": "Students should be able to",
+     "frag_end": "GAI in a given situation.",
+     "policy": "Students should be able to demonstrate that they took reasonable steps to know the rules and expectations regarding GAI in a given situation.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P78",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "'AI detectors are principally problematic for the high numbers of false positives' says detectors are unreliable, which is P39.",
+     "anchor": "AI detectors are principally problematic for the high numbers of false positives",
+     "frag_start": "Insufficiency of GAI Detectors: AI",
+     "frag_end": "return (as of February 2025).",
+     "policy": "AI detectors are principally problematic for the high numbers of false positives they currently return (as of February 2025).",
+     "actor": "all",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P39",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ]
+    },
+    {
+     "why": "Warns that 'Sharing student work and data with AI detectors' raises privacy and IP concerns. P50 (protect personal data) is nearest; P49 is about students uploading course materials.",
+     "anchor": "Sharing student work and data with AI detectors also brings up serious ethical considerations for",
+     "frag_start": "Sharing student work and data",
+     "frag_end": "work to AI training materials.",
+     "policy": "Sharing student work and data with AI detectors raises serious ethical considerations for privacy, intellectual property, and adding student work to AI training materials.",
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data",
+      "intellectual-property",
+      "detection-tools"
+     ],
+     "fit_note": "Concerns student work given to detectors by staff, covering IP and AI training use as well as privacy. | A privacy and IP concern specifically about uploading student work to detectors",
+     "resolution_why": "Coder A coded unit_stance neutral, coder B restrict. The sentence only says that sharing student work with detectors 'brings up serious ethical considerations'; it does not forbid or limit the practice, so neutral. Type, actor, phase and modality agree."
+    },
+    {
+     "why": "Sets what is not enough to find misconduct: 'AI detectors alone' cannot be 'a sufficient standard of proof'. P69 covers detector output as only supporting evidence; chosen over P39, which says detectors are not relied on at all.",
+     "anchor": "should not allow for AI detectors alone to constitute a sufficient standard of proof",
+     "frag_start": "Evidentiary standards for academic misconduct",
+     "frag_end": "a sufficient standard of proof.",
+     "policy": "Evidentiary standards for academic misconduct should not allow AI detectors alone to constitute a sufficient standard of proof.",
+     "actor": "admin",
+     "phase": "when-misuse",
+     "modality": "should-not",
+     "policy_type": "P69",
+     "unit_stance": "restrict",
+     "topics": [
+      "detection-tools",
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Detector results 'may be included as evidence but are insufficient on their own': detector output as supporting evidence only, matching the broadened P69.",
+     "anchor": "GAI detector results may be included as evidence but are insufficient on their own.",
+     "frag_start": "GAI detector results may be",
+     "frag_end": "are insufficient on their own.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P69",
+     "unit_stance": "permit",
+     "topics": [
+      "detection-tools",
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Names the kinds of evidence to weigh with AI detection: 'course materials, student work, credible witness accounts, and faculty expertise'. This is P69 (kinds of evidence to weigh).",
+     "anchor": "Address multiple, possible sources of evidence for consideration in conjunction with AI detection",
+     "frag_start": "Address multiple, possible sources of",
+     "frag_end": "reasonably additive to the case.”",
+     "policy": "Evidentiary standards address multiple possible sources of evidence considered in conjunction with AI detection, such as course materials, student work, credible witness accounts, and faculty expertise in their fields.",
+     "actor": "admin",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P69",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools",
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Principle statement: 'All students need equitable access to key resources when GAI is taught or used', matching P51 (equity and access). The privacy guidance half is coded in a later unit.",
+     "anchor": "All students need equitable access to key resources when GAI is taught or used",
+     "frag_start": "All students need equitable access",
+     "frag_end": "and others’ privacy and data.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P51",
+     "unit_stance": "neutral",
+     "topics": [
+      "equity-access",
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "The second half of 'All students need equitable access to key resources ... as well as guidance on protecting their own and others' privacy and data' states a separate principle: students need privacy and data-protection guidance (P50). Coder A had put both halves in one P51 unit; the codebook requires one rule per unit.",
+     "anchor": "guidance on protecting their own and others' privacy and data",
+     "frag_start": "All students need equitable access to key",
+     "frag_end": "privacy and data.",
+     "policy": "All students need guidance on protecting their own and others' privacy and data when GAI is taught or used.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "Found by coder B only; coder A coded the whole sentence as one P51 unit and tagged privacy-data on it. The sentence joins two rules (equitable access; privacy guidance), so the second was kept as its own P50 unit."
+    },
+    {
+     "why": "Instructors using GAI 'are expected to ensure that all students have access to the necessary GAI tools', an equal-access duty (P51).",
+     "anchor": "Any instructor whose course explicitly includes the use of GAI tools is expected to ensure",
+     "frag_start": "Any instructor whose course explicitly",
+     "frag_end": "to the necessary GAI tools.",
+     "policy": "Any instructor whose course explicitly includes the use of GAI tools is expected to ensure that all students have access to the necessary GAI tools.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P51",
+     "unit_stance": "neutral",
+     "topics": [
+      "equity-access"
+     ]
+    },
+    {
+     "why": "Requires 'accommodations or ... accessible alternatives to their chosen GAI tools for students with disabilities'. P97 (accessibility) chosen over P51 because it is specific to disability access.",
+     "anchor": "implement accommodations or identify accessible alternatives to their chosen GAI tools for students with disabilities",
+     "frag_start": "The instructor is also responsible",
+     "frag_end": "tools for students with disabilities.",
+     "policy": "The instructor is responsible for collaborating with appropriate campus partners (IS, CLASS, etc.) to implement accommodations or identify accessible alternatives to their chosen GAI tools for students with disabilities.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P97",
+     "unit_stance": "neutral",
+     "topics": [
+      "equity-access"
+     ]
+    },
+    {
+     "why": "Fee-based tools: 'instructors should follow existing university processes for transparency about the cost of required course materials'. It sets a cost-transparency duty for required tools, which P51 covers (equity of access). It is a duty tied to choosing and listing the tools, so before-course.",
+     "anchor": "instructors should follow existing university processes for transparency about the cost of required course materials",
+     "frag_start": "If any fee-based GAI tools",
+     "frag_end": "cost of required course materials.",
+     "policy": "If any fee-based GAI tools are used for a particular course, instructors should follow existing university processes for transparency about the cost of required course materials.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P51",
+     "unit_stance": "neutral",
+     "topics": [
+      "equity-access",
+      "course-provided-tools"
+     ],
+     "fit_note": "Requires cost transparency for fee-based tools; it does not say paid tools must not be required. | Requires cost transparency for fee-based tools rather than forbidding required paid tools",
+     "resolution_why": "Coder A coded phase course-start, coder B before-course. The source ties the duty to 'existing university processes for transparency about the cost of required course materials', which operate when materials are selected and listed, i.e. during course set-up. Final: before-course."
+    },
+    {
+     "why": "'Instructors are asked to use university-licensed or university-recommended free tools whenever possible' points to institution-approved tools (P92); P17 is for one course's own tool.",
+     "anchor": "use university-licensed or university-recommended free tools whenever possible",
+     "frag_start": "Instructors are asked to use",
+     "frag_end": "free tools whenever possible.",
+     "policy": "Instructors are asked to use university-licensed or university-recommended free tools whenever possible.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P92",
+     "unit_stance": "encourage",
+     "topics": [
+      "course-provided-tools",
+      "equity-access"
+     ]
+    },
+    {
+     "why": "Asks instructors to 'Share university resources ... for protecting their privacy, as well as personal and university data', a data-protection practice (P50).",
+     "anchor": "Share university resources for students that explain best practices for protecting their privacy",
+     "frag_start": "Share university resources for students",
+     "frag_end": "data when using GAI tools.",
+     "policy": "Instructors share university resources for students that explain best practices for protecting their privacy, as well as personal and university data when using GAI tools.",
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "University commitment to 'Building capacity and specialized knowledge of GAI among departments' handling accessibility; P97 covers accessibility of AI tools.",
+     "anchor": "Building capacity and specialized knowledge of GAI among departments that typically respond to questions of",
+     "frag_start": "Building capacity and specialized knowledge",
+     "frag_end": "questions of technology accessibility (e.g.",
+     "policy": "The University will take a proactive approach to the accessibility of GAI tools by building capacity and specialized knowledge of GAI among departments that typically respond to questions of technology accessibility.",
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P97",
+     "unit_stance": "neutral",
+     "topics": [
+      "equity-access"
+     ],
+     "fit_note": "Full item also commits to building capacity among accessibility departments",
+     "resolution_why": "Coder A coded modality must, coder B informs. The source says 'The University will take a proactive approach to the accessibility of GAI tools by: Building capacity ...', a commitment by the institution rather than a fact, so must (same for the next unit)."
+    },
+    {
+     "why": "Commits the university to 'student-facing resources that identify common barriers to accessibility in GAI tools', which is P97.",
+     "anchor": "Offering student-facing resources that identify common barriers to accessibility in GAI tools",
+     "frag_start": "Offering student-facing resources that identify",
+     "frag_end": "students who use assistive technology.",
+     "policy": "The University will take a proactive approach to the accessibility of GAI tools by offering student-facing resources that identify common barriers to accessibility in GAI tools and guidance on how to select tools that best fit the needs of students who use assistive technology.",
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P97",
+     "unit_stance": "neutral",
+     "topics": [
+      "equity-access"
+     ],
+     "resolution_why": "Coder A coded modality must, coder B informs. Same sentence frame as the previous unit: 'The University will take a proactive approach ... by ... Offering student-facing resources'. A commitment, so must."
+    },
+    {
+     "why": "Encourages using GAI as an accessibility aid: 'Consider ways to utilize the multi-modal capabilities ... to make materials and projects accessible'. P97 includes AI as an accessibility aid.",
+     "anchor": "Consider ways to utilize the multi-modal capabilities of GAI tools",
+     "frag_start": "Consider ways to utilize the",
+     "frag_end": "descriptions for a visual project.",
+     "policy": "Instructors, students, and staff consider ways to utilize the multi-modal capabilities of GAI tools to make materials and projects accessible to classmates and to a broader audience, e.g. generating a transcript for a podcast or video, generating written descriptions for a visual project.",
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P97",
+     "unit_stance": "encourage",
+     "topics": [
+      "equity-access",
+      "permitted-uses"
+     ]
+    },
+    {
+     "why": "The resource link points departments and instructors to 'accessibility testing for ... selecting new GAI tools'; it directs readers to further guidance (P115).",
+     "anchor": "contact information for accessibility testing for departments and instructors selecting new GAI tools",
+     "frag_start": "for basic principles of digital",
+     "frag_end": "instructors selecting new GAI tools.",
+     "policy": "Technology Accessibility at WFU offers basic principles of digital accessibility and contact information for accessibility testing for departments and instructors selecting new GAI tools.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P115",
+     "unit_stance": "neutral",
+     "topics": [
+      "equity-access"
+     ],
+     "fit_note": "Resources for instructors and departments selecting GAI tools",
+     "resolution_why": "Coder A coded actor admin, coder B instructor. The resource is described as 'for departments and instructors selecting new GAI tools', so the reader it is addressed to is the instructor (and departments), not the office offering it. Final: instructor."
+    },
+    {
+     "why": "'The University should empower instructors to investigate and explore GAI tools' through 'professional development opportunities': support for faculty learning (P63).",
+     "anchor": "The University should empower instructors to investigate and explore GAI tools",
+     "frag_start": "The University should empower instructors",
+     "frag_end": "explore GAI tools and to",
+     "policy": "The University should empower instructors to investigate and explore GAI tools and to develop pedagogical skills for equipping their students to engage thoughtfully with the use and implications of GAI through a range of ongoing professional development opportunities.",
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P63",
+     "unit_stance": "encourage",
+     "topics": [
+      "ai-literacy-career",
+      "instructor-staff-use"
+     ],
+     "resolution_why": "Coder A coded unit_stance neutral, coder B encourage. The university 'should empower instructors to investigate and explore GAI tools', a recommendation to support exploring AI, so encourage. B also split the sentence into two units (explore tools; develop pedagogical skills); both clauses are one professional-development provision, so kept as one unit and dropped B's second as a duplicate."
+    },
+    {
+     "why": "Recommends leaders 'support the generation of GAI Discussion Frameworks among faculty', i.e. faculty communities that learn about AI (P63).",
+     "anchor": "The AI Working Group for Academics recommends the Provost, Deans, and other academic leaders support",
+     "frag_start": "The AI Working Group for",
+     "frag_end": "school, department, area, or program.",
+     "policy": "The AI Working Group for Academics recommends the Provost, Deans, and other academic leaders support the generation of GAI Discussion Frameworks among faculty connected by school, department, area, or program.",
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution",
+      "instructor-staff-use"
+     ],
+     "fit_note": "Faculty discussion groups at unit level; support is organisational rather than workshops or advice. | Coder B (P109): Recommends program-level faculty conversations; it does not ask instructors to align their rules",
+     "resolution_why": "Coder A coded P63, coder B P109. Leaders are asked to 'support the generation of GAI Discussion Frameworks among faculty' to 'advance understanding' of how GAI is taught and changes faculty work: a faculty-learning community. Aligning rules (P109) is not asked here. Final: P63 with both fit notes; unit_stance neutral."
+    },
+    {
+     "why": "Recommends units 'plan for an ongoing way to continue to address GAI impacts', choose topics over time and report 'progress updates in annual reports'. It is about unit-level review and reporting, not revisiting a written policy (P54) or evidence gathering (P55).",
+     "anchor": "We recommend that academic units plan for an ongoing way to continue to address GAI",
+     "frag_start": "We recommend that academic units",
+     "frag_end": "progress updates in annual reports.",
+     "policy": "Academic units plan for an ongoing way to continue to address GAI impacts together, select individual topics to review over time, and give progress updates in annual reports.",
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "should",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ],
+     "uncovered_note": "Academic units should plan ongoing discussion of GAI impacts and report progress in annual reports.",
+     "resolution_why": "Coder A coded UNCOVERED, coder B P54. The sentence asks units to 'plan for an ongoing way to continue to address GAI impacts', 'select individual topics to review over time' and 'give progress updates in annual reports'. P54 is revisiting a written policy; this is units reviewing topics and reporting progress, not revising a policy. Kept UNCOVERED."
+    },
+    {
+     "why": "'The topics are neither required nor exhaustive' tells readers the Discussion Framework questions are optional prompts, not requirements. It is a scope statement for the framework (P56), and it matters for reading the many discussion questions as non-binding.",
+     "anchor": "The topics are neither required nor exhaustive",
+     "frag_start": "The following topics align with the guiding",
+     "frag_end": "support productive conversations among colleagues.",
+     "policy": "The Discussion Framework topics are neither required nor exhaustive and are intended to support productive conversations among colleagues.",
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "governance"
+     ],
+     "fit_note": "Clarifies the optional status of the discussion framework",
+     "resolution_why": "Found by coder B only. Checked the source: a real scope statement that sets the status of the discussion topics as optional, so kept (P56, informs)."
+    },
+    {
+     "why": "'Students need clear guidance in every class regarding the permitted use of GAI technology' restates the clear-expectations requirement (P09) as a program discussion topic.",
+     "anchor": "Students need clear guidance in every class regarding the permitted use of GAI technology",
+     "frag_start": "Academic integrity and learning: Students",
+     "frag_end": "inappropriate use of GAI technologies.",
+     "policy": "Students need clear guidance in every class regarding the permitted use of GAI technology and its role, if any, in their learning and skills development.",
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "fit_note": "Also asks for clear communication of consequences, which is partly P123",
+     "resolution_why": "Coder A coded modality informs, coder B should. 'Students need clear guidance in every class regarding the permitted use of GAI technology' states what must be provided; as a recommended discussion topic it is should. Type, actor and phase agree (P09). The consequences clause was split into its own unit (next), as coder A did."
+    },
+    {
+     "why": "'clear communication about the consequences of inappropriate use' says handling of misuse should be stated up front, matching P123; P37 does not fit because no penalties are named.",
+     "anchor": "they need clear communication about the consequences of inappropriate use of GAI technologies",
+     "frag_start": "Academic integrity and learning: Students",
+     "frag_end": "inappropriate use of GAI technologies.",
+     "policy": "Students need clear communication about the consequences of inappropriate use of GAI technologies.",
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P123",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions",
+      "syllabus-communication"
+     ],
+     "resolution_why": "Found by coder A only; coder B folded this clause into its P09 unit with a fit_note ('partly P123'). Checked against the source: 'they need clear communication about the consequences of inappropriate use of GAI technologies' is a separate rule (state consequences), so kept as its own unit. Modality set to should to match the neighbouring unit from the same sentence."
+    },
+    {
+     "why": "Department discussions 'will provide an opportunity for instructors to share a range of perspectives and scenarios for the permission or prohibition of GAI in the pursuit of course or program outcomes'. It ties permit-or-prohibit decisions to learning outcomes (P83) and describes how programs deliberate.",
+     "anchor": "permission or prohibition of GAI in the pursuit of course or program outcomes",
+     "frag_start": "Department or program discussions will provide an",
+     "frag_end": "program outcomes.",
+     "policy": "Department or program discussions will provide an opportunity for instructors to share a range of perspectives and scenarios for the permission or prohibition of GAI in the pursuit of course or program outcomes.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P83",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale",
+      "instructor-discretion"
+     ],
+     "fit_note": "Describes what program discussions provide; no permission or ban is set.",
+     "resolution_why": "Found by coder B only. Checked the source: the sentence is about how programs decide on permission or prohibition of GAI relative to outcomes, relevant to the delegation structure, so kept (P83, informs)."
+    },
+    {
+     "why": "Asks instructors to seek 'consensus on approaches to GAI uses in multiple-section courses', aligning rules across sections (P109).",
+     "anchor": "Program discussions should strive, where possible and relevant, for consensus on approaches to GAI uses",
+     "frag_start": "Program discussions should strive, where",
+     "frag_end": "as prerequisites to other courses.",
+     "policy": "Program discussions should strive, where possible and relevant, for consensus on approaches to GAI uses in multiple-section courses, especially those that serve as prerequisites to other courses.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P109",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "default-stance"
+     ]
+    },
+    {
+     "why": "Asks programs to consider whether 'additional or alternative measures for making learning visible' are needed because of AI, which is assessment redesign (P35).",
+     "anchor": "how GAI may affect typical disciplinary assessments and demonstrations of learning",
+     "frag_start": "A critical discussion topic includes",
+     "frag_end": "measures for making learning visible.",
+     "policy": "A critical discussion topic includes how GAI may affect typical disciplinary assessments and demonstrations of learning and whether the projected impact requires additional or alternative measures for making learning visible.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design"
+     ],
+     "fit_note": "Discussion prompt about possible redesign, not a required redesign. | Posed as a discussion topic, not a directive to redesign"
+    },
+    {
+     "why": "'How do students show the expected learning in various assignments that are typical in the curriculum?' is a discussion question asking programs to rethink demonstrations of learning in light of GAI: assessment redesign (P35).",
+     "anchor": "How do students show the expected learning in various assignments",
+     "frag_start": "How do students show the expected learning",
+     "frag_end": "typical in the curriculum?",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design"
+     ],
+     "fit_note": "A question for discussion rather than a rule",
+     "resolution_why": "Found by coder B only. Checked the source: a discussion question that follows the assessment-redesign topic, parallel to the other discussion questions both coders coded, so kept (P35, informs)."
+    },
+    {
+     "why": "'Faculty should review guidelines from school/College honor codes and judicial frameworks' tells faculty to read the integrity rules that apply to them. P102 (stay informed about current guidance) fits better than P78, which is about students learning course rules, and P36, which classifies misuse.",
+     "anchor": "Faculty should review guidelines from school/College honor codes and judicial frameworks",
+     "frag_start": "Faculty should review guidelines from school/College",
+     "frag_end": "academic misconduct)",
+     "policy": "Faculty should review guidelines from school/College honor codes and judicial frameworks.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P102",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions",
+      "accountability-understanding"
+     ],
+     "fit_note": "Addressed to faculty and covers reading honor-code guidance. Coder B (P78, students learn and follow course rules): Addressed to faculty, not students.",
+     "resolution_why": "Coder B coded this faculty-review instruction as P78 (own unit); coder A merged it into the P85 unit. It is a separate rule addressed to faculty. P78 is about students following course rules, so P102 (keep up with the institution's current guidance) fits better. Kept as its own unit."
+    },
+    {
+     "why": "'these groups may set new expectations for GAI-related academic misconduct' says honor-code and judicial bodies may add their own AI misconduct rules: units set their own rules (P85). The faculty-review instruction in the same bracket is coded separately.",
+     "anchor": "these groups may set new expectations for GAI-related academic misconduct",
+     "frag_start": "Faculty should review guidelines from",
+     "frag_end": "expectations for GAI-related academic misconduct)",
+     "policy": "School and College honor codes and judicial frameworks may set new expectations for GAI-related academic misconduct.",
+     "actor": "admin",
+     "phase": "general",
+     "modality": "may",
+     "policy_type": "P85",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions",
+      "instructor-discretion"
+     ],
+     "resolution_why": "Coder A coded one P85 unit (instructor, before-course, should) covering both the faculty-review instruction and the 'may set new expectations' clause; coder B split them. They are two rules: 'Faculty should review guidelines' (addressed to faculty) and 'these groups may set new expectations' (addressed to honor-code bodies, a permission). Split into two units; this one takes coder B's actor admin, phase general, modality may. The faculty-review unit is added separately."
+    },
+    {
+     "why": "Resource list entry 'CAT syllabus statement examples' supplies sample syllabus language, which is P110.",
+     "anchor": "CAT syllabus statement examples",
+     "frag_start": "CAT syllabus statement examples",
+     "frag_end": "CAT syllabus statement examples",
+     "policy": "The Center for the Advancement of Teaching provides syllabus statement examples (WFU).",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P110",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "fit_note": "Also lists a short course and tools for developing policies"
+    },
+    {
+     "why": "'CAT tools for developing GAI use policies' is an institutional template or tool for instructors; P110 is the nearest type.",
+     "anchor": "CAT tools for developing GAI use policies",
+     "frag_start": "CAT tools for developing GAI",
+     "frag_end": "for developing GAI use policies",
+     "policy": "The Center for the Advancement of Teaching provides tools for developing GAI use policies.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P110",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "fit_note": "Tools for building a policy, not only sample statements.",
+     "resolution_why": "Found by coder A only; coder B merged it into one P110 unit with a fit_note ('also lists a short course and tools for developing policies'). The source lists 'CAT tools for developing GAI use policies' as a distinct resource from 'CAT syllabus statement examples', so both kept as units."
+    },
+    {
+     "why": "Restates the expectation that 'instructors have a responsibility to ensure ... equitable access to tools and resources, including options for disability accommodations', an equity rule (P51).",
+     "anchor": "instructors have a responsibility to ensure that students will have equitable access to tools and",
+     "frag_start": "Equity and access: University expectations",
+     "frag_end": "including options for disability accommodations.",
+     "policy": "University expectations state that when GAI is taught or used in assignments, instructors have a responsibility to ensure that students will have equitable access to tools and resources, including options for disability accommodations.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P51",
+     "unit_stance": "neutral",
+     "topics": [
+      "equity-access"
+     ]
+    },
+    {
+     "why": "Suggests programs agree on common tools because it 'improves equitable access' when fee-based platforms are required; the stated reason is equity (P51).",
+     "anchor": "Agreement on using the same tools across courses in the curriculum, where possible, also improves",
+     "frag_start": "Agreement on using the same",
+     "frag_end": "use of fee-based GAI platforms.",
+     "policy": "Agreement on using the same tools across courses in the curriculum, where possible, improves equitable access, especially if multiple courses in the same program require the use of fee-based GAI platforms.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P51",
+     "unit_stance": "neutral",
+     "topics": [
+      "equity-access",
+      "course-provided-tools"
+     ],
+     "fit_note": "Recommends agreeing on common tools across a program's courses. | Coder B (P109): Coordination is about tool choice to protect equity, not about AI rules",
+     "resolution_why": "Coder A coded P51 informs, coder B P109 should. The sentence says agreement on common tools across a program's courses 'also improves equitable access, especially if multiple courses ... require the use of fee-based GAI platforms'. The stated purpose is equity of access and it concerns tool choice, not AI rules, so P51 (P109 covers aligning rules). It states a benefit rather than directing, so informs."
+    },
+    {
+     "why": "Recommends departments 'include instruction in GAI use and best practices somewhere in their curriculum', curricular AI literacy (P70); P44 is the career-skill argument and this sentence's reason is students' existing use.",
+     "anchor": "the AIWG strongly recommends departments include instruction in GAI use and best practices somewhere in",
+     "frag_start": "As students are already using",
+     "frag_end": "practices somewhere in their curriculum.",
+     "policy": "As students are already using GAI across all disciplines, the AIWG strongly recommends departments include instruction in GAI use and best practices somewhere in their curriculum.",
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P70",
+     "unit_stance": "encourage",
+     "topics": [
+      "ai-literacy-career",
+      "learning-rationale"
+     ],
+     "resolution_why": "Coder A coded P70, coder B P44. The sentence recommends that 'departments include instruction in GAI use and best practices somewhere in their curriculum', i.e. curricular AI literacy for students (P70). P44 rests on AI use being a professional skill employers expect, which this sentence does not say (its reason is that 'students are already using GAI'). Coder B's extra unit for the clause 'As students are already using GAI across all disciplines' was dropped as part of the same sentence and rule."
+    },
+    {
+     "why": "'GAI may not be an appropriate learning or skills development tool in all courses' says AI may be left out of a course because of its learning purpose, which ties the AI decision to learning aims (P83). The second clause, about instructors' awareness, is coded separately.",
+     "anchor": "GAI may not be an appropriate learning or skills development tool in all courses",
+     "frag_start": "Using GAI as a learning",
+     "frag_end": "use across their shared curricula.",
+     "policy": "GAI may not be an appropriate learning or skills development tool in all courses.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P83",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale",
+      "instructor-discretion"
+     ],
+     "resolution_why": "Coder A coded one P109 unit for the whole sentence; coder B coded P83 for the first clause only. The sentence contains two rules, so it was split. The first clause (AI may not suit all courses for learning reasons) is P83, informs. The second clause ('program instructors should be aware of GAI use across their shared curricula') was added as a separate P109 unit."
+    },
+    {
+     "why": "The second half of the sentence says 'program instructors should be aware of GAI use across their shared curricula', asking instructors in a program to know what colleagues do. P109 is the nearest type; it asks for awareness, not for aligning rules.",
+     "anchor": "program instructors should be aware of GAI use across their shared curricula",
+     "frag_start": "but program instructors should be",
+     "frag_end": "across their shared curricula.",
+     "policy": "Program instructors should be aware of GAI use across their shared curricula.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P109",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "governance"
+     ],
+     "fit_note": "Awareness of other courses' use rather than aligning rules.",
+     "resolution_why": "Split from the sentence that coder A coded as one P109 unit and coder B coded as P83 for the first clause only; the second clause is a separate rule."
+    },
+    {
+     "why": "'Discussion should support an understanding among instructors of the range of GAI use across the program's curricula' asks programs to map AI use across courses. It is a coordination aim (P109), though it asks for understanding, not aligned rules.",
+     "anchor": "understanding among instructors of the range of GAI use across the program's curricula",
+     "frag_start": "Discussion should support an understanding among",
+     "frag_end": "program's curricula.",
+     "policy": "Discussion should support an understanding among instructors of the range of GAI use across the program's curricula.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P109",
+     "unit_stance": "neutral",
+     "topics": [
+      "governance",
+      "instructor-discretion"
+     ],
+     "fit_note": "Mapping AI use across courses, not aligning rules",
+     "resolution_why": "Found by coder B only. Checked the source: a separate sentence that opens the questions about where GAI is taught and used, not a repeat of the earlier awareness clause, so kept (P109, should)."
+    },
+    {
+     "why": "Discussion question: 'How can or should the program coordinate GAI learning across courses', asking units to coordinate across courses (P109).",
+     "anchor": "How can or should the program coordinate GAI learning across courses",
+     "frag_start": "How can or should the",
+     "frag_end": "skills and issues of duplication?",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P109",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion"
+     ],
+     "fit_note": "Discussion question about coordinating AI learning (reinforcement and duplication) rather than aligning rules."
+    },
+    {
+     "why": "Prompts programs to decide where GAI does or does not 'enhance learning in this field/discipline', tying AI decisions to learning aims (P83).",
+     "anchor": "Identify ways GAI is best used or not used to enhance learning in this field/discipline.",
+     "frag_start": "Identify ways GAI is best",
+     "frag_end": "enhance learning in this field/discipline.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P83",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale",
+      "default-stance"
+     ],
+     "fit_note": "Discussion prompt, not a rule."
+    },
+    {
+     "why": "Asks what skills students need 'to use GAI successfully in relevant fields, disciplines, or professions', treating AI use as a professional skill (P44).",
+     "anchor": "Identify the skills and approaches necessary to use GAI successfully in relevant fields",
+     "frag_start": "Identify the skills and approaches",
+     "frag_end": "relevant fields, disciplines, or professions.",
+     "policy": "Programs identify the skills and approaches necessary to use GAI successfully in relevant fields, disciplines, or professions, and how fields and professions use GAI that students should learn about.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P44",
+     "unit_stance": "encourage",
+     "topics": [
+      "ai-literacy-career"
+     ],
+     "resolution_why": "Coder A coded unit_stance neutral, coder B encourage. Type P44, actor, phase and modality agree. Asking programs to identify the skills needed to use GAI successfully in professions treats AI use as a skill to teach, so encourage."
+    },
+    {
+     "why": "Asks whether 'standards for verifying and citing results obtained by GAI' should be taught; verification (P31) is the nearest type.",
+     "anchor": "standards for verifying and citing results obtained by GAI that should be taught in your",
+     "frag_start": "Are there standards for verifying",
+     "frag_end": "in your curriculum?",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P31",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding",
+      "disclosure-citation"
+     ],
+     "fit_note": "Covers both verifying and citing results as curriculum content; it is a question. | Raised as a question about teaching verification and citation standards; also touches P24",
+     "resolution_why": "Coder A coded modality should with the question as the policy text, coder B informs. The passage is a question to program faculty ('Are there standards for verifying and citing results obtained by GAI that should be taught in your curriculum?'), not a directive, so informs, and the anchor alone carries it (policy null). P31 kept by both."
+    },
+    {
+     "why": "Asks whether GAI is part of 'the program’s learning outcomes', linking AI to learning objectives (P83).",
+     "anchor": "Is GAI a part of the program’s learning outcomes now or in the future?",
+     "frag_start": "Is GAI a part of",
+     "frag_end": "now or in the future?",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P83",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale"
+     ],
+     "fit_note": "Question about whether AI is itself a learning outcome."
+    },
+    {
+     "why": "'All faculty should be aware of the increasing number of ways faculty may choose to use GAI' tells faculty to keep up with AI developments (P102).",
+     "anchor": "All faculty should be aware of the increasing number of ways faculty may choose to",
+     "frag_start": "Faculty use of GAI as",
+     "frag_end": "creative activities, and administrative tasks.",
+     "policy": "All faculty should be aware of the increasing number of ways faculty may choose to use GAI to enhance all aspects of their work, along with the opportunities and the risks that GAI technologies provide.",
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P102",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use"
+     ],
+     "fit_note": "Coder B (P59): Awareness of opportunities and risks rather than a specific permitted use",
+     "resolution_why": "Coder A coded P102 and phase general, coder B P59 and before-course. 'All faculty should be aware of the increasing number of ways faculty may choose to use GAI ... along with the opportunities and the risks' is a duty to stay informed (P102); it does not say which teaching tasks AI may be used for (P59). It is a standing expectation, so general."
+    },
+    {
+     "why": "'Ongoing discussions in the program should include peer and other professional association guidance on the appropriate use of GAI technologies', especially for tenure and promotion. It concerns faculty AI use in teaching, research and evaluation (P62, partly).",
+     "anchor": "peer and other professional association guidance on the appropriate use of GAI technologies",
+     "frag_start": "Ongoing discussions in the program should include",
+     "frag_end": "tenure and promotion criteria.",
+     "policy": "Ongoing discussions in the program should include peer and other professional association guidance on the appropriate use of GAI technologies in teaching, research, scholarship, creative activities and administrative tasks, especially as might impact the evaluation of activities in line with tenure and promotion criteria.",
+     "actor": "instructor",
+     "phase": "over-time",
+     "modality": "should",
+     "policy_type": "P62",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use",
+      "governance"
+     ],
+     "fit_note": "Covers teaching, research and evaluation of faculty work, not only research",
+     "resolution_why": "Found by coder B only. Checked the source: a real recommendation about what faculty discussions cover (professional guidance and tenure and promotion), so kept."
+    },
+    {
+     "why": "Prompts discussion of faculty AI use 'in teaching support work (outside the classroom, such as preparing syllabi, designing assignments, grading ...)', which is P59.",
+     "anchor": "Identify and discuss the ways faculty might use GAI in teaching support work",
+     "frag_start": "Identify and discuss the ways",
+     "frag_end": "recommendation, etc.) and administrative tasks.",
+     "policy": "Programs identify and discuss the ways faculty might use GAI in teaching support work outside the classroom, such as preparing syllabi, designing assignments, grading, writing letters of recommendation, and in administrative tasks.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P59",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use"
+     ],
+     "fit_note": "Discussion prompt about faculty uses; no use is permitted or banned."
+    },
+    {
+     "why": "'Understanding that GAI is useful in many areas and that the tools are embedded in our day-to-day software (Google suite, Canvas, etc.), conversations focused on best practices and risks, data security, and privacy will help faculty make informed choices.' It supports faculty staying informed (P102); it sets no rule about embedded tools, so P07 does not fit.",
+     "anchor": "conversations focused on best practices and risks, data security, and privacy",
+     "frag_start": "Understanding that GAI is useful",
+     "frag_end": "help faculty make informed choices.",
+     "policy": "Conversations focused on best practices and risks, data security, and privacy help faculty make informed choices, given that GAI tools are embedded in day-to-day software such as the Google suite and Canvas.",
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P102",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use",
+      "privacy-data"
+     ],
+     "fit_note": "Coder B (P07, AI built into editors and tools): Acknowledges AI embedded in everyday software but does not set a rule about it. The passage notes AI is embedded in everyday software but sets no rule about it; P102 covers the informed-choice aim.",
+     "resolution_why": "Found by coder B only (as P07). Checked the source: the sentence sets no rule for AI embedded in software, so P07 is a stretch; it says conversations on best practices and risks help faculty make informed choices, which is P102. Kept as P102, phase general."
+    },
+    {
+     "why": "Faculty AI use should be guided by 'meaningful and person-centered faculty-student engagement', guarding against displacing human interaction (P121); P59 covers which tasks, which this sentence does not name.",
+     "anchor": "commitment to meaningful and person-centered faculty-student engagement should guide these applications of GAI technology",
+     "frag_start": "In line with the Statement",
+     "frag_end": "these applications of GAI technology.",
+     "policy": "In line with the Statement of Principles, commitment to meaningful and person-centered faculty-student engagement should guide these applications of GAI technology.",
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P121",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use",
+      "learning-rationale"
+     ],
+     "fit_note": "Constraint on faculty AI use to protect faculty-student engagement. | Coder B (P59): Sets a guiding principle for instructor AI use rather than a specific allowed or banned task",
+     "resolution_why": "Coder A coded P121, phase general, neutral; coder B coded P59, during-work, restrict. 'Commitment to meaningful and person-centered faculty-student engagement should guide these applications of GAI technology' warns against AI displacing human engagement, which is P121 (P59 is about which tasks AI may do). It sets a guiding principle and no ban, so neutral, and general rather than a specific work phase. Final follows coder A."
+    },
+    {
+     "why": "Asks programs to consider 'ethical considerations guiding these uses', weighing values before using AI (P118).",
+     "anchor": "What are the ethical considerations guiding these uses of GAI technology?",
+     "frag_start": "What are the ethical considerations",
+     "frag_end": "these uses of GAI technology?",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P118",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment",
+      "instructor-staff-use"
+     ],
+     "fit_note": "Discussion question."
+    },
+    {
+     "why": "'Where can GAI provide benefits to faculty work without compromising engagement with students and their learning?' asks faculty to weigh benefits against effects on student engagement (P118).",
+     "anchor": "Where can GAI provide benefits to faculty work without compromising engagement with students",
+     "frag_start": "Where can GAI provide benefits to faculty",
+     "frag_end": "their learning?",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P118",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use",
+      "learning-rationale"
+     ],
+     "resolution_why": "Found by coder B only. Checked the source: a discussion question in the faculty-use list, parallel to the 'ethical considerations' question both coders coded as P118, so kept."
+    },
+    {
+     "why": "Asks about 'expectations for disclosure of GAI usage' in faculty work, the instructor-disclosure type (P47).",
+     "anchor": "What are the expectations for disclosure of GAI usage in these contexts?",
+     "frag_start": "What are the expectations for",
+     "frag_end": "GAI usage in these contexts?",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P47",
+     "unit_stance": "neutral",
+     "topics": [
+      "disclosure-citation",
+      "instructor-staff-use"
+     ],
+     "fit_note": "Question about disclosure expectations; recipient of disclosure is not specified. | A question about disclosure expectations for faculty use, not a commitment to disclose to students"
+    },
+    {
+     "why": "'Are there any areas of GAI use the department considers inappropriate?' invites units to decide which faculty uses to rule out; P59 (instructor use of AI for teaching work) is the nearest type.",
+     "anchor": "Are there any areas of GAI use the department considers inappropriate?",
+     "frag_start": "Are there any areas of GAI use",
+     "frag_end": "inappropriate?",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P59",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use"
+     ],
+     "fit_note": "Discussion question; no use is banned or permitted.",
+     "resolution_why": "Found by coder B only. Checked the source: a discussion question about faculty AI uses the department considers inappropriate, so kept (P59, informs)."
+    },
+    {
+     "why": "Directs faculty doing 'administrative and operational work' to the Administrative Use Guidelines for security, licenses and procurement: administrative AI use (P76).",
+     "anchor": "faculty should consult the university",
+     "frag_start": "In performing administrative and operational",
+     "frag_end": "faculty should consult the university’s",
+     "policy": "In performing administrative and operational work for the university, faculty should consult the university's Administrative Use GAI Guidelines, especially for considerations of information and data security and privacy, university licenses and contracts, and procurement processes for purchasing GAI tools.",
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P76",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use",
+      "privacy-data"
+     ],
+     "fit_note": "Directs faculty to a separate administrative-use guideline rather than setting rules here"
+    },
+    {
+     "why": "Asks about 'emerging professional standards ... for GAI in research, publishing, citation, and ... authorship', i.e. AI in research and scholarship (P62).",
+     "anchor": "What are emerging professional standards in our fields for GAI in research, publishing, citation, and",
+     "frag_start": "What are emerging professional standards",
+     "frag_end": "and intellectual and creative authorship?",
+     "policy": "What are emerging professional standards in our fields for GAI in research, publishing, citation, and intellectual and creative authorship?",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P62",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use",
+      "intellectual-property"
+     ],
+     "fit_note": "Discussion question."
+    },
+    {
+     "why": "Describes how the guidelines were made: the Provost's Office 'organized an Artificial Intelligence Working Group for Academics that met from November 2023-February 2025' and reported in March 2025 (P84).",
+     "anchor": "organized an Artificial Intelligence Working Group for Academics",
+     "frag_start": "The Provost’s Office organized an",
+     "frag_end": "Wake Forest’s mission and goals.",
+     "policy": "The Provost's Office organized an Artificial Intelligence Working Group for Academics that met from November 2023-February 2025, and its final report was delivered to the Provost and Deans in March 2025.",
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P84",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ],
+     "fit_note": "Starts mid-sentence in the anchor; full sentence runs 'The Provost's Office organized ... teaching, learning, and research'"
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Reconciled from coderA and coderB. One document only (ai.wfu.edu academic guidelines); no school or computing-unit policy found; course layer deferred. About half the units are Discussion Framework questions and prompts, coded informs/should with fit_notes because they are prompts to programs, not rules. Both coders' fit_notes are merged; where the final type differs from a coder's, the note is prefixed with that coder's type. Coder A: Only document screened include. No school or computing-unit policy found per collect file. Discussion Framework questions were coded as informs or should discussion prompts with fit_notes. Coder B: Only one included document. Search for school or computing AI policy found nothing (per collect file). Many units are discussion questions from the Discussion Framework, coded as informs with fit notes. Several units use the nearest type with fit_note because no type matched exactly."
+}

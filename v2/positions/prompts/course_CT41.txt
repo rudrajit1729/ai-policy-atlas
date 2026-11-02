@@ -1,0 +1,45 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT41 "Fundamentals before AI" (Novices must learn the basics before relying on AI.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..20 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | california-berkeley | C1 | instructor | informs | fundamentals enable effective AI use | Currently, the most capable users of AI for programming are those who have a
+1 | california-berkeley | C1 | instructor | informs | unaided programming remains core goal | and manipulate programs, even without AI assistance, remains a core learning
+2 | carleton-college | C1 | instructor | informs | foundations must be learned unaided | you will be expected to know them without looking anything up in any professional computing setting
+3 | colorado-state | C2 | all | informs | reason: expertise needed before AI use | Developing such expertise requires putting in the effort to learn these topics without the assistance of these tools.
+4 | colorado-state | C4 | student | should | develop code without AI reliance | You should be able to develop code on your own without reliance on Teaching Assistants, classmates, or generative AI to guide you
+5 | george-mason | C6 | student | informs | build fundamentals without AI | You need to understand/apply fundamental concepts and skills without the use of AI tools.
+6 | georgia-tech | C4 | student | should | treat AI as scaffolding | AI should be treated
+7 | massachusetts-institute-technology | C2 | all | informs | reason: unaided coding skills essential | (1) reading, writing, and understanding code without AI assistance remain essential skills;
+8 | massachusetts-institute-technology | C2 | all | informs | reason: AI works best for skilled coders | (2) we believe AI assistance is used most effectively by practitioners who know how to construct correct, efficient, well-organized software
+9 | michigan-state | C1 | student | must | AI only after Exam 1, work alone | you may use AI only after Project 4 and Exam 1 and you must work independently, and not with another classmate.
+10 | michigan-state | C1 | student | must | AI only after Exam 1, work alone | you may use this option only after Project 4 and Exam 1 and you must work independently, and not with another student.
+11 | pennsylvania | C1 | instructor | informs | learn fundamentals before relying on AI | it's essential to develop a strong understanding of fundamental processes before relying on AI
+12 | rochester-institute-technology | C6 | all | informs | must master fundamentals | When learning fundamental skills, you need to ensure that you master
+13 | rose-hulman-institute-technology | C1 | instructor | informs | learn basics before using AI | walk before running; they are great tools, but for students ready to run.
+14 | rose-hulman-institute-technology | C6 | instructor | informs | need experience to judge AI output | cannot simply assume that an AI did good work.
+15 | texas-austin | C2 | instructor | informs | foundational course rationale | To be clear, this is a foundational course.
+16 | washington | C1 | instructor | informs | learn fundamentals before AI | This policy is grounded in a belief that AI tools can provide value when used responsibly
+17 | washington | C3 | all | informs | master simple tasks first | It is important to understand that you need to master simple
+18 | wellesley-college | C1 | all | informs | novices harmed by AI | novice learners might be more harmed rather than benefit from using them
+19 | wellesley-college | C6 | all | informs | prompting is easy to learn later | subsequent classes/contexts that allow it is a much easier skill to learn later, compared to the
+20 | wellesley-college | C6 | instructor | informs | novices harmed by AI | that novice learners might be more harmed rather than benefit from

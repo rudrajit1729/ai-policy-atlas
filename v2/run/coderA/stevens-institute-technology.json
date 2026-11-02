@@ -1,0 +1,225 @@
+{
+ "university": "Stevens Institute of Technology",
+ "slug": "stevens-institute-technology",
+ "state": "NJ",
+ "type": "R2",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "stevens-it-genai-guidance",
+   "layer": "university",
+   "unit": "Division of Information Technology",
+   "course": null,
+   "title": "Guidance for Appropriate Use of Generative Artificial Intelligence Tools at Stevens",
+   "url": "https://assets.stevens.edu/mviowpldu823/3iXQ74HU9dPDNmN0C4RFwl/b95a87a648e7b44033d9d41bba90b00e/Guidance_for_Appropriate_Use_of_Generative_Artificial_Intelligence_Tools_at_Stevens__May_29_2025_.pdf",
+   "date_or_term": "2025-05-29",
+   "stance": "restrict",
+   "tiers": [],
+   "summary": "Short IT-division guidance for employees on using generative AI: align with security and privacy policy, get approval for new uses, use licensed tools for Stevens data, and obtain extra review for grading, personnel and similar uses. It does not address student coursework or academic integrity.",
+   "stance_why": "The document does not ban AI, but it says 'Use of Stevens data is only permissible with licensed AI tools' and requires 'prior approval ... for new AI uses', so AI is permitted only in narrow, approved ways; it sets no coursework rule.",
+   "units": [
+    {
+     "why": "The opening sentence tells users that any AI use must align with security and privacy policies ('ensure it aligns with Stevens' Information Security Policy'); it binds everyone and is a compliance rule, so P77 fits and the modality is must.",
+     "anchor": "ensure it aligns with Stevens' Information Security Policy",
+     "frag_start": "When using Artificial Intelligence (AI)",
+     "frag_end": "any other relevant policies",
+     "policy": "When using AI, users ensure it aligns with Stevens' Information Security Policy, Privacy Policy, and any other relevant policies.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P77",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "This tells employees to get 'prior approval from your supervisor and/or department chair for new AI uses'. It is an approval gate for new uses, not a vetting of a tool, so P65 fits only partly.",
+     "anchor": "seek prior approval from your supervisor and/or department chair for new AI uses",
+     "frag_start": "Always consider the risks and",
+     "frag_end": "new AI uses in your work",
+     "policy": null,
+     "actor": "all",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P65",
+     "unit_stance": "restrict",
+     "topics": [
+      "instructor-staff-use",
+      "privacy-data"
+     ],
+     "fit_note": "The approval is of new uses of AI by a supervisor or chair, not a review of a tool or vendor."
+    },
+    {
+     "why": "'Always consider the risks and ethical implications' asks users to weigh ethics before using AI. It is advice (should); P53 names ethical concerns but this sentence names no specific harm, hence a partial fit.",
+     "anchor": "Always consider the risks and ethical implications",
+     "frag_start": "Always consider the risks and",
+     "frag_end": "implications, and seek",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P53",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment"
+     ],
+     "fit_note": "Only asks users to consider risks and ethical implications; it does not name bias, harm or environmental costs."
+    },
+    {
+     "why": "The text says 'additional consultation may be required' with named offices (Sponsored Projects, General Counsel, HR, IT, Compliance). It names who is consulted for some AI uses, a partial fit for P80 since it names no owner or enforcer.",
+     "anchor": "may necessitate consultation with the Office of Sponsored Projects, Office of the General Counsel",
+     "frag_start": "These may necessitate consultation with",
+     "frag_end": "and/or the Office of Compliance",
+     "policy": null,
+     "actor": "all",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P80",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ],
+     "fit_note": "Names offices to consult for certain AI uses; does not name an enforcer or exception process."
+    },
+    {
+     "why": "The guidance lists 'data sensitivity, regulatory compliance, ... intellectual property rights' as considerations. It points to data and IP protection, so P50 fits, but it only lists considerations without a rule.",
+     "anchor": "Key considerations include data sensitivity, regulatory compliance, ethical implications, user consent, data privacy",
+     "frag_start": "Key considerations include data sensitivity",
+     "frag_end": "intellectual property rights",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data",
+      "intellectual-property"
+     ],
+     "fit_note": "Lists considerations (including IP and consent) rather than stating a protection rule."
+    },
+    {
+     "why": "The data classification standards are offered as 'a reference for potential use of AI' and 'general guidance ... not exhaustive'. This frames how users decide what data may go to AI, a data-protection principle, so P50 with modality informs.",
+     "anchor": "Data Classification Standards can be used as a reference for potential use of AI",
+     "frag_start": "The Stevens Data Classification Standards",
+     "frag_end": "not exhaustive",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "The table says 'Use of Stevens data is only permissible with licensed AI tools, including Microsoft Copilot for Web with Data Protection and Zoom AI Companion' while logged in. It restricts Stevens data to licensed named tools, so P92; P50 is the general data rule but the specific demand is the licensed-tool requirement.",
+     "anchor": "Use of Stevens data is only permissible with licensed",
+     "frag_start": "Use of Stevens data is",
+     "frag_end": "via a Stevens account",
+     "policy": "Stevens data may be used with AI only in licensed AI tools, including Microsoft Copilot for Web with Data Protection and Zoom AI Companion, while logged in via a Stevens account.",
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P92",
+     "unit_stance": "restrict",
+     "topics": [
+      "course-provided-tools",
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "The table has a 'Prohibited for AI Use' column over highly confidential data (passwords, PII, records under NDAs). Column assignment is ambiguous in the extracted text, so I code the visible heading as prohibiting the listed sensitive and restricted data; P50 protects personal and confidential data.",
+     "anchor": "Prohibited for AI Use",
+     "frag_start": "Prohibited for AI Use",
+     "frag_end": "Prohibited for AI Use",
+     "policy": "Certain classes of Stevens data, such as the Sensitive and Restricted categories in the data classification table (e.g. personally identifiable information, passwords, records subject to NDAs), are prohibited for AI use.",
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "prohibit",
+     "topics": [
+      "privacy-data"
+     ],
+     "fit_note": "The source is a table with garbled column order; the mapping of data examples to the prohibited column is inferred from layout."
+    },
+    {
+     "why": "The sentence says use cases such as 'grading or assessment of student work' require 'additional review and consideration prior to use'. It conditions AI-assisted grading on review, which is P101; it is not a ban, so P46 does not fit.",
+     "anchor": "Certain use cases, such as grading or assessment of student work, recruitment, personnel, or",
+     "frag_start": "Certain use cases, such as grading",
+     "frag_end": "prior to use in AI.",
+     "policy": "Grading or assessment of student work requires additional review and consideration prior to use of AI.",
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P101",
+     "unit_stance": "restrict",
+     "topics": [
+      "instructor-staff-use",
+      "assessment-design"
+     ],
+     "fit_note": "Review is required jointly for grading, recruitment, personnel, legal and facial-recognition uses; no approval chain is specified."
+    },
+    {
+     "why": "The same sentence lists 'recruitment, personnel, or disciplinary decision-making' as uses needing additional review. A review condition on decisions about people maps to P73, though it requires review rather than stating that a human decides.",
+     "anchor": "disciplinary decision-making, legal analysis or advice, security tools using facial recognition, and any",
+     "frag_start": "Certain use cases, such as grading",
+     "frag_end": "prior to use in AI.",
+     "policy": "Recruitment, personnel and disciplinary decision-making, legal analysis or advice, and security tools using facial recognition require additional review and consideration prior to use of AI.",
+     "actor": "all",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P73",
+     "unit_stance": "restrict",
+     "topics": [
+      "instructor-staff-use",
+      "privacy-data"
+     ],
+     "fit_note": "Requires additional review before AI use; does not state that a human must make the final decision."
+    },
+    {
+     "why": "The sentence requires review for 'any non-public use of non-licensed AI tools with click-through agreements'. It is a review gate on unvetted tools, which fits P65.",
+     "anchor": "non-public use of non-licensed AI tools with click-through agreements, requires additional review",
+     "frag_start": "Certain use cases, such as grading",
+     "frag_end": "prior to use in AI.",
+     "policy": "Any non-public use of non-licensed AI tools with click-through agreements requires additional review and consideration prior to use.",
+     "actor": "all",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P65",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data",
+      "course-provided-tools"
+     ]
+    },
+    {
+     "why": "The guidance sends questions about privacy, compliance or security in AI use to a named address, 'Security@Stevens.edu'. It identifies a contact, a partial fit for P80 since it is not an owner or exception process.",
+     "anchor": "Security@Stevens.edu",
+     "frag_start": "For questions regarding privacy, compliance,",
+     "frag_end": "Security@Stevens.edu.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P80",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ],
+     "fit_note": "Gives a contact for questions; does not name an enforcement body or exception process."
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Only one included document, an IT-division guidance aimed at faculty and staff; no student coursework policy. The data table text is garbled in extraction."
+}

@@ -1,0 +1,1027 @@
+{
+ "university": "Grinnell College",
+ "slug": "grinnell-college",
+ "state": "IA",
+ "type": "liberal-arts",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "inaccessible",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "grinnell-honesty-work",
+   "layer": "university",
+   "unit": "Dean of the College / Academic Honesty Guide",
+   "course": null,
+   "title": "Academic Honesty Guide: Honesty in Academic Work",
+   "url": "https://www.grinnell.edu/about/leadership/offices-services/dean/academic-honesty/guide/honesty-in-academic-work",
+   "date_or_term": "2026-27 guide",
+   "text_file": "/Users/rudrajit/Documents/Current-Research/AI in education policy guidelines/.cache/text/v2-grinnell-honesty-work.txt",
+   "stance": "permit",
+   "tiers": [],
+   "summary": "The college-wide honesty policy treats AI as an outside source that must be cited and acknowledged. Uncited LLM text is a violation, instructors may set stricter assignment rules, and the document also lays out the review, outcome and appeal process.",
+   "stance_why": "The policy never bans AI; it names uncited use of an LLM as a violation (\"Quoting or paraphrasing language from a Large Language Model (LLM) or other AI service without citing\") and requires acknowledging \"assistance received from ... a Large Language Model or AI service\". AI is therefore allowed when acknowledged, with instructors setting extra rules, so permit.",
+   "units": [
+    {
+     "why": "The sentence names the core wrong as misrepresenting another's effort, \"whether derived from a machine-generated source or a person\", as your own, so it is the definition of the misconduct AI use can fall under. P36 (AI misrepresentation handled as academic dishonesty) fits better than P61, which would need a definition of AI or of the policy's scope.",
+     "anchor": "whether derived from a machine-generated source or a person",
+     "frag_start": "Fundamentally, violation of these principles misrepresents",
+     "frag_end": "a person — as your own",
+     "policy": "Violating academic honesty principles means misrepresenting another's intellectual effort, whether derived from a machine-generated source or a person, as your own.",
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "collaboration-analogy",
+      "prohibited-uses"
+     ],
+     "resolution_why": "Coder A: student/general/informs/P36. Coder B: all/general/informs/P61. The passage defines the honesty violation and only mentions machine-generated sources in passing; it does not define AI or the policy scope, so P61 does not fit. The text addresses students (\"as your own\"), so actor is student."
+    },
+    {
+     "why": "The list of violations includes \"Quoting or paraphrasing language from a Large Language Model (LLM) or other AI service without citing\", making uncited AI text an academic honesty violation. P36 fits (classified as misconduct); P24 is about the duty to disclose, whereas this sentence classifies the failure as a violation.",
+     "anchor": "language from a Large Language Model (LLM) or other AI service without citing",
+     "frag_start": "Quoting or paraphrasing language from",
+     "frag_end": "submit or present",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "disclosure-citation",
+      "integrity-sanctions"
+     ],
+     "resolution_why": "Coder A: P28 with unit_stance permit. Coder B: P36 restrict. The source lists uncited LLM text among behaviors that \"violate ... Grinnell's academic honesty policy\". That is a classification of the act as a violation (P36), not a rule about how disclosure is treated in grading (P28). Uncited use is barred, so restrict."
+    },
+    {
+     "why": "This item treats translation software for homework as a violation unless the instructor gives permission, which is a restriction on a language tool for prose, with the permission handed to the instructor. P18 (prose tools such as translation) fits better than P04.",
+     "anchor": "translation software or consulting with a speaker with advanced proficiency to do homework",
+     "frag_start": "Using translation software or consulting with",
+     "frag_end": "permission of the instructor.",
+     "policy": "Using translation software or consulting with a speaker with advanced proficiency to do homework or other assignments without permission of the instructor is a violation of the academic honesty policy.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P18",
+     "unit_stance": "restrict",
+     "topics": [
+      "prohibited-uses",
+      "writing-assistance"
+     ]
+    },
+    {
+     "why": "The provision says students \"will receive academic outcomes\" \"whether intentionally or through carelessness\", so careless uncited AI use is also sanctioned. Classed P36 (handled via integrity process); P37 is only the penalty list, coded separately.",
+     "anchor": "whether intentionally or through carelessness, will receive academic outcomes",
+     "frag_start": "Students who are found responsible",
+     "frag_end": "academic outcomes",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The sentence lists outcomes students found responsible face: \"failure on the assignment, a lower course grade, ineligibility to graduate with honors\", a stated range of penalties, so P37. It applies to students found responsible, so the actor is student.",
+     "anchor": "failure on the assignment, a lower course grade, ineligibility to graduate with honors",
+     "frag_start": "The range of potential outcomes may",
+     "frag_end": "dismissal from the College.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "resolution_why": "Coder A: student. Coder B: admin. The sentence begins \"Students who are found responsible\", so the penalties bind students; type P37 agreed."
+    },
+    {
+     "why": "By submitting work for a grade a student \"is claiming that its form and content represent your own original work\", the ownership principle underlying all AI rules. P29 (students own everything they submit).",
+     "anchor": "you are claiming that its form and content represent your own original work",
+     "frag_start": "When you submit a piece of work",
+     "frag_end": "specifically cited other sources",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P29",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "The College 'expects you to take responsibility for that contribution', a general student-ownership statement framing the whole policy. P29 matches.",
+     "anchor": "it expects you to take responsibility for that contribution",
+     "frag_start": "The College presumes that your work",
+     "frag_end": "for that contribution.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P29",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "resolution_why": "Only Coder A coded this. The sentence \"it expects you to take responsibility for that contribution\" is a real ownership expectation (P29), so it is kept."
+    },
+    {
+     "why": "\"If you collaborate on any phase of an assignment, you must indicate what work is your own and what emerged from the collaboration\" requires attribution of assistance, which the policy later extends to AI. P24 (disclose with submission).",
+     "anchor": "you must indicate what work is your own and what emerged from the collaboration",
+     "frag_start": "If you collaborate on any phase",
+     "frag_end": "emerged from the collaboration",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "require",
+     "topics": [
+      "disclosure-citation",
+      "collaboration-analogy"
+     ],
+     "resolution_why": "Only Coder B coded this. The collaboration-attribution duty is later extended to LLM assistance in the same section, so it is kept as a disclosure rule (P24)."
+    },
+    {
+     "why": "\"cite the source of any expressions, ideas, or observations not your own\" is the general citation duty that, with the AI-specific clauses, applies to AI sources. P24.",
+     "anchor": "you must cite the source of any expressions, ideas, or observations not your own",
+     "frag_start": "Thus, to avoid plagiarizing, you must cite",
+     "frag_end": "any other source of information",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "require",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "resolution_why": "Only Coder B coded this. The general citation duty covers \"any other source\" including electronic ones, and the document extends it to LLMs, so it is kept."
+    },
+    {
+     "why": "\"When in doubt, cite\" tells students what to do when unsure whether a use needs acknowledgment. P10 fits (when unsure, take the safe side), though it concerns citation rather than asking.",
+     "anchor": "Rule of thumb: When in doubt, cite.",
+     "frag_start": "Rule of thumb: When in doubt, cite.",
+     "frag_end": "Rule of thumb: When in doubt, cite.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P10",
+     "unit_stance": "neutral",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "resolution_why": "Only Coder B coded this. \"When in doubt, cite\" is stated advice for uncertain cases, kept as P10 (act safely when unsure)."
+    },
+    {
+     "why": "\"if you have any doubts about how to cite sources, ask your instructor\" tells students to ask before acting when unsure. P10.",
+     "anchor": "if you have any doubts about how to cite sources, ask your instructor",
+     "frag_start": "Therefore, you should cite your sources",
+     "frag_end": "ask your instructor",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P10",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "disclosure-citation"
+     ],
+     "resolution_why": "Only Coder B coded this. \"ask your instructor\" about citation doubts is a real instruction, kept as P10."
+    },
+    {
+     "why": "\"each instructor establishes rules about such collaboration for their course\", with individual work the \"default assumption\", hands the decision on collaboration (and, by the later sentence, AI assistance) to instructors. P04.",
+     "anchor": "each instructor establishes rules about such collaboration for their course",
+     "frag_start": "At Grinnell, each instructor establishes rules",
+     "frag_end": "for their course",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion"
+     ],
+     "resolution_why": "Coder A: course-start. Coder B: before-course. Instructors establish these rules when designing the course, before it starts; kept before-course. Type P04 agreed."
+    },
+    {
+     "why": "\"If you are in doubt about the extent or nature of collaboration permitted ... ask your instructor to clarify\" directs students to ask first. P10.",
+     "anchor": "ask your instructor to clarify the rules",
+     "frag_start": "If you are in doubt about the extent",
+     "frag_end": "clarify the rules",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P10",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"To behave ethically, you must follow the rules of each instructor in each class\" says rules differ by course and do not carry over. P11 fits.",
+     "anchor": "you must follow the rules of each instructor in each class",
+     "frag_start": "To behave ethically, you must follow",
+     "frag_end": "each instructor in each class",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "must",
+     "policy_type": "P11",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion"
+     ],
+     "resolution_why": "Only Coder B coded this. \"you must follow the rules of each instructor in each class\" says rules differ by course; kept as P11."
+    },
+    {
+     "why": "\"follow the instructions in the syllabus or assignment prompt regarding how collaboration should be indicated\" points to course-level instructions for acknowledging assistance. P04 (rule set by instructor/assignment) chosen over P09, which would require instructors to write a statement.",
+     "anchor": "follow the instructions in the syllabus or assignment prompt regarding how collaboration should be indicated",
+     "frag_start": "When collaboration is permitted on work",
+     "frag_end": "should be indicated or recognized",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "must",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "instructor-discretion"
+     ],
+     "resolution_why": "Only Coder B coded this. It tells students to follow syllabus or assignment instructions on indicating assistance; a real instruction, kept as P04."
+    },
+    {
+     "why": "This passage says that where there are no specific instructions, assistance \"from a Large Language Model or AI service\" must be cited, and so extends the citation duty to LLM help. P24 because it is about acknowledging AI use; unit stance is permit because AI help is allowed once cited.",
+     "anchor": "includes assistance received from another person or from a Large Language Model or AI service",
+     "frag_start": "This includes assistance received from another",
+     "frag_end": "Large Language Model or AI service.",
+     "policy": "If there are no specific instructions, the ideas or work of others, including assistance received from a Large Language Model or AI service, must be clearly cited.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation",
+      "collaboration-analogy"
+     ],
+     "resolution_why": "Coder A: unit_stance permit. Coder B: require. The duty is to acknowledge assistance that is otherwise allowed, so the unit takes the position permit (use allowed with citation)."
+    },
+    {
+     "why": "The policy gives the method of acknowledgment, 'in a footnote or acknowledgments section' describing the nature of the assistance, framed as good practice. P24 (disclose with the submission), modality should; P25 asks for tool, prompt or output details, which are not required here.",
+     "anchor": "It is good academic practice to acknowledge this assistance in a footnote or acknowledgments section",
+     "frag_start": "It is good academic practice",
+     "frag_end": "nature of the assistance.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "resolution_why": "Coder A: permit. Coder B: require. The wording is \"good academic practice\", a should, and AI help remains allowed, so permit."
+    },
+    {
+     "why": "The examples \"help with brainstorming ideas, editing writing, or gathering data\" name assistance (including from AI) that is recognised and must be acknowledged, so such uses are allowed with acknowledgment. P15 is closest (brainstorming); the duty to acknowledge is coded elsewhere.",
+     "anchor": "help with brainstorming ideas, editing writing, or gathering data",
+     "frag_start": "For example, assistance might include",
+     "frag_end": "gathering data",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "informs",
+     "policy_type": "P15",
+     "unit_stance": "permit",
+     "topics": [
+      "permitted-uses",
+      "disclosure-citation"
+     ],
+     "resolution_why": "Only Coder B coded this. The examples \"help with brainstorming ideas, editing writing, or gathering data\" name assistance that may be received and must be acknowledged; kept as P15, the nearest permitted-use type, with the duty to acknowledge coded in the adjacent units."
+    },
+    {
+     "why": "The text says failure to acknowledge assistance (including AI) becomes an integrity violation when it breaks an instructor's assignment rules. That makes nondisclosure a violation only conditionally, which P28 covers.",
+     "anchor": "failure to acknowledge assistance does not always rise to the level of an academic honesty",
+     "frag_start": "The failure to acknowledge assistance does",
+     "frag_end": "set by an instructor.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P28",
+     "unit_stance": "neutral",
+     "topics": [
+      "disclosure-citation",
+      "instructor-discretion"
+     ],
+     "resolution_why": "Coder A: student. Coder B: all. The sentence concerns students who fail to acknowledge assistance; actor student. Type P28 agreed."
+    },
+    {
+     "why": "\"the instructor must bring the concern to the attention of the Academic Integrity Officials\" requires instructors to report suspected violations rather than resolve them. P36 (handled through integrity process).",
+     "anchor": "the instructor must bring the concern to the attention of the Academic Integrity Officials",
+     "frag_start": "If an instructor finds evidence that a student",
+     "frag_end": "Academic Integrity Officials (AIOs)",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "\"the instructor should not discuss the case with the student except under guidance from the AIO\" bars instructors from confronting students. This is the opposite of P57 (talk before escalating), so UNCOVERED: no type covers a rule that instructors must not discuss a suspected violation with the student.",
+     "anchor": "the instructor should not discuss the case with the student",
+     "frag_start": "Once the concern is reported",
+     "frag_end": "as they would any other learner in the class",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should-not",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "uncovered_note": "Rule that instructors must not discuss a suspected violation with the student except under AIO guidance (opposite of P57)."
+    },
+    {
+     "why": "The student may \"participate in a facilitated conversation\" or give a written statement after receiving a written statement of the concern. This gives the accused a right to respond. P64.",
+     "anchor": "The student may then elect to 1) participate in a facilitated conversation",
+     "frag_start": "If the AIO agrees that a possible violation",
+     "frag_end": "in lieu of participating in a facilitated conversation",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P64",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "\"there will be an opportunity for each to respond to the evidence provided by the other party\" guarantees the student a chance to respond to evidence. P64.",
+     "anchor": "there will be an opportunity for each to respond to the evidence",
+     "frag_start": "The AIO will gather information from the student",
+     "frag_end": "evidence provided by the other party",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P64",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The student can bring \"one non-participating observer\", a procedural fairness protection in honesty cases that include AI. P64.",
+     "anchor": "The student may bring one non-participating observer",
+     "frag_start": "The student may bring one",
+     "frag_end": "family member of any involved party",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P64",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "resolution_why": "Only Coder B coded this. The observer provision is a procedural protection in honesty cases; it is part of the allegation process, kept as P64."
+    },
+    {
+     "why": "Written statements must arrive \"within 3 business days\", a procedural deadline for the student response. P64.",
+     "anchor": "the statement must be submitted within 3 business days",
+     "frag_start": "If the student elects to submit a written",
+     "frag_end": "notifying the AIO of this decision",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P64",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "resolution_why": "Only Coder B coded this. The 3-business-day deadline for the student response is a stated step of the process, kept as P64."
+    },
+    {
+     "why": "Students \"may not drop or withdraw from the affected course\" while a case is pending or if found responsible, a consequence tied to the integrity process. P37 (stated consequence) fits better than P36.",
+     "anchor": "students may not drop or withdraw from the affected course",
+     "frag_start": "From the time that a student is notified",
+     "frag_end": "course is within the drop or withdraw period for the term",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P37",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "resolution_why": "Coder A: UNCOVERED (hold on dropping or withdrawing). Coder B: P37. The hold is a consequence of the misconduct process that students are told in advance; P37 (stated consequences) is the nearest existing type, so it is placed there."
+    },
+    {
+     "why": "Records of findings are kept \"for five years after the last date of the student's enrollment\" and transcript notation applies to suspension or dismissal; these are stated consequences. P37.",
+     "anchor": "a record of the responsibility and the outcome is maintained as part of",
+     "frag_start": "For a student who is found responsible",
+     "frag_end": "outcome is noted on the student's transcript",
+     "policy": null,
+     "actor": "admin",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "resolution_why": "Coder A: UNCOVERED (record retention). Coder B: P37. The record kept for five years and the transcript notation are stated consequences of a finding, so P37."
+    },
+    {
+     "why": "Students may appeal \"within 5 business days\" on procedural error or new evidence, giving a right of challenge in integrity cases. P64.",
+     "anchor": "A student may appeal the decision of the AIO",
+     "frag_start": "A student may appeal the decision",
+     "frag_end": "within 5 business days following notification of the AIO's decision",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P64",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "grinnell-honesty-ai-slides",
+   "layer": "university",
+   "unit": "Associate Dean for Student Academic Life",
+   "course": null,
+   "title": "Academic Honesty and AI at Grinnell (New Faculty Orientation 2025)",
+   "url": "https://www.grinnell.edu/doc/academic-honesty-ai-grinnell",
+   "date_or_term": "Fall 2025",
+   "text_file": "/Users/rudrajit/Documents/Current-Research/AI in education policy guidelines/.cache/text/v2-grinnell-honesty-ai.txt",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "Orientation slides for new faculty. They tell instructors to decide on and clearly communicate an AI policy and explain the reasons for it. They also describe how to report suspected violations and caution against AI detectors.",
+   "stance_why": "The slides say Grinnell's policy \"does not prohibit the use of generative AI\" but \"Faculty are free to develop their own course policies\", and instructors \"may choose to prohibit the use of AI\". The college sets no stance beyond citation, so the decision goes to instructors: delegates.",
+   "units": [
+    {
+     "why": "The orientation document says the policy \"does not prohibit the use of generative AI by students, but requires that it be cited/acknowledged\" so it sets a college-wide permit-with-citation default. P02 fits; the citation duty is coded separately.",
+     "anchor": "Academic Honesty policy does not prohibit the use of generative AI by students",
+     "frag_start": "Grinnell's Academic Honesty policy does not prohibit",
+     "frag_end": "as any other source would be",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P02",
+     "unit_stance": "permit",
+     "topics": [
+      "default-stance",
+      "disclosure-citation"
+     ],
+     "resolution_why": "Coder A: student. Coder B: all. The sentence is about what the policy allows students to do; actor student. Type P02 agreed."
+    },
+    {
+     "why": "\"requires that it be cited/acknowledged as any other source would be\" treats AI like any other source. P45 is chosen over P24 because the wording stresses equal treatment with other sources; P24 is coded in the guide.",
+     "anchor": "requires that it be cited/acknowledged as any other source would be",
+     "frag_start": "but requires that it be cited/acknowledged",
+     "frag_end": "any other source would be",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P45",
+     "unit_stance": "require",
+     "topics": [
+      "disclosure-citation",
+      "collaboration-analogy"
+     ]
+    },
+    {
+     "why": "\"If you have evidence of uncited AI use by a student, you should submit the case to the Committee on Academic Standing\" makes uncited AI use an integrity matter handled by the committee. P36.",
+     "anchor": "evidence of uncited AI use by a student, you should submit the case",
+     "frag_start": "If you have evidence of uncited AI use",
+     "frag_end": "Committee on Academic Standing",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "\"All faculty are required by the Faculty Handbook to submit cases to the Committee on Academic Standing\" binds faculty to report evidence of violations. P36.",
+     "anchor": "All faculty are required by the Faculty Handbook to submit cases",
+     "frag_start": "All faculty are required by the Faculty Handbook",
+     "frag_end": "violated the academic honesty policy",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "\"Faculty are free to develop their own course policies regarding the use of AI by students\" delegates the decision to instructors. P04.",
+     "anchor": "Faculty are free to develop their own course policies regarding the use of AI",
+     "frag_start": "Faculty are free to develop",
+     "frag_end": "in their class",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "\"You may choose to prohibit the use of AI for any use or for only specific uses\" lets instructors ban AI wholly or partly. P04 (instructor choice); the option is not a college default so not P01.",
+     "anchor": "You may choose to prohibit the use of AI for any use",
+     "frag_start": "You may choose to prohibit",
+     "frag_end": "only specific uses",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "\"You may choose to have students engage with generative AI in purposeful and direct ways for assignments\" lets instructors build AI into assignments, so it is assignment design (P35). It is an option, not a recommendation, so modality is may and unit stance is permit.",
+     "anchor": "have students engage with generative AI in purposeful and direct ways for assignments",
+     "frag_start": "You may choose to have students engage",
+     "frag_end": "what you deem appropriate for your teaching",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P35",
+     "unit_stance": "permit",
+     "topics": [
+      "assessment-design",
+      "instructor-discretion"
+     ],
+     "resolution_why": "Coder A: P04. Coder B: P35 with unit_stance encourage. The passage is about building AI into assignments, so P35; \"You may choose\" is permissive, not encouraging, so permit."
+    },
+    {
+     "why": "\"Familiarize yourself with the functions of AI and the ways students are using it\" advises faculty to learn AI before setting policy. P63.",
+     "anchor": "Familiarize yourself with the functions of AI and the ways students are using it",
+     "frag_start": "Familiarize yourself with the functions",
+     "frag_end": "students are using it",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "ai-literacy-career"
+     ]
+    },
+    {
+     "why": "\"Consider the goals of your assignments and the learning outcomes of your course\" asks the instructor to weigh how AI affects learning when choosing a policy under the heading \"Decide on your approach to AI\". It is advice on the instructor's own decision, so P04 rather than P63 (support for learning AI tools).",
+     "anchor": "Consider the goals of your assignments and the learning outcomes of your course",
+     "frag_start": "Consider the goals of your assignments",
+     "frag_end": "do in your course?",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "learning-rationale"
+     ],
+     "resolution_why": "Coder A: P04. Coder B: P63. The passage is under \"Decide on your approach to AI\" and is about reasoning toward the instructor's own rule, not learning about AI, so P04."
+    },
+    {
+     "why": "\"Regardless of your policies and positions on AI, you should address AI directly with your students\" requires every instructor to talk about AI. P09 fits (state expectations) though it does not require a syllabus statement.",
+     "anchor": "you should address AI directly with your students",
+     "frag_start": "Regardless of your policies and positions on AI",
+     "frag_end": "directly with your students",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "The take-home note says students \"are either using or are very aware of AI tools\" and \"are eager for guidance\", the reason to address AI. It is a rationale rather than a rule; P09 is used because it explains the need to state expectations.",
+     "anchor": "Students are either using or are very aware of AI tools",
+     "frag_start": "Take-home message: Students are either using",
+     "frag_end": "are eager for guidance",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "resolution_why": "Coder A: all/P56 (institution framework). Coder B: instructor/P09. The sentence is the take-home rationale for why instructors should address AI with students; it contains no institution-level principles, so P09 with actor instructor."
+    },
+    {
+     "why": "\"You should clearly state your AI policies, preferably both orally and in writing\" tells instructors to communicate AI rules. P09.",
+     "anchor": "You should clearly state your AI policies, preferably both orally and in writing",
+     "frag_start": "You should clearly state your AI policies",
+     "frag_end": "orally and in writing",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"it is highly recommended that you address citation, use of generative AI\" in the course policies. This recommends an AI statement in syllabi. P09.",
+     "anchor": "It is highly recommended that you address citation, use of generative AI",
+     "frag_start": "It is highly recommended that you address",
+     "frag_end": "testing policies",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"Best practice is to state your specific AI policy for each assignment or assessment\" recommends communicating AI expectations in assignment-level instructions, so P09; it is also per-assignment, but the point of the sentence is stating the policy.",
+     "anchor": "state your specific AI policy for each assignment or assessment",
+     "frag_start": "Best practice is to state",
+     "frag_end": "each assignment or assessment in your class",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "instructor-discretion"
+     ],
+     "resolution_why": "Coder A: P09. Coder B: P04. The sentence is about stating the policy in assignment-level instructions, the P09 definition, so P09."
+    },
+    {
+     "why": "\"You are free to develop your own language ... but all students are subject to the basic principles of the college's honesty policy\" sets a floor under course policies. P56 (institution-wide framework) fits.",
+     "anchor": "all students are subject to the basic principles of the college's honesty policy",
+     "frag_start": "You are free to develop your own language",
+     "frag_end": "college's honesty policy",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance",
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "\"If your course policy prohibits the use of AI, you should be clear about what the outcome will be\" asks instructors to state consequences in advance. P37.",
+     "anchor": "you should be clear about what the outcome will be if a student uses AI",
+     "frag_start": "If your course policy prohibits the use of AI",
+     "frag_end": "reported as a potential academic honesty violation",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions",
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"cited AI use will result in no credit for the assignment or a required resubmission with a grade penalty\" is an example penalty for AI use in a course that prohibits it, so it gives a concrete penalty (P37).",
+     "anchor": "cited AI use will result in no credit for the assignment or a required resubmission",
+     "frag_start": "(e.g., uncited AI use will be reported",
+     "frag_end": "with a grade penalty",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "informs",
+     "policy_type": "P37",
+     "unit_stance": "prohibit",
+     "topics": [
+      "integrity-sanctions",
+      "disclosure-citation"
+     ],
+     "resolution_why": "Only Coder B coded this. The example gives a concrete penalty for AI use in a prohibiting course. Coder B used P28; but the text does not say anything about how disclosure is treated in general, it names a penalty, so P37."
+    },
+    {
+     "why": "\"Don't just state the policy, but explain to students why you've made these choices\" asks instructors to give pedagogical, ethical or practical reasons. The rule is about communicating rationale, so P09 (state expectations) is used.",
+     "anchor": "explain to students why you've made these choices, whether they are pedagogical, ethical, or practical",
+     "frag_start": "Don't just state the policy, but explain",
+     "frag_end": "pedagogical, ethical, or practical",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "learning-rationale"
+     ],
+     "resolution_why": "Coder A: UNCOVERED. Coder B: P09. Explaining the reasons (\"pedagogical, ethical, or practical\") is a communication duty toward students, the place a reader would look for it, so P09."
+    },
+    {
+     "why": "\"having them co-create policies with you\" suggests involving students in setting AI rules, a design choice for course policy. P04 fits (who sets the rule).",
+     "anchor": "having them co-create policies with you",
+     "frag_start": "You may also consider having a conversation",
+     "frag_end": "co-create policies with you",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion"
+     ],
+     "resolution_why": "Coder A: UNCOVERED. Coder B: P04. Co-creating policies with students is a way of deciding who sets the course rule, so P04."
+    },
+    {
+     "why": "\"some faculty are also specifically listing possible uses and addressing each separately in a list or table\" describes listing uses per category in syllabi. P05.",
+     "anchor": "listing possible uses and addressing each separately in a list or table",
+     "frag_start": "some faculty are also specifically listing",
+     "frag_end": "in a list or table",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P05",
+     "unit_stance": "neutral",
+     "topics": [
+      "use-categories-levels",
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "The document points to \"a repository of possible AI syllabus statements\" and \"useful questions for thinking through your statement\", support for writing statements. P63.",
+     "anchor": "a repository of possible AI syllabus statements",
+     "frag_start": "here is a repository of possible AI syllabus statements",
+     "frag_end": "thinking through your statement",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "resolution_why": "Only Coder B coded this. It points instructors to \"a repository of possible AI syllabus statements\", a support resource, kept as P63."
+    },
+    {
+     "why": "\"Elon University's Student Guide to Artificial Intelligence is a useful resource for both faculty and students\" is a support resource for learning AI. P63.",
+     "anchor": "Elon University's Student Guide to Artificial Intelligence is a useful resource",
+     "frag_start": "Elon University's Student Guide to Artificial",
+     "frag_end": "specific to your field or discipline",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "ai-literacy-career"
+     ]
+    },
+    {
+     "why": "\"Use AI detection tools with an abundance of caution, if at all. These tools are known to be unreliable\" tells faculty not to rely on detectors. P39.",
+     "anchor": "Use AI detection tools with an abundance of caution, if at all",
+     "frag_start": "Use AI detection tools with an abundance",
+     "frag_end": "multi-lingual writers.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should-not",
+     "policy_type": "P39",
+     "unit_stance": "restrict",
+     "topics": [
+      "detection-tools"
+     ],
+     "resolution_why": "Coder A: should. Coder B: should-not. \"Use AI detection tools with an abundance of caution, if at all\" discourages detector use, so should-not with P39 (do not rely on detectors)."
+    },
+    {
+     "why": "The slides say detectors 'are known to be unreliable, produce significant false-positive results', the reason detectors cannot be relied on (P39).",
+     "anchor": "These tools are known to be unreliable, produce significant false-positive results",
+     "frag_start": "These tools are known to be",
+     "frag_end": "multi-lingual writers.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P39",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ],
+     "resolution_why": "Only Coder A coded this separately. \"These tools are known to be unreliable\" is the stated reason not to rely on detectors (P39), kept."
+    },
+    {
+     "why": "The same passage warns detectors \"are particularly likely to flag writing produced in English by multi-lingual writers\", an equity and bias concern. P53 (bias, harms).",
+     "anchor": "particularly likely to flag writing produced in English by multi-lingual writers",
+     "frag_start": "These tools are known to be unreliable",
+     "frag_end": "multi-lingual writers",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P53",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools",
+      "equity-access"
+     ]
+    },
+    {
+     "why": "The slides list evidence that can justify a report, such as 'identical or very similar assignments from two or more students'. This is process evidence for identifying misuse, matching P40.",
+     "anchor": "received identical or very similar assignments from two or more students",
+     "frag_start": "This may simply be that you",
+     "frag_end": "not relevant to the class.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P40",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions",
+      "detection-tools"
+     ],
+     "resolution_why": "Only Coder A coded this. The examples of what may be sufficient evidence (identical or very similar assignments) are listed as grounds for referral; P40 (similarity as evidence) fits, kept."
+    },
+    {
+     "why": "\"You do not need to make an iron-clad case or do extensive investigation\" sets the evidence bar for referral. P40 is about which methods are used to identify misuse; this is a threshold for reporting, which no type covers.",
+     "anchor": "You do not need to make an iron-clad case or do extensive investigation",
+     "frag_start": "You do not need to make an iron-clad case",
+     "frag_end": "for the committee to understand your concern",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools",
+      "integrity-sanctions"
+     ],
+     "uncovered_note": "Instructors need not build an iron-clad case or investigate extensively before referring a suspected violation; sufficient information for the committee to understand the concern is enough.",
+     "resolution_why": "Coder A: UNCOVERED. Coder B: P40. P40 covers tools and process evidence for identifying misuse, not the threshold for referral, so UNCOVERED."
+    },
+    {
+     "why": "Saying the work \"doesn't sound like [student]\" is \"not sufficient evidence\", ruling out impressionistic judgment as proof. P39 does not fit (not about detectors) and P40 lists methods rather than excluding one, so UNCOVERED.",
+     "anchor": "is not sufficient evidence",
+     "frag_start": "Stating that the work",
+     "frag_end": "not sufficient evidence",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should-not",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ],
+     "uncovered_note": "Evidence standard: impressionistic claims that work does not sound like the student are not sufficient evidence of misuse.",
+     "resolution_why": "Coder A: neutral. Coder B: restrict. The rule is about evidence of misconduct, not a position on AI use; neutral. Both coded UNCOVERED, which stands."
+    },
+    {
+     "why": "\"You should not engage with the student regarding the potential violation ... you should not ask them for an explanation\" tells faculty not to confront the student. This conflicts with P57, so UNCOVERED.",
+     "anchor": "You should not engage with the student regarding the potential violation",
+     "frag_start": "You should not engage with the student",
+     "frag_end": "discuss further your concerns",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should-not",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "uncovered_note": "Faculty must not question or discuss concerns with the student after referring a suspected violation.",
+     "resolution_why": "Coder B: restrict in one unit; Coder A neutral. Both UNCOVERED. The rule that faculty do not confront the student is about process, not AI use; neutral."
+    },
+    {
+     "why": "\"You should notify the student that you have submitted their work to CAS\" requires telling the student about the referral, which supports fair process. P64.",
+     "anchor": "You should notify the student that you have submitted their work to CAS",
+     "frag_start": "You should notify the student that you",
+     "frag_end": "about next steps",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P64",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "resolution_why": "Only Coder B coded this. \"You should notify the student that you have submitted their work to CAS\" is a transparency step in the process; kept as P64."
+    },
+    {
+     "why": "\"Do not make your own determination or impose your own penalty\" keeps outcomes consistent through college processes. P36.",
+     "anchor": "Do not make your own determination or impose your own penalty",
+     "frag_start": "Do not make your own determination",
+     "frag_end": "according to our processes",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "\"Cases are typically adjudicated within two weeks of submission\" is a timeline for decisions; faculty are notified of the finding and outcome to apply to the grade. P36.",
+     "anchor": "Cases are typically adjudicated within two weeks of submission",
+     "frag_start": "Cases are typically adjudicated within two weeks",
+     "frag_end": "as a result of a responsible finding",
+     "policy": null,
+     "actor": "admin",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "'Additional information for all faculty will be forthcoming' signals that the guidance will be extended, a weak statement that it will change (P54).",
+     "anchor": "Additional information for all faculty will be forthcoming",
+     "frag_start": "Additional information for all faculty",
+     "frag_end": "forthcoming",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "informs",
+     "policy_type": "P54",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ],
+     "resolution_why": "Only Coder A coded this. \"Additional information for all faculty will be forthcoming\" signals that the guidance will be extended; kept as P54."
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "The CS department's own academic integrity policy (referenced by course handouts as https://www.cs.grinnell.edu/academic-integrity) returns 404, also in Wayback, so computing is marked inaccessible; recheck for a moved URL. CSC 151 syllabi from the known list are deferred. The guide overview page (node/49236) added no policy text. Art History has a departmental AI policy but is not computing. Coder B: uncovered units are the rule barring instructors from discussing suspected violations with students (two docs), the evidence standard, and the non-contract clause. Reconciler: no new types proposed. Dropped B-only units: fabricated-citation line (no AI mention), closed-book and independent-work defaults (no AI mention), non-contract clause (boilerplate)."
+}

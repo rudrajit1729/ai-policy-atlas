@@ -1,0 +1,34 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT47 "Opt-out and equal access" (Students may opt out of AI, can earn full marks without it, or need not buy a tool; accommodations.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..9 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | austin-community-college | C1 | instructor | may | instructor-approved exceptions only | Exceptions to this policy will only be made under specific circumstances approved by the
+1 | austin-community-college | C4 | instructor | informs | accommodation exceptions case by case | Should the technology be required as an accommodation, exceptions will be made on a case-by-case basis.
+2 | california-berkeley | C1 | student | may | human staff alternative to AI tutor | may instead elect to answer questions from a member of course staff in lab or office hours
+3 | cornell | C3 | student | may | AI use optional | AI use is optional.
+4 | harvey-mudd-college | C1 | student | may | students may opt out of AI | and you are welcome not to use it.
+5 | princeton | C5 | instructor | informs | course needs no AI | We have designed the course such that you do not need to use gen AI.
+6 | uiuc | C2 | student | informs | AI use is optional | Using AI in this course is optional.
+7 | uiuc | C2 | student | informs | full marks possible without AI | You can complete every assignment and earn full marks without ever using an AI
+8 | uiuc | C2 | student | informs | no purchase required | No purchase is required: the free tiers of these tools are sufficient for every use this policy
+9 | vermont | C5 | student | may | right to opt out of AI | are in no way obliged to use it.

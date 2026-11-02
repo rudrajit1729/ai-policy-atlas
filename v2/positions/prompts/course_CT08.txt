@@ -1,0 +1,106 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT08 "AI for understanding concepts and material" (AI as a tutor or explainer for concepts, syntax, language features and course material.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..81 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | appalachian-state | C6 | student | may | AI allowed for course questions | You are allowed to use AI as an assistant to ask questions about the course material.
+1 | arizona | C3 | student | may | LLMs encouraged for understanding | resources (e.g., LLMs) to improve your understanding of course topics.
+2 | austin-community-college | C2 | student | may | AI allowed for learning support | You may use AI tools to help you understand concepts, generate study notes, brainstorm ideas, and practice skills.
+3 | boston | C3 | student | may | AI allowed for course questions | It is acceptable to use tools to answer questions about
+4 | bowdoin-college | C6 | student | may | AI allowed for concepts | feel free to ask AI for help understanding concepts
+5 | brigham-young-idaho | C1 | student | should | AI encouraged as tutor | You are strongly encouraged to ask AI questions about the topics and the problems you are facing.
+6 | brigham-young-idaho | C4 | student | should | AI allowed for understanding | Ask AI questions to help your understanding.
+7 | brown | C5 | student | may | AI allowed for concepts | You can ask language models like ChatGPT to explain concepts
+8 | brown | C6 | student | may | AI allowed for course questions | You are welcome to consult AI agents (such as
+9 | bryn-mawr-college | C3 | student | may | AI allowed for concepts and guidance | are permitted to use AI-tools or the internet in general, to clarify concepts, to get guidance
+10 | bucknell | C1 | student | may | online resources allowed for understanding | You are allowed to use online resources to help you understand a topic in this course.
+11 | bucknell | C2 | student | may | online resources allowed for understanding | You are allowed to use online resources to help you understand topics in this course.
+12 | california-santa-cruz | C2 | student | may | AI for concepts and debugging | GenAI tools can assist in understanding course concepts, debugging code, and clarifying questions related to Python programming
+13 | carleton-college | C3 | student | may | AI examples on own problems fine | You ask for a walkthrough of Dijkstra's Algorithm on a graph of the LLM's choice
+14 | city-college-san-francisco | C1 | student | may | AI for example programs | AI tools might prove useful for creating examples of programs that you can learn from
+15 | colby-college | C2 | student | may | AI for concepts and feedback only | Students may use AI tools (e.g., ChatGPT) solely for understanding concepts, reviewing examples, or receiving feedback on their code
+16 | colgate | C3 | student | may | AI for concepts via conversation | you can use generative AI systems to learn about concepts iteratively through a conversation
+17 | colgate | C3 | student | may | AI for programming fundamentals | Ask clarification questions about the fundamentals of programming
+18 | colgate | C3 | student | may | conceptual questions are acceptable | Ask for conceptual clarifications
+19 | colorado-boulder | C3 | student | may | AI allowed for general understanding | Such resources include books, notes, websites, and AI tools
+20 | colorado-state | C4 | student | may | AI useful for explanations | AI can be a useful tool to explain things
+21 | columbia | C6 | student | may | AI allowed for understanding and debugging | you may use them to help you understand concepts, debug your
+22 | duke | C1 | student | may | AI allowed for understanding and research | Students are permitted to utilize AI-based platforms and tools to assist in their understanding and research related to the course.
+23 | duke | C2 | student | should | LLMs encouraged to explore concepts | Utilize LLMs to explore data structures and algorithms, to help develop solutions to problems without sacrificing
+24 | duke | C2 | student | should | LLMs encouraged for Java concepts | and to understand basic Java concepts.
+25 | duke | C2 | student | should | LLMs encouraged for understanding | We encourage you to use ChatGPT or other LLMs as part of understanding material in the course
+26 | duke | C3 | student | may | LLMs for editing, examples, questions | Appropriate uses of LLMs (such as ChatGPT) include editing, requesting examples, and asking questions to aid your understanding.
+27 | duke | C6 | student | may | AI allowed for understanding material | You may use LLMs (e.g., ChatGPT) and other AI-based tools to aid in understanding course material,
+28 | emory | C2 | student | may | AI allowed to explain Java | Ask for explanations of Java concepts, syntax, errors, or compiler messages.
+29 | harvard | C2 | student | may | AI ok for clarifying concepts | Good uses can be very helpful for clarifying concepts and improving
+30 | harvey-mudd-college | C5 | student | may | AI allowed for tools and background | you can use these resources to help you use tools and technology, or for getting alternate or additional instruction/background on lecture topics,
+31 | harvey-mudd-college | C6 | student | may | AI allowed for understanding concepts | You may use LLMs to help further explore concepts from lessons or to get alternative explanations of course material.
+32 | johns-hopkins | C3 | student | may | AI allowed for concepts only | you can look up concepts that you do not understand, but you cannot simply go looking for
+33 | louisville | C6 | student | may | AI allowed for learning support | Students may use AI tools and other online resources to support their learning and exam
+34 | louisville | C6 | student | may | AI allowed as tutor or textbook | What does undefined reference to pthread_create mean?
+35 | louisville | C6 | student | may | AI allowed for concept explanations | Explain how semaphores work.
+36 | loyola-marymount | C1 | student | may | AI allowed for syntax examples | Finding examples and explanations for syntactic forms
+37 | loyola-marymount | C2 | student | may | AI allowed for syntax examples | Finding examples and explanations for syntactic forms
+38 | loyola-marymount | C3 | student | may | AI allowed for syntax examples | Finding examples and explanations for syntactic forms
+39 | loyola-marymount | C5 | student | may | AI allowed for syntax lookup | Finding examples and explanations for syntactic forms
+40 | loyola-marymount | C6 | student | may | AI allowed for syntax lookup | Finding examples and explanations for syntactic forms
+41 | massachusetts-institute-technology | C6 | student | may | AI allowed for understanding concepts | You may use AI tools to help you understand operating systems
+42 | michigan | C1 | student | may | AI allowed for learning concepts | Learning course concepts, generating examples of a particular coding pattern, interactively checking your knowledge, etc.
+43 | michigan | C3 | student | may | AI allowed to explain concepts | to explain a general concept to you
+44 | minnesota | C4 | student | must-not | no AI summarizing sources | Using AI to summarize or contextualize source materials
+45 | new-york | C2 | student | may | AI as tutor for concepts | AI as a Personal Tutor: When you're stuck on a concept, use AI to explain it in different ways.
+46 | north-carolina-state | C2 | student | may | AI allowed to understand concepts | understand concepts or questions related to lectures or assignments [Note: the AI tool can be wrong];
+47 | northwestern | C2 | student | must-not | AI tutors not allowed | Outside tutors or "work-for-hire" services. This includes AI-based "tutor" systems.
+48 | oklahoma | C6 | student | may | AI for concepts, debugging, ideas | Copilot, as aids in understanding operating system concepts, debugging code, and generating ideas
+49 | old-dominion | C6 | instructor | should | AI encouraged for understanding | I encourage you to use these tools to help deepen your understanding and to review material you find challenging.
+50 | pennsylvania | C1 | student | may | AI allowed to clarify course material | It is acceptable to use AI to clarify and expand your understanding of lecture notes, slides, and provided code examples.
+51 | pennsylvania | C5 | student | may | AI allowed for explanations | we have no concerns about you using them to get alternative explanations for topics
+52 | princeton | C6 | student | may | AI allowed for small tasks | you may use it on small programming tasks that would fall under reasonable usage, such as asking how to use C standard library functions
+53 | rose-hulman-institute-technology | C1 | student | may | AI allowed to explain code | Giving an AI some code and asking the AI to explain it.
+54 | rutgers-new-brunswick | C1 | student | must-not | no concept discussion with chatbots | Discuss concepts with: Yes Yes Yes No
+55 | rutgers-new-brunswick | C2 | student | must-not | no concept discussion with chatbots | Discuss concepts with: Yes Yes Yes No
+56 | san-francisco | C6 | student | may | AI for explanation and practice | Ask it to explain a concept,
+57 | san-jose-state | C1 | student | may | AI allowed for studying | AI tools (e.g., ChatGPT) may be used to support studying and learning, such as clarifying concepts or
+58 | stanford | C1 | student | may | AI allowed for general help | may ask an AI for general help on programming, or general algorithms and data structures.
+59 | swarthmore-college | C5 | student | must | AI only for learning concepts | only for learning about concepts
+60 | temple | C6 | student | may | AI to clarify concepts | Clarify concepts introduced in class
+61 | temple | C6 | student | may | AI to explore algorithms | Explore the use of algorithms, functions, or ideas
+62 | temple | C6 | student | may | AI to review example code | Review example code related to course content
+63 | texas-austin | C2 | student | should | AI encouraged for studying concepts | We encourage you to use ChatGPT or
+64 | texas-austin | C2 | student | may | AI may explain concepts | you can ask an LLM to explain what an instance
+65 | texas-austin | C5 | student | may | limited AI use for learning | Generative AI tools may be used on a limited basis to learn course material
+66 | texas-christian | C5 | student | must-not | no AI summarizing sources | Using AI to summarize or contextualize source materials;
+67 | texas-christian | C6 | student | must-not | no AI summarizing sources | Using AI to summarize or contextualize source materials;
+68 | texas-el-paso | C1 | student | may | AI to reinforce concepts | Reinforce understanding of concepts discussed in the course.
+69 | uiuc | C2 | student | may | AI explains concepts and syntax | When you encounter unfamiliar C++ constructs, language
+70 | vermont | C5 | student | may | AI allowed as explainer | It’s OK to use AI in this way, so long as it is
+71 | virginia-commonwealth | C3 | student | may | AI for explaining and debugging | as for explaining concepts, debugging, identifying errors, or providing suggestions.
+72 | virginia-commonwealth | C6 | student | may | AI allowed for understanding | Ok to use ChatGPT / LLMs for general understanding and support
+73 | washington-state | C6 | student | may | AI allowed for learning outside | you can use it for learning purposes outside your work on these assignments.
+74 | washington | C1 | student | may | AI allowed to understand concepts | allows the use of AI to help understand core concepts or clarify misconceptions
+75 | washington | C1 | student | may | AI may explain ungraded code | Asking AI to explain the functionality of a provided code snippet that is
+76 | washington | C3 | student | may | AI may explain topics | Explain a given topic, or to provide an example of how programming constructs are used.
+77 | washington | C3 | student | may | AI may explain code | Explain provided code or your program one line at a time.
+78 | wellesley-college | C2 | student | must-not | no AI summarizing readings | Summarize assigned readings.
+79 | wellesley-college | C2 | student | may | AI aids concept understanding | Use it as an aid to understanding concepts from class.
+80 | wellesley-college | C6 | student | must-not | no AI tutoring | use AI as a tutor to explain any examples of material
+81 | wesleyan | C1 | student | must | AI only to improve understanding | the only acceptable use of AI in this class is to improve

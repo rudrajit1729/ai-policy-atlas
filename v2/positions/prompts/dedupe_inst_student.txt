@@ -1,0 +1,495 @@
+Below are policies found in US university, school and computing-department generative-AI policies, all addressed to students. Each line:
+policy id | topic (policy type) | stage | universities | policy sentence.
+
+Task 1. MERGE policies that say the same thing, even when they sit under different topics or use different words.
+Judge both semantic equivalence (the same requirement, permission, prohibition or fact, worded differently) and latent
+equivalence (the same underlying intent and the same act asked of the same people, even if one is phrased as a rule and
+the other as advice). Examples of the same policy: "Students disclose any AI use in their submissions" and "Students
+acknowledge AI assistance on each assignment". Do NOT merge when the action differs, the object differs (code vs prose,
+data vs output), a condition differs materially (with permission vs always), or the direction differs (prohibit vs
+permit). Merely related or co-occurring policies stay separate. Be exhaustive: check every policy against all others.
+For each merged group give the member ids, one merged "sentence" (at most 20 words, naming the actor, stating the policy
+directly, adding nothing) and a one-line "why" they are the same.
+
+Task 2. Each policy whose stage is "general" has no stage yet. Give it one:
+  - if it asks someone to do or not do something at an identifiable point, its stage: before-course | course-start |
+    during-work | during-assessment | when-misuse | over-time;
+  - if it is a definition, scope statement, reason, value or fact with no time of action: "background".
+
+Return ONLY this JSON, no prose, no code fence:
+{"merges": [{"members": ["P24.03", "P96.02"], "sentence": "...", "why": "..."}],
+  "stages": [{"pid": "P61.01", "stage": "background"}]}
+List only groups of 2 or more in "merges". List every "general" policy in "stages".
+
+P01.03 | Default stance: AI not allowed | course-start | 15 | Generative AI is not permitted in this course.
+P01.04 | Default stance: AI not allowed | during-work | 109 | Students must not use generative AI tools for any work in this course.
+P01.05 | Default stance: AI not allowed | during-work | 27 | Students must not use AI unless the instructor explicitly permits or authorizes it for a specific assignment or purpose.
+P01.06 | Default stance: AI not allowed | during-work | 25 | Students must not use AI at any stage of their work, including brainstorming, drafting, outlining and editing.
+P01.07 | Default stance: AI not allowed | during-work | 18 | Students complete all submitted work independently, without AI assistance.
+P01.08 | Default stance: AI not allowed | during-work | 4 | Students may use AI tools where course policy permits it.
+P01.09 | Default stance: AI not allowed | during-assessment | 17 | Students must not use AI on graded work, assessments, exams or work submitted for evaluation.
+P01.10 | Default stance: AI not allowed | when-misuse | 7 | Using prohibited AI on assignments is academic dishonesty or misconduct.
+P02.02 | Default stance: AI allowed or encouraged | course-start | 7 | Students are welcome and expected to use generative AI tools in this class.
+P02.04 | Default stance: AI allowed or encouraged | course-start | 3 | Generative AI use is neither encouraged nor prohibited on assignments in this course.
+P02.05 | Default stance: AI allowed or encouraged | during-work | 77 | Students may use generative AI tools in this course and on assignments.
+P02.06 | Default stance: AI allowed or encouraged | during-work | 62 | Students are encouraged to use generative AI tools to support their learning and work.
+P02.07 | Default stance: AI allowed or encouraged | during-work | 29 | Students may use generative AI only if they follow stated conditions, such as attribution, disclosure, or instructor guidelines.
+P02.08 | Default stance: AI allowed or encouraged | during-work | 28 | Students may use generative AI freely, with no restrictions and no need to cite or document it.
+P02.09 | Default stance: AI allowed or encouraged | during-work | 7 | Students may use generative AI only in limited ways or specific circumstances set by the course.
+P02.10 | Default stance: AI allowed or encouraged | during-work | 3 | Students may use AI tools but should do so with caution.
+P02.13 | Default stance: AI allowed or encouraged | general | 9 | AI is a helpful tool that can improve students' learning, work quality and efficiency.
+P03.02 | Default stance: AI discouraged but not banned | course-start | 4 | Students are discouraged from using generative AI tools unless the instructor directs or explicitly allows it.
+P03.03 | Default stance: AI discouraged but not banned | course-start | 2 | Students are discouraged from using AI tools to generate content such as text, code, images or audio that ends up in their work.
+P03.04 | Default stance: AI discouraged but not banned | during-work | 11 | Students are discouraged from using generative AI tools for coursework, though AI is not banned.
+P03.05 | Default stance: AI discouraged but not banned | during-work | 2 | Students are discouraged from using AI as a research or academic source when its output cannot be properly cited or sourced.
+P03.07 | Default stance: AI discouraged but not banned | general | 7 | Students use AI cautiously, selectively and thoughtfully, not as a shortcut or a replacement for their own learning.
+P04.09 | Instructor or assignment decides AI use | during-work | 70 | Students use generative AI only on assignments or in ways the instructor permits.
+P04.10 | Instructor or assignment decides AI use | during-work | 13 | Students follow the AI usage rules set for each assignment by the instructor or syllabus.
+P04.13 | Instructor or assignment decides AI use | general | 111 | AI rules differ across courses, instructors, disciplines and assignments, with no single approach.
+P05.07 | Named levels or tiers of AI use | course-start | 12 | Students are informed that each assignment states its AI level, from no AI to full AI collaboration.
+P05.09 | Named levels or tiers of AI use | during-work | 21 | Students may use AI only for the limited tasks or conditions the instructor specifies.
+P05.10 | Named levels or tiers of AI use | during-work | 14 | Students may use AI freely or extensively where the policy is open.
+P05.11 | Named levels or tiers of AI use | during-assessment | 13 | Students must not use AI on assignments or assessments designated as no-AI.
+P06.01 | Fallback rule when no AI rule is stated | course-start | 18 | Students assume AI use is not permitted when the instructor has not explicitly allowed it.
+P06.02 | Fallback rule when no AI rule is stated | course-start | 16 | When a syllabus or assignment is silent on AI, the default is that AI use is not allowed.
+P06.05 | Fallback rule when no AI rule is stated | course-start | 1 | If an instructor gives no AI statement, students may use AI but must disclose all use.
+P06.06 | Fallback rule when no AI rule is stated | during-work | 56 | Students do not use AI on assignments or coursework unless the instructor explicitly permits it, and get permission first.
+P06.07 | Fallback rule when no AI rule is stated | during-work | 10 | Unless permitted to use AI tools, each student completes each assignment on their own.
+P06.08 | Fallback rule when no AI rule is stated | during-work | 5 | Students may use AI only where the instructor permits it, with disclosure or attribution.
+P06.09 | Fallback rule when no AI rule is stated | during-work | 2 | Where no policy is given, students may use AI tools unless specifically prohibited, and individuals decide for themselves.
+P06.10 | Fallback rule when no AI rule is stated | during-work | 1 | When no policy is stated, only routine grammar corrections are allowed; substantive AI use requires prior approval.
+P06.13 | Fallback rule when no AI rule is stated | when-misuse | 18 | Unauthorized AI use is cheating, plagiarism or academic dishonesty and a violation of integrity policy.
+P07.03 | AI built into everyday tools (writing assistants, editors, IDEs, agents) | during-work | 10 | Students must not use AI writing assistants or editing tools such as Grammarly, Quillbot, and Wordtune in coursework.
+P07.04 | AI built into everyday tools (writing assistants, editors, IDEs, agents) | during-work | 8 | Students do not use embedded, built-in, or plug-in AI tools for core assignments or to generate or heavily change text.
+P07.05 | AI built into everyday tools (writing assistants, editors, IDEs, agents) | during-work | 7 | Students may use incidental or embedded tools, such as autocomplete, search features, and code completion, without disclosure or penalty.
+P07.06 | AI built into everyday tools (writing assistants, editors, IDEs, agents) | during-work | 3 | Students turn off or restrict AI features when a ban applies, and confirm and limit what data AI tools can access.
+P08.04 | AI permission staged as skills or work develop | during-work | 4 | Students use AI only after they have practiced or mastered the essential skills, having first worked without it.
+P08.05 | AI permission staged as skills or work develop | during-work | 1 | Students do not use AI during the peer review stage or on the final draft.
+P10.01 | Asking when unsure about AI use | course-start | 75 | Students ask their instructor about course AI rules and unclear expectations, and check the syllabus, at the start of the course.
+P10.02 | Asking when unsure about AI use | course-start | 16 | Students seek clarification from the instructor about AI policies before starting their work.
+P10.04 | Asking when unsure about AI use | during-work | 112 | Students who are unsure whether an AI use is allowed ask their instructor before using it.
+P10.05 | Asking when unsure about AI use | during-work | 24 | Students who are unsure ask the instructor before submitting their work.
+P10.06 | Asking when unsure about AI use | during-work | 7 | When unsure whether AI use is allowed, students avoid using AI or assume it is not allowed.
+P10.07 | Asking when unsure about AI use | during-work | 4 | Graduate students discuss acceptable AI use with their advisors or committee, and must do so where required.
+P10.08 | Asking when unsure about AI use | during-work | 1 | When unsure, students err on the side of full disclosure of their AI use.
+P10.10 | Asking when unsure about AI use | general | 6 | Students are welcome to contact the instructor with questions about AI use.
+P10.11 | Asking when unsure about AI use | general | 5 | Failing to ask is no excuse, students may have rules clarified, and unclear AI use risks harm.
+P100.05 | Routine or minor AI uses outside the rules | during-work | 16 | Students may use basic spell-check and grammar-check tools built into word processors while writing.
+P100.06 | Routine or minor AI uses outside the rules | during-work | 6 | Students need not disclose or document routine uses such as spell-check, grammar correction, or embedded AI features.
+P100.07 | Routine or minor AI uses outside the rules | during-work | 4 | Routine or incidental AI use is common practice, outside the policy's intent, and needs no documentation or acknowledgement.
+P100.08 | Routine or minor AI uses outside the rules | general | 6 | Basic spelling and grammar tools are generally not counted as generative AI under the rules.
+P102.04 | Staying informed about AI developments | over-time | 11 | Students keep up with changes in AI tools, best practices and university or instructor guidance, checking back regularly.
+P104.01 | AI for literature search and finding sources | during-work | 12 | Students may use AI tools to find, search for and research sources and information on their topic.
+P104.02 | AI for literature search and finding sources | during-work | 3 | Students may use AI to summarize research and generate annotated bibliographies.
+P104.03 | AI for literature search and finding sources | during-work | 1 | Students verify that sources found with AI tools are legitimate.
+P105.02 | AI for reading and summarizing sources | during-work | 13 | Students may use AI to summarize readings, articles and sources to get an overview and aid understanding.
+P105.03 | AI for reading and summarizing sources | during-work | 9 | Students must not use AI to summarize or contextualize assigned readings or source materials.
+P105.04 | AI for reading and summarizing sources | during-work | 6 | Summarizing and condensing documents or readings is a use of AI and can be beneficial.
+P105.05 | AI for reading and summarizing sources | during-work | 4 | Students should not use AI to do the readings, replace reading course materials, or synthesize learning from them.
+P105.06 | AI for reading and summarizing sources | during-work | 4 | Students may use AI to summarize sources only with instructor approval, or for their own or supplementary materials.
+P105.07 | AI for reading and summarizing sources | during-work | 2 | Students must not use AI to summarize or respond to readings unless the instructor explicitly permits it.
+P105.08 | AI for reading and summarizing sources | during-work | 2 | Students may use AI to summarize readings if they write their own synthesis and cite accordingly, or verify the summary.
+P106.01 | AI for images and multimedia | during-work | 7 | Students may use AI to generate images, illustrations, figures, and other visuals for their assignments.
+P106.02 | AI for images and multimedia | during-work | 3 | Students may submit multimedia assignment material containing AI-generated images, audio, music or video if the use is properly documented.
+P106.03 | AI for images and multimedia | during-work | 1 | Students may use AI to generate preliminary visual concepts, design ideas, slide layouts, or presentation structures.
+P106.04 | AI for images and multimedia | during-work | 1 | Students may use AI to generate non-technical concept illustrations only with the course instructor's permission.
+P107.03 | Prior approval or a closed list of permitted uses | before-course | 3 | Students must consult their advisor, committee chair or faculty mentor and get approval before using AI in research or thesis work.
+P107.05 | Prior approval or a closed list of permitted uses | during-work | 37 | Students get instructor permission before using AI for coursework, and discuss in advance how and why they plan to use it.
+P107.06 | Prior approval or a closed list of permitted uses | during-work | 21 | Students may use AI only for specific tasks or assignments that the instructor has authorized or listed.
+P107.07 | Prior approval or a closed list of permitted uses | during-work | 8 | Students must explain or submit, in writing, how they plan to use AI before using it.
+P107.08 | Prior approval or a closed list of permitted uses | during-work | 7 | Students must not use AI beyond the listed purposes or without authorization.
+P107.11 | Prior approval or a closed list of permitted uses | during-work | 1 | Students are prohibited from using generative AI in all coursework.
+P107.13 | Prior approval or a closed list of permitted uses | during-work | 1 | AI use in the course will be limited and specific.
+P11.01 | AI rules vary by course; permission does not carry over | course-start | 14 | Other courses and instructors may have different AI policies, so students should check expectations for each course.
+P11.04 | AI rules vary by course; permission does not carry over | course-start | 5 | Students conform to the AI expectations of each course they take.
+P11.05 | AI rules vary by course; permission does not carry over | course-start | 2 | This course's AI policy applies only to this course.
+P11.06 | AI rules vary by course; permission does not carry over | during-work | 7 | Students must not treat AI permission granted in one course or assignment as approval to use AI elsewhere.
+P110.13 | Sample syllabus language and templates | course-start | 3 | Students may use generative AI tools in the course where the instructor permits it, with attribution.
+P110.15 | Sample syllabus language and templates | during-work | 1 | Students do not use GenAI tools to summarize, generate or interpret thoughts in their work.
+P111.03 | Integrity pledges and signed AI agreements | course-start | 4 | Students sign an academic integrity agreement or AI contract and agree to abide by its terms at the start of the course.
+P111.07 | Integrity pledges and signed AI agreements | course-start | 1 | Students have already signed the Honor Code pledge.
+P111.08 | Integrity pledges and signed AI agreements | during-work | 5 | Students attest with each submission that the work is their own and that they attribute any tools and sources used.
+P111.09 | Integrity pledges and signed AI agreements | during-work | 3 | Students include a statement with their work, such as an integrity statement, a note on permitted GenAI use, or responsibility for accuracy.
+P113.03 | Institutional monitoring of AI use | when-misuse | 1 | AI interactions and records could be accessed during formal misconduct investigations.
+P115.08 | Pointers to further AI guidance and resources | during-work | 31 | Students consult the library and style-guide pages on citing and disclosing generative AI in APA, MLA and Chicago formats.
+P115.13 | Pointers to further AI guidance and resources | general | 19 | Students are pointed to student guides and library pages on AI and review the named AI guidelines before using AI.
+P115.16 | Pointers to further AI guidance and resources | general | 7 | Students review the academic integrity policy or contact the named office with questions.
+P116.03 | General expectation of ethical, responsible use | during-work | 24 | Students use AI ethically and responsibly when working with it, following academic integrity and honesty guidelines.
+P117.06 | Evaluating an AI tool before choosing it | during-work | 6 | Users choose a tool designed for the task and consider whether AI is the most appropriate tool.
+P118.02 | Weighing benefits and risks before using AI | during-work | 13 | Students weigh the benefits, risks and ethics of AI, and judge whether it is appropriate, before using it for a task.
+P118.05 | Weighing benefits and risks before using AI | general | 3 | Students make informed, intentional choices about when and how to use AI.
+P119.01 | AI for career and personal tasks outside coursework | before-course | 1 | Students confirm what is acceptable before using AI tools for resumes, cover letters, and interviewing.
+P119.02 | AI for career and personal tasks outside coursework | general | 3 | Students may use AI to prepare for careers, such as exploring occupations and skillsets, resumes, cover letters, and job interviews.
+P119.03 | AI for career and personal tasks outside coursework | general | 2 | Students may use AI for everyday personal tasks, such as deciphering email tone, creating recipes, and planning meals.
+P119.04 | AI for career and personal tasks outside coursework | general | 1 | Students personalize and customize their application materials to stand out.
+P119.05 | AI for career and personal tasks outside coursework | general | 1 | Application reviewers who suspect or can tell AI was used may count it against the application.
+P119.07 | AI for career and personal tasks outside coursework | general | 1 | Generative AI can be a good starting point for research.
+P12.02 | AI as a tutor for concepts and background | during-work | 50 | Students may use AI to explain, clarify, or give alternative explanations of difficult concepts and course material.
+P12.03 | AI as a tutor for concepts and background | during-work | 19 | Students may use AI to find information, background knowledge, or a topic overview, like a search engine or reference source.
+P12.04 | AI as a tutor for concepts and background | during-work | 18 | Students may use AI as a personal tutor or learning partner.
+P12.05 | AI as a tutor for concepts and background | during-work | 8 | Students use AI wisely as a supplementary resource that deepens their own learning and understanding.
+P12.07 | AI as a tutor for concepts and background | during-work | 1 | Students must not use AI chatbots to get answers to conceptual questions about course content at the most restrictive level.
+P12.08 | AI as a tutor for concepts and background | general | 6 | AI can act as a tutor, study aid, or Socratic questioner for students.
+P120.01 | Fabricated citations and unattributed sources in AI output | during-work | 12 | Students check that AI output is not plagiarized or a direct copy of existing work, verify original sources, and cite them.
+P120.02 | Fabricated citations and unattributed sources in AI output | during-work | 5 | Students must not use AI to generate bibliographies, references or citations, and must do their own research.
+P120.03 | Fabricated citations and unattributed sources in AI output | during-work | 4 | AI output can plagiarize or misrepresent sources and give unclear attribution, false citations, or summaries.
+P120.04 | Fabricated citations and unattributed sources in AI output | during-work | 1 | Students should not submit or lightly edit AI text that closely mirrors existing sources.
+P120.05 | Fabricated citations and unattributed sources in AI output | during-work | 1 | Students must not leave AI-generated citations uncorrected or fail to notice that AI edited quotes and paraphrases.
+P120.06 | Fabricated citations and unattributed sources in AI output | general | 10 | AI tools use existing sources without citation, risking plagiarism or copied content.
+P121.03 | AI displacing human interaction and feedback | during-work | 2 | Students do not use AI tutoring to replace human interaction with instructors or teaching assistants.
+P125.01 | Students checking their own work for similarity or AI | during-work | 4 | Students run AI-detection, similarity or originality checks on their drafts before submitting them.
+P125.02 | Students checking their own work for similarity or AI | during-work | 1 | Students perform due diligence on their work before submitting it.
+P126.04 | Security of AI accounts, systems and AI-written code | during-work | 2 | Users enable extra security such as VPN or additional authentication when accessing AI tools.
+P127.03 | AI in group work | during-work | 8 | Students do not use generative AI for group work unless the group mutually agrees, and then acknowledge the use.
+P127.04 | AI in group work | during-work | 3 | Students list all team members who participated in the assignment.
+P127.05 | AI in group work | during-work | 1 | Students discuss AI use with group members, agree on how to use it, and are transparent with the instructor.
+P127.06 | AI in group work | during-work | 1 | Students are strongly discouraged from using generative AI in group work.
+P127.07 | AI in group work | during-work | 1 | Group work guidelines on AI depend on the type of assignment.
+P127.08 | AI in group work | when-misuse | 1 | All students in a group are held equally responsible for a violation.
+P128.02 | AI for translation and language support | during-work | 12 | Students may use AI to translate text from one language to another.
+P128.03 | AI for translation and language support | during-work | 4 | Students must not use translation software to translate or transform their own work, and must write directly in English.
+P128.04 | AI for translation and language support | during-work | 3 | Students may use AI to learn writing conventions such as vocabulary, sentence structure and genres, or to transform their own work into another genre.
+P128.05 | AI for translation and language support | during-work | 2 | AI translation can benefit language learners and help show refined linguistic ability.
+P128.06 | AI for translation and language support | during-work | 1 | Students may use AI translation tools for consultation, but must not present the AI translation as their own text.
+P128.07 | AI for translation and language support | during-work | 1 | Students who use AI for translation discuss its implications and limitations with the instructor.
+P128.08 | AI for translation and language support | during-work | 1 | Submitting AI-translated text as original work without disclosure is not acceptable use.
+P129.01 | AI feedback or critique on one's own work | during-work | 20 | Students may ask AI for feedback or critique on their own drafts and writing to find gaps and improve them.
+P129.02 | AI feedback or critique on one's own work | during-work | 5 | Students may compare their own work or solution with AI output, or check it against a rubric or by verification.
+P129.03 | AI feedback or critique on one's own work | during-work | 3 | Students may use AI to help revise and edit their own drafts, including restructuring and spotting problems in argument.
+P129.04 | AI feedback or critique on one's own work | during-work | 3 | Students may use AI as a critical interlocutor that raises objections, gaps and counterarguments against their own work.
+P13.01 | AI for debugging and explaining errors | during-work | 13 | Students use generative AI to debug their code.
+P13.02 | AI for debugging and explaining errors | during-work | 7 | Students use generative AI to explain error messages, diagnose errors, and suggest debugging approaches.
+P13.03 | AI for debugging and explaining errors | during-work | 2 | Students use AI to explain code syntax or specific code snippets and provide examples.
+P131.02 | What AI can and cannot do (capabilities and limits) | during-work | 3 | AI-generated content, including code, may be of low quality, inaccurate or not meet standards for a passing grade.
+P131.03 | What AI can and cannot do (capabilities and limits) | during-work | 2 | Students modify and improve AI output, since it is unlikely to be quality work.
+P131.06 | What AI can and cannot do (capabilities and limits) | general | 3 | Students understand what AI tools can and cannot do, including their limitations.
+P133.02 | Accountability for AI-assisted output | during-work | 88 | Students take responsibility for the accuracy, quality and content of the AI-assisted work they submit.
+P133.03 | Accountability for AI-assisted output | during-work | 22 | Students are responsible for any inaccurate, biased, offensive or unethical content from an AI query that they submit.
+P133.04 | Accountability for AI-assisted output | during-work | 12 | Students are responsible for any errors or omissions the AI tool produces in the work they submit.
+P133.05 | Accountability for AI-assisted output | during-work | 6 | Human authors are responsible for the accuracy and integrity of AI-assisted code and research outputs.
+P133.07 | Accountability for AI-assisted output | when-misuse | 7 | Inaccurate or poor AI-assisted work will be graded accordingly, with reduced credit.
+P133.11 | Accountability for AI-assisted output | general | 11 | Everyone is the author and owner of AI-assisted work and owns it as their own.
+P133.12 | Accountability for AI-assisted output | general | 7 | Students are responsible for how they use AI, including using it ethically and appropriately.
+P133.13 | Accountability for AI-assisted output | general | 5 | Students understand they are ultimately responsible for their submissions and take ownership of them, even when AI is used.
+P134.02 | Career and workplace readiness as a reason to learn AI | course-start | 20 | Course statements tell students that learning AI is useful preparation for their future jobs and careers.
+P134.06 | Career and workplace readiness as a reason to learn AI | over-time | 2 | Students build an AI portfolio, and instructors keep evaluating and refining their teaching over time.
+P134.09 | Career and workplace readiness as a reason to learn AI | general | 6 | Students learn to use AI effectively and responsibly, since it will matter in their careers.
+P134.11 | Career and workplace readiness as a reason to learn AI | general | 3 | Employers value responsible, ethical AI use and judgment, not just technical skill.
+P135.02 | Environmental cost of AI | course-start | 2 | Students are told at course start that technology and AI use choices carry environmental and societal implications.
+P135.07 | Environmental cost of AI | general | 4 | Students are aware of the environmental cost of AI and weigh it when deciding whether and how to use AI.
+P135.09 | Environmental cost of AI | general | 2 | A search engine or other tools have a lighter environmental footprint than a chatbot.
+P136.01 | Labor, consent and credit behind AI | during-work | 1 | Students consider whether the datasets used to train an AI model were collected ethically.
+P139.10 | Purpose and context of the policy document | general | 5 | These policies set out what students need to know about permitted and prohibited AI use.
+P14.02 | AI for study and practice (quizzes, flashcards, review) | during-work | 36 | Students may use AI to generate practice questions, quizzes, flashcards or self-tests, and are encouraged to do so to support their learning.
+P14.03 | AI for study and practice (quizzes, flashcards, review) | during-work | 16 | Students may use AI to create study guides, summaries and other study aids from their notes or course materials.
+P14.04 | AI for study and practice (quizzes, flashcards, review) | during-work | 12 | Students may use AI as a tutor, study partner or role-play partner to rehearse skills, interviews, presentations and likely questions.
+P14.05 | AI for study and practice (quizzes, flashcards, review) | during-work | 11 | Students may use AI for general studying, exam preparation, reviewing concepts and preparing for assignments.
+P14.06 | AI for study and practice (quizzes, flashcards, review) | during-work | 7 | AI is commonly used for self-quizzing, study guides, practice and supplemental learning, and can increase practice.
+P14.07 | AI for study and practice (quizzes, flashcards, review) | during-work | 4 | Students may use AI to plan their studying, such as study schedules, work plans, checklists and organized notes.
+P14.08 | AI for study and practice (quizzes, flashcards, review) | during-work | 1 | Students may not use generative AI to develop their understanding of a concept.
+P14.09 | AI for study and practice (quizzes, flashcards, review) | during-assessment | 6 | Students may use AI for study only when the output is practice material and is not submitted as graded work.
+P140.01 | Having another person or AI do your course work | during-work | 8 | Students do not have another person, entity or generative AI write or do any substantive part of their assignment or course work.
+P140.02 | Having another person or AI do your course work | during-work | 3 | Students do not copy from another person or from a generative AI system; doing so is cheating.
+P140.03 | Having another person or AI do your course work | during-work | 1 | Students do not have generative AI take their place for any academic performance without the instructor's knowledge and permission.
+P15.02 | AI for brainstorming and early planning | during-work | 93 | Students may use generative AI to brainstorm and generate ideas for their work.
+P15.03 | AI for brainstorming and early planning | during-work | 31 | Students may use AI to brainstorm topics, narrow and refine research questions, and do initial research.
+P15.04 | AI for brainstorming and early planning | during-work | 13 | Students may use AI for brainstorming only, and the final work must be their own.
+P15.05 | AI for brainstorming and early planning | during-work | 11 | AI can help students brainstorm and generate ideas.
+P15.06 | AI for brainstorming and early planning | during-work | 10 | Students may use AI to explore alternative approaches, options, and examples, including for prototyping and coding problems.
+P15.07 | AI for brainstorming and early planning | during-work | 5 | Students may use AI for brainstorming only if their instructor allows or approves it.
+P15.08 | AI for brainstorming and early planning | during-work | 3 | Students may use AI to surface counterarguments, opposing views, and blind spots in their thinking.
+P15.09 | AI for brainstorming and early planning | during-work | 3 | Students must not use AI for brainstorming.
+P16.02 | AI-generated content or code in submitted work | during-work | 18 | Students may use AI to generate outlines, first drafts or content for their assignments.
+P16.03 | AI-generated content or code in submitted work | during-work | 10 | Students may use AI to write small code snippets, starter code or routine code structures.
+P16.04 | AI-generated content or code in submitted work | during-work | 9 | AI-generated content should not exceed a set share of a student's work, such as 25%.
+P16.05 | AI-generated content or code in submitted work | during-work | 8 | Students may use AI to help complete assignments or parts of tasks where the course or assignment authorizes it.
+P16.06 | AI-generated content or code in submitted work | during-work | 7 | Students may submit material containing AI-generated text or code if they cite or document the AI use.
+P16.07 | AI-generated content or code in submitted work | during-work | 6 | Students may use AI to generate, debug and refine code, with the output reviewed.
+P16.08 | AI-generated content or code in submitted work | during-work | 4 | Students may use AI to revise their own work, get feedback and develop ideas.
+P16.09 | AI-generated content or code in submitted work | during-work | 3 | Students may use AI to write code comments and documentation.
+P16.10 | AI-generated content or code in submitted work | during-work | 1 | Students write code comments in their own words.
+P16.11 | AI-generated content or code in submitted work | during-work | 1 | Students generate at least three iterations of limited length.
+P16.12 | AI-generated content or code in submitted work | general | 4 | AI tools can help with writing, outlines, and coding problems.
+P17.06 | Course-specific or institution-provided AI tools | during-work | 4 | Course-specific AI tools guide students through research questions, citation and writing feedback during their work.
+P19.03 | Submitting AI-generated work as one's own | during-work | 74 | Students must not use AI to write drafts, sentences, paragraphs or papers, or to generate content for their assignments.
+P19.04 | Submitting AI-generated work as one's own | during-work | 73 | Students must not submit AI-generated work as their own original work, or submit its output unedited.
+P19.05 | Submitting AI-generated work as one's own | during-work | 40 | Submissions wholly or partly AI-generated are not permitted, and students may not paste or incorporate AI output into assignments.
+P19.06 | Submitting AI-generated work as one's own | during-work | 27 | Students must not use AI to complete or solve assignments, problem sets, quizzes or exams.
+P19.07 | Submitting AI-generated work as one's own | during-work | 21 | Students write and complete their own work themselves, without AI-generated content.
+P19.08 | Submitting AI-generated work as one's own | during-work | 18 | Students must not use AI to replace their own work, thinking or learning.
+P19.09 | Submitting AI-generated work as one's own | during-work | 10 | Students must not use AI to generate code.
+P19.10 | Submitting AI-generated work as one's own | during-work | 1 | Students may use AI to help generate drafts, write code, analyze data or build project components.
+P19.11 | Submitting AI-generated work as one's own | when-misuse | 5 | Submitting AI-produced work as one's own is treated as a violation of academic integrity.
+P19.12 | Submitting AI-generated work as one's own | general | 11 | AI-generated output is not the student's own work, and passing it off as theirs is misuse.
+P20.01 | Entering assignment questions or one's own work into AI | during-work | 9 | Students do not enter or paste assignment questions, prompts, instructions or exam questions into AI tools.
+P20.02 | Entering assignment questions or one's own work into AI | during-work | 1 | Students may break problems into steps and paraphrase those steps in their own words.
+P20.03 | Entering assignment questions or one's own work into AI | during-work | 1 | Students do not enter assignment or exam answers into generative AI tools.
+P20.04 | Entering assignment questions or one's own work into AI | during-work | 1 | Students do not prompt AI to get solutions or reusable code for an assignment.
+P21.01 | AI for checking or debugging graded work | course-start | 2 | Instructors tell students that AI editing tools such as Grammarly and AI revision or copyediting fall under the restrictions.
+P21.02 | AI for checking or debugging graded work | during-work | 15 | Students do not submit their own work to AI tools for editing, revising, rewriting, proofreading, or checking.
+P21.03 | AI for checking or debugging graded work | during-work | 2 | Students do not use AI to fix bugs, rewrite proofs, or perform analytical tasks for them.
+P21.04 | AI for checking or debugging graded work | during-work | 1 | Students rely solely on their own abilities and skills when drafting, editing, and revising assignments.
+P22.02 | AI during exams, quizzes and in-class assessments | during-assessment | 37 | Students do not use AI tools during exams, quizzes or tests unless the instructor explicitly permits it.
+P22.03 | AI during exams, quizzes and in-class assessments | during-assessment | 9 | Students do not use unauthorized notes, devices or outside resources during an exam; doing so is cheating.
+P22.04 | AI during exams, quizzes and in-class assessments | during-assessment | 8 | Students do not use AI to complete assessments or assignments meant to show their own understanding.
+P22.05 | AI during exams, quizzes and in-class assessments | during-assessment | 2 | Students do not use AI wearables such as smart glasses during assessments, and bring standard glasses if needed.
+P22.06 | AI during exams, quizzes and in-class assessments | during-assessment | 2 | Students complete in-class quizzes solely as their own work.
+P22.07 | AI during exams, quizzes and in-class assessments | during-assessment | 1 | Students check with their instructor before using AI on take-home quizzes, exams or assignments.
+P22.09 | AI during exams, quizzes and in-class assessments | during-assessment | 1 | Using AI to answer quiz or exam questions is a potential misuse.
+P23.01 | Keeping AI sessions separate from the submitted work | during-work | 5 | Students do not copy and paste AI-generated text, or large chunks of AI output, into their assignments, and adapt ideas to their own work instead.
+P23.02 | Keeping AI sessions separate from the submitted work | during-work | 3 | Students close or turn off the AI tool before writing their assignment independently.
+P23.03 | Keeping AI sessions separate from the submitted work | during-work | 1 | Students take notes in their own words while interacting with the AI tool.
+P23.04 | Keeping AI sessions separate from the submitted work | during-work | 1 | Students type AI-generated material manually into their composition.
+P24.04 | Disclosing and acknowledging AI use | during-work | 172 | Students properly cite or attribute AI-generated content or AI tools they use in their work.
+P24.05 | Disclosing and acknowledging AI use | during-work | 105 | Students disclose or acknowledge their AI use in submitted work and how they used it.
+P24.07 | Disclosing and acknowledging AI use | during-work | 37 | Students include a statement explaining how and where they used AI, or document the process of use.
+P24.08 | Disclosing and acknowledging AI use | during-work | 23 | Students follow their instructor's or assignment's requirements for disclosing, documenting and citing AI use.
+P24.09 | Disclosing and acknowledging AI use | during-work | 12 | Students clearly mark which parts of their work are their own and which are AI generated.
+P24.10 | Disclosing and acknowledging AI use | during-work | 11 | Students do not submit AI-generated content or ideas without acknowledging or citing it.
+P24.11 | Disclosing and acknowledging AI use | during-work | 10 | Students may use AI if the use is properly documented and credited.
+P24.12 | Disclosing and acknowledging AI use | when-misuse | 6 | Students explain how they used AI when asked.
+P24.13 | Disclosing and acknowledging AI use | general | 36 | Transparency and citation of AI use are valued; norms and benefits are described, and minor uses may need no disclosure.
+P25.02 | What an AI citation or disclosure records (tool, prompt, output, format) | during-work | 49 | Students cite or properly attribute any AI-generated content or AI use in their work.
+P25.03 | What an AI citation or disclosure records (tool, prompt, output, format) | during-work | 43 | Students include the prompts they used when citing, acknowledging or disclosing AI use.
+P25.04 | What an AI citation or disclosure records (tool, prompt, output, format) | during-work | 39 | Students describe how and where they used the AI tool in their work.
+P25.05 | What an AI citation or disclosure records (tool, prompt, output, format) | during-work | 30 | Students disclose their AI use, identifying the specific tool or tools used and its provider.
+P25.06 | What an AI citation or disclosure records (tool, prompt, output, format) | during-work | 28 | Sample disclosure and acknowledgment statements show how students can describe their AI use.
+P25.07 | What an AI citation or disclosure records (tool, prompt, output, format) | during-work | 24 | Students cite AI using an accepted citation style such as APA, MLA or Chicago, as their discipline or class requires.
+P25.08 | What an AI citation or disclosure records (tool, prompt, output, format) | during-work | 20 | Students give the AI tool's name, version and date or URL of access in their citation or disclosure.
+P25.09 | What an AI citation or disclosure records (tool, prompt, output, format) | during-work | 16 | Students add a note, paragraph or appendix at the end of the assignment disclosing their AI use.
+P25.10 | What an AI citation or disclosure records (tool, prompt, output, format) | during-work | 14 | Example reference formats show how to cite AI tools in APA, MLA or similar styles.
+P25.11 | What an AI citation or disclosure records (tool, prompt, output, format) | during-work | 11 | Students check with their instructor or consult guidance about how to cite or disclose AI use.
+P25.12 | What an AI citation or disclosure records (tool, prompt, output, format) | during-work | 6 | Students may be required to submit their prompts as part of their work or documentation.
+P25.14 | What an AI citation or disclosure records (tool, prompt, output, format) | during-work | 5 | Students follow their instructor's requirements for AI citation and disclosure.
+P25.16 | What an AI citation or disclosure records (tool, prompt, output, format) | during-work | 4 | Students include the raw AI output, not only their final product, in their submission.
+P25.17 | What an AI citation or disclosure records (tool, prompt, output, format) | during-work | 3 | Students describe how they verified or reviewed AI-generated content.
+P25.18 | What an AI citation or disclosure records (tool, prompt, output, format) | during-work | 2 | Students cite the specific AI writing tool when they present more than one sentence of minimally edited AI text.
+P25.20 | What an AI citation or disclosure records (tool, prompt, output, format) | during-work | 2 | Students who cannot save or share an AI chat cite it as personal communication, in the text only.
+P25.22 | What an AI citation or disclosure records (tool, prompt, output, format) | general | 19 | AI citation resources exist, and citing AI differs from citing traditional sources.
+P26.02 | Process records: AI logs, drafts and reflections | during-work | 32 | Students explain how and why they used AI and what they did with the output.
+P26.04 | Process records: AI logs, drafts and reflections | during-work | 23 | Students submit the full AI chat transcript, prompts and outputs, as an appendix or with their assignment.
+P26.06 | Process records: AI logs, drafts and reflections | during-work | 16 | Students save their prompts, chats and AI use log and are ready to provide them.
+P26.07 | Process records: AI logs, drafts and reflections | during-work | 15 | Students discuss their own contributions and reflect on their AI use and its effect on learning.
+P26.08 | Process records: AI logs, drafts and reflections | during-work | 12 | Students may be asked to submit transcripts, prompts, documentation or reflections on their AI use.
+P26.09 | Process records: AI logs, drafts and reflections | during-work | 11 | Students keep their drafts, AI logs and records of AI use.
+P26.10 | Process records: AI logs, drafts and reflections | during-work | 11 | Students keep drafts, notes and version histories as evidence of their own work process.
+P26.12 | Process records: AI logs, drafts and reflections | during-work | 10 | Students submit a written reflection on their AI use, its limits and its effect on their learning.
+P26.13 | Process records: AI logs, drafts and reflections | during-work | 5 | Students provide their original pre-AI draft or original assignment alongside the AI-assisted version.
+P26.15 | Process records: AI logs, drafts and reflections | general | 16 | Documentation, logs and reflections on AI use are used in various ways, and some instructors require them.
+P27.01 | Marking which parts of a submission are AI-derived | during-work | 14 | Students clearly identify which parts of their work were generated by AI.
+P27.02 | Marking which parts of a submission are AI-derived | during-work | 9 | Students show AI-generated text in a different font color, highlight or red marking.
+P27.03 | Marking which parts of a submission are AI-derived | during-work | 4 | Students state AI use in code comments, including which tool was used, and mark AI-generated code portions.
+P27.04 | Marking which parts of a submission are AI-derived | during-work | 2 | Example code comments or notes credit an AI tool for the work.
+P27.06 | Marking which parts of a submission are AI-derived | during-work | 1 | Students put AI-generated text in quotation marks with citation and never include it verbatim without them.
+P27.07 | Marking which parts of a submission are AI-derived | during-work | 1 | Students include the prompt and significant parts of the AI response.
+P27.08 | Marking which parts of a submission are AI-derived | during-work | 1 | Students disclose AI use in data analysis methods and figure captions.
+P27.09 | Marking which parts of a submission are AI-derived | during-work | 1 | Students may acknowledge AI use through in-text citations, quotations, references or comments.
+P28.01 | Nondisclosure as the violation | during-work | 23 | Students do not submit AI-generated content as their own work without disclosing or citing the AI use.
+P28.02 | Nondisclosure as the violation | during-work | 1 | Students are honest about their AI use when asked to disclose it.
+P28.03 | Nondisclosure as the violation | when-misuse | 77 | Using AI without disclosure, citation or acknowledgment is an academic integrity or honor code violation.
+P28.04 | Nondisclosure as the violation | when-misuse | 22 | Failing to cite or acknowledge AI use is treated as plagiarism or cheating.
+P28.05 | Nondisclosure as the violation | when-misuse | 13 | Undisclosed or uncited AI use carries penalties, such as a failing grade or disciplinary action.
+P28.06 | Nondisclosure as the violation | when-misuse | 4 | Instructors set documentation and disclosure requirements; work that does not follow them is treated as an attestation of no AI use or a violation.
+P28.07 | Nondisclosure as the violation | when-misuse | 3 | Disclosing AI use does not shield students from misconduct findings, since the use may still be misuse or a violation.
+P28.08 | Nondisclosure as the violation | general | 9 | Disclosed, permitted AI use is not penalized or graded differently, and disclosure protects students from suspicion.
+P29.02 | Submitted work must be one's own | course-start | 9 | All work students submit in this course is expected to be their own.
+P29.03 | Submitted work must be one's own | during-work | 67 | Students submit only work that is entirely their own and original.
+P29.04 | Submitted work must be one's own | during-work | 31 | Submitted work reflects the student's own understanding, thinking, voice, effort and skills.
+P29.05 | Submitted work must be one's own | during-work | 16 | Students do not present AI-generated output or work they did not produce as their own.
+P29.06 | Submitted work must be one's own | during-work | 11 | Students are responsible for the content of their submissions and for ensuring the work is their own.
+P29.07 | Submitted work must be one's own | during-work | 9 | Work students submit is assumed to be their own original work unless identified otherwise.
+P29.08 | Submitted work must be one's own | during-work | 5 | By submitting work, students attest that they are its only and original author.
+P29.09 | Submitted work must be one's own | during-work | 5 | Students complete assignments without help from AI or other external tools.
+P29.10 | Submitted work must be one's own | during-work | 5 | Students do their own work and properly cite any sources they use.
+P29.11 | Submitted work must be one's own | during-work | 5 | Students revise and personalize AI-generated content and do not submit it as-is.
+P29.12 | Submitted work must be one's own | during-work | 4 | Even when AI use is allowed, the final work submitted must still be the student's own.
+P29.13 | Submitted work must be one's own | during-work | 4 | Students keep ownership of their core ideas, arguments and analysis.
+P29.14 | Submitted work must be one's own | general | 15 | Passing off work that is not one's own as one's own is dishonest, and students remain its authors.
+P30.01 | Explaining and defending one's own work | during-work | 24 | Students explain and defend every part of the work they submit, including AI-assisted work.
+P30.02 | Explaining and defending one's own work | during-work | 19 | Students understand the content and code they submit, and their work reflects that understanding.
+P30.03 | Explaining and defending one's own work | during-work | 6 | Students do not submit work or code they do not understand, or copy and paste AI output without comprehension.
+P30.04 | Explaining and defending one's own work | during-work | 4 | Students explain how and why they used AI, and how AI contributed to their work.
+P30.06 | Explaining and defending one's own work | general | 2 | Students lose out or take on responsibility when they do not understand the content they submit.
+P31.02 | Verifying AI output | during-work | 157 | Students verify the accuracy of AI-generated content before using or submitting it.
+P31.04 | Verifying AI output | during-work | 28 | Students check that sources and references cited by AI exist and are accurate.
+P31.06 | Verifying AI output | during-work | 20 | Students treat AI output as a draft or starting point and assume it is wrong unless verified.
+P31.07 | Verifying AI output | during-work | 18 | Students must not rely on, cite or accept AI output or sources without verifying them.
+P31.10 | Verifying AI output | during-work | 9 | Everyone tests and verifies AI-generated code before using it.
+P31.11 | Verifying AI output | during-work | 1 | Students document the steps they took to verify AI output.
+P31.12 | Verifying AI output | general | 148 | AI output can be inaccurate, fabricated or biased, including fake citations.
+P31.13 | Verifying AI output | general | 14 | Students should be aware that AI can be wrong, biased or make things up.
+P32.03 | AI supports, and does not replace, human thinking | during-work | 51 | Students use AI to support and enhance, not replace, their learning, thinking and own work.
+P32.04 | AI supports, and does not replace, human thinking | during-work | 48 | Students must not use AI to replace or bypass their own thinking, analysis, effort or the learning an assignment builds.
+P32.05 | AI supports, and does not replace, human thinking | during-work | 23 | Students must be the primary author, and the ideas, analysis and final work must be their own.
+P32.06 | AI supports, and does not replace, human thinking | during-work | 16 | Students do not rely solely on AI output, and treat it as a starting point to evaluate and build on.
+P32.07 | AI supports, and does not replace, human thinking | during-work | 9 | Students ask themselves whether their AI use helps them learn or replaces their own work, and use judgment.
+P32.08 | AI supports, and does not replace, human thinking | during-work | 7 | Everyone must keep human judgment in the loop and not rely solely on AI for decisions.
+P32.09 | AI supports, and does not replace, human thinking | during-work | 6 | Students make their final submission show how they developed and refined ideas and directed AI with their own critical thinking.
+P32.10 | AI supports, and does not replace, human thinking | during-work | 6 | Students must not use AI summaries in place of doing the reading themselves.
+P32.11 | AI supports, and does not replace, human thinking | general | 48 | AI is not a substitute for human thinking, judgment, creativity or learning.
+P32.13 | AI supports, and does not replace, human thinking | general | 4 | AI use must support learning, and the intellectual effort and ownership must remain with the person.
+P33.08 | Supervised, proctored or in-class assessment | during-assessment | 2 | Students complete all assessments in the classroom, by hand and without digital devices or technology.
+P34.04 | Explaining work orally (interviews, code reviews, presentations) | during-assessment | 7 | Students are expected to be able to explain, discuss, or defend their work verbally when asked.
+P34.07 | Explaining work orally (interviews, code reviews, presentations) | when-misuse | 2 | Students meet with the instructor to discuss the assignment when AI use is suspected or not acknowledged.
+P35.16 | Assignment and assessment redesign for AI | during-work | 3 | Students may use AI in structured assignment tasks such as revising a draft or critiquing an AI response.
+P35.18 | Assignment and assessment redesign for AI | during-work | 2 | Students follow assignment-specific rules, such as working in a monitored workspace, sending outlines, and not using AI on final papers.
+P35.24 | Assignment and assessment redesign for AI | general | 4 | Students' AI use is documented and graded, and AI use makes their work harder to evaluate.
+P36.03 | AI misuse as academic misconduct | during-work | 16 | Students do not use AI to fabricate information, evade detection, conceal use, or circumvent learning goals.
+P36.04 | AI misuse as academic misconduct | during-assessment | 4 | Students do not use unauthorized AI during exams or assessments.
+P36.05 | AI misuse as academic misconduct | when-misuse | 145 | Unauthorized or improper AI use is academic misconduct or an academic integrity violation.
+P36.06 | AI misuse as academic misconduct | when-misuse | 75 | AI violations are handled through existing academic integrity and conduct processes, with possible disciplinary action.
+P36.07 | AI misuse as academic misconduct | when-misuse | 72 | Students do not use AI tools without authorization or in ways that violate instructor or university rules.
+P36.08 | AI misuse as academic misconduct | when-misuse | 68 | Presenting AI-generated or uncited AI content as one's own work is plagiarism.
+P36.09 | AI misuse as academic misconduct | when-misuse | 40 | Students do not present AI-generated content as their own work or use it without attribution or citation.
+P36.10 | AI misuse as academic misconduct | when-misuse | 33 | Any use of generative AI in the course is a violation.
+P36.11 | AI misuse as academic misconduct | when-misuse | 31 | Using unauthorized AI counts as cheating or unauthorized assistance.
+P36.13 | AI misuse as academic misconduct | general | 7 | Students follow the university's honor code and academic integrity rules when using AI.
+P37.03 | Consequences and sanctions for AI-rule violations | during-work | 2 | AI-generated submissions cannot receive a passing grade.
+P37.04 | Consequences and sanctions for AI-rule violations | when-misuse | 28 | Students who misuse AI face a zero or failing grade on the assignment.
+P37.05 | Consequences and sanctions for AI-rule violations | when-misuse | 18 | Students who misuse AI may face a reduced grade, grade penalty, required revision, or other academic consequences.
+P37.06 | Consequences and sanctions for AI-rule violations | when-misuse | 16 | Students who misuse AI may fail the course, with penalties escalating for serious or repeated violations.
+P37.07 | Consequences and sanctions for AI-rule violations | when-misuse | 13 | Students who misuse AI may face disciplinary action, up to suspension, expulsion or dismissal, and misconduct reports.
+P38.01 | Self-report, amnesty or leniency for inadvertent misuse | when-misuse | 1 | Students report inadvertent use of generative AI.
+P40.02 | Detection and similarity tools for AI misuse | course-start | 11 | Students' work in the course will be submitted to AI-detection or plagiarism tools as a condition of the course.
+P40.06 | Detection and similarity tools for AI misuse | during-work | 3 | Students write their work in Google Docs or Office 365 so editing history can be viewed.
+P41.03 | AI shortcuts the practice that builds skill | course-start | 50 | Course assignments and goals are designed to build students' own skills, and AI use would undermine them.
+P41.05 | AI shortcuts the practice that builds skill | during-work | 18 | Students use AI to support their learning and understanding, not as a shortcut.
+P41.06 | AI shortcuts the practice that builds skill | during-work | 7 | Students do not use AI to replace the learning or practice that assignments are meant to build.
+P41.07 | AI shortcuts the practice that builds skill | during-work | 6 | Students pause and consider whether their AI use supports or undermines their learning.
+P41.08 | AI shortcuts the practice that builds skill | general | 64 | Using AI can replace, bypass or shortcut the practice and work through which students learn and build skills.
+P41.10 | AI shortcuts the practice that builds skill | general | 25 | Students do their own work and thinking independently, without AI, to develop skills.
+P41.11 | AI shortcuts the practice that builds skill | general | 23 | Struggle and effort are necessary for learning and cannot be skipped.
+P41.12 | AI shortcuts the practice that builds skill | general | 12 | Writing is a way of thinking and learning, and outsourcing writing outsources thinking.
+P42.02 | Fundamentals before AI; protecting novices | course-start | 8 | Students are told that this course requires developing fundamental skills and knowledge without AI.
+P42.03 | Fundamentals before AI; protecting novices | general | 11 | Novices cannot judge AI output because they lack the fundamentals to recognize errors.
+P42.04 | Fundamentals before AI; protecting novices | general | 7 | Students must learn the basics first to benefit from AI later and to succeed long-term.
+P42.06 | Fundamentals before AI; protecting novices | general | 4 | Students master fundamentals and use AI only for tasks suited to their learning level.
+P43.01 | False sense of mastery from AI | during-work | 1 | Students slow down and reconsider their AI use if they cannot complete a similar task without AI support.
+P44.02 | Teaching AI use in courses | course-start | 19 | Course learning goals include developing students' skills in using AI effectively, responsibly and critically.
+P44.05 | Teaching AI use in courses | during-work | 8 | Students get hands-on experience working with AI tools in class.
+P44.09 | Teaching AI use in courses | general | 14 | Learning to use AI is an emerging and important skill.
+P44.10 | Teaching AI use in courses | general | 7 | Students build the skills to use AI tools effectively and responsibly.
+P45.02 | AI under the existing rules for human help and sources | course-start | 4 | Students treat generative AI use like assistance from another person when the instructor has given no guidance on AI.
+P45.03 | AI under the existing rules for human help and sources | during-work | 12 | Students treat the use of AI as they would treat assistance from another person.
+P45.04 | AI under the existing rules for human help and sources | during-work | 7 | Students complete each assignment without substantive assistance from others, including automated tools.
+P45.05 | AI under the existing rules for human help and sources | during-work | 6 | Students follow existing ethical scholarship, plagiarism and citation rules for AI use, citing and quoting AI sources like any other source.
+P45.06 | AI under the existing rules for human help and sources | during-work | 5 | Students may use AI for anything they are allowed to do with another person, such as discussing work or generating ideas.
+P45.07 | AI under the existing rules for human help and sources | during-work | 4 | Students do not use AI in any way that would count as plagiarism or unauthorized help if a human did it.
+P45.08 | AI under the existing rules for human help and sources | when-misuse | 6 | Uncited or unacknowledged use of another's work, whether a person or AI, is an academic integrity violation.
+P45.10 | AI under the existing rules for human help and sources | general | 15 | Plagiarism and academic integrity rules apply to AI-generated content and sources just as to human ones.
+P49.04 | Uploading course materials and protected content to AI | during-work | 18 | Students must not upload course materials, including instructor-created lectures, slides and assignments, into AI tools without the instructor's permission.
+P49.05 | Uploading course materials and protected content to AI | during-work | 5 | Students consider copyright, ethics and whether they have permission before uploading others' content to AI tools.
+P50.06 | Keeping personal and sensitive data out of AI tools | during-work | 59 | Students do not enter personal, confidential or sensitive information into AI tools.
+P51.10 | Equitable access to AI (cost, alternatives, opt-out) | course-start | 7 | Students talk to their instructor about access concerns, accommodations or alternatives.
+P51.14 | Equitable access to AI (cost, alternatives, opt-out) | during-work | 3 | Students may choose not to use AI if it is a barrier or they prefer not to.
+P51.15 | Equitable access to AI (cost, alternatives, opt-out) | during-work | 2 | Students use only AI tools that are free or provided to them.
+P51.16 | Equitable access to AI (cost, alternatives, opt-out) | during-work | 2 | Students are expected to obtain an AI account or pay for the most advanced version.
+P51.22 | Equitable access to AI (cost, alternatives, opt-out) | general | 5 | AI use is optional, and students are not required to use or pay for tools.
+P51.25 | Equitable access to AI (cost, alternatives, opt-out) | general | 2 | Alternatives are usually provided to students with concerns about access or privacy.
+P52.04 | Copyright, intellectual property and terms of use | during-work | 11 | Users avoid uploading confidential, proprietary, unpublished or others' work to AI tools.
+P52.07 | Copyright, intellectual property and terms of use | during-work | 3 | Students document AI use in their intellectual property contributions and consider commercialization implications.
+P53.06 | Bias, fairness and general ethical concerns about AI | general | 25 | Users are aware of and understand the potential biases and limitations of AI tools.
+P53.13 | Bias, fairness and general ethical concerns about AI | general | 8 | Students consider the ethical and environmental impacts of using generative AI.
+P54.01 | Policy review and revision over time | course-start | 9 | Course rules and AI policies are provisional and may change during the term.
+P54.15 | Policy review and revision over time | over-time | 2 | Students and community members stay informed of policy updates and keep consulting current policies.
+P56.03 | Institutional values and principles for AI use | course-start | 2 | Certain core expectations for AI use apply in every course.
+P56.14 | Institutional values and principles for AI use | general | 6 | Students use AI tools responsibly and ethically.
+P58.01 | Students' own course communication (posts, messages) | during-work | 8 | Students do not use generative AI to impersonate themselves in classroom contexts, such as discussion board posts or Zoom or Teams chat.
+P62.03 | AI in research, publication and review | before-course | 10 | Students get advisor or committee permission before using AI in theses, dissertations and research.
+P62.06 | AI in research, publication and review | during-work | 46 | Researchers disclose and cite their use of AI in research outputs, theses and proposals, and are transparent about it.
+P62.09 | AI in research, publication and review | during-work | 9 | Students discuss their AI use with their advisor or committee.
+P62.18 | AI in research, publication and review | during-work | 4 | Researchers do not use AI for certain tasks such as generating data, literature searches or heavy thesis writing.
+P62.19 | AI in research, publication and review | during-work | 3 | AI is not listed as a co-author, and authorship reflects substantive human contribution.
+P62.20 | AI in research, publication and review | during-work | 2 | Disclosure of AI use may be optional for minor uses such as finding references, brainstorming or grammar checking.
+P62.22 | AI in research, publication and review | when-misuse | 8 | Misuse of AI or lack of attribution can count as research misconduct.
+P62.23 | AI in research, publication and review | general | 14 | Researchers use AI ethically, with integrity and in line with disciplinary and research ethics standards.
+P64.02 | Due process for students accused of misuse | when-misuse | 7 | Students may appeal an AI misuse decision through the university's appeal process.
+P64.04 | Due process for students accused of misuse | when-misuse | 3 | Students accused of AI misuse may contest the allegation or defend themselves, including through a meeting with the instructor.
+P64.06 | Due process for students accused of misuse | when-misuse | 2 | Students can seek support from campus staff, such as Community Standards or the Disability Access Center, when handling an allegation.
+P64.07 | Due process for students accused of misuse | when-misuse | 1 | Students must submit their written statement within the set deadline after an allegation.
+P66.11 | Explaining and discussing AI rules with students | course-start | 5 | Students ask questions, discuss expectations and reflect on the ethics of AI use.
+P70.10 | AI literacy training and resources | general | 17 | Students are pointed to guides, tutorials and courses for learning about generative AI and using it responsibly.
+P70.12 | AI literacy training and resources | general | 15 | Students seek out training and learning opportunities to build their AI literacy.
+P71.08 | Reporting AI incidents and misuse | when-misuse | 2 | Students report unethical AI use or AI misinformation and hallucinations to their instructor or supervisor.
+P71.09 | Reporting AI incidents and misuse | when-misuse | 1 | Students may need to take further action together with their instructor or supervisor after reporting.
+P72.03 | Contact points and human help for AI questions | during-work | 22 | Students reach out to instructors, librarians, writing centers or academic support services for help with their work, including before turning to AI.
+P72.05 | Contact points and human help for AI questions | general | 18 | Students can get help from writing centers, tutoring, librarians, advisors and instructors, which are available resources.
+P72.09 | Contact points and human help for AI questions | general | 2 | Students check with instructors or advisors about course policies and their use of AI.
+P74.02 | Harmful, deceptive or fabricating AI uses | during-work | 9 | Students do not use AI to fabricate or falsify data, results, sources, citations or other evidence in their work.
+P74.03 | Harmful, deceptive or fabricating AI uses | during-work | 7 | Students do not use AI to hide plagiarism, evade detection, or mislead others about where their work came from.
+P74.04 | Harmful, deceptive or fabricating AI uses | during-work | 6 | Nobody uses AI to generate or spread misinformation or false, misleading or harmful content, including deepfakes.
+P74.06 | Harmful, deceptive or fabricating AI uses | during-work | 1 | Students take care to avoid unintentional plagiarism or data fabrication when using AI.
+P74.08 | Harmful, deceptive or fabricating AI uses | when-misuse | 3 | Submitting fabricated data, counterfeit citations or misinformation through AI is misuse.
+P74.15 | Harmful, deceptive or fabricating AI uses | general | 3 | Nobody uses AI to create false or forged records, such as academic records, recommendations or medical excuses.
+P77.03 | Existing law and university policy apply to AI | course-start | 6 | Students familiarize themselves with university and course AI policies before using AI tools.
+P77.04 | Existing law and university policy apply to AI | during-work | 17 | Students keep university academic integrity, conduct and technology policies in mind and use AI lawfully and honestly.
+P77.06 | Existing law and university policy apply to AI | during-work | 6 | Students comply with privacy, data protection, FERPA, HIPAA and export laws when using AI.
+P77.11 | Existing law and university policy apply to AI | general | 35 | Students follow the university's academic integrity policy, honor code, student conduct code and course rules when using AI.
+P78.02 | Finding out and following each course's AI rules | course-start | 46 | Students read each course syllabus and assignment instructions to learn what AI use is allowed.
+P78.03 | Finding out and following each course's AI rules | course-start | 31 | Students are responsible for understanding and following the AI expectations of each course.
+P78.04 | Finding out and following each course's AI rules | course-start | 18 | Students ask or consult their instructors to clarify AI expectations when they are unsure.
+P78.05 | Finding out and following each course's AI rules | course-start | 7 | AI rules and expectations differ between courses and instructors.
+P78.06 | Finding out and following each course's AI rules | during-work | 66 | Students follow the AI rules their instructor sets for the course.
+P78.07 | Finding out and following each course's AI rules | during-work | 12 | Students check the assignment-specific instructions on AI use, in addition to the syllabus.
+P78.08 | Finding out and following each course's AI rules | during-work | 9 | Students do not use AI when the instructor prohibits it or beyond the limits the instructor sets.
+P78.09 | Finding out and following each course's AI rules | when-misuse | 4 | Not knowing or not clarifying the rules is not an excuse for a violation.
+P78.10 | Finding out and following each course's AI rules | general | 15 | Students understand and follow the university, school, program and departmental AI guidelines.
+P78.11 | Finding out and following each course's AI rules | general | 9 | Students are responsible for using AI ethically and for knowing what is permitted.
+P79.07 | AI use built into coursework | during-work | 35 | Students use generative AI to complete some assignments or tasks, as specified by the instructor.
+P79.08 | AI use built into coursework | during-work | 26 | AI will be used, integrated or explored in the course and its assignments.
+P79.09 | AI use built into coursework | during-work | 11 | Students are expected to use AI tools in this course.
+P79.11 | AI use built into coursework | during-work | 5 | Students may use AI when the instructor permits or asks for it in coursework.
+P79.12 | AI use built into coursework | during-assessment | 3 | Students are assessed on the value they add to AI output.
+P80.07 | Governance roles, ownership and exceptions | during-work | 1 | Students get instructor approval for accommodations or exceptions to course AI rules and contact the instructor to discuss them.
+P81.15 | Formal integrity procedure (reporting, referral, sanctions process) | when-misuse | 1 | Students may receive informal violations, which are not stored in the university database, and formal ones, which are.
+P83.09 | AI decisions grounded in learning objectives | course-start | 13 | Syllabus statements tell students the AI policy exists to protect and promote their learning and the course's goals.
+P83.10 | AI decisions grounded in learning objectives | during-work | 4 | Students must not use AI in ways that bypass or undermine the course's learning objectives.
+P83.11 | AI decisions grounded in learning objectives | during-work | 4 | Students consider whether AI use is appropriate for their learning goals and justify it by relevance to them.
+P83.12 | AI decisions grounded in learning objectives | during-work | 2 | Students may use AI tools when the use aligns with or complements the course learning outcomes.
+P86.03 | Consent for AI recording, transcription and likeness | during-work | 5 | Students obtain the instructor's permission before recording class sessions or lectures, including with AI tools.
+P86.07 | Consent for AI recording, transcription and likeness | during-work | 3 | Everyone does not create or distribute images, audio, video or likenesses of real people, including deepfakes, without their explicit consent.
+P86.08 | Consent for AI recording, transcription and likeness | during-work | 2 | Students do not use AI tools to transcribe, record, take notes on or summarize course lectures, unless approved as an accommodation.
+P86.10 | Consent for AI recording, transcription and likeness | general | 1 | Students have the right to attend classes without being recorded by AI tools.
+P87.01 | Benefits of AI for learning and teaching | course-start | 4 | Responsible AI use can support and enhance students' learning in the course.
+P87.12 | Benefits of AI for learning and teaching | general | 10 | AI can help students brainstorm and spark ideas at the start of work.
+P89.03 | AI for data analysis and visualization | during-work | 16 | Students may use generative AI to analyze data, find patterns and draw insights from it.
+P89.05 | AI for data analysis and visualization | during-work | 3 | Students may use AI for calculations and spreadsheet manipulation only as specified in assignments.
+P89.06 | AI for data analysis and visualization | during-work | 1 | AI use for data analysis is permitted only with oversight and under transparency policies.
+P89.08 | AI for data analysis and visualization | during-work | 1 | Students must not use AI to analyze data, draw conclusions or interpret simulation results in graded work.
+P89.09 | AI for data analysis and visualization | general | 1 | AI advances research capabilities by automating data analysis.
+P90.01 | Own attempt first, then AI | during-work | 4 | Students do their own thinking, develop their ideas and attempt the assignment before turning to AI.
+P90.02 | Own attempt first, then AI | during-work | 4 | Students write their own first draft or make an independent attempt before using AI, and do not use AI for that first draft.
+P90.03 | Own attempt first, then AI | during-work | 2 | Students may use AI to write, revise or summarize only after they have engaged with the work or materials themselves.
+P90.05 | Own attempt first, then AI | during-work | 1 | Students may use AI for pre-task activities such as brainstorming, structuring and idea generation.
+P91.03 | AI for editing, proofreading and outlining one's own work | during-work | 50 | Students may use AI to check grammar, spelling and proofread their own writing.
+P91.04 | AI for editing, proofreading and outlining one's own work | during-work | 35 | Students may use AI to polish, revise and edit their own drafts for clarity, style and tone.
+P91.05 | AI for editing, proofreading and outlining one's own work | during-work | 33 | Students may use AI to outline, plan and organize their ideas.
+P91.06 | AI for editing, proofreading and outlining one's own work | during-work | 15 | Students may use AI as a general writing aid or assistant.
+P91.07 | AI for editing, proofreading and outlining one's own work | during-work | 7 | Students may use AI to format citations, references, bibliographies and documents.
+P91.09 | AI for editing, proofreading and outlining one's own work | during-work | 4 | Students must not use generative AI on writing assignments, including drafting or copy-editing.
+P91.10 | AI for editing, proofreading and outlining one's own work | during-work | 4 | Students are encouraged to use AI to proofread, outline, revise and edit their work.
+P91.11 | AI for editing, proofreading and outlining one's own work | during-work | 2 | Students must not use AI to generate, rewrite, restructure or make major revisions to their content.
+P92.06 | University-licensed or approved AI tools | during-work | 23 | Students use university-approved or provided AI tools, signed in with their university account, for academic work.
+P93.03 | Prompting advice | during-work | 14 | Students refine and revise their prompts through repeated trial and error and do not expect the best result on the first try.
+P93.05 | Prompting advice | during-work | 10 | Students write clear, specific and detailed prompts that give context, and avoid vague, minimal prompts.
+P93.07 | Prompting advice | during-work | 3 | Students break complex tasks into parts, set context in the first prompt, and ask follow-up questions or multiple versions.
+P93.08 | Prompting advice | during-work | 3 | Users may ask the AI to explain its reasoning, critique its own output or suggest changes with explanations.
+P93.09 | Prompting advice | during-work | 3 | Students experiment with different AI tools and familiar subjects to learn their strengths and weaknesses.
+P93.12 | Prompting advice | during-work | 1 | With instructor approval, students may use AI platforms to learn prompt engineering.
+P94.02 | Careers and professional norms as reasons to build skills without AI | course-start | 5 | The course's skills and learning outcomes prepare students for their future career and success in their degree.
+P94.03 | Careers and professional norms as reasons to build skills without AI | general | 10 | Developing strong competencies in this area prepares students for a competitive workplace.
+P94.04 | Careers and professional norms as reasons to build skills without AI | general | 5 | Relying on AI as a shortcut or outsourcing thinking leaves students less prepared, with less learning and weaker future prospects.
+P94.05 | Careers and professional norms as reasons to build skills without AI | general | 2 | The university's goal is to prepare students for a career in industry, including problems AI cannot solve.
+P94.06 | Careers and professional norms as reasons to build skills without AI | general | 2 | Students should become competent enough to surpass generative AI in the future, in academia, research and the workplace.
+P94.07 | Careers and professional norms as reasons to build skills without AI | general | 2 | Professional settings may not give immediate access to AI and have varied norms and strict rules on AI use.
+P95.03 | Integrity, honesty and fairness as grounds for AI rules | during-work | 1 | Students ask whether their AI use is equitable to their peers.
+P95.04 | Integrity, honesty and fairness as grounds for AI rules | when-misuse | 2 | Academic dishonesty with AI is considered wrong and leads to penalties.
+P95.06 | Integrity, honesty and fairness as grounds for AI rules | general | 9 | AI use must be fair and equitable to all students, and unfair advantage is dishonest.
+P95.07 | Integrity, honesty and fairness as grounds for AI rules | general | 8 | Honest work and disclosure let others trust that submissions reflect the student's own knowledge.
+P96.01 | AI is not an author, source or collaborator | during-work | 4 | Students do not cite or use AI as a source, including as a scholarly source for facts or assignments.
+P96.02 | AI is not an author, source or collaborator | during-work | 1 | Using generative AI tools crosses the boundary of acceptable collaboration.
+P96.04 | AI is not an author, source or collaborator | general | 4 | AI cannot be credited as an author because it cannot be held accountable and lacks independent thought or responsible judgment.
+P97.06 | Accessibility and AI | course-start | 3 | Students using AI for accommodations work with the disability services office and their instructor; other AI uses are prohibited unless approved.
+P97.13 | Accessibility and AI | general | 4 | Students may use AI as assistive technology or as part of an approved disability accommodation.
+P99.08 | Reducing pressures that lead to misuse | course-start | 1 | Students ask the instructor for help, even at the last minute, rather than misusing AI.
+P99.10 | Reducing pressures that lead to misuse | during-work | 1 | Students give themselves enough time to complete their work to avoid academic integrity violations.

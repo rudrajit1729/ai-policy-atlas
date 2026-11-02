@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Computing AI Policy Atlas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&display=swap">
+<style>
+/* Layout: a reading-room ledger. Sticky tab bar; every original quote is serif on a highlighter,
+   every normalized or analyst-written line is sans. */
+:root {
+  --bg: #f4f5f8; --surface: #ffffff; --sunk: #eceef3; --ink: #1a1f2e; --muted: #5b6273; --line: #d9dce5;
+  --accent: #3b3f9c; --accent-soft: #e5e6f5; --mark: #fff0a3; --mark-ink: #1a1f2e;
+  --ok: #2c7a4c; --warn: #9a5d0a; --bad: #b13a31;
+  --s-prohibit: #b13a31; --s-restrict: #c26a1b; --s-permit: #3b6fb0; --s-encourage: #2c7a4c; --s-require: #6b3fa0; --s-delegates: #6b7280;
+  --f-quote: "Newsreader", "Iowan Old Style", Georgia, serif;
+  --f-ui: "IBM Plex Sans", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --r: 6px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #11131a; --surface: #191c26; --sunk: #141720; --ink: #e6e8ef; --muted: #9ba1b3; --line: #2a2e3b;
+    --accent: #a3a7ff; --accent-soft: #262a4b; --mark: #4d4512; --mark-ink: #fbf1c2;
+    --ok: #6cc592; --warn: #e3a54a; --bad: #ef7d73;
+    --s-prohibit: #ef7d73; --s-restrict: #eda15c; --s-permit: #7fb0ef; --s-encourage: #6cc592; --s-require: #c4a2f0; --s-delegates: #a3a9b8;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #11131a; --surface: #191c26; --sunk: #141720; --ink: #e6e8ef; --muted: #9ba1b3; --line: #2a2e3b;
+  --accent: #a3a7ff; --accent-soft: #262a4b; --mark: #4d4512; --mark-ink: #fbf1c2;
+  --ok: #6cc592; --warn: #e3a54a; --bad: #ef7d73;
+  --s-prohibit: #ef7d73; --s-restrict: #eda15c; --s-permit: #7fb0ef; --s-encourage: #6cc592; --s-require: #c4a2f0; --s-delegates: #a3a9b8;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-ui); font-size: 0.9375rem; line-height: 1.5; }
+a { color: var(--accent); }
+button, select, input { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
+[hidden] { display: none !important; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: 20px; }
+.mast { padding-block: 26px 16px; display: grid; gap: 8px; }
+.mast h1 { font-family: var(--f-quote); font-weight: 600; font-size: 2.1rem; line-height: 1.1; }
+.mast p { margin: 0; color: var(--muted); max-width: 78ch; }
+.stats { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 0.8125rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.stats b { color: var(--ink); }
+.tabbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bg); border-bottom: 1px solid var(--line); }
+.tabs { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+.tabs button { background: none; border: 0; border-bottom: 2px solid transparent; padding: 12px 14px 10px; cursor: pointer; color: var(--muted); font-weight: 500; white-space: nowrap; }
+.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+main { padding-block: 20px 64px; }
+.toolbar { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; margin-bottom: 16px; }
+.lbl { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 600; }
+.field { display: inline-flex; align-items: center; gap: 6px; }
+input[type="search"], input[type="text"], select { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 6px 9px; font-size: 0.8125rem; }
+input[type="search"] { width: min(280px, 100%); }
+.seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; background: var(--surface); }
+.seg button { border: 0; background: none; padding: 6px 11px; cursor: pointer; font-size: 0.8125rem; color: var(--muted); border-right: 1px solid var(--line); }
+.seg button:last-child { border-right: 0; }
+.seg button[aria-pressed="true"] { background: var(--accent-soft); color: var(--ink); font-weight: 600; }
+.btn { border: 1px solid var(--line); background: var(--surface); border-radius: var(--r); padding: 6px 11px; font-size: 0.8125rem; cursor: pointer; }
+.btn:hover { border-color: var(--accent); }
+.btn.primary { background: var(--accent); color: var(--surface); border-color: var(--accent); }
+.note { font-size: 0.8125rem; color: var(--muted); }
+.grow { flex: 1; }
+.count { font-size: 0.75rem; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tag { font-size: 0.75rem; padding: 1px 8px; border-radius: 999px; background: var(--sunk); color: var(--muted); border: 1px solid var(--line); white-space: nowrap; }
+.stance { font-size: 0.75rem; font-weight: 600; padding: 1px 8px; border-radius: 999px; border: 1px solid currentColor; white-space: nowrap; }
+.st-prohibit { color: var(--s-prohibit); } .st-restrict { color: var(--s-restrict); } .st-permit { color: var(--s-permit); }
+.st-encourage { color: var(--s-encourage); } .st-require { color: var(--s-require); } .st-delegates { color: var(--s-delegates); }
+.layer { font-family: var(--f-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+
+/* a policy row: normalized statement + original wording side by side */
+.pol { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 4px 18px; padding: 9px 0; border-top: 1px solid var(--line); }
+.pol:first-child { border-top: 0; }
+.pol .norm { font-size: 0.875rem; }
+.pol .orig { font-family: var(--f-quote); font-size: 0.9375rem; }
+.pol .orig mark { background: var(--mark); color: var(--mark-ink); padding: 0.05em 0.2em; border-radius: 2px; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
+.pol .meta { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 4px 8px; align-items: baseline; font-size: 0.75rem; color: var(--muted); }
+.pol .meta a { text-decoration: none; white-space: nowrap; }
+.pol .who { color: var(--ink); font-weight: 500; }
+.pol.verbatim .norm { display: none; }
+.pol.verbatim { grid-template-columns: minmax(0, 1fr); }
+.colhead { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 600; padding-bottom: 4px; }
+.unv { color: var(--warn); }
+
+/* universities */
+.uni-layout { display: grid; grid-template-columns: minmax(0, 330px) minmax(0, 1fr); gap: 22px; align-items: start; }
+.uni-list { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); max-height: calc(100vh - 210px); overflow: auto; position: sticky; top: 60px; }
+.uni-row { display: grid; gap: 2px; padding: 9px 12px; border-bottom: 1px solid var(--line); cursor: pointer; background: none; border-left: 0; border-right: 0; border-top: 0; width: 100%; text-align: left; }
+.uni-row:hover { background: var(--sunk); }
+.uni-row[aria-current="true"] { background: var(--accent-soft); }
+.uni-row .nm { font-weight: 600; }
+.uni-row .chips { display: flex; gap: 4px; flex-wrap: wrap; }
+.dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; background: var(--line); }
+.dot.on { background: var(--accent); }
+.uni-detail { display: grid; gap: 16px; min-width: 0; }
+.uni-head h2 { font-family: var(--f-quote); font-size: 1.6rem; }
+.layer-block { display: grid; gap: 10px; }
+.layer-block > h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); }
+.doc { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); }
+.doc > summary { list-style: none; cursor: pointer; padding: 12px 14px; display: grid; gap: 4px; }
+.doc > summary::-webkit-details-marker { display: none; }
+.doc-title { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: baseline; }
+.doc-title b { font-size: 1rem; }
+.doc .body { padding: 0 14px 14px; display: grid; gap: 12px; }
+.doc .grp > h4 { font-size: 0.8125rem; margin: 8px 0 2px; color: var(--accent); }
+.empty { color: var(--muted); font-size: 0.875rem; padding: 10px 0; }
+
+/* policies (themes / types) */
+.theme { margin-bottom: 26px; }
+.theme > h2 { font-family: var(--f-quote); font-size: 1.35rem; padding-bottom: 6px; border-bottom: 1px solid var(--line); margin-bottom: 10px; }
+.ptype { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); margin-bottom: 10px; }
+.ptype > summary { list-style: none; cursor: pointer; padding: 12px 14px; display: grid; gap: 6px; }
+.ptype > summary::-webkit-details-marker { display: none; }
+.ptype .hd { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+.ptype .hd h3 { font-size: 1rem; flex: 1; min-width: 14ch; }
+.pid { font-family: var(--f-mono); font-size: 0.75rem; color: var(--muted); }
+.rep { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 4px 18px; }
+.rep .orig { font-family: var(--f-quote); }
+.rep .orig mark { background: var(--mark); color: var(--mark-ink); padding: 0.05em 0.2em; border-radius: 2px; }
+.ptype .body { padding: 0 14px 12px; }
+.bar { height: 6px; background: var(--sunk); border-radius: 3px; overflow: hidden; display: flex; }
+.bar i { display: block; height: 100%; }
+
+/* matrix */
+.mx-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); }
+table.mx { border-collapse: separate; border-spacing: 0; width: 100%; font-size: 0.8125rem; }
+table.mx th, table.mx td { border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); padding: 6px 8px; vertical-align: top; text-align: left; }
+table.mx thead th { position: sticky; top: 0; background: var(--sunk); z-index: 1; font-size: 0.75rem; }
+table.mx th.rowh { background: var(--surface); font-weight: 500; white-space: nowrap; position: sticky; left: 0; z-index: 1; }
+table.mx tr.actor th { background: var(--sunk); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.cell { cursor: pointer; display: grid; gap: 2px; min-width: 120px; border-radius: 4px; padding: 4px; }
+.cell:hover { outline: 1px solid var(--accent); }
+.cell .n { font-family: var(--f-mono); font-weight: 500; }
+.cell .tops { color: var(--muted); font-size: 0.72rem; line-height: 1.3; }
+.cell[aria-pressed="true"] { outline: 2px solid var(--accent); }
+.drawer { margin-top: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 14px; display: grid; gap: 10px; }
+
+/* label builder */
+.builder { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: 24px; align-items: start; }
+.q { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 14px; display: grid; gap: 8px; margin-bottom: 10px; }
+.q legend { font-weight: 600; padding: 0; }
+.q fieldset { border: 0; margin: 0; padding: 0; display: grid; gap: 6px; }
+.opts { display: flex; flex-wrap: wrap; gap: 6px; }
+.opts label { border: 1px solid var(--line); border-radius: 999px; padding: 4px 11px; cursor: pointer; font-size: 0.8125rem; background: var(--bg); }
+.opts input { position: absolute; opacity: 0; pointer-events: none; }
+.opts input:checked + span { font-weight: 600; }
+.opts label:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+.opts label:has(input:focus-visible) { outline: 2px solid var(--accent); }
+.label-card { position: sticky; top: 60px; background: var(--surface); border: 2px solid var(--ink); border-radius: 4px; padding: 14px 16px; font-size: 0.8125rem; }
+.label-card h3 { font-family: var(--f-quote); font-size: 1.6rem; border-bottom: 8px solid var(--ink); padding-bottom: 4px; }
+.lrow { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--line); }
+.lrow.thick { border-bottom: 4px solid var(--ink); }
+.lrow .pct { font-family: var(--f-mono); font-weight: 500; }
+.lrow .ex { grid-column: 1 / -1; font-family: var(--f-quote); color: var(--muted); font-size: 0.8125rem; }
+.sim { display: grid; gap: 4px; margin-top: 8px; }
+
+/* patterns, method */
+.prose { max-width: 76ch; }
+.prose h2 { font-family: var(--f-quote); font-size: 1.35rem; margin: 26px 0 8px; }
+.prose li { margin-bottom: 6px; }
+.agents { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 10px 0; }
+.agent { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 12px; font-size: 0.8125rem; }
+.agent b { display: block; font-size: 0.9375rem; margin-bottom: 4px; }
+
+@media (max-width: 860px) {
+  .uni-layout, .builder { grid-template-columns: 1fr; }
+  .uni-list { position: static; max-height: 300px; }
+  .pol, .rep, .colhead { grid-template-columns: 1fr; }
+  .label-card { position: static; }
+  .mast h1 { font-size: 1.7rem; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+<div class="wrap mast">
+  <h1>Computing AI Policy Atlas</h1>
+  <p>Generative-AI policies at US universities, as they apply to computing education: university-wide, school or college, computing-unit, and course policies. Every coded policy shows a normalized statement beside the institution's original wording, with a link to the exact passage.</p>
+  <div class="stats" id="stats">Loading the corpus…</div>
+</div>
+<div class="tabbar"><div class="wrap"><nav class="tabs" role="tablist" id="tabs"></nav></div></div>
+<main class="wrap" id="main" role="tabpanel"><p class="note">Loading the corpus…</p></main>
+
+<script>
+(() => {
+"use strict";
+const TABS = [["universities", "Universities"], ["policies", "Policies"], ["matrix", "Matrix"], ["patterns", "Patterns"], ["label", "Policy label"], ["method", "Method"]];
+const SL = { prohibit: "Prohibit", restrict: "Restrict", permit: "Permit with conditions", encourage: "Encourage", require: "Require / integrate", delegates: "Delegates to instructor" };
+const AL = { student: "Students", instructor: "Instructors", "ta-staff": "TAs and staff", admin: "Administrators and units", all: "Everyone" };
+const PL = { general: "General (scope, definitions, principles)", "before-course": "Before the course", "course-start": "At the start of the course", "during-work": "While students work", "during-assessment": "During assessment", "when-misuse": "When misuse is suspected", "over-time": "Over time" };
+const LL = { university: "University-wide", school: "School or college", computing: "Computing unit", course: "Course (add-on)" };
+const ML = { must: "must", "must-not": "must not", may: "may", should: "should", "should-not": "should not", informs: "explains" };
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const store = { get(k, d) { try { const v = localStorage.getItem("atlas2:" + k); return v == null ? d : JSON.parse(v); } catch { return d; } }, set(k, v) { try { localStorage.setItem("atlas2:" + k, JSON.stringify(v)); } catch {} } };
+
+let U = [], P = [], T = [], M = {}, PAT = { sections: [] }, METH = { sections: [] };
+let byId, uniBySlug, typeById, docById;
+const st = {
+  tab: TABS.some(t => "#" + t[0] === location.hash) ? location.hash.slice(1) : store.get("tab", "universities"),
+  uq: "", uni: null, uLayerFilter: "all", uState: "all",
+  pq: "", pLayer: "all",
+  mView: store.get("mView", "full"), mLayer: "all", mCount: "units", mCell: null,
+  answers: store.get("answers", {}),
+};
+
+// ---------- data ----------
+async function load() {
+  const get = n => fetch("data/" + n + ".json").then(r => { if (!r.ok) throw new Error(n); return r.json(); });
+  [U, P, T, M] = await Promise.all([get("universities"), get("policies"), get("types"), get("meta")]);
+  P = P.filter(x => x.about_ai !== "no");  // D45: statements not about AI are kept in the data (Excel NotAboutAI tab) but not shown or counted
+  try { PAT = await get("patterns"); } catch {}
+  try { METH = await get("method"); } catch {}
+  byId = new Map(P.map(x => [x.id, x]));
+  uniBySlug = new Map(U.map(u => [u.slug, u]));
+  typeById = new Map(T.map(t => [t.id, t]));
+  docById = new Map(U.flatMap(u => u.documents.map(d => [d.id, Object.assign(d, { uni: u.slug })])));
+  if (!st.uni || !uniBySlug.has(st.uni)) st.uni = U[0] && U[0].slug;
+  document.getElementById("stats").innerHTML =
+    `<span><b>${M.n_universities}</b> universities</span><span><b>${M.n_documents}</b> documents</span>` +
+    `<span><b>${M.n_units.toLocaleString()}</b> coded policies (${M.n_verified.toLocaleString()} anchored to verbatim source text)</span>` +
+    `<span><b>${T.filter(t => t.n_units).length}</b> policy types</span>`;
+  render();
+}
+
+// ---------- shared pieces ----------
+function polRow(x, showWho = false) {
+  const u = uniBySlug.get(x.uni), d = docById.get(x.doc);
+  const verbatim = !x.policy;
+  return `<div class="pol ${verbatim ? "verbatim" : ""}">
+    <div class="norm">${esc(x.policy || "")}</div>
+    <div class="orig"><mark>${esc(x.anchor)}</mark></div>
+    <div class="meta">${showWho ? `<span class="who">${esc(u.name)}</span><span>${esc(LL[x.layer])} · ${esc(d.course || d.unit || "")}</span>` : ""}
+      <span class="tag">${esc(AL[x.actor] || x.actor)} ${esc(ML[x.modality] || "")}</span>
+      <span class="tag">${esc(PL[x.phase] || x.phase)}</span>
+      ${typeById.get(x.type) ? `<span class="tag" title="Policy type">${esc(x.type)} ${esc(typeById.get(x.type).name)}</span>` : `<span class="tag">${esc(x.type)}</span>`}
+      <a href="${esc(x.link)}" target="_blank" rel="noopener" title="Open the source with this passage highlighted">source ↗</a>
+      ${x.verified ? "" : `<span class="unv">anchor not re-verified</span>`}</div></div>`;
+}
+const colHead = () => `<div class="colhead"><span>Policy (normalized)</span><span>Original wording</span></div>`;
+const stancePill = s => `<span class="stance st-${s}">${esc(SL[s] || s)}</span>`;
+
+// ---------- universities ----------
+function renderUniversities() {
+  const states = [...new Set(U.map(u => u.state).filter(Boolean))].sort();
+  const q = st.uq.toLowerCase();
+  const list = U.filter(u => (!q || (u.name + " " + (u.state || "")).toLowerCase().includes(q)) && (st.uState === "all" || u.state === st.uState));
+  const u = uniBySlug.get(st.uni);
+  const rows = list.map(x => {
+    const have = new Set(x.documents.map(d => d.layer));
+    return `<button class="uni-row" data-uni="${x.slug}" aria-current="${x.slug === st.uni}"><span class="nm">${esc(x.name)}</span>
+      <span class="chips">${M.layers.map(l => `<span class="dot ${have.has(l) ? "on" : ""}" title="${LL[l]}${have.has(l) ? "" : ": none found"}"></span>`).join("")}
+      <span class="count">${esc(x.state || "")} · ${x.documents.length} docs · ${x.documents.reduce((a, d) => a + d.units.length, 0)} policies</span></span></button>`;
+  }).join("");
+  return `<div class="toolbar"><input type="search" id="uq" placeholder="Search universities" value="${esc(st.uq)}" aria-label="Search universities">
+    <label class="field"><span class="lbl">State</span><select id="ustate"><option value="all">All</option>${states.map(s => `<option ${st.uState === s ? "selected" : ""}>${esc(s)}</option>`).join("")}</select></label>
+    <span class="note">Dots: university · school · computing unit · course. ${list.length} of ${U.length} universities.</span></div>
+    <div class="uni-layout"><nav class="uni-list" aria-label="Universities">${rows || `<p class="empty" style="padding:12px">No universities match.</p>`}</nav>
+    <section class="uni-detail">${u ? uniDetail(u) : ""}</section></div>`;
+}
+function uniDetail(u) {
+  const blocks = M.layers.map(l => {
+    const docs = u.documents.filter(d => d.layer === l);
+    const status = (u.searched || {})[l];
+    const body = docs.length ? docs.map(docCard).join("") : `<p class="empty">${status === "inaccessible" ? "A document exists but is not publicly accessible." : "No document found at this level."}</p>`;
+    return `<div class="layer-block"><h3>${LL[l]}</h3>${body}</div>`;
+  }).join("");
+  return `<div class="uni-head"><h2>${esc(u.name)}</h2><p class="note">${esc([u.state, u.type].filter(Boolean).join(" · "))}${u.notes ? " · " + esc(u.notes) : ""}</p></div>${blocks}`;
+}
+function docCard(d) {
+  const units = d.units.map(id => byId.get(id)).filter(Boolean);
+  const groups = {};
+  for (const x of units) (groups[x.actor] ||= []).push(x);
+  const inner = M.actors.filter(a => groups[a]).map(a => {
+    const xs = groups[a].sort((p, q) => M.phases.indexOf(p.phase) - M.phases.indexOf(q.phase));
+    return `<div class="grp"><h4>${esc(AL[a])} <span class="count">${xs.length}</span></h4>${colHead()}${xs.map(x => polRow(x)).join("")}</div>`;
+  }).join("");
+  return `<details class="doc"><summary><div class="doc-title"><b>${esc(d.title)}</b>${stancePill(d.stance)}<span class="count">${units.length} policies</span></div>
+    <div class="note">${esc([d.unit, d.course, d.date_or_term].filter(Boolean).join(" · "))} · <a href="${esc(d.url)}" target="_blank" rel="noopener">open document ↗</a></div>
+    ${d.summary ? `<div class="note"><i>Analyst summary:</i> ${esc(d.summary)}</div>` : ""}
+    ${d.tiers && d.tiers.length ? `<div class="note"><i>Tiers offered:</i> ${d.tiers.map(esc).join(" · ")}</div>` : ""}</summary>
+    <div class="body">${inner || `<p class="empty">No policies coded.</p>`}</div></details>`;
+}
+
+// ---------- policies (thematic) ----------
+function renderPolicies() {
+  const q = st.pq.toLowerCase();
+  const pass = x => (st.pLayer === "all" || x.layer === st.pLayer) && (!q || ((x.policy || "") + " " + x.anchor + " " + uniBySlug.get(x.uni).name).toLowerCase().includes(q));
+  const mem = new Map();
+  for (const x of P) if (pass(x)) (mem.get(x.type) || mem.set(x.type, []).get(x.type)).push(x);
+  const themes = M.themes.map(th => {
+    const types = T.filter(t => t.theme === th.id && (mem.get(t.id) || []).length);
+    if (!types.length) return "";
+    return `<section class="theme"><h2>${esc(th.label)}</h2><p class="note" style="margin:-4px 0 10px">${esc(th.desc || "")}</p>${types.map(t => typeCard(t, mem.get(t.id))).join("")}</section>`;
+  }).join("");
+  return `<div class="toolbar"><input type="search" id="pq" placeholder="Search policies" value="${esc(st.pq)}" aria-label="Search policies">
+    <label class="field"><span class="lbl">Layer</span><select id="player"><option value="all">All layers</option>${M.layers.map(l => `<option value="${l}" ${st.pLayer === l ? "selected" : ""}>${LL[l]}</option>`).join("")}</select></label>
+    <span class="note">Policy types group policies that say the same thing. The representative is one institution's policy that best stands for the group.</span></div>${themes || `<p class="empty">No policies match.</p>`}`;
+}
+function typeCard(t, xs) {
+  const rep = byId.get(t.rep) && xs.includes(byId.get(t.rep)) ? byId.get(t.rep) : xs[0];
+  const nUni = new Set(xs.map(x => x.uni)).size;
+  const sc = {}; for (const x of xs) sc[x.stance] = (sc[x.stance] || 0) + 1;
+  const bar = M.stances.map(s => sc[s] ? `<i style="width:${100 * sc[s] / xs.length}%;background:var(--s-${s})" title="${SL[s]}: ${sc[s]}"></i>` : "").join("");
+  const ru = uniBySlug.get(rep.uni);
+  return `<details class="ptype"><summary><div class="hd"><span class="pid">${t.id}</span><h3>${esc(t.name)}</h3><span class="count"><b>${nUni}</b> universities · ${xs.length} policies</span></div>
+    <div class="rep"><div>${esc(rep.policy || "")}</div><div class="orig"><mark>${esc(rep.anchor)}</mark> <span class="note">${esc(ru.name)}</span></div></div>
+    <div class="bar" aria-label="Document stance of these policies">${bar}</div></summary>
+    <div class="body">${colHead()}${xs.map(x => polRow(x, true)).join("")}</div></details>`;
+}
+
+// ---------- matrix ----------
+function matrixData() {
+  const xs = P.filter(x => st.mLayer === "all" || x.layer === st.mLayer);
+  const key = x => st.mView === "full" ? `${x.actor}|${x.phase}|${x.stance}` : `${x.actor}|${x.phase}`;
+  const cells = new Map();
+  for (const x of xs) (cells.get(key(x)) || cells.set(key(x), []).get(key(x))).push(x);
+  return cells;
+}
+function cellHTML(k, list, max) {
+  if (!list || !list.length) return `<td></td>`;
+  const n = st.mCount === "units" ? list.length : new Set(list.map(x => x.uni)).size;
+  const tc = {}; for (const x of list) tc[x.type] = (tc[x.type] || 0) + 1;
+  const tops = Object.entries(tc).sort((a, b) => b[1] - a[1]).slice(0, 2).map(([id]) => esc((typeById.get(id) || { name: id }).name)).join(" · ");
+  const a = 0.08 + 0.42 * Math.sqrt(n / max);
+  return `<td><div class="cell" role="button" tabindex="0" data-cell="${k}" aria-pressed="${st.mCell === k}" style="background:color-mix(in srgb, var(--accent) ${Math.round(a * 100)}%, transparent)"><span class="n">${n}</span><span class="tops">${tops}</span></div></td>`;
+}
+function renderMatrix() {
+  const cells = matrixData();
+  const sizes = [...cells.values()].map(l => st.mCount === "units" ? l.length : new Set(l.map(x => x.uni)).size);
+  const max = Math.max(1, ...sizes);
+  const actors = M.actors.filter(a => [...cells.keys()].some(k => k.startsWith(a + "|")));
+  let head, body;
+  if (st.mView === "full") {
+    head = `<tr><th>Actor › phase</th>${M.stances.map(s => `<th><span class="stance st-${s}">${SL[s]}</span></th>`).join("")}</tr>`;
+    body = actors.map(a => `<tr class="actor"><th colspan="${M.stances.length + 1}">${AL[a]}</th></tr>` +
+      M.phases.filter(p => M.stances.some(s => cells.has(`${a}|${p}|${s}`))).map(p => `<tr><th class="rowh">${PL[p]}</th>${M.stances.map(s => cellHTML(`${a}|${p}|${s}`, cells.get(`${a}|${p}|${s}`), max)).join("")}</tr>`).join("")).join("");
+  } else {
+    const phases = M.phases.filter(p => actors.some(a => cells.has(`${a}|${p}`)));
+    head = `<tr><th>Actor</th>${phases.map(p => `<th>${PL[p]}</th>`).join("")}</tr>`;
+    body = actors.map(a => `<tr><th class="rowh">${AL[a]}</th>${phases.map(p => cellHTML(`${a}|${p}`, cells.get(`${a}|${p}`), max)).join("")}</tr>`).join("");
+  }
+  let drawer = "";
+  if (st.mCell && cells.get(st.mCell)) {
+    const list = cells.get(st.mCell);
+    const [a, p, s] = st.mCell.split("|");
+    const byT = {}; for (const x of list) (byT[x.type] ||= []).push(x);
+    drawer = `<section class="drawer" aria-live="polite"><h3>${AL[a]} · ${PL[p]}${s ? " · " + SL[s] : ""} <span class="count">${list.length} policies from ${new Set(list.map(x => x.uni)).size} universities</span></h3>
+      ${Object.entries(byT).sort((x, y) => y[1].length - x[1].length).map(([tid, xs]) => `<details class="ptype"><summary><div class="hd"><span class="pid">${tid}</span><h3>${esc((typeById.get(tid) || { name: tid }).name)}</h3><span class="count">${new Set(xs.map(x => x.uni)).size} universities · ${xs.length} policies</span></div></summary><div class="body">${colHead()}${xs.map(x => polRow(x, true)).join("")}</div></details>`).join("")}</section>`;
+  }
+  return `<div class="toolbar"><span class="lbl">View</span><div class="seg" role="group"><button data-mview="full" aria-pressed="${st.mView === "full"}">Actor › phase × stance</button><button data-mview="ap" aria-pressed="${st.mView === "ap"}">Actor × phase</button></div>
+    <label class="field"><span class="lbl">Layer</span><select id="mlayer"><option value="all">All layers</option>${M.layers.map(l => `<option value="${l}" ${st.mLayer === l ? "selected" : ""}>${LL[l]}</option>`).join("")}</select></label>
+    <span class="lbl">Count</span><div class="seg" role="group"><button data-mcount="units" aria-pressed="${st.mCount === "units"}">Policies</button><button data-mcount="unis" aria-pressed="${st.mCount === "unis"}">Universities</button></div></div>
+    <p class="note">${st.mView === "full" ? "Columns are the stance of the document a policy comes from, so you can compare, say, what student rules look like under prohibiting versus encouraging documents." : "Every policy by who it addresses and when in the course it applies."} Select a cell to see its policies grouped by type.</p>
+    <div class="mx-wrap"><table class="mx"><thead>${head}</thead><tbody>${body}</tbody></table></div>${drawer}`;
+}
+
+// ---------- policy label builder ----------
+const QUESTIONS = [
+  { id: "stance", q: "What is your default stance on AI for graded computing work?", type: "stance" },
+  { id: "who", q: "Who decides what is allowed?", opts: [["dept", "One rule for the unit", ["P01", "P02", "P06"]], ["instr", "Each instructor or assignment", ["P04"]], ["tiers", "Named levels that instructors choose from", ["P05"]]] },
+  { id: "syllabus", q: "Must every syllabus include an AI statement?", yn: ["P09"] },
+  { id: "tutor", q: "May students use AI to learn concepts or debug?", yn: ["P12", "P13", "P14", "P15"] },
+  { id: "code", q: "May students submit AI-generated code?", opts: [["no", "No", ["P19"]], ["cond", "Within stated limits", ["P16"]], ["yes", "Freely", ["P02", "P16"]]] },
+  { id: "exams", q: "Is AI banned on exams and quizzes?", yn: ["P22"] },
+  { id: "disclose", q: "Must students disclose AI use?", opts: [["no", "No requirement", []], ["stmt", "A statement or citation", ["P24"]], ["full", "Prompts, outputs or transcripts", ["P24", "P25", "P26"]]] },
+  { id: "explain", q: "Must students be able to explain their work, with oral or code checks?", yn: ["P30", "P34"] },
+  { id: "detect", q: "How do you treat AI detectors?", opts: [["avoid", "Do not rely on them", ["P39"]], ["use", "Use detection or similarity tools", ["P40"]], ["none", "Not addressed", []]] },
+  { id: "faculty", q: "Does the policy cover instructors' own AI use (grading, materials)?", yn: ["P46", "P47", "P48"] },
+  { id: "privacy", q: "Does it address student data and privacy?", yn: ["P50"] },
+  { id: "equity", q: "Does it address equity and access (no paid tools, opt-outs)?", yn: ["P51"] },
+  { id: "review", q: "Will the policy be reviewed on a schedule?", yn: ["P54"] },
+];
+function uniProfiles() {
+  const prof = new Map();
+  for (const u of U) prof.set(u.slug, { types: new Set(), stances: new Set(u.documents.filter(d => d.layer !== "course").map(d => d.stance)) });
+  for (const x of P) if (x.layer !== "course") prof.get(x.uni).types.add(x.type);
+  return prof;
+}
+let PROF = null;
+function chosenTypes() {
+  const s = new Set();
+  for (const q of QUESTIONS) {
+    const a = st.answers[q.id]; if (a == null) continue;
+    if (q.yn && a === "yes") q.yn.forEach(t => s.add(t));
+    if (q.opts) (q.opts.find(o => o[0] === a) || [, , []])[2].forEach(t => s.add(t));
+  }
+  return s;
+}
+function renderLabel() {
+  PROF ||= uniProfiles();
+  const qs = QUESTIONS.map(q => {
+    const opts = q.type === "stance" ? M.stances.map(s => [s, SL[s]]) : q.yn ? [["yes", "Yes"], ["no", "No"]] : q.opts.map(o => [o[0], o[1]]);
+    return `<div class="q"><fieldset><legend>${esc(q.q)}</legend><div class="opts">${opts.map(([v, l]) => `<label><input type="radio" name="q-${q.id}" value="${v}" ${st.answers[q.id] === v ? "checked" : ""}><span>${esc(l)}</span></label>`).join("")}</div></fieldset></div>`;
+  }).join("");
+  return `<div class="toolbar"><span class="note">Answer for your unit. The label shows how many universities in the corpus made the same choice and what their policies say. University and unit documents are compared; course syllabi are not.</span><span class="grow"></span><button class="btn" id="reset">Clear answers</button></div>
+    <div class="builder"><div>${qs}</div><aside>${labelCard()}</aside></div>`;
+}
+function labelCard() {
+  const n = U.length;
+  const rows = [];
+  const share = pred => { let k = 0; for (const [slug, p] of PROF) if (pred(p)) k++; return k; };
+  const ex = tids => { const x = P.find(x => tids.includes(x.type) && x.layer !== "course"); return x ? `<div class="ex">“${esc(x.anchor)}” <span class="note">${esc(uniBySlug.get(x.uni).name)}</span></div>` : ""; };
+  for (const q of QUESTIONS) {
+    const a = st.answers[q.id]; if (a == null) continue;
+    let label, k, tids = [];
+    if (q.type === "stance") { label = `Default stance: ${SL[a]}`; k = share(p => p.stances.has(a)); }
+    else if (q.yn) { tids = q.yn; const has = p => tids.some(t => p.types.has(t)); label = `${q.q.replace(/\?$/, "")}: ${a === "yes" ? "Yes" : "No"}`; k = share(p => a === "yes" ? has(p) : !has(p)); }
+    else { const o = q.opts.find(o => o[0] === a); tids = o[2]; label = `${q.q.replace(/\?$/, "")}: ${o[1]}`; k = tids.length ? share(p => tids.some(t => p.types.has(t))) : share(p => !q.opts.flatMap(o => o[2]).some(t => p.types.has(t))); }
+    rows.push(`<div class="lrow"><span>${esc(label)}</span><span class="pct" title="${k} of ${n} universities">${Math.round(100 * k / n)}%</span>${tids.length && (q.yn ? a === "yes" : true) ? ex(tids) : ""}</div>`);
+  }
+  const mine = chosenTypes();
+  let sim = "";
+  if (mine.size) {
+    const scores = [...PROF].map(([slug, p]) => { const inter = [...mine].filter(t => p.types.has(t)).length; const uni = new Set([...mine, ...p.types]).size; return [slug, uni ? inter / uni : 0]; }).sort((a, b) => b[1] - a[1]).slice(0, 6);
+    sim = `<div class="lrow thick"><b>Most similar universities</b><span></span></div><div class="sim">${scores.map(([slug, s]) => `<a href="#universities" data-gouni="${slug}">${esc(uniBySlug.get(slug).name)}</a> <span class="count">${Math.round(100 * s)}% overlap</span>`).join("<br>")}</div>`;
+  }
+  return `<div class="label-card" aria-live="polite"><h3>AI Policy Facts</h3><div class="lrow thick"><span class="note">Your choice</span><span class="note">Share of ${n} universities</span></div>${rows.join("") || `<p class="note">Answer a question to start your label.</p>`}${sim}</div>`;
+}
+
+// ---------- patterns & method ----------
+function renderProse(doc) {
+  return `<div class="prose">${(doc.sections || []).map(s => `<h2>${esc(s.h)}</h2>${(s.p || []).map(p => `<p>${esc(p)}</p>`).join("")}${s.list ? `<ul>${s.list.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}${s.agents ? `<div class="agents">${s.agents.map(a => `<div class="agent"><b>${esc(a.role)}</b>${esc(a.does)}</div>`).join("")}</div>` : ""}`).join("") || `<p class="note">Coming with the full corpus.</p>`}</div>`;
+}
+
+// ---------- render & events ----------
+function render() {
+  document.getElementById("tabs").innerHTML = TABS.map(([id, l]) => `<button role="tab" aria-selected="${st.tab === id}" data-tab="${id}">${l}</button>`).join("");
+  const f = { universities: renderUniversities, policies: renderPolicies, matrix: renderMatrix, patterns: () => renderProse(PAT), label: renderLabel, method: () => renderProse(METH) }[st.tab];
+  const main = document.getElementById("main");
+  const act = document.activeElement, fid = act && act.id, sel = fid && act.selectionStart != null ? [act.selectionStart, act.selectionEnd] : null;
+  main.innerHTML = f();
+  if (fid) { const el = document.getElementById(fid); if (el) { el.focus(); if (sel) try { el.setSelectionRange(...sel); } catch {} } }
+}
+document.addEventListener("click", e => {
+  const t = e.target.closest("[data-tab],[data-uni],[data-mview],[data-mcount],[data-cell],[data-gouni],#reset");
+  if (!t) return;
+  if (t.dataset.tab) { st.tab = t.dataset.tab; store.set("tab", st.tab); history.replaceState(null, "", "#" + st.tab); render(); window.scrollTo(0, 0); }
+  else if (t.dataset.uni) { st.uni = t.dataset.uni; render(); }
+  else if (t.dataset.gouni) { e.preventDefault(); st.uni = t.dataset.gouni; st.tab = "universities"; render(); window.scrollTo(0, 0); }
+  else if (t.dataset.mview) { st.mView = t.dataset.mview; st.mCell = null; store.set("mView", st.mView); render(); }
+  else if (t.dataset.mcount) { st.mCount = t.dataset.mcount; render(); }
+  else if (t.dataset.cell) { st.mCell = st.mCell === t.dataset.cell ? null : t.dataset.cell; render(); }
+  else if (t.id === "reset") { st.answers = {}; store.set("answers", {}); render(); }
+});
+document.addEventListener("keydown", e => { if ((e.key === "Enter" || e.key === " ") && e.target.dataset && e.target.dataset.cell) { e.preventDefault(); e.target.click(); } });
+document.addEventListener("input", e => {
+  const t = e.target;
+  if (t.id === "uq") { st.uq = t.value; render(); }
+  if (t.id === "pq") { st.pq = t.value; render(); }
+});
+document.addEventListener("change", e => {
+  const t = e.target;
+  if (t.id === "ustate") { st.uState = t.value; render(); }
+  if (t.id === "player") { st.pLayer = t.value; render(); }
+  if (t.id === "mlayer") { st.mLayer = t.value; st.mCell = null; render(); }
+  if (t.name && t.name.startsWith("q-")) { st.answers[t.name.slice(2)] = t.value; store.set("answers", st.answers); render(); }
+});
+window.addEventListener("hashchange", () => { const h = location.hash.slice(1); if (TABS.some(t => t[0] === h)) { st.tab = h; render(); } });
+load().catch(err => { document.getElementById("main").innerHTML = `<p class="note">The corpus data could not be loaded (${esc(err.message)}). If you opened this file directly, serve the folder instead: <code>python3 -m http.server</code>.</p>`; });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,265 @@
+{
+ "university": "Macalester College",
+ "slug": "macalester-college",
+ "state": "MN",
+ "type": "liberal-arts",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "macalester-integrity",
+   "layer": "university",
+   "unit": "Academic Programs and Advising",
+   "course": null,
+   "title": "Academic Integrity (policy)",
+   "url": "https://www.macalester.edu/academic-programs/academicpolicies/academicintegrity/",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance": "prohibit",
+   "tiers": [],
+   "summary": "General academic integrity policy with one AI provision: having generative AI do your coursework is cheating. The rest covers consultation, sanctions (zero for a first violation, suspension later) and appeals.",
+   "stance_why": "The only AI text lists 'generative AI tools, do your work for a course' as cheating, which bans AI doing students' work. It does not address other AI uses or defer to instructors, so prohibit is the nearest fit.",
+   "units": [
+    {
+     "why": "The list of cheating examples says 'Having another person, or generative AI tools, do your work for a course', so AI doing a student's work is classed as cheating. I chose P36 (classified as misconduct) over P19 because the passage defines a violation under the integrity policy rather than stating a work rule.",
+     "anchor": "Having another person, or generative AI tools, do your work for a course",
+     "frag_start": "Having another person, or",
+     "frag_end": "unauthorized collaboration)",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "prohibit",
+     "topics": [
+      "integrity-sanctions",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "The procedure says 'the faculty member should consult the student about the suspected violation'. It covers all academic dishonesty, including the AI cheating named above, and tells instructors to talk to the student before reporting, so P57.",
+     "anchor": "the faculty member should consult the student about the suspected violation",
+     "frag_start": "When a faculty member suspects",
+     "frag_end": "about the suspected violation.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P57",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The sanction rule says 'A first violation typically results in a grade of zero for the assignment'. It is a stated penalty that applies to AI cheating as a form of cheating, so P37.",
+     "anchor": "A first violation typically results in a grade of zero for the assignment",
+     "frag_start": "A first violation typically results",
+     "frag_end": "violation was found.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "'Additional violations can result in suspension for a semester and/or dismissal' states escalating penalties by offense, so P37. It is general, not AI-specific, but covers AI cheating.",
+     "anchor": "Additional violations can result in suspension for a semester and/or dismissal from the college",
+     "frag_start": "Additional violations can result",
+     "frag_end": "dismissal from the college.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "'Students may appeal decisions regarding academic integrity policy violations and sanctions' gives accused students a right to contest findings, which covers AI cases too. P64 fits better than P36 because it is about the student's response.",
+     "anchor": "Students may appeal decisions regarding academic integrity policy violations and sanctions",
+     "frag_start": "Students may appeal decisions regarding",
+     "frag_end": "violations and sanctions.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P64",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "macalester-its-ai-guidelines",
+   "layer": "university",
+   "unit": "Information Technology Services",
+   "course": null,
+   "title": "AI Guidelines for Faculty and Staff",
+   "url": "https://www.macalester.edu/its/policies/ai-guidelines-for-faculty-and-staff/",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance": "permit",
+   "tiers": [],
+   "summary": "ITS guidelines for employee AI use covering data security, output checking, research and publication, and purchasing. They send classroom questions to the library's AI literacy guide.",
+   "stance_why": "The guidelines are for faculty and staff 'as they encounter opportunities to include AI tools in their work' and give 'best practices' with data limits rather than a ban, so permit with conditions. They set no rule for student use.",
+   "units": [
+    {
+     "why": "The scope says the guidelines offer 'suggestions for best practices when using AI and for AI tool procurement considerations & processes'. It sets the scope of the guidance, so P61 over P56 since there is no institution-wide framework or principles list.",
+     "anchor": "suggestions for best practices when using AI and for AI tool procurement considerations",
+     "frag_start": "Below are suggestions for best",
+     "frag_end": "considerations & processes.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance",
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "'Treat information given to an AI tool (e.g. Gemini, CoPilot) as if it were public; do not share information that is personal, confidential' forbids sharing sensitive data. It is a privacy rule, so P50.",
+     "anchor": "do not share information that is personal, confidential, or proprietary intellectual property",
+     "frag_start": "Treat information given to",
+     "frag_end": "intellectual property.",
+     "policy": "Treat information given to an AI tool (e.g. Gemini, CoPilot) as if it were public; do not share information that is personal, confidential, or proprietary intellectual property.",
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data",
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "The text says 'avoid entering data that may fall into the moderate or high-risk data categories' and points to the Data Classification Policy. It is a data-protection rule for employees, so P50.",
+     "anchor": "avoid entering data that may fall into the moderate or high-risk data categories",
+     "frag_start": "Review Macalester's policy on",
+     "frag_end": "high-risk data categories.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "should-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data",
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "'anonymize personally identifiable information (PII)' and use settings so inputs are not retained or fed to public models. These are data-protection practices for prompts, so P50.",
+     "anchor": "anonymize personally identifiable information (PII)",
+     "frag_start": "When creating prompts or leveraging",
+     "frag_end": "public language models.",
+     "policy": "When creating prompts or leveraging AI for other purposes, anonymize PII; if possible, use settings that ensure inputs are not retained by the AI or used to feed public language models.",
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "permit",
+     "topics": [
+      "privacy-data",
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "'do not enter proprietary information into an AI tool' warns about 'intellectual property and confidentiality concerns'. The rule is about keeping confidential material out of tools. P50 fits; P52 covers ownership of AI outputs, which this does not address.",
+     "anchor": "do not enter proprietary information into an AI tool",
+     "frag_start": "Be aware of intellectual property",
+     "frag_end": "into an AI tool.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "intellectual-property",
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "'Closely monitor output from AI tools' because responses 'sometimes contain subtle but meaningful hallucinations... factual errors and biased or inappropriate statements'. Users must check output, so P31.",
+     "anchor": "Closely monitor output from AI tools",
+     "frag_start": "Closely monitor output from AI",
+     "frag_end": "inappropriate statements.",
+     "policy": "Closely monitor output from AI tools, since responses sometimes contain hallucinations, uncited intellectual property, factual errors and biased or inappropriate statements; always use your judgment when analyzing AI responses.",
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P31",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding",
+      "ethics-bias-environment"
+     ]
+    },
+    {
+     "why": "'Faculty are individually responsible for maintaining research integrity' and must 'familiarize yourself with funding agency and publication guidelines'. This defers AI rules for manuscripts and grants to venues and funders, so P62.",
+     "anchor": "familiarize yourself with funding agency and publication guidelines to ensure compliance",
+     "frag_start": "Faculty are individually responsible for",
+     "frag_end": "ensure compliance.",
+     "policy": "Faculty are individually responsible for research integrity, rigor and reproducibility; some publications and federal granting agencies prohibit generative AI in manuscripts or submissions and reviews, so faculty familiarize themselves with funding agency and publication guidelines to ensure compliance.",
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P62",
+     "unit_stance": "neutral",
+     "topics": [
+      "research-use",
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "'contact ITS so we can work through security, reliability, and performance concerns' makes purchasing AI tools go through an ITS review. That is institutional review of AI acquisition, so P65 (P50 is about prompt data).",
+     "anchor": "contact ITS so we can work through security, reliability, and performance concerns with you",
+     "frag_start": "When purchasing AI tools or adding",
+     "frag_end": "concerns with you.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P65",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data",
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "The page lists 'Version: 1.1' and 'Last Review: February 24, 2026' after being published in 2024. This shows the guidance is revised on review, so P54.",
+     "anchor": "Last Review: February 24, 2026",
+     "frag_start": "Version: 1.1",
+     "frag_end": "February 24, 2026",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "informs",
+     "policy_type": "P54",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Integrity page text is thin on AI; the sanction, consultation and appeal units are general integrity procedures coded because they govern AI cheating. Course layer deferred; no computing or school policy found."
+}

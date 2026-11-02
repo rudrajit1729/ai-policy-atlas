@@ -1,0 +1,1019 @@
+{
+ "university": "CUNY Hunter College",
+ "slug": "cuny-hunter-college",
+ "state": "NY",
+ "type": "R2",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "cuny-academic-integrity-policy",
+   "layer": "university",
+   "unit": "CUNY Board of Trustees (system-wide)",
+   "course": null,
+   "title": "CUNY Academic Integrity Policy (2024)",
+   "url": "https://www.cuny.edu/about/administration/offices/legal-affairs/policies-resources/academic-integrity-policy/",
+   "date_or_term": "rev. June 2024",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "System-wide CUNY academic integrity policy revised in 2024 to add AI to its definitions of cheating and plagiarism. It leaves permitted uses to instructors, requires citation of AI content, and sets reporting, sanction and hearing procedures; an explanation states the AI rationale.",
+   "stance_why": "The policy bans AI-generated content 'without written authorization from the instructor' and says AI use must follow 'the usage policy for specific assignments as defined in the course of the syllabus'. It sets no tiers or default of its own beyond misconduct rules and defers the permission decision to instructors and syllabi, so delegates.",
+   "units": [
+    {
+     "why": "The definition classes 'unauthorized use or attempted use of ... artificial intelligence (AI) systems' during an academic exercise as cheating. It is a definition of misuse, so it is typed as misconduct classification (P36) rather than a scope definition (P61); the policy binds students.",
+     "anchor": "unauthorized use or attempted use of material, information, notes, study aids, devices, artificial intelligence (AI)",
+     "frag_start": "is the unauthorized use",
+     "frag_end": "during an academic exercise.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "'Copying from ... a generative AI system' is listed as an example of cheating, so copying AI output as submitted work is forbidden and treated as misconduct. P19 (do not have AI produce submitted work) fits; P36 is the other candidate but the passage's core is the act of copying AI output.",
+     "anchor": "Copying from another person or from a generative AI system",
+     "frag_start": "Copying from another person",
+     "frag_end": "credit or a grade.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P19",
+     "unit_stance": "prohibit",
+     "topics": [
+      "prohibited-uses",
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The sentence says uploading work or assignments to 'third party platforms ... beyond those assigned for the class' without a professor's authorization counts as cheating. It restricts feeding assignments to outside platforms, which fits P20 better than P49 because it concerns the student's own submitted work and assignments.",
+     "anchor": "uploading work or submitting class assignments or exams to third party platforms",
+     "frag_start": "This includes uploading work",
+     "frag_end": "authorization of a professor.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P20",
+     "unit_stance": "restrict",
+     "topics": [
+      "prohibited-uses",
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "'Any use of generative AI tools must be in line with the usage policy for specific assignments' shows the university sets no blanket rule and defers to the syllabus or instructor, hence P04 (instructor or assignment sets the rule).",
+     "anchor": "Any use of generative AI tools must be in line with the usage policy for",
+     "frag_start": "Any use of generative",
+     "frag_end": "by the course instructor.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P04",
+     "unit_stance": "restrict",
+     "topics": [
+      "instructor-discretion",
+      "default-stance"
+     ]
+    },
+    {
+     "why": "The same sentence points students to the policy 'defined in the course of the syllabus and/or communicated by the course instructor', so expectations are communicated through syllabus or instructor. P09 requires a syllabus statement; this sentence only names where the rule lives, so I code it as a distinct communication unit under P09 with the phase course-start.",
+     "anchor": "defined in the course of the syllabus and/or communicated by the course instructor",
+     "frag_start": "Any use of generative",
+     "frag_end": "by the course instructor.",
+     "policy": "Generative AI usage policies for specific assignments are defined in the course syllabus and/or communicated by the course instructor.",
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "Using AI to generate content 'without written authorization from the instructor' is cheating, so the default is no generation unless authorized in writing. This is the fallback when authorization is absent, so P06 fits; P19 is secondary but the written-authorization condition is the load-bearing element.",
+     "anchor": "without written authorization from the instructor",
+     "frag_start": "Using artificial intelligence tools",
+     "frag_end": "authorization from the instructor.",
+     "policy": "Using artificial intelligence tools, including language models or code generators, to generate content for assignments or exams without written authorization from the instructor is cheating.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P06",
+     "unit_stance": "restrict",
+     "topics": [
+      "default-stance",
+      "code-generation",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "Passing off AI-generated content as one's own work 'without proper citation' is listed as cheating. It makes both ownership of work and missing citation violations; I choose P24 (disclose AI use) because the remedy named is proper citation, and P29 fits less since citation cures the problem.",
+     "anchor": "content generated or altered by AI or digital paraphrasing tools without proper citation",
+     "frag_start": "Submitting content generated by",
+     "frag_end": "tools without proper citation.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P24",
+     "unit_stance": "restrict",
+     "topics": [
+      "disclosure-citation",
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The sentence forbids 'Submitting content generated by another person or an AI tool ... as solely your own work'. This is the ownership principle, that submitted work must be one's own, so P29.",
+     "anchor": "Submitting content generated by another person or an AI tool or any other source as",
+     "frag_start": "Submitting content generated by",
+     "frag_end": "tools without proper citation.",
+     "policy": "Submitting content generated by another person or an AI tool or any other source as solely your own work is cheating.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P29",
+     "unit_stance": "prohibit",
+     "topics": [
+      "accountability-understanding",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "Unauthorized use during an examination of 'any electronic devices ... to copy, retrieve, generate or send information' is cheating, which bans AI-capable devices on exams; P22 (no AI on exams, closed-device rules) fits.",
+     "anchor": "Unauthorized use during an examination of notes, prepared answers, or any electronic devices",
+     "frag_start": "Unauthorized use during an",
+     "frag_end": "generate or send information.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-assessment",
+     "modality": "must-not",
+     "policy_type": "P22",
+     "unit_stance": "prohibit",
+     "topics": [
+      "exams-in-person",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "Plagiarism is defined to include copying 'an AI tool's actual words or images without the use of quotation marks and citations'. This requires quotation and citation of AI output, so P24 (cite AI use); the misconduct label is secondary.",
+     "anchor": "Copying another person’s or an AI tool’s actual words or images without the use of",
+     "frag_start": "Copying another person’s or",
+     "frag_end": "words to their source.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "Plagiarism includes 'Unauthorized use of AI-generated content', so AI content without authorization is classed as plagiarism, an integrity violation; P36 fits as the classification.",
+     "anchor": "Unauthorized use of AI-generated content",
+     "frag_start": "Unauthorized use of AI-generated",
+     "frag_end": "AI as the source.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "Using AI-generated content 'even when paraphrased, without citing the AI as the source' is plagiarism, so any use of AI content, in whole or part, must cite the AI. This is a disclosure requirement, P24.",
+     "anchor": "even when paraphrased, without citing the AI as the source",
+     "frag_start": "Unauthorized use of AI-generated",
+     "frag_end": "AI as the source.",
+     "policy": "Use of AI-generated content, whether in whole or in part and even when paraphrased, requires citing the AI as the source.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "The policy states that academic dishonesty carries penalties such as 'failing or otherwise reduced grades' and 'suspension or expulsion', which apply to AI misuse as defined elsewhere. These are concrete sanction types stated in advance, so P37.",
+     "anchor": "Penalties for academic dishonesty include academic sanctions, such as failing or otherwise reduced grades",
+     "frag_start": "Penalties for academic dishonesty",
+     "frag_end": "including suspension or expulsion.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Among 'substantial violations' that justify disciplinary sanctions the policy lists 'generating entire assignments or exam responses using AI without authorization'. This is a concrete escalation of sanction for AI misuse, so P37 (penalties in advance) rather than P36.",
+     "anchor": "generating entire assignments or exam responses using AI without authorization",
+     "frag_start": "Examples of substantial violations",
+     "frag_end": "will seek professional licensure.",
+     "policy": "Generating entire assignments or exam responses using AI without authorization is a substantial violation for which the Academic Integrity Officer may seek disciplinary sanctions.",
+     "actor": "admin",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P37",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The policy requires that 'The CUNY Policy on Academic Integrity ... shall be posted to each college's website' with an LMS link and recommends a syllabus link. This communicates the policy (which includes the AI rules) to students; no AI-specific syllabus statement is required, so P09 is a loose fit but the closest.",
+     "anchor": "shall be posted to each college’s website with a link provided in the Learning Management",
+     "frag_start": "The CUNY Policy on",
+     "frag_end": "Management System (LMS) shell.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "Orientation sessions 'shall incorporate a discussion of academic integrity' for new faculty and students, which communicates the policy in advance. It does not mention AI explicitly; I code it as a communication unit under P09 as the closest type.",
+     "anchor": "Orientation sessions for all new faculty (full- and part-time) and students shall incorporate a discussion",
+     "frag_start": "Orientation sessions for all",
+     "frag_end": "discussion of academic integrity.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "course-start",
+     "modality": "must",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "'Each college shall subscribe to an electronic plagiarism detection service' and faculty 'should inform students of their use'. A required similarity or plagiarism-detection service is covered by P40; the policy does not say AI detection specifically.",
+     "anchor": "Each college shall subscribe to an electronic plagiarism detection service",
+     "frag_start": "Each college shall subscribe",
+     "frag_end": "use by the faculty.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P40",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ]
+    },
+    {
+     "why": "Faculty 'should inform students of their use' of the plagiarism detection service. It is advice to instructors to tell students about detection tools, which is a communication duty; I keep it with P40 because the content is the detection service.",
+     "anchor": "faculty should inform students of their use",
+     "frag_start": "Colleges shall make faculty",
+     "frag_end": "students of their use.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P40",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools",
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "A faculty member who suspects a violation 'shall review with the student the facts and circumstances ... whenever feasible' before reporting. This is the talk-with-student-first rule, P57.",
+     "anchor": "shall review with the student the facts and circumstances of the suspected violation whenever feasible",
+     "frag_start": "A faculty member who",
+     "frag_end": "suspected violation whenever feasible.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P57",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Faculty who conclude dishonesty occurred 'shall report such incident on a Faculty Report Form' to the Academic Integrity Officer. This is the reporting procedure for integrity violations, including AI misuse, classed under P36 (handled by integrity processes).",
+     "anchor": "shall report such incident on a Faculty Report Form",
+     "frag_start": "Thereafter, a faculty member",
+     "frag_end": "copying his/her Department Chair.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "A student who denies the charge gets a fact-finding hearing with 'written notice of the charges', 'the right to appear' and the right to present witnesses. This is the right to respond to allegations, P64.",
+     "anchor": "(i) written notice of the charges against them; (ii) the right to appear before the",
+     "frag_start": "These procedures, at a",
+     "frag_end": "and/or to call witnesses.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P64",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "A student who admits dishonesty but contests the sanction 'may appeal the academic sanction through the college's grade appeal process' with a written position and evidence. This lets students respond to allegations or sanctions, P64.",
+     "anchor": "the student may appeal the academic sanction through the college’s grade appeal process",
+     "frag_start": "In a case where",
+     "frag_end": "college’s grade appeal process.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P64",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "A reduced grade 'may be an F or another grade that is lower' and may apply to the assignment or course 'at the faculty member's discretion'. Stating the possible academic penalties in advance fits P37.",
+     "anchor": "A reduced grade may be an “F” or another grade that is lower than the",
+     "frag_start": "A reduced grade may",
+     "frag_end": "but for the violation.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Officers keep a confidential file and consult prior violations 'including violations ... at any other CUNY college' to set sanctions, so repeat offenses escalate the sanction. This is stated escalation by offense, P37.",
+     "anchor": "to determine whether the student has been found to have previously committed a violation",
+     "frag_start": "Before determining which sanction(s)",
+     "frag_end": "imposed or action taken.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The EXPLANATION says the revision is needed because the policy 'does not address the advent of Artificial Intelligence' and that preparing students to use AI 'responsibly and ethically is critical'. It is the stated purpose for the AI amendment, so P56 (institution-wide framework preamble).",
+     "anchor": "the current policy does not address the advent of Artificial Intelligence and its use by",
+     "frag_start": "Revision to the 2022",
+     "frag_end": "by students at CUNY.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution",
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "'Preparing students to learn from and use AI responsibly and ethically is critical to the University's mission' states a purpose and principle for AI at the institution; P56 as an institutional framework statement, with P44 (professional skill) fitting the next sentence instead.",
+     "anchor": "Preparing students to learn from and use AI responsibly and ethically is critical to the",
+     "frag_start": "Preparing students to learn",
+     "frag_end": "the University’s academic programs.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "encourage",
+     "topics": [
+      "learning-rationale",
+      "ethics-bias-environment"
+     ]
+    },
+    {
+     "why": "'Students must become facile with the use of AI to learn effectively ... and to prepare for their AI-assisted careers' gives a career and learning rationale for AI use, so P44 (teach effective AI use as a professional skill).",
+     "anchor": "students must become facile with the use of AI to learn effectively in today’s world",
+     "frag_start": "Further, students must become",
+     "frag_end": "lives in the future.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P44",
+     "unit_stance": "encourage",
+     "topics": [
+      "ai-literacy-career",
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "The policy opens by saying cheating 'undermines educational equity and fairness' and harms classmates and the college's accreditation. It is a rationale for integrity rules generally rather than an AI-specific one; I use P56 as the closest institution-level principle statement.",
+     "anchor": "Academic dishonesty confers an unfair advantage over others, which undermines educational equity and fairness.",
+     "frag_start": "Academic dishonesty confers an",
+     "frag_end": "educational equity and fairness.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "Each college 'may adopt its own more specific procedures' consistent with the Policy, which lets colleges set further AI-related integrity procedures. It is a governance rule on who may specify, closest to P56.",
+     "anchor": "may adopt its own more specific procedures to implement the Policy",
+     "frag_start": "Each college shall implement",
+     "frag_end": "to implement the Policy.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hunter-academic-integrity",
+   "layer": "university",
+   "unit": "Office of Student Conduct",
+   "course": null,
+   "title": "Academic Integrity - Hunter College",
+   "url": "https://www.hunter.cuny.edu/students/student-affairs/office-of-student-conduct/academic-integrity/",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "Hunter College Office of Student Conduct page that restates the CUNY academic integrity definitions, including AI in cheating and plagiarism, and adds Hunter's sanctions and presentation offer. It has no AI rules beyond the CUNY text.",
+   "stance_why": "The page reproduces the CUNY policy: AI use must follow 'the usage policy for specific assignments ... communicated by the course instructor' and unauthorized AI content is cheating. Hunter adds no AI rule of its own, so the instructor decides and the stance is delegates.",
+   "units": [
+    {
+     "why": "The definition classes 'unauthorized use or attempted use of ... artificial intelligence (AI) systems' during an academic exercise as cheating. It is a definition of misuse, so it is typed as misconduct classification (P36) rather than a scope definition (P61); the policy binds students.",
+     "anchor": "unauthorized use or attempted use of material, information, notes, study aids, devices, artificial intelligence (AI)",
+     "frag_start": "is the unauthorized use",
+     "frag_end": "during an academic exercise.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "'Copying from ... a generative AI system' is listed as an example of cheating, so copying AI output as submitted work is forbidden and treated as misconduct. P19 (do not have AI produce submitted work) fits; P36 is the other candidate but the passage's core is the act of copying AI output.",
+     "anchor": "Copying from another person or from a generative AI system",
+     "frag_start": "Copying from another person",
+     "frag_end": "credit or a grade.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P19",
+     "unit_stance": "prohibit",
+     "topics": [
+      "prohibited-uses",
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The sentence says uploading work or assignments to 'third party platforms ... beyond those assigned for the class' without a professor's authorization counts as cheating. It restricts feeding assignments to outside platforms, which fits P20 better than P49 because it concerns the student's own submitted work and assignments.",
+     "anchor": "uploading work or submitting class assignments or exams to third party platforms",
+     "frag_start": "This includes uploading work",
+     "frag_end": "authorization of a professor.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P20",
+     "unit_stance": "restrict",
+     "topics": [
+      "prohibited-uses",
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "'Any use of generative AI tools must be in line with the usage policy for specific assignments' shows the university sets no blanket rule and defers to the syllabus or instructor, hence P04 (instructor or assignment sets the rule).",
+     "anchor": "Any use of generative AI tools must be in line with the usage policy for",
+     "frag_start": "Any use of generative",
+     "frag_end": "by the course instructor.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P04",
+     "unit_stance": "restrict",
+     "topics": [
+      "instructor-discretion",
+      "default-stance"
+     ]
+    },
+    {
+     "why": "The same sentence points students to the policy 'defined in the course of the syllabus and/or communicated by the course instructor', so expectations are communicated through syllabus or instructor. P09 requires a syllabus statement; this sentence only names where the rule lives, so I code it as a distinct communication unit under P09 with the phase course-start.",
+     "anchor": "defined in the course of the syllabus and/or communicated by the course instructor",
+     "frag_start": "Any use of generative",
+     "frag_end": "by the course instructor.",
+     "policy": "Generative AI usage policies for specific assignments are defined in the course syllabus and/or communicated by the course instructor.",
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "Using AI to generate content 'without written authorization from the instructor' is cheating, so the default is no generation unless authorized in writing. This is the fallback when authorization is absent, so P06 fits; P19 is secondary but the written-authorization condition is the load-bearing element.",
+     "anchor": "without written authorization from the instructor",
+     "frag_start": "Using artificial intelligence tools",
+     "frag_end": "authorization from the instructor.",
+     "policy": "Using artificial intelligence tools, including language models or code generators, to generate content for assignments or exams without written authorization from the instructor is cheating.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P06",
+     "unit_stance": "restrict",
+     "topics": [
+      "default-stance",
+      "code-generation",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "Passing off AI-generated content as one's own work 'without proper citation' is listed as cheating. It makes both ownership of work and missing citation violations; I choose P24 (disclose AI use) because the remedy named is proper citation, and P29 fits less since citation cures the problem.",
+     "anchor": "content generated or altered by AI or digital paraphrasing tools without proper citation",
+     "frag_start": "Submitting content generated by",
+     "frag_end": "tools without proper citation.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P24",
+     "unit_stance": "restrict",
+     "topics": [
+      "disclosure-citation",
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The sentence forbids 'Submitting content generated by another person or an AI tool ... as solely your own work'. This is the ownership principle, that submitted work must be one's own, so P29.",
+     "anchor": "Submitting content generated by another person or an AI tool or any other source as",
+     "frag_start": "Submitting content generated by",
+     "frag_end": "tools without proper citation.",
+     "policy": "Submitting content generated by another person or an AI tool or any other source as solely your own work is cheating.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P29",
+     "unit_stance": "prohibit",
+     "topics": [
+      "accountability-understanding",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "Unauthorized use during an examination of 'any electronic devices ... to copy, retrieve, generate or send information' is cheating, which bans AI-capable devices on exams; P22 (no AI on exams, closed-device rules) fits.",
+     "anchor": "Unauthorized use during an examination of notes, prepared answers, or any electronic devices",
+     "frag_start": "Unauthorized use during an",
+     "frag_end": "generate or send information.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-assessment",
+     "modality": "must-not",
+     "policy_type": "P22",
+     "unit_stance": "prohibit",
+     "topics": [
+      "exams-in-person",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "Plagiarism is defined to include copying 'an AI tool's actual words or images without the use of quotation marks and citations'. This requires quotation and citation of AI output, so P24 (cite AI use); the misconduct label is secondary.",
+     "anchor": "Copying another person’s or an AI tool’s actual words or images without the use of",
+     "frag_start": "Copying another person’s or",
+     "frag_end": "words to their source.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "Plagiarism includes 'Unauthorized use of AI-generated content', so AI content without authorization is classed as plagiarism, an integrity violation; P36 fits as the classification.",
+     "anchor": "Unauthorized use of AI-generated content",
+     "frag_start": "Unauthorized use of AI-generated",
+     "frag_end": "AI as the source.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "Using AI-generated content 'even when paraphrased, without citing the AI as the source' is plagiarism, so any use of AI content, in whole or part, must cite the AI. This is a disclosure requirement, P24.",
+     "anchor": "even when paraphrased, without citing the AI as the source",
+     "frag_start": "Unauthorized use of AI-generated",
+     "frag_end": "AI as the source.",
+     "policy": "Use of AI-generated content, whether in whole or in part and even when paraphrased, requires citing the AI as the source.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "The policy states that academic dishonesty carries penalties such as 'failing or otherwise reduced grades' and 'suspension or expulsion', which apply to AI misuse as defined elsewhere. These are concrete sanction types stated in advance, so P37.",
+     "anchor": "Penalties for academic dishonesty include academic sanctions, such as failing or otherwise reduced grades",
+     "frag_start": "Penalties for academic dishonesty",
+     "frag_end": "including suspension or expulsion.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Hunter says it 'has the responsibility to review all charges of academic dishonesty and implement sanctions' including 'failing the course, official transcript notation, suspension or expulsion'. Concrete sanctions stated in advance, so P37.",
+     "anchor": "implement sanctions, including, but not limited to, failing the course, official transcript notation, suspension or",
+     "frag_start": "The College has the",
+     "frag_end": "academic dishonesty did occur.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Academic dishonesty includes cheating and plagiarism 'whether intentional or not', which sets that unintentional AI misuse is still a violation (cheating includes AI). Classification as dishonesty, P36.",
+     "anchor": "whether intentional or not",
+     "frag_start": "Academic dishonesty includes, but",
+     "frag_end": "whether intentional or not.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The Office of Student Conduct offers a 45-minute presentation covering the integrity policy, violations, and 'students' rights'. It communicates expectations to the community, closest to P09; no AI is named, but the policy it presents includes AI rules.",
+     "anchor": "The 45-minute in-person PowerPoint presentation includes a discussion and an interactive exercise about the Academic",
+     "frag_start": "The 45-minute in-person PowerPoint",
+     "frag_end": "academic and disciplinary sanctions.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "course-start",
+     "modality": "informs",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "'All students should have the opportunity to learn and perform on a level playing field' states the guiding principle for integrity at Hunter, which frames the AI rules that follow. Institutional principle, P56.",
+     "anchor": "all students should have the opportunity to learn and perform on a level playing field",
+     "frag_start": "Academic integrity is a",
+     "frag_end": "a level playing field.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "hunter-library-ai-integrity",
+   "layer": "university",
+   "unit": "Hunter Libraries",
+   "course": null,
+   "title": "AI and Academic Integrity (LibGuide)",
+   "url": "https://libguides.library.hunter.cuny.edu/AI/academicintegrity",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "Hunter Libraries guide on AI and academic integrity. It gives librarians' advice on transparency and citation risks, quotes the AI parts of the CUNY policy, and reproduces Chicago Manual guidance on citing chatbot output.",
+   "stance_why": "The guide recommends being 'as transparent as possible' and says 'we do not recommend using an AI tool' where sources cannot be cited, but it also quotes the CUNY rule deferring to 'the usage policy for specific assignments'. It sets no rule of its own, so delegates.",
+   "units": [
+    {
+     "why": "The guide advises to 'be as transparent as possible when using an AI tool for your research', a recommendation to disclose AI use; P24.",
+     "anchor": "be as transparent as possible when using an AI tool for your research",
+     "frag_start": "When it comes to",
+     "frag_end": "tool for your research.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "'If you cannot guarantee that the information ... can be properly cited ... then we do not recommend using an AI tool' discourages AI use when sources cannot be cited without forbidding it, so P03.",
+     "anchor": "we do not recommend using an AI tool for your research",
+     "frag_start": "If you cannot guarantee",
+     "frag_end": "tool for your research.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should-not",
+     "policy_type": "P03",
+     "unit_stance": "restrict",
+     "topics": [
+      "disclosure-citation",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "'we also cannot be confident in declaring that no AI tool does' hallucinate sources: AI tools may give false information or fake citations, a warning to verify output, P31.",
+     "anchor": "Not all AI tools hallucinate sources or generate false information",
+     "frag_start": "Not all AI tools",
+     "frag_end": "no AI tool does.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P31",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "The guide names its biggest integrity concerns as 'Citing AI tools', 'Plagiarism' and 'Source evaluation'. This frames risk areas; closest type is P31 for evaluating AI output and citations.",
+     "anchor": "Citing AI tools and AI generated information (including hallucinated citations or false information)",
+     "frag_start": "Citing AI tools and",
+     "frag_end": "citations or false information)",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P31",
+     "unit_stance": "neutral",
+     "topics": [
+      "disclosure-citation",
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "'AI is not responsible for your academic integrity' puts responsibility for integrity on the student, not the tool: P29.",
+     "anchor": "AI is not responsible for your academic integrity.",
+     "frag_start": "AI is not responsible",
+     "frag_end": "for your academic integrity.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P29",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "The guide quotes the CUNY rule that 'Any use of generative AI tools must be in line with the usage policy for specific assignments', which leaves AI permission to the syllabus or instructor, P04.",
+     "anchor": "Any use of generative AI tools must be in line with the usage policy for",
+     "frag_start": "Any use of generative",
+     "frag_end": "by the course instructor.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P04",
+     "unit_stance": "restrict",
+     "topics": [
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "The quoted policy lists 'Copying ... from a generative AI system' as cheating; P19 as in the CUNY policy.",
+     "anchor": "Copying from another person or from a generative AI system",
+     "frag_start": "Copying from another person",
+     "frag_end": "credit or a grade.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P19",
+     "unit_stance": "prohibit",
+     "topics": [
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "The quoted policy defines cheating as unauthorized use of 'artificial intelligence (AI) systems', classed as misconduct: P36.",
+     "anchor": "unauthorized use or attempted use of material, information, notes, study aids, devices, artificial intelligence (AI)",
+     "frag_start": "is the unauthorized use",
+     "frag_end": "during an academic exercise.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The quoted policy bans using AI tools to generate content 'without written authorization from the instructor': P06.",
+     "anchor": "without written authorization from the instructor",
+     "frag_start": "Using artificial intelligence tools",
+     "frag_end": "authorization from the instructor.",
+     "policy": "Using artificial intelligence tools, including language models or code generators, to generate content for assignments or exams without written authorization from the instructor is cheating.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P06",
+     "unit_stance": "restrict",
+     "topics": [
+      "default-stance",
+      "code-generation"
+     ]
+    },
+    {
+     "why": "The quoted policy treats AI content used 'without citing the AI as the source' as plagiarism, i.e. AI use must be cited: P24.",
+     "anchor": "even when paraphrased, without citing the AI as the source",
+     "frag_start": "Unauthorized use of AI-generated",
+     "frag_end": "AI as the source.",
+     "policy": "Use of AI-generated content, whether in whole or in part and even when paraphrased, requires citing the AI as the source.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "Quoted policy bars unauthorized use of devices on exams 'to copy, retrieve, generate or send information': P22.",
+     "anchor": "Unauthorized use during an examination of notes, prepared answers, or any electronic devices",
+     "frag_start": "Unauthorized use during an",
+     "frag_end": "generate or send information.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-assessment",
+     "modality": "must-not",
+     "policy_type": "P22",
+     "unit_stance": "prohibit",
+     "topics": [
+      "exams-in-person"
+     ]
+    },
+    {
+     "why": "Uploading work 'to third party platforms' without authorization is cheating in the quoted policy: P20.",
+     "anchor": "uploading work or submitting class assignments or exams to third party platforms",
+     "frag_start": "This includes uploading work",
+     "frag_end": "authorization of a professor.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P20",
+     "unit_stance": "restrict",
+     "topics": [
+      "prohibited-uses",
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "The Chicago Manual excerpt says authors who relied on a chatbot 'must make it clear how the tool has been used' and cite specific content where it occurs. This is a disclosure duty, P24; the details of the citation are P25 and coded separately.",
+     "anchor": "must make it clear how the tool has been used (either in the text or",
+     "frag_start": "Authors who have relied",
+     "frag_end": "preface or the like).",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "The excerpt says to 'Include the date the content was generated in addition to a version number', plus the tool and publisher in the note. These are required details of the citation, P25.",
+     "anchor": "Include the date the content was generated in addition to a version number.",
+     "frag_start": "Include the date the",
+     "frag_end": "to a version number.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P25",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "'A prompt, if not included in the text, may be added to the note' lets the author cite the prompt, a detail of AI citation; P25.",
+     "anchor": "A prompt, if not included in the text, may be added to the note.",
+     "frag_start": "A prompt, if not",
+     "frag_end": "added to the note.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P25",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "'If the AI-generated text has been edited or adapted in any way, this fact should be acknowledged' is an additional disclosure expectation; P24.",
+     "anchor": "this fact should be acknowledged in the text or in the note",
+     "frag_start": "If the AI-generated text",
+     "frag_end": "in example note 2).",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ]
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Hunter documents largely reproduce the CUNY system policy, so shared units appear in each document as instructed (each coded on its own). No computing, school or course documents were included in collection."
+}

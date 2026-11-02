@@ -1,0 +1,31 @@
+{
+ "slug": "michigan",
+ "university": "University of Michigan",
+ "units_searched": [
+  {"unit": "Computer Science and Engineering Division (EECS), College of Engineering", "layer": "computing", "site": "https://cse.engin.umich.edu/",
+   "queries": ["site:cse.engin.umich.edu generative AI policy", "site:eecs.umich.edu AI policy academic integrity ChatGPT", "University of Michigan EECS undergraduate handbook honor code collaboration AI tools", "University of Michigan EECS 280 OR EECS 183 syllabus generative AI policy honor code"],
+   "pages_checked": ["https://cse.engin.umich.edu/academics/undergraduate/ (HTTP 403 Cloudflare challenge; fetch_text saved 16 chars)", "https://cse.engin.umich.edu/ (403)", "https://eecs.engin.umich.edu/ (403)"],
+   "result": "inaccessible",
+   "note": "Unit site blocks WebFetch, curl and fetch_text (403). The search engine returned no cse.engin.umich.edu or eecs.umich.edu page about AI for any query, so no unit policy surfaced, but the site itself could not be read."},
+  {"unit": "Electrical and Computer Engineering Division (EECS)", "layer": "computing", "site": "https://ece.engin.umich.edu/",
+   "queries": ["site:eecs.umich.edu AI policy academic integrity ChatGPT"],
+   "pages_checked": ["https://ece.engin.umich.edu/ (403)"],
+   "result": "inaccessible", "note": "Blocked (403); no search hits."},
+  {"unit": "School of Information (UMSI)", "layer": "computing", "site": "https://www.si.umich.edu/",
+   "queries": ["site:si.umich.edu generative AI policy students", "University of Michigan School of Information MSI MSE academic integrity generative AI policy students"],
+   "pages_checked": ["https://www.si.umich.edu/programs/academic-policies (403)", "https://www.si.umich.edu/ (403)"],
+   "result": "inaccessible", "note": "Blocked (403). Search returned only university-wide pages, nothing from si.umich.edu."},
+  {"unit": "LSA (hosts LSA Computer Science)", "layer": "school", "site": "https://lsa.umich.edu/",
+   "queries": ["site:lsa.umich.edu computer science generative AI policy syllabus statement"],
+   "pages_checked": ["https://prod.lsa.umich.edu/technology-services/services/learning-teaching-consulting/teaching-strategies/Guidelines-for-Using-Generative-Artificial-Intelligence.html (search hit only, not fetched)"],
+   "result": "none-found",
+   "note": "The LSA Technology Services guidelines page is college-level teaching guidance with sample syllabus statements, not a computing policy. Flagged as a possible school-layer candidate; not collected here."},
+  {"unit": "College of Engineering", "layer": "school", "site": "https://engin.umich.edu/",
+   "queries": ["site:engin.umich.edu generative AI guidance honor code instructors"],
+   "pages_checked": [],
+   "result": "none-found", "note": "Search surfaced no College of Engineering AI policy page. Sister *.engin.umich.edu hosts return 403, so absence is not confirmed."}
+ ],
+ "documents": [],
+ "course_examples": [],
+ "notes": "NOT a clean negative. Michigan's computing and engineering sites sit behind a Cloudflare challenge (403), so no unit page could be read, and no search result pointed to a unit-level AI policy. The search tool did not honor site: operators, so queries returned mostly university-wide pages (genai.umich.edu, CRLT) that belong to the university layer. A browser-based route is needed to settle this. No course syllabi surfaced."
+}

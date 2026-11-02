@@ -1,0 +1,28 @@
+{
+ "slug": "illinois-chicago",
+ "university": "University of Illinois Chicago",
+ "units_searched": [
+  {"unit": "Department of Computer Science, College of Engineering", "layer": "computing", "site": "https://cs.uic.edu",
+   "queries": ["site:cs.uic.edu generative AI policy", "UIC Computer Science department academic integrity ChatGPT AI tools policy students", "site:ece.uic.edu OR site:cs.uic.edu undergraduate handbook artificial intelligence collaboration policy", "cs.uic.edu graduate program requirements 2025 OR 2026 ChatGPT AI tools academic integrity", "site:cs.uic.edu ChatGPT \"AI\" undergraduate course policy academic integrity CS 111 OR \"CS 141\""],
+   "pages_checked": ["https://www.cs.uic.edu/~grad/2023_Graduate_Program_Requirements.pdf", "https://www.cs.uic.edu/~grad/2025_Graduate_Program_Requirements.pdf", "https://cs.uic.edu/undergraduate/"],
+   "result": "found", "note": "Graduate Degree Requirements (Academic Integrity section and Written Critique/WCP rules) state unit-wide AI rules. The 2023 edition bans AI writing tools and content-generation tools unless explicitly allowed; the 2025 edition allows generative AI for grammar/fluency, subject to class restrictions. The undergraduate page has no AI policy."},
+  {"unit": "Department of Electrical and Computer Engineering, College of Engineering", "layer": "computing", "site": "https://ece.uic.edu",
+   "queries": ["site:engineering.uic.edu AI generative academic integrity policy", "UIC Department of Electrical and Computer Engineering OR \"Information and Decision Sciences\" OR \"Computer Science\" AI policy students site:uic.edu"],
+   "pages_checked": ["https://ece.uic.edu/"],
+   "result": "none-found", "note": "Home page has no AI policy, integrity statement or handbook link."},
+  {"unit": "College of Engineering", "layer": "school", "site": "https://engineering.uic.edu",
+   "queries": ["site:engineering.uic.edu AI generative academic integrity policy"],
+   "pages_checked": ["search results only; no college page surfaced"],
+   "result": "none-found", "note": "No college-level AI policy surfaced; results were the university-level documents."}
+ ],
+ "documents": [
+  {"id": "illinois-chicago-cs-grad-2025", "layer": "computing", "unit": "Department of Computer Science", "title": "Graduate Degree Requirements, Department of Computer Science, 2025", "url": "https://www.cs.uic.edu/~grad/2025_Graduate_Program_Requirements.pdf", "date_or_term": "2025", "text_file": ".cache/text/v2-illinois-chicago-csgrad2025.txt", "quality": "partial",
+   "quality_note": "AI text is two short passages in a 100k-char handbook: the Academic Integrity 'Non-original work' standard (generative AI to improve writing, grammar and fluency, 'is not forbidden a priori, but may be further restricted in specific classes') and the WCP rule (an initial draft prior to AI use must be available to the committee). Graduate students only.",
+   "in_first_collection": false},
+  {"id": "illinois-chicago-cs-grad-2023", "layer": "computing", "unit": "Department of Computer Science", "title": "Graduate Degree Requirements, Department of Computer Science, 2023", "url": "https://www.cs.uic.edu/~grad/2023_Graduate_Program_Requirements.pdf", "date_or_term": "2023", "text_file": ".cache/text/v2-illinois-chicago-csgrad.txt", "quality": "partial",
+   "quality_note": "Earlier edition, probably superseded by 2025. States: 'you should not use paraphrasing software (like QuillBot) or AI software for writing (like ChatGPT) or any AI tools for content generation (spell-checkers are allowed), unless explicitly allowed to do so.' Repeated in the WCP rules. Shows the stance changed between editions.",
+   "in_first_collection": false}
+ ],
+ "course_examples": ["CS 218 Fall '25 syllabus on Google Sites (seeded in first collection; not collected)"],
+ "notes": "The first collection's computing none-found is wrong for UIC: the CS department's graduate requirements document contains a unit-wide AI rule, in two editions with differing stance. Found by a plain-language search, not site: queries. ECE and the undergraduate CS pages carry nothing. Not checked: other CS-related UIC units (e.g. Information and Decision Sciences in the College of Business) beyond what searches surfaced."
+}

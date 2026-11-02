@@ -1,0 +1,43 @@
+{
+ "slug": "san-jose-state",
+ "university": "San Jose State University",
+ "units_searched": [
+  {"unit": "School of Information (iSchool)", "layer": "computing", "site": "https://ischool.sjsu.edu",
+   "queries": ["site:sjsu.edu software engineering OR data science department AI use academic integrity",
+               "site:sjsu.edu/cs academic integrity AI ChatGPT students graduate handbook",
+               "San Jose State School of Information iSchool generative AI policy syllabus"],
+   "pages_checked": ["https://ischool.sjsu.edu/faculty-handbook-academic-integrity",
+                     "https://ischool.sjsu.edu/faculty-handbook-plagiarism",
+                     "https://slisweb.sjsu.edu/plagiarism"],
+   "result": "found",
+   "note": "School-wide academic integrity policy requires citing ChatGPT and other AI-assisted software. The three URLs returned identical text."},
+  {"unit": "Department of Computer Science", "layer": "computing", "site": "https://www.sjsu.edu/cs/",
+   "queries": ["site:sjsu.edu computer science department generative AI policy",
+               "site:sjsu.edu cs department \"AI\" syllabus statement faculty computer science engineering",
+               "site:sjsu.edu/cs academic integrity AI ChatGPT students graduate handbook"],
+   "pages_checked": ["https://www.sjsu.edu/cs/"],
+   "result": "none-found",
+   "note": "Homepage links no AI or integrity page; only per-semester syllabi."},
+  {"unit": "Charles W. Davidson College of Engineering", "layer": "school", "site": "https://www.sjsu.edu/engineering/",
+   "queries": ["site:sjsu.edu \"Charles W. Davidson College of Engineering\" generative AI policy"],
+   "pages_checked": [], "result": "none-found", "note": "No relevant result. Not fetched directly."},
+  {"unit": "Software Engineering; Data Science; other computing units", "layer": "computing", "site": "https://www.sjsu.edu",
+   "queries": ["site:sjsu.edu College of Computing AI policy students",
+               "site:sjsu.edu software engineering OR data science department AI use academic integrity"],
+   "pages_checked": [], "result": "none-found", "note": "No unit pages surfaced. Searched only, not fetched."}
+ ],
+ "documents": [
+  {"id": "san-jose-state-ischool-acadint", "layer": "computing", "unit": "School of Information",
+   "title": "Academic Integrity (School of Information)",
+   "url": "https://ischool.sjsu.edu/faculty-handbook-academic-integrity",
+   "date_or_term": "undated; cites the ChatGPT Sep 14 2023 version",
+   "text_file": ".cache/text/v2-san-jose-state-ischool-acadint.txt",
+   "quality": "good",
+   "quality_note": "AI passage is short (lines ~498-520): cite ChatGPT/AI-assisted software, failure violates F15-7 and the school's policy, confer with instructor, APA citation format. Rest of page is general integrity text. Identical text at slisweb.sjsu.edu/plagiarism and ischool.sjsu.edu/faculty-handbook-plagiarism.",
+   "in_first_collection": false}
+ ],
+ "course_examples": [
+  "https://www.sjsu.edu/cs/docs/syllabi/fall26/CS%20156%20Syllabus_Fall%202026_Maryam_Khazaei_Sec2_and_sec3.pdf (CS 156 syllabus; AI policy content not verified; not collected)"
+ ],
+ "notes": "First collection found no computing unit; the recheck found one (School of Information). CS, Software Engineering, Data Science and the engineering college showed no findable policy, though SE and Data Science were only searched, not fetched."
+}

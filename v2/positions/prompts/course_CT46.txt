@@ -1,0 +1,51 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT46 "Ethics, privacy and cost" (Personal data in prompts, training-data consent, licensing, environmental cost, paid tools.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..26 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | cornell | C2 | student | informs | enrollment implies consent | enrollment in this course implies consent for your submissions to be used in this manner.
+1 | dartmouth-college | C2 | all | informs | warning AI stores prompts | these tools typically store and analyze your prompts, potentially building a profile of you.
+2 | massachusetts-amherst | C1 | student | must | use AI responsibly | it's essential to use them in a responsible and ethical manner.
+3 | massachusetts-amherst | C2 | all | informs | AI code not original | AI bases the code it generates on other people's code.
+4 | massachusetts-boston | C6 | student | should | prevent LLM storing student results | recommend you take steps to not allow chatGPT or any large language model to store your results.
+5 | north-carolina-chapel-hill | C1 | student | must-not | no personal data in AI | Do not put personal or confidential data into these tools.
+6 | north-carolina-state | C2 | student | must | must understand AI tool limits and terms | Understand capabilities & limitations, as well as terms, conditions, & privacy policies of AI tools.
+7 | north-carolina-state | C4 | student | may | paid AI not required | You’re welcome to pay for frontier model access, but you are not required to spend money on AI tools for the course.
+8 | rose-hulman-institute-technology | C6 | instructor | informs | AI platforms leak confidential data | Imagine working with confidential company information or in
+9 | temple | C6 | student | must | student responsible for compliance | You are responsible for ensuring your use of AI complies with university policies on
+10 | tufts | C2 | instructor | informs | chatbot interactions logged anonymously | of all interactions with the chatbot.
+11 | tufts | C2 | student | should | be mindful of personal info in chats | so please be mindful of
+12 | uiuc | C1 | student | must | must buy Claude Pro for project | students will also need to purchase a Claude Pro subscription to use
+13 | uiuc | C1 | student | informs | expected subscription cost | students should expect to purchase two to three months of access
+14 | uiuc | C1 | student | informs | AI has ethical and resource costs | recognizing that AI systems create real costs
+15 | vermont | C5 | instructor | informs | no consent to class recording | these tools consume streaming data and I do not consent to have class recorded
+16 | vermont | C5 | student | must-not | never share identifying information | tant that you never share identifying information with AI.
+17 | vermont | C5 | student | must | remove names before sharing | sure all names are expurgated before sharing any content with AI tools.
+18 | washington | C3 | all | informs | AI misuse harms others | You could expose other students to harm
+19 | wellesley-college | C1 | all | informs | ethics: training data consent | The training data for these systems is usually harvested without the
+20 | wellesley-college | C1 | all | informs | ethics: license infringement risk | sometimes suggest code or prose that should come with a specific
+21 | wellesley-college | C1 | all | informs | ethics: moderator labor | ChatGPT for this assignment: it does not use human workers to flag
+22 | wellesley-college | C1 | all | informs | ethics: energy and water use | The servers used to train and run these AI tools consume huge amounts
+23 | wellesley-college | C1 | instructor | informs | resource cost acceptable here | the resource costs associated with students using AI for this task are
+24 | wellesley-college | C2 | all | informs | AI attribution ethics | Are trained on large volumes of data from the internet
+25 | wellesley-college | C6 | all | informs | LLMs raise ethical issues | large language model systems present several serious ethical issues with their use:
+26 | wellesley-college | C6 | all | informs | training data without consent | The training data for these systems is usually harvested without the

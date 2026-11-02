@@ -1,0 +1,927 @@
+{
+ "university": "Texas Tech University Health Sciences Center",
+ "slug": "texas-tech-health-sciences-center",
+ "state": "TX",
+ "type": "R2",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "new_types": [],
+ "notes": "Only one included document. Mainly institutional data-governance policy; academic-work rule defers to instructors. No school or computing unit policy found. | Single institutional operating policy; no school, computing or course documents. Mostly not coursework-specific. Several type assignments are partial fits (see fit_note). Reconciler: scope units (P07 fit notes from both coders) moved to P61; list items in 4(c) coded prohibit except academic work (restrict, instructor-set).",
+ "documents": [
+  {
+   "id": "ttuhsc-op5221",
+   "layer": "university",
+   "unit": "Chief Information Officer / AI Governance and Risk Committee",
+   "course": null,
+   "title": "HSC OP 52.21, Acceptable Use of Artificial Intelligence (AI) Tools",
+   "url": "https://www.ttuhsc.edu/administration/operating-policies/op5221.aspx",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance": "permit",
+   "tiers": [],
+   "summary": "An operating policy for the whole health sciences center covering education, research, clinical care and administration. It allows AI use under principles of disclosure, accountability, privacy and human supervision, bans AI on protected data without a contract, and sets up a governance committee. Coursework rules are thin: academic work is limited only where the instructor disallows AI.",
+   "stance_why": "Coders split (A permit, B delegates). The policy sets conditions rather than handing the choice to instructors: \"AI use must be disclosed and documented appropriately\", public data \"may be used freely with AI tools\", and only specific uses are barred. The single coursework clause bans AI use for \"completion of academic work in a manner not allowed by the instructor\", a narrow instructor-deferral inside a general permit-with-conditions policy covering education, research, clinical and administrative work. It is not restrict (AI is not banned by default) and not delegates (the policy sets rules itself), so permit.",
+   "units": [
+    {
+     "why": "The purpose statement sets scope and principles: 'responsible, ethical, and compliant use' of AI across education, research, clinical care and administration. That is an institution-wide framework, so P56.",
+     "anchor": "establish clear expectations and guidelines for the responsible, ethical, and compliant use of artificial intelligence",
+     "frag_start": "The purpose of this Health",
+     "frag_end": "business operations.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution",
+      "ethics-bias-environment"
+     ]
+    },
+    {
+     "why": "The review clause says the OP 'will be reviewed by March 1 of each odd-numbered year', a fixed review cycle, so P54.",
+     "anchor": "will be reviewed by March 1 of each odd-numbered year",
+     "frag_start": "This OP will be reviewed",
+     "frag_end": "People and Operations Council.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "must",
+     "policy_type": "P54",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ],
+     "resolution_why": "A: admin/over-time/must/P54/neutral. B: admin/over-time/informs/P54/neutral. Coders split on modality (A must, B informs). The source says the OP \"will be reviewed by March 1 of each odd-numbered year\", a scheduled duty on named reviewers, so must. Final: admin/over-time/must/P54/neutral."
+    },
+    {
+     "why": "Names the officers who review the OP: 'Chief Information Officer and the Chief Compliance Officer', with revisions forwarded to a committee. This says who maintains the policy, so P80; the review cycle itself is coded separately as P54.",
+     "anchor": "by the Chief Information Officer and the Chief Compliance Officer",
+     "frag_start": "This OP will be reviewed",
+     "frag_end": "People and Operations Council.",
+     "policy": "The Chief Information Officer and the Chief Compliance Officer review the OP, with substantive revisions forwarded to the AI Governance and Risk Committee and People and Operations Council.",
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "informs",
+     "policy_type": "P80",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ],
+     "resolution_why": "A: admin/over-time/informs/P80/neutral. B: admin/over-time/informs/P80/neutral. Codes agree; A gave policy null while the anchor starts mid-sentence, so B's normalized policy is used for fidelity. Final: admin/over-time/informs/P80/neutral."
+    },
+    {
+     "why": "Defines AI tools as software that uses 'machine learning (ML), natural language processing, large language models', setting what the policy covers, so P61.",
+     "anchor": "software, systems, or applications that use machine learning (ML), natural language processing, large language models",
+     "frag_start": "are defined as software, systems,",
+     "frag_end": "assisting with decision-making.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance"
+     ]
+    },
+    {
+     "why": "The exclusions list says 'basic rule-based spell/grammar checkers' are not AI tools. P100 is the nearest type (routine features outside the rules), though here the reason is that they are not AI.",
+     "anchor": "basic rule-based spell/grammar checkers, simple macros, mail-merge",
+     "frag_start": "Basic deterministic utilities (e.g., calculators,",
+     "frag_end": "simple macros, mail-merge).",
+     "policy": "Basic deterministic utilities such as calculators, basic rule-based spell/grammar checkers, simple macros and mail-merge are not AI tools under this policy unless they incorporate AI/ML features.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P100",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance"
+     ],
+     "fit_note": "A: Exclusion is because the tools are not AI (deterministic), not an exemption of AI features from a restrictive rule. B: Exclusion is a scope definition for non-AI utilities, not an exemption of AI features from a restrictive rule.",
+     "resolution_why": "A: all/general/informs/P100/neutral. B: all/general/informs/P100/neutral. Codes agree; A left policy null but the anchor is only the list of excluded tools, so B's normalized policy (which carries the \"unless they incorporate AI/ML features\" condition) is used. Final: all/general/informs/P100/neutral."
+    },
+    {
+     "why": "The boundary rule says features marketed as 'AI,' 'smart,' 'assist,' 'predictive' are in scope 'even if the larger product would otherwise be excluded', which covers AI built into other products (P07) and sets scope. [Reconciled final codes: actor all, phase general, modality informs, type P61, unit_stance neutral.]",
+     "anchor": "those capabilities are in scope even if the larger product would otherwise be excluded",
+     "frag_start": "If a product or feature",
+     "frag_end": "otherwise be excluded.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance"
+     ],
+     "fit_note": "A: Covers embedded AI features in general software (predictive text, ML analytics), not only editors and IDEs. B: Concerns AI embedded in general software and vendor updates, not editors or IDEs specifically.",
+     "resolution_why": "A: all/general/must/P07/restrict. B: all/general/informs/P07/neutral. Coders split on modality and stance (A must/restrict, B informs/neutral). The sentence defines scope (\"those capabilities are in scope even if the larger product would otherwise be excluded\"); it does not tell users to do anything. Both coders used P07 with a fit note that it is not about editors; P61 (define scope) fits better, so P61, informs, neutral. Final: all/general/informs/P61/neutral."
+    },
+    {
+     "why": "'When in doubt, treat the feature as an AI tool' and consult the committee. It tells users what to do when unsure, so P10, though it routes to a committee rather than an instructor.",
+     "anchor": "When in doubt, treat the feature as an AI tool",
+     "frag_start": "When in doubt, treat the",
+     "frag_end": "formal determination.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P10",
+     "unit_stance": "restrict",
+     "topics": [
+      "default-stance"
+     ],
+     "fit_note": "A: Unsure users treat the feature as in scope and consult the AI Governance and Risk Committee, not an instructor. B: Users ask the AI Governance and Risk Committee for a determination, not an instructor, and the default is to treat the feature as AI."
+    },
+    {
+     "why": "States the rationale as ensuring responsible use as AI is integrated: 'it's essential to use these technologies responsibly'. Framework preamble, so P56.",
+     "anchor": "With the increasing integration of AI tools into university activities",
+     "frag_start": "With the increasing integration of",
+     "frag_end": "use these technologies responsibly.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution",
+      "default-stance"
+     ]
+    },
+    {
+     "why": "Transparency principle: 'AI use must be disclosed and documented appropriately', a general disclosure duty for any user, so P24.",
+     "anchor": "AI use must be disclosed and documented appropriately",
+     "frag_start": "AI use must be disclosed",
+     "frag_end": "significantly influenced by AI.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "resolution_why": "A: all/during-work/must/P24/permit. B: all/general/must/P24/require. Coders split on phase and stance (A during-work/permit, B general/require). \"AI use must be disclosed and documented appropriately\" is a condition on allowed use of AI in work, not a requirement to use AI, so during-work and permit. Final: all/during-work/must/P24/permit."
+    },
+    {
+     "why": "Documentation 'should include the type of AI tool used, its purpose, and any limitations', specifying what a disclosure contains. P25 (tool details) is the nearest type, though no prompt or output is required.",
+     "anchor": "Documentation should include the type of AI tool used, its purpose, and any limitations",
+     "frag_start": "Documentation should include the type",
+     "frag_end": "inherent in its output.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P25",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "fit_note": "A: Requires tool type, purpose and limitations; no prompt or output required. B: Asks for tool type, purpose and limitations, not the exact prompt or output.",
+     "resolution_why": "A: all/during-work/should/P25/permit. B: all/general/should/P25/require. Coders split on phase and stance (A during-work/permit, B general/require). Documentation content is a condition on permitted use in work, so during-work and permit. Final: all/during-work/should/P25/permit."
+    },
+    {
+     "why": "Accountability principle: 'Human users have final responsibility for all decisions and outcomes resulting from AI use', so users own what AI helps produce, P29.",
+     "anchor": "Human users have final responsibility for all decisions and outcomes resulting from AI use",
+     "frag_start": "Human users have final responsibility",
+     "frag_end": "outcomes resulting from AI use.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P29",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "fit_note": "Responsibility for decisions and outcomes, framed for all users, not student submissions specifically."
+    },
+    {
+     "why": "'Users must evaluate AI outputs, recognize the tool's limitations, and take corrective action if AI-generated results are inaccurate' requires verification of output, so P31. [Reconciled final codes: actor all, phase during-work, modality must, type P31, unit_stance permit.]",
+     "anchor": "Users must evaluate AI outputs, recognize the tool",
+     "frag_start": "Users must evaluate AI outputs,",
+     "frag_end": "misleading, or inappropriate.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P31",
+     "unit_stance": "permit",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "resolution_why": "A: all/during-work/must/P31/neutral. B: all/general/must/P31/require. Coders split on phase and stance (A during-work/neutral, B general/require). \"Users must evaluate AI outputs\" is a duty attached to using AI in work, and a condition on permitted use, so during-work and permit. Final: all/during-work/must/P31/permit."
+    },
+    {
+     "why": "'Accountability also involves documenting decisions made with AI tools to maintain traceability' is a record-keeping duty; closest to P26 (keep logs) but it concerns decisions, not student transcripts.",
+     "anchor": "documenting decisions made with AI tools to maintain traceability",
+     "frag_start": "Accountability also involves documenting",
+     "frag_end": "maintain traceability.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P26",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "fit_note": "Documents decisions made with AI for traceability, not chat logs or reflections submitted with work.",
+     "resolution_why": "Only coder B found this unit (B coded all/general/must/P26/require). Only coder B found this. The source says \"Accountability also involves documenting decisions made with AI tools to maintain traceability\", a real documentation duty (must, since \"involves\" states a requirement of accountability). Kept as P26 (partial fit: documents decisions for traceability, not logs submitted with work). Conditions on permitted use, so unit_stance permit. Final: all|during-work|must|P26|permit."
+    },
+    {
+     "why": "Principle 1c says AI 'must be used in ways that uphold fair treatment of all individuals and avoid discrimination', naming bias and harms (P53).",
+     "anchor": "uphold fair treatment of all individuals and avoid discrimination",
+     "frag_start": "AI tools must be used",
+     "frag_end": "reinforce disparities.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P53",
+     "unit_stance": "restrict",
+     "topics": [
+      "ethics-bias-environment"
+     ],
+     "resolution_why": "A: all/general/must/P53/neutral. B: all/general/must/P53/restrict. Coders split on stance (A neutral, B restrict). \"AI tools must be used in ways that uphold fair treatment\" narrows how AI may be used, so restrict; phase general (principle). Final: all/general/must/P53/restrict."
+    },
+    {
+     "why": "Users must identify and mitigate 'unfair or harmful impacts' and review 'training data, models, and applications' to avoid reinforcing disparities; a bias-mitigation duty (P53).",
+     "anchor": "Users are responsible for identifying, assessing, and mitigating instances where AI outputs may lead to",
+     "frag_start": "Users are responsible for identifying",
+     "frag_end": "do not reinforce disparities.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P53",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment"
+     ],
+     "resolution_why": "Only coder B found this unit (B coded all/general/must/P53/neutral). Only coder B found this. \"Users are responsible for identifying, assessing, and mitigating instances where AI outputs may lead to unfair or harmful impacts\" is a duty distinct from the preceding fair-treatment rule; kept as P53 (bias and harms), a general principle, neutral on AI use. Final: all|general|must|P53|neutral."
+    },
+    {
+     "why": "Privacy principle: 'AI use must protect sensitive, confidential, and personally identifiable information', so P50.",
+     "anchor": "AI use must protect sensitive, confidential, and personally identifiable information",
+     "frag_start": "AI use must protect sensitive,",
+     "frag_end": "identifiable information.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "A: all/during-work/must/P50/restrict. B: all/general/must/P50/restrict. Coders split on phase (A during-work, B general). The rule governs what users do when inputting data into AI, so during-work. Final: all/during-work/must/P50/restrict."
+    },
+    {
+     "why": "'Data input into AI systems should be minimized to only what is necessary for the task' is a separate data-minimization rule, so P50.",
+     "anchor": "Data input into AI systems should be minimized to only what is necessary",
+     "frag_start": "Data input into AI systems",
+     "frag_end": "to prevent unauthorized access or breaches.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "A: all/during-work/should/P50/restrict. B: all/general/should/P50/restrict. Coders split on phase (A during-work, B general). Same reasoning: it governs data input when using AI, so during-work. Final: all/during-work/should/P50/restrict."
+    },
+    {
+     "why": "Principle 1e: 'AI is intended as a decision-support tool, not a replacement for human judgment'; AI must not replace human decisions (P73), with no student-learning content so P32 does not fit.",
+     "anchor": "AI is intended as a decision-support tool, not a replacement for human judgment",
+     "frag_start": "AI is intended as a",
+     "frag_end": "human judgment.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P73",
+     "unit_stance": "restrict",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "fit_note": "A: Frames AI as decision support for all users, not about students' own problem-solving. B: General human-judgment principle not limited to decisions about individuals.",
+     "resolution_why": "A: all/general/informs/P32/neutral. B: all/general/informs/P73/restrict. Coders split on type and modality-adjacent coding (A P32 student primary problem-solver, B P73). \"AI is intended as a decision-support tool, not a replacement for human judgment\" is about human judgment in decisions, not students' own problem-solving, so P73 (partial fit), restrict, general. Final: all/general/informs/P73/restrict."
+    },
+    {
+     "why": "'All outputs must be subject to human review, with the capacity to override or modify' AI recommendations. P73 (a human reviews and decides) fits best.",
+     "anchor": "All outputs must be subject to human review, with the capacity to override or modify",
+     "frag_start": "All outputs must be subject",
+     "frag_end": "AI-generated recommendations.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P73",
+     "unit_stance": "restrict",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "fit_note": "A: Human review of all AI outputs, especially in high-risk academic, research and clinical decisions; not limited to decisions about individuals. B: Human review of all AI outputs, broader than consequential decisions about people.",
+     "resolution_why": "A: all/during-work/must/P73/restrict. B: all/general/must/P73/require. Coders split on phase and stance (A during-work/restrict, B general/require). \"All outputs must be subject to human review\" is a condition applied while using AI, so during-work and restrict. Final: all/during-work/must/P73/restrict."
+    },
+    {
+     "why": "'continuous monitoring of AI performance to ensure it aligns with institutional values' calls for ongoing monitoring of deployed AI (P98).",
+     "anchor": "Supervision also includes continuous monitoring of AI performance",
+     "frag_start": "Supervision also includes continuous monitoring",
+     "frag_end": "aligns with institutional values.",
+     "policy": null,
+     "actor": "all",
+     "phase": "over-time",
+     "modality": "informs",
+     "policy_type": "P98",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ],
+     "resolution_why": "Only coder B found this unit (B coded admin/over-time/should/P98/neutral). Only coder B found this. \"Supervision also includes continuous monitoring of AI performance to ensure it aligns with institutional values\" is a real statement but has no modal verb, so informs; B coded admin/should, but the text names no responsible office, so actor is all. P98 (monitor deployed systems), over-time. Final: all|over-time|informs|P98|neutral."
+    },
+    {
+     "why": "'The AI Governance and Risk Committee is established by the President's Cabinet to provide strategic and operational oversight', naming the owning body, so P80.",
+     "anchor": "provide strategic and operational oversight for all AI-related activities",
+     "frag_start": "The AI Governance and Risk",
+     "frag_end": "risk management.",
+     "policy": "The AI Governance and Risk Committee, established by the President's Cabinet, provides strategic and operational oversight for all AI-related activities.",
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P80",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ],
+     "resolution_why": "A: admin/before-course/informs/P80/neutral. B: admin/before-course/informs/P80/neutral. Codes agree; A left policy null, but the anchor is only a fragment of the sentence, so B's normalized policy is used. Final: admin/before-course/informs/P80/neutral."
+    },
+    {
+     "why": "The committee membership list (Chief Compliance Officer, CIO, Provost or Academic Affairs representative, optional faculty and student representatives) says who sits on the governing body, which describes how governance is composed (P80).",
+     "anchor": "Faculty and Student Representatives (optional)",
+     "frag_start": "Faculty and Student Representatives",
+     "frag_end": "(optional)",
+     "policy": "Faculty and student representatives may sit on the AI Governance and Risk Committee as optional members.",
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P80",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ],
+     "fit_note": "Describes committee composition rather than how the policy was drafted or adopted.",
+     "resolution_why": "A: admin/before-course/informs/P84/neutral. B: admin/before-course/informs/P80/neutral. Coders split on type (A P84, B P80). The committee roster says who sits on the body that governs AI under the OP; it does not describe how the policy was drafted, so P80. B's policy is used because the anchor alone is a bare list item. Final: admin/before-course/informs/P80/neutral."
+    },
+    {
+     "why": "The committee must 'Approve and maintain AI policies, procedures, and standards', assigning policy maintenance to a body, so P80.",
+     "anchor": "Approve and maintain AI policies, procedures, and standards.",
+     "frag_start": "Approve and maintain AI policies,",
+     "frag_end": "procedures, and standards.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "must",
+     "policy_type": "P80",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ],
+     "resolution_why": "A: admin/over-time/must/P80/neutral. B: admin/before-course/must/P80/neutral. Coders split on phase (A over-time, B before-course). \"Approve and maintain AI policies\" is ongoing upkeep, so over-time. Final: admin/over-time/must/P80/neutral."
+    },
+    {
+     "why": "The committee must 'Review and approve proposed AI tools and high-risk projects across clinical, research, education, and administrative domains', tool approval, so P65.",
+     "anchor": "Review and approve proposed AI tools and high-risk projects",
+     "frag_start": "Review and approve proposed AI",
+     "frag_end": "administrative domains.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P65",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "The committee must 'Assess risk, including privacy, security, bias, and ethical considerations', part of tool review, so P65.",
+     "anchor": "Assess risk, including privacy, security, bias, and ethical considerations.",
+     "frag_start": "Assess risk, including privacy,",
+     "frag_end": "ethical considerations.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P65",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data",
+      "ethics-bias-environment"
+     ]
+    },
+    {
+     "why": "The committee must 'Monitor AI system performance and compliance post-deployment', ongoing monitoring of deployed systems, so P98.",
+     "anchor": "Monitor AI system performance and compliance post-deployment.",
+     "frag_start": "Monitor AI system performance and",
+     "frag_end": "post-deployment.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "must",
+     "policy_type": "P98",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "The committee must 'Evaluate vendor partnerships and contracts for AI solutions', contract review, so P65.",
+     "anchor": "Evaluate vendor partnerships and contracts for AI solutions.",
+     "frag_start": "Evaluate vendor partnerships and contracts",
+     "frag_end": "AI solutions.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P65",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "The committee must 'Oversee training programs and competency requirements for AI users', which provides for AI training (P70).",
+     "anchor": "Oversee training programs and competency requirements for AI users.",
+     "frag_start": "Oversee training programs and competency",
+     "frag_end": "for AI users.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P70",
+     "unit_stance": "neutral",
+     "topics": [
+      "ai-literacy-career"
+     ],
+     "resolution_why": "A: admin/over-time/must/P70/encourage. B: admin/before-course/must/P70/neutral. Coders split on phase and stance (A over-time/encourage, B before-course/neutral). \"Oversee training programs and competency requirements\" is a committee oversight duty, not a call to use AI, so neutral; set-up of programs, so before-course. Final: admin/before-course/must/P70/neutral."
+    },
+    {
+     "why": "The committee must 'Receive and review reports of incidents or concerns; recommend mitigation and corrective actions', an incident channel, so P71.",
+     "anchor": "Receive and review reports of incidents or concerns",
+     "frag_start": "Receive and review reports of",
+     "frag_end": "corrective actions.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P71",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "Allowable Use ties AI use to the four data classes in OP 56.04; users follow existing data-classification rules, so this is a compliance-with-existing-policy rule (P77).",
+     "anchor": "all TTUHSC-owned data is classified into four types",
+     "frag_start": "In accordance with",
+     "frag_end": "privacy, security, legal, and ethical considerations.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "Only coder B found this unit (B coded all/general/informs/P77/neutral). Only coder B found this. The sentence classifying \"all TTUHSC-owned data ... into four types\" under HSC OP 56.04 is the definitional basis for the data-use rules and points to existing policy; kept as P77, informs, general. Final: all|general|informs|P77|neutral."
+    },
+    {
+     "why": "'Public Data may be used freely with AI tools' is a permissive rule for public data. P02 is closest, though it applies only to one data class. [Reconciled final codes: actor all, phase during-work, modality may, type P50, unit_stance permit.]",
+     "anchor": "Public Data may be used freely with AI tools",
+     "frag_start": "Public Data may be used",
+     "frag_end": "platform restricts it).",
+     "policy": "Public Data may be used freely with AI tools for generating insights, summaries, or training, unless the platform restricts it.",
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P50",
+     "unit_stance": "permit",
+     "topics": [
+      "permitted-uses",
+      "privacy-data"
+     ],
+     "fit_note": "A: Permission applies only to public data; it is a data-handling rule, not a general default stance. B: Permission for public data to be used freely, not a protection rule.",
+     "resolution_why": "A: all/during-work/may/P02/permit. B: all/general/may/P50/permit. Coders split on type (A P02, B P50) and phase. Permission to use public data \"freely\" is a data-handling rule (the P02 default-permit type is about a general stance), so P50 with fit note; during-work. B's policy is used because the anchor omits the data class qualifier. Final: all/during-work/may/P50/permit."
+    },
+    {
+     "why": "'Sensitive, Controlled, and Regulated Data can be used with AI tools that are managed by TTUHSC and covered by contracts', i.e. only vetted tools for protected data, so P50.",
+     "anchor": "can be used with AI tools that are managed by TTUHSC and covered by contracts",
+     "frag_start": "Sensitive, Controlled, and Regulated Data",
+     "frag_end": "inaccessible to external parties.",
+     "policy": "Sensitive, Controlled, and Regulated Data can be used with AI tools that are managed by TTUHSC and covered by contracts explicitly protecting TTUHSC data, ensuring the data is not used for training models or is isolated in a separate instance inaccessible to external parties.",
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "A: all/during-work/may/P50/restrict. B: all/general/may/P50/restrict. Codes agree on type; phase split (A during-work, B general) resolved to during-work as it governs data used with tools. B's policy is used since the anchor is an incomplete clause. Final: all/during-work/may/P50/restrict."
+    },
+    {
+     "why": "'AI tools should be used as decision-support tools and not as decision- making tools' bars AI from deciding, so P73.",
+     "anchor": "AI tools should be used as decision-support tools and not as decision-",
+     "frag_start": "AI tools should be used",
+     "frag_end": "decision- making tools.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P73",
+     "unit_stance": "restrict",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "fit_note": "A: General rule for decisions, not specifically decisions about individuals. B: General decision-support rule, not limited to decisions about individuals.",
+     "resolution_why": "A: all/during-work/should/P73/restrict. B: all/general/should/P73/restrict. Coders split on phase (A during-work, B general). Sits in the Allowable Use section about using tools, so during-work. Final: all/during-work/should/P73/restrict."
+    },
+    {
+     "why": "'use should be consistent with the HSC OP 52.09 ... and HSC OP 56.01' ties AI use to existing confidentiality and IT acceptable-use policies, so P77.",
+     "anchor": "In all cases, use should be consistent with the",
+     "frag_start": "In all cases, use should",
+     "frag_end": "Acceptable Use of Information Technology Resources",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution",
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "'Users may use only the information and information systems to which they have been given authorized access', with a confidentiality duty, a privacy rule, so P50.",
+     "anchor": "Users may use only the information and information systems to which they have",
+     "frag_start": "Users may use only the",
+     "frag_end": "privacy of such information.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "A: all/during-work/must/P50/restrict. B: all/general/must/P50/restrict. Coders split on phase (A during-work, B general). Governs access when using systems, so during-work. Final: all/during-work/must/P50/restrict."
+    },
+    {
+     "why": "Anyone with access 'will take reasonable and necessary steps to maintain the confidentiality and privacy' of employee, student and patient information, a data-protection duty (P50).",
+     "anchor": "will take reasonable and necessary steps to maintain the confidentiality and privacy",
+     "frag_start": "Anyone who has access to",
+     "frag_end": "made confidential by TTUHSC policies or law",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "Only coder B found this unit (B coded all/general/must/P50/restrict). Only coder B found this. \"Anyone who has access to confidential information ... will take reasonable and necessary steps to maintain the confidentiality and privacy of such information\" is a distinct duty from the authorized-access rule coded by A for the previous sentence; kept as P50, must, during-work, restrict because it narrows how data may be handled with AI tools. Final: all|during-work|must|P50|restrict."
+    },
+    {
+     "why": "'AI tools that lack a TTUHSC contract and appropriate data- sharing safeguards are not approved' for protected data, so unvetted tools are barred, P50. [Reconciled final codes: actor all, phase during-work, modality must-not, type P50, unit_stance restrict.]",
+     "anchor": "AI tools that lack a TTUHSC contract and appropriate data- sharing safeguards are not approved",
+     "frag_start": "AI tools that lack a",
+     "frag_end": "Sensitive, Controlled or Regulated Data.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data",
+      "prohibited-uses"
+     ],
+     "resolution_why": "A: all/during-work/must-not/P50/prohibit. B: all/general/must-not/P50/prohibit. Coders split on stance (both prohibit). The sentence says tools lacking a contract \"are not approved for use with Sensitive, Controlled or Regulated Data\", which is a ban unless contracted, so restrict by the codebook definition. Phase during-work (A) over general (B). Final: all/during-work/must-not/P50/restrict."
+    },
+    {
+     "why": "'AI tools may not be used with personal, confidential, proprietary, or other sensitive information unless a contract' protects it, naming FERPA student records, so P50.",
+     "anchor": "AI tools may not be used with personal, confidential, proprietary, or other sensitive information",
+     "frag_start": "AI tools may not be",
+     "frag_end": "classified as Confidential.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data",
+      "prohibited-uses"
+     ],
+     "resolution_why": "A: all/during-work/must-not/P50/restrict. B: all/general/must-not/P50/prohibit. Coders split on stance (A restrict, B prohibit). \"may not be used ... unless a contract explicitly ensures that TTUHSC data is protected\" is banned unless a condition is met, so restrict. Phase during-work. Final: all/during-work/must-not/P50/restrict."
+    },
+    {
+     "why": "The list bars 'generating proprietary or unpublished research' with AI, a research-use restriction, so P62. [Reconciled final codes: actor all, phase during-work, modality should-not, type P62, unit_stance prohibit.]",
+     "anchor": "generating proprietary or unpublished research",
+     "frag_start": "AI tools should not be used",
+     "frag_end": "and grading.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should-not",
+     "policy_type": "P62",
+     "unit_stance": "prohibit",
+     "topics": [
+      "research-use",
+      "prohibited-uses"
+     ],
+     "resolution_why": "A: all/during-work/should-not/P62/restrict. B: all/general/should-not/P62/restrict. Coders split on phase and stance (A during-work, B general; both restrict). \"generating proprietary or unpublished research\" has no exception, so prohibit; during-work. Final: all/during-work/should-not/P62/prohibit.",
+     "fit_note": "Covers non-public outputs in general, including research and legal analysis, not only research and scholarship."
+    },
+    {
+     "why": "The list bars AI for 'recruitment, personnel, or disciplinary decision making', consequential decisions about people, so P73.",
+     "anchor": "recruitment, personnel, or disciplinary decision making",
+     "frag_start": "AI tools should not be used",
+     "frag_end": "and grading.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should-not",
+     "policy_type": "P73",
+     "unit_stance": "prohibit",
+     "topics": [
+      "prohibited-uses"
+     ],
+     "resolution_why": "A: all/during-work/should-not/P73/prohibit. B: all/general/should-not/P73/restrict. Coders split on phase and stance (A during-work/prohibit, B general/restrict). Listed with no exception under \"should not be used to generate outputs\", so prohibit; applies to use of tools, so during-work. Final: all/during-work/should-not/P73/prohibit."
+    },
+    {
+     "why": "The examples in 4c include 'completion of academic work in a manner not allowed by the instructor', so students may not use AI for academic work beyond what the instructor allows; the instructor sets the rule (P04), and I chose P04 over P19 because the unit defers to the instructor rather than itself banning AI-produced work.",
+     "anchor": "completion of academic work in a manner not allowed by the instructor",
+     "frag_start": "AI tools should not be used",
+     "frag_end": "and grading.",
+     "policy": "AI tools should not be used for completion of academic work in a manner not allowed by the instructor.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should-not",
+     "policy_type": "P04",
+     "unit_stance": "restrict",
+     "topics": [
+      "prohibited-uses",
+      "instructor-discretion"
+     ],
+     "fit_note": "A: Bans AI completing academic work only where the instructor disallows it; the instructor sets the rule (P04) and the policy gives no tiers or default for coursework. B: Instructor discretion is implicit; the rule bans only AI use the instructor has not allowed.",
+     "resolution_why": "A: student/during-work/should-not/P19/restrict. B: student/during-work/should-not/P04/restrict. Coders split on type and policy wording (A P19, B P04). The passage bans only \"completion of academic work in a manner not allowed by the instructor\", so the instructor sets the rule: P04 (A's own fit note says the same). A's policy null and B's policy over-wrapped the clause in \"non-public outputs\"; the final policy states the clause alone. Phase during-work. Final: student/during-work/should-not/P04/restrict."
+    },
+    {
+     "why": "The list bars AI for 'creation of non-public instructional materials', limiting instructor AI use for teaching work, so P59. [Reconciled final codes: actor instructor, phase before-course, modality should-not, type P59, unit_stance prohibit.]",
+     "anchor": "creation of non-public instructional materials",
+     "frag_start": "AI tools should not be used",
+     "frag_end": "and grading.",
+     "policy": "AI tools should not be used to create non-public instructional materials.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should-not",
+     "policy_type": "P59",
+     "unit_stance": "prohibit",
+     "topics": [
+      "faculty-course-materials",
+      "instructor-staff-use"
+     ],
+     "resolution_why": "A: instructor/before-course/should-not/P59/restrict. B: instructor/before-course/should-not/P59/restrict. Coders split on stance (A restrict, B restrict; resolved prohibit for consistency). The list item has no exception under \"should not be used\", so prohibit; B's policy used since the anchor is a bare fragment. Final: instructor/before-course/should-not/P59/prohibit."
+    },
+    {
+     "why": "The same list bars AI from 'grading'. Grades are meant to be assigned by humans, so P46 rather than P101 (no conditions are given). [Reconciled final codes: actor instructor, phase during-assessment, modality should-not, type P46, unit_stance prohibit.]",
+     "anchor": "and grading",
+     "frag_start": "AI tools should not be used",
+     "frag_end": "and grading.",
+     "policy": "AI tools should not be used for grading.",
+     "actor": "instructor",
+     "phase": "during-assessment",
+     "modality": "should-not",
+     "policy_type": "P46",
+     "unit_stance": "prohibit",
+     "topics": [
+      "faculty-grading-feedback",
+      "instructor-staff-use"
+     ],
+     "resolution_why": "A: instructor/during-work/should-not/P46/prohibit. B: instructor/during-assessment/should-not/P46/restrict. Coders split on stance (A prohibit, B restrict) and phase (A during-work, B during-assessment). \"grading\" is listed with no exception under \"should not be used to generate outputs\", so prohibit; grading is evaluation of student work, so during-assessment. A's anchor covered two list items, so it is narrowed to \"and grading\". Final: instructor/during-assessment/should-not/P46/prohibit.",
+     "fit_note": "Phrased as a 'should not' on grading as a non-public output, not an explicit statement that humans assign grades."
+    },
+    {
+     "why": "AI 'must not be used for activities that are illegal, fraudulent, or violate any state or federal laws', a general conduct ban, so P74.",
+     "anchor": "AI tools must not be used for activities that are illegal, fraudulent",
+     "frag_start": "AI tools must not be",
+     "frag_end": "TTU System policies.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P74",
+     "unit_stance": "prohibit",
+     "topics": [
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "'Accepting click-through agreements without delegated signature authority may result in personal responsibility' warns about AI tools' terms of use, nearest P52.",
+     "anchor": "accepting click-through agreements without delegated signature authority may result in personal responsibility",
+     "frag_start": "Be aware that accepting click-through",
+     "frag_end": "terms and conditions of the AI tool.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P52",
+     "unit_stance": "neutral",
+     "topics": [
+      "intellectual-property"
+     ],
+     "fit_note": "A: Concerns personal liability from terms of use, not copyright or ownership. B: About personal liability for terms of service, not copyright or ownership."
+    },
+    {
+     "why": "'Contact TTUHSC IT before purchasing (or acquiring for free) AI tools' requires pre-acquisition review, so P65.",
+     "anchor": "Contact TTUHSC IT before purchasing (or acquiring for free) AI tools",
+     "frag_start": "Contact TTUHSC IT before purchasing",
+     "frag_end": "resources or data will be used.",
+     "policy": null,
+     "actor": "all",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P65",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ],
+     "fit_note": "Individual users must contact IT before acquiring; an obligation on users rather than a committee review."
+    },
+    {
+     "why": "'Do not input Personal Information about TTUHSC employees, students, faculty, or other stakeholders into an AI tool unless explicitly allowed' is a data-protection ban, so P50.",
+     "anchor": "Do not input Personal Information about TTUHSC employees, students, faculty, or other stakeholders",
+     "frag_start": "Do not input Personal Information",
+     "frag_end": "Office of Institutional Compliance.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "A: all/during-work/must-not/P50/restrict. B: all/general/must-not/P50/prohibit. Coders split on phase and stance (A during-work/restrict, B general/prohibit). \"Do not input Personal Information ... unless explicitly allowed under validated contracts\" is banned unless permitted, so restrict; during-work. Final: all/during-work/must-not/P50/restrict."
+    },
+    {
+     "why": "'Users must adhere to the terms and conditions of AI tools and protect intellectual property rights', covering copyright and patent, so P52. [Reconciled final codes: actor all, phase during-work, modality must, type P52, unit_stance restrict.]",
+     "anchor": "Users must adhere to the terms and conditions of AI tools and protect intellectual",
+     "frag_start": "Users must adhere to the",
+     "frag_end": "identity theft regulations.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P52",
+     "unit_stance": "restrict",
+     "topics": [
+      "intellectual-property"
+     ],
+     "resolution_why": "A: all/during-work/must/P52/neutral. B: all/general/must/P52/restrict. Coders split on stance and phase (A neutral/during-work, B restrict/general). Adhering to terms of use and IP limits constrains how tools may be used, so restrict; during-work. Final: all/during-work/must/P52/restrict."
+    },
+    {
+     "why": "5d adds that library resources 'are subject to vendor licenses that may restrict AI use' and tells users to contact the Libraries; a limit on feeding licensed content to AI (P49 nearest). [Reconciled final codes: actor all, phase during-work, modality informs, type P49, unit_stance neutral.]",
+     "anchor": "subject to vendor licenses that may restrict AI use",
+     "frag_start": "Many digital resources provided by",
+     "frag_end": "large language models.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "informs",
+     "policy_type": "P49",
+     "unit_stance": "neutral",
+     "topics": [
+      "intellectual-property"
+     ],
+     "fit_note": "A: Advises contacting Libraries about licensed content, not an outright ban on uploading. B: Concerns licensed library content and vendor licenses, not course materials uploaded by students.",
+     "resolution_why": "A: all/during-work/should/P49/restrict. B: all/during-work/informs/P49/restrict. Coders split on modality (A should, B informs) and stance (A restrict, B restrict). The passage states a fact (\"subject to vendor licenses that may restrict AI use\") and points to the Libraries for guidance; it sets no rule of its own, so informs and neutral. Final: all/during-work/informs/P49/neutral."
+    },
+    {
+     "why": "'Always confirm the accuracy of AI-generated information before relying on it', since outputs 'may be inaccurate, biased, or fabricated', so P31. [Reconciled final codes: actor all, phase during-work, modality must, type P31, unit_stance permit.]",
+     "anchor": "Always confirm the accuracy of AI-generated information before relying on it.",
+     "frag_start": "Always confirm the accuracy of",
+     "frag_end": "before relying on it.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P31",
+     "unit_stance": "permit",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "resolution_why": "A: all/during-work/must/P31/neutral. B: all/general/must/P31/require. Coders split on phase and stance (A during-work/neutral, B general/require). Confirming accuracy is a condition on use in work, so during-work and permit. Final: all/during-work/must/P31/permit."
+    },
+    {
+     "why": "'Users are responsible for any published content that incorporates AI-generated material' makes users own what they publish, so P29.",
+     "anchor": "Users are responsible for any published content that incorporates AI-generated material",
+     "frag_start": "Users are responsible for any",
+     "frag_end": "AI-generated material.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P29",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "resolution_why": "A: all/during-work/must/P29/neutral. B: all/general/must/P29/neutral. Coders split on phase (A during-work, B general). Responsibility for published content incorporating AI is tied to work products, so during-work. Final: all/during-work/must/P29/neutral."
+    },
+    {
+     "why": "'Clearly disclose when written materials or other work products are generated with or derived from AI tools' is a disclosure rule, so P24.",
+     "anchor": "Clearly disclose when written materials or other work products are generated with or",
+     "frag_start": "Clearly disclose when written materials",
+     "frag_end": "whenever AI outputs are used.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "resolution_why": "A: all/during-work/must/P24/permit. B: all/general/must/P24/require. Coders split on phase and stance (A during-work/permit, B general/require). Disclosure is a condition on permitted use, so during-work and permit. Final: all/during-work/must/P24/permit."
+    },
+    {
+     "why": "'Do not present AI-generated outputs as your own' forbids passing off AI output as one's work, so P19.",
+     "anchor": "Do not present AI-generated outputs as your own.",
+     "frag_start": "Do not present AI-generated outputs",
+     "frag_end": "your own.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P19",
+     "unit_stance": "prohibit",
+     "topics": [
+      "prohibited-uses",
+      "disclosure-citation"
+     ],
+     "fit_note": "A: Framed as not presenting output as your own, rather than not submitting generated work at all. B: Applies to all users and all work products, not only submitted student work.",
+     "resolution_why": "A: all/during-work/must-not/P19/prohibit. B: all/general/must-not/P19/prohibit. Coders split on phase (A during-work, B general). Output presented to others as work product, so during-work. Final: all/during-work/must-not/P19/prohibit."
+    },
+    {
+     "why": "5g also says to 'ensure accuracy and avoid infringing on another party's intellectual property rights' when quoting or paraphrasing AI output, an IP rule (P52).",
+     "anchor": "avoid infringing on another party’s intellectual property rights",
+     "frag_start": "When quoting, paraphrasing, or borrowing",
+     "frag_end": "intellectual property rights.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P52",
+     "unit_stance": "restrict",
+     "topics": [
+      "intellectual-property"
+     ],
+     "resolution_why": "Only coder B found this unit (B coded all/general/must/P52/restrict). Only coder B found this. \"ensure accuracy and avoid infringing on another party's intellectual property rights\" is a duty distinct from the do-not-present-as-your-own rule; kept as P52 (copyright), must, during-work. Final: all|during-work|must|P52|restrict."
+    },
+    {
+     "why": "'Do not use AI tools to create malicious content, including malware, viruses, worms, or trojan horses', a conduct ban, so P74.",
+     "anchor": "Do not use AI tools to create malicious content, including malware",
+     "frag_start": "Do not use AI tools",
+     "frag_end": "network security controls.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P74",
+     "unit_stance": "prohibit",
+     "topics": [
+      "prohibited-uses"
+     ],
+     "resolution_why": "A: all/during-work/must-not/P74/prohibit. B: all/general/must-not/P74/prohibit. Coders split on phase (A during-work, B general). The prohibition concerns making content with AI tools, so during-work. Final: all/during-work/must-not/P74/prohibit."
+    }
+   ]
+  }
+ ]
+}

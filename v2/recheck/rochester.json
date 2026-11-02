@@ -1,0 +1,29 @@
+{
+ "slug": "rochester",
+ "university": "University of Rochester",
+ "units_searched": [
+  {"unit": "Department of Computer Science", "layer": "computing", "site": "https://www.cs.rochester.edu/",
+   "queries": ["site:cs.rochester.edu generative AI policy", "site:cs.rochester.edu ChatGPT academic honesty undergraduate handbook"],
+   "pages_checked": ["https://www.cs.rochester.edu/", "https://www.cs.rochester.edu/undergraduate/index.html"],
+   "result": "none-found",
+   "note": "Both searches returned only university-level pages (provost, communications, college honesty site), none from cs.rochester.edu. Homepage and undergraduate page contain no AI or academic-honesty policy text or handbook links."},
+  {"unit": "Department of Electrical and Computer Engineering", "layer": "computing", "site": "https://www.hajim.rochester.edu/ece/",
+   "queries": ["University of Rochester Hajim School engineering generative AI academic integrity policy"],
+   "pages_checked": ["https://www.hajim.rochester.edu/"],
+   "result": "none-found",
+   "note": "ECE site not fetched separately; the Hajim search and homepage surfaced no ECE-specific AI policy. Coverage is thin."},
+  {"unit": "Goergen Institute for Data Science and Artificial Intelligence", "layer": "computing", "site": "https://www.sas.rochester.edu/dsc/",
+   "queries": ["University of Rochester Goergen Institute for Data Science AI policy students"],
+   "pages_checked": [],
+   "result": "none-found",
+   "note": "Results described programs and an AI ethics fellowship only; no student AI-use policy surfaced. The institute's own site was not fetched."},
+  {"unit": "Hajim School of Engineering and Applied Sciences", "layer": "school", "site": "https://www.hajim.rochester.edu/",
+   "queries": ["University of Rochester Hajim School engineering generative AI academic integrity policy"],
+   "pages_checked": ["https://www.hajim.rochester.edu/"],
+   "result": "none-found",
+   "note": "Homepage has no AI or academic-integrity policy and points to university-level pages."}
+ ],
+ "documents": [],
+ "course_examples": [],
+ "notes": "Four queries in total plus three direct fetches, so ECE and the data science institute fall short of 4 queries per unit. The search tool handles site: poorly, so unindexed cs.rochester.edu pages may exist. University-level pages seen (provost gen-ai-education, college honesty resources, CCAS handbook academic-honesty) belong to the university layer and are not collected here. No computing or school document found, which matches the first collection."
+}

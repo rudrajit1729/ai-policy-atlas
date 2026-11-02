@@ -1,0 +1,63 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT22 "Entering assignments, course materials or own code into AI" (Do not paste assignment text, course materials, lab code or one's own code into AI tools.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..38 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | california-berkeley | C2 | student | must-not | no AI access to codebase | You must never allow an LLM or any GenAI tool to read, analyze, or interface with your codebase
+1 | california-berkeley | C2 | student | must-not | no pasting course material into AI | no code or specific instructions from the course should be pasted, typed, or uploaded into an LLM
+2 | california-berkeley | C2 | student | must-not | no prompts copying assignment text | Any prompt that involves copying, uploading, rewording, or paraphrasing more than approximately 15 words of an assignment.
+3 | california-san-diego | C3 | student | must-not | no posting exams to AI | Do not post any portion of an exam on a forum, repository, website, AI service, or other online platform.
+4 | carnegie-mellon | C6 | student | must-not | no uploading lab code to AI | You may not upload the code you write for a lab assignment (or even parts of it) to any AI tool
+5 | carnegie-mellon | C6 | student | must-not | no AI access to code | nor give the AI tool access to the code (or even parts of it)
+6 | colorado-boulder | C3 | student | must-not | no pasting homework into AI | This includes pasting the question into an AI tool or chatbot.
+7 | cornell | C3 | student | must-not | no uploading class materials to AI | You may not upload copyrighted or proprietary class materials (such as problem set files) to AI systems.
+8 | georgetown | C5 | student | must-not | no uploading solutions to AI | (e.g., uploading to AI platforms or websites, or
+9 | georgia-tech | C1 | student | must-not | no pasting whole problem into AI | You should never send the entirety of a problem description to an AI assistant
+10 | georgia-tech | C1 | student | should-not | keep own code closed with AI | (b) do not have your own code open while interacting with the assistants.
+11 | georgia-tech | C6 | student | should-not | keep assignment closed with AI | Heuristic 2: Do not have your assignment and the AI agent open at the same time.
+12 | james-madison | C6 | student | must-not | no pasting project into AI | any part of the project descriptions or source code into gene rative AI tools (e.g.,
+13 | maryland-college-park | C2 | student | must-not | no uploading course materials to AI | cannot upload any course materials that I created to any AI si te.
+14 | maryland-college-park | C5 | student | must-not | no pasting assignments into AI | Do not post the contents of this class including assignments (prose or code) verbatim into any
+15 | massachusetts-institute-technology | C1 | student | must-not | no posting code online | You may not post or submit your code online in any form,
+16 | massachusetts-institute-technology | C1 | student | must-not | no submitting code to chatbots | or submitting your code to ChatGPT for debugging.
+17 | minnesota | C4 | student | must-not | no submitting assignment text to AI | Submitting all or any part of an assignment statement to an online learning support platform
+18 | north-carolina-state | C2 | student | should-not | no course materials into AI | By distributing course materials into an AI tool, you may be violating intellectual property or copyright
+19 | north-carolina-state | C3 | student | should-not | no course materials into AI | By distributing course materials into an AI tool, you may be violating intellectual
+20 | north-carolina-state | C3 | student | must-not | no file uploads to AI | No files (or images) are allowed to be uploaded to NCSU Gemini.
+21 | pennsylvania | C1 | student | should | paste only a line or two | Avoid pasting more than a line or two of your own code at a time
+22 | pennsylvania | C1 | student | must-not | no pasting assignment into AI | Pasting the assignment instructions into AI directly is forbidden.
+23 | pomona | C1 | student | must-not | no submitting course materials to AI | you are not to publish them or distribute them to other people or organizations. This includes submitting them to AI tools for assistance.
+24 | pomona | C3 | student | must-not | no pasting questions into AI | Stop yourself before either copying the problem set question into genAI
+25 | rutgers-new-brunswick | C1 | student | must-not | no sharing code with chatbots | Expose code/solutions to: Yes No No No
+26 | rutgers-new-brunswick | C2 | student | must-not | no sharing code with chatbots | Expose code/solutions to: Yes No No No
+27 | stanford | C1 | student | must-not | no sharing code with AI | may not share any code or direct assignment questions to an AI for help.
+28 | swarthmore-college | C5 | student | must-not | no assignment materials to LLMs | You may not share any assignment materials with large language models including assignment questions, support code and your own answers.
+29 | texas-austin | C6 | student | must-not | no class material to AI | Also included in this prohibition is
+30 | texas-christian | C5 | student | must-not | no assignment text to AI | Submitting all or any part of an assignment statement to an AI or unapproved assignment-
+31 | texas-christian | C6 | student | must-not | no assignment text to AI | Submitting all or any part of an assignment statement to an AI or unapproved assignment-
+32 | texas-dallas | C2 | student | must-not | no sharing assignments with help sites | Submitting project and assignment details to web sites for outside help (e.g. Chegg) is also
+33 | uiuc | C6 | student | must-not | no pasting assignment text into AI | you are prohibited from directly pasting/feeding assignment text into an AI
+34 | uiuc | C6 | student | should | paraphrase spec when prompting | you should be sharing the project spec in your own words
+35 | vermont | C1 | student | must-not | no protected works in prompts | includes submission of protected works as prompts to generative AI
+36 | vermont | C5 | student | must-not | no protected works as prompts | includes submission of protected works as prompts to
+37 | vermont | C5 | student | should-not | no uploading copyrighted materials | or upload copyrighted materials to AI tools.
+38 | washington | C1 | student | must-not | no pasting assignment into AI | nor may you copy and paste any work from or for a graded assignment into an AI tool

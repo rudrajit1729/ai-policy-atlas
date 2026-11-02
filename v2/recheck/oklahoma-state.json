@@ -1,0 +1,18 @@
+{"slug": "oklahoma-state", "university": "Oklahoma State University",
+ "units_searched": [
+  {"unit": "Computer Science (College of Arts & Sciences)", "layer": "computing", "site": "https://cs.okstate.edu",
+   "queries": ["site:cs.okstate.edu generative AI policy", "site:cs.okstate.edu academic integrity", "Oklahoma State University Computer Science department academic integrity AI ChatGPT policy students", "Oklahoma State University \"Computer Science\" syllabus \"generative AI\" cs.okstate.edu course"],
+   "pages_checked": [], "result": "inaccessible",
+   "note": "No cs.okstate.edu page appeared in any search result. okstate.edu hosts return a Cloudflare challenge (403 'Just a moment...') to fetch tools, so the unit site could not be browsed; none-found reflects search only, not a page-by-page review."},
+  {"unit": "School of Electrical and Computer Engineering (CEAT)", "layer": "computing", "site": "https://ceat.okstate.edu/ece",
+   "queries": ["site:ece.okstate.edu OR site:ceat.okstate.edu artificial intelligence policy generative AI", "site:cs.okstate.edu academic integrity"],
+   "pages_checked": ["https://ceat.okstate.edu/ece/site_files/docs/academic-integrity.pdf"], "result": "inaccessible",
+   "note": "ECE academic-integrity PDF surfaced in search, but fetch hit a Cloudflare 403 (saved text v2-oklahoma-state-ece-integrity.txt is 16 chars, no content). Whether it mentions AI is unknown."},
+  {"unit": "College of Arts & Sciences / CEAT (containing colleges)", "layer": "school", "site": "https://cas.okstate.edu",
+   "queries": ["site:cas.okstate.edu generative AI syllabus statement College of Arts and Sciences", "site:ece.okstate.edu OR site:ceat.okstate.edu artificial intelligence policy generative AI"],
+   "pages_checked": [], "result": "none-found",
+   "note": "No college-level AI policy surfaced in search; college sites not fetchable (Cloudflare)."}
+ ],
+ "documents": [],
+ "course_examples": [],
+ "notes": "No computing- or school-level AI policy located. Searches surfaced only university-level Academic Affairs documents (AI policy overview for instructors/students, AI faculty Q&A), which belong to the university layer. Weak evidence of absence because okstate.edu blocks automated fetching; retry with a browser-based fetch on cs.okstate.edu and the ECE academic-integrity PDF."}

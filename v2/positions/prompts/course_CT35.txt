@@ -1,0 +1,52 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT35 "Assessment designed around AI" (Proctored or paper quizzes and exams weighted more, screen recording, random code interviews, projects designed for minimal AI.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..27 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | bryn-mawr-college | C3 | instructor | informs | in-person exams limit AI concern | Grades in this class are largely based on in-person quizzes and exams, thus improper collaboration
+1 | california-berkeley | C2 | instructor | informs | random code interviews to deter AI | we may be conducting random code interviews for all projects
+2 | central-florida | C1 | instructor | informs | program weight reduced to blunt AI | the value of the programs has been reduced so that even if students use ChatGPT
+3 | central-florida | C2 | instructor | informs | live questions check understanding | When I ask questions live, I can quickly tell the
+4 | central-florida | C2 | instructor | informs | AI weakens code as understanding signal | With the advent of AI, code that stude nts submit unfortunately
+5 | duke | C2 | student | must | record screen during quizzes | be asked to record your screen
+6 | duke | C2 | instructor | informs | screen recording reviewed | The recording of your screen is one way we see your work.
+7 | georgia-southern | C6 | student | must-not | online-findable answers score zero | If your answer to a question can be found on the internet, then your score for the test is zero.
+8 | northeastern | C3 | all | informs | exams worth most of grade | The exams and quizzes, which are worth 85% of your grade, are
+9 | oklahoma | C2 | instructor | informs | controlled environment assessments | assignments have been designed to either occur in a controlled environment (such as in -class or with Lockdown Browser)
+10 | oregon | C1 | instructor | informs | paper exams assess mastery without AI | The written exams (on paper!) and the code demo are the only reliable means we have to assess your mastery
+11 | pennsylvania | C5 | all | informs | closed-book exams test own skill | closed-book exams focusing on the ability to tackle problems
+12 | princeton | C3 | instructor | informs | assignment quizzes assess learning | assignment quizzes, which will be administered at the very beginning of lecture
+13 | rose-hulman-institute-technology | C6 | student | must | exam uses terminal editor only | On exams, you will be asked to refrain from using an IDE, and are restricted to
+14 | san-francisco | C6 | instructor | informs | AI can solve every exercise | version of nearly any exercise in this course instantly.
+15 | san-francisco | C6 | student | must | exercises done in class | Exercises are done in the room, during the session, on your own keyboard.
+16 | san-francisco | C6 | instructor | informs | AI blocked on classroom network | every AI assistant is blocked by name
+17 | san-francisco | C6 | student | must | make-up sessions under same rules | Finishing an unfinished exercise happens at a make-up session
+18 | stony-brook | C3 | student | must | homework must be handwritten | All homework assignments must be submitted as scans of handwritten originals.
+19 | uiuc | C1 | instructor | informs | proctored quizzes enforce authorship | the quizzes are proctored precisely so that we can hold you to it.
+20 | virginia-tech | C3 | instructor | must | minimize unproctored code assessment | we must minimize longer use code artifacts created in unproctored environments to assess the skills
+21 | virginia-tech | C3 | instructor | informs | projects designed for minimal AI | We continue to include projects that are designed to be implemented by humans with minimal
+22 | virginia-tech | C3 | instructor | informs | projects graded on correctness | We will grade these projects based on functionality and correctness.
+23 | virginia-tech | C3 | instructor | informs | more proctored unassisted assessments | We will increase the number of unassisted, proctored assessments (exams and quizzes).
+24 | virginia | C4 | student | informs | heavy AI use earns little credit | if you lean too heavily on generative AI
+25 | virginia | C4 | instructor | informs | assessment values team-specific detail | We care a lot more about how your team was impacted.
+26 | worcester-polytechnic-institute | C6 | student | must | must demonstrate progress to staff | they must demonstrate their progress to the teaching staff at the conclusion of the assignment.
+27 | worcester-polytechnic-institute | C6 | instructor | informs | graded on progress not product | Students will be assessed upon the progress they make, their demonstration of learning outcome attainment, and effective collaboration.

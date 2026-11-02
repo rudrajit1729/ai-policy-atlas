@@ -1,0 +1,611 @@
+{
+ "university": "Santa Monica College",
+ "slug": "santa-monica-college",
+ "state": "CA",
+ "type": "community-college",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "santa-monica-college-ar5500-1",
+   "layer": "university",
+   "unit": "Academic Senate Student Affairs Committee / District",
+   "course": null,
+   "title": "AR 5500.1 Standards of Academic Conduct (2024-25 version)",
+   "url": "https://admin.smc.edu/administration/governance/academic-senate/committees/documents/student-affairs/2024-2025/AR-5500-1-Standards-of-Acad-Conduct-V1.pdf",
+   "date_or_term": "2024-2025",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "A marked-up draft of the district academic-conduct regulation. Its only AI content is a single listed violation: using AI tools against the policy in the class syllabus or course content. The college sets no AI rule itself and leaves the rule to each instructor.",
+   "stance_why": "The only AI text, \"Violating the instructor’s AI policy as stated on their class syllabus and/or course content\", sets no ban or permission and hands the decision to instructors, so the stance is delegates.",
+   "units": [
+    {
+     "why": "The definition of academic dishonesty lists \"Artificial Intelligence (AI) tools\" use \"that violates the policy stated in class syllabus\" as a violation, so unauthorized AI use is classed as academic dishonesty. P36 fits because it classifies improper AI use as misconduct; the actor is the student and the phase is when-misuse because the item defines what counts as a violation.",
+     "anchor": "Violating the instructor’s AI policy as stated on their class syllabus",
+     "frag_start": "Violating the instructor’s AI policy",
+     "frag_end": "assessment instructions).",
+     "policy": "Using Artificial Intelligence (AI) tools in a way that violates the policy stated in the class syllabus is academic dishonesty.",
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions",
+      "prohibited-uses"
+     ],
+     "resolution_why": "Both coders gave P36, student, when-misuse, must-not. A anchored on a garbled 'Useing ... I that violates' fragment and wrote a normalized policy; B anchored on the cleaner clause and left policy null; unit_stance differed (A restrict, B prohibit). The source lists AI use that violates the syllabus policy as dishonesty, which bans AI only where the instructor does, so restrict, not prohibit. Kept A's normalized policy (the anchor alone does not say 'academic dishonesty') with B's clean anchor."
+    },
+    {
+     "why": "The clause makes \"the instructor's AI policy as stated on their class syllabus and/or course content\" the operative rule, so the college sets no AI rule itself and defers to each instructor. P04 fits because the rule is set per instructor; P06 does not because no fallback for a silent syllabus is stated. The statement is a general principle that binds every member of the college, not an instruction addressed to instructors.",
+     "anchor": "AI policy as stated on their class syllabus and/or course content",
+     "frag_start": "Violating the instructor’s AI policy",
+     "frag_end": "assessment instructions).",
+     "policy": "AI use is governed by the instructor's AI policy as stated in the class syllabus and/or course content (e.g. canvas page, assignment instructions, examination instructions, assessment instructions).",
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "syllabus-communication"
+     ],
+     "fit_note": "Also names where the instructor's AI policy may be stated (canvas page, assignment, exam or assessment instructions), which P04 does not capture.",
+     "resolution_why": "Both coders gave P04, informs, neutral. Actor: A said instructor, B said all. Phase: A said before-course, B said general. The source sentence says violating the instructor's policy is misconduct and where such a policy may be stated; it does not tell instructors to write one, it states who decides, so it applies to everyone (all) and is a principle (general). Took B's actor, phase and normalized policy; kept A's fit_note and syllabus-communication topic."
+    }
+   ]
+  },
+  {
+   "id": "santa-monica-college-ar3775",
+   "layer": "university",
+   "unit": "District Planning (DPAC) / IT",
+   "course": null,
+   "title": "AR 3775 Acceptable Use of Generative AI (draft as of 04/23/2026)",
+   "url": "https://admin.smc.edu/administration/governance/district-planning-policies/documents/2025-2026/AR3775AcceptableUseofGenAI-Draftasof04232026.pdf",
+   "date_or_term": "Draft 2026-04-23",
+   "stance": "permit",
+   "tiers": [],
+   "summary": "A draft district regulation on acceptable AI use by employees and other authorized users. It allows approved AI tools with human oversight, bans putting sensitive data into unapproved tools, requires disclosure and training, and assigns governance to the IT vice president. It does not govern students, who are sent to the academic-integrity rules.",
+   "stance_why": "The regulation says \"Authorized users may use approved AI tools\" under conditions, with listed prohibitions, so it permits AI use with conditions, but only for employees; students are left to \"academic integrity and student conduct\" rules.",
+   "units": [
+    {
+     "why": "The Purpose says AI \"has the potential to enhance instructional quality, operational efficiency, innovation, and decision-making\", a statement of benefits with no rule, so P87 (benefits) and informs.",
+     "anchor": "potential to enhance instructional quality, operational efficiency, innovation, and decision-making",
+     "frag_start": "recognizes that Artificial Intelligence (AI),",
+     "frag_end": "when used responsibly.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P87",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale"
+     ],
+     "resolution_why": "Both P87, informs, general. Actor: A admin, B all; the purpose statement is the District's own, so admin. unit_stance: A neutral, B encourage; the sentence names benefits without recommending use, and rationale is neutral."
+    },
+    {
+     "why": "The regulation \"establishes a governance and acceptable use framework\" for AI use by employees, an institution-level framework stating purpose and principles. P56 fits; it covers employees not students, which is noted.",
+     "anchor": "establishes a governance and acceptable use framework for the ethical, lawful, secure, and transparent use",
+     "frag_start": "This Administrative Regulation establishes a governance",
+     "frag_end": "District employees and other authorized users.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ],
+     "fit_note": "The framework covers only employees and other authorized users, not students."
+    },
+    {
+     "why": "The Scope states the regulation \"applies to all District employees, contractors, consultants, volunteers\" using AI in District work, which sets what the policy covers. P61 (scope) fits.",
+     "anchor": "applies to all District employees, contractors, consultants, volunteers, and other individuals",
+     "frag_start": "This regulation applies to all District",
+     "frag_end": "and research activities.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution",
+      "default-stance"
+     ],
+     "fit_note": "Sets who the regulation covers (employees and other District users, not students) rather than a framework principle.",
+     "resolution_why": "A coded P61, B P56. The sentence states who the regulation applies to; it does not define AI or a term, so P61 (definitions) does not fit. P56 covers an institution-level framework stating purpose, scope and principles, so P56."
+    },
+    {
+     "why": "The scope sentence says \"Student use of AI tools is governed by applicable Board Policies and Administrative Regulations\" on integrity and conduct, so this regulation leaves students to existing rules. P77 (follow existing university policy) fits better than P04 because it points to written institutional policies, not instructors.",
+     "anchor": "Student use of AI tools is governed by applicable Board Policies and Administrative Regulations",
+     "frag_start": "Student use of AI tools",
+     "frag_end": "academic integrity and student conduct.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance",
+      "integrity-sanctions"
+     ],
+     "fit_note": "The passage excludes students from this regulation and refers them to the integrity and conduct rules."
+    },
+    {
+     "why": "The definitions section defines AI as \"Computer systems designed to perform tasks that typically require human intelligence\", which sets the policy's coverage; P61.",
+     "anchor": "Computer systems designed to perform tasks that typically require",
+     "frag_start": "Artificial Intelligence (AI): Computer systems designed",
+     "frag_end": "decision-making, or pattern recognition.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance"
+     ]
+    },
+    {
+     "why": "Defines GenAI as \"A subset of AI that generates new content such as text, images, audio, video, or code\"; a definition that sets scope, so P61.",
+     "anchor": "subset of AI that generates new content such as text, images, audio, video, or code",
+     "frag_start": "Generative Artificial Intelligence (GenAI): A subset",
+     "frag_end": "patterns learned from data.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance",
+      "code-generation"
+     ]
+    },
+    {
+     "why": "Defines AI Tool as \"Any software, platform, or service that uses AI or GenAI capabilities, including AI Agents\", so the rules reach agents; P61 (scope) with agents noted rather than P07 because no editor or IDE rule is given.",
+     "anchor": "Any software, platform, or service that uses AI or GenAI capabilities, including AI Agents",
+     "frag_start": "AI Tool: Any software, platform, or service",
+     "frag_end": "including AI Agents.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance"
+     ]
+    },
+    {
+     "why": "Defines Sensitive Data as information protected by law or policy including \"student education records, personally identifiable information (PII)\"; the definition sets what data the privacy rules protect. P61 is the nearest type.",
+     "anchor": "student education records, personally identifiable information (PII), protected health information (PHI)",
+     "frag_start": "Sensitive Data: Information protected by law",
+     "frag_end": "confidential institutional data.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ],
+     "fit_note": "Defines sensitive data (not AI) for the data-protection rules."
+    },
+    {
+     "why": "States \"The Vice President responsible for Information Technology, or designee, shall serve as the executive authority for AI governance\", naming who owns the policy; P80.",
+     "anchor": "shall serve as the executive authority for AI governance and oversight",
+     "frag_start": "The Vice President responsible for Information",
+     "frag_end": "for AI governance and oversight.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P80",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "\"The District may establish an AI governance body or advisory group\" with named representatives; naming a body that may monitor compliance and set standards is P80, optional so modality may.",
+     "anchor": "The District may establish an AI governance body or advisory group",
+     "frag_start": "The District may establish an AI governance",
+     "frag_end": "and other relevant areas.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P80",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "The body may \"Review and recommend approved AI tools\" and set \"risk assessments\", which is institutional review of AI tools; P65.",
+     "anchor": "Review and recommend approved AI tools",
+     "frag_start": "Review and recommend approved AI tools",
+     "frag_end": "Review and recommend approved AI tools",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P65",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "The body may \"Recommend updates based on legal, technological, and regulatory developments\", so the regulation expects revision; P54.",
+     "anchor": "Recommend updates based on legal, technological, and regulatory developments",
+     "frag_start": "Recommend updates based on legal,",
+     "frag_end": "regulatory developments",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "may",
+     "policy_type": "P54",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "\"Only AI tools reviewed and approved through District governance processes may be used for District business where District data or systems are involved\" limits use to approved tools. P92 (use approved tools) fits; P65 is the review step and is coded separately.",
+     "anchor": "Only AI tools reviewed and approved through District governance processes may be used",
+     "frag_start": "Only AI tools reviewed and approved",
+     "frag_end": "data or systems are involved.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P92",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data",
+      "permitted-uses"
+     ]
+    },
+    {
+     "why": "\"Authorized users may use approved AI tools to support District-related activities\" allows employee AI use under conditions. P02 is the nearest type; the permission is for employees, not students.",
+     "anchor": "Authorized users may use approved AI tools to support District-related activities provided that such use",
+     "frag_start": "Authorized users may use approved AI tools",
+     "frag_end": "instructional, administrative, or operational objectives",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P59",
+     "unit_stance": "permit",
+     "topics": [
+      "permitted-uses",
+      "instructor-staff-use"
+     ],
+     "fit_note": "Covers all authorized users and administrative and operational activities, not only teaching work; the permission is conditional and limited to approved tools.",
+     "resolution_why": "A coded P02, B P59. P02 is the default rule on AI use in learning; this sentence permits employees and authorized users to use approved tools for District work, which is staff use of AI in their work (P59). Kept B's type and merged the fit notes."
+    },
+    {
+     "why": "The use must comply with \"applicable laws, regulations, Board Policies, and Administrative Regulations\"; P77.",
+     "anchor": "Complies with applicable laws, regulations, Board Policies, and Administrative Regulations",
+     "frag_start": "Complies with applicable laws, regulations, Board",
+     "frag_end": "Administrative Regulations",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "Use must preserve \"human oversight and accountability\", keeping humans responsible for AI-assisted work. P73 is closest though it is meant for decisions about people.",
+     "anchor": "Preserves human oversight and accountability",
+     "frag_start": "Preserves human oversight and accountability",
+     "frag_end": "Preserves human oversight and accountability",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P73",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "fit_note": "Broad human-oversight condition on acceptable use, not limited to decisions about individuals.",
+     "resolution_why": "Found only by A. B folded it into one unit anchored on the next condition. The source lists \"Preserves human oversight and accountability\" as a separate condition of acceptable use, a real requirement, so kept as its own unit."
+    },
+    {
+     "why": "Use \"Does not replace professional judgment or decision-making where human review is required\"; this keeps humans in decisions, P73.",
+     "anchor": "Does not replace professional judgment or decision-making where human review is required",
+     "frag_start": "Does not replace professional judgment or",
+     "frag_end": "review is required",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P73",
+     "unit_stance": "restrict",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "Prohibited Use bans \"Inputting, uploading, or processing sensitive or confidential District data into unapproved AI tools\"; the data-protection rule is P50.",
+     "anchor": "Inputting, uploading, or processing sensitive or confidential District data into unapproved AI tools",
+     "frag_start": "Inputting, uploading, or processing sensitive or",
+     "frag_end": "into unapproved AI tools",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "prohibit",
+     "topics": [
+      "privacy-data",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "Bans \"Using AI tools to make final decisions related to employment actions, student evaluation, discipline, or legal determinations without required human review\", the human-decides rule for people; P73.",
+     "anchor": "Using AI tools to make final decisions related to employment actions, student evaluation, discipline",
+     "frag_start": "Using AI tools to make final decisions",
+     "frag_end": "without required human review",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P73",
+     "unit_stance": "restrict",
+     "topics": [
+      "instructor-staff-use",
+      "accountability-understanding"
+     ],
+     "resolution_why": "Both P73, must-not. unit_stance: A prohibit, B restrict. The ban applies \"without required human review\", so it is conditional; restrict."
+    },
+    {
+     "why": "Bans \"Misrepresenting AI-generated content as solely human-created where disclosure is required\", making nondisclosure the violation; P28 fits over P24 because it states the violation.",
+     "anchor": "Misrepresenting AI-generated content as solely human-created where disclosure is required",
+     "frag_start": "Misrepresenting AI-generated content as solely human-created",
+     "frag_end": "disclosure is required",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P28",
+     "unit_stance": "prohibit",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "Bans using AI for \"unlawful, unethical, discriminatory, or harassing purposes\", a general conduct rule; P74.",
+     "anchor": "Using AI tools for unlawful, unethical, discriminatory, or harassing purposes",
+     "frag_start": "Using AI tools for unlawful, unethical,",
+     "frag_end": "or harassing purposes",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P74",
+     "unit_stance": "prohibit",
+     "topics": [
+      "ethics-bias-environment",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "Bans \"Circumventing District security, privacy, or governance controls\". No type is about circumvention of controls; P77 (follow existing rules) is the nearest.",
+     "anchor": "Circumventing District security, privacy, or governance controls",
+     "frag_start": "Circumventing District security, privacy, or",
+     "frag_end": "governance controls",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P74",
+     "unit_stance": "prohibit",
+     "topics": [
+      "privacy-data"
+     ],
+     "fit_note": "Concerns circumventing the District's security, privacy and governance controls rather than deception or malware specifically.",
+     "resolution_why": "A coded P77, B P74. P77 covers following existing law or policy, but the passage bans an act (circumventing controls), a conduct rule. P74 lists breaching security among its members, so P74 with a fit note."
+    },
+    {
+     "why": "\"Users shall not input sensitive or confidential District data into AI systems unless explicitly authorized and compliant with FERPA, HIPAA, GLBA, CPRA\" protects personal data; P50.",
+     "anchor": "shall not input sensitive or confidential District data into AI systems unless explicitly authorized",
+     "frag_start": "Users shall not input sensitive or",
+     "frag_end": "other applicable privacy laws.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"AI tools must meet District information security standards, including data encryption, access controls, vendor risk assessments\", a review and approval requirement for tools; P65.",
+     "anchor": "AI tools must meet District information security standards, including data encryption, access controls",
+     "frag_start": "AI tools must meet District information",
+     "frag_end": "secure data handling practices.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P65",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"AI vendors must not retain, reuse, or train models on District data unless expressly authorized\" limits sharing data with AI providers; P65.",
+     "anchor": "AI vendors must not retain, reuse, or train models on District data",
+     "frag_start": "AI vendors must not retain, reuse,",
+     "frag_end": "through contractual agreements.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "must-not",
+     "policy_type": "P65",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data",
+      "intellectual-property"
+     ],
+     "resolution_why": "Both P65, must-not, admin. unit_stance: A neutral, B restrict. The rule limits what vendors may do with District data, which restricts AI-provider use of data; restrict."
+    },
+    {
+     "why": "\"Users must clearly disclose when AI tools are used to generate content that materially informs decisions, communications, or instructional materials\" is a disclosure duty; P24 (it applies to employees).",
+     "anchor": "Users must clearly disclose when AI tools are used to generate content",
+     "frag_start": "Users must clearly disclose when AI",
+     "frag_end": "as appropriate.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "require",
+     "topics": [
+      "disclosure-citation",
+      "instructor-staff-use"
+     ],
+     "fit_note": "Disclosure duty applies to employees and authorized users and covers decisions, communications and instructional materials, not student submissions.",
+     "resolution_why": "Both P24, must. unit_stance: A permit, B require. \"Users must clearly disclose\" is a requirement, so require."
+    },
+    {
+     "why": "\"The District shall promote transparency regarding institutional uses of AI that impact students, employees, or the public\" is a duty to be open about AI use. P103 (tell people when interacting with AI) is the nearest.",
+     "anchor": "The District shall promote transparency regarding institutional uses of AI that impact students",
+     "frag_start": "The District shall promote transparency regarding",
+     "frag_end": "employees, or the public.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P103",
+     "unit_stance": "neutral",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "fit_note": "General transparency about institutional AI uses, not telling a person they are dealing with an AI system.",
+     "resolution_why": "Both P103, admin, general. Modality: A should, B must. The text says \"shall\", which is mandatory wording, so must."
+    },
+    {
+     "why": "\"Users must be aware that AI systems may reflect or amplify bias. Reasonable steps must be taken to identify, mitigate, and document potential bias\" names bias and requires mitigation; P53.",
+     "anchor": "Reasonable steps must be taken to identify, mitigate, and document potential bias",
+     "frag_start": "Users must be aware that AI",
+     "frag_end": "potential bias in AI-assisted outputs.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P53",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment"
+     ],
+     "fit_note": "Also requires users to take steps to mitigate and document bias, beyond naming it."
+    },
+    {
+     "why": "\"AI-generated outputs must be reviewed by humans prior to use in decision-making, instructional, or operational contexts\"; reviewing output is the verify rule, P31.",
+     "anchor": "AI-generated outputs must be reviewed by humans prior to use in decision-making",
+     "frag_start": "AI-generated outputs must be reviewed",
+     "frag_end": "operational contexts.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P31",
+     "unit_stance": "require",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "fit_note": "Requires human review of output before use in decisions and instruction, not only checking for errors.",
+     "resolution_why": "Both P31, must. unit_stance: A neutral, B require. \"must be reviewed by humans\" is a requirement on use, so require."
+    },
+    {
+     "why": "The District \"endorses ethical AI principles that emphasize human accountability, fairness, transparency, and responsible innovation, with due consideration for environmental impacts\"; a principles statement, P56, with an environmental mention.",
+     "anchor": "ethical AI principles that emphasize human accountability, fairness, transparency, and responsible innovation",
+     "frag_start": "The District endorses ethical AI principles",
+     "frag_end": "for environmental impacts.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment"
+     ],
+     "fit_note": "Also names environmental impacts (P53) and states principles such as accountability and fairness.",
+     "resolution_why": "A coded P56, B P53. The sentence endorses a set of principles (human accountability, fairness, transparency, responsible innovation) with environmental impacts as one item; as a principles statement it is P56. P53 captures only the environmental mention, which is in the fit note."
+    },
+    {
+     "why": "\"The District shall promote AI literacy by providing guidance, training, and resources to employees\"; training for employees. P70 fits; the training is not faculty-only (P63).",
+     "anchor": "The District shall promote AI literacy by providing guidance, training, and resources to employees",
+     "frag_start": "The District shall promote AI literacy",
+     "frag_end": "to employees on:",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P70",
+     "unit_stance": "encourage",
+     "topics": [
+      "ai-literacy-career"
+     ]
+    },
+    {
+     "why": "\"Completion of training may be required prior to the use of certain AI tools\" makes training a possible condition of use; P70.",
+     "anchor": "Completion of training may be required prior to the use of certain AI tools",
+     "frag_start": "Completion of training may be",
+     "frag_end": "of certain AI tools.",
+     "policy": null,
+     "actor": "all",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P70",
+     "unit_stance": "restrict",
+     "topics": [
+      "ai-literacy-career"
+     ],
+     "resolution_why": "Both P70, may, all. unit_stance: A neutral, B restrict. Training that may be required before use of certain tools is a condition on use; restrict."
+    },
+    {
+     "why": "\"Violation of this regulation may result in suspension or revocation of access to AI tools, disciplinary action, and/or legal consequences\" states penalties; P37.",
+     "anchor": "may result in suspension or revocation of access to AI tools, disciplinary action",
+     "frag_start": "Violation of this regulation may result",
+     "frag_end": "applicable laws.",
+     "policy": null,
+     "actor": "all",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    }
+   ],
+   "resolution_why": "A coded permit, B delegates. The regulation states \"Authorized users may use approved AI tools\" under listed conditions, and nowhere hands the decision to instructors or courses; it only carves students out. delegates does not fit, so permit, with the employees-only scope noted in the summary."
+  }
+ ],
+ "new_types": [],
+ "notes": "AR 5500.1 text is a marked-up draft with another college's procedures and Education Code appended; only the AI line was coded since all else is generic integrity text. The AI line appears twice (section 3 A.1 and a stray line under 4 Reporting a Violation); coded once. AR 3775 repeats the transparency bullet under the Accessibility heading; coded once. AR 3775 is a draft covering employees only, not students. Reconciliation dropped coder A's unit on the footer 'Approved: (Draft - New Administrative Regulation)' because it is document status, not a policy statement about AI use (kept_only_A counts only the human-oversight unit). A's separate 'Preserves human oversight and accountability' unit was kept."
+}

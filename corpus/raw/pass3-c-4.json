@@ -1,0 +1,942 @@
+{
+  "group": "pass3-c-4",
+  "searched_universities": [
+    {
+      "university": "Université de Moncton",
+      "result": "included",
+      "notes": "pass3 Track C. Département d'informatique (Moncton campus) site/Politiques page checked: no AI policy; no public computing course outline with AI clause found. Included university-wide integrity-office course-outline statements as university-general. Addendum-4 tier check: tier 1 (Département d'informatique site, Politiques page), tier 2 (none: no separate IS/data-science/SE unit with policy), tier 3 (Faculté des sciences / Faculté d'ingénierie pages and searches) -> nothing; stopped at Tier 4."
+    },
+    {
+      "university": "Bishop's University",
+      "result": "included",
+      "notes": "pass3 Track C. No CS department or CS course AI policy found (CS calendar lists CS 208 'Coding in Plain English' AI-assisted programming course, but no policy text). Included University Regulations AI misconduct clauses from 2025/2026 Academic Calendar (live PDF; the stand-alone regulations PDF now 404s) as university-general. Addendum-4 tier check: tier 1 (Computer Science dept pages, CS course syllabi searches), tier 2 (none), tier 3 (Faculty/Division of Natural Sciences and Mathematics page) -> nothing; stopped at Tier 4."
+    },
+    {
+      "university": "HEC Montréal",
+      "result": "included",
+      "notes": "pass3 Track C. In frame: offers M.Sc. data science and business analytics, M.Sc./BAA specializations in TI and business intelligence. No public computing-specific AI document (course outlines in ZoneCours not searchable). Included DAIP 'IAG en contexte d'évaluation' page as university-general. Addendum-4 tier check: tier 1 (no CS dept), tier 2 (Département de technologies de l'information site, Sciences de la décision, M.Sc. data science / TECH course searches) -> no public AI policy; tier 3 (no faculty-level layer; school is single-faculty) -> stopped at Tier 4. DAIP 'Clarifier l'utilisation de l'IAG dans un cours' page is also institution-wide."
+    },
+    {
+      "university": "Université du Québec à Chicoutimi",
+      "result": "included",
+      "notes": "pass3 Track C. Scanned ~60 public DIM 'plans de cours cadres' PDFs; one (8INF972 Atelier pratique en IA I, file 8INF934.pdf) has an AI-tools clause -> included as course. University-wide page uqac.ca/ia not added (computing doc found). Addendum-4: stopped at Tier 1."
+    },
+    {
+      "university": "Université du Québec à Rimouski",
+      "result": "included",
+      "notes": "pass3 Track C. No public computing (informatique) course outline or department AI document found. Included C3-D117 Politique encadrant l'utilisation de l'IA (Jan 2026) as university-general. Addendum-4 tier check: tier 1/2 (Département de mathématiques, d'informatique et de génie page; informatique/science des données course searches) and tier 3 (no faculty-level policy found) -> nothing; stopped at Tier 4."
+    },
+    {
+      "university": "Université du Québec à Trois-Rivières",
+      "result": "included",
+      "notes": "pass3 Track C. Département de mathématiques et d'informatique site and an instructor's public GitHub course repos (INF1004/1007/1011/1018) checked: no AI policy. Included institutional principles for staff as university-general (student version also exists). Addendum-4 tier check: tier 1 (Département de mathématiques et d'informatique site, instructor GitHub repos), tier 2 (génie logiciel/data-science course searches), tier 3 (École d'ingénierie searches) -> nothing; stopped at Tier 4."
+    },
+    {
+      "university": "Université du Québec en Abitibi-Témiscamingue",
+      "result": "included",
+      "notes": "pass3 Track C. Computing frame check: no 'baccalauréat en informatique' per se, but offers Baccalauréat en création numérique (profil informatique, DEC-BAC) and création de jeux vidéo (programmation/intégration logicielle) -> treated as in frame. No computing-specific AI doc; included official Guide de présentation des travaux écrits AI section as university-general (institutional AI framework announced Oct 2025, not yet published). Addendum-4 tier check: tier 1/2 (création numérique profil informatique, jeux vidéo programmation program/course searches), tier 3 (École de génie / Unité création et nouveaux médias searches) -> nothing; stopped at Tier 4."
+    },
+    {
+      "university": "Université du Québec en Outaouais",
+      "result": "included",
+      "notes": "pass3 Track C. Scanned all public DII course plans for Fall 2026 (~83) and Winter 2026 (~78); only CYB6023/CYB6063 (same instructor, identical clause) mention generative AI -> included CYB6023 as course. Intro programming INF1563 plan has no AI clause. Addendum-4: stopped at Tier 1."
+    },
+    {
+      "university": "Université TÉLUQ",
+      "result": "included",
+      "notes": "pass3 Track C. Two computing course sites with AI sections included (INF 1420, INF 1901). Institutional 'Énoncé institutionnel' (bibliotheque.teluq.ca) not added since computing docs found. Many other inf*.teluq.ca course sites blocked by WAF / not found. Addendum-4: stopped at Tier 1."
+    }
+  ],
+  "documents": [
+    {
+      "id": "umoncton-integrite-ia-plans-de-cours",
+      "university": "Université de Moncton",
+      "country": "Canada",
+      "region": "NB",
+      "unit": "Intégrité intellectuelle (site Intégrité, ressources pour le corps professoral)",
+      "level": "university-general",
+      "course": null,
+      "title": "IA et vos plans de cours",
+      "url": "https://www.umoncton.ca/integrite/ia_et_vos_plans_de_cours",
+      "date_or_term": null,
+      "accessed": "2026-10-05",
+      "verbatim_source": "curl",
+      "stance": "tiered",
+      "summary": "Tier 4 (university-wide; tiers 1-3 searched, none found): University-wide guidance for instructors offering three ready-made course-outline statements: AI tools banned in all assessments (treated as plagiarism under regulation 10.9.3), allowed in some assessments, or allowed in assessments, with the permissive options requiring an explanatory note from students. No computing-specific AI document was found for the Département d'informatique, so this is the university-wide fallback.",
+      "excerpts": [
+        {
+          "text": "Trois propositions de mentions à intégrer dans les plans de cours selon vos choix pédagogiques",
+          "frag_start": "Trois propositions de mentions",
+          "frag_end": "selon vos choix pédagogiques",
+          "section": "IA et vos plans de cours",
+          "topics": [
+            "syllabus-communication",
+            "use-categories-levels"
+          ],
+          "phase": "before-course",
+          "actor": "instructor"
+        },
+        {
+          "text": "sera formellement interdite lors de toutes les évaluations dans ce cours",
+          "frag_start": "1) L’utilisation d’outils ayant recours",
+          "frag_end": "règlement universitaire 10.9.3 sur la fraude.",
+          "section": "IA et vos plans de cours",
+          "topics": [
+            "prohibited-uses",
+            "use-categories-levels"
+          ],
+          "phase": "course-start",
+          "actor": "instructor"
+        },
+        {
+          "text": "sera considérée comme du plagiat en vertu du règlement universitaire 10.9.3 sur la fraude",
+          "frag_start": "1) L’utilisation d’outils ayant recours",
+          "frag_end": "règlement universitaire 10.9.3 sur la fraude.",
+          "section": "IA et vos plans de cours",
+          "topics": [
+            "integrity-sanctions"
+          ],
+          "phase": "when-misuse",
+          "actor": "student"
+        },
+        {
+          "text": "sera permise lors de certaines évaluations dans ce cours et selon des directives",
+          "frag_start": "2) L’utilisation d’outils ayant recours",
+          "frag_end": "selon des directives qui seront données en classe.",
+          "section": "IA et vos plans de cours",
+          "topics": [
+            "permitted-uses",
+            "use-categories-levels"
+          ],
+          "phase": "course-start",
+          "actor": "instructor"
+        },
+        {
+          "text": "devront ajouter une note explicative à leur travail afin de décrire la façon dont",
+          "frag_start": "Les étudiantes et étudiants devront",
+          "frag_end": "10.9.3 sur la fraude sera appliqué.",
+          "section": "IA et vos plans de cours",
+          "topics": [
+            "disclosure-citation"
+          ],
+          "phase": "during-work",
+          "actor": "student"
+        },
+        {
+          "text": "sera permise lors des évaluations dans ce cours, mais selon des directives",
+          "frag_start": "3) L’utilisation d’outils ayant recours",
+          "frag_end": "directives qui seront données en classe.",
+          "section": "IA et vos plans de cours",
+          "topics": [
+            "permitted-uses",
+            "use-categories-levels"
+          ],
+          "phase": "course-start",
+          "actor": "instructor"
+        }
+      ]
+    },
+    {
+      "id": "bishops-university-regulations-academic-integrity",
+      "university": "Bishop's University",
+      "country": "Canada",
+      "region": "QC",
+      "unit": "Senate / University Regulations (Academic Code of Conduct), Academic Calendar",
+      "level": "university-general",
+      "course": null,
+      "title": "Academic Calendar 2025/2026 — University Regulations: Academic Integrity and Academic Misconduct",
+      "url": "https://www.ubishops.ca/wp-content/uploads/BU-Academic-Calendar-2025-2026-updated-June2026.pdf",
+      "date_or_term": "2025/2026 (updated June 2026)",
+      "accessed": "2026-10-05",
+      "verbatim_source": "curl",
+      "stance": "prohibit-by-default",
+      "summary": "Tier 4 (university-wide; tiers 1-3 searched, none found): The university regulations in the academic calendar define AI and list, among forms of cheating and academic misconduct, using AI to source answers and using AI tools to generate submissions or complete assignments without explicit authorization. No Computer Science department or course AI policy was publicly available, so this is the university-wide fallback.",
+      "excerpts": [
+        {
+          "text": "using the internet, AI, or other electronic means to source answers to assessment items",
+          "frag_start": "m. using the internet, AI,",
+          "frag_end": "or any other digital platform;",
+          "section": "University Regulations — Definitions (Cheating)",
+          "topics": [
+            "prohibited-uses",
+            "integrity-sanctions"
+          ],
+          "phase": "during-assessment",
+          "actor": "student"
+        },
+        {
+          "text": "employing AI tools or services to generate answers",
+          "frag_start": "employing AI tools or services",
+          "frag_end": "in violation of academic policies;",
+          "section": "University Regulations — Definitions (Cheating)",
+          "topics": [
+            "prohibited-uses",
+            "default-stance"
+          ],
+          "phase": "during-work",
+          "actor": "student"
+        },
+        {
+          "text": "Utilizing AI, machine learning tools, or any other digital instruments to complete assignments",
+          "frag_start": "Utilizing AI, machine learning tools,",
+          "frag_end": "in violation of University guidelines;",
+          "section": "Academic Misconduct",
+          "topics": [
+            "integrity-sanctions",
+            "default-stance"
+          ],
+          "phase": "when-misuse",
+          "actor": "student"
+        }
+      ]
+    },
+    {
+      "id": "hec-montreal-daip-iag-evaluation",
+      "university": "HEC Montréal",
+      "country": "Canada",
+      "region": "QC",
+      "unit": "Direction de l’apprentissage et de l’innovation pédagogique (DAIP)",
+      "level": "university-general",
+      "course": null,
+      "title": "Intelligence artificielle générative en contexte d’évaluation",
+      "url": "https://enseigner.hec.ca/iag/intelligence-artificielle-en-contexte-devaluation/",
+      "date_or_term": "2026-09-28",
+      "accessed": "2026-10-05",
+      "verbatim_source": "curl",
+      "stance": "instructor-discretion",
+      "summary": "Tier 4 (university-wide; tiers 1-3 searched, none found): Teaching-centre guidance stating that instructors decide, assessment by assessment, whether generative AI is allowed, using standardized permission labels selected in ZoneCours, with unauthorized use sanctionable under the student integrity regulation. It also offers assessment-design options (oral, authentic, triangulation), notes detectors are unreliable, and suggests requiring prompts. No computing-specific (TI / data science) AI document was public, so this is the institution-wide fallback.",
+      "excerpts": [
+        {
+          "text": "HEC Montréal vous laisse le choix, et ce pour chacune de vos évaluations",
+          "frag_start": "HEC Montréal vous laisse le",
+          "frag_end": "de l’autoriser ou non.",
+          "section": "L’utilisation de l’intelligence artificielle générative en contexte d’évaluation est-elle permise à HEC Montréal?",
+          "topics": [
+            "instructor-discretion"
+          ],
+          "phase": "before-course",
+          "actor": "instructor"
+        },
+        {
+          "text": "l’École a adopté des libellés de consignes",
+          "frag_start": "Dans le cas d’une évaluation",
+          "frag_end": "adopté des libellés de consignes.",
+          "section": "L’utilisation de l’intelligence artificielle générative en contexte d’évaluation est-elle permise à HEC Montréal?",
+          "topics": [
+            "syllabus-communication",
+            "use-categories-levels"
+          ],
+          "phase": "course-start",
+          "actor": "department"
+        },
+        {
+          "text": "Ces libellés doivent être sélectionnés dans Zone cours par la personne coordonnatrice.",
+          "frag_start": "Ces libellés doivent être sélectionnés",
+          "frag_end": "par la personne coordonnatrice.",
+          "section": "L’utilisation de l’intelligence artificielle générative en contexte d’évaluation est-elle permise à HEC Montréal?",
+          "topics": [
+            "syllabus-communication"
+          ],
+          "phase": "before-course",
+          "actor": "instructor"
+        },
+        {
+          "text": "les personnes étudiantes ont pour consigne de s’informer au préalable de l’utilisation permise ou non",
+          "frag_start": "Rappelez-vous, comme l’indique le site",
+          "frag_end": "auprès de vous",
+          "section": "L’utilisation de l’intelligence artificielle générative en contexte d’évaluation est-elle permise à HEC Montréal?",
+          "topics": [
+            "syllabus-communication"
+          ],
+          "phase": "course-start",
+          "actor": "student"
+        },
+        {
+          "text": "toute utilisation non autorisée d’un outil d’IAG peut constituer une infraction sanctionnable",
+          "frag_start": "Conformément au Règlement sur l’intégrité",
+          "frag_end": "peut constituer une infraction sanctionnable.",
+          "section": "L’utilisation de l’intelligence artificielle générative en contexte d’évaluation est-elle permise à HEC Montréal?",
+          "topics": [
+            "integrity-sanctions"
+          ],
+          "phase": "when-misuse",
+          "actor": "student"
+        },
+        {
+          "text": "l’IAG peut jouer un double rôle : remplacer les processus cognitifs de la personne étudiante",
+          "frag_start": "En effet, l’IAG peut jouer",
+          "frag_end": "un peu à la manière d’un tuteur.",
+          "section": "Comment évaluer les apprentissages dans ce contexte?",
+          "topics": [
+            "learning-rationale"
+          ],
+          "phase": "before-course",
+          "actor": "instructor"
+        },
+        {
+          "text": "tout en exigeant que les membres de la classe fournissent les requêtes (prompts) utilisées",
+          "frag_start": "Autoriser explicitement l’usage de l’IAG,",
+          "frag_end": "entretiens individuels ou d’équipes)",
+          "section": "Favoriser une culture de l’intégrité",
+          "topics": [
+            "disclosure-citation",
+            "assessment-design"
+          ],
+          "phase": "before-course",
+          "actor": "instructor"
+        },
+        {
+          "text": "aucun outil n’est infaillible pour identifier le contenu créé par l’IAG",
+          "frag_start": "Cependant, aucun outil n’est infaillible",
+          "frag_end": "contenu créé par l’IAG.",
+          "section": "Favoriser une culture de l’intégrité",
+          "topics": [
+            "detection-tools"
+          ],
+          "phase": "when-misuse",
+          "actor": "instructor"
+        }
+      ]
+    },
+    {
+      "id": "uqac-dim-8inf972-atelier-ia",
+      "university": "Université du Québec à Chicoutimi",
+      "country": "Canada",
+      "region": "QC",
+      "unit": "Département d’informatique et de mathématique (DIM)",
+      "level": "course",
+      "course": "8INF972 Atelier pratique en intelligence artificielle I (plan posted as 8INF934.pdf)",
+      "title": "PLAN DE COURS Été 2024 — Atelier Pratique en Intelligence Artificielle I. (8INF972)",
+      "url": "https://www.uqac.ca/dim-docs/plansdecours/8INF934.pdf",
+      "date_or_term": "Été 2024",
+      "accessed": "2026-10-05",
+      "verbatim_source": "curl",
+      "stance": "permit-with-conditions",
+      "summary": "Tier 1 (informatique department course): Graduate AI-project course outline from the DIM's public list of framework course plans. It allows AI tools such as ChatGPT and GitHub Copilot only for code, and requires a source-code comment marking any AI-generated code. Of the roughly 60 public DIM course plans scanned, this was the only one with an AI-use clause; note the PDF file name (8INF934) differs from the course code in its content (8INF972).",
+      "excerpts": [
+        {
+          "text": "L’usage des outils d’Intelligence Artificielle (p.ex. chatGPT, Github Copillot, etc.) est autorisé",
+          "frag_start": "L’usage des outils d’Intelligence Artificielle",
+          "frag_end": "ne se limite qu’au code.",
+          "section": "Utilisation des outils d’Intelligence Artificielle",
+          "topics": [
+            "permitted-uses",
+            "code-generation"
+          ],
+          "phase": "during-work",
+          "actor": "student"
+        },
+        {
+          "text": "vous devez en faire mention à l’aide d’un commentaire qui précède le contenu généré",
+          "frag_start": "Lorsque vous utilisez du code",
+          "frag_end": "qui précède le contenu généré.",
+          "section": "Utilisation des outils d’Intelligence Artificielle",
+          "topics": [
+            "disclosure-citation",
+            "code-generation"
+          ],
+          "phase": "during-work",
+          "actor": "student"
+        }
+      ]
+    },
+    {
+      "id": "uqo-dii-cyb6023",
+      "university": "Université du Québec en Outaouais",
+      "country": "Canada",
+      "region": "QC",
+      "unit": "Département d'informatique et d'ingénierie",
+      "level": "course",
+      "course": "CYB6023 Forensique numérique avancée et réponse aux incidents",
+      "title": "Plan de cours CYB6023-01 — Automne 2026",
+      "url": "https://uqo.ca/sites/default/files/2026-09/179068470plan-de-cours-cyb6023-01-automne-2026.pdf",
+      "date_or_term": "Automne 2026",
+      "accessed": "2026-10-05",
+      "verbatim_source": "curl",
+      "stance": "permit-with-conditions",
+      "summary": "Tier 1 (Département d'informatique et d'ingénierie course): Graduate cybersecurity course outline from the department's public course-plan pages. It warns that lab work and exams are poorly suited to generative tools and requires students to treat generated output as a citation in text and bibliography. All Fall 2026 and Winter 2026 DII course plans were scanned; only this instructor's plans (CYB6023, CYB6063) contained an AI-use clause.",
+      "excerpts": [
+        {
+          "text": "Les solutions requises pour les TP et dans les examens se prêtent mal",
+          "frag_start": "ChatGPT et autres outils génératifs",
+          "frag_end": "l’utilisation des outils génératifs.",
+          "section": "ChatGPT et autres outils génératifs",
+          "topics": [
+            "learning-rationale",
+            "assessment-design"
+          ],
+          "phase": "course-start",
+          "actor": "instructor"
+        },
+        {
+          "text": "Vous devez traiter les résultats de cette utilisation comme une citation dans le texte",
+          "frag_start": "Vous devez traiter les résultats",
+          "frag_end": "dans le texte et dans la médiagraphie.",
+          "section": "ChatGPT et autres outils génératifs",
+          "topics": [
+            "disclosure-citation"
+          ],
+          "phase": "during-work",
+          "actor": "student"
+        }
+      ]
+    },
+    {
+      "id": "uqar-politique-c3-d117-ia",
+      "university": "Université du Québec à Rimouski",
+      "country": "Canada",
+      "region": "QC",
+      "unit": "Secrétariat général (adopted by the Conseil d’administration)",
+      "level": "university-general",
+      "course": null,
+      "title": "C3-D117 Politique encadrant l’utilisation de l’intelligence artificielle",
+      "url": "https://www.uqar.ca/app/uploads/2026/01/117C3.pdf?v=1769702155",
+      "date_or_term": "En vigueur 27-01-2026",
+      "accessed": "2026-10-05",
+      "verbatim_source": "curl",
+      "stance": "mixed",
+      "summary": "Tier 4 (university-wide; tiers 1-3 searched, none found): Institution-wide AI policy focused on governance, privacy, confidentiality, copyright, security, and automated decision-making. It explicitly leaves teaching- and study-specific rules unspecified, but it covers AI-only grading as an automated decision and adds bias and digital-sobriety duties. No computing-specific AI document was public for UQAR's informatique programs, so this is the university-wide fallback.",
+      "excerpts": [
+        {
+          "text": "Cette politique n’ établit pas de modalités spécifiques d’utilisation dans les contextes d’enseignement",
+          "frag_start": "Cette politique n’ établit pas",
+          "frag_end": "d’enseignement, d’étude ou de recherche.",
+          "section": "1 PRÉAMBULE",
+          "topics": [
+            "default-stance",
+            "instructor-discretion"
+          ],
+          "phase": "before-course",
+          "actor": "department"
+        },
+        {
+          "text": "la personne utilisatrice doit s’assurer de ne jamais inclure de renseignements personnels",
+          "frag_start": "Toute utilisation de l’IA doit",
+          "frag_end": "dans la formulation d’une requête.",
+          "section": "7.1 Respecter la vie privée",
+          "topics": [
+            "privacy-data"
+          ],
+          "phase": "during-work",
+          "actor": "student"
+        },
+        {
+          "text": "s’abstenir d’inclure du matériel protégé par le droit d’auteur dans une requête",
+          "frag_start": "s’abstenir d’inclure du matériel protégé",
+          "frag_end": "peut s’appliquer dans de telles circonstances.",
+          "section": "7.3 Respecter les principes de droits d’auteur",
+          "topics": [
+            "intellectual-property"
+          ],
+          "phase": "during-work",
+          "actor": "instructor"
+        },
+        {
+          "text": "responsable de s’assurer de l’intégrité et de la validité du contenu généré",
+          "frag_start": "est responsable de s’assurer de l’intégrité",
+          "frag_end": "contenu généré par une requête.",
+          "section": "7.5 Agir de façon responsable",
+          "topics": [
+            "accountability-understanding"
+          ],
+          "phase": "during-work",
+          "actor": "student"
+        },
+        {
+          "text": "un système effectue la correction de travaux et octroie une note sans le regard",
+          "frag_start": "un système effectue la correction",
+          "frag_end": "le regard d’une personne physique;",
+          "section": "7.6 Décisions fondées sur un processus automatisé",
+          "topics": [
+            "faculty-grading-feedback"
+          ],
+          "phase": "during-assessment",
+          "actor": "instructor"
+        },
+        {
+          "text": "Le recours à l'IA pour les décisions fondées sur un processus automatisé doit être transparent",
+          "frag_start": "Le recours à l'IA pour",
+          "frag_end": "de ce processus.",
+          "section": "7.6 Décisions fondées sur un processus automatisé",
+          "topics": [
+            "faculty-grading-feedback",
+            "privacy-data"
+          ],
+          "phase": "during-assessment",
+          "actor": "department"
+        },
+        {
+          "text": "s’assurer que les résultats d’une requête ne contiennent pas de contenu biaisé, discriminatoire,",
+          "frag_start": "s’assurer que les résultats d’une",
+          "frag_end": "l’inclusion (C3-D77);",
+          "section": "7.7 Autres considérations",
+          "topics": [
+            "ethics-bias-environment"
+          ],
+          "phase": "during-work",
+          "actor": "student"
+        },
+        {
+          "text": "utiliser l’IA de manière à favoriser des comportements de l’ordre de la sobriété numérique",
+          "frag_start": "en cohérence avec la Politique environnementale",
+          "frag_end": "réduire l'impact environnemental;",
+          "section": "7.7 Autres considérations",
+          "topics": [
+            "ethics-bias-environment"
+          ],
+          "phase": "during-work",
+          "actor": "student"
+        }
+      ]
+    },
+    {
+      "id": "uqtr-principes-ia-personnel",
+      "university": "Université du Québec à Trois-Rivières",
+      "country": "Canada",
+      "region": "QC",
+      "unit": "Comité institutionnel sur l’intelligence artificielle (with the Vice-rectorat aux études et à la formation)",
+      "level": "university-general",
+      "course": null,
+      "title": "Principes d’utilisation de l’intelligence artificielle générative dans les activités d’enseignement et de recherche réalisées dans le cadre des programmes d’études de l’UQTR — Pour les membres du personnel",
+      "url": "https://oraprdnt.uqtr.uquebec.ca/portail/docs/GSC4030/O0006679620_02_principes_utilisation_IA_prog_etudes_membres_pers_UQTR.pdf",
+      "date_or_term": "2024",
+      "accessed": "2026-10-05",
+      "verbatim_source": "curl",
+      "stance": "instructor-discretion",
+      "summary": "Tier 4 (university-wide; tiers 1-3 searched, none found): Institutional principles for teaching staff, built on CEST and UNESCO guidance. They list cautionary considerations (errors, explainability, IP, unknown cognitive effects) and require staff who use generative AI to verify outputs, protect personal data, and keep pedagogical alignment. Staff must also state their AI expectations in the course outline and disclose their own AI use in course materials. A parallel version exists for students; no computing-specific document was public for UQTR's Département de mathématiques et d'informatique.",
+      "excerpts": [
+        {
+          "text": "De communiquer explicitement ses attentes aux personnes étudiantes quant à l’utilisation",
+          "frag_start": "De communiquer explicitement ses attentes",
+          "frag_end": "plan global d’études;",
+          "section": null,
+          "topics": [
+            "syllabus-communication"
+          ],
+          "phase": "course-start",
+          "actor": "instructor"
+        },
+        {
+          "text": "De déclarer l’utilisation qu’elle fait de l’IA générative dans la préparation",
+          "frag_start": "De déclarer l’utilisation qu’elle",
+          "frag_end": "examens, etc.) s’il y a lieu;",
+          "section": null,
+          "topics": [
+            "faculty-course-materials",
+            "disclosure-citation"
+          ],
+          "phase": "before-course",
+          "actor": "instructor"
+        },
+        {
+          "text": "Que l’extrant qui sera utilisé a fait l’objet d’un examen approfondi et critique;",
+          "frag_start": "Que l’extrant qui sera",
+          "frag_end": "examen approfondi et critique;",
+          "section": null,
+          "topics": [
+            "accountability-understanding",
+            "instructor-staff-use"
+          ],
+          "phase": "before-course",
+          "actor": "instructor"
+        },
+        {
+          "text": "Que les modalités d’utilisation respectent le principe d’alignement pédagogique",
+          "frag_start": "Que les modalités d’utilisation respectent",
+          "frag_end": "des savoir - faire;",
+          "section": null,
+          "topics": [
+            "assessment-design",
+            "learning-rationale"
+          ],
+          "phase": "before-course",
+          "actor": "instructor"
+        },
+        {
+          "text": "Que les effets de l’IA générative sur le développement cognitif sont inconnus",
+          "frag_start": "Que les effets de l’IA",
+          "frag_end": "cognition des personnes utilisatrices;",
+          "section": "CONSIDÉRANT",
+          "topics": [
+            "learning-rationale"
+          ],
+          "phase": "before-course",
+          "actor": "department"
+        },
+        {
+          "text": "la personne enseignante demeure en tout temps responsable de l’activité d’enseignement",
+          "frag_start": "De surcroit, dans les activités",
+          "frag_end": "de formation ( exemple : stage).",
+          "section": null,
+          "topics": [
+            "instructor-staff-use",
+            "accountability-understanding"
+          ],
+          "phase": "before-course",
+          "actor": "instructor"
+        },
+        {
+          "text": "doivent se conformer aux consignes de la personne responsable",
+          "frag_start": "À cet effet, toute s personnes",
+          "frag_end": "dans le cadre de l’activité, le cas échéant.",
+          "section": null,
+          "topics": [
+            "instructor-staff-use"
+          ],
+          "phase": "during-work",
+          "actor": "ta-staff"
+        },
+        {
+          "text": "Le présent document sera mis à jour chaque trimestre.",
+          "frag_start": "Le présent document sera mis",
+          "frag_end": "mis à jour chaque trimestre.",
+          "section": null,
+          "topics": [
+            "policy-evolution"
+          ],
+          "phase": "over-time",
+          "actor": "department"
+        }
+      ]
+    },
+    {
+      "id": "uqat-guide-presentation-travaux-ia",
+      "university": "Université du Québec en Abitibi-Témiscamingue",
+      "country": "Canada",
+      "region": "QC",
+      "unit": "Service de la bibliothèque — Guide de présentation des travaux écrits (UQAT)",
+      "level": "university-general",
+      "course": null,
+      "title": "Guide de présentation des travaux écrits — Normes pour les citations: Intelligence artificielle dans les travaux",
+      "url": "https://bib.uqat.ca/guide-presentation-travaux-ecrits-uqat?section=normes-pour-les-citations",
+      "date_or_term": null,
+      "accessed": "2026-10-05",
+      "verbatim_source": "curl",
+      "stance": "instructor-discretion",
+      "summary": "Tier 4 (university-wide; tiers 1-3 searched, none found): The official UQAT guide for written work tells students to check each course outline and assessment instructions to see whether generative AI is allowed. It lists conditions instructors may impose, such as restricted uses, describing AI use, giving prompts and outputs in an appendix, and signing an intellectual-integrity declaration. Passing off AI output as one's own or having AI do the work counts as a sanctionable fraudulent practice. No computing-specific AI document was public for UQAT's computing-track programs (création numérique profil informatique, jeux vidéo programmation).",
+      "excerpts": [
+        {
+          "text": "vérifiez dans le plan de cours et les consignes spécifiques à chaque activité d’évaluation",
+          "frag_start": "Avant de faire usage d’un outil",
+          "frag_end": "et le cas échéant, sous quelles conditions",
+          "section": "Intelligence artificielle dans les travaux",
+          "topics": [
+            "syllabus-communication",
+            "instructor-discretion"
+          ],
+          "phase": "course-start",
+          "actor": "student"
+        },
+        {
+          "text": "restreindre l’usage pouvant être fait des outils d’IAG",
+          "frag_start": "restreindre l’usage pouvant être fait",
+          "frag_end": "repris tel quel dans le travail);",
+          "section": "Intelligence artificielle dans les travaux",
+          "topics": [
+            "permitted-uses",
+            "prohibited-uses"
+          ],
+          "phase": "during-work",
+          "actor": "instructor"
+        },
+        {
+          "text": "de quelle façon les outils d’IAG ont été utilisés",
+          "frag_start": "que soit précisée, dans l’introduction",
+          "frag_end": "les outils d’IAG ont été utilisés;",
+          "section": "Intelligence artificielle dans les travaux",
+          "topics": [
+            "disclosure-citation"
+          ],
+          "phase": "during-work",
+          "actor": "student"
+        },
+        {
+          "text": "que soient indiquées les questions posées, les instructions demandées à l’outil d’IAG",
+          "frag_start": "que soient indiquées les questions posées,",
+          "frag_end": "par l’outil (en annexe, par exemple);",
+          "section": "Intelligence artificielle dans les travaux",
+          "topics": [
+            "disclosure-citation"
+          ],
+          "phase": "during-work",
+          "actor": "student"
+        },
+        {
+          "text": "qu’un formulaire de Déclaration d’intégrité intellectuelle soit rempli et joint avec le travail",
+          "frag_start": "qu’un formulaire de Déclaration",
+          "frag_end": "Annexe G - Déclaration d'intégrité intellectuelle",
+          "section": "Intelligence artificielle dans les travaux",
+          "topics": [
+            "disclosure-citation"
+          ],
+          "phase": "during-work",
+          "actor": "student"
+        },
+        {
+          "text": "valider les informations reçues avec des sources bibliographiques fiables et crédibles",
+          "frag_start": "Il importe de valider",
+          "frag_end": "sources bibliographiques fiables et crédibles",
+          "section": "Intelligence artificielle dans les travaux",
+          "topics": [
+            "accountability-understanding",
+            "ethics-bias-environment"
+          ],
+          "phase": "during-work",
+          "actor": "student"
+        },
+        {
+          "text": "vous êtes responsables des informations fournies",
+          "frag_start": "En reprenant des contenus générés",
+          "frag_end": "(Université du Québec en Abitibi-Témiscamingue, s. d.a).",
+          "section": "Intelligence artificielle dans les travaux",
+          "topics": [
+            "accountability-understanding"
+          ],
+          "phase": "during-work",
+          "actor": "student"
+        },
+        {
+          "text": "utiliser un outil d’intelligence artificielle pour faire un travail à sa place",
+          "frag_start": "Engager une personne ou utiliser",
+          "frag_end": "faire un travail à sa place.",
+          "section": "Plagiat et fraude",
+          "topics": [
+            "integrity-sanctions",
+            "prohibited-uses"
+          ],
+          "phase": "when-misuse",
+          "actor": "student"
+        }
+      ]
+    },
+    {
+      "id": "teluq-inf1420-iag",
+      "university": "Université TÉLUQ",
+      "country": "Canada",
+      "region": "QC",
+      "unit": "Université TÉLUQ — informatique (course site)",
+      "level": "course",
+      "course": "INF 1420 (interfaces humain-machine)",
+      "title": "inf1420 — Utilisation de l’intelligence artificielle générative (IAG)",
+      "url": "https://inf1420.teluq.ca/",
+      "date_or_term": "Hiver 2026 onward (per page)",
+      "accessed": "2026-10-05",
+      "verbatim_source": "curl",
+      "stance": "permit-with-conditions",
+      "summary": "Tier 1 (informatique course): Public course site for a TÉLUQ computing course on human-computer interfaces, which includes Java prototype development. Under the TÉLUQ institutional statement, AI use is optional but allowed; it is banned in oral and supervised exams. Students must document and describe their use, include interaction traces where relevant, and explain results in their own words. Undeclared use may count as an academic-integrity breach.",
+      "excerpts": [
+        {
+          "text": "est régie par l’énoncé institutionnel de l’université sur l’utilisation de l’IAG",
+          "frag_start": "Dans ce cours, l’utilisation de",
+          "frag_end": "l’université sur l’utilisation de l’IAG",
+          "section": "Utilisation de l’intelligence artificielle générative (IAG)",
+          "topics": [
+            "syllabus-communication"
+          ],
+          "phase": "course-start",
+          "actor": "instructor"
+        },
+        {
+          "text": "devez documenter toute utilisation de l’IAG dans le cadre de vos travaux",
+          "frag_start": "Conformément à cet énoncé, vous",
+          "frag_end": "dans le cadre de vos travaux.",
+          "section": "Utilisation de l’intelligence artificielle générative (IAG)",
+          "topics": [
+            "disclosure-citation"
+          ],
+          "phase": "during-work",
+          "actor": "student"
+        },
+        {
+          "text": "Vous demeurez entièrement responsables du contenu remis et devez être en mesure d’en expliquer",
+          "frag_start": "Vous demeurez entièrement responsables",
+          "frag_end": "les éléments en vos propres mots.",
+          "section": "Utilisation de l’intelligence artificielle générative (IAG)",
+          "topics": [
+            "accountability-understanding"
+          ],
+          "phase": "during-work",
+          "actor": "student"
+        },
+        {
+          "text": "l’utilisation de l’IAG est interdite durant les épreuves orales et les examens surveillés",
+          "frag_start": "Comme prévu par l’énoncé institutionnel,",
+          "frag_end": "et les examens surveillés",
+          "section": "Utilisation de l’intelligence artificielle générative (IAG)",
+          "topics": [
+            "exams-in-person",
+            "prohibited-uses"
+          ],
+          "phase": "during-assessment",
+          "actor": "student"
+        },
+        {
+          "text": "(par exemple Claude, ChatGPT, Copilot, Grok, etc.) est permise mais demeure optionnelle",
+          "frag_start": "Dans ce cours, l’utilisation de l’intelligence",
+          "frag_end": "est permise mais demeure optionnelle.",
+          "section": "Utilisation de l’intelligence artificielle générative (IAG)",
+          "topics": [
+            "permitted-uses"
+          ],
+          "phase": "course-start",
+          "actor": "student"
+        },
+        {
+          "text": "une utilisation de l’IAG sans déclaration peut être considérée comme une faute à l’intégrité académique",
+          "frag_start": "décrire clairement votre utilisation",
+          "frag_end": "faute à l’intégrité académique",
+          "section": "Utilisation de l’intelligence artificielle générative (IAG)",
+          "topics": [
+            "integrity-sanctions",
+            "disclosure-citation"
+          ],
+          "phase": "when-misuse",
+          "actor": "student"
+        },
+        {
+          "text": "lorsque pertinent, inclure des extraits ou des traces de vos interactions avec l’IAG",
+          "frag_start": "lorsque pertinent, inclure des extraits",
+          "frag_end": "vos interactions avec l’IAG",
+          "section": "Utilisation de l’intelligence artificielle générative (IAG)",
+          "topics": [
+            "disclosure-citation"
+          ],
+          "phase": "during-work",
+          "actor": "student"
+        },
+        {
+          "text": "Déclarer votre utilisation de l’IAG vous protège",
+          "frag_start": "Déclarer votre utilisation de l’IAG",
+          "frag_end": "respect des principes d’intégrité académique.",
+          "section": "Utilisation de l’intelligence artificielle générative (IAG)",
+          "topics": [
+            "learning-rationale",
+            "disclosure-citation"
+          ],
+          "phase": "course-start",
+          "actor": "student"
+        }
+      ]
+    },
+    {
+      "id": "teluq-inf1901-usage-ia",
+      "university": "Université TÉLUQ",
+      "country": "Canada",
+      "region": "QC",
+      "unit": "Université TÉLUQ — informatique (instructor-hosted course site)",
+      "level": "course",
+      "course": "INF 1901 Initiation à l’intelligence artificielle : concepts et réflexions",
+      "title": "Usage de l'IA (pour ce cours) — INF1901",
+      "url": "https://cjauvin.github.io/inf1901-teluq/docs/assistants-intelligents/",
+      "date_or_term": null,
+      "accessed": "2026-10-05",
+      "verbatim_source": "curl",
+      "stance": "encourage",
+      "summary": "Tier 1 (informatique course): The AI-use page of an introductory AI course (the current version of the course site) openly encourages assistants such as ChatGPT, Claude and Gemini for graded work and all course content. It asks students to understand the answers deeply and to talk with the assistant to clear up gaps, since the course aims to build mental models of AI. A v2 of the site (cjauvin.github.io/inf1901-teluq-v2) is in preparation.",
+      "excerpts": [
+        {
+          "text": "l’usage d’assistants intelligents (ChatGPT, Claude, Gemini, etc) est évidemment encouragé !",
+          "frag_start": "Étant donné qu’il s’agit d’un",
+          "frag_end": "est évidemment encouragé !",
+          "section": "L’usage d’assistants intelligents",
+          "topics": [
+            "default-stance",
+            "permitted-uses"
+          ],
+          "phase": "course-start",
+          "actor": "student"
+        },
+        {
+          "text": "Ceci s’applique autant aux travaux notés qu’au reste du contenu du cours.",
+          "frag_start": "Ceci s’applique autant aux travaux",
+          "frag_end": "qu’au reste du contenu du cours.",
+          "section": "L’usage d’assistants intelligents",
+          "topics": [
+            "permitted-uses"
+          ],
+          "phase": "during-work",
+          "actor": "student"
+        },
+        {
+          "text": "nous vous conseillons de vous assurer d’avoir une compréhension viscérale des réponses qu’il fournira",
+          "frag_start": "Par contre si vous utilisez",
+          "frag_end": "pourraient rester obscurs pour vous.",
+          "section": "L’usage d’assistants intelligents",
+          "topics": [
+            "accountability-understanding"
+          ],
+          "phase": "during-work",
+          "actor": "student"
+        },
+        {
+          "text": "de ne pas hésiter à engager un dialogue avec l’agent",
+          "frag_start": "Par contre si vous utilisez",
+          "frag_end": "pourraient rester obscurs pour vous.",
+          "section": "L’usage d’assistants intelligents",
+          "topics": [
+            "permitted-uses",
+            "learning-rationale"
+          ],
+          "phase": "during-work",
+          "actor": "student"
+        },
+        {
+          "text": "le but de ce cours est la construction de bons modèles mentaux",
+          "frag_start": "N’oubliez pas que le but",
+          "frag_end": "au-delà de sa surface applicative.",
+          "section": "L’usage d’assistants intelligents",
+          "topics": [
+            "learning-rationale"
+          ],
+          "phase": "course-start",
+          "actor": "student"
+        }
+      ]
+    }
+  ],
+  "excluded": [
+    {
+      "university": "Université du Québec en Outaouais",
+      "title": "Plan de cours CYB6063-01 Automne 2026",
+      "url": "https://uqo.ca/sites/default/files/2026-09/1745304031plan-de-cours-cyb6063-01-automne-2026.pdf",
+      "reason": "Same instructor and identical AI clause as included CYB6023; duplicate."
+    },
+    {
+      "university": "Université du Québec à Chicoutimi",
+      "title": "Intelligence artificielle (UQAC balises)",
+      "url": "https://www.uqac.ca/ia/",
+      "reason": "Generic university-wide page; computing course document found instead."
+    },
+    {
+      "university": "Université TÉLUQ",
+      "title": "Énoncé institutionnel sur l’utilisation de l’IAG dans les activités d’évaluation des cours",
+      "url": "https://bibliotheque.teluq.ca/c.php?g=742145",
+      "reason": "Generic university-wide statement; computing course documents found (INF 1420 adopts it)."
+    },
+    {
+      "university": "HEC Montréal",
+      "title": "Lignes directrices pour l'utilisation d'outils d'IAG",
+      "url": "https://www.hec.ca/intelligence-artificielle-generative/lignes-directrices/index.html",
+      "reason": "Second generic document (security/privacy-focused); DAIP assessment page chosen as the single university-general document."
+    },
+    {
+      "university": "Université de Moncton",
+      "title": "Les outils d'intelligence artificielle",
+      "url": "https://www.umoncton.ca/integrite/intelligence_artificielle",
+      "reason": "Second generic integrity page; course-outline statements page chosen as the single university-general document."
+    },
+    {
+      "university": "Université du Québec à Trois-Rivières",
+      "title": "Principes d’utilisation de l’IA générative — communauté étudiante",
+      "url": "https://oraprdnt.uqtr.uquebec.ca/portail/docs/GSC7759/O0006012376_principes_utilisation_IA_communaute_etudiante_UQTR.pdf",
+      "reason": "Parallel student version; one university-general document per university."
+    },
+    {
+      "university": "Bishop's University",
+      "title": "Generative AI - Artificial Intelligence in Research (LibGuide)",
+      "url": "https://ubishops.libguides.com/AI-Research",
+      "reason": "Library research guide, not official policy."
+    }
+  ],
+  "new_codes": []
+}

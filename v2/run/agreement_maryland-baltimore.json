@@ -1,0 +1,16 @@
+{
+ "documents": 1,
+ "units_A": 110,
+ "units_B": 108,
+ "matched": 94,
+ "only_A": 16,
+ "only_B": 14,
+ "kept_only_A": 14,
+ "kept_only_B": 14,
+ "agree_actor": 0.787,
+ "agree_phase": 0.883,
+ "agree_modality": 0.926,
+ "agree_policy_type": 0.84,
+ "agree_stance_docs": 1.0,
+ "notes": "Greedy alignment by anchor position in the source text (94 matched; 3 position-near pairs were split because they covered different sentences). Main disagreements: (1) actor for researcher passages (A instructor, B all): resolved to all because the enum has no researcher value and the rules bind anyone doing research; (2) phase for work-time duties such as disclosure and admin-use rules (general vs during-work): resolved to during-work when the duty applies as work is produced; (3) policy_type on privacy/liability/account sentences (P50/P77/P65/P92/P52): resolved by re-reading each sentence, with UNCOVERED for the personal-account rule, personal liability, the no-privacy monitoring notice, optional sample syllabus language and personal use of UMB equipment; (4) unit_stance (neutral vs restrict/permit), resolved by whether the sentence limits or conditions AI use; (5) modality where A over-read 'should' as must (approved tools for research data, health information). Only-A: 16 found, 14 kept, 2 dropped (a clause restating the premise of the next unit, and an FAQ repeat of the grading-transparency rule). Only-B: 14 found, all kept (includes P59 course-development use, 'Always maintain academic integrity', hallucination warning, risk-weighing duty, named meeting tools). Also split A's merged accountability/validation sentence into two units. Final 122 units."
+}

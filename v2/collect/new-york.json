@@ -1,0 +1,41 @@
+{
+ "university": "New York University",
+ "slug": "new-york",
+ "state": "NY",
+ "type": "R1",
+ "searched": {
+  "university": "inaccessible",
+  "school": "found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "nyu-steinhardt-academic-integrity-ai",
+   "layer": "school",
+   "unit": "NYU Steinhardt (Steinhardt AI Hub)",
+   "course": null,
+   "title": "Academic Integrity and Syllabus Support in the Age of Generative AI",
+   "url": "https://steinhardt.nyu.edu/faculty-and-staff/academic-affairs/steinhardt-ai-hub/academic-integrity-and-syllabus-support-age",
+   "date_or_term": null,
+   "text_file": ".cache/text/v2-nyu-steinhardt-age.txt",
+   "quality": "good",
+   "quality_note": "School-level (not computing) guidance with sample policy statements; the only fetchable NYU school page.",
+   "screen": "include"
+  },
+  {
+   "id": "nyu-libraries-genai-academic-integrity",
+   "layer": "university",
+   "unit": "NYU Libraries research guide",
+   "course": null,
+   "title": "Using Generative AI: Generative AI and Academic Integrity",
+   "url": "https://guides.nyu.edu/c.php?g=1307730&p=9624166",
+   "date_or_term": "2026",
+   "text_file": ".cache/text/v2-nyu-libguide.txt",
+   "quality": "partial",
+   "quality_note": "Library guide quoting NYU's Academic Integrity Policy on AI; not an official policy page itself.",
+   "screen": "include"
+  }
+ ],
+ "notes": "University-level pages on www.nyu.edu (Student Learning with Generative AI; FAQ About Teaching and AI; Getting Started: Faculty) return an empty bot-challenge response (HTTP 202, 0 bytes) to curl and WebFetch, so they are inaccessible and not collected; retry in a browser. cs.nyu.edu undergrad Academic Integrity page was fetched but has no AI text, so excluded. No Courant/CS or Tandon department AI policy found. The wp.nyu.edu A&S edtech post only links elsewhere, so excluded."
+}

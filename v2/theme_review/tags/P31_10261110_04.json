@@ -1,0 +1,1428 @@
+{
+ "packet": "P31_10261110_04",
+ "current_type": "P31",
+ "coherence": "mostly coherent",
+ "name_suggestion": "Checking AI output for errors and bias",
+ "subgroups": [
+  {
+   "label": "AI output is unreliable (warning)",
+   "definition": "Statements that AI output can be wrong, fabricated or biased, with no instruction attached.",
+   "uids": [
+    "north-carolina-chapel-hill|unc-college-student-guidelines-u15",
+    "north-carolina-greensboro|uncg-ai-for-students-u09",
+    "north-carolina-greensboro|uncg-permissible-use-cases-u48",
+    "north-carolina-state|ncsu-ai-for-students-u05",
+    "north-carolina-state|ncsu-ai-for-students-u06",
+    "north-dakota|und-provost-ai-u20",
+    "north-dakota-state-main-campus|ndsu-instructor-guide-u14",
+    "north-dakota-state-main-campus|ndsu-instructor-guide-u49",
+    "northeastern|neu-provost-standards-u05",
+    "northeastern|neu-provost-standards-u59",
+    "northwestern|nu-it-guidance-u12",
+    "northwestern|nu-weinberg-integrity-u06",
+    "nova-southeastern|nova-southeastern-1-u60",
+    "oakland|oakland-2-u42",
+    "ohio-main-campus|ohio-main-campus-2-u40",
+    "ohio-main-campus|ohio-main-campus-2-u47",
+    "ohio-main-campus|ohio-main-campus-2-u93",
+    "ohio-main-campus|ohio-main-campus-2-u153",
+    "ohio-main-campus|ohio-main-campus-2-u171",
+    "oklahoma|ou-cfe-generative-ai-policy-examples-u52",
+    "old-dominion|old-dominion-4-u18",
+    "old-dominion|old-dominion-4-u19",
+    "old-dominion|old-dominion-4-u29",
+    "old-dominion|old-dominion-4-u70",
+    "oregon-state|oregon-state-coe-chatbot-u12",
+    "oregon-state|oregon-state-coe-chatbot-u20",
+    "pennsylvania|penn-cetli-creating-ai-policies-u28",
+    "pepperdine|pepperdine-ai-syllabus-statements-u31",
+    "pepperdine|pepperdine-ai-syllabus-statements-u35",
+    "rochester-institute-technology|rit-syllabus-guidance-u68",
+    "rowan|rowan-facultycenter-genai-u34",
+    "rowan|rowan-lib-students-u07",
+    "rush|rush-ctei-faculty-guide-u16",
+    "rutgers-new-brunswick|rutgers-nb-oit-ai-guidance-u13",
+    "rutgers-new-brunswick|rutgers-nb-otear-ai-u03",
+    "rutgers-new-brunswick|rutgers-nb-otear-ai-u24",
+    "rutgers-newark|rutgers-newark-oit-ai-guidance-u12",
+    "rutgers-newark|rutgers-newark-otear-ai-u03",
+    "rutgers-newark|rutgers-newark-otear-ai-u25",
+    "rutgers-newark|rutgers-newark-otear-ai-u26",
+    "san-diego|sandiego-ai-guidance-u48",
+    "san-diego-state|san-diego-state-senate-genai-u14",
+    "san-diego-state|san-diego-state-senate-genai-u16",
+    "san-diego-state|san-diego-state-senate-genai-u42",
+    "san-francisco-state|sf-state-ceetl-teaching-genai-u37",
+    "santa-clara|santa-clara-ai-guidelines-u05",
+    "santa-clara|santa-clara-ai-guidelines-u10",
+    "santa-clara|santa-clara-ai-guidelines-u23",
+    "santa-clara|santa-clara-syllabus-policy-u15",
+    "smith-college|smith-college-ai-faculty-u06",
+    "smu|smu-syllabus-statements-u10",
+    "south-carolina|south-carolina-cte-u11"
+   ]
+  },
+  {
+   "label": "Duty or advice to verify output",
+   "definition": "Users (students, staff, all) are told to check, validate or critically evaluate AI output before relying on it.",
+   "uids": [
+    "north-carolina-chapel-hill|unc-committee-student-guidance-u54",
+    "north-carolina-chapel-hill|unc-committee-student-guidance-u55",
+    "north-carolina-chapel-hill|unc-committee-student-guidance-u57",
+    "north-carolina-chapel-hill|unc-college-student-guidelines-u32",
+    "north-carolina-chapel-hill|unc-college-student-guidelines-u41",
+    "north-carolina-chapel-hill|unc-college-student-guidelines-u42",
+    "north-carolina-chapel-hill|unc-college-student-guidelines-u43",
+    "north-carolina-chapel-hill|unc-college-student-guidelines-u46",
+    "north-carolina-greensboro|uncg-academic-integrity-appendix-c-u22",
+    "north-carolina-greensboro|uncg-academic-integrity-appendix-c-u41",
+    "north-carolina-greensboro|uncg-ai-for-students-u12",
+    "north-carolina-greensboro|uncg-ai-for-students-u13",
+    "north-carolina-greensboro|uncg-ai-for-students-u19",
+    "north-carolina-greensboro|uncg-permissible-use-cases-u42",
+    "north-carolina-greensboro|uncg-permissible-use-cases-u49",
+    "north-carolina-greensboro|uncg-permissible-use-cases-u58",
+    "north-carolina-greensboro|uncg-permissible-use-cases-u69",
+    "north-carolina-greensboro|uncg-permissible-use-cases-u72",
+    "north-carolina-greensboro|uncg-permissible-use-cases-u74",
+    "north-carolina-state|ncsu-ai-for-students-u07",
+    "north-carolina-state|ncsu-ai-for-students-u08",
+    "north-carolina-state|ncsu-delta-course-ai-guidelines-u24",
+    "north-carolina-state|ncsu-delta-course-ai-guidelines-u38",
+    "north-dakota|und-provost-ai-u04",
+    "north-dakota|und-provost-ai-u06",
+    "north-dakota|und-provost-ai-u54",
+    "north-dakota|und-ttada-ai-integrity-u11",
+    "north-dakota-state-main-campus|ndsu-ai-goals-guidance-u06",
+    "north-dakota-state-main-campus|ndsu-ai-goals-guidance-u18",
+    "north-dakota-state-main-campus|ndsu-instructor-guide-u60",
+    "north-dakota-state-main-campus|ndsu-instructor-guide-u74",
+    "north-dakota-state-main-campus|ndsu-student-guide-u15",
+    "north-dakota-state-main-campus|ndsu-student-guide-u16",
+    "north-dakota-state-main-campus|ndsu-student-guide-u25",
+    "north-dakota-state-main-campus|ndsu-student-guide-u30",
+    "north-texas|unt-library-ai-faculty-u18",
+    "north-texas|unt-library-ai-faculty-u21",
+    "northeastern-illinois|neiu-ctl-syllabus-u08",
+    "northern-arizona|nau-provost-faculty-u20",
+    "northern-arizona|nau-provost-students-u10",
+    "northern-illinois|niu-students-u28",
+    "northern-illinois|niu-students-u29",
+    "northern-illinois|niu-students-u31",
+    "northwestern|nu-it-guidance-u13",
+    "notre-dame|nd-honor-ai-recommendations-instructors-u17",
+    "oakland|oakland-2-u04",
+    "oakland|oakland-2-u21",
+    "oakland|oakland-2-u23",
+    "oakland|oakland-2-u34",
+    "oakland|oakland-2-u43",
+    "oakland|oakland-3-u79",
+    "oakland|oakland-3-u81",
+    "ohio-main-campus|ohio-main-campus-2-u33",
+    "ohio-main-campus|ohio-main-campus-2-u94",
+    "ohio-main-campus|ohio-main-campus-2-u102",
+    "ohio-main-campus|ohio-main-campus-2-u136",
+    "oklahoma|ou-cfe-generative-ai-policy-examples-u38",
+    "oklahoma|ou-cfe-generative-ai-policy-examples-u45",
+    "oklahoma|ou-cfe-generative-ai-policy-examples-u50",
+    "old-dominion|old-dominion-1-u27",
+    "old-dominion|old-dominion-4-u05",
+    "old-dominion|old-dominion-4-u31",
+    "oregon-state|oregon-state-coe-chatbot-u11",
+    "pennsylvania|penn-isc-guidance-generative-ai-u05",
+    "pennsylvania|penn-cetli-creating-ai-policies-u33",
+    "pennsylvania-state|pennsylvania-state-ai-guidelines-u08",
+    "pennsylvania-state|pennsylvania-state-ai-guidelines-u09",
+    "pennsylvania-state|pennsylvania-state-ai-guidelines-u10",
+    "pepperdine|pepperdine-ai-syllabus-statements-u20",
+    "pepperdine|pepperdine-ai-syllabus-statements-u27",
+    "pepperdine|pepperdine-ai-syllabus-statements-u45",
+    "pepperdine|pepperdine-ai-syllabus-statements-u53",
+    "prairie-view-aandm|prairie-view-aandm-cte-syllabus-statements-u07",
+    "prairie-view-aandm|prairie-view-aandm-cte-syllabus-statements-u13",
+    "puerto-rico-rio-piedras|uprrp-circular8-u28",
+    "purdue|purdue-viia5-u13",
+    "rhode-island|uri-responsible-ai-u04",
+    "rochester|rochester-provost-genai-u17",
+    "rochester|rochester-provost-genai-u68",
+    "rochester|rochester-provost-genai-u69",
+    "rochester-institute-technology|rit-syllabus-guidance-u18",
+    "rochester-institute-technology|rit-syllabus-guidance-u26",
+    "rochester-institute-technology|rit-syllabus-guidance-u54",
+    "rochester-institute-technology|rit-syllabus-guidance-u77",
+    "rowan|rowan-lib-students-u08",
+    "rutgers-camden|rutgers-camden-oit-ai-guidance-u12",
+    "rutgers-new-brunswick|rutgers-nb-oit-ai-guidance-u12",
+    "rutgers-new-brunswick|rutgers-nb-otear-ai-u25",
+    "rutgers-newark|rutgers-newark-oit-ai-guidance-u11",
+    "saint-joseph-s|saint-josephs-aa-principles-u10",
+    "saint-joseph-s|saint-josephs-aa-principles-u17",
+    "saint-joseph-s|saint-josephs-guiding-principles-u07",
+    "saint-joseph-s|saint-josephs-guiding-principles-u18",
+    "saint-louis|saint-louis-ai-guidelines-u14",
+    "sam-houston-state|sam-houston-genai-guidance-u14",
+    "sam-houston-state|sam-houston-genai-guidance-u35",
+    "san-diego|sandiego-ai-guidance-u15",
+    "san-diego|sandiego-ai-guidance-u22",
+    "san-diego|sandiego-ai-guidance-u23",
+    "san-diego-state|san-diego-state-senate-genai-u31",
+    "san-diego-state|san-diego-state-senate-genai-u34",
+    "santa-clara|santa-clara-ai-guidelines-u22",
+    "santa-clara|santa-clara-ai-guidelines-u25",
+    "santa-clara|santa-clara-engineering-ai2-u16",
+    "santa-clara|santa-clara-engineering-ai2-u17",
+    "santa-clara|santa-clara-engineering-ai2-u63",
+    "santa-monica-college|santa-monica-college-ar3775-u29",
+    "seattle|seattle-ai-guidelines-u44",
+    "seattle|seattle-ai-guidelines-u50",
+    "seattle|seattle-syllabus-template-u18",
+    "seton-hall|seton-hall-ethics-u09",
+    "seton-hall|seton-hall-ethics-u10",
+    "smith-college|smith-college-ai-students-u08",
+    "smith-college|smith-college-ai-students-u09",
+    "smith-college|smith-college-ai-students-u10",
+    "smu|smu-cte-genai-u35",
+    "smu|smu-cte-genai-u36",
+    "south-carolina|south-carolina-integrity-u09",
+    "south-carolina|south-carolina-integrity-u63",
+    "south-dakota|south-dakota-hub-u13",
+    "south-dakota|south-dakota-hub-u15",
+    "south-dakota|south-dakota-hub-u26",
+    "south-dakota|south-dakota-hub-u27"
+   ]
+  },
+  {
+   "label": "Instructor-directed verification",
+   "definition": "Instructors are told to warn, teach or require students to verify AI output, or to verify their own.",
+   "uids": [
+    "north-carolina-state|ncsu-delta-course-ai-guidelines-u41",
+    "northeastern|neu-provost-standards-u28",
+    "northeastern|neu-provost-standards-u74",
+    "notre-dame|nd-honor-ai-recommendations-instructors-u01",
+    "notre-dame|nd-learning-establishing-ai-policies-u31",
+    "nova-southeastern|nova-southeastern-1-u17",
+    "nova-southeastern|nova-southeastern-1-u27",
+    "nova-southeastern|nova-southeastern-1-u42",
+    "nova-southeastern|nova-southeastern-1-u61",
+    "old-dominion|old-dominion-4-u78",
+    "old-dominion|old-dominion-4-u79",
+    "rochester|rochester-provost-genai-u44",
+    "rochester|rochester-provost-genai-u46",
+    "rush|rush-ctei-faculty-guide-u15",
+    "seattle|seattle-ai-guidelines-u11"
+   ]
+  }
+ ],
+ "units": [
+  {
+   "uid": "north-carolina-chapel-hill|unc-committee-student-guidance-u54",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-chapel-hill|unc-committee-student-guidance-u55",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-chapel-hill|unc-committee-student-guidance-u56",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "NEW: Trace and cite the original source behind AI content",
+   "note": "Find and attribute the original source of AI content."
+  },
+  {
+   "uid": "north-carolina-chapel-hill|unc-committee-student-guidance-u57",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-chapel-hill|unc-college-student-guidelines-u15",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-chapel-hill|unc-college-student-guidelines-u32",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-chapel-hill|unc-college-student-guidelines-u41",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-chapel-hill|unc-college-student-guidelines-u42",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-chapel-hill|unc-college-student-guidelines-u43",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-chapel-hill|unc-college-student-guidelines-u45",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "NEW: Trace and cite the original source behind AI content",
+   "note": "Find and attribute the original source of AI content."
+  },
+  {
+   "uid": "north-carolina-chapel-hill|unc-college-student-guidelines-u46",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-greensboro|uncg-academic-integrity-appendix-c-u22",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-greensboro|uncg-academic-integrity-appendix-c-u41",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-greensboro|uncg-ai-for-students-u04",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "NEW: Understand AI capabilities and limitations",
+   "note": "Asks for general understanding of tool limits."
+  },
+  {
+   "uid": "north-carolina-greensboro|uncg-ai-for-students-u09",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-greensboro|uncg-ai-for-students-u12",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-greensboro|uncg-ai-for-students-u13",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-greensboro|uncg-ai-for-students-u19",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-greensboro|uncg-permissible-use-cases-u42",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-greensboro|uncg-permissible-use-cases-u48",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-greensboro|uncg-permissible-use-cases-u49",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-greensboro|uncg-permissible-use-cases-u58",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-greensboro|uncg-permissible-use-cases-u69",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-greensboro|uncg-permissible-use-cases-u72",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-greensboro|uncg-permissible-use-cases-u74",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-state|ncsu-ai-for-students-u05",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-state|ncsu-ai-for-students-u06",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-state|ncsu-ai-for-students-u07",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-state|ncsu-ai-for-students-u08",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-state|ncsu-delta-course-ai-guidelines-u24",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-state|ncsu-delta-course-ai-guidelines-u38",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "north-carolina-state|ncsu-delta-course-ai-guidelines-u41",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "north-dakota|und-provost-ai-u04",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "north-dakota|und-provost-ai-u06",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "north-dakota|und-provost-ai-u20",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "north-dakota|und-provost-ai-u54",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "north-dakota|und-ttada-ai-integrity-u11",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "north-dakota-state-main-campus|ndsu-ai-goals-guidance-u06",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "north-dakota-state-main-campus|ndsu-ai-goals-guidance-u18",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "north-dakota-state-main-campus|ndsu-instructor-guide-u14",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "north-dakota-state-main-campus|ndsu-instructor-guide-u49",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "north-dakota-state-main-campus|ndsu-instructor-guide-u60",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "north-dakota-state-main-campus|ndsu-instructor-guide-u74",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "north-dakota-state-main-campus|ndsu-student-guide-u15",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "north-dakota-state-main-campus|ndsu-student-guide-u16",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "north-dakota-state-main-campus|ndsu-student-guide-u25",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "north-dakota-state-main-campus|ndsu-student-guide-u30",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "north-texas|unt-library-ai-faculty-u18",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "north-texas|unt-library-ai-faculty-u21",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "northeastern|neu-provost-standards-u05",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "northeastern|neu-provost-standards-u18",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "NEW: Understand AI capabilities and limitations",
+   "note": "Understand limits and risks of sole reliance."
+  },
+  {
+   "uid": "northeastern|neu-provost-standards-u28",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "northeastern|neu-provost-standards-u59",
+   "about_ai": "yes",
+   "binding": "template",
+   "type": "keep"
+  },
+  {
+   "uid": "northeastern|neu-provost-standards-u74",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "northeastern|neu-admin-standards-u05",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "NEW: Understand AI capabilities and limitations",
+   "note": "Understand limits and risks of relying on AI."
+  },
+  {
+   "uid": "northeastern-illinois|neiu-ctl-syllabus-u08",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "northern-arizona|nau-provost-faculty-u20",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "northern-arizona|nau-provost-students-u10",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "northern-illinois|niu-students-u28",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "northern-illinois|niu-students-u29",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "northern-illinois|niu-students-u31",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "northwestern|nu-it-guidance-u12",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "northwestern|nu-it-guidance-u13",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "northwestern|nu-weinberg-integrity-u06",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "notre-dame|nd-honor-ai-recommendations-instructors-u01",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "notre-dame|nd-honor-ai-recommendations-instructors-u17",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "notre-dame|nd-learning-establishing-ai-policies-u31",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "nova-southeastern|nova-southeastern-1-u17",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "nova-southeastern|nova-southeastern-1-u27",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "nova-southeastern|nova-southeastern-1-u42",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "nova-southeastern|nova-southeastern-1-u60",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "nova-southeastern|nova-southeastern-1-u61",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "oakland|oakland-2-u04",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "oakland|oakland-2-u21",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "oakland|oakland-2-u23",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "oakland|oakland-2-u34",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "oakland|oakland-2-u42",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "oakland|oakland-2-u43",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "oakland|oakland-3-u79",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "oakland|oakland-3-u81",
+   "about_ai": "yes",
+   "binding": "template",
+   "type": "keep"
+  },
+  {
+   "uid": "ohio-main-campus|ohio-main-campus-1-u14",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "P24",
+   "note": "Disclosure statement includes how citations were validated."
+  },
+  {
+   "uid": "ohio-main-campus|ohio-main-campus-2-u11",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "P26",
+   "note": "Required reflection covers validation steps."
+  },
+  {
+   "uid": "ohio-main-campus|ohio-main-campus-2-u33",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "ohio-main-campus|ohio-main-campus-2-u40",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "ohio-main-campus|ohio-main-campus-2-u47",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "ohio-main-campus|ohio-main-campus-2-u93",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "ohio-main-campus|ohio-main-campus-2-u94",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "ohio-main-campus|ohio-main-campus-2-u102",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "ohio-main-campus|ohio-main-campus-2-u136",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "ohio-main-campus|ohio-main-campus-2-u153",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "ohio-main-campus|ohio-main-campus-2-u171",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "oklahoma|ou-cfe-generative-ai-policy-examples-u38",
+   "about_ai": "yes",
+   "binding": "template",
+   "type": "keep"
+  },
+  {
+   "uid": "oklahoma|ou-cfe-generative-ai-policy-examples-u45",
+   "about_ai": "yes",
+   "binding": "template",
+   "type": "keep"
+  },
+  {
+   "uid": "oklahoma|ou-cfe-generative-ai-policy-examples-u50",
+   "about_ai": "yes",
+   "binding": "template",
+   "type": "keep"
+  },
+  {
+   "uid": "oklahoma|ou-cfe-generative-ai-policy-examples-u52",
+   "about_ai": "yes",
+   "binding": "template",
+   "type": "keep"
+  },
+  {
+   "uid": "oklahoma|ou-cfe-generative-ai-policy-examples-u64",
+   "about_ai": "yes",
+   "binding": "template",
+   "type": "P24",
+   "note": "Disclosure statement must include verification work."
+  },
+  {
+   "uid": "old-dominion|old-dominion-1-u27",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "old-dominion|old-dominion-4-u05",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "old-dominion|old-dominion-4-u18",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "old-dominion|old-dominion-4-u19",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "old-dominion|old-dominion-4-u29",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "old-dominion|old-dominion-4-u31",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "old-dominion|old-dominion-4-u70",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "old-dominion|old-dominion-4-u78",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "old-dominion|old-dominion-4-u79",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "oregon-state|oregon-state-coe-chatbot-u11",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "oregon-state|oregon-state-coe-chatbot-u12",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "oregon-state|oregon-state-coe-chatbot-u20",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "pennsylvania|penn-isc-guidance-generative-ai-u05",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "pennsylvania|penn-cetli-creating-ai-policies-u28",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "pennsylvania|penn-cetli-creating-ai-policies-u33",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "pennsylvania-state|pennsylvania-state-ai-guidelines-u08",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "pennsylvania-state|pennsylvania-state-ai-guidelines-u09",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "pennsylvania-state|pennsylvania-state-ai-guidelines-u10",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "pepperdine|pepperdine-ai-syllabus-statements-u20",
+   "about_ai": "yes",
+   "binding": "template",
+   "type": "keep"
+  },
+  {
+   "uid": "pepperdine|pepperdine-ai-syllabus-statements-u27",
+   "about_ai": "yes",
+   "binding": "template",
+   "type": "keep"
+  },
+  {
+   "uid": "pepperdine|pepperdine-ai-syllabus-statements-u31",
+   "about_ai": "yes",
+   "binding": "template",
+   "type": "keep"
+  },
+  {
+   "uid": "pepperdine|pepperdine-ai-syllabus-statements-u35",
+   "about_ai": "yes",
+   "binding": "template",
+   "type": "keep"
+  },
+  {
+   "uid": "pepperdine|pepperdine-ai-syllabus-statements-u45",
+   "about_ai": "yes",
+   "binding": "template",
+   "type": "keep"
+  },
+  {
+   "uid": "pepperdine|pepperdine-ai-syllabus-statements-u53",
+   "about_ai": "yes",
+   "binding": "template",
+   "type": "keep"
+  },
+  {
+   "uid": "prairie-view-aandm|prairie-view-aandm-cte-syllabus-statements-u07",
+   "about_ai": "yes",
+   "binding": "template",
+   "type": "keep"
+  },
+  {
+   "uid": "prairie-view-aandm|prairie-view-aandm-cte-syllabus-statements-u13",
+   "about_ai": "yes",
+   "binding": "template",
+   "type": "keep"
+  },
+  {
+   "uid": "puerto-rico-rio-piedras|uprrp-circular8-u28",
+   "about_ai": "yes",
+   "binding": "template",
+   "type": "keep"
+  },
+  {
+   "uid": "purdue|purdue-viia5-u13",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "rhode-island|uri-responsible-ai-u04",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "rochester|rochester-provost-genai-u17",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "rochester|rochester-provost-genai-u44",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "rochester|rochester-provost-genai-u46",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "rochester|rochester-provost-genai-u68",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "rochester|rochester-provost-genai-u69",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "rochester-institute-technology|rit-syllabus-guidance-u18",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "rochester-institute-technology|rit-syllabus-guidance-u26",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "rochester-institute-technology|rit-syllabus-guidance-u54",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "rochester-institute-technology|rit-syllabus-guidance-u68",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "rochester-institute-technology|rit-syllabus-guidance-u77",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "rowan|rowan-facultycenter-genai-u34",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "rowan|rowan-lib-students-u07",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "rowan|rowan-lib-students-u08",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "rush|rush-ctei-faculty-guide-u15",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "rush|rush-ctei-faculty-guide-u16",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "rush|rush-ctei-faculty-guide-u17",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "NEW: Trace and cite the original source behind AI content",
+   "note": "Cite non-AI sources instead of AI content."
+  },
+  {
+   "uid": "rutgers-camden|rutgers-camden-oit-ai-guidance-u12",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "rutgers-new-brunswick|rutgers-nb-oit-ai-guidance-u12",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "rutgers-new-brunswick|rutgers-nb-oit-ai-guidance-u13",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "rutgers-new-brunswick|rutgers-nb-otear-ai-u03",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "rutgers-new-brunswick|rutgers-nb-otear-ai-u24",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "rutgers-new-brunswick|rutgers-nb-otear-ai-u25",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "rutgers-newark|rutgers-newark-oit-ai-guidance-u11",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "rutgers-newark|rutgers-newark-oit-ai-guidance-u12",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "rutgers-newark|rutgers-newark-otear-ai-u03",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "rutgers-newark|rutgers-newark-otear-ai-u25",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "rutgers-newark|rutgers-newark-otear-ai-u26",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "saint-joseph-s|saint-josephs-aa-principles-u10",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "saint-joseph-s|saint-josephs-aa-principles-u17",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "saint-joseph-s|saint-josephs-guiding-principles-u07",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "saint-joseph-s|saint-josephs-guiding-principles-u18",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "saint-louis|saint-louis-ai-guidelines-u14",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "sam-houston-state|sam-houston-genai-guidance-u14",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "sam-houston-state|sam-houston-genai-guidance-u35",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "san-diego|sandiego-ai-guidance-u15",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "san-diego|sandiego-ai-guidance-u22",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "san-diego|sandiego-ai-guidance-u23",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "san-diego|sandiego-ai-guidance-u48",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "san-diego-state|san-diego-state-senate-genai-u14",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "san-diego-state|san-diego-state-senate-genai-u16",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "san-diego-state|san-diego-state-senate-genai-u31",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "san-diego-state|san-diego-state-senate-genai-u34",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "san-diego-state|san-diego-state-senate-genai-u42",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "san-francisco-state|sf-state-ceetl-teaching-genai-u37",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "santa-clara|santa-clara-ai-guidelines-u05",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "santa-clara|santa-clara-ai-guidelines-u10",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "santa-clara|santa-clara-ai-guidelines-u22",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "santa-clara|santa-clara-ai-guidelines-u23",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "santa-clara|santa-clara-ai-guidelines-u25",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "santa-clara|santa-clara-syllabus-policy-u15",
+   "about_ai": "yes",
+   "binding": "template",
+   "type": "keep"
+  },
+  {
+   "uid": "santa-clara|santa-clara-engineering-ai2-u16",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "santa-clara|santa-clara-engineering-ai2-u17",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "santa-clara|santa-clara-engineering-ai2-u63",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "santa-monica-college|santa-monica-college-ar3775-u29",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "seattle|seattle-ai-guidelines-u11",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "seattle|seattle-ai-guidelines-u44",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "seattle|seattle-ai-guidelines-u50",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "seattle|seattle-syllabus-template-u18",
+   "about_ai": "yes",
+   "binding": "template",
+   "type": "keep"
+  },
+  {
+   "uid": "seton-hall|seton-hall-ethics-u09",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "seton-hall|seton-hall-ethics-u10",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "smith-college|smith-college-ai-students-u08",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "smith-college|smith-college-ai-students-u09",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "smith-college|smith-college-ai-students-u10",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "smith-college|smith-college-ai-faculty-u06",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "smu|smu-cte-genai-u23",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "NEW: Understand AI capabilities and limitations",
+   "note": "Be aware of tool limitations and use judgment."
+  },
+  {
+   "uid": "smu|smu-cte-genai-u35",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "smu|smu-cte-genai-u36",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "smu|smu-syllabus-statements-u10",
+   "about_ai": "yes",
+   "binding": "template",
+   "type": "keep"
+  },
+  {
+   "uid": "south-carolina|south-carolina-cte-u11",
+   "about_ai": "yes",
+   "binding": "description",
+   "type": "keep"
+  },
+  {
+   "uid": "south-carolina|south-carolina-integrity-u09",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "south-carolina|south-carolina-integrity-u63",
+   "about_ai": "yes",
+   "binding": "template",
+   "type": "keep"
+  },
+  {
+   "uid": "south-dakota|south-dakota-hub-u13",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "south-dakota|south-dakota-hub-u15",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  },
+  {
+   "uid": "south-dakota|south-dakota-hub-u26",
+   "about_ai": "yes",
+   "binding": "rule",
+   "type": "keep"
+  },
+  {
+   "uid": "south-dakota|south-dakota-hub-u27",
+   "about_ai": "yes",
+   "binding": "recommendation",
+   "type": "keep"
+  }
+ ]
+}

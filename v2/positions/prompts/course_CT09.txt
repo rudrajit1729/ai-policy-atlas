@@ -1,0 +1,50 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT09 "AI for debugging and error messages" (AI to interpret error messages, find bugs or explain failing tests (allowed, limited or banned).).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..25 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | arizona-state | C1 | student | may | AI allowed for debugging | AI tools are permitted to be employed to assist in debugging common code errors
+1 | brown | C6 | student | may | AI allowed for debugging | consult AI agents to help you debug, answer conceptual
+2 | bucknell | C4 | student | may | AI allowed for debugging and explanations | Debugging assistance - Code explanations - Test case generation - Learning support
+3 | california-berkeley | C3 | student | must-not | no AI debugging of own code | Here's my broken code, debug it for me.
+4 | colby-college | C2 | student | may | AI debugging explanation allowed | Can you help me debug my code?
+5 | emory | C2 | student | may | AI hints for debugging after trying | for debugging after attempting the problem yourself.
+6 | harvey-mudd-college | C6 | student | may | AI allowed for debugging help | You may use LLMs to help explain compiler error messages or runtime errors.
+7 | louisville | C6 | student | must-not | no AI debugging of assignment code | AI tools may not be used to review, debug, modify, improve, or otherwise assist with assignment
+8 | louisville | C6 | ta-staff | may | only staff debug student solutions | Only the course staff may provide solution-specific debugging assistance.
+9 | loyola-marymount | C1 | student | may | AI allowed for error messages | Interpreting error messages, as these might be pretty cryptic!
+10 | loyola-marymount | C2 | student | may | AI allowed for error messages | Interpreting error messages, as these might be pretty cryptic!
+11 | loyola-marymount | C3 | student | may | AI allowed for error messages | Interpreting error messages, as these might be pretty cryptic!
+12 | loyola-marymount | C5 | student | may | AI allowed for error messages | Interpreting error messages, as these might be pretty cryptic!
+13 | loyola-marymount | C6 | student | may | AI allowed for error messages | Interpreting error messages, as these might be pretty cryptic!
+14 | massachusetts-institute-technology | C6 | student | should-not | no AI debugging of lab code | you debug your lab code.
+15 | memphis | C2 | student | may | AI allowed for syntax and debugging help | Assignments/Labs: AI tools may be used for syntax help, debugging tips, or general
+16 | michigan | C1 | student | may | AI allowed for debugging help | Understanding compiler errors or getting suggestions for debugging a problem
+17 | north-carolina-state | C2 | student | may | AI allowed for debugging, one failing test | assist in debugging code or code understanding [Note: no more than one failing test and associated method can be included]
+18 | pennsylvania | C1 | student | may | AI allowed to explain errors | you are welcome to use AI to help you understand what they mean
+19 | pennsylvania | C2 | student | must-not | no AI debugging | Asking a tool, such as ChatGPT, to debug your code is not allowed.
+20 | texas-austin | C2 | student | may | AI may explain failed tests post-deadline | You may use generative AIs to help understand why
+21 | uiuc | C2 | student | may | AI interprets error messages | The AI can help you interpret what went wrong and why.
+22 | uiuc | C2 | student | must-not | no 'fix this' instead of diagnosing | in place of diagnosing the problem yourself.
+23 | washington | C1 | student | may | AI may explain error messages | Asking AI to explain an error message (but not to provide a fix)
+24 | washington | C3 | student | may | AI may explain error messages | Explain the meaning of error messages.
+25 | west-chester-pennsylvania | C4 | student | may | AI ok for obscure errors | It is perfectly ok to ask AI (or the Discord server) about obscure errors or issues arising during labs

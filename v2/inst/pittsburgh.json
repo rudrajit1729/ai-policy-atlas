@@ -1,0 +1,597 @@
+{
+ "university": "University of Pittsburgh",
+ "slug": "pittsburgh",
+ "state": "PA",
+ "type": "R1",
+ "searched": {
+  "university": "found",
+  "school": "found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "new_types": [],
+ "documents": [
+  {
+   "id": "pitt-ctl-teaching-with-generative-ai",
+   "layer": "university",
+   "unit": "University Center for Teaching and Learning",
+   "course": null,
+   "title": "The Prompt: Teaching with Generative AI",
+   "url": "https://teaching.pitt.edu/resources/teaching-with-generative-ai",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance_why": "The page says \"Decide what role, if any, AI should play\" and puts the choice with each instructor, and sets no university rule. The saved text lists no tiers, so tiers is empty.",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "A teaching-center guide hub with links on reflecting on values, developing, implementing and enforcing a course AI policy, and using AI in teaching. The saved page is a landing page with tile blurbs, so the templates named in the collect notes are not in the text.",
+   "units": [
+    {
+     "why": "A statistic about student AI use: \"Nearly 90% of all U.S. college students use AI for their academic work.\" The page presents it as the reason instructors must attend to AI in course design, so it is a rationale (informs, general), addressed to instructors reading the page. No type covers a prevalence statistic used as a reason to act.",
+     "resolution_why": "Coder A coded P55 (gather evidence on how AI affects learning) with actor instructor; coder B coded UNCOVERED with actor admin. The source tile is a blurb addressed to instructors (\"That statistic calls for thoughtful attention to AI in teaching and course design\"). It reports prevalence, not evidence on effects on learning, so P55 does not fit and A's own fit note said so; UNCOVERED follows. Actor is instructor because the page addresses instructors, not an office.",
+     "anchor": "Nearly 90% of all U.S. college students use AI for their academic work.",
+     "frag_start": "Nearly 90% of all",
+     "frag_end": "for their academic work.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "uncovered_note": "States a statistic on student AI use as the reason instructors must attend to AI in teaching and course design.",
+     "topics": [
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "\"Decide what role, if any, AI should play\" tells each instructor to settle their own course's AI role, so the decision sits with the instructor (P04); it is not a tier list (P05).",
+     "anchor": "Decide what role, if any, AI should play",
+     "frag_start": "Decide what role, if any,",
+     "frag_end": "AI should play",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "default-stance"
+     ]
+    },
+    {
+     "why": "\"Communicate your values and expectations\" asks instructors to make their course AI rules explicit; P09 is the nearest type, but the text names no syllabus and says values as well as rules.",
+     "anchor": "Communicate your values and expectations.",
+     "frag_start": "Communicate your values and",
+     "frag_end": "expectations.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "fit_note": "Does not name the syllabus; asks instructors to communicate their values as well as the rules.",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "Under the tile \"Enforce Your Course's AI Policy\": \"Respond appropriately if questions arise.\" It tells instructors to respond to questions about AI use in their course, which is the enforcement step (when-misuse, should). P123 (say how misuse will be handled) is the nearest type; it fits only partly because no detection or handling method is given.",
+     "resolution_why": "Coder A used UNCOVERED, coder B used P123 with a fit note. The tile sits under enforcement and asks for a response when AI-use questions come up, which is a thin form of saying how misuse will be handled; P123's definition (state how misuse will be detected and handled) covers the topic though not the detail. P123 with a fit note follows, per the codebook's rule for partial fits.",
+     "anchor": "Respond appropriately if questions arise.",
+     "frag_start": "Respond appropriately if questions",
+     "frag_end": "arise.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P123",
+     "unit_stance": "neutral",
+     "fit_note": "Only says to respond appropriately when questions about AI use arise; no detection or handling method is stated.",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "\"Surfacing and examining your values and assumptions with careful reflection helps you to be intentional\" asks instructors to weigh their own values before choosing AI commitments; P118 (weigh benefits, risks and values) fits, though it is addressed to instructors rather than users in general.",
+     "resolution_why": "Only coder B coded this tile blurb. The source (\"Surfacing and examining your values and assumptions with careful reflection helps you to be intentional about choosing appropriate commitments\") is a real recommendation to instructors, so it is kept. P118 kept with B's fit note because it is aimed at instructors choosing course commitments.",
+     "anchor": "Surfacing and examining your values and assumptions with careful reflection",
+     "frag_start": "Surfacing and examining your values",
+     "frag_end": "appropriate commitments.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P118",
+     "unit_stance": "neutral",
+     "fit_note": "Addressed to instructors choosing course commitments, not to users deciding whether to use AI.",
+     "topics": [
+      "instructor-discretion",
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "\"AI hasn't changed the fundamentals of effective teaching\" frames AI as a reason to apply learning science, an assignment-design principle rather than a rule. No type covers a claim that teaching fundamentals are unchanged by AI.",
+     "resolution_why": "Only coder B coded this blurb (\"AI hasn't changed the fundamentals of effective teaching\"). It is a real statement of rationale in the source and is kept as UNCOVERED, since no type covers a claim that AI leaves teaching fundamentals unchanged.",
+     "anchor": "AI hasn’t changed the fundamentals of effective teaching.",
+     "frag_start": "AI hasn’t changed the fundamentals",
+     "frag_end": "apply the science of learning thoughtfully.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "uncovered_note": "Claims AI does not change the fundamentals of effective teaching and gives new reasons to apply the science of learning.",
+     "topics": [
+      "learning-rationale",
+      "assessment-design"
+     ]
+    },
+    {
+     "why": "\"Create learning experiences that encourage students to invest in their own learning\" is assignment-design advice offered in an AI context; P35 is nearest but no AI-specific redesign is described.",
+     "resolution_why": "Only coder B coded this blurb (\"Create learning experiences that encourage students to invest in their own learning.\"). It is a real recommendation to instructors on assignment design and is kept; P35 is the place a reader would look, with B's fit note that it is not AI-specific.",
+     "anchor": "Create learning experiences that encourage students to invest in their own learning.",
+     "frag_start": "Create learning experiences that encourage",
+     "frag_end": "in their own learning.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "fit_note": "General assignment-design principle; does not describe an AI-specific redesign.",
+     "topics": [
+      "assessment-design"
+     ]
+    },
+    {
+     "why": "\"Help students understand AI's capabilities and limitations in your discipline\" makes AI a course topic, so courses teach about AI; P44 is nearest, though the text stresses limitations as well as skills.",
+     "resolution_why": "Only coder B coded this blurb (\"Help students understand AI's capabilities and limitations in your discipline.\"). It is a real recommendation to instructors and is kept under P44 with B's fit note.",
+     "anchor": "Help students understand AI’s capabilities and limitations in your discipline.",
+     "frag_start": "Help students understand AI’s capabilities",
+     "frag_end": "in your discipline.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P44",
+     "unit_stance": "encourage",
+     "fit_note": "Also asks instructors to teach AI's limitations, not only its effective use.",
+     "topics": [
+      "ai-literacy-career"
+     ]
+    },
+    {
+     "why": "\"Give your students sound guidance about AI and how to use it\" asks instructors to teach students AI use, which matches P44 (courses teach AI use); the \"Digital natives? Not necessarily\" remark gives the reason.",
+     "anchor": "Give your students sound guidance about AI and how to use it.",
+     "frag_start": "Give your students sound guidance",
+     "frag_end": "how to use it.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P44",
+     "unit_stance": "encourage",
+     "topics": [
+      "ai-literacy-career"
+     ]
+    },
+    {
+     "why": "\"Acquiring AI-use skills is a valuable part of a student's education\" is a professional-skill rationale for teaching effective AI use (P44), not a rule, so it is informs.",
+     "resolution_why": "Both coders coded this sentence as P44, informs, general, encourage. Coder A's anchor was cut mid-word; B's full-sentence anchor is used.",
+     "anchor": "Acquiring AI-use skills is a valuable part of a student’s education.",
+     "frag_start": "Acquiring AI-use skills is",
+     "frag_end": "student’s education.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P44",
+     "unit_stance": "encourage",
+     "topics": [
+      "ai-literacy-career",
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "The tile \"Streamline Your Workload Using AI\" says \"AI can collaborate with you across your professional life, extending your capabilities while keeping your expertise and judgment right at the center.\" It tells instructors what AI may do for their own work on the condition that their judgment stays central, so it is instructor use of AI (P59), may, encourage.",
+     "resolution_why": "Coder A coded one unit (P59, should, encourage); coder B coded the same sentence as P59 with modality may and stance permit. The source says AI \"can collaborate\", a statement of permission with a condition, so modality is may; the tile's heading (Streamline Your Workload Using AI) makes the stance encourage. A's longer anchor is used.",
+     "anchor": "AI can collaborate with you across your professional life, extending your capabilities",
+     "frag_start": "AI can collaborate with you",
+     "frag_end": "expertise and judgment right at the center",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "may",
+     "policy_type": "P59",
+     "unit_stance": "encourage",
+     "fit_note": "General encouragement with a condition that the instructor's judgment stays central, not a list of specific tasks.",
+     "topics": [
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "The tile \"AI and Productivity\" says \"Use AI for planning complex tasks and communicating more effectively.\" It recommends a use of AI for instructors' own work, so it is P59, should, encourage.",
+     "resolution_why": "Only coder B coded this blurb, as may with a restated policy. The source is an imperative recommendation (\"Use AI for ...\"), so modality is should and the full sentence is the anchor with policy null.",
+     "anchor": "Use AI for planning complex tasks and communicating more effectively",
+     "frag_start": "Use AI for planning",
+     "frag_end": "communicating more effectively",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P59",
+     "unit_stance": "encourage",
+     "fit_note": "Productivity and communication uses, not specifically teaching materials or feedback.",
+     "topics": [
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "The tile \"AI and Teaching\" says \"AI can empower your teaching without outsourcing your professional judgment.\" It states a conditional permission for instructors to use AI in teaching, so it is P59, may, permit.",
+     "resolution_why": "Only coder B coded this blurb. It is a real statement to instructors; the sentence is the anchor so policy is null. The condition (no outsourcing of professional judgment) keeps the stance at permit rather than encourage.",
+     "anchor": "AI can empower your teaching without outsourcing your professional judgment",
+     "frag_start": "AI can empower your teaching",
+     "frag_end": "your professional judgment",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "may",
+     "policy_type": "P59",
+     "unit_stance": "permit",
+     "topics": [
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "The tile \"AI and Research\" says \"Enlist AI's assistance with appropriate parts of the research process.\" It recommends using AI in research, with the limit \"appropriate parts\", so it governs AI use in research (P62), should, encourage.",
+     "resolution_why": "Only coder B coded this blurb, as may and permit with actor all and a restated policy. The source is an imperative (\"Enlist\") on a teaching-center page addressed to instructors, so actor is instructor and modality should; the stance is encourage with the condition appropriate parts. The full sentence is the anchor.",
+     "anchor": "Enlist AI's assistance with appropriate parts of the research process",
+     "frag_start": "Enlist AI's assistance with",
+     "frag_end": "of the research process",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P62",
+     "unit_stance": "encourage",
+     "fit_note": "Gives no venue, funder or sponsor rules; only says to use AI for appropriate parts.",
+     "topics": [
+      "instructor-staff-use"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pitt-ai-committee-report",
+   "layer": "university",
+   "unit": "Ad Hoc Committee on Generative AI in Research and Education (Provost / SVC Research)",
+   "course": null,
+   "title": "Considerations for Responsible Use and Recommendations for Generative AI in Research and Education",
+   "url": "https://teaching.pitt.edu/ai-committee-report/",
+   "date_or_term": "committee met Sept 2023 - Feb 2024",
+   "stance_why": "The page reports a committee charge to articulate a \"positive but careful approach\" and a \"living framework\" of Points to Consider, but states no rule on student or instructor AI use. It sets no stance itself and leaves policy to those who use the framework, so delegates.",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "A landing page summarizing the committee's charge, approach and Points to Consider framework, with the full report in a linked PDF that is not in the text. It sets no rules on student AI use.",
+   "units": [
+    {
+     "why": "The committee was charged to \"Articulate a 'positive but careful approach' to Generative AI\". It states the institution's intended position on GenAI (welcoming with care), so it is an institution-wide framework (P56) at set-up, informs, with a permit stance.",
+     "resolution_why": "Coder A anchored on \"positive but careful approach\" (informs, general, neutral); coder B anchored on the full charge item (should, before-course, permit). The source is the description of the committee's charge, not an instruction to a reader, so modality is informs; phase is before-course because it is institutional set-up; the words \"positive but careful\" make the unit stance permit.",
+     "anchor": "Articulate a “positive but careful approach” to Generative AI",
+     "frag_start": "Articulate a “positive but careful",
+     "frag_end": "to Generative AI",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "permit",
+     "topics": [
+      "default-stance"
+     ]
+    },
+    {
+     "why": "The sentence says the Committee was \"constituted and charged by former Provost Cudd, Interim Provost McCarthy, and SVC Rutenbar\". It describes who created the body and how, so it is P84, informs.",
+     "resolution_why": "Both coders chose P84, admin, informs; phase differed (A general, B before-course). It describes how the framework was set up, so before-course (institutional set-up) is used.",
+     "anchor": "constituted and charged by former Provost Cudd, Interim Provost McCarthy, and SVC Rutenbar",
+     "frag_start": "was constituted and charged",
+     "frag_end": "SVC Rutenbar to:",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P84",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "A charge item: \"Conduct benchmarking with peer institutions regarding policies or guidance on GenAI uses\". It records that the committee was charged to engage peer institutions, so it is P88, informs.",
+     "resolution_why": "Coders agreed on P88, admin, before-course; modality differed (A informs, B should). The text reports an item of the committee's charge, not a rule for a reader, so informs.",
+     "anchor": "Conduct benchmarking with peer institutions regarding policies or guidance on GenAI uses",
+     "frag_start": "Conduct benchmarking with peer institutions",
+     "frag_end": "GenAI uses, particularly research uses",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P88",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "A charge item: \"Map the landscape for uses of GenAI at Pitt\". It records an aim to survey how GenAI is used on campus. P55 is the nearest type but it covers evidence on effects on learning, which this does not state.",
+     "resolution_why": "Only coder B coded this charge item. It is a real statement in the source and is kept. P55 is kept with B's fit note, as the mapping is of uses, not of effects on learning. Modality informs, as for the other charge items.",
+     "anchor": "Map the landscape for uses of GenAI at Pitt",
+     "frag_start": "Map the landscape for uses",
+     "frag_end": "research and instructional uses);",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P55",
+     "unit_stance": "neutral",
+     "fit_note": "Maps where GenAI is used at Pitt; it does not study effects on learning or performance.",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "A charge item: \"Crowdsource and gather together GenAI resources, initiatives, activities\". It records an aim to compile an inventory of campus GenAI resources and programming. No type covers compiling an inventory.",
+     "resolution_why": "Only coder B coded this charge item. It is a real statement in the source and is kept as UNCOVERED, as B coded it. Modality informs, as for the other charge items.",
+     "anchor": "Crowdsource and gather together GenAI resources, initiatives, activities",
+     "frag_start": "Crowdsource and gather together GenAI",
+     "frag_end": "programming at Pitt; and",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "uncovered_note": "Charge to compile an inventory of campus GenAI resources, initiatives and programming.",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "A charge item: \"Pitt can position itself as a leader in the GenAI arena\". It states an institutional aim to lead in AI, which is nearest to investing in AI capacity (P122); it commits no funding or infrastructure.",
+     "resolution_why": "Coders agreed on P122, admin, before-course, encourage; modality differed (A informs, B should). It reports an aim in the charge, so informs.",
+     "anchor": "Pitt can position itself as a leader in the GenAI arena",
+     "frag_start": "Identify key areas in which",
+     "frag_end": "leader in the GenAI arena.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P122",
+     "unit_stance": "encourage",
+     "fit_note": "Leadership positioning goal; no funding, infrastructure or research commitment is stated.",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "The Committee \"recognized that well-informed, judicious employment of generative artificial intelligence ... holds potential to promote equity, improve efficiency, enhance learning\". It states benefits of AI, including for learning (P87), as a principle for everyone.",
+     "resolution_why": "Coders agreed on P87, general, informs, encourage; actor differed (A admin, B all). The statement of benefits is a general principle not directed at one office, so all.",
+     "anchor": "holds potential to promote equity, improve efficiency, enhance learning",
+     "frag_start": "well-informed, judicious employment of generative",
+     "frag_end": "civic life and geopolitics.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P87",
+     "unit_stance": "encourage",
+     "topics": [
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "The Committee recognized \"the importance of considering the normative questions\", the whether and if-so-how questions about using these tools. It asks users to weigh values before use (P118), so should, with a neutral unit stance.",
+     "resolution_why": "Coders agreed on P118, general, neutral; actor differed (A admin, B all) and modality differed (A informs, B should). The sentence says considering the normative questions is important, which is a recommendation to anyone using the tools, so all and should. A's anchor, which names the importance, is used.",
+     "anchor": "the importance of considering the normative questions",
+     "frag_start": "the importance of considering the",
+     "frag_end": "use of these tools.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P118",
+     "unit_stance": "neutral",
+     "fit_note": "Frames whether and how to use AI as normative questions to examine; does not tell users to weigh benefits and risks.",
+     "topics": [
+      "ethics-bias-environment"
+     ]
+    },
+    {
+     "why": "The Committee suggests it or another body \"continue to review the GenAI/AI landscape at least annually for the foreseeable future\". It sets a review cycle, so P54, over-time, should.",
+     "resolution_why": "Both coders agreed on all codes.",
+     "anchor": "continue to review the GenAI/AI landscape at least annually for the foreseeable future",
+     "frag_start": "the Committee suggests that it",
+     "frag_end": "for the foreseeable future.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "should",
+     "policy_type": "P54",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "The Points to Consider framework \"may serve as a 'living framework' for future deliberations\", because uses and the technology are rapidly evolving. It says the framework will be revisited, so P54, over-time, informs.",
+     "resolution_why": "Coder A coded P54 over-time; coder B coded P56 general. The passage's point is that the framework is living and to be revisited as the technology evolves, which is the revisit-regularly type; P56 is where the framework itself is described, in the unit on employing the Points to Consider. A's P54 follows, with its fit note.",
+     "anchor": "may serve as a “living framework” for future deliberations",
+     "frag_start": "The Committee recognized that the",
+     "frag_end": "for future deliberations",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "informs",
+     "policy_type": "P54",
+     "unit_stance": "neutral",
+     "fit_note": "Also states that the technology and its uses are rapidly evolving as the reason.",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "\"The Committee urges that these Points to Consider be employed when implementing its Recommendations.\" It recommends a framework for implementing the institution's recommendations, so P56, should.",
+     "resolution_why": "Both coders agreed on all codes.",
+     "anchor": "these Points to Consider be employed when implementing its Recommendations",
+     "frag_start": "The Committee urges that these",
+     "frag_end": "implementing its Recommendations.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance"
+     ]
+    },
+    {
+     "why": "The report offers \"Points to Consider in addressing concerns or developing policy regarding GenAI\". It describes the institution-wide framework the report contains, so P56, informs.",
+     "resolution_why": "Only coder A coded this passage. It is a real statement in the source, though it overlaps the unit on employing the Points to Consider; it describes what the framework is for, while the other unit urges its use. Kept, with phase general because it describes the framework rather than setting it up.",
+     "anchor": "Points to Consider in addressing concerns or developing policy regarding GenAI",
+     "frag_start": "Points to Consider in addressing",
+     "frag_end": "regarding GenAI",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance"
+     ]
+    },
+    {
+     "why": "The report is grounded in a \"Mapping Project exploring faculty perspectives on GenAI through surveys and focus groups\". It records evidence-gathering by the institution, so P55 (with a fit note), informs.",
+     "resolution_why": "Only coder A coded this passage. It is a real statement in the source and is kept. P55 stays with A's fit note: the evidence is about faculty perspectives, not effects on learning.",
+     "anchor": "Mapping Project exploring faculty perspectives on GenAI through surveys and focus groups",
+     "frag_start": "Mapping Project exploring faculty perspectives",
+     "frag_end": "in eight Pitt units",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "informs",
+     "policy_type": "P55",
+     "unit_stance": "neutral",
+     "fit_note": "Evidence on faculty perspectives, not on how AI affects student learning.",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "The report is grounded in a \"Journal and Publisher Policies Project examining policies regarding use of GenAI in academic publishing\". It concerns AI in research and publishing (P62) but states no rule for researchers, so informs.",
+     "resolution_why": "Both coders agreed on all codes.",
+     "anchor": "Journal and Publisher Policies Project examining policies regarding use of GenAI in academic publishing",
+     "frag_start": "Journal and Publisher Policies Project",
+     "frag_end": "in academic publishing",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P62",
+     "unit_stance": "neutral",
+     "fit_note": "Describes a study of publisher policies; no rule for Pitt researchers is stated on this page.",
+     "topics": [
+      "policy-evolution"
+     ]
+    }
+   ],
+   "stance_resolution_why": "Coder A coded delegates; coder B coded permit on the strength of \"positive but careful\" and the benefits sentence. Those words describe the charge and the committee's recognition, not a rule; the full report is not in the text. delegates follows."
+  },
+  {
+   "id": "pittsburgh-ssoe-integrity",
+   "layer": "school",
+   "unit": "Swanson School of Engineering",
+   "course": null,
+   "title": "Swanson School of Engineering Academic Integrity Policy: Students and Faculty Obligations and Hearing Procedures",
+   "url": "https://engineering.pitt.edu/contentassets/0f1fe3fd97424866b12ef28c2886fc50/ssoe_ai_policy_2024-08-28.pdf",
+   "date_or_term": "Effective 2020-06-15; last revised 2024-08-28",
+   "stance_why": "The policy makes AI help a violation only \"in a manner not authorized by the instructor\" (evaluations) or \"expressly prohibited by the instructor\" (other work), and requires acknowledgement of AI sources. The instructor decides what AI use is allowed, so the document sets no single stance and delegates.",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "The school integrity policy lists AI inside its definitions of violations: unauthorized AI help in evaluation, AI dependence the instructor prohibits, unacknowledged AI work and passing off AI work as one's own. The remainder is hearing procedure with no AI-specific content.",
+   "units": [
+    {
+     "why": "Violation item 3: a student violates the obligation who \"Receives assistance during academic evaluation from another person or artificial intelligence in a manner not authorized by the instructor\". It bans AI help during evaluations unless the instructor authorizes it, so P22 (no AI on exams and assessments), must-not.",
+     "resolution_why": "Coder A coded P36 (treat unauthorized AI use as misconduct); coder B coded P22 (no AI on exams or in-class assessments). Both fit, because the item is in a list of violations. P22 is chosen because the item is the only one aimed at evaluation and says AI is barred there unless the instructor authorizes it, which is where a reader looking for the exam rule would look; P36 does not add anything the item says. Actor, phase and modality agreed.",
+     "anchor": "Receives assistance during academic evaluation from another person or artificial intelligence in a manner",
+     "frag_start": "Receives assistance during academic evaluation",
+     "frag_end": "not authorized by the instructor.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-assessment",
+     "modality": "must-not",
+     "policy_type": "P22",
+     "unit_stance": "restrict",
+     "topics": [
+      "exams-in-person",
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Violation item 8: a student violates the obligation who \"Depends on the aid of others or artificial intelligence in a manner expressly prohibited by the instructor\" in work submitted for credit. AI aid becomes a violation only where the instructor prohibits it, so the instructor sets the rule (P04) and the stance is permit by default.",
+     "resolution_why": "Coder A coded P36, unit stance restrict; coder B coded P04, unit stance permit, with a fit note. The item makes AI aid a violation only where \"expressly prohibited by the instructor\", so the rule is set per instructor and AI is allowed otherwise. P04 follows, with B's fit note that it also makes prohibited aid a violation. Modality must-not and phase during-work agreed.",
+     "anchor": "artificial intelligence in a manner expressly prohibited by the instructor",
+     "frag_start": "Depends on the aid of",
+     "frag_end": "academic credit or evaluation.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P04",
+     "unit_stance": "permit",
+     "fit_note": "Also makes expressly prohibited AI aid on submitted work a violation.",
+     "topics": [
+      "instructor-discretion",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "Violation item 10: a student violates the obligation who \"Presents as one's own ... the ideas, representations, or words of another person, persons, or artificial intelligence without customary and proper acknowledgement of sources\". It requires acknowledging AI sources, so P24, must-not as a violation, stance require.",
+     "resolution_why": "Both coders chose P24. Modality differed (A must-not, B must) and stance (both restrict). The item is phrased as a violation, so modality must-not; its effect is to require acknowledgement of AI sources, so the unit stance is require, not restrict.",
+     "anchor": "words of another person, persons, or artificial intelligence without customary and proper acknowledgement of sources.",
+     "frag_start": "Presents as one’s own, for academic",
+     "frag_end": "acknowledgement of sources.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P24",
+     "unit_stance": "require",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "Violation item 11: a student violates the obligation who \"Submits the work of another person or artificial intelligence in a manner which represents the work to be one's own\". It bans passing off AI work as one's own, so P19, must-not, prohibit.",
+     "resolution_why": "Both coders agreed on all codes.",
+     "anchor": "work of another person or artificial intelligence in a manner which represents the work",
+     "frag_start": "Submits the work of another",
+     "frag_end": "work to be one’s own.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P19",
+     "unit_stance": "prohibit",
+     "topics": [
+      "prohibited-uses",
+      "code-generation"
+     ]
+    }
+   ],
+   "stance_resolution_why": "Coder A coded delegates; coder B coded restrict. Evaluations are barred unless authorized, but for all other work AI is a violation only where the instructor expressly prohibits it, so the school rule hands the decision to instructors. delegates follows."
+  }
+ ],
+ "notes": "Thin AI text. The CTL page is a landing page of tile blurbs; the three syllabus templates and the committee PDF are not in the saved text. In the SSOE PDF 'AI' in hearing procedures means 'academic integrity'. Coder B's units B4 to B16 on the SSOE policy (the general violation list intro, the instructor duty to announce permissible materials, hearing steps, rights, sanctions, board and appeal) were dropped because none states anything about AI use; they are general integrity procedure. Coder A's note that generic sanctions and hearing procedures were not coded was followed. Fit notes from both coders were kept."
+}

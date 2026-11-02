@@ -1,0 +1,27 @@
+{
+ "slug": "san-diego",
+ "university": "University of San Diego",
+ "units_searched": [
+  {"unit": "Shiley-Marcos School of Engineering (contains Computer Science, Electrical Engineering, Integrated Engineering)", "layer": "school", "site": "https://www.sandiego.edu/engineering/",
+   "queries": ["site:sandiego.edu engineering generative AI policy students computer science", "Shiley-Marcos School of Engineering AI use policy academic integrity undergraduate computer science", "site:sandiego.edu \"Computer Science\" department academic integrity AI syllabus statement engineering"],
+   "pages_checked": ["https://www.sandiego.edu/engineering/"],
+   "result": "none-found",
+   "note": "Engineering homepage has no AI policy. A search snippet describing a school AI policy ('AI2: Artificial Intelligence x Academic Integrity', instructors set course policies) came from scu.edu (Santa Clara University), not USD, and was excluded."},
+  {"unit": "Department of Computer Science", "layer": "computing", "site": "https://www.sandiego.edu/engineering/",
+   "queries": ["University of San Diego computer science department ChatGPT policy courses \"Computer Science\"", "site:sandiego.edu \"Computer Science\" department academic integrity AI syllabus statement engineering"],
+   "pages_checked": ["https://www.sandiego.edu/engineering/"],
+   "result": "none-found",
+   "note": "No department-level AI policy surfaced. The CS department pages themselves were not opened."},
+  {"unit": "MS Applied Artificial Intelligence and MS Applied Data Science (online)", "layer": "computing", "site": "https://onlinedegrees.sandiego.edu/",
+   "queries": ["site:onlinedegrees.sandiego.edu student handbook generative AI", "Shiley-Marcos School of Engineering AI use policy academic integrity undergraduate computer science"],
+   "pages_checked": ["https://onlinedegrees.sandiego.edu/wp-content/uploads/2026/06/MS-AAI-Student-Handbook-2026-2027.pdf", "https://onlinedegrees.sandiego.edu/wp-content/uploads/2023/10/Student_Handbook_MADS_October2023.docx.pdf"],
+   "result": "found",
+   "note": "Both handbooks, already collected, contain a 'Generative AI Guidelines' section (transparency and disclosure of ChatGPT-type use). I re-read the saved text of each and confirmed the AI text is present."}
+ ],
+ "documents": [
+  {"id": "sandiego-msaai-handbook", "layer": "computing", "unit": "Shiley-Marcos School of Engineering, MS Applied Artificial Intelligence", "title": "MS in Applied Artificial Intelligence Graduate Student Handbook 2026-2027", "url": "https://onlinedegrees.sandiego.edu/wp-content/uploads/2026/06/MS-AAI-Student-Handbook-2026-2027.pdf", "date_or_term": "2026-2027", "text_file": ".cache/text/v2-sandiego-msaai.txt", "quality": "partial", "quality_note": "Generative AI Guidelines section inside a roughly 50k-character program handbook; AI text verified present.", "in_first_collection": true},
+  {"id": "sandiego-mads-handbook", "layer": "computing", "unit": "Shiley-Marcos School of Engineering, MS Applied Data Science (Online)", "title": "MS Applied Data Science Student Handbook (October 2023)", "url": "https://onlinedegrees.sandiego.edu/wp-content/uploads/2023/10/Student_Handbook_MADS_October2023.docx.pdf", "date_or_term": "October 2023", "text_file": ".cache/text/v2-sandiego-mads.txt", "quality": "thin", "quality_note": "Short Generative AI Guidelines paragraph; older edition; AI text verified present.", "in_first_collection": true}
+ ],
+ "course_examples": [],
+ "notes": "Confirms the first collection: the only computing-layer documents are the two program-level online MS handbooks. No undergraduate CS or school-level AI policy found. These are program handbooks, not department-wide, so 'found' rests on program-level scope. Direct fetches covered only the engineering homepage."
+}

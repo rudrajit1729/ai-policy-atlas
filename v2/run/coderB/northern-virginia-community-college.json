@@ -1,0 +1,112 @@
+{
+ "university": "Northern Virginia Community College",
+ "slug": "northern-virginia-community-college",
+ "state": "VA",
+ "type": "community-college",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "nova-syllabus-insert-fall26",
+   "layer": "university",
+   "unit": "NOVA Online",
+   "course": null,
+   "title": "NOVA Policies and Procedures syllabus insert, Fall 2026",
+   "url": "https://novaonline.nvcc.edu/Canvas_template/Fall2026SyllabusInsert.pdf",
+   "date_or_term": "Fall 2026",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "A one-paragraph academic integrity section in the Fall 2026 NOVA Online syllabus insert. It says AI use to complete assigned work may violate the academic integrity policy, urges caution with assignment-assist web tools without instructor permission, and lists penalties. It sets no AI rule of its own beyond that.",
+   "stance_why": "The insert says AI use to complete assigned work \"may be considered a violation of the academic integrity policy\" and ties tool use to \"their instructors' explicit permission\", so permission is left to instructors and the document sets no named tiers or ban of its own; I coded delegates rather than restrict because the wording is hedged ('may', 'urged to be cautious').",
+   "units": [
+    {
+     "why": "The sentence says \"the use of AI to complete assigned work may be considered a violation of the academic integrity policy\". It classifies AI use on assigned work as potential academic misconduct (P36), addressed to students, in the misuse phase; 'may be' makes it conditional, so modality is should-not rather than must-not and the unit stance is restrict.",
+     "anchor": "use of AI to complete assigned work may be considered a violation",
+     "frag_start": "Additionally, the use of AI",
+     "frag_end": "of the academic integrity policy.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "should-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "\"Students are urged to be cautious when using any web tools designed to assist with assignments without their instructors' explicit permission\" makes instructor permission the condition for assignment-assist tools, which implicitly covers AI. P06 (default when silent) fits best, though it is phrased as a caution rather than a firm fallback, and it does not say AI by name; P10 (ask first) fits less because it does not tell students to ask.",
+     "anchor": "cautious when using any web tools designed to assist with assignments",
+     "frag_start": "Students are urged to be",
+     "frag_end": "to do so and",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P06",
+     "unit_stance": "restrict",
+     "topics": [
+      "default-stance",
+      "instructor-discretion"
+     ],
+     "fit_note": "Phrased as a caution about web assignment-assist tools without explicit instructor permission, not a firm fallback rule, and does not name AI."
+    },
+    {
+     "why": "The same sentence ends \"to cite their sources in all their work\". This tells students to cite sources, which sits nearest P24 (disclose/cite), but it is a generic citation duty and does not mention AI output by name, so fit is partial.",
+     "anchor": "to cite their sources in all their work",
+     "frag_start": "to do so and to",
+     "frag_end": "in all their work.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P24",
+     "unit_stance": "neutral",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "fit_note": "Generic duty to cite sources in all work; AI is not named as something to cite."
+    },
+    {
+     "why": "\"Consequences of academic dishonesty can include a failing grade on an assignment, a failing grade in the course\" lists specific penalties in advance, including suspension or expulsion (P37). It covers academic dishonesty generally, which includes AI misuse per the preceding sentence, so fit is partial.",
+     "anchor": "a failing grade on an assignment, a failing grade in the course",
+     "frag_start": "Consequences of academic dishonesty can",
+     "frag_end": "suspension or expulsion from the college.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "fit_note": "Penalties are stated for academic dishonesty in general, not for AI misuse specifically."
+    },
+    {
+     "why": "\"NOVA faculty may choose to use tools such as Turnitin to detect and flag instances of plagiarism\" permits faculty to use similarity-checking software (P40). It names plagiarism, not AI detection, so fit is partial; the actor is the instructor and the phase is misuse.",
+     "anchor": "may choose to use tools such as Turnitin to detect and flag instances",
+     "frag_start": "NOVA faculty may choose to",
+     "frag_end": "in academic writing.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P40",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ],
+     "fit_note": "Concerns plagiarism detection with Turnitin; AI detection is not mentioned."
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Only the Fall 2026 insert was coded; the Spring 2026 insert was excluded as superseded. Academic Integrity Policy 224 was not available."
+}

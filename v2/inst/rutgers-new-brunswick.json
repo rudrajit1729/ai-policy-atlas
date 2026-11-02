@@ -1,0 +1,999 @@
+{
+ "university": "Rutgers University-New Brunswick",
+ "slug": "rutgers-new-brunswick",
+ "state": "NJ",
+ "type": "R1",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "rutgers-nb-oit-ai-guidance",
+   "layer": "university",
+   "unit": "Rutgers Office of Information Technology (all campuses)",
+   "course": null,
+   "title": "Guidance on the use of AI at Rutgers",
+   "url": "https://it.rutgers.edu/ai/guidance-on-the-use-of-ai-at-rutgers/",
+   "date_or_term": "current (page copyright 2026)",
+   "stance": "restrict",
+   "tiers": [],
+   "stance_why": "Coder A: delegates; coder B: restrict. The page says guidance 'will typically vary depending on the discipline, course, and/or instructor' and leaves the details to instructors, but it also sets a university-wide default: AI 'should not be considered permissible for coursework unless clearly stated or communicated by instructors'. That is the restrict definition (banned unless explicitly permitted), and the default is what binds when instructors are silent, so restrict. Same resolution as the Newark OIT page.",
+   "summary": "Universitywide IT guidance on AI. It says AI guidance varies by instructor, but AI should not be treated as permissible for coursework unless instructors say so. It also covers approved tools, confidential data, verifying output and purchasing.",
+   "units": [
+    {
+     "why": "The sentence says 'only Rutgers-approved AI tools should be used' and gives the reason 'to protect university data', so it is a vetted-tool preference (P50) addressed to everyone doing university work.",
+     "anchor": "only Rutgers-approved AI tools should be used at the university",
+     "frag_start": "To protect university data and",
+     "frag_end": "used at the university",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data",
+      "course-provided-tools"
+     ]
+    },
+    {
+     "why": "States that approved versions of the tools do not train models on user data; a factual privacy assurance, so informs, and P50 (vetted tools protect data) is the place a reader would look.",
+     "anchor": "your data will not be used to train the models underlying the tools",
+     "frag_start": "By using the Rutgers-approved versions",
+     "frag_end": "underlying the tools",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "OIT says it 'provides access to generative AI tools with protections'; the university supplies sanctioned licensed tools, which is P17. P50 was considered but the point of this sentence is provision.",
+     "anchor": "provides access to generative AI tools with protections for use in university work",
+     "frag_start": "The Office of Information Technology (OIT)",
+     "frag_end": "use in university work",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P17",
+     "unit_stance": "permit",
+     "topics": [
+      "course-provided-tools",
+      "privacy-data"
+     ],
+     "fit_note": "Provision is for university work generally, not a course-specific tool."
+    },
+    {
+     "why": "The page says academic-setting guidance 'will typically vary depending on the discipline, course, and/or instructor', so the university sets no single rule and hands the decision to instructors (P04).",
+     "anchor": "guidance on the appropriate use of AI tools in academic settings will typically vary",
+     "frag_start": "At Rutgers, guidance on the",
+     "frag_end": "course, and/or instructor",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "default-stance"
+     ]
+    },
+    {
+     "why": "Faculty 'should consider providing guidance to students', a soft recommendation that instructors communicate AI expectations; closest to P09 although it is only 'consider'.",
+     "anchor": "Faculty should consider providing guidance to students on the use of AI",
+     "frag_start": "Faculty should consider providing guidance",
+     "frag_end": "support learning and coursework",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "instructor-discretion"
+     ],
+     "fit_note": "Only 'should consider', not a mandatory syllabus statement. | Only \"should consider\" providing guidance; it does not require a syllabus statement.",
+     "resolution_why": "A coded phase before-course, B course-start. Source: 'Faculty should consider providing guidance to students on the use of AI to support learning and coursework'. The act is communicating expectations to students, which the codebook places in course-start; both coders agree on P09 and should, with the fit note that this is only 'should consider'. Final course-start."
+    },
+    {
+     "why": "Students 'are encouraged to review course materials and speak with their instructors' to learn expectations, i.e. ask before using AI, so P10.",
+     "anchor": "students are encouraged to review course materials and speak with their instructors",
+     "frag_start": "students are encouraged to review",
+     "frag_end": "expectations related to AI",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P10",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "\"should not be considered permissible for coursework unless clearly stated or communicated by instructors\" is the rule for silence: AI is off unless the instructor allows it, so P06.",
+     "anchor": "should not be considered permissible for coursework unless clearly stated or communicated by instructors",
+     "frag_start": "Though AI tools are widely available",
+     "frag_end": "communicated by instructors.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should-not",
+     "policy_type": "P06",
+     "unit_stance": "restrict",
+     "topics": [
+      "default-stance",
+      "instructor-discretion",
+      "prohibited-uses"
+     ],
+     "resolution_why": "A coded must-not / during-work, B should-not / general. Source: 'they should not be considered permissible for coursework unless clearly stated or communicated by instructors'. The modality word is 'should not', so should-not (not must-not). The rule governs what students do with coursework, so during-work, matching how the other sample-rule sentences were phased. P06 (fallback when instructors are silent) and restrict agree."
+    },
+    {
+     "why": "'Students are responsible for understanding and abiding by their program and instructors' guidance' puts the burden of knowing the rules on students; P29 fits partly since it concerns compliance, not ownership of work.",
+     "anchor": "Students are responsible for understanding and abiding by their program and instructors",
+     "frag_start": "Students are responsible for understanding",
+     "frag_end": "rules on the use of AI",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "must",
+     "policy_type": "P29",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding",
+      "syllabus-communication"
+     ],
+     "fit_note": "Responsibility is for knowing and following rules, not for owning submitted work. | Responsibility is for knowing and following program and instructor AI rules, not for owning submitted work."
+    },
+    {
+     "why": "Quoting Policy 10.2.13, work must be \"the student's own and created without the aid of impermissible technologies\"; this is the own-work rule, P29, applied to AI as an impermissible technology.",
+     "anchor": "the student’s own and created without the aid of impermissible technologies, materials, or collaborations",
+     "frag_start": "the principles of academic integrity require",
+     "frag_end": "materials, or collaborations.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P29",
+     "unit_stance": "restrict",
+     "topics": [
+      "accountability-understanding",
+      "integrity-sanctions",
+      "prohibited-uses"
+     ],
+     "fit_note": "The text never says 'misconduct' for AI explicitly; the link is through 'impermissible technologies'.",
+     "resolution_why": "A coded P36 (unauthorized use as misconduct), phase during-work; B coded P29 (own work), phase general. Source: the sentence quotes Academic Integrity Policy 10.2.13: coursework must be 'the student's own and created without the aid of impermissible technologies, materials, or collaborations'. It never says misconduct or sanctions, and it states the own-work principle, so P29; as a quoted principle rather than a task-specific instruction it is phase general. unit_stance restrict (both)."
+    },
+    {
+     "why": "Warns that confidential information and PHI 'may not be appropriate for use in AI applications', a data-protection rule, P50.",
+     "anchor": "may not be appropriate for use in AI applications and systems",
+     "frag_start": "Confidential information, Protected Health Information (PHI)",
+     "frag_end": "AI applications and systems",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "Phase differed (A during-work, B general). Source: confidential information and PHI 'may not be appropriate for use in AI applications and systems'. The rule bears on what users put into AI tools while working, so during-work. Actor all, should-not, P50 agree."
+    },
+    {
+     "why": "Points readers to the data classification chart and Information Classification Policy 70.1.2, binding AI use to existing university policy, so P77.",
+     "anchor": "Information Classification Policy 70.1.2",
+     "frag_start": "this data classification chart for AI tools",
+     "frag_end": "other Information Technology policies",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "Found by coder A only. Source: 'this data classification chart for AI tools, as well as the Information Classification Policy 70.1.2 and other Information Technology policies' for 'additional guidance' on confidential data. It binds AI use to an existing university policy (P77), so it is a real statement and is kept as an informs unit; the anchor is the policy title, which is the most load-bearing span."
+    },
+    {
+     "why": "'Always review and verify AI content and outputs' is a direct verify-output rule (P31).",
+     "anchor": "Always review and verify AI content and outputs.",
+     "frag_start": "Always review and verify AI",
+     "frag_end": "content and outputs.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P31",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "States AI tools can produce biased and inaccurate information and uncredited copyrighted content, a risk statement supporting verification; closest P31.",
+     "anchor": "AI tools can produce biased and inaccurate information",
+     "frag_start": "AI tools can produce biased",
+     "frag_end": "biased and inaccurate information",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P31",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment",
+      "accountability-understanding"
+     ],
+     "fit_note": "The sentence's copyright claim is coded as a separate P52 unit. Original notes: Also mentions bias and uncredited copyrighted content (P53, P52).",
+     "resolution_why": "Both coders merged the bias/inaccuracy claim with the copyright claim in one unit and coded P31 informs. Source: 'AI tools can produce biased and inaccurate information, and may include copyrighted information without attribution.' Two distinct claims, so I split: this unit keeps the bias/inaccuracy claim (P31); the copyright claim is a separate unit (P52)."
+    },
+    {
+     "why": "The same sentence warns that AI output 'may include copyrighted information without attribution', a distinct claim about copyright and attribution of AI output; P52 (licensing and copyright), informs.",
+     "anchor": "may include copyrighted information without attribution",
+     "frag_start": "and may include copyrighted information",
+     "frag_end": "copyrighted information without attribution.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P52",
+     "unit_stance": "neutral",
+     "topics": [
+      "intellectual-property",
+      "ethics-bias-environment"
+     ],
+     "resolution_why": "Neither coder made this a separate unit (both merged it with the bias/inaccuracy claim; B listed intellectual-property as a topic, A noted P52 in a fit note). Source: 'AI tools can produce biased and inaccurate information, and may include copyrighted information without attribution.' Two distinct claims, so the copyright claim is split off as its own unit under P52."
+    },
+    {
+     "why": "'You are responsible for ensuring the accuracy and appropriateness of AI-generated content' makes the user accountable for the output they use, P29.",
+     "anchor": "You are responsible for ensuring the accuracy and appropriateness of AI-generated content",
+     "frag_start": "You are responsible for ensuring",
+     "frag_end": "used for university work.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P29",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "fit_note": "Accountability for accuracy of AI content, rather than ownership of submissions."
+    },
+    {
+     "why": "Purchases of AI applications 'must follow the same security processes and risk assessments'; an institutional procurement rule, nearest P65 (review of AI vendors).",
+     "anchor": "you must follow the same security processes and risk assessments",
+     "frag_start": "If you are considering the purchase",
+     "frag_end": "standards for digital accessibility",
+     "policy": "Anyone considering purchasing an AI application for use at Rutgers must follow the same security processes and risk assessments as for other software purchases, as well as standards for digital accessibility.",
+     "actor": "all",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P65",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data",
+      "equity-access"
+     ],
+     "fit_note": "Covers procurement review, not vendor data-sharing limits.",
+     "resolution_why": "A coded unit_stance restrict with policy null; B wrote a normalized policy and coded neutral. Source: 'If you are considering the purchase of an AI application for use at Rutgers, you must follow the same security processes and risk assessments as for other software purchases, as well as standards for digital accessibility.' The anchor alone omits the purchasing context and the accessibility clause, so I keep B's normalized policy. It is a process requirement, not a position on whether AI may be used, so neutral. P65, must, before-course, all agree (A's fit note kept)."
+    },
+    {
+     "why": "Lists the Academic Integrity, Information Classification and Acceptable Use policies as 'particularly relevant for the use of AI', directing AI use under existing policies, P77.",
+     "anchor": "particularly relevant for the use of AI at Rutgers",
+     "frag_start": "The following policies within the",
+     "frag_end": "use of AI at Rutgers",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions",
+      "policy-evolution"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "rutgers-nb-otear-ai",
+   "layer": "university",
+   "unit": "OTEAR (Office of Teaching Evaluation and Assessment Research)",
+   "course": null,
+   "title": "AI in Education - OTEAR Rutgers",
+   "url": "https://otear.rutgers.edu/initiatives/ai/",
+   "date_or_term": "current (copyright 2026); page states it is archived and no longer maintained",
+   "stance": "delegates",
+   "tiers": [
+    "not permitted in any stages of writing",
+    "only to brainstorm and see examples",
+    "fully permitted with citation and ability to explain"
+   ],
+   "stance_why": "The page tells faculty to 'Develop clear policies for each course' and offers three sample syllabus statements ('not permitted', 'only permitted to help you brainstorm', 'fully permitted, but you must cite the tool') depending on 'whether AI tools will be banned or permitted'. The page itself chooses none, so it delegates with templates.",
+   "summary": "Archived OTEAR page for Rutgers faculty on AI. It gives advice to learn the tools, redesign assignments and write course policies, three sample syllabus statements, an FAQ on limits and deterrence, and long lists of tools, events and readings that carry little policy content.",
+   "units": [
+    {
+     "why": "The page frames AI learning as 'shared learning' among students, staff and faculty under 'critical AI literacy'; it is a framing of AI-literacy work, nearest P70 (AI-literacy provision) though it is not a training offer.",
+     "anchor": "a process of shared learning that we think of in terms of critical AI literacy",
+     "frag_start": "Students, staff, and faculty alike are naturally keen",
+     "frag_end": "critical AI literacy.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P70",
+     "unit_stance": "neutral",
+     "topics": [
+      "ai-literacy-career"
+     ],
+     "fit_note": "Framing of critical AI literacy as shared learning, not a training offer.",
+     "resolution_why": "Found by coder A only. Source: 'a process of shared learning that we think of in terms of critical AI literacy.' It frames AI learning for students, staff and faculty and is a real statement about how the office views AI literacy, kept as an informs unit. P70 is the nearest type; it is a framing, not a training offer, so a fit note is kept."
+    },
+    {
+     "why": "Saying chatbots rest on data \"scraped from the Internet (usually without consent)\" names an ethical and IP harm; P53 (bias, harms).",
+     "anchor": "from the Internet (usually without consent)",
+     "frag_start": "Chatbots of this kind work through",
+     "frag_end": "without consent).",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P53",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment",
+      "intellectual-property"
+     ],
+     "fit_note": "Also warns of inaccuracy (P31).",
+     "resolution_why": "Coder A coded one unit (P53, informs) for the sentence on chatbots; B split it into two. Source: chatbots work on data 'scraped from the Internet (usually without consent)' and outputs 'may be superficial, inaccurate, biased, or confabulated.' Those are two claims (data-sourcing harm, unreliable output), so I keep B's split: this unit is the consent/scraping harm (P53); the unreliability claim is the next unit (P31)."
+    },
+    {
+     "why": "The same passage says outputs \"may be superficial, inaccurate, biased, or confabulated\", a warning that output is unreliable; P31.",
+     "anchor": "superficial, inaccurate, biased, or",
+     "frag_start": "As a result of this vast access",
+     "frag_end": "“confabulated.”",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P31",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding",
+      "ethics-bias-environment"
+     ],
+     "resolution_why": "Found by coder B only (A folded it into its P53 unit). Source: chatbots respond with outputs that 'may be superficial, inaccurate, biased, or confabulated.' A real statement about unreliable output (P31, informs); kept as the second half of the split of this sentence."
+    },
+    {
+     "why": "Describes OTEAR providing 'workshops, discussions, and numerous resources' so faculty and staff stay current on AI; support for faculty learning, P63.",
+     "anchor": "helping faculty and staff stay up to date in the ever-evolving world of Artificial Intelligence",
+     "frag_start": "OTEAR is dedicated to helping faculty and staff",
+     "frag_end": "workshops, discussions, and numerous resources.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "ai-literacy-career",
+      "instructor-staff-use"
+     ],
+     "resolution_why": "Phase differed (A over-time, B general). Source: 'OTEAR is dedicated to helping faculty and staff stay up to date ... providing engaging workshops, discussions, and numerous resources.' It states what the office provides, with no review cycle, so general. P63, admin, informs agree."
+    },
+    {
+     "why": "The Council's document includes 'a sample of statements for your syllabi' and advice on academic integrity; a resource offered to instructors, so P63 rather than P09 because nothing is required.",
+     "anchor": "a sample of statements for your syllabi, and a list of resources",
+     "frag_start": "a document which provides a brief history of AI",
+     "frag_end": "list of resources.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "Advises faculty to 'Learn what AI tools can and cannot do' and experiment before using or restricting AI; faculty-learning advice before setting policy, P63.",
+     "anchor": "Learn what AI tools can and cannot do by reading up on these tools",
+     "frag_start": "Learn what AI tools can",
+     "frag_end": "restricting its use.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "ai-literacy-career",
+      "instructor-discretion",
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "\"Test your assignments by submitting them to ChatGPT\" is a faculty practice to learn what tools produce; nearest P63 but it is about checking assignments, so fit note.",
+     "anchor": "Test your assignments by submitting them to ChatGPT",
+     "frag_start": "Test your assignments by submitting",
+     "frag_end": "these tools produce.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design",
+      "instructor-staff-use"
+     ],
+     "fit_note": "A pre-check of assignments rather than a redesign itself. | Specifically tells instructors to run their own assignments through AI to see how vulnerable they are.",
+     "resolution_why": "A coded P35 (assignment redesign), B coded P63 (faculty learning) with a fit note. Source: 'Test your assignments by submitting them to ChatGPT and/or other AI tools to see what these tools produce.' It sits in the list of things instructors should do to learn about the tools before setting policy, and its purpose is learning what the tools produce, not changing the assignment, so P63; the fit note records that it is specific to checking one's own assignments."
+    },
+    {
+     "why": "Tells instructors who restrict AI to learn the conduct requirements for charging violations; preparing for enforcement, P36.",
+     "anchor": "Become familiar with the student conduct requirements for charging students with violations",
+     "frag_start": "Become familiar with the student conduct",
+     "frag_end": "restrict its use.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "fit_note": "Procedural readiness for charging violations, not the classification itself. | Advises instructors to learn the charging process; it does not itself classify misuse as misconduct."
+    },
+    {
+     "why": "Recommends assignments needing 'higher-order thinking' and personal connection that are 'more difficult for students to answer using AI tools'; redesign around AI, P35.",
+     "anchor": "assignments that require students to use higher-order thinking, connect concepts to specific personal experiences",
+     "frag_start": "Consider developing assignments that require",
+     "frag_end": "using AI tools.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design"
+     ]
+    },
+    {
+     "why": "Recommends 'project-based learning or staged assignments that begin with work in class'; assignment redesign, P35.",
+     "anchor": "project-based learning or staged assignments that begin with work in class",
+     "frag_start": "Also consider project-based learning",
+     "frag_end": "homework.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design"
+     ]
+    },
+    {
+     "why": "Advises rubrics emphasising 'critical thinking, application of knowledge' rather than summary; grading scheme redesign, P35.",
+     "anchor": "Develop rubrics that emphasize critical thinking, application of knowledge",
+     "frag_start": "Develop rubrics that emphasize critical",
+     "frag_end": "rather than the restatement of material or summary.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design"
+     ]
+    },
+    {
+     "why": "'Develop clear policies for each course' asks instructors to state their own AI rules for the course, P09 (state AI expectations).",
+     "anchor": "Develop clear policies for each course.",
+     "frag_start": "Develop clear policies for each course.",
+     "frag_end": "each course.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "The Rutgers code of conduct \"mandates that all work submitted... is the student's own and created without the aid of impermissible technologies\" is the own-work rule, P29.",
+     "anchor": "is the student’s own and created without the aid of impermissible technologies, materials, or collaborations",
+     "frag_start": "For example, begin with the Rutgers code",
+     "frag_end": "materials, or collaborations",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P29",
+     "unit_stance": "restrict",
+     "topics": [
+      "accountability-understanding",
+      "integrity-sanctions",
+      "default-stance"
+     ],
+     "fit_note": "Quotes the conduct code as a basis for course policy.",
+     "resolution_why": "A coded P36, instructor, informs; B coded P29, student, must. Source: 'begin with the Rutgers code of conduct which mandates that all work submitted in a course ... is the student's own and created without the aid of impermissible technologies, materials, or collaborations.' The rule stated is the own-work principle (P29), the same sentence coded P29 in the OIT document; it binds students, with the advice to instructors being only the lead-in. Phase general, must, unit_stance restrict. Coder A's fit note kept."
+    },
+    {
+     "why": "Recommends repeating course learning goals and how they bear on the decision to ban or permit AI; explaining reasons to students, P66.",
+     "anchor": "repeat the learning goals of the course and how these goals are important",
+     "frag_start": "It is useful to repeat the learning goals",
+     "frag_end": "ban or permit AI tools.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P66",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale",
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "Tells instructors to add text stating conditions 'depending on whether AI tools will be banned or permitted', so the instructor chooses; P04.",
+     "anchor": "Depending on whether AI tools will be banned or permitted, add text that clearly states",
+     "frag_start": "Depending on whether AI tools will",
+     "frag_end": "specific for the course",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "Sample statement banning ChatGPT in all stages of writing on any assignment; a prohibit-by-default model text, P01.",
+     "anchor": "not permitted in any stages of the writing process on any assignment.",
+     "frag_start": "Use of AI such as ChatGPT is not",
+     "frag_end": "on any assignment.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P01",
+     "unit_stance": "prohibit",
+     "topics": [
+      "prohibited-uses",
+      "default-stance"
+     ],
+     "fit_note": "A sample statement for instructors to adopt, scoped to the writing process.",
+     "resolution_why": "Phase differed (A course-start, B during-work). Source: sample statement 'Use of AI such as ChatGPT is not permitted in any stages of the writing process on any assignment.' The rule governs what students do on assignments, so during-work. P01, student, must-not, prohibit agree."
+    },
+    {
+     "why": "Sample statement allowing AI only to brainstorm and see examples, with submitted material the student's own; a narrow permission, P15 (brainstorming).",
+     "anchor": "only permitted to help you brainstorm ideas and see examples.",
+     "frag_start": "Use of AI such as ChatGPT is only permitted",
+     "frag_end": "you submit must be your own.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P15",
+     "unit_stance": "restrict",
+     "topics": [
+      "permitted-uses",
+      "accountability-understanding",
+      "prohibited-uses"
+     ],
+     "fit_note": "Also says all submitted material must be the student's own (P29).",
+     "resolution_why": "Phase differed (A course-start, B during-work). Source: 'Use of AI such as ChatGPT is only permitted to help you brainstorm ideas and see examples.' The rule governs student work, so during-work. The second sentence of the sample statement ('All material you submit must be your own') is a separate rule and is coded as its own unit. P15, may, restrict agree."
+    },
+    {
+     "why": "\"All material you submit must be your own\" in the sample statement is the own-work rule, P29.",
+     "anchor": "All material you submit must be your own.",
+     "frag_start": "All material you submit must",
+     "frag_end": "must be your own.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P29",
+     "unit_stance": "restrict",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "resolution_why": "Found by coder B only (A fit it into its brainstorming unit). Source: 'All material you submit must be your own.' The second sentence of the second sample statement is a distinct own-work rule (P29), kept as its own unit."
+    },
+    {
+     "why": "\"you must cite the tool\" in the permissive template requires disclosure with the submission, P24.",
+     "anchor": "you must cite the tool",
+     "frag_start": "but you must cite the tool",
+     "frag_end": "explain any work that you submit.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "require",
+     "topics": [
+      "disclosure-citation",
+      "accountability-understanding"
+     ],
+     "fit_note": "Also requires ability to explain work (P30) and is a full-permission default (P02).",
+     "resolution_why": "A coded one unit for the whole third sample statement (P24); B split it into permission (P02), citation (P24) and ability to explain (P30). Source: 'Use of AI such as ChatGPT is fully permitted, but you must cite the tool and be able to explain any work that you submit.' Three distinct rules, so I keep the split. This unit is the citation requirement: P24, must; A and B agree on P24. It is addressed to students working on assignments, so during-work."
+    },
+    {
+     "why": "The sample statement \"is fully permitted\" is the permissive template, P02.",
+     "anchor": "is fully permitted, but you must cite the tool",
+     "frag_start": "Use of AI such as ChatGPT is fully",
+     "frag_end": "explain any work that you submit.",
+     "policy": "AI such as ChatGPT is fully permitted.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P02",
+     "unit_stance": "permit",
+     "topics": [
+      "default-stance",
+      "permitted-uses"
+     ],
+     "resolution_why": "Found by coder B only (A coded the whole third statement as one unit). Source: 'Use of AI such as ChatGPT is fully permitted.' The permission is a distinct rule from the citation and explanation conditions, so kept (P02, may, permit). The anchor spans into the citation clause, so the normalized policy states only the permission."
+    },
+    {
+     "why": "\"be able to explain any work that you submit\" requires understanding of submitted work, P30.",
+     "anchor": "be able to explain any work that you submit",
+     "frag_start": "but you must cite the tool and",
+     "frag_end": "explain any work that you submit.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P30",
+     "unit_stance": "require",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "resolution_why": "Found by coder B only (A coded the whole third statement as one unit). Source: 'be able to explain any work that you submit.' A distinct requirement (P30, must) from the citation rule; kept."
+    },
+    {
+     "why": "'Schools and departments should discuss these issues as the tools and their use evolve' recommends ongoing discussion of changing policy, P54.",
+     "anchor": "Schools and departments should discuss these issues as the tools and their use evolve.",
+     "frag_start": "Schools and departments should discuss",
+     "frag_end": "use evolve.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "should",
+     "policy_type": "P54",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "\"OTEAR is available for consultation and discussion at any time\" offers faculty support, P63.",
+     "anchor": "OTEAR is available for consultation and discussion at any time",
+     "frag_start": "OTEAR is available for consultation",
+     "frag_end": "at any time via",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use"
+     ],
+     "resolution_why": "Found by coder B only. Source: 'OTEAR is available for consultation and discussion at any time.' An offer of faculty support (P63, informs), a real statement about support, not navigation; kept."
+    },
+    {
+     "why": "Notes generative AI 'hallucinations' and fabricated references that require proofreading before the output is trusted; verify output, P31.",
+     "anchor": "AI tools, such as ChatGPT, frequently fabricate information and invent references",
+     "frag_start": "When asked to cite sources",
+     "frag_end": "entirely fictitious.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P31",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding",
+      "ethics-bias-environment"
+     ]
+    },
+    {
+     "why": "\"a great deal of initial guidance and proofreading is required before we should have confidence in the output\" calls for checking output, P31.",
+     "anchor": "a great deal of initial guidance and proofreading is required",
+     "frag_start": "While these tools can be used to",
+     "frag_end": "confidence in the output.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P31",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "resolution_why": "Found by coder B only. Source: 'a great deal of initial guidance and proofreading is required before we should have confidence in the output.' A real caution to check AI output (P31, should), kept."
+    },
+    {
+     "why": "The same sentence tells faculty to \"discuss them in class\", going beyond listing a rule, P66.",
+     "anchor": "discuss them in class and point out the policies on the syllabus",
+     "frag_start": "discuss them in class and point",
+     "frag_end": "Rutgers Academic Integrity",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P66",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "disclosure-citation",
+      "instructor-discretion"
+     ],
+     "fit_note": "Bundles instructions, citation guidance, in-class discussion and integrity reminders.",
+     "resolution_why": "A coded one P66 unit for a sentence holding several instructions; B split it. Source: 'Faculty are encouraged to consider what their policies ... provide clear instructions about which tools and resources can be used, how to cite and acknowledge them, discuss them in class and point out the policies on the syllabus, and remind students regularly of Rutgers Academic Integrity policy.' Distinct recommendations, so I keep the split: instructions on permitted tools and citation (P09), discuss in class (this unit, P66), regular integrity reminders (P66). A's fit note kept."
+    },
+    {
+     "why": "\"Faculty are encouraged to consider what their policies... provide clear instructions about which tools and resources can be used, how to cite and acknowledge them\" asks for explicit instructions, P09.",
+     "anchor": "provide clear instructions about which tools and resources can be used",
+     "frag_start": "Faculty are encouraged to consider what",
+     "frag_end": "Rutgers Academic Integrity",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "disclosure-citation"
+     ],
+     "resolution_why": "Found by coder B only (A merged it into one P66 unit). Source: 'provide clear instructions about which tools and resources can be used, how to cite and acknowledge them'. A distinct recommendation to state tool rules and citation expectations, P09 (state AI expectations), kept."
+    },
+    {
+     "why": "\"remind students regularly of Rutgers Academic Integrity policy\" repeats the integrity rule to students; nearest P66 (explaining rules), with a fit note.",
+     "anchor": "remind students regularly of",
+     "frag_start": "and remind students regularly of",
+     "frag_end": "Rutgers Academic Integrity",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P66",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "integrity-sanctions"
+     ],
+     "fit_note": "The reminder is of the existing academic integrity policy, repeated over the term.",
+     "resolution_why": "Found by coder B only (A merged it into one P66 unit). Source: 'remind students regularly of Rutgers Academic Integrity policy.' A distinct recommendation to repeat the integrity policy over the term; kept as P66 with B's fit note."
+    },
+    {
+     "why": "Suggests requiring students to show stages of their work (outlines, drafts) to discourage AI use; process evidence and assignment redesign, P35.",
+     "anchor": "require students to show stages of their work, e.g. outlines, rough drafts",
+     "frag_start": "One strategy that can be used to discourage",
+     "frag_end": "contributions by different group members.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design"
+     ]
+    },
+    {
+     "why": "Recommends sequencing major assignments in steps ('scaffolding'); assignment redesign, P35.",
+     "anchor": "Major assignments can be designed to be submitted in a sequence of steps",
+     "frag_start": "Major assignments can be designed",
+     "frag_end": "known as “scaffolding.”",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design"
+     ],
+     "resolution_why": "Found by coder A only. Source: 'Major assignments can be designed to be submitted in a sequence of steps known as scaffolding.' A separate recommendation from the stages-of-work sentence (which B coded as one unit); it is a real assignment-redesign suggestion, P35, kept."
+    },
+    {
+     "why": "Assignments where students \"produce a specific application with personal insights so that they explain their learning\" are redesigned around AI, P35.",
+     "anchor": "produce a specific application with personal insights",
+     "frag_start": "Projects or assignments that require students to",
+     "frag_end": "problem-solving and application of knowledge over summary and review.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design",
+      "accountability-understanding"
+     ],
+     "fit_note": "Explanation is built into a product, not a live review or interview.",
+     "resolution_why": "A coded P34 (check understanding), B coded P35 (redesign) . Source: 'Projects or assignments that require students to produce a specific application with personal insights so that they explain their learning' with rubrics favoring application of knowledge. The explanation is built into a product assignment rather than a review, interview or oral exam, so P34 does not fit; it is an assignment redesign around AI, P35. A's fit note kept."
+    },
+    {
+     "why": "Asking students to add \"reflections on the value of the assignment\" is a deterrent design; P35 (nearest, as P26 concerns reflections on AI use).",
+     "anchor": "students can be required to add personal comments such as reflections",
+     "frag_start": "Another strategy is that students can be",
+     "frag_end": "they would do differently once the project was completed.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design"
+     ],
+     "fit_note": "Reflections are on the assignment, not on AI use. | The reflections are about the assignment, not about AI use.",
+     "resolution_why": "A coded P26 (reflections), B coded P35 with a fit note. Source: students 'can be required to add personal comments such as reflections on the value of the assignment ... what they would do differently', offered as a way to discourage AI use. P26 concerns reflections or logs about AI use; these reflections are about the assignment, so the nearest fit is the assignment-redesign type P35, with a fit note."
+    },
+    {
+     "why": "Suggests assignments citing class readings, recent scholarship, or student-collected data that AI databases may lack; assignment redesign, P35.",
+     "anchor": "cite class readings or discussion, or require that they use recent scholarship",
+     "frag_start": "Instructors can also ask that students",
+     "frag_end": "analysis.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design"
+     ]
+    },
+    {
+     "why": "Suggests research papers requiring citations of specific evidence and quotations with search output; assignment redesign, P35.",
+     "anchor": "Research papers that require citations of specific evidence and quotations",
+     "frag_start": "Research papers that require citations",
+     "frag_end": "literature searches that include the search output.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design"
+     ],
+     "resolution_why": "Found by coder A only. Source: 'Research papers that require citations of specific evidence and quotations ... literature searches that include the search output.' A real assignment-redesign suggestion made to reduce reliance on AI, P35, kept."
+    },
+    {
+     "why": "Suggests presenting findings in multimedia, blog, podcast or e-portfolio formats instead of text; format redesign, P35.",
+     "anchor": "might be shared in a multimedia presentation, blog or podcast, webpage or e-portfolio",
+     "frag_start": "The research project findings",
+     "frag_end": "content map.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design"
+     ]
+    },
+    {
+     "why": "\"use as personalized tutor for improving learning\" lists tutoring as a way AI can be used in courses, P12.",
+     "anchor": "use as personalized tutor for improving learning",
+     "frag_start": "AI can be used in a variety of ways",
+     "frag_end": "improving learning.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P12",
+     "unit_stance": "permit",
+     "topics": [
+      "permitted-uses",
+      "ai-literacy-career"
+     ],
+     "fit_note": "List also covers brainstorming, drafting and self-assessment questions (P14, P15) as examples.",
+     "resolution_why": "A coded one P12 unit for the list of ways AI can be used in courses (actor instructor, informs, encourage); B split the list into units. Source: 'AI can be used in a variety of ways in college courses: ... use to organize ideas in a first draft; ... create questions for content knowledge self-assessments; use as personalized tutor for improving learning.' The statement says what AI can be used for, addressed to anyone, so actor all, may, permit, phase during-work. Each use is a distinct permission, so I keep B's split: tutor (P12), self-assessment questions (P14), first-draft organizing (P15 with a fit note because P18 concerns prose versus code)."
+    },
+    {
+     "why": "\"create questions for content knowledge self-assessments\" lists self-check practice as a use, P14.",
+     "anchor": "create questions for content knowledge self-assessments",
+     "frag_start": "create questions for content knowledge",
+     "frag_end": "self-assessments;",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P14",
+     "unit_stance": "permit",
+     "topics": [
+      "permitted-uses"
+     ],
+     "resolution_why": "Found by coder B only (A listed AI uses in one unit). Source: 'create questions for content knowledge self-assessments.' A distinct permitted use (P14), kept."
+    },
+    {
+     "why": "'use to organize ideas in a first draft' lists a writing-support use of AI; P15 (brainstorming and exploring approaches) is the nearest type because P18 is about prose versus code.",
+     "anchor": "use to organize ideas in a first draft",
+     "frag_start": "use to organize ideas in a first",
+     "frag_end": "first draft;",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P15",
+     "unit_stance": "permit",
+     "topics": [
+      "permitted-uses"
+     ],
+     "fit_note": "P18 is about prose versus code; this unit is about organizing ideas in a first draft (P15). Coder B's own reading: lists a writing-support use.",
+     "resolution_why": "Found by coder B only (A listed AI uses in one unit). Source: 'use to organize ideas in a first draft.' A distinct permitted use. B coded P18; P18 is about prose versus code, which this does not say, so P15 (brainstorming and exploring approaches) with a fit note."
+    },
+    {
+     "why": "'from calculators to a collection of AI tools' frames AI as one of many outside study resources; it is not a collaborator analogy (P45) and fits no other type, so UNCOVERED.",
+     "anchor": "from calculators to a collection of AI tools",
+     "frag_start": "There are many and various resources available",
+     "frag_end": "collection of AI tools.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "collaboration-analogy"
+     ],
+     "uncovered_note": "AI is framed as one of many outside study resources, alongside calculators, whose use the instructor must set rules for.",
+     "resolution_why": "Found by coder B only. Source: 'There are many and various resources available to students to support their study, from calculators to a collection of AI tools.' Frames AI as one of many outside study resources. B coded P45 (AI like a human collaborator), but the sentence compares AI to calculators, not to a collaborator, so it fits no type and is UNCOVERED with a note."
+    },
+    {
+     "why": "The workshop text says \"many simple straight-forward assignments are no longer viable for take-home work\", a reason to redesign assessment, P35.",
+     "anchor": "many simple straight-forward assignments are no longer viable for take-home work",
+     "frag_start": "Availability of Generative AI means that many",
+     "frag_end": "for take-home work.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design"
+     ],
+     "resolution_why": "Found by coder B only. Source: 'many simple straight-forward assignments are no longer viable for take-home work.' A real rationale for assignment redesign (P35, informs) in the workshop description, kept."
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Both documents are university-layer; no school or computing documents. OTEAR page is marked archived/unmaintained and points to the OIT page. Event listings, tool lists, reading lists and navigation were not coded. Topics drawn from the AGENT_BRIEF starter codebook. | OTEAR page is marked archived and no longer maintained; its archival notice and the long reading, event and tool lists were not coded as policy. Sample syllabus statement text appears twice on the page; coded once. Coder B. | Reconciler: OIT stance resolved restrict (A delegates); copyright claim split from the bias/inaccuracy sentence; sample statement 3 split into permission, citation, explanation."
+}

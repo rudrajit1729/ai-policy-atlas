@@ -1,0 +1,51 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT29 "Disclosure safe harbor and nondisclosure" (Disclosed use is not penalized, and undisclosed or uncited use is the violation.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..26 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | arizona-state | C1 | student | must | unattributed AI content is violation | Using AI tools to generate content without proper attribution will be considered a violation of the ULC Academic Integrity Policy
+1 | austin-community-college | C2 | student | must-not | undisclosed AI content is plagiarism | Submitting AI-generated content as your own without attribution or disclosure is considered plagiarism.
+2 | california-riverside | C3 | instructor | informs | uncited sources are cheating | using any source without citing them will be treated as cheating
+3 | colby-college | C1 | instructor | informs | no penalty for disclosed AI use | You will not lose points for claiming to use generative AI but you will lose points for incorrect answers.
+4 | colorado-boulder | C4 | all | informs | missing AI citation is a violation | lack of citations of Gen AI usage as stated, in your submission, will be treated as violation of this policy.
+5 | cornell | C1 | student | may | disclosed AI work not a violation | submit work, but are honest who or what was involved in creating it, it is not
+6 | cornell | C2 | student | must-not | no undisclosed AI code | Submit code for graded homework assignments that has been written (wholly or in part) by a large language model
+7 | cornell | C3 | instructor | informs | acknowledgement does not affect grade | Your homework grade will not be impacted by your acknowledgement of AI usage
+8 | east-texas-aandm | C4 | student | must-not | undocumented AI use is plagiarism | use of such software constitutes an instance of academic dishonesty
+9 | east-texas-aandm | C5 | student | must-not | undocumented AI use is plagiarism | Any undocumented use of such software
+10 | east-texas-aandm | C6 | student | must-not | undocumented AI use is plagiarism | of such software constitutes an instance of academic dishonesty (plagiarism).
+11 | grinnell-college | C3 | student | must-not | uncited AI output is violation | Submitting AI tool output without citation is a violation of the academic honesty policy
+12 | harvey-mudd-college | C6 | student | must-not | undisclosed AI code is honor violation | Allowing another entity, human or AI, to write your code for you and then not disclosing that the code is not your own exclusive work
+13 | kansas | C4 | student | must-not | nondisclosure is misconduct | Failure to disclose use of AI tools or submitting AI-generated
+14 | marquette | C6 | student | informs | unreported AI is integrity violation | a violation of the academic integrity policy.
+15 | north-carolina-state | C4 | instructor | informs | undisclosed AI use is violation | Undisclosed use is the violation.
+16 | north-carolina-state | C4 | instructor | informs | permitted AI use not misconduct | Using AI where it is permitted is not academic misconduct.
+17 | old-dominion | C1 | student | must-not | undisclosed AI use is misrepresentation | undisclosed Artificial Intelligence (AI) use
+18 | princeton | C2 | instructor | informs | no penalty for disclosure | There is no penalty for disclosure, even if you used an LLM heavily
+19 | rhode-island | C5 | student | must-not | uncredited AI content prohibited | AI-generated content is strictly prohibited. These actions constitute
+20 | rochester | C5 | student | must-not | undisclosed AI use is dishonest | Any substantial use of AI without disclosure will be considered academically dishonest.
+21 | south-carolina | C1 | student | must-not | undisclosed AI use is violation | It is a violation of university policy to misrepresent work that you submit by characterizing it as your own
+22 | south-carolina | C2 | student | must-not | undisclosed AI use is violation | It is a violation of university policy to misrepresent work that you submit by characterizing it as your own
+23 | southern-california | C1 | instructor | informs | no penalty for disclosing AI use | There is NO SHAME OR PENALTY for checking these boxes.
+24 | texas-austin | C6 | student | must-not | unauthorized or undisclosed AI is misconduct | without authorization or failing to disclose generative AI use according to the
+25 | vermont | C5 | instructor | informs | anonymous drop box for AI use | I will make an anonymized open drop box available
+26 | vermont | C5 | student | informs | unauthorized or uncited use is violation | Any unauthorized use of generative AI, or uncited use where permitted, constitutes a

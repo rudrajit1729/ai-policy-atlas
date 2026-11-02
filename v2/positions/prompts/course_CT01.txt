@@ -1,0 +1,125 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT01 "Default stance: AI not allowed" (AI is banned for the course or for all graded work ("no AI on graded work", "generative AI strictly prohibited").).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..100 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | arizona-state | C2 | student | must-not | AI banned unless instructor allows | Unlessexplicitlyallowedbyyourinstructor,theuseofgenerativeAItoolsonanycourseassignmentorexam willbeconsideredacademicdishonestyandaviolationoftheASUAcademicIntegrityPolicy.Students confirmedtobeengaginginnon-allowableuseofgenerativeAIwillbesanctionedaccordingtotheacademic
+1 | austin-community-college | C1 | student | must-not | generative AI strictly prohibited | In this course, the use of generative AI (GAI) technologies is strictly prohibited to preserve
+2 | austin-community-college | C1 | student | must-not | no AI on any assessment | Students are not allowed to use GAI for completing assignments, projects,
+3 | brandeis | C6 | student | must-not | AI banned unless instructor allows | Any AI use is disallowed unless otherwise stated.
+4 | brown | C2 | student | must-not | no code-generation tools unless authorized | Any use of tools that create computer code relevant to the assignment is prohibited, unless they are explicitly authorized.
+5 | brown | C2 | student | should-not | no AI for assignments | While we want you to learn how to use these tools, you should not use them for your assignments.
+6 | bryn-mawr-college | C1 | student | must-not | no AI on programming assignments | AI tools may not be used to complete any programming assignments.
+7 | buffalo-suny | C3 | student | must-not | generative AI not allowed on homework | ChatGPT/Generative AI is not allowed
+8 | buffalo-suny | C3 | student | must-not | ban covers all homework questions | questions on the homeworks (including the programming question).
+9 | california-berkeley | C3 | student | must-not | no AI on graded work | It is NOT OK to use AI, Google, etc to complete work on Homework, Projects, and Labs.
+10 | california-berkeley | C3 | student | must-not | no AI help with coding | NO AI help with coding is permitted in this course.
+11 | california-berkeley | C6 | student | must-not | generative AI on assignments prohibited | Using generative AI tools like ChatGPT for assignments
+12 | carnegie-mellon | C1 | student | must-not | no AI tools | in general that you do not use AI tools
+13 | carnegie-mellon | C1 | student | must-not | no AI on graded work | You may not use AI tools for any part of work that you will submit for credit.
+14 | carnegie-mellon | C1 | student | must-not | ban covers checking and formatting | This includes but is not limited to generating solutions, checking solutions, explaining tasks or solutions, formatting code, adding comments to code, or generating test cases
+15 | carnegie-mellon | C2 | student | should | no AI on graded work | you should complete all graded assignments in this course yourself, without any use of generative artificial intelligence (AI) to create your solutions
+16 | carnegie-mellon | C2 | student | should-not | no AI-generated content in assignments | Please refrain from using AI tools to generate any content (text, video, audio, images, code, etc.) for an assignment.
+17 | carnegie-mellon | C3 | student | must-not | no AI tools at all | You must not make use of AI tools, LLM tools, or any other software or service that generates code, proofs, written explanations
+18 | central-florida | C1 | student | must-not | no ChatGPT | MOST IMPORTANTLY, DON'T USE ChatGPT.
+19 | central-florida | C2 | student | must-not | no AI | In short, no AI and no getting
+20 | city-college-san-francisco | C1 | student | must-not | no AI on coursework | You are not allowed to use AI for any coursework, including both assignments and exams.
+21 | cornell | C1 | student | must-not | no outside help on assignments | Getting help from anyone or anything else is not allowed.
+22 | cornell | C1 | student | must-not | no generative AI aid | You may not get aid from generative AI.
+23 | depaul | C2 | student | must-not | generative AI prohibited on coursework | You are prohibited from using generative AI when working on homework
+24 | drexel | C1 | student | must-not | AI tools not permitted | intelligence tools such as large language models (e.g., ChatGPT) are not
+25 | george-mason | C6 | student | must-not | AI coding tools prohibited | are prohibited in this course and will be considered a violation of academic integrity.
+26 | georgia-southern | C1 | student | must-not | generative AI strictly prohibited | for any part of the problem-solving, coding, or writing process is strictly prohibited.
+27 | georgia-southern | C2 | student | must-not | generative AI strictly prohibited | for any part of the problem-solving, coding, or writing process is strictly prohibited.
+28 | grinnell-college | C1 | student | must-not | AI programming assistants banned | You may not use AI-based programming assistants, such as ChatGPT, GitHub Copilot, or Microsoft IntelliCode in this course.
+29 | grinnell-college | C3 | student | must-not | only course materials allowed | you may not use any online materials besides those linked on our course website and textbook.
+30 | grinnell-college | C3 | student | must-not | AI tools prohibited resources | Prohibited resources include ChatGPT, GitHub Copilot, other AI assistance tools, websites that gather homework solutions
+31 | grinnell-college | C3 | student | must-not | all AI prohibited | all AI (large language models, Chat GPT, Bard, Grok, Co-Pilot, Gemini, etc) are
+32 | grinnell-college | C5 | student | must-not | gen AI platforms banned | you are not allowed to use any gen AI platforms in this course
+33 | grinnell-college | C6 | student | must-not | AI prohibited for all work | The use of artificial intelligence or large language models is prohibited for all work in this course.
+34 | grinnell-college | C6 | student | must-not | no AI for readings or code | You may not use these tools to summarize readings, generate discussion points, write reading journals, write code
+35 | kennesaw-state | C1 | student | must-not | AI use prohibited | AI Use Prohibited: You are expected to generate your own work in this class.
+36 | kennesaw-state | C2 | student | must | AI use prohibited | You are expected to generate your own work in this class.
+37 | kennesaw-state | C4 | student | must | AI use prohibited | expected to generate your own work in this class. When you submit any kind
+38 | massachusetts-amherst | C2 | student | must-not | no AI code generation | The use of chatGPT and other AI-driven code generation systems in this course is forbidden, and will
+39 | michigan | C3 | student | must-not | no AI on current homework | you are not permitted to consult with Generative AI on current homework problems at all.
+40 | minnesota | C4 | student | must-not | no AI to solve assessments | online learning support platforms that can not be used to solve assessments in this course.
+41 | new-jersey-institute-technology | C2 | student | must | work without AI assistance | this course expects students to work without artificial intelligence (AI) assistance in
+42 | new-jersey-institute-technology | C2 | student | must-not | AI banned in all circumstances | AI usage is not permitted
+43 | new-york | C6 | student | must-not | AI coding assistants prohibited | You must not use AI coding assistants (ChatGPT, CoPilot, etc.).
+44 | new-york | C6 | student | must | exercises done without AI | must do the exercises yourself, without using AI assistance.
+45 | new-york | C6 | student | must-not | all generative AI prohibited | Generative AI tools may not be used for coursework, in any form;
+46 | north-carolina-state | C1 | student | must-not | AI banned for assessed work | The use of these services are prohibited for assessed work in this class.
+47 | north-carolina-state | C1 | student | must-not | AI banned for assessed work | The use of these services are prohibited for assessed work in this class.
+48 | north-carolina-state | C3 | student | must-not | AI banned for assessed work | use of these tools/services is prohibited for work that is assessed in CSC316,
+49 | north-carolina-state | C3 | student | must-not | no AI tools for any assignment part | artificial intelligence (AI) tools, such as chatbots, text generators, paraphrasers, summarizers, or solvers, to
+50 | north-texas | C2 | student | must-not | AI banned without authorization | Unless a professor or instructor gives explicit "authorization," AI cannot
+51 | north-texas | C3 | student | must-not | GenAI banned | etc. is not permitted. While these tools can be helpful in some contexts,
+52 | northwestern | C2 | student | must-not | ban covers any use | This applies to any use, not just generation of artifacts you turn in.
+53 | oklahoma | C2 | student | must-not | ban covers writing, editing, exams | this includes using Generative AI to write or edit your assignments, projects and to take your quizzes or exams
+54 | old-dominion | C1 | student | must-not | unauthorized AI use prohibited | unauthorized use of artificial intelligence sites including, but no t limited to, ChatGPT, Dall -E, Alpha Code,
+55 | oregon-state | C6 | student | must-not | no AI-generated content submitted | Submission of work containing any content generated by Machine Learning tools
+56 | pennsylvania | C1 | student | must-not | web and AI resources banned | You may not consult web resources, ask questions online, or use LLM/AI resources like ChatGPT, Claude.ai, Copilot
+57 | pittsburgh | C2 | student | must-not | generative AI banned at all times | make use of ChatGPT or any other generative AI applications at any time
+58 | pittsburgh | C3 | student | must-not | generative AI banned at all times | make use of ChatGPT or any other generative AI applications at any time
+59 | pomona | C1 | student | must-not | external sources and AI forbidden | using material from any external source—web page, tool, person, or book—is forbidden. This includes AI tools, such as coPilot, Claude, and chatGPT.
+60 | pomona | C2 | student | should-not | no AI on assignments | AI tools should not be used on the assignments in this class in any way
+61 | pomona | C6 | student | must-not | no AI use at all | Courses in this tier do not allow the use of any AI.
+62 | pomona | C6 | student | must-not | lists disallowed AI uses | Disallowed uses include, but are not limited to, using generative AI tools to brainstorm ideas
+63 | prairie-view-aandm | C4 | student | must-not | no AI without permission | You may not engage in unauthorized collaboration or make use of ChatGPT or other AI composition software.
+64 | rensselaer-polytechnic-institute | C2 | student | should-not | no AI tools on homework | Students should not use ChatGPT, GitHub Copilot, Gemini, Claude, or any other generative AI chatbot
+65 | rice | C6 | student | must-not | no AI tools for any purpose | ChatGPT, GitHub Copilot, and TabNine, for any purpose in this course.
+66 | rochester-institute-technology | C1 | student | must-not | generative models prohibited | The use of generative models (e.g. GPT and Copilot) is prohibited.
+67 | rochester-institute-technology | C4 | instructor | informs | AI not in official toolkit | ChatGPT and other Generative AI tools are not considered to be part of the official toolkit.
+68 | rochester-institute-technology | C5 | student | must-not | generative AI prohibited, dishonest | The use of generative AI (e.g. GPT or other LLMs) is prohibited and considered academically dishonest.
+69 | rose-hulman-institute-technology | C6 | student | must-not | no generative AI allowed | without the use of generative AI platforms.
+70 | rowan | C1 | student | must-not | generative AI prohibited | Generative AI is prohibited in this course and is also considered a violation of the academic integrity policy.
+71 | rowan | C1 | student | must-not | generative AI prohibited | Generative AI is prohibited in this course and is also considered a violation of the academic integrity policy.
+72 | rutgers-new-brunswick | C5 | student | must-not | ChatGPT strictly forbidden | Using ChatGPT or similar tools are strictly forbidden
+73 | southern-california | C2 | student | must-not | AI banned for any reason | we do not allow AI use for any reason in this course.
+74 | texas-arlington | C1 | student | must-not | GenAI banned on assignments | the use of Generative AI (GenAI) tools in completing assignments
+75 | texas-arlington | C3 | student | must-not | GenAI banned on assignments | the use of Generative AI (GenAI) tools in completing assignments
+76 | texas-austin | C2 | student | must-not | AI disallowed on all graded work | and agentic AI are utterly and completely disallowed on all aspects of
+77 | texas-christian | C5 | student | must-not | AI banned on assignments | AI and other unapproved assignment-help tools MAY NOT be used
+78 | texas-christian | C6 | student | must-not | AI banned on assignments | AI and other unapproved assignment-help tools MAY NOT be used
+79 | texas-el-paso | C1 | student | must-not | AI prohibited option | DALL-E, is not allowed for assignments in this class.
+80 | texas-el-paso | C1 | student | must-not | no AI on graded assessments | However, you may not use AI tools to complete any of the assessment items used to compute the
+81 | texas-tyler | C5 | student | must-not | AI banned at all stages | I expressly forbid using ChatGPT or any other artificial intelligence (AI) tools for any stages of the work process
+82 | tufts | C1 | student | must-not | no GenAI on any homework | you may not use generative AI tools to help with any part of your homework assignments
+83 | tufts | C1 | student | must-not | ban covers planning through testing | planning, writing, debugging, or testing your code.
+84 | tufts | C2 | student | must-not | named AI tools banned | including ChatGPT, Claude, Cursor, Github Copilot, and similar models
+85 | tufts | C2 | student | must-not | ban covers code and documentation | This restriction applies to all work you produce
+86 | tufts | C2 | student | must-not | all other GenAI models banned | we disallow the use of all other generative AI models
+87 | vermont | C5 | student | must-not | no AI on homework by default | Use of AI is strictly prohibited except where noted (below) as a means of researching,
+88 | villanova | C2 | student | must-not | no generative AI in course | No generative AI (ChatGPT, Copilot, etc)
+89 | washington-state | C6 | student | should-not | no AI on graded assignments | not be used for any graded assignments
+90 | washington | C1 | student | should-not | no AI on graded work | AI tools (such as ChatGPT, CoPilot, Gemini, etc.) should not be used on graded work in any way
+91 | washington | C1 | student | must-not | no AI touches graded work | No part of any graded work may touch an AI tool.
+92 | wellesley-college | C1 | student | must-not | all AI use disallowed | any AI use is explicitly disallowed in
+93 | wellesley-college | C5 | student | must-not | no AI on assignments or exams | You may not use ChatGPT, Co-pilot, Codex, or any other generative AI models on CS 232 assignments or exams.
+94 | wellesley-college | C6 | student | must-not | AI tools banned in course | the CS240 course policy is that you must not use AI-powered tools
+95 | wesleyan | C6 | student | must-not | AI banned for all work | prohibited for any part of this class including, but not limited to, the
+96 | western-washington | C1 | student | must-not | AI not allowed | Use of AI is not allowed in this course
+97 | williams-college | C2 | student | must-not | LLM use not permitted | LLM usage isnot permittedin this class
+98 | williams-college | C2 | student | must | assignments without LLM help | All assignments are to be done without LLM help.
+99 | wright-state | C6 | student | must-not | AI banned for all work | You are not permitted to use generative AI tools for any work for this section of this course.
+100 | wright-state | C6 | student | must-not | ban covers named AI tools | This includes the use of popular tools like ChatGPT, Midjourney, GitHub Co-Pilot

@@ -1,0 +1,36 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT15 "AI for search and reference" (AI used like a search engine or reference to look up information.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..11 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | brown | C5 | student | may | AI allowed for textbook-answerable questions | you are allowed to ask a chatbot to answer questions whose solutions can be found in the textbook
+1 | grinnell-college | C6 | student | may | search AI summaries ok to start | It is acceptable for you to use AI-generated summaries from search engines like Google as a starting point
+2 | grinnell-college | C6 | student | must | cite sources not AI | you must review and cite the actual sources of the information you use
+3 | harvard | C6 | student | may | AI allowed as search engine | Using generative AI tools as a search engine to find and/or summarize
+4 | maryland-college-park | C2 | student | may | AI allowed to look up information | You are allowed to use AI to look up information about the cour se material, for example information about Java or
+5 | oklahoma | C2 | student | should-not | do not rely on AI search output | you should not rely on the Generative AI output and engage instead with the source material
+6 | pennsylvania | C1 | student | may | AI allowed for research | AI can supplement your research and information gathering
+7 | princeton | C2 | student | may | AI as search engine is fine | using an LLM like a smarter search engine (e.g., language/API lookups, clarifying error messages at a high level)
+8 | rochester-institute-technology | C4 | student | must | AI only for search and reference | the only place where you may use GPT or other AI tools is for searching and/or reference
+9 | temple | C6 | student | informs | AI as learning resource | Using an AI bot can give access to a wide range of learning resources and content for this
+10 | washington | C1 | student | may | AI may suggest reflection resources | Asking AI to suggest additional information or resources related to a reflection prompt
+11 | wellesley-college | C6 | student | must-not | no using search-found code | fragments, you are not allowed to use these directly in your solutions.

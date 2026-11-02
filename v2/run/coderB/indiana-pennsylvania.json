@@ -1,0 +1,91 @@
+{
+ "university": "Indiana University of Pennsylvania",
+ "slug": "indiana-pennsylvania",
+ "state": "PA",
+ "type": "R2",
+ "searched": {"university": "found", "school": "none-found", "computing": "none-found", "course": "deferred"},
+ "documents": [
+  {
+   "id": "indiana-pennsylvania-integrity-violations",
+   "layer": "university",
+   "unit": "Academic Affairs (Academic Integrity)",
+   "course": null,
+   "title": "Types of Violations (Academic Integrity Policy, incl. AI-Generated Work)",
+   "url": "https://www.iup.edu/academicaffairs/for-faculty/academic-integrity/types-of-violations.html",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance_why": "The AI-Generated Work entry says AI-generated work \"is not acceptable, unless authorized specifically by the instructor/administrator\". That bans AI by default and allows it only when an instructor or administrator authorizes it, so the stance is restrict.",
+   "stance": "restrict",
+   "tiers": [],
+   "summary": "A list of academic integrity violation categories. Only two passages concern AI: plagiarism is defined to cover AI-generated sources, and 'AI-Generated Work' is its own violation, unacceptable unless the instructor or administrator authorizes it. The rest of the page (cheating, fabrication, technological misconduct) does not mention AI.",
+   "units": [
+    {
+     "why": "The sentence lists AI-generated work as an integrity violation category and says it is \"not acceptable, unless authorized specifically by the instructor/administrator\". This is a default ban with an authorization exception, which is the fallback rule when no authorization exists (P06). P36 also fits but the sentence's operative content is the default-unless-authorized rule.",
+     "anchor": "is not acceptable, unless authorized specifically by the instructor/administrator",
+     "frag_start": "AI-generated work is not reflective",
+     "frag_end": "by the instructor/administrator",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P06",
+     "unit_stance": "restrict",
+     "topics": ["authorization-instructor-discretion"]
+    },
+    {
+     "why": "The clause gives the reason for the ban: AI-generated work \"is not reflective of a student’s own understanding and effort\". It explains the restriction as protecting the student's own learning and effort, so it is a rationale (informs) and fits P41 better than P29, which is about owning submitted work.",
+     "anchor": "not reflective of a student’s own understanding and effort",
+     "frag_start": "AI-generated work is not reflective",
+     "frag_end": "by the instructor/administrator",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P41",
+     "unit_stance": "neutral",
+     "topics": ["rationale"]
+    },
+    {
+     "why": "The plagiarism definition says it \"applies to any type of source, whether published or unpublished, human or AI-generated\". This treats AI output as a source under existing plagiarism rules, so it is P45 (AI as an outside source under existing rules) and not P36, since it defines scope rather than a sanction.",
+     "anchor": "human or AI-generated, and to any type of assignment",
+     "frag_start": "Plagiarism applies to any type",
+     "frag_end": "written, verbal, or otherwise",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P45",
+     "unit_stance": "neutral",
+     "topics": ["plagiarism-integrity"]
+    },
+    {
+     "why": "Since plagiarism covers AI-generated sources, the rule that submitted work with others' material \"must include complete, accurate, and specific references\" and quotation marks for verbatim text requires citing it. This is a disclosure and citation requirement (P24), not the detailed tool/prompt citation of P25, because no such details are named.",
+     "anchor": "must include complete, accurate, and specific references",
+     "frag_start": "Any assignment submitted by a student",
+     "frag_end": "appropriate citations",
+     "policy": "Any assignment submitted by a student that includes the words, ideas, data, or creative works of another must include complete, accurate, and specific references; plagiarism applies to AI-generated sources.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": ["disclosure-citation"]
+    },
+    {
+     "why": "The page lists AI-Generated Work among the violations of \"IUP’s standards of academic integrity\", so unauthorized AI use is classed as academic misconduct under the integrity policy. This is P36.",
+     "anchor": "Violations of IUP’s standards of academic integrity include",
+     "frag_start": "Violations of IUP’s standards of academic",
+     "frag_end": "broadly defined categories",
+     "policy": "AI-Generated Work is one of the categories of violations of IUP's standards of academic integrity.",
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": ["plagiarism-integrity", "enforcement"]
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Thin source: one university-level page with a single AI clause plus the AI mention in the plagiarism definition. Topic codes were chosen without AGENT_BRIEF.md and may need mapping."
+}

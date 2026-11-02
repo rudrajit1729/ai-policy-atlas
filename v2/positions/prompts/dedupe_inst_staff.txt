@@ -1,0 +1,222 @@
+Below are policies found in US university, school and computing-department generative-AI policies, all addressed to teaching assistants, staff and administrators. Each line:
+policy id | topic (policy type) | stage | universities | policy sentence.
+
+Task 1. MERGE policies that say the same thing, even when they sit under different topics or use different words.
+Judge both semantic equivalence (the same requirement, permission, prohibition or fact, worded differently) and latent
+equivalence (the same underlying intent and the same act asked of the same people, even if one is phrased as a rule and
+the other as advice). Examples of the same policy: "Students disclose any AI use in their submissions" and "Students
+acknowledge AI assistance on each assignment". Do NOT merge when the action differs, the object differs (code vs prose,
+data vs output), a condition differs materially (with permission vs always), or the direction differs (prohibit vs
+permit). Merely related or co-occurring policies stay separate. Be exhaustive: check every policy against all others.
+For each merged group give the member ids, one merged "sentence" (at most 20 words, naming the actor, stating the policy
+directly, adding nothing) and a one-line "why" they are the same.
+
+Task 2. Each policy whose stage is "general" has no stage yet. Give it one:
+  - if it asks someone to do or not do something at an identifiable point, its stage: before-course | course-start |
+    during-work | during-assessment | when-misuse | over-time;
+  - if it is a definition, scope statement, reason, value or fact with no time of action: "background".
+
+Return ONLY this JSON, no prose, no code fence:
+{"merges": [{"members": ["P24.03", "P96.02"], "sentence": "...", "why": "..."}],
+  "stages": [{"pid": "P61.01", "stage": "background"}]}
+List only groups of 2 or more in "merges". List every "general" policy in "stages".
+
+P02.14 | Default stance: AI allowed or encouraged | general | 5 | The university promotes and encourages AI adoption and responsible use among its members.
+P03.09 | Default stance: AI discouraged but not banned | general | 1 | The institution is reluctant to promote or endorse AI tools and systems.
+P04.07 | Instructor or assignment decides AI use | before-course | 6 | Universities preserve faculty autonomy and avoid imposing one-size-fits-all AI rules.
+P04.11 | Instructor or assignment decides AI use | during-work | 2 | Teaching assistants and consultants follow the instructor's AI decisions and expectations.
+P04.14 | Instructor or assignment decides AI use | general | 18 | The university sets no single AI policy and leaves decisions on AI use to faculty.
+P05.04 | Named levels or tiers of AI use | before-course | 4 | Administrators develop a clear, consistent menu or tier system of AI use policies for instructors.
+P06.12 | Fallback rule when no AI rule is stated | during-work | 1 | Teaching assistants and staff do not use AI in their roles unless the instructor says otherwise.
+P07.10 | AI built into everyday tools (writing assistants, editors, IDEs, agents) | general | 2 | Administrators may block or disable AI tools, such as plugins and companion tools, on managed machines.
+P09.01 | AI rules stated in the syllabus and assignment instructions | before-course | 16 | Programs, units and administrators set and communicate AI expectations and syllabus requirements for faculty and students.
+P102.06 | Staying informed about AI developments | over-time | 4 | Teaching assistants and staff stay informed about evolving AI developments, best practices and training.
+P102.07 | Staying informed about AI developments | over-time | 2 | Administrators keep up with AI reports, laws, regulations and policies.
+P103.03 | Notice when AI is used in interactions or decisions | during-work | 1 | A warning about proper AI use and user responsibilities is displayed in the interface when interactive AI use begins.
+P103.04 | Notice when AI is used in interactions or decisions | general | 11 | Administrators tell people how and why AI is used, including where it affects them, and are open about its use.
+P107.09 | Prior approval or a closed list of permitted uses | during-work | 3 | Staff and faculty must consult a supervisor, administrator or chair before using AI, including non-approved tools.
+P107.10 | Prior approval or a closed list of permitted uses | during-work | 2 | TAs and staff must not use AI without the course instructor's authorization and use it only for listed tasks.
+P108.04 | No institution-wide AI policy exists | general | 5 | Administrators deliberately have no single AI policy, leaving AI decisions to instructors and disciplines because needs and contexts vary.
+P109.03 | Aligning AI rules across sections, departments and disciplines | before-course | 6 | Departments and academic units discuss, encourage and facilitate consistent AI approaches and statements among faculty.
+P109.07 | Aligning AI rules across sections, departments and disciplines | before-course | 1 | Faculty and administrators hold ongoing department conversations about appropriate penalties for unauthorized AI use.
+P109.08 | Aligning AI rules across sections, departments and disciplines | before-course | 1 | Programs may encourage teaching assistants to connect with supervising faculty so student AI use complies with class guidelines.
+P109.10 | Aligning AI rules across sections, departments and disciplines | course-start | 2 | Administrators ensure students receive consistent, clear information about permissible AI use across syllabi, assignments and university communications.
+P109.11 | Aligning AI rules across sections, departments and disciplines | general | 4 | Appropriate AI use differs across disciplines, courses, programs and contexts.
+P110.03 | Sample syllabus language and templates | before-course | 22 | The institution provides sample syllabus language and templates for instructors to use.
+P111.02 | Integrity pledges and signed AI agreements | before-course | 2 | Units and universities consider developing, adopting or altering an honor code or pledge.
+P113.01 | Institutional monitoring of AI use | before-course | 1 | The institution establishes a clear policy on what logging and auditing of AI use takes place.
+P113.04 | Institutional monitoring of AI use | over-time | 3 | The institution may monitor AI use for compliance and risk assessment, including through periodic audits of networks and systems.
+P113.05 | Institutional monitoring of AI use | general | 4 | The institution reserves the right to access, review and audit prompts, outputs and other information on its AI tools.
+P113.06 | Institutional monitoring of AI use | general | 1 | Individual user interactions with the institution's AI tool are not monitored.
+P114.07 | Personal responsibility for self-chosen AI tools | general | 2 | Everyone should not use university accounts to sign up for AI tools, and staff must not use tools not cleared by InfoSec.
+P115.03 | Pointers to further AI guidance and resources | before-course | 5 | Administrators compile and maintain central AI resource portals and tell instructors about them.
+P117.03 | Evaluating an AI tool before choosing it | before-course | 1 | Staff consult department leadership and colleagues before choosing AI tools.
+P121.07 | AI displacing human interaction and feedback | general | 1 | Teaching assistants and staff do not let AI replace the human element needed for reflective conversations, though it may handle mundane questions.
+P122.01 | Institutional investment in AI capacity | before-course | 4 | Administrators allocate funding and resources for AI infrastructure, institutional AI tool subscriptions, pilot programs, and secure environments.
+P122.02 | Institutional investment in AI capacity | before-course | 3 | Administrators establish a dedicated AI research center or institute that supports interdisciplinary collaboration.
+P122.03 | Institutional investment in AI capacity | before-course | 2 | Administrators explore enterprise AI and privacy-protecting options to secure research and other data.
+P122.04 | Institutional investment in AI capacity | before-course | 1 | Administrators develop new AI-related certificate programs.
+P122.05 | Institutional investment in AI capacity | over-time | 1 | Administrators assess over time whether IT services are sufficiently resourced to support AI use.
+P122.07 | Institutional investment in AI capacity | general | 4 | The university is committed to investing in AI, integrating it across its operations, and leading in AI research.
+P122.08 | Institutional investment in AI capacity | general | 3 | The university has existing AI research groups, labs and coordinating units.
+P122.09 | Institutional investment in AI capacity | general | 2 | Administrators foster and promote interdisciplinary AI research and its application.
+P122.11 | Institutional investment in AI capacity | general | 1 | The university has not yet established a dedicated AI center.
+P124.04 | Consistent and transparent application of AI rules | when-misuse | 2 | Administrators document rules and develop precedents for AI-related academic misconduct.
+P126.01 | Security of AI accounts, systems and AI-written code | before-course | 1 | Administrators give AI agents unique non-human identities and enforce least-privilege access to systems, data and tools.
+P126.08 | Security of AI accounts, systems and AI-written code | general | 3 | Users use university-authenticated or managed accounts and compliant devices, not personal accounts, for AI tools.
+P126.10 | Security of AI accounts, systems and AI-written code | general | 2 | Administrators limit information access to authorized personnel and protect AI systems against cyber threats.
+P126.12 | Security of AI accounts, systems and AI-written code | general | 1 | Administrators require multi-factor authentication and encryption for AI access and environments.
+P130.12 | Signs and indicators of AI-written work | when-misuse | 1 | These signs are not certain proof of AI use.
+P132.04 | Status of the guidance (advisory or binding, precedence) | general | 1 | Administrators note that sample syllabus statements show individual instructors' own uses and are not institutional policies.
+P134.10 | Career and workplace readiness as a reason to learn AI | general | 5 | The university provides training, teaches responsible use, and integrates AI literacy into curricula so students are ready for work.
+P135.01 | Environmental cost of AI | before-course | 1 | Administrators provide information about the environmental cost of AI models and may publish estimates.
+P135.05 | Environmental cost of AI | over-time | 1 | Administrators audit the institution's own AI footprint over time.
+P135.08 | Environmental cost of AI | general | 4 | Administrators consider, understand, measure and limit the environmental costs of AI, including in technology evaluation and sustainability plans.
+P136.04 | Labor, consent and credit behind AI | general | 1 | Administrators respect community authority, Indigenous sovereignty, and culturally grounded knowledge, data, and expression.
+P137.03 | AI records retention and public-records duties | general | 1 | Administrators retain applicable records and then destroy them in accordance with the state's records retention requirements.
+P139.01 | Purpose and context of the policy document | before-course | 3 | Instructors and units adopt and apply the recommended guidance and considerations.
+P139.06 | Purpose and context of the policy document | general | 16 | These policies offer guidance to help faculty and instructors handle AI in teaching.
+P139.08 | Purpose and context of the policy document | general | 11 | These policies aim to clarify which AI uses are allowed in coursework so academic integrity is upheld.
+P17.01 | Course-specific or institution-provided AI tools | before-course | 13 | Universities are exploring, piloting or expanding AI services and tools on campus, including AI tutoring add-ons.
+P17.04 | Course-specific or institution-provided AI tools | before-course | 3 | University IT maintains, expands and promotes secure enterprise-level AI tools and platforms for the campus.
+P24.02 | Disclosing and acknowledging AI use | before-course | 3 | Administrators or unit policies set up disclosure requirements and frameworks for AI use.
+P33.03 | Supervised, proctored or in-class assessment | before-course | 1 | The university invests in staffed, AI-free in-person spaces where students complete extended assignments or exams.
+P35.21 | Assignment and assessment redesign for AI | over-time | 5 | Administrators and departments review learning goals and offer alternative assessment approaches in light of AI.
+P35.23 | Assignment and assessment redesign for AI | general | 6 | Institutions aim to support assessment practices that stay meaningful despite AI.
+P36.01 | AI misuse as academic misconduct | before-course | 4 | Administrators update or clarify honor codes and conduct policies to cover generative AI.
+P37.12 | Consequences and sanctions for AI-rule violations | when-misuse | 3 | Employees who violate AI policy may face disciplinary action up to termination, and violations may be noted in evaluations.
+P39.12 | Reliability and use of AI detectors | over-time | 3 | Administrators keep monitoring and reviewing AI detection tools over time.
+P39.13 | Reliability and use of AI detectors | general | 21 | The university does not license, approve, endorse, or provide an AI detection tool.
+P39.15 | Reliability and use of AI detectors | general | 4 | The university has disabled, cancelled, or let expire its AI detection feature.
+P40.08 | Detection and similarity tools for AI misuse | when-misuse | 7 | The university provides and monitors AI-detection and plagiarism tools to detect AI misuse.
+P44.07 | Teaching AI use in courses | general | 16 | The institution aims to prepare students to use AI responsibly and effectively and to integrate AI into the curriculum.
+P46.08 | Human responsibility for grades | when-misuse | 1 | Grades without proper instructor review could be successfully appealed by students.
+P48.06 | Disclosure and review of AI-made materials and communications | during-work | 7 | Staff disclose and label their use of AI in official documents and learning materials.
+P48.07 | Disclosure and review of AI-made materials and communications | during-work | 1 | Staff are not permitted to use generative AI to produce materials.
+P50.01 | Keeping personal and sensitive data out of AI tools | before-course | 15 | The university vets AI tools and puts data protection measures in place.
+P51.06 | Equitable access to AI (cost, alternatives, opt-out) | before-course | 3 | Faculty and the university ensure AI use has no disparate impact on students with disabilities.
+P51.19 | Equitable access to AI (cost, alternatives, opt-out) | general | 17 | The university ensures equitable access to AI tools and resources for everyone.
+P51.20 | Equitable access to AI (cost, alternatives, opt-out) | general | 13 | Administrators state a commitment to accessible, equitable and inclusive AI.
+P51.23 | Equitable access to AI (cost, alternatives, opt-out) | general | 5 | The university provides no-cost or affordable AI tools and computing resources to students.
+P52.08 | Copyright, intellectual property and terms of use | over-time | 6 | The university protects ownership of research and course materials, reviews its guidance regularly and fosters dialogue on AI and IP.
+P53.10 | Bias, fairness and general ethical concerns about AI | general | 10 | Administrators mitigate AI bias, evaluate AI systems for bias, and promote awareness of AI ethics.
+P54.02 | Policy review and revision over time | over-time | 94 | Guidance is a living document that will be updated and will evolve as AI technology and practice change.
+P54.04 | Policy review and revision over time | over-time | 31 | The university reviews and updates its AI policy and guidance regularly, such as annually.
+P54.05 | Policy review and revision over time | over-time | 28 | Policies and guidance are reviewed on a stated periodic schedule, usually at least annually, by a named body.
+P54.06 | Policy review and revision over time | over-time | 23 | AI policies are still under development, and further guidance or policy documents are forthcoming.
+P54.08 | Policy review and revision over time | over-time | 18 | Policy documents list their review dates, version history or update status.
+P54.10 | Policy review and revision over time | over-time | 10 | The university collects community feedback and uses it to improve its policies and resources.
+P54.11 | Policy review and revision over time | over-time | 8 | Administrators set up committees, working groups or ongoing discussions to keep addressing AI issues.
+P54.12 | Policy review and revision over time | over-time | 4 | Designated bodies recommend revisions or updates to the policy.
+P54.13 | Policy review and revision over time | over-time | 4 | Policy changes are documented, archived and communicated to the campus.
+P55.01 | Evidence on AI use and its effects | over-time | 13 | Administrators evaluate and track the impact of AI on student learning and outcomes through rigorous, continuous assessment.
+P55.02 | Evidence on AI use and its effects | over-time | 7 | Administrators survey or poll students and faculty about their AI use, concerns and needs to inform policy.
+P55.03 | Evidence on AI use and its effects | over-time | 5 | Academic misconduct and honor code cases involving generative AI have increased.
+P56.02 | Institutional values and principles for AI use | before-course | 3 | The university publishes baseline principles and a shared framework for AI use in teaching and learning.
+P56.06 | Institutional values and principles for AI use | general | 28 | The university aims to use AI to advance its mission, innovation, teaching, research and student preparation.
+P56.09 | Institutional values and principles for AI use | general | 18 | This framework states the purpose and scope of university AI guidance and affirms shared community values.
+P56.13 | Institutional values and principles for AI use | general | 7 | The university deploys and governs AI to serve its values, such as equity and autonomy, in proportion to risk.
+P59.08 | Instructor AI use for teaching work | during-work | 4 | Teaching assistants and staff use AI only as their supervisors and the instructor allow.
+P60.03 | Trust and course design over policing AI use | when-misuse | 3 | Instructors will increasingly need to trust students to follow AI policies voluntarily, because prohibitions cannot be enforced.
+P60.06 | Trust and course design over policing AI use | when-misuse | 1 | Administrators ensure students do not feel policed.
+P61.18 | Definitions and scope of the policy | general | 2 | Administrators define generative and agentic AI and include AI-related terms in institutional definitions.
+P62.01 | AI in research, publication and review | before-course | 15 | Universities develop AI guidelines, standards, templates, training and resources for researchers.
+P63.02 | Faculty support and learning about AI | before-course | 76 | Teaching centers offer AI workshops, consultations and support to faculty.
+P63.06 | Faculty support and learning about AI | before-course | 26 | The institution provides faculty with training, workshops, resources and support on AI.
+P63.12 | Faculty support and learning about AI | before-course | 1 | Faculty who teach with AI must be trained.
+P64.03 | Due process for students accused of misuse | when-misuse | 4 | Students receive fair, transparent treatment and due process in AI misuse cases.
+P64.08 | Due process for students accused of misuse | when-misuse | 1 | Reports of suspected AI misuse go to the department chair, who gathers information.
+P65.02 | Review and approval of AI tools and vendors | before-course | 44 | Administrators establish a process to review and approve AI tools and vendors for security, privacy, risk and compliance before adoption.
+P65.03 | Review and approval of AI tools and vendors | before-course | 27 | Administrators ensure AI vendor contracts include data protection, privacy and security terms, and that vendors disclose their AI use.
+P65.04 | Review and approval of AI tools and vendors | before-course | 25 | IT or security offices review AI tools for security, privacy, legal and accessibility standards before approval.
+P65.05 | Review and approval of AI tools and vendors | before-course | 16 | Everyone must follow the university's standard procurement process for AI purchases and subscriptions.
+P65.07 | Review and approval of AI tools and vendors | before-course | 3 | Everyone may submit requests for new AI tools to be reviewed or integrated.
+P65.08 | Review and approval of AI tools and vendors | before-course | 2 | Staff must obtain approval through standard contracting and procurement before acquiring AI tools.
+P65.10 | Review and approval of AI tools and vendors | over-time | 12 | Administrators review approved AI tools again periodically or when they change.
+P65.11 | Review and approval of AI tools and vendors | over-time | 10 | The university is continuing to evaluate AI tools, and current agreements and detection tools have limits.
+P65.12 | Review and approval of AI tools and vendors | general | 9 | Administrators may block, restrict or prohibit unauthorized or risky AI tools.
+P65.14 | Review and approval of AI tools and vendors | general | 8 | Vendor contracts exist or restrict training on university data, and data entered into some AI products is retained.
+P65.15 | Review and approval of AI tools and vendors | general | 8 | The university publishes lists of approved, prohibited or reviewed AI tools.
+P65.16 | Review and approval of AI tools and vendors | general | 1 | Administrators do not authorize licensing or sharing university data or intellectual property externally for AI purposes, and AI agreements need General Counsel review.
+P68.03 | Educative response to misuse | when-misuse | 10 | Conduct and integrity processes are educational and supportive, so most first reports lead to educational outcomes, reminders or reflection rather than formal charges.
+P68.09 | Educative response to misuse | when-misuse | 1 | The university develops and deploys educational modules to help students who commit violations.
+P68.12 | Educative response to misuse | general | 1 | The university avoids highly restrictive and punitive rules on generative AI use.
+P69.04 | Evidence standards for AI-misuse findings | when-misuse | 10 | Detector output alone is insufficient to find a student responsible and does not determine responsibility.
+P69.09 | Evidence standards for AI-misuse findings | when-misuse | 5 | Misconduct findings require a standard of proof, such as clear and convincing evidence or more likely than not.
+P69.15 | Evidence standards for AI-misuse findings | when-misuse | 2 | The burden of proof in academic misconduct cases lies with the university.
+P70.01 | AI literacy training and resources | before-course | 14 | The institution provides AI training and professional development for faculty and staff.
+P70.02 | AI literacy training and resources | before-course | 10 | The institution builds AI literacy into curricula, courses and learning outcomes across disciplines.
+P70.03 | AI literacy training and resources | before-course | 5 | The institution requires students to take AI literacy courses, workshops or orientation.
+P70.07 | AI literacy training and resources | general | 38 | The institution offers AI courses, workshops, modules and resources to its community.
+P70.08 | AI literacy training and resources | general | 32 | The institution provides training, workshops and support so students, faculty and staff understand and use AI responsibly.
+P71.01 | Reporting AI incidents and misuse | during-work | 2 | Employees and meeting participants promptly report AI concerns, problems, or issues to the host, IT, or the designated office.
+P71.06 | Reporting AI incidents and misuse | when-misuse | 4 | Administrators provide channels for reporting, complaints and redress, and receive and review the reports.
+P71.07 | Reporting AI incidents and misuse | when-misuse | 4 | Administrators activate incident response, document and investigate incidents, notify affected parties and regulators, and refer violations to proper bodies.
+P72.01 | Contact points and human help for AI questions | before-course | 3 | Universities provide students and advisors with contact information, resource lists and a designated referral point for human assistance.
+P73.01 | Human oversight of AI-influenced decisions | during-work | 12 | AI-assisted decisions must include human review, approval and oversight by qualified people who can override the AI output.
+P73.07 | Human oversight of AI-influenced decisions | general | 5 | Administrators must not use AI to make final personnel, hiring or employment decisions.
+P76.01 | Administrative and operational AI use | before-course | 12 | Administrators develop frameworks, policies, guidelines and expectations for AI use in university operations and ensure proposals are reviewed and governed.
+P76.03 | Administrative and operational AI use | during-work | 22 | Staff and units may use generative AI for routine administrative and operational tasks such as drafting emails, summarizing meetings and scheduling.
+P76.06 | Administrative and operational AI use | over-time | 1 | Safety and surveillance guidelines would benefit from attention to AI-enhanced systems.
+P76.07 | Administrative and operational AI use | general | 10 | Staff and administrators are encouraged to use or explore AI to improve efficiency, administrative processes and decision-making.
+P76.08 | Administrative and operational AI use | general | 10 | Universities support and describe AI efforts to improve efficiency in administrative and student service operations.
+P76.09 | Administrative and operational AI use | general | 8 | Administrators may use AI in institutional functions such as student services, advising, retention and operations, subject to authorization and privacy.
+P76.10 | Administrative and operational AI use | general | 3 | Staff are transparent about how they use AI tools in their work.
+P76.11 | Administrative and operational AI use | general | 2 | Administrators do not use AI for sensitive functions such as legal advice, facial recognition security, vendor bid review or financial and HR projects.
+P77.02 | Existing law and university policy apply to AI | before-course | 18 | Administrators ensure AI systems, units' policies and implementation comply with laws and existing university policies.
+P77.14 | Existing law and university policy apply to AI | general | 18 | University AI policy is required by, aligned with or subordinate to state, system or board regulations.
+P77.15 | Existing law and university policy apply to AI | general | 4 | Staff use AI in compliance with institutional guidelines, export rules and applicable policy.
+P78.01 | Finding out and following each course's AI rules | before-course | 2 | Instructors and staff share academic integrity policies with students and align with instructor guidance on AI.
+P79.06 | AI use built into coursework | before-course | 2 | Departments may include AI components in capstone courses.
+P80.01 | Governance roles, ownership and exceptions | before-course | 8 | Institutions establish or appoint a standing AI committee, council or executive authority with defined authority.
+P80.02 | Governance roles, ownership and exceptions | before-course | 7 | AI governance bodies are appointed with set membership, including faculty, student and unit representatives.
+P80.03 | Governance roles, ownership and exceptions | before-course | 5 | Designated offices develop guidance, policies and protocols on AI use.
+P80.04 | Governance roles, ownership and exceptions | before-course | 3 | Units designate AI leads, ambassadors or defined roles to coordinate AI work.
+P80.10 | Governance roles, ownership and exceptions | over-time | 10 | A named body reviews, updates and maintains the AI policy and guidelines over time.
+P80.11 | Governance roles, ownership and exceptions | over-time | 5 | Designated offices review and audit campus procedures and AI use to monitor compliance.
+P80.12 | Governance roles, ownership and exceptions | over-time | 3 | Final authority to interpret the AI policy and decide on it rests with the president or governing board.
+P80.13 | Governance roles, ownership and exceptions | general | 21 | AI committees and councils provide oversight, strategy, advice, risk review and policy guidance.
+P80.14 | Governance roles, ownership and exceptions | general | 12 | IT, security or compliance offices are responsible for implementing and enforcing the AI policy.
+P80.15 | Governance roles, ownership and exceptions | general | 11 | The provost or academic affairs office is responsible for academic AI policy and standards.
+P80.16 | Governance roles, ownership and exceptions | general | 9 | Leaders and units ensure their teams understand, implement and comply with the AI policy.
+P80.17 | Governance roles, ownership and exceptions | general | 9 | Exceptions to the AI policy are approved by a designated office or committee through a defined request process.
+P80.18 | Governance roles, ownership and exceptions | general | 4 | A named office reviews and approves AI tools and maintains the list of approved tools.
+P81.02 | Formal integrity procedure (reporting, referral, sanctions process) | before-course | 3 | The institution establishes and communicates procedures and guidelines for handling AI misuse.
+P81.05 | Formal integrity procedure (reporting, referral, sanctions process) | when-misuse | 19 | The designated office or dean investigates and resolves reported AI violations under established integrity procedures.
+P83.06 | AI decisions grounded in learning objectives | before-course | 8 | Departments, programs and institutions jointly review and state learning outcomes in light of AI.
+P84.01 | How the policy was made (body, process, sources, AI assistance) | before-course | 20 | Policies state their purpose or scope: to build frameworks, principles, guidelines and resources for responsible AI use.
+P84.02 | How the policy was made (body, process, sources, AI assistance) | before-course | 11 | The draft was shaped by consultation, feedback or public comment from faculty, students, staff and other stakeholders.
+P84.03 | How the policy was made (body, process, sources, AI assistance) | before-course | 4 | Administrators establish baseline policies and general principles for generative AI use, including academic integrity guidelines.
+P84.05 | How the policy was made (body, process, sources, AI assistance) | over-time | 13 | The policy states when it was first published, revised or updated, and what changed.
+P84.06 | How the policy was made (body, process, sources, AI assistance) | over-time | 5 | The AI policy is interim or still under review, and a fuller policy is being developed.
+P84.07 | How the policy was made (body, process, sources, AI assistance) | general | 42 | A named committee, task force or working group, convened or charged by university leaders, drafted the AI policy or guidance.
+P84.08 | How the policy was made (body, process, sources, AI assistance) | general | 24 | A named body approved, adopted, ratified or endorsed the AI policy, on a stated date.
+P84.09 | How the policy was made (body, process, sources, AI assistance) | general | 23 | Generative AI tools were used to help draft, edit or refine the policy document.
+P84.10 | How the policy was made (body, process, sources, AI assistance) | general | 13 | The guidance was adapted from or built on policies, frameworks or syllabus models from other institutions or groups.
+P84.11 | How the policy was made (body, process, sources, AI assistance) | general | 2 | The document was written without generative AI assistance.
+P85.01 | Units set their own AI rules | before-course | 22 | Colleges, schools, departments and programs develop their own AI guidelines or policies suited to their disciplines.
+P85.02 | Units set their own AI rules | before-course | 16 | Units such as colleges, departments and programs may adopt their own more specific or additional AI policies, consistent with university policy.
+P85.05 | Units set their own AI rules | general | 20 | Colleges, schools or departments may have their own additional AI rules, guidance or expectations.
+P85.06 | Units set their own AI rules | general | 15 | AI expectations and appropriate use vary by discipline, so they are shaped locally within departments and units.
+P88.01 | Engaging peers, partners and the community on AI | before-course | 8 | Universities benchmark and review the AI policies and practices of peer institutions when developing their own.
+P88.03 | Engaging peers, partners and the community on AI | over-time | 4 | Universities consult employers, alumni, and advisory boards and track workforce needs to keep AI guidance current.
+P88.04 | Engaging peers, partners and the community on AI | over-time | 3 | Universities build or join a coalition of peer institutions to help set shared standards for AI.
+P88.05 | Engaging peers, partners and the community on AI | general | 6 | Universities forge partnerships with industry, government agencies, and academic institutions to share knowledge and support AI work.
+P88.06 | Engaging peers, partners and the community on AI | general | 5 | Universities engage students, faculty, staff, and the broader community in discussions and forums on AI.
+P92.08 | University-licensed or approved AI tools | during-work | 9 | Employees and staff use only approved or licensed AI tools when working with university data or business.
+P92.15 | University-licensed or approved AI tools | general | 4 | The university maintains and communicates the list of approved AI tools.
+P97.09 | Accessibility and AI | general | 12 | Administrators ensure AI tools and systems comply with accessibility standards and are accessible to all users, providing accommodations where needed.
+P97.14 | Accessibility and AI | general | 2 | Accessibility rules cover the design, acquisition and use of AI systems.
+P98.01 | Documenting, auditing and monitoring AI systems | before-course | 8 | Administrators maintain an inventory or registry of all AI tools and systems used at the institution.
+P98.02 | Documenting, auditing and monitoring AI systems | before-course | 6 | AI systems undergo ethical review, risk analysis, impact assessment, and accuracy and robustness testing before adoption.
+P98.03 | Documenting, auditing and monitoring AI systems | before-course | 4 | AI systems are evaluated and tested for bias and fairness before deployment.
+P98.05 | Documenting, auditing and monitoring AI systems | during-work | 4 | Faculty, staff and instructors monitor and validate AI tools and their outputs to ensure they work as intended.
+P98.06 | Documenting, auditing and monitoring AI systems | over-time | 12 | Administrators continuously monitor AI system performance, accuracy and impact after deployment, and reassess systems periodically.
+P98.07 | Documenting, auditing and monitoring AI systems | over-time | 9 | Administrators regularly audit AI systems for bias, fairness and discrimination, and correct problems found.
+P98.08 | Documenting, auditing and monitoring AI systems | over-time | 8 | Administrators regularly audit and assess AI systems for performance, security, privacy and compliance with institutional policy.
+P98.09 | Documenting, auditing and monitoring AI systems | over-time | 5 | Administrators maintain documentation such as model cards, approvals and records for AI systems, stored in approved repositories.
+P98.10 | Documenting, auditing and monitoring AI systems | over-time | 2 | Administrators keep an audit trail and logs of AI inputs, outputs, decisions and agent actions, and retain records for audit.
+P98.11 | Documenting, auditing and monitoring AI systems | general | 3 | Administrators keep AI data accurate and maintained, and AI systems transparent, auditable and aligned with public record laws.
+P98.12 | Documenting, auditing and monitoring AI systems | general | 2 | Frameworks and standards such as NIST guide AI implementation, evaluation and monitoring.
+P99.11 | Reducing pressures that lead to misuse | when-misuse | 2 | Misconduct processes can include educational conversations with students and balance compassion with enforcement of course policies.
+P99.12 | Reducing pressures that lead to misuse | general | 3 | Most students who violate integrity rules do so out of stress, anxiety and academic pressure.

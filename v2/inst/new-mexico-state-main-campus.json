@@ -1,0 +1,449 @@
+{
+ "university": "New Mexico State University-Main Campus",
+ "slug": "new-mexico-state-main-campus",
+ "state": "NM",
+ "type": "R1",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "nmsu-syllabus-ai-statements",
+   "layer": "university",
+   "unit": "Office of the Provost (Syllabus Resources)",
+   "course": null,
+   "title": "Required Sections: Artificial Intelligence Statements",
+   "url": "https://syllabus.nmsu.edu/required-sections.html",
+   "date_or_term": null,
+   "stance_why": "The page says 'Select one of the following three statements that best fits your course', offering permissive, conditional and no-use templates, so the stance is delegates with tiers.",
+   "stance": "delegates",
+   "tiers": [
+    "Broader Use of Generative AI Permitted Within Guidelines",
+    "Use of Generative AI Permitted Under Some Circumstances or with Explicit Permission",
+    "No Use of Generative AI Permitted"
+   ],
+   "summary": "Syllabus-resources page offering faculty three ready-made AI statements, from broad permitted use with citation, to conditional use, to no use. Instructors pick the one that fits their course. The page sets no single university stance.",
+   "units": [
+    {
+     "why": "The page tells faculty to pick one of three AI statements: 'Select one of the following three statements that best fits your course to include.' It sits on a page of required syllabus sections, so every syllabus must carry an AI statement: P09, addressed to instructors before the course.",
+     "anchor": "Select one of the following three statements that best fits your course to include.",
+     "frag_start": "Select one of the following",
+     "frag_end": "course to include.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "instructor-discretion"
+     ],
+     "resolution_why": "Coder A coded P09 with 'should'; coder B coded P04 with 'must'. The page is titled 'Required Sections' and 'Select one' is an imperative, so the statement is required (P09, must). The choice among statements is real but is carried by the tier units (P04/P05), so P04 is not the primary type.",
+     "fit_note": "Also says the instructor chooses which statement fits the course (P04)."
+    },
+    {
+     "why": "The page says 'AI Statements are now available for faculty to include in their syllabi' and then lists three statements from broad permission to a ban, which are named levels of AI use: P05. It describes the menu, so informs.",
+     "anchor": "AI Statements are now available for faculty to include in their syllabi.",
+     "frag_start": "AI Statements are now available",
+     "frag_end": "include in their syllabi.",
+     "policy": "The university offers three syllabus statements for AI use: broader use permitted within guidelines, use permitted under some circumstances or with explicit permission, and no use permitted.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P05",
+     "unit_stance": "neutral",
+     "topics": [
+      "use-categories-levels",
+      "syllabus-communication"
+     ],
+     "resolution_why": "Both coders coded P05 informs with different anchors (A 'Select one of the following three statements', B 'AI Statements are now available'). They cover the same passage and rule; I kept B's anchor, which does not duplicate the first unit's anchor, and A's policy text, which names the three levels as the source does."
+    },
+    {
+     "why": "Tier 1 text says 'Use of AI tools is permitted in this course for students who wish to use them', a default permission, so P02, permit, may.",
+     "anchor": "AI tools is permitted in this course for students who wish to use them.",
+     "frag_start": "Use of AI tools is permitted",
+     "frag_end": "who wish to use them.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P02",
+     "unit_stance": "permit",
+     "topics": [
+      "default-stance",
+      "permitted-uses"
+     ]
+    },
+    {
+     "why": "Tier 1 says 'Students must cite any AI-generated material that informed their work', a duty to attribute AI use, so P24 must. It names in-text citations and reference lists but not tool, prompt or date, so P24 not P25.",
+     "anchor": "Students must cite any AI-generated material that informed their work",
+     "frag_start": "Students must cite any",
+     "frag_end": "and in your references list).",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "require",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "Tier 1 says 'Using an AI tool to generate content without proper attribution qualifies as academic dishonesty'. Use is permitted in this tier, so the violation is the missing attribution, which is P28 (nondisclosure is the violation). The dishonesty label also touches P36.",
+     "anchor": "Using an AI tool to generate content without proper attribution qualifies as academic dishonesty.",
+     "frag_start": "Using an AI tool to generate",
+     "frag_end": "qualifies as academic dishonesty.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P28",
+     "unit_stance": "restrict",
+     "topics": [
+      "disclosure-citation",
+      "integrity-sanctions"
+     ],
+     "resolution_why": "Coder A coded P28 and unit_stance prohibit; coder B coded P36 and restrict. P36 is about unauthorized use, but in this tier AI use is authorized and only the lack of attribution is called dishonesty, so P28 fits better. Because use stays permitted when attributed, unit_stance is restrict.",
+     "fit_note": "Also classifies the nondisclosure as academic dishonesty (P36)."
+    },
+    {
+     "why": "Tier 2 says 'You will be informed as to when, where, and how these tools are permitted to be used', so the instructor decides case by case and tells students. That is P04; the sentence has no deontic verb, so informs.",
+     "anchor": "You will be informed as to when, where, and how these tools are permitted",
+     "frag_start": "You will be informed as to",
+     "frag_end": "guidance for attribution.",
+     "policy": "Under tier 2, students are informed when, where, and how AI writing tools are permitted to be used, along with guidance for attribution.",
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "informs",
+     "policy_type": "P04",
+     "unit_stance": "restrict",
+     "topics": [
+      "instructor-discretion",
+      "syllabus-communication"
+     ],
+     "resolution_why": "Coders agreed on P04 and restrict but split on actor (A student, B instructor) and modality (A informs, B should). The sentence is a promise the instructor makes to students, so the instructor is the party bound; it contains no 'should' or 'must', so informs follows the wording.",
+     "fit_note": "Also says guidance on attribution comes with the permission."
+    },
+    {
+     "why": "Tier 2 opens 'During this class, we may use AI Writing tools', a conditional permission that the next sentence limits to occasions the instructor announces. Closest type is P04 (permission set by the instructor); may.",
+     "anchor": "During this class, we may use AI Writing tools.",
+     "frag_start": "During this class, we may",
+     "frag_end": "use AI Writing tools.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P04",
+     "unit_stance": "restrict",
+     "topics": [
+      "default-stance",
+      "permitted-uses"
+     ],
+     "resolution_why": "Found only by coder B (coder A folded this sentence into its 'informed as to when' unit via the fragment). It is a distinct sentence granting conditional permission limited to AI writing tools, so I kept it as its own unit.",
+     "fit_note": "The statement is limited to AI writing tools and allows use only when the instructor says so."
+    },
+    {
+     "why": "Tier 2 says permitted tools 'should be used with caution and proper citation'. The citation part is disclosure (P24); the caution has no type, hence the fit_note.",
+     "anchor": "they should be used with caution and proper citation",
+     "frag_start": "It is important to note that",
+     "frag_end": "caution and proper citation.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation",
+      "permitted-uses"
+     ],
+     "fit_note": "Also advises using AI tools with caution, which no type captures."
+    },
+    {
+     "why": "Tier 3 says 'This course assumes that all work submitted by students will be generated by the students themselves', which says students own what they submit and so grounds the ban (P29). The ban itself is coded in the units below.",
+     "anchor": "all work submitted by students will be generated by the students themselves",
+     "frag_start": "This course assumes that all",
+     "frag_end": "working individually or in groups.",
+     "policy": "The course assumes that all work submitted by students will be generated by the students themselves, working individually or in groups.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "informs",
+     "policy_type": "P29",
+     "unit_stance": "prohibit",
+     "topics": [
+      "accountability-understanding",
+      "default-stance"
+     ],
+     "resolution_why": "Coder A coded P01 must general prohibit; coder B coded P29 informs during-work restrict. The sentence names no AI and is worded as an assumption, so informs; it is about authorship of submitted work (P29). The blanket ban is carried by the P01 title unit and the P19 sentence. Phase is during-work because it concerns submitted work. In the no-use tier the assumption excludes AI-generated work, so unit_stance is prohibit.",
+     "fit_note": "Also grounds the tier's default ban on AI-produced work (P01)."
+    },
+    {
+     "why": "Tier 3 says 'Students should not have another person/entity do the writing of any substantive portion of an assignment for them', naming 'using AI tools', so AI may not produce submitted work: P19.",
+     "anchor": "Students should not have another person/entity do the writing of any substantive portion",
+     "frag_start": "Students should not have another",
+     "frag_end": "and using AI tools.",
+     "policy": "Students should not have another person or entity do the writing of any substantive portion of an assignment for them, which includes hiring a person or a company to write assignments and using AI tools.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should-not",
+     "policy_type": "P19",
+     "unit_stance": "prohibit",
+     "topics": [
+      "prohibited-uses",
+      "default-stance"
+     ],
+     "resolution_why": "Coders agreed on all codes; they differed in policy wording and topics. Coder A's policy inserted 'including by using AI tools', which changes the structure; I used coder B's wording, which follows the source. 'code-generation' is not in the source, so it is dropped.",
+     "fit_note": "Frames AI as an outside entity like a hired person or company (P45)."
+    },
+    {
+     "why": "The third tier is titled 'No Use of Generative AI Permitted', a blanket course-level ban (P01).",
+     "anchor": "No Use of Generative AI Permitted",
+     "frag_start": "No Use of Generative AI",
+     "frag_end": "Permitted",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P01",
+     "unit_stance": "prohibit",
+     "topics": [
+      "default-stance"
+     ],
+     "resolution_why": "Found only by coder B. It is the tier's own heading stating the rule, and the other tier-3 sentences do not state the ban in terms of AI use, so I kept it."
+    }
+   ]
+  },
+  {
+   "id": "nmsu-provost-ai-syllabus-memo",
+   "layer": "university",
+   "unit": "Office of the Provost",
+   "course": null,
+   "title": "Inclusion of Syllabus language clearly stating the level of use of AI permitted in each course at NMSU",
+   "url": "https://provost.nmsu.edu/communications/2023-2024/january/inclusion_of_syllabus_language_clearly_stating_the_level-of-use-of-ai-permitted-in-each-course-at-nmsu.html",
+   "date_or_term": "2024-01-03",
+   "stance_why": "The memo says 'students must be informed as to the acceptable use, or otherwise, of AI in each course' and gives faculty three options to choose from; it sets no level itself, so delegates with tiers.",
+   "stance": "delegates",
+   "tiers": [
+    "Broader Use of Generative AI Permitted Within Guidelines",
+    "Use of Generative AI Permitted Under Some Circumstances or with Explicit Permission",
+    "No Use of Generative AI Permitted"
+   ],
+   "summary": "January 2024 provost memo requiring each syllabus to state the level of AI use allowed, using one of three options in the syllabus generator. It gives the task-force origin, lists benefits and concerns of AI, and promises faculty training in spring.",
+   "units": [
+    {
+     "why": "The memo says 'students must be informed as to the acceptable use, or otherwise, of AI in each course', so the syllabus must state the AI level. This is P09, addressed to faculty.",
+     "anchor": "students must be informed as to the acceptable use, or otherwise, of AI",
+     "frag_start": "Critically, students must be informed",
+     "frag_end": "of AI in each course.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "must",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "resolution_why": "Coders agreed on type, actor, phase and modality; they differed on unit_stance (A require, B neutral). The requirement is to state a level, not to use AI, so neutral."
+    },
+    {
+     "why": "The memo says 'we need to maintain a clarity of expectations for our students', the purpose of the syllabus requirement. As a statement of purpose it fits P56 (preamble stating purpose); it carries no duty itself, so informs.",
+     "anchor": "we need to maintain a clarity of expectations for our students",
+     "frag_start": "While we figure out this changing",
+     "frag_end": "for our students.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "policy-evolution"
+     ],
+     "resolution_why": "Coder A coded P09 with actor all; coder B coded P56 with actor admin. The speaker is the provost's office ('we'), so admin. It gives the reason for the syllabus rule and does not itself require anything, so P56 (purpose) rather than P09.",
+     "fit_note": "Explains the purpose of the syllabus-statement requirement (P09)."
+    },
+    {
+     "why": "The syllabus generator and Canvas template 'now contains three options for faculty to choose from', which set named levels of AI use: P05, informs.",
+     "anchor": "three options for faculty to choose from that will inform the student",
+     "frag_start": "three options for faculty to",
+     "frag_end": "accept in your class.",
+     "policy": "The syllabus generator and Canvas template contain three options for faculty to choose from that inform the student what level of AI use the instructor will accept in the class, effective Spring 2024.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P05",
+     "unit_stance": "neutral",
+     "topics": [
+      "use-categories-levels",
+      "syllabus-communication"
+     ],
+     "fit_note": "Also records the effective date and the delivery channel (syllabus generator, Canvas template)."
+    },
+    {
+     "why": "The memo says the three choices 'encompass all potential level of possible use' and lists the named levels: P05. Faculty choosing a level (P04) is the context, but the named levels are the content.",
+     "anchor": "encompass all potential level of possible use",
+     "frag_start": "The 3 choices that are presented",
+     "frag_end": "No Use of Generative AI Permitted.",
+     "policy": "The three choices are Broader Use of Generative AI Permitted Within Guidelines; Use of Generative AI Permitted Under Some Circumstances or with Explicit Permission; No Use of Generative AI Permitted.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P05",
+     "unit_stance": "neutral",
+     "topics": [
+      "use-categories-levels",
+      "instructor-discretion"
+     ],
+     "resolution_why": "Coder A coded P04, coder B coded P05, same passage. The passage lists the named levels, which is P05; instructor choice is already carried by the preceding unit and the select-one unit, so P04 does not fit as well.",
+     "fit_note": "Also says faculty choose a level for each course (P04)."
+    },
+    {
+     "why": "The memo says the language 'was the outcome from a fall 2023 AI task force which incorporated multiple stakeholders'. This describes who produced the university's framework, not its purpose, scope or principles, so no type fits.",
+     "anchor": "the outcome from a fall 2023 AI task force which incorporated multiple stakeholders",
+     "frag_start": "This language was the outcome",
+     "frag_end": "discussion around campus.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ],
+     "resolution_why": "Coder A coded P56; coder B coded UNCOVERED. P56 covers the purpose, scope and principles of a framework; a sentence about how and by whom it was drafted is none of these, so UNCOVERED with a note.",
+     "uncovered_note": "Describes the task force and stakeholder process that produced the university's AI syllabus language."
+    },
+    {
+     "why": "The memo lists benefits of AI: 'enhanced personalization, efficiency and automation, data-driven insights, and increased accessibility and inclusivity'. No type covers general benefits of AI in education, so UNCOVERED.",
+     "anchor": "enhanced personalization, efficiency and automation, data-driven insights, and increased accessibility and inclusivity",
+     "frag_start": "The use of AI in education offers",
+     "frag_end": "accessibility and inclusivity.",
+     "policy": "The use of AI in education offers numerous advantages, including enhanced personalization, efficiency and automation, data-driven insights, and increased accessibility and inclusivity.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale",
+      "ai-literacy-career"
+     ],
+     "uncovered_note": "The university states general benefits of AI in education such as personalization, efficiency, insights and accessibility."
+    },
+    {
+     "why": "The memo names concerns: 'ethical considerations, dependency and over-reliance, equity and access'. It lists harms of AI together, so P53 is the nearest.",
+     "anchor": "ethical considerations, dependency and over-reliance, equity and access",
+     "frag_start": "several concerns including ethical considerations",
+     "frag_end": "equity and access,",
+     "policy": "Concerns about AI include ethical considerations, dependency and over-reliance, and equity and access.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P53",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment",
+      "equity-access"
+     ],
+     "resolution_why": "Both coders coded P53; coder B merged the detection-tool concern into the same unit, coder A kept it separate. Following the one-policy-per-unit rule I kept it separate (next unit).",
+     "fit_note": "Also names over-reliance (P43) and equity and access (P51)."
+    },
+    {
+     "why": "The memo names 'the current lack of effective tools to detect AI content' as a concern, a statement that detection is unreliable: P39.",
+     "anchor": "the current lack of effective tools to detect AI content",
+     "frag_start": "and the current lack of effective tools",
+     "frag_end": "detect AI content.",
+     "policy": null,
+     "actor": "all",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P39",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ],
+     "resolution_why": "Found only by coder A as a separate unit (coder B folded it into the concerns unit). It is a distinct claim about detection, so I kept it separate.",
+     "fit_note": "States that effective detectors are lacking rather than telling readers not to rely on them."
+    },
+    {
+     "why": "The memo says 'it's imperative that we approach this innovation with a balanced perspective', a principle for how the university treats AI. P56 (principle), should.",
+     "anchor": "it's imperative that we approach this innovation with a balanced perspective",
+     "frag_start": "As we consider how to best explore",
+     "frag_end": "with a balanced perspective.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "responsible-ai",
+      "policy-evolution"
+     ],
+     "resolution_why": "Found only by coder A. It is a stated guiding principle with 'imperative', so it is a real policy statement and was kept."
+    },
+    {
+     "why": "The memo says 'we should seek training and support from each other', which asks faculty to learn about AI together: P63, should.",
+     "anchor": "we should seek training and support from each other",
+     "frag_start": "we should seek training and support",
+     "frag_end": "from each other,",
+     "policy": "Faculty should seek training and support from each other.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use",
+      "ai-literacy-career"
+     ],
+     "resolution_why": "Coder B merged this with the ethics request into one unit; coder A split them. They are two distinct asks, so I split them and kept the training ask here."
+    },
+    {
+     "why": "The memo asks faculty to 'consider the ethical implications of incorporating AI into teaching methodologies', an ethics expectation for instructors, so P53, should.",
+     "anchor": "consider the ethical implications of incorporating AI into teaching methodologies",
+     "frag_start": "and consider the ethical implications",
+     "frag_end": "teaching methodologies.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P53",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment",
+      "instructor-staff-use"
+     ],
+     "resolution_why": "Found as a separate unit only by coder A (coder B merged it into the training unit under P63). It is a distinct request, so I kept it as its own unit; P53 because it asks for ethical consideration, not training."
+    },
+    {
+     "why": "The memo says 'There will be campus opportunities in the spring for everyone who wishes to participate in this training and support', so the university will offer training. It is tied to the faculty support just described, so P63.",
+     "anchor": "There will be campus opportunities in the spring for everyone who wishes to participate",
+     "frag_start": "There will be campus opportunities",
+     "frag_end": "training and support.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "ai-literacy-career"
+     ],
+     "resolution_why": "Coders agreed on P63 and informs but differed on actor (A admin, B instructor) and phase (A before-course, B over-time). The university is the party providing the opportunities, so admin; training precedes teaching, so before-course.",
+     "fit_note": "Says 'everyone' may participate, not only faculty (P70)."
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "No school or computing-unit AI policy found at NMSU main campus; course layer deferred. Coder B's unit on the syllabus generator being kept up to date was dropped: it says the tool is current, not anything about AI use."
+}

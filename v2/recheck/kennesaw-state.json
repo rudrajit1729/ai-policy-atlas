@@ -1,0 +1,24 @@
+{"slug": "kennesaw-state", "university": "Kennesaw State University",
+ "units_searched": [
+  {"unit": "College of Computing and Software Engineering (CCSE)", "layer": "school", "site": "https://campus.kennesaw.edu/colleges-departments/ccse/",
+   "queries": ["site:ccse.kennesaw.edu generative AI policy", "site:ccse.kennesaw.edu academic integrity ChatGPT", "Kennesaw State College of Computing and Software Engineering AI use policy students syllabus statement", "site:ccse.kennesaw.edu student handbook \"artificial intelligence\" OR \"AI tools\"", "Kennesaw State College of Computing and Software Engineering \"AI\" \"academic integrity\" Department of Computer Science undergraduate students policy generative"],
+   "pages_checked": ["https://campus.kennesaw.edu/colleges-departments/ccse/", "https://campus.kennesaw.edu/colleges-departments/ccse/first-year-experience/policies.php", "https://campus.kennesaw.edu/colleges-departments/ccse/first-year-experience/old_syllabi/summer2025/cse1300_syllabus_su25.docx (course syllabus, not fetched)"],
+   "result": "found", "note": "CCSE contains School of Data Science and Analytics, Department of Computer Science, Department of Information Technology, Department of Software Engineering and Game Design and Development. The CCSE First Year Experience policies page bars AI in CSE 1101/1321/1322 (a group of intro courses)."},
+  {"unit": "Department of Computer Science (incl. PhD program)", "layer": "computing", "site": "https://campus.kennesaw.edu/colleges-departments/ccse/",
+   "queries": ["Kennesaw State School of Computer Science OR \"Software Engineering\" OR \"Data Science\" department \"AI\" policy student handbook undergraduate"],
+   "pages_checked": ["https://campus.kennesaw.edu/colleges-departments/ccse/degrees-programs/graduate/phd-computer-science/cs_handbook_aug26.pdf"],
+   "result": "none-found", "note": "Ph.D. CS handbook (Aug 2026) read via WebFetch (fetch_text not run on it); no AI or generative AI rules found. No undergraduate handbook with AI rules located."},
+  {"unit": "School of Data Science and Analytics; Dept of Information Technology; Dept of Software Engineering and Game Design", "layer": "computing", "site": "https://campus.kennesaw.edu/colleges-departments/ccse/",
+   "queries": ["same CCSE-wide queries as above (the site: operator is unreliable; results were university-level pages)"],
+   "pages_checked": ["https://campus.kennesaw.edu/colleges-departments/ccse/"],
+   "result": "none-found", "note": "No unit-specific AI page located. A sample SE syllabus (facultyweb.kennesaw.edu/dmalcol1/syllabi/SP24_WE1_Syllabus.pdf) is a single-instructor course document."}
+ ],
+ "documents": [
+  {"id": "kennesaw-state-ccse-fye-policies", "layer": "school", "unit": "CCSE First Year Experience", "title": "CCSE FYE Policies (Academic Misconduct: AI & Cheating)",
+   "url": "https://campus.kennesaw.edu/colleges-departments/ccse/first-year-experience/policies.php", "date_or_term": "current (no date on page; accessed 2026-10-26)",
+   "text_file": "/Users/rudrajit/Documents/Current-Research/AI in education policy guidelines/.cache/text/v2-kennesaw-state-ccse-fye.txt", "quality": "partial",
+   "quality_note": "Short AI/cheating section: work must be written 'without the use of AI, or other external help'; using AI on any lab, assignment, quiz or exam is misconduct; 'Student MAY NOT use AI.' Applies to CSE1101, CSE1321, CSE1322 only. Saved text verified to contain the AI passages.",
+   "in_first_collection": true}
+ ],
+ "course_examples": ["https://campus.kennesaw.edu/colleges-departments/ccse/first-year-experience/old_syllabi/summer2025/cse1300_syllabus_su25.docx (CSE1300 syllabus; not collected)", "https://facultyweb.kennesaw.edu/dmalcol1/syllabi/SP24_WE1_Syllabus.pdf (SE course syllabus; not collected)"],
+ "notes": "Recheck confirms the first collection: the only computing-adjacent rule is the CCSE FYE page, already collected. No new documents. Limits: the WebSearch site: operator returned off-target results, so unit pages were checked by direct fetch; fetch_text was run only for the FYE page."}

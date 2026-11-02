@@ -1,0 +1,255 @@
+{
+ "university": "Rice University",
+ "slug": "rice",
+ "state": "TX",
+ "type": "R1",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "rice-honor-ai",
+   "layer": "university",
+   "unit": "Rice Honor Council",
+   "course": null,
+   "title": "AI Policy & Information (Honor Council General AI Policy and faculty FAQ)",
+   "url": "https://honor.rice.edu/ai-policy-information",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance": "restrict",
+   "tiers": [],
+   "summary": "Rice Honor Council page giving a 2023 general AI policy: using AI to generate ideas passed off as one's own is plagiarism, though course-specific policies supersede it. A faculty FAQ explains what evidence suffices for an accusation, limits the weight of detector results, and recommends classroom practices.",
+   "stance_why": "The document says AI-generated ideas passed off as one's own \"will also be considered plagiarism\" and refers to \"unauthorized AI assistance\", so AI is restricted to authorized uses, though \"any course-specific AI policy supersedes\" it. It is a default rule, not a pure hand-off, so restrict rather than delegates.",
+   "units": [
+    {
+     "why": "The headline rule says AI-generated ideas passed off as one's own \"will also be considered plagiarism and will be adjudicated as such\", which classifies improper AI use as misconduct handled by the Honor Council. P36 fits better than P19 because the sentence's load-bearing content is the classification and adjudication, not a list of banned uses.",
+     "anchor": "off as one’s own will also be considered plagiarism and will be adjudicated as such",
+     "frag_start": "Utilizing AI software to generate",
+     "frag_end": "adjudicated as such",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "prohibit",
+     "topics": [
+      "academic-integrity",
+      "prohibited-use"
+     ]
+    },
+    {
+     "why": "The phrase \"this policy governs all academic work\" sets the scope of the Honor Council policy, so it is a scope statement (general phase, informs) fitting P61.",
+     "anchor": "this policy governs all academic work",
+     "frag_start": "While this policy governs all academic work",
+     "frag_end": "create their own course-specific AI policies",
+     "policy": "The Honor Council's general AI policy governs all academic work.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "scope-definitions"
+     ]
+    },
+    {
+     "why": "\"professors are allowed to create their own course-specific AI policies\" leaves the AI rule to each instructor, so it is P04 (instructor sets the rule), with modality may because it grants permission to instructors.",
+     "anchor": "professors are allowed to create their own course-specific AI policies",
+     "frag_start": "professors are allowed to create",
+     "frag_end": "course-specific AI policies",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "\"any course-specific AI policy supersedes the Honor Council's general AI policy\" ranks the course rule above the university default. It is closest to P04 since the instructor decides, but it adds a precedence rule that P04 does not state.",
+     "anchor": "any course-specific AI policy supersedes the Honor Council’s general AI policy",
+     "frag_start": "any course-specific AI policy supersedes",
+     "frag_end": "general AI policy",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion"
+     ],
+     "fit_note": "States precedence of course policy over the Honor Council default, not only that instructors may set policy."
+    },
+    {
+     "why": "\"Professors can submit reasonable suspicions based on factors such as the style and/or major differences from the given prompt\" sets what grounds suffice to bring an accusation, an evidence standard (P69); modality may as it permits submission.",
+     "anchor": "Professors can submit reasonable suspicions based on factors such as the style",
+     "frag_start": "Professors can submit reasonable suspicions",
+     "frag_end": "differences from the given prompt",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P69",
+     "unit_stance": "neutral",
+     "topics": [
+      "academic-integrity",
+      "detection"
+     ]
+    },
+    {
+     "why": "\"Professors are allowed to send in detector software results, such as GPTZero, and these results will be sufficient evidence to proceed to an investigative meeting\" permits detector output as evidence for starting a case, so P40 (tools used to identify misuse) fits.",
+     "anchor": "Professors are allowed to send in detector software results, such as GPTZero",
+     "frag_start": "Professors are allowed to send",
+     "frag_end": "sufficient evidence to proceed to an investigative meeting",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P40",
+     "unit_stance": "permit",
+     "topics": [
+      "detection",
+      "academic-integrity"
+     ],
+     "fit_note": "Detector results are sufficient only to reach an investigative meeting, not to decide a case."
+    },
+    {
+     "why": "\"the Council will not use detector software as the sole or primary evidence in an adjudication\" because of \"inaccuracy\" states detectors are unreliable and not relied on as proof, which is P39.",
+     "anchor": "the Council will not use detector software as the sole or primary evidence",
+     "frag_start": "However, due to their inaccuracy,",
+     "frag_end": "primary evidence in an adjudication",
+     "policy": null,
+     "actor": "admin",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P39",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection",
+      "academic-integrity"
+     ]
+    },
+    {
+     "why": "The Council recommends requesting \"GoogleDocs/Word editing history\" to establish student-produced work, i.e. process evidence used to identify misuse (P40); modality should as it is a recommendation.",
+     "anchor": "Request GoogleDocs/Word editing history with the assignment history to establish the existence of student-produced work.",
+     "frag_start": "Request GoogleDocs/Word editing history",
+     "frag_end": "existence of student-produced work",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P40",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection",
+      "process-evidence"
+     ]
+    },
+    {
+     "why": "\"Tailor unique prompts centered significantly around class material or discussion\" recommends redesigning assignments so AI is less useful, matching P35.",
+     "anchor": "Tailor unique prompts centered significantly around class material or discussion",
+     "frag_start": "Tailor unique prompts centered significantly",
+     "frag_end": "engage in critical thinking",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design"
+     ]
+    },
+    {
+     "why": "\"Highlight the downsides of using AI\" recommends instructors explain to students why AI use is problematic, which is P66 (explain the rules and reasons) rather than a prohibition.",
+     "anchor": "Highlight the downsides of using AI",
+     "frag_start": "Highlight the downsides of using",
+     "frag_end": "AI and encourage students to reach out",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P66",
+     "unit_stance": "neutral",
+     "topics": [
+      "communication",
+      "rationale"
+     ]
+    },
+    {
+     "why": "\"encourage students to reach out for extensions when struggling with outside factors\" aims to reduce pressures that lead to cheating, so P68 (educative, not only punitive) fits best; no type for extensions exists, hence a fit note.",
+     "anchor": "encourage students to reach out for extensions when struggling with outside factors",
+     "frag_start": "encourage students to reach out",
+     "frag_end": "struggling with outside factors",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P68",
+     "unit_stance": "neutral",
+     "topics": [
+      "academic-integrity",
+      "support"
+     ],
+     "fit_note": "Concerns preventing misuse by offering extensions, a prevention measure rather than a response to misuse."
+    },
+    {
+     "why": "Professors \"should feed a substantial portion (a majority) of the writing into the detector/software\" gives a procedure for using detectors to establish suspicion, so P40; modality should.",
+     "anchor": "Professors should feed a substantial portion (a majority) of the writing",
+     "frag_start": "Professors should feed a substantial portion",
+     "frag_end": "into the detector/software for results",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P40",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection"
+     ],
+     "fit_note": "Specifies how much text to submit to a detector, and that detector results count as evidence only if most of the writing is flagged."
+    },
+    {
+     "why": "\"you may wait till another assignment provides sufficient evidence\" tells instructors with slight suspicion they need not accuse yet; it concerns the sufficiency threshold for an accusation (P69).",
+     "anchor": "you do not have sufficient evidence to submit an accusation, you may wait",
+     "frag_start": "If you feel as though you",
+     "frag_end": "may wait till another assignment provides sufficient evidence",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P69",
+     "unit_stance": "neutral",
+     "topics": [
+      "academic-integrity",
+      "detection"
+     ],
+     "fit_note": "Allows waiting and combining evidence across assignments rather than setting a standard of proof."
+    },
+    {
+     "why": "\"provided it is within 90 days of the suspected misconduct\" sets a time limit for submitting earlier assignments as evidence. No type covers deadlines for accusations.",
+     "anchor": "provided it is within 90 days of the suspected misconduct",
+     "frag_start": "You can submit the past assignment",
+     "frag_end": "within 90 days of the suspected misconduct",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "academic-integrity"
+     ],
+     "uncovered_note": "Accusations may include earlier assignments as evidence only within 90 days of the suspected misconduct."
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Single included document. Navigation, login and contract disclaimer skipped; repeated detector-as-supplementary statement not recoded."
+}

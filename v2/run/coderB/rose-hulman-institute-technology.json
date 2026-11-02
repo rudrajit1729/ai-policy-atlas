@@ -1,0 +1,187 @@
+{
+ "university": "Rose-Hulman Institute of Technology",
+ "slug": "rose-hulman-institute-technology",
+ "state": "IN",
+ "type": "other",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "rose-libguide-students-ai",
+   "layer": "university",
+   "unit": "Logan Library",
+   "course": null,
+   "title": "Students and AI (Library guide)",
+   "url": "https://library.rose-hulman.edu/c.php?g=1465505&p=10904820",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "A library guide telling students to read each syllabus and get a professor's permission before using any AI tool, since expectations differ by professor. It also quotes the Information Security Policy, which bars putting institutional data into unauthorized generative AI systems.",
+   "stance_why": "The guide sets no AI rule of its own for coursework: it says \"Every professor will have different expectations about AI-based tools\" and puts the duty to ask on students, so the decision is left to instructors. The one firm rule it quotes is about institutional data, not coursework.",
+   "units": [
+    {
+     "why": "Students are told to \"read your course syllabi\" and \"ask your professors\" before using AI in any course work; this is a duty to ask, so P10 (ask first) fits better than P04 because the addressee is the student acting under uncertainty.",
+     "anchor": "you read your course syllabi and that you ask your professors",
+     "frag_start": "To avoid academic integrity violations, make",
+     "frag_end": "labs, homework, projects, reports, etc.).",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "must",
+     "policy_type": "P10",
+     "topics": [
+      "instructor-discretion",
+      "syllabus-communication"
+     ],
+     "unit_stance": "restrict"
+    },
+    {
+     "why": "\"Every professor will have different expectations\" states that the rule varies by instructor, which is the instructor-decides model (P04) rather than a single institute rule.",
+     "anchor": "Every professor will have different expectations about AI-based tools.",
+     "frag_start": "Every professor will have different",
+     "frag_end": "about AI-based tools.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P04",
+     "topics": [
+      "instructor-discretion"
+     ],
+     "unit_stance": "neutral"
+    },
+    {
+     "why": "\"It your responsibility ensure that you are not committing any academic integrity violations\" makes the student answerable for compliance; P29 (students own what they submit) is the nearest type, but it concerns integrity compliance, not ownership of work.",
+     "anchor": "It your responsibility ensure that you are not committing any academic integrity violations.",
+     "frag_start": "It your responsibility ensure that",
+     "frag_end": "any academic integrity violations.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P29",
+     "fit_note": "Concerns responsibility for avoiding integrity violations from AI use, not ownership of submitted work.",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "unit_stance": "neutral"
+    },
+    {
+     "why": "\"It is your responsibility to ask to use AI\" puts the burden of seeking permission on the student, so unasked use is treated as not permitted; chosen P10 (ask first) over P06 because it does not state a fallback rule explicitly.",
+     "anchor": "It is your responsibility to ask to use AI.",
+     "frag_start": "It is your responsibility to",
+     "frag_end": "to ask to use AI.",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "must",
+     "policy_type": "P10",
+     "topics": [
+      "instructor-discretion"
+     ],
+     "unit_stance": "restrict"
+    },
+    {
+     "why": "\"you assume certain risks including serious accusations of misconduct\" warns that using AI without asking can lead to misconduct accusations, which links unauthorized AI use to academic misconduct (P36).",
+     "anchor": "you assume certain risks including serious accusations of misconduct",
+     "frag_start": "If you choose to use",
+     "frag_end": "learning objectives of the class.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "fit_note": "Warns of accusation risk; does not itself classify the conduct or state a process.",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "unit_stance": "restrict"
+    },
+    {
+     "why": "\"failure to meet the learning objectives of the class\" names a learning cost of unasked AI use; this is a rationale that AI can undercut learning, closest to P41, though no practice mechanism is stated.",
+     "anchor": "failure to meet the learning objectives of the class",
+     "frag_start": "If you choose to use",
+     "frag_end": "learning objectives of the class.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P41",
+     "fit_note": "States the risk to learning objectives but not that AI shortcuts practice.",
+     "topics": [
+      "learning-rationale"
+     ],
+     "unit_stance": "neutral"
+    },
+    {
+     "why": "The quoted Section 4.2.3 says \"Institutional data must not be used with generative AI systems that are not operated or explicitly authorized\" by the Institute; a data-protection rule that prefers vetted tools (P50).",
+     "anchor": "Institutional data must not be used with generative AI systems",
+     "frag_start": "Institutional data must not be",
+     "frag_end": "outside the Institute’s control.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "topics": [
+      "privacy-data"
+     ],
+     "unit_stance": "restrict"
+    },
+    {
+     "why": "\"Use of such systems is prohibited unless the data is fully anonymized, and the use case has been reviewed and approved by the Information Security Team\" sets an exception with required approval; it adds an approval route beyond P50, which I keep as the nearest type.",
+     "anchor": "unless the data is fully anonymized, and the use case has been reviewed and approved",
+     "frag_start": "Use of such systems is",
+     "frag_end": "by the Information Security Team.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "fit_note": "Adds an anonymization-plus-security-team-approval exception to the data rule.",
+     "topics": [
+      "privacy-data"
+     ],
+     "unit_stance": "restrict"
+    },
+    {
+     "why": "\"Such use constitutes data misuse and may result in unauthorized disclosure, violating Institute policy and applicable regulations\" says violations fall under existing policy and regulations, matching P77.",
+     "anchor": "Such use constitutes data misuse and may result in unauthorized disclosure",
+     "frag_start": "Such use constitutes data misuse",
+     "frag_end": "and applicable regulations.",
+     "policy": null,
+     "actor": "all",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P77",
+     "topics": [
+      "privacy-data"
+     ],
+     "unit_stance": "neutral"
+    },
+    {
+     "why": "The guide refers students to \"responsible and ethical uses of AI tools for career development\" advice from Career Services; this directs students to human advisors for AI use, matching P72.",
+     "anchor": "Consult with your Rose-Hulman Career Advisor for additional details.",
+     "frag_start": "For general tips from RHIT's",
+     "frag_end": "for additional details.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P72",
+     "fit_note": "Points to career-advising guidance on responsible AI use rather than coursework help.",
+     "topics": [
+      "ai-literacy-career"
+     ],
+     "unit_stance": "neutral"
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Single thin library guide. No institute academic-integrity AI policy, school or computing policy found by the collector; course syllabi deferred."
+}

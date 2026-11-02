@@ -1,0 +1,379 @@
+{
+ "university": "California State University, Sacramento",
+ "slug": "california-state-sacramento",
+ "state": "CA",
+ "type": "R2",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "california-state-sacramento-privacy",
+   "layer": "university",
+   "unit": "Information Resources & Technology (IRT)",
+   "course": null,
+   "title": "AI Privacy & Security",
+   "url": "https://www.csus.edu/information-resources-technology/ai/ai-privacy-security.html",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance": "restrict",
+   "tiers": [],
+   "summary": "Sac State IT page setting data-privacy rules for generative AI: no sensitive, FERPA or confidential data in AI tools, alignment with CSU policy, and chatbot and tool-specific notes. Does not address coursework.",
+   "stance_why": "The page says \"never put sensitive data into any generative AI app\" and \"AI tools must not share private data\", banning AI use only for sensitive data and leaving other uses open; it governs data, not coursework, so restrict.",
+   "units": [
+    {
+     "why": "The sentence assigns every member of campus a duty with \"never put sensitive data into any generative AI app\", so it is a prohibition on all users. It is a concrete data-protection rule, so P50 rather than P56.",
+     "anchor": "never put sensitive data into any generative AI app",
+     "frag_start": "It is the responsibility of",
+     "frag_end": "AI platforms can consume",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "The page says CSU \"also provides usage guidance specific to faculty, staff, and students\", pointing to a systemwide resource. It is informational and frames the campus rules inside a CSU framework, so P56.",
+     "anchor": "The CSU also provides usage guidance specific to faculty, staff, and students",
+     "frag_start": "The CSU also provides usage",
+     "frag_end": "faculty, staff, and students",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "\"must align with CSU Responsible Use Policy (RUP) and CSU Information Security Policies\" binds all generative AI use in campus tools to higher-level policy. It sets an institution-level framework, so P56 rather than P50.",
+     "anchor": "must align with CSU Responsible Use Policy (RUP)",
+     "frag_start": "The use of generative AI",
+     "frag_end": "CSU Information Security Policies",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P56",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "The sentence tells users to assume \"no personal, confidential, proprietary, or otherwise sensitive information may be used\" with any generative AI tool, a data-protection rule for all users, hence P50.",
+     "anchor": "no personal, confidential, proprietary, or otherwise sensitive information may be used with it",
+     "frag_start": "Currently, any use of generative",
+     "frag_end": "used with it",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "Under the heading \"Prohibited Use\" the page says \"AI tools must not share private data\", a flat ban that protects personal data, so P50 with must-not.",
+     "anchor": "AI tools must not share private data",
+     "frag_start": "AI tools must not share",
+     "frag_end": "private data",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "prohibit",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "FERPA student records and Protected Level 1 or 2 information \"should not be used without documented approval\" from the Data Owner. This conditionally restricts data entering AI tools, so P50 with should-not.",
+     "anchor": "should not be used without documented approval from the appropriate",
+     "frag_start": "Generally, student records subject to",
+     "frag_end": "appropriate Data Owner",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "The page directs users with questions to the Information Security Office (\"Consult with the IRT Information Security Office\"), a support channel for AI data security. Closest type is P50.",
+     "anchor": "Consult with the IRT Information Security Office (ISO)",
+     "frag_start": "Consult with the IRT Information",
+     "frag_end": "Security Office (ISO)",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "Chatbots used for university functions \"must disclose their knowledge scope and non-official status\", a transparency duty on chatbot operators. P47 is instructor disclosure about their own AI use, which does not fit, so UNCOVERED.",
+     "anchor": "Chatbots must disclose their knowledge scope and non-official status.",
+     "frag_start": "Chatbots must disclose their knowledge",
+     "frag_end": "non-official status.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "restrict",
+     "topics": [
+      "course-provided-tools"
+     ],
+     "uncovered_note": "Transparency rule for university-operated chatbots: disclose scope and non-official status."
+    },
+    {
+     "why": "\"Contact information for human assistance should be provided\" requires a human fallback in chatbots. It is a service-design rule that fits no listed type, so UNCOVERED.",
+     "anchor": "Contact information for human assistance should be provided.",
+     "frag_start": "Contact information for human assistance",
+     "frag_end": "should be provided.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "course-provided-tools"
+     ],
+     "uncovered_note": "University chatbots should give contact information for human assistance."
+    },
+    {
+     "why": "The page says chatbots \"aren't intended to be a replacement for full services\", a limit on chatbot use. It is a principle of university AI service design with no matching type, so UNCOVERED.",
+     "anchor": "aren't intended to be a replacement for full services",
+     "frag_start": "Chatbots can provide a beneficial",
+     "frag_end": "full services",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "course-provided-tools"
+     ],
+     "uncovered_note": "Chatbots are a supplement, not a replacement, for full university services."
+    },
+    {
+     "why": "For Microsoft 365 Copilot, \"data use must first be approved in writing by the data owner/university administrator\" is a condition on using data with a vetted tool, so P50 with must.",
+     "anchor": "data use must first be approved in writing by the data owner/university administrator",
+     "frag_start": "Is capable of complying with",
+     "frag_end": "university administrator",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "The page states Copilot \"Does not use data to train LLMs\", a fact about a university-licensed tool that supports preferring vetted tools. It informs, P50.",
+     "anchor": "Does not use data to train LLMs (Large Language Models)",
+     "frag_start": "Does not use data to",
+     "frag_end": "Large Language Models)",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "The Zoom AI Companion section lists content, such as \"Audio, video, or chat\", that Zoom does not use to train AI models. It is an informational privacy fact about a campus tool, so P50.",
+     "anchor": "Zoom does not use any of the following to train Zoom's or other",
+     "frag_start": "Zoom does not use any",
+     "frag_end": "third-party AI models",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "california-state-sacramento-ctl-course-prep",
+   "layer": "university",
+   "unit": "Center for Teaching and Learning (Academic Affairs)",
+   "course": null,
+   "title": "Course Preparation",
+   "url": "https://www.csus.edu/academic-affairs/center-teaching-learning/coursepreparation.html",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "A general course-preparation page whose academic-honesty step tells faculty to state their AI rule in the syllabus, consult their department, and use varied assessments. Points to a CTL Padlet of AI resources.",
+   "stance_why": "The CTL page does not set an AI rule; it says \"Address how you will, or will not allow\" AI and \"Determine the best policy for your course\", leaving the decision to instructors.",
+   "units": [
+    {
+     "why": "The page tells faculty to \"Address how you will, or will not allow, the use of Artificial Intelligence (AI)\" and outline it in the syllabus. That requires an AI statement in the syllabus, P09; the allow/deny choice itself is P04.",
+     "anchor": "Address how you will, or will not allow, the use of Artificial Intelligence (AI)",
+     "frag_start": "Address how you will, or",
+     "frag_end": "outline it explicitly in your Syllabus.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"Determine the best policy for your course\" leaves the AI rule to the instructor, so it hands the decision down (P04) rather than setting a campus default.",
+     "anchor": "Determine the best policy for your course",
+     "frag_start": "Determine the best policy for",
+     "frag_end": "your course",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "\"Be sure to consult your department/program for further consideration\" asks instructors to check with their unit when setting AI policy. It is a step within the delegation, so P04 (who decides) rather than P63.",
+     "anchor": "Be sure to consult your department/program for further consideration.",
+     "frag_start": "Be sure to consult your",
+     "frag_end": "further consideration.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "The page says it is \"highly encouraged, and in some cases required\" to meet 1:1 with students about suspected academic misconduct before reporting. This is the talk-before-escalating rule, P57.",
+     "anchor": "highly encouraged, and in some cases required, for you to meet with students 1:1",
+     "frag_start": "It is highly encouraged, and",
+     "frag_end": "before reporting.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P57",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Under Promote Academic Honesty, frequent assessments such as \"weekly quizzes instead of one midterm\" are advised to reduce \"the motivation to cheat\". It redesigns assessment around cheating risk in the same section as AI, so P35.",
+     "anchor": "weekly quizzes instead of one midterm and final exam",
+     "frag_start": "Provide frequent opportunities for students",
+     "frag_end": "motivation to cheat.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design"
+     ]
+    },
+    {
+     "why": "\"Consider the use of alternative assessments such as oral exams, recorded presentations\" suggests formats that check understanding in the academic-honesty section, so P34.",
+     "anchor": "Consider the use of alternative assessments such as oral exams, recorded presentations",
+     "frag_start": "Consider the use of alternative",
+     "frag_end": "artistic interpretations, etc.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P34",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design"
+     ]
+    },
+    {
+     "why": "Instructors are told to use Turnitin \"similarity software available in Canvas\" so students can check their writing. It is a similarity-check tool listed under academic honesty, so P40.",
+     "anchor": "similarity software available in Canvas to allow students to evaluate their writing",
+     "frag_start": "similarity software available in Canvas",
+     "frag_end": "before it comes to you for grading.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P40",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ]
+    },
+    {
+     "why": "\"Use Respondus Lockdown browser to discourage students from using a computer to search the internet\" during assessments is a closed-device rule for exams, so P22.",
+     "anchor": "Use Respondus Lockdown browser to discourage students",
+     "frag_start": "Use Respondus Lockdown browser to",
+     "frag_end": "complete an assessment.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "during-assessment",
+     "modality": "should",
+     "policy_type": "P22",
+     "unit_stance": "restrict",
+     "topics": [
+      "exams-in-person"
+     ]
+    },
+    {
+     "why": "The page points to an \"AI/ChatGPT resource and information compilation\" in the CTL Padlet, a support resource to help faculty learn about AI, so P63.",
+     "anchor": "AI/ChatGPT resource and information compilation can be explored in the",
+     "frag_start": "AI/ChatGPT resource and information",
+     "frag_end": "CTL's Padlet",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use"
+     ]
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Both documents are university-layer; the privacy page is not about coursework. Several academic-honesty tips on the CTL page are generic, not AI-specific, and were coded only where they bear on cheating or AI."
+}

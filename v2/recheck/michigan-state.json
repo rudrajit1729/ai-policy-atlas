@@ -1,0 +1,15 @@
+{"slug": "michigan-state", "university": "Michigan State University",
+ "units_searched": [
+  {"unit": "Department of Computer Science and Engineering", "layer": "computing", "site": "https://cse.msu.edu/",
+   "queries": ["site:cse.msu.edu generative AI policy", "site:cse.msu.edu academic integrity ChatGPT LLM use"],
+   "pages_checked": ["https://www.cse.msu.edu/", "https://www.cse.msu.edu/Undergraduate/", "https://cse.msu.edu/"],
+   "result": "inaccessible",
+   "note": "Direct fetches of cse.msu.edu failed with ECONNREFUSED (35.9.20.103:443) on all three tries; searches returned no cse.msu.edu pages. Absence is not confirmed."},
+  {"unit": "College of Engineering (contains CSE, CMSE, ECE)", "layer": "school", "site": "https://engineering.msu.edu/",
+   "queries": ["site:engineering.msu.edu generative AI policy students", "site:cmse.msu.edu OR site:stt.msu.edu OR site:ece.msu.edu AI policy students", "Michigan State University Computer Science and Engineering CSE 231 OR CSE 232 syllabus generative AI allowed"],
+   "pages_checked": ["https://engineering.msu.edu/", "https://engineering.msu.edu/current-students/academic-integrity (404)"],
+   "result": "none-found",
+   "note": "Homepage has no AI or academic-integrity link. Searches return only university-level MSU material (provost charge, CTLI, iteach). CMSE, ECE and Statistics and Probability sites were reached only via the combined search; their own pages were not fetched."}],
+ "documents": [],
+ "course_examples": [],
+ "notes": "Weak recheck: the CSE site was unreachable and the unit list was not exhaustively enumerated (CMSE, ECE, STT and the College of Natural Science were searched but not fetched). The MSU provost charge asks every academic unit to write unit-specific GenAI guidance, so unit documents may exist, but none surfaced. Retry cse.msu.edu."}

@@ -1,0 +1,408 @@
+{
+ "themes": [
+  {
+   "id": "stance",
+   "label": "Default stance and who decides",
+   "desc": "Whether AI is allowed by default, who sets the rule (department, instructor, assignment), and whether uses are sorted into levels or categories."
+  },
+  {
+   "id": "communicate",
+   "label": "Communicating expectations",
+   "desc": "How and where the rules are made explicit to students."
+  },
+  {
+   "id": "permitted",
+   "label": "What students may use AI for",
+   "desc": "Uses that are allowed or encouraged: explanation, debugging help, brainstorming, writing support, course-provided tools."
+  },
+  {
+   "id": "prohibited",
+   "label": "What students may not use AI for",
+   "desc": "Uses that are ruled out, especially generating code or solutions that are submitted as one's own."
+  },
+  {
+   "id": "disclosure",
+   "label": "Disclosure and attribution",
+   "desc": "Whether and how AI use must be acknowledged, cited, or documented (prompts, transcripts, reflections)."
+  },
+  {
+   "id": "accountability",
+   "label": "Student accountability and understanding",
+   "desc": "Students remain responsible for what they submit and must be able to explain and defend it."
+  },
+  {
+   "id": "assessment",
+   "label": "Assessment design",
+   "desc": "How assignments, exams, weighting, and formats change in response to AI."
+  },
+  {
+   "id": "enforcement",
+   "label": "Detection and enforcement",
+   "desc": "Detectors, evidence, academic-integrity processes, sanctions, and amnesty."
+  },
+  {
+   "id": "rationale",
+   "label": "Why: learning and careers",
+   "desc": "The reasons given: protecting skill-building and productive struggle, and preparing students for AI-rich professional work."
+  },
+  {
+   "id": "faculty",
+   "label": "Faculty and staff use of AI",
+   "desc": "AI use by instructors and TAs for grading, feedback, materials, and course operations."
+  },
+  {
+   "id": "responsible",
+   "label": "Equity, privacy, ethics, and IP",
+   "desc": "Access and cost, data and privacy, bias and environmental concerns, and intellectual property."
+  },
+  {
+   "id": "governance",
+   "label": "Governance and change over time",
+   "desc": "Acknowledging that policy will change, review cycles, and who maintains the policy."
+  }
+ ],
+ "types": [
+  {
+   "id": "P01",
+   "name": "Prohibit AI on graded work by default",
+   "theme": "stance",
+   "covers": "The default rule bans generative AI on graded work (or on all work) in the course or unit."
+  },
+  {
+   "id": "P02",
+   "name": "Permit or encourage AI by default",
+   "theme": "stance",
+   "covers": "The default rule allows, welcomes, encourages, or expects generative AI use."
+  },
+  {
+   "id": "P03",
+   "name": "Discourage AI without forbidding it",
+   "theme": "stance",
+   "covers": "AI is discouraged or not recommended, but not formally prohibited."
+  },
+  {
+   "id": "P04",
+   "name": "Let each instructor or assignment set the rule",
+   "theme": "stance",
+   "covers": "Whether AI is allowed is decided per instructor, per assignment, or per activity rather than by one rule."
+  },
+  {
+   "id": "P05",
+   "name": "Name explicit tiers or levels of AI use",
+   "theme": "stance",
+   "covers": "The policy defines named tiers, levels, colors, or categories of permitted AI use (e.g. no AI / limited / open), or a table of uses per assessment."
+  },
+  {
+   "id": "P06",
+   "name": "Define the fallback rule when a syllabus is silent",
+   "theme": "stance",
+   "covers": "States what applies when a syllabus or assignment says nothing about AI (e.g. 'unless explicitly allowed, AI is prohibited')."
+  },
+  {
+   "id": "P07",
+   "name": "Cover AI built into editors, IDEs, and agents",
+   "theme": "stance",
+   "covers": "Rules that cover AI built into editors and IDEs (Copilot, Cursor, autocomplete), operating systems, browsers, or autonomous coding agents, including requiring students to disable them."
+  },
+  {
+   "id": "P08",
+   "name": "Stage AI permission as skills develop",
+   "theme": "stance",
+   "covers": "AI permission changes over the course: forbidden early, allowed later once fundamentals are mastered or in later projects or advanced courses."
+  },
+  {
+   "id": "P09",
+   "name": "Require an AI statement in every syllabus",
+   "theme": "communicate",
+   "covers": "Instructors or departments must state AI expectations in the syllabus or assignment instructions."
+  },
+  {
+   "id": "P10",
+   "name": "When unsure, students should ask before using AI",
+   "theme": "communicate",
+   "covers": "Students who are unsure whether a use is allowed should ask the instructor first, or err on the side of not using AI."
+  },
+  {
+   "id": "P11",
+   "name": "Each course's policy governs only that course",
+   "theme": "communicate",
+   "covers": "One course's AI permissions do not carry over to other courses or assignments."
+  },
+  {
+   "id": "P12",
+   "name": "Allow AI as a tutor for understanding concepts",
+   "theme": "permitted",
+   "covers": "AI may be used like a tutor or search engine to understand concepts, lecture material, or general questions, not to produce graded answers."
+  },
+  {
+   "id": "P13",
+   "name": "Allow AI to explain errors and help debug",
+   "theme": "permitted",
+   "covers": "AI may be used to explain error messages, help debug, or clarify syntax."
+  },
+  {
+   "id": "P14",
+   "name": "Allow AI for practice, study aids, and review",
+   "theme": "permitted",
+   "covers": "AI may be used to generate practice problems, study guides, summaries, reviews, or self-checks of knowledge."
+  },
+  {
+   "id": "P15",
+   "name": "Allow AI for brainstorming and exploring approaches",
+   "theme": "permitted",
+   "covers": "AI may be used for brainstorming, idea generation, or exploring alternative approaches."
+  },
+  {
+   "id": "P16",
+   "name": "Allow AI-generated code under stated conditions",
+   "theme": "permitted",
+   "covers": "Students may submit or use AI-generated code under explicit conditions (small snippets, line or percentage caps, cited, specific projects, or freely)."
+  },
+  {
+   "id": "P17",
+   "name": "Provide a sanctioned, course-specific AI tool",
+   "theme": "permitted",
+   "covers": "The course or university provides its own sanctioned AI tool (a course chatbot, tutor bot, or licensed assistant), sometimes the only AI allowed."
+  },
+  {
+   "id": "P18",
+   "name": "Treat AI for prose separately from AI for code",
+   "theme": "permitted",
+   "covers": "Specific rules for AI in prose and writing (reports, essays, comments, grammar or translation tools), separate from code."
+  },
+  {
+   "id": "P19",
+   "name": "Do not have AI produce the work you submit",
+   "theme": "prohibited",
+   "covers": "Students may not have AI generate the code, solutions, text, or answers they submit as their own."
+  },
+  {
+   "id": "P20",
+   "name": "Do not feed assignment specs or your code to AI",
+   "theme": "prohibited",
+   "covers": "Students may not paste or upload assignment specifications, questions, their own code, or the codebase into an AI tool."
+  },
+  {
+   "id": "P21",
+   "name": "Do not use AI to debug or check graded work",
+   "theme": "prohibited",
+   "covers": "Students may not use AI to debug, fix, proofread, reformat, or check graded work."
+  },
+  {
+   "id": "P22",
+   "name": "No AI on exams, quizzes, or in-class assessments",
+   "theme": "prohibited",
+   "covers": "No AI on exams, quizzes, tests, or in-class assessments; closed-device rules during exams."
+  },
+  {
+   "id": "P23",
+   "name": "Keep AI conversations apart from the work itself",
+   "theme": "prohibited",
+   "covers": "Keep AI conversations separate from the work: close the AI before writing, never copy-paste from it, never have both open, or use only browser chat interfaces."
+  },
+  {
+   "id": "P24",
+   "name": "Disclose AI use with each submission",
+   "theme": "disclosure",
+   "covers": "Students must disclose, acknowledge, or cite any AI use in their submission (a statement or citation)."
+  },
+  {
+   "id": "P25",
+   "name": "Cite the tool, the prompt, and the output",
+   "theme": "disclosure",
+   "covers": "Citations of AI must include specific details such as the tool or model, the exact prompt, the output, or the date."
+  },
+  {
+   "id": "P26",
+   "name": "Keep and submit transcripts, logs, or reflections",
+   "theme": "disclosure",
+   "covers": "Students must keep and submit full transcripts, chat logs, journals, drafts, or reflections on their AI use."
+  },
+  {
+   "id": "P27",
+   "name": "Mark AI-derived code where it is used",
+   "theme": "disclosure",
+   "covers": "AI-derived code must be marked at the exact place it is used (code comments, README, acknowledgments file, top of file)."
+  },
+  {
+   "id": "P28",
+   "name": "Make disclosure safe and nondisclosure the violation",
+   "theme": "disclosure",
+   "covers": "How disclosure affects grading or integrity: disclosed use is not penalized, or failure to disclose is itself the violation (or, conversely, disclosed use is still penalized)."
+  },
+  {
+   "id": "P29",
+   "name": "Students own everything they submit",
+   "theme": "accountability",
+   "covers": "Students are responsible for and must own all work they submit; submitted work must be their own."
+  },
+  {
+   "id": "P30",
+   "name": "Students must be able to explain every line",
+   "theme": "accountability",
+   "covers": "Students must understand and be able to explain or defend every line and part of what they submit."
+  },
+  {
+   "id": "P31",
+   "name": "Verify AI output; it is often wrong",
+   "theme": "accountability",
+   "covers": "AI output can be wrong, biased, or hallucinated; students must verify and critically evaluate it."
+  },
+  {
+   "id": "P32",
+   "name": "Students stay the primary problem-solver",
+   "theme": "accountability",
+   "covers": "Students should remain the primary thinker and decision-maker; AI must not replace their thinking."
+  },
+  {
+   "id": "P33",
+   "name": "Shift weight to proctored, unassisted assessment",
+   "theme": "assessment",
+   "covers": "Assessment weight shifts toward proctored, in-class, or unassisted evaluation because of AI."
+  },
+  {
+   "id": "P34",
+   "name": "Check understanding through code reviews, interviews, or oral exams",
+   "theme": "assessment",
+   "covers": "Understanding is checked through code reviews, interviews, oral exams, demos, or meetings where students explain their work."
+  },
+  {
+   "id": "P35",
+   "name": "Redesign assignments and grading around AI",
+   "theme": "assessment",
+   "covers": "Assignments, grading schemes, or course structure are redesigned around AI (e.g. two-pass submissions, grading on process or hours, baselines for declared AI use)."
+  },
+  {
+   "id": "P36",
+   "name": "Treat unauthorized AI use as academic misconduct",
+   "theme": "enforcement",
+   "covers": "Unauthorized or improper AI use is classified as academic misconduct, plagiarism, or cheating and handled by integrity processes."
+  },
+  {
+   "id": "P37",
+   "name": "State concrete penalties in advance",
+   "theme": "enforcement",
+   "covers": "Specific penalties for AI misuse are stated (zero, negative score, letter-grade reduction, course failure, escalation by offense)."
+  },
+  {
+   "id": "P38",
+   "name": "Offer a self-report window or amnesty",
+   "theme": "enforcement",
+   "covers": "Students can self-report, withdraw a submission, or come forward within a window for reduced consequences."
+  },
+  {
+   "id": "P39",
+   "name": "Do not rely on AI detectors",
+   "theme": "enforcement",
+   "covers": "AI detectors are unreliable or will not be used or relied upon as proof."
+  },
+  {
+   "id": "P40",
+   "name": "Use similarity checks and process evidence instead",
+   "theme": "enforcement",
+   "covers": "Similarity checking, plagiarism software, AI-detection tools, commit histories, or activity logs are used to identify misuse."
+  },
+  {
+   "id": "P41",
+   "name": "Explain that AI shortcuts the practice that builds skill",
+   "theme": "rationale",
+   "covers": "AI use is limited because doing the work yourself builds skill; outsourcing practice undermines learning."
+  },
+  {
+   "id": "P42",
+   "name": "Protect novices; fundamentals come first",
+   "theme": "rationale",
+   "covers": "Beginners and foundational courses especially need to learn fundamentals without AI; novices cannot judge AI output."
+  },
+  {
+   "id": "P43",
+   "name": "Warn that AI gives a false sense of mastery",
+   "theme": "rationale",
+   "covers": "Relying on AI creates a false sense of mastery that is exposed on exams or later work."
+  },
+  {
+   "id": "P44",
+   "name": "Teach effective AI use as a professional skill",
+   "theme": "rationale",
+   "covers": "Learning to use AI effectively is a professional skill employers expect; courses teach or demonstrate AI use."
+  },
+  {
+   "id": "P45",
+   "name": "Treat AI like a human collaborator under existing rules",
+   "theme": "rationale",
+   "covers": "AI is treated like a human collaborator, peer, or outside source under existing collaboration or citation rules."
+  },
+  {
+   "id": "P46",
+   "name": "Humans, not AI, assign grades",
+   "theme": "faculty",
+   "covers": "Grades must be assigned by human instructors; AI will not grade or determine grades."
+  },
+  {
+   "id": "P47",
+   "name": "Disclose instructor AI use to students",
+   "theme": "faculty",
+   "covers": "Instructors disclose or describe their own use of AI (in grading, feedback, demos, or communication) to students, or commit to limits on it."
+  },
+  {
+   "id": "P48",
+   "name": "Review and disclose AI-made course materials",
+   "theme": "faculty",
+   "covers": "Course materials created with AI are disclosed and reviewed by instructors."
+  },
+  {
+   "id": "P49",
+   "name": "Do not upload course materials to AI tools",
+   "theme": "responsible",
+   "covers": "Students may not upload course materials, assignment descriptions, or protected works into AI tools."
+  },
+  {
+   "id": "P50",
+   "name": "Protect personal data and prefer vetted tools",
+   "theme": "responsible",
+   "covers": "Protect personal and confidential data; AI tools store prompts; prefer university-vetted or licensed tools."
+  },
+  {
+   "id": "P51",
+   "name": "Do not require paid tools; keep access equitable",
+   "theme": "responsible",
+   "covers": "Equity and access: AI is optional or not required, free access is provided, paid tools are not required, accommodations and alternatives exist."
+  },
+  {
+   "id": "P52",
+   "name": "Consider licensing and copyright of AI output",
+   "theme": "responsible",
+   "covers": "Copyright, licensing, terms of use, and ownership of AI inputs and outputs."
+  },
+  {
+   "id": "P53",
+   "name": "Name bias, harms, and environmental costs",
+   "theme": "responsible",
+   "covers": "Ethical, bias, labor, and environmental concerns about AI."
+  },
+  {
+   "id": "P54",
+   "name": "Revisit the policy regularly",
+   "theme": "governance",
+   "covers": "The policy is provisional and will be revisited, revised, or updated; feedback is invited."
+  },
+  {
+   "id": "P55",
+   "name": "Gather evidence on how AI affects learning",
+   "theme": "governance",
+   "covers": "Evidence or data about how AI use affects student learning or performance is collected or cited."
+  },
+  {
+   "id": "P56",
+   "name": "Set an institution-wide framework for responsible AI use",
+   "theme": "governance",
+   "covers": "An institution-level framework or preamble stating the purpose, scope, and principles for AI use."
+  },
+  {
+   "id": "P57",
+   "name": "Talk with the student before escalating suspected misuse",
+   "theme": "enforcement",
+   "covers": "Instructors should talk with the student and gather context before escalating suspected AI misuse."
+  }
+ ]
+}

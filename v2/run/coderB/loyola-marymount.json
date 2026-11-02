@@ -1,0 +1,354 @@
+{
+ "university": "Loyola Marymount University",
+ "slug": "loyola-marymount",
+ "state": "CA",
+ "type": "R2",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "lmu-bulletin-academic-integrity",
+   "layer": "university",
+   "unit": "LMU Bulletin / Academic Integrity policy",
+   "course": null,
+   "title": "Academic Integrity",
+   "url": "https://bulletin.lmu.edu/academic-degree-requirements-policies/academic-integrity/academic-integrity.pdf",
+   "date_or_term": "current bulletin",
+   "stance_why": "The only AI text, item 5, says AI use \"without explicit permission from the instructor is considered academic dishonesty\" and for exams \"without express permission from the instructor\". The university sets no permitted uses itself and leaves permission to each instructor, so it is closer to delegates than restrict, though the unpermitted default is restrictive.",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "LMU's university-wide academic honesty policy in the bulletin. It has a short generative AI section (item 5) that treats unpermitted AI use, unattributed AI content, AI fabrication, and AI during exams as dishonesty, then sets sanctions, procedures and appeals for all integrity cases.",
+   "units": [
+    {
+     "why": "Item 5a says AI used for assignments without \"explicit permission from the instructor\" is academic dishonesty. This sets a default ban unless the instructor permits. I chose P06 (default when permission is absent) over P01 because the ban is conditioned on explicit permission; the misconduct label is coded in the next unit.",
+     "anchor": "Employing AI to complete assignments without explicit permission from the instructor",
+     "frag_start": "Employing AI to complete assignments",
+     "frag_end": "considered academic dishonesty.",
+     "policy": "AI may not be used to complete assignments unless the instructor gives explicit permission.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P06",
+     "unit_stance": "restrict",
+     "topics": [
+      "default-stance",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "The same sentence says such use \"is considered academic dishonesty\", routing it into the integrity process. P36 fits exactly; the default-rule aspect is coded in the previous unit.",
+     "anchor": "is considered academic dishonesty",
+     "frag_start": "Employing AI to complete assignments",
+     "frag_end": "considered academic dishonesty.",
+     "policy": "Using AI to complete assignments without explicit instructor permission is academic dishonesty.",
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "prohibit",
+     "topics": [
+      "integrity-sanctions",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "Item 5b says AI-generated content \"without proper attribution\" is plagiarism and \"strictly forbidden\", so AI content must be attributed. P24 fits the core obligation; P36 is not chosen because the rule is chiefly about attribution.",
+     "anchor": "Using AI-generated content without proper attribution is considered plagiarism and is strictly forbidden.",
+     "frag_start": "Using AI-generated content without",
+     "frag_end": "strictly forbidden.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "restrict",
+     "topics": [
+      "disclosure-citation",
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Item 5c calls \"Fabricating data or information using AI to deceive\" a violation of academic integrity. It forbids a specific misuse; P19 covers submitting AI work as one's own, which is not quite this, so P36 is chosen because the passage classifies the act as a violation.",
+     "anchor": "Fabricating data or information using AI to deceive is a violation of academic integrity.",
+     "frag_start": "Fabricating data or information using",
+     "frag_end": "violation of academic integrity.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "prohibit",
+     "topics": [
+      "prohibited-uses",
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Item 5d says using AI in a quiz, exam or in-class or online assignment without \"express permission\" is cheating. This is the exam AI rule, so P22 fits better than P36.",
+     "anchor": "Using AI tools while taking a quiz, an exam, or other in-class",
+     "frag_start": "Using AI tools while taking",
+     "frag_end": "is considered cheating.",
+     "policy": "Using AI tools while taking a quiz, an exam, or other in-class or on-line assignment without express permission from the instructor is cheating.",
+     "actor": "student",
+     "phase": "during-assessment",
+     "modality": "must-not",
+     "policy_type": "P22",
+     "unit_stance": "restrict",
+     "topics": [
+      "exams-in-person",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "The AI list is introduced as \"may include, but are not limited to\", so the examples are illustrative, not exhaustive. This scopes what counts as AI misuse; P61 (scope) is the nearest fit.",
+     "anchor": "examples of academic dishonesty involving Generative AI may include, but are not limited to",
+     "frag_start": "Generative AI: examples of academic",
+     "frag_end": "are not limited to:",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "Students are made responsible for understanding the standards and how they apply to their work. P29 (students own what they submit) is the closest accountability type, though this is about knowing the rules; no better type exists.",
+     "anchor": "Students are responsible for understanding the standards of academic honesty",
+     "frag_start": "Students are responsible for understanding",
+     "frag_end": "to their academic work and behavior.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P29",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "Students must contact instructors before assignments are due to resolve questions, which includes unclear AI permissions. This matches P10 (ask before using).",
+     "anchor": "Students are responsible for contacting their instructor(s) before assignments are due",
+     "frag_start": "Students are responsible for contacting",
+     "frag_end": "questions they may have.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P10",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "Cheating includes \"Using resources and materials prohibited by the Instructor\", so each instructor decides which resources, AI included, are off limits. P04 fits (instructor sets the rule); P36 is not chosen because the point is who sets the rule.",
+     "anchor": "Using resources and materials prohibited by the Instructor.",
+     "frag_start": "Using resources and materials prohibited",
+     "frag_end": "prohibited by the Instructor.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P04",
+     "unit_stance": "restrict",
+     "topics": [
+      "instructor-discretion",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "Plagiarism is defined as presenting \"another's ideas, words, images, work\" as one's own. It is general, not AI specific, but item 5b ties AI content to plagiarism. P29 (submitted work must be one's own) fits.",
+     "anchor": "Presentation or appropriation of another's ideas, words, images,",
+     "frag_start": "Presentation or appropriation of another's",
+     "frag_end": "copying another's work without attribution.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P29",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "The burden of proof is on the instructor, a student protection that applies to AI allegations. P64 (fairness in integrity cases) fits better than P40 because it protects students rather than prescribing evidence tools.",
+     "anchor": "The burden shall be upon the Instructor to provide evidence",
+     "frag_start": "The burden shall be upon",
+     "frag_end": "committed the alleged academic honesty violation.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P64",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools",
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Students have the right to appeal an instructor's decision on an allegation. P64 covers students' right to respond in integrity cases.",
+     "anchor": "A Student has the right to appeal the Instructor's decision",
+     "frag_start": "A Student has the right",
+     "frag_end": "allegation of academic dishonesty.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P64",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The process starts with the instructor emailing the student the suspected violation and evidence and asking to meet, before any sanction is mentioned. This is conferring with the student before escalating, P57.",
+     "anchor": "will inform the Student of the suspected academic dishonesty in an email",
+     "frag_start": "will inform the Student of",
+     "frag_end": "discovering evidence of the academic dishonesty.",
+     "policy": "An instructor who believes a student violated the policy informs the student by email within five days, states the nature of the violation and the evidence, and requests a meeting.",
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P57",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Instructors are expected to apply standards consistently and \"pursue all cases\", so they may not decline to enforce. No type fits an enforcement duty better than P36 (handled through integrity processes).",
+     "anchor": "pursue all cases of academic dishonesty",
+     "frag_start": "Instructors are expected to apply",
+     "frag_end": "pursue all cases of academic dishonesty.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Instructor sanctions listed include redoing the assignment, a reduced or failing grade, or a failing course grade. These are stated penalties, P37.",
+     "anchor": "a requirement to re-do the assignment; a reduced or failing grade on an assignment",
+     "frag_start": "Imposed at the sole discretion",
+     "frag_end": "a reduced or failing grade in the course.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Sanctions escalate by offense, with presumptive suspension at a second violation. This is escalation by offense, P37.",
+     "anchor": "The presumptive sanction for a second violation is suspension",
+     "frag_start": "second violation. The presumptive sanction",
+     "frag_end": "for at least one semester.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Dismissal is the presumptive sanction for a third violation, a distinct step in the escalating penalties, P37.",
+     "anchor": "The presumptive sanction for a third violation is dismissal from the University.",
+     "frag_start": "Third violation. The presumptive sanction",
+     "frag_end": "dismissal from the University.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Sanction factors include \"the nature and severity of the violation and whether there is a pattern\". This guides how penalties are set, so P37.",
+     "anchor": "the nature and severity of the violation and whether there is a pattern of violations",
+     "frag_start": "Factors to be considered in applying",
+     "frag_end": "pattern of violations.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Students may appeal on listed grounds such as insufficient evidence or a disproportionate sanction. This is the right to respond and contest, P64.",
+     "anchor": "The violation determination is not supported by substantial evidence.",
+     "frag_start": "The violation determination is not",
+     "frag_end": "supported by substantial evidence.",
+     "policy": "A student may appeal on grounds including that the determination is not supported by substantial evidence, that new relevant evidence exists, that the sanction is disproportionate, or that procedures were not followed.",
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P64",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The Provost's office publishes an annual report of violations by area without naming students, a way to gather evidence on violations including AI cases. P55 is the nearest type, though not AI specific.",
+     "anchor": "will provide an annual report, without identifying",
+     "frag_start": "will provide an annual report",
+     "frag_end": "Provost decisions, if applicable.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "informs",
+     "policy_type": "P55",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "Case records have protected status, with access only as authorized by law and permitted by the Provost. This is a privacy rule for integrity records including AI cases; P50 (protect personal data) is the nearest fit.",
+     "anchor": "Records will have a protected status, with access only as authorized by law",
+     "frag_start": "Records will have a protected",
+     "frag_end": "permitted by the Provost.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Only one included document. Most units are general integrity procedure that governs AI cases; only items 5a-5d are AI specific. Stance chosen as delegates because permission rests with the instructor; restrict is the alternative reading."
+}

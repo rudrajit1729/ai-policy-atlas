@@ -1,0 +1,265 @@
+{
+ "university": "Macalester College",
+ "slug": "macalester-college",
+ "state": "MN",
+ "type": "liberal-arts",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "macalester-integrity",
+   "layer": "university",
+   "unit": "Academic Programs and Advising",
+   "course": null,
+   "title": "Academic Integrity (policy)",
+   "url": "https://www.macalester.edu/academic-programs/academicpolicies/academicintegrity/",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance": "prohibit",
+   "tiers": [],
+   "summary": "General academic integrity policy whose only AI provision is that having generative AI do your coursework is cheating. The remaining text (consultation, sanctions, appeals) is general integrity procedure.",
+   "stance_why": "The only AI text lists 'generative AI tools, do your work for a course' as cheating, which bans AI doing students' work. It sets no permission route and does not defer to instructors, so prohibit is the nearest fit.",
+   "units": [
+    {
+     "why": "The passage lists 'Having another person, or generative AI tools, do your work for a course' among examples of cheating, so students must not have AI do their coursework. The anchor states the rule in full. Both P19 (do not have AI produce the work you submit) and P36 (treat as misconduct) are plausible; P19 is chosen because the rule itself is the ban on AI doing the work, which is where a reader would look for it.",
+     "anchor": "Having another person, or generative AI tools, do your work for a course",
+     "frag_start": "Having another person, or",
+     "frag_end": "unauthorized collaboration)",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P19",
+     "unit_stance": "prohibit",
+     "topics": [
+      "integrity-sanctions",
+      "prohibited-uses"
+     ],
+     "resolution_why": "Coder A coded P36 (classified as misconduct); coder B coded P19 (do not have AI produce submitted work). The source sentence sits in a list of cheating behaviours and says AI doing your work is cheating; it forbids the act and does not describe a procedure. P19 is the place a reader looking for this rule would expect; P36 fits less well because the page contains no AI-specific misconduct-handling text. Actor, phase and modality agreed."
+    }
+   ]
+  },
+  {
+   "id": "macalester-its-ai-guidelines",
+   "layer": "university",
+   "unit": "Information Technology Services",
+   "course": null,
+   "title": "AI Guidelines for Faculty and Staff",
+   "url": "https://www.macalester.edu/its/policies/ai-guidelines-for-faculty-and-staff/",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance": "permit",
+   "tiers": [],
+   "summary": "ITS guidelines for employee AI use covering data security, output checking, research and publication, and purchasing. They send classroom questions to the library's AI literacy guide.",
+   "stance_why": "The guidelines are for faculty and staff 'as they encounter opportunities to include AI tools in their work' and give 'best practices' with data limits rather than a ban, so permit with conditions. They set no rule for student use.",
+   "units": [
+    {
+     "why": "The scope paragraph says the page offers 'suggestions for best practices when using AI and for AI tool procurement considerations', defining what the guidelines cover (faculty and staff use of AI tools). It is a scope statement, so P61, informs, general.",
+     "anchor": "suggestions for best practices when using AI and for AI tool procurement considerations",
+     "frag_start": "Below are suggestions for best",
+     "frag_end": "considerations & processes.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance",
+      "instructor-staff-use"
+     ],
+     "resolution_why": "Coders matched on this scope passage; A anchored on the 'suggestions for best practices' clause and B on 'written with the use of software and data by faculty for staff'. Both coded P61, informs, all, general. Kept A's anchor, which is the clearer statement of scope."
+    },
+    {
+     "why": "The page points readers to 'AI Literacy and Critical Thinking, a comprehensive LibGuide on AI for teaching and learning' for classroom questions. This is a resource for instructors learning about AI, so P63 (support faculty in learning AI), informs.",
+     "anchor": "the Library has created",
+     "frag_start": "If you're looking for more",
+     "frag_end": "teaching and learning.",
+     "policy": "For information on AI in the classroom, the Library has created AI Literacy and Critical Thinking, a comprehensive LibGuide on AI for teaching and learning.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use",
+      "ai-literacy-career"
+     ],
+     "resolution_why": "Found only by coder B (P63, informs, instructor, before-course). Coder A mentioned it only in the summary. The source does contain the referral to the Library guide, which is a faculty-support resource, so the unit is kept."
+    },
+    {
+     "why": "'Treat information given to an AI tool ... as if it were public; do not share information that is personal, confidential, or proprietary intellectual property.' The rule forbids putting such data into AI tools, so P50, must-not. The guidelines address faculty and staff, so actor is all.",
+     "anchor": "do not share information that is personal, confidential, or proprietary intellectual property",
+     "frag_start": "Treat information given to",
+     "frag_end": "intellectual property.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data",
+      "instructor-staff-use"
+     ],
+     "resolution_why": "A coded instructor/during-work, B coded all/general; modality and type agreed (must-not, P50). The page is addressed to 'faculty and staff', not instructors alone, so actor is all; the rule applies when entering information into a tool, so during-work."
+    },
+    {
+     "why": "'avoid entering data that may fall into the moderate or high-risk data categories' tells users to keep higher-risk data out of AI tools, so P50, should-not.",
+     "anchor": "avoid entering data that may fall into the moderate or high-risk data categories",
+     "frag_start": "Review Macalester's policy on",
+     "frag_end": "high-risk data categories.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data",
+      "instructor-staff-use"
+     ],
+     "resolution_why": "A coded instructor/during-work, B coded all/general; modality and type agreed. Addressee is faculty and staff, so all; the rule concerns what is entered into tools, so during-work."
+    },
+    {
+     "why": "'consider whether the data you are using will compromise regulatory, contractual, or legal obligations' asks users to check data before use with AI tools; this is data protection, so P50, should.",
+     "anchor": "consider whether the data you are using will compromise regulatory, contractual, or legal obligations",
+     "frag_start": "Be especially careful with sensitive",
+     "frag_end": "contractual, or legal obligations.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "Found only by coder B (P50, should, all, general). The source sentence is a real instruction ('Be especially careful with sensitive data ... and consider whether...'), distinct from the other data rules, so kept. Phase set to during-work to match the other data-entry rules."
+    },
+    {
+     "why": "'When creating prompts or leveraging AI for other purposes, anonymize personally identifiable information (PII).' This is a data-protection practice for prompts, P50. The wording is an imperative inside a best-practice list; both coders coded should.",
+     "anchor": "anonymize personally identifiable information (PII)",
+     "frag_start": "When creating prompts or leveraging",
+     "frag_end": "public language models.",
+     "policy": "When creating prompts or leveraging AI for other purposes, anonymize personally identifiable information (PII).",
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data",
+      "instructor-staff-use"
+     ],
+     "resolution_why": "A coded actor instructor and unit_stance permit; B coded actor all and unit_stance restrict. Both coded should/P50/during-work. The page addresses faculty and staff, so actor is all; anonymizing PII limits what goes into tools, so restrict rather than permit. Coder A also folded the following sentence (settings that prevent retention) into this policy; that is a separate rule and is now its own unit."
+    },
+    {
+     "why": "'If possible, use settings that ensure inputs are not retained by the AI or are not used to feed public language models.' This is a data-protection practice, P50, hedged by 'If possible', so should.",
+     "anchor": "use settings that ensure inputs are not retained by the AI",
+     "frag_start": "If possible, use settings that",
+     "frag_end": "feed public language models.",
+     "policy": "If possible, use settings that ensure inputs are not retained by the AI or are not used to feed public language models.",
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data",
+      "instructor-staff-use"
+     ],
+     "resolution_why": "Coder A merged this sentence into the PII unit and coder B did not code it. It is a distinct rule from anonymizing PII, so it is split out as its own unit."
+    },
+    {
+     "why": "'do not enter proprietary information into an AI tool' warns about 'intellectual property and confidentiality concerns'. The rule is about keeping confidential material out of tools. P50 fits; P52 covers ownership of AI outputs, which this does not address.",
+     "anchor": "do not enter proprietary information into an AI tool",
+     "frag_start": "Be aware of intellectual property",
+     "frag_end": "into an AI tool.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "intellectual-property",
+      "privacy-data"
+     ],
+     "resolution_why": "A coded instructor/during-work, B coded all/general; modality and type agreed (must-not, P50). Addressee is faculty and staff, so all; the rule concerns what is entered into an AI tool, so during-work."
+    },
+    {
+     "why": "'Closely monitor output from AI tools' because responses 'sometimes contain subtle but meaningful hallucinations'. Users must check output, so P31, should. The closing 'Always use your judgment when analyzing AI responses' restates the same rule.",
+     "anchor": "Closely monitor output from AI tools",
+     "frag_start": "Closely monitor output from AI",
+     "frag_end": "inappropriate statements.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P31",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding",
+      "ethics-bias-environment"
+     ],
+     "resolution_why": "A anchored on 'Closely monitor output from AI tools' and B on 'Always use your judgment when analyzing AI responses', both in the same passage, both P31/should. A coded instructor, B all; the guidance addresses faculty and staff, so all. Anchor alone states the rule, so policy is null (A's long policy added the rationale)."
+    },
+    {
+     "why": "'Faculty are individually responsible for maintaining research integrity' and must 'familiarize yourself with funding agency and publication guidelines'. This defers AI rules for manuscripts and grants to venues and funders, so P62.",
+     "anchor": "familiarize yourself with funding agency and publication guidelines to ensure compliance",
+     "frag_start": "Faculty are individually responsible for",
+     "frag_end": "ensure compliance.",
+     "policy": "Faculty familiarize themselves with funding agency and publication guidelines to ensure compliance, since some academic publications have prohibited the use of generative AI tools in manuscripts and federal granting agencies have emerging regulations prohibiting their use in submissions and reviews.",
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P62",
+     "unit_stance": "neutral",
+     "topics": [
+      "research-use",
+      "instructor-staff-use"
+     ],
+     "resolution_why": "Both coders agreed on instructor, general, should, P62. Policy text tightened to follow the source: the passage names faculty responsibility for research integrity and says some publications and federal granting agencies prohibit generative AI."
+    },
+    {
+     "why": "'contact ITS so we can work through security, reliability, and performance concerns' makes purchasing AI tools go through an ITS review. That is institutional review of AI acquisition, so P65 (P50 is about prompt data).",
+     "anchor": "contact ITS so we can work through security, reliability, and performance concerns with you",
+     "frag_start": "When purchasing AI tools or adding",
+     "frag_end": "concerns with you.",
+     "policy": null,
+     "actor": "all",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P65",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data",
+      "instructor-staff-use"
+     ],
+     "resolution_why": "A coded actor instructor, B coded ta-staff; phase, modality and type agreed (before-course, must, P65). The passage is addressed to faculty and staff generally ('When purchasing AI tools ...'), so actor is all."
+    },
+    {
+     "why": "The page lists 'Version: 1.1' and 'Last Review: February 24, 2026' after being published in 2024. This shows the guidance is revised on review, so P54.",
+     "anchor": "Last Review: February 24, 2026",
+     "frag_start": "Version: 1.1",
+     "frag_end": "February 24, 2026",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "informs",
+     "policy_type": "P54",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ],
+     "resolution_why": "Both coders agreed on all codes (admin, over-time, informs, P54)."
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Reconciled. The integrity page has one AI sentence; the consultation, sanction and appeal units coder A added are general integrity procedures with no AI-specific text and were dropped. ITS guidelines address faculty and staff, so actor is all except the faculty-specific research rule. Course layer deferred; no school or computing policy found."
+}

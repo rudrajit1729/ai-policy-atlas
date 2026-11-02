@@ -1,0 +1,117 @@
+{
+ "university": "University of Akron Main Campus",
+ "slug": "akron-main-campus",
+ "state": "OH",
+ "type": "R2",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "akron-ethical-ai",
+   "layer": "university",
+   "unit": "University Libraries (AI Literacy guide)",
+   "course": null,
+   "title": "UA Ethical Use of AI Statement",
+   "url": "https://libguides.uakron.edu/AIliteracy/UAAIpolicy",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "A short University of Akron Ethical Use of AI statement reproduced on a library guide. It calls AI useful for learning, sends students to their instructors for course-level rules, and says inappropriate use is misconduct under the Code of Student Conduct.",
+   "stance_why": "The statement sets no university-wide permission or ban: it says \"Students should look to their instructors for guidance on the fair and ethical use of AI tools for this course\", so the decision is delegated to instructors, with only a general misconduct backstop.",
+   "units": [
+    {
+     "why": "The statement opens by calling AI tools \"powerful tools that can be used to aid in the learning process\", a benefit claim with no rule attached, so it is informs/P87 (not a career-skill claim, P44).",
+     "anchor": "powerful tools that can be used to aid in the learning process",
+     "frag_start": "AI tools (such as ChatGPT)",
+     "frag_end": "aid in the learning process.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P87",
+     "unit_stance": "neutral",
+     "topics": [
+      "rationale"
+     ]
+    },
+    {
+     "why": "\"Students should look to their instructors for guidance\" hands the decision on fair and ethical AI use to each instructor for the course, so P04 (instructor sets the rule); it is addressed to students with a should.",
+     "anchor": "Students should look to their instructors for guidance on the fair and ethical use",
+     "frag_start": "Students should look to their instructors",
+     "frag_end": "AI tools for this course.",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "policy-communication"
+     ],
+     "fit_note": "Also tells students where to find the rule (instructor guidance); no default stance is set.",
+     "resolution_why": "Both coders coded P04, should, student, course-start. They differed only in anchor length and topics (A: instructor-discretion, policy-communication; B: stance). The source says 'Students should look to their instructors for guidance on the fair and ethical use of AI tools for this course', so A's fuller anchor and topics are kept; 'stance' is not a fitting topic for a delegation pointer."
+    },
+    {
+     "why": "\"will violate the Code of Student Conduct as cheating, plagiarism, fabrication...\" classifies inappropriate AI use as misconduct handled by the conduct process, so P36; modality is must-not since it forbids inappropriate or unethical use.",
+     "anchor": "The inappropriate or unethical use of such technologies will violate the Code of Student Conduct",
+     "frag_start": "The inappropriate or unethical use",
+     "frag_end": "and/or gaining an unfair advantage.",
+     "policy": "Inappropriate or unethical use of AI technologies violates the Code of Student Conduct as cheating, plagiarism, fabrication, unauthorized collaboration, misrepresentation, and/or gaining an unfair advantage.",
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "prohibit",
+     "topics": [
+      "academic-integrity",
+      "enforcement"
+     ],
+     "resolution_why": "Coder A: must-not with a normalized policy; coder B: informs with policy null (anchor cut before 'The inappropriate or unethical use'). Source: 'The inappropriate or unethical use of such technologies will violate the Code of Student Conduct as cheating, plagiarism, fabrication, unauthorized collaboration, misrepresentation, and/or gaining an unfair advantage.' This declares misuse a conduct violation, which is a prohibition of inappropriate use, matching B's own unit_stance of prohibit; informs would contradict that. Final: must-not, P36, A's normalized policy (the anchor alone omits the subject and the list of violation categories)."
+    },
+    {
+     "why": "The sentence says the Code is the framework for the student conduct process and that misconduct is reported to the \"Department of Student Conduct and Community Standards\"; it names the office that handles cases, nearest P80, and is informational.",
+     "anchor": "reported to the Department of Student Conduct and Community Standards",
+     "frag_start": "The Code of Student Conduct is",
+     "frag_end": "Student Conduct and Community Standards.",
+     "policy": "The Code of Student Conduct is a University rule that provides the framework for the student conduct process and defines student misconduct; misconduct is reported to the Department of Student Conduct and Community Standards.",
+     "actor": "all",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P80",
+     "unit_stance": "neutral",
+     "topics": [
+      "enforcement",
+      "governance",
+      "academic-integrity"
+     ],
+     "fit_note": "Names the office receiving misconduct reports and the process; not specifically an AI-policy owner or exceptions body (coder A). Describes the office handling misconduct generally, not an AI-specific owner of the AI policy (coder B).",
+     "resolution_why": "Both coders coded P80, informs, all, when-misuse. A left policy null; B wrote a normalized policy. The anchor alone ('reported to the Department of Student Conduct and Community Standards') omits that the Code frames the conduct process and defines misconduct, so B's normalized policy, which follows the source sentence closely and adds nothing, is kept. Topics merged."
+    },
+    {
+     "why": "\"Students ... are responsible to know and abide by the Code of Student Conduct and all University rules, regulations, and policies\" binds students to existing university rules, so P77 rather than P78 (not course-level AI rules).",
+     "anchor": "responsible to know and abide by the Code of Student Conduct and all University rules",
+     "frag_start": "Students at the University of Akron",
+     "frag_end": "regulations, and policies.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "academic-integrity",
+      "policy-communication"
+     ],
+     "resolution_why": "Both coders coded P77, must, student, general; they differed only in anchor length and topics. Source: 'Students at the University of Akron are responsible to know and abide by the Code of Student Conduct and all University rules, regulations, and policies.' A's longer anchor and topic list kept."
+    }
+   ]
+  }
+ ],
+ "notes": "uakron.edu pages (Academic Integrity Policy, faculty syllabus page) returned a bot-check 'Establishing a secure connection' page, so unfetched (inaccessible via curl). No computing-unit policy found; known CS HCI syllabus is a course document (deferred). Coder A: single thin document; topics codes inferred from codebook examples because AGENT_BRIEF.md was not found. | Coder B: Single thin document. Topic codes taken from codebook examples and theme ids because AGENT_BRIEF.md was not found. Reconciler: both coders found the same 5 units; no single-coder units. Akron academic-integrity and syllabus pages were bot-blocked (see searched).",
+ "new_types": []
+}

@@ -1,0 +1,16 @@
+{
+ "documents": 2,
+ "units_A": 169,
+ "units_B": 183,
+ "matched": 157,
+ "only_A": 12,
+ "only_B": 26,
+ "kept_only_A": 11,
+ "kept_only_B": 26,
+ "agree_actor": 0.975,
+ "agree_phase": 0.669,
+ "agree_modality": 0.936,
+ "agree_policy_type": 0.847,
+ "agree_stance_docs": 1.0,
+ "notes": "Units were aligned by anchor position in the source text (157 matched, plus one manual re-pairing in each document). Main disagreements: (1) phase, mostly general vs before-course/course-start/during-work for rationale statements and sample-statement lines; resolved by the codebook definitions (rationale = general; lines of a sample statement that govern the work = during-work; communicating expectations = course-start). (2) policy_type on near-neighbour types: P04 vs P05 for fill-in templates (P04), P19 vs P01 vs P36 for bans framed as integrity violations (P19 for AI doing the work, P01 for blanket bans, fit note keeps the P36 framing), P41 vs P42, P33 vs P55, P66/P83/P09 for 'explain the rules' sentences, P91 vs P15 vs P12 for permitted-use checkboxes. (3) UNCOVERED vs P12 for the 'break problems into steps and paraphrase' exception: kept UNCOVERED. (4) modality informs vs should vs may, resolved from the source verb. (5) unit_stance: coder B marked rationale statements as restrict/permit; set to neutral when modality is informs. One A-only unit dropped as a duplicate of a B unit covering the same passage; all other single-coder units (11 A, 26 B, mostly B splitting lists of discussion topics and checkbox items) were checked against the source and kept. All fit and uncovered notes from both coders were kept or merged."
+}

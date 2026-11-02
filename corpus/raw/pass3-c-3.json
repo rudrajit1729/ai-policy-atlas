@@ -1,0 +1,904 @@
+{
+ "group": "pass3-c-3",
+ "searched_universities": [
+  {
+   "university": "Acadia University",
+   "result": "included",
+   "notes": "pass3: Jodrey School of Computer Science academic integrity page treats AI-generated code as plagiarism unless allowed. Online COMP 1113/1123/2103/2203 syllabi checked; no AI section. Tier 1 (CS department)."
+  },
+  {
+   "university": "Cape Breton University",
+   "result": "included",
+   "notes": "pass3: no computing-specific document found (searched CSCI syllabi, department pages). Included university-wide 'AI with Purpose' strategy page as university-general. Writing Centre page and Academic Integrity Handbook also exist. Tier check (addendum 4): tier 2 (no CS-related unit policy) and tier 3 (School of Science & Technology; Shannon School of Business for IT/MAIBA) searched, nothing found; kept Tier 4."
+  },
+  {
+   "university": "Mount Saint Vincent University",
+   "result": "none-found",
+   "notes": "pass3: out of frame: no computing degree (MSVU offers Computer Science courses only and an Information Technology minor; no CS/computing major)."
+  },
+  {
+   "university": "Saint Mary's University (Halifax)",
+   "result": "included",
+   "notes": "pass3: two Computing Science course syllabi with AI sections (CSCI 1226, CSCI 2341, cs.smu.ca/~myoung). CSCI 1228 syllabus checked, no AI section. University-wide SMU Faculty Guidelines on GenAI exist (not added since computing-specific docs found). Tier 1 (CS courses)."
+  },
+  {
+   "university": "St. Francis Xavier University",
+   "result": "included",
+   "notes": "pass3: CSCI 161 (intro programming) course outline has an AI prohibition for labs. CSCI 162 outline checked, no AI statement. University syllabus-statement page exists (not added). Tier 1 (CS course)."
+  },
+  {
+   "university": "Algoma University",
+   "result": "included",
+   "notes": "pass3: no official computing-specific document found (a COSC 3407 outline with an AI clause exists only on CourseHero, not official). Included Senate-approved student GenAI guidelines (May 2025) as university-general. Tier check (addendum 4): tier 2/3 searched (Faculty of Computer Science & Technology page fetched, no AI policy; no data science/AI unit policy); kept Tier 4."
+  },
+  {
+   "university": "Lakehead University",
+   "result": "included",
+   "notes": "pass3: CS department course-outline page checked (COMP 1411, 1431, 2412, 2430, 2477, 3415, 3473, 4312, 4411, 4475, 4478); none mention generative AI. Included Student Conduct / Academic Integrity ChatGPT-AI tools FAQ as university-general. Tier check (addendum 4): tier 2/3 searched (Software Engineering, ECE, Faculty of Engineering, Faculty of Science & Environmental Studies); none found; kept Tier 4 (Teaching Commons syllabus statements also exist, generic)."
+  },
+  {
+   "university": "Laurentian University",
+   "result": "none-found",
+   "notes": "pass3: bilingual site searched in English and French. Draft university GenAI guidelines reported by local news (Senate, May 2025) but no public document located; Student Academic Integrity policy dated 2017 has no AI provisions; no COSC outlines with AI found. Tier check (addendum 4): re-checked tiers 1-3 (School of Engineering and Computer Science / Ecole de genie et d informatique, Faculty of Science, Engineering and Architecture), English and French; nothing found; tier 4 also unpublished, so none-found kept."
+  },
+  {
+   "university": "Nipissing University",
+   "result": "included",
+   "notes": "pass3: no computing-specific document found. Included Senate-approved Generative AI Guide for Instructors (June 2023) via Internet Archive snapshot (live PDF behind Cloudflare challenge). Tier check (addendum 4): tier 2/3 searched (Faculty of Arts & Science, CS); none found; kept Tier 4."
+  },
+  {
+   "university": "Redeemer University",
+   "result": "none-found",
+   "notes": "pass3: out of frame: no computing degree (2025-26 calendar lists only CSC-121 Computer Programming I; no CS major)."
+  },
+  {
+   "university": "Royal Military College of Canada",
+   "result": "included",
+   "notes": "pass3: no computing-specific document found (Math & CS, ECE searched). Included Registrar's Undergraduate Academic Regulations section 23 on generative AI as university-general. Tier check (addendum 4): tier 2/3 searched (Faculty of Engineering, Dept of Electrical & Computer Engineering, Dept of Mathematics & Computer Science); none found; kept Tier 4."
+  }
+ ],
+ "documents": [
+  {
+   "id": "acadia-jodrey-cs-academic-integrity",
+   "university": "Acadia University",
+   "country": "Canada",
+   "region": "NS",
+   "unit": "Jodrey School of Computer Science",
+   "level": "department",
+   "course": null,
+   "title": "Academic Integrity Policy",
+   "url": "https://cs.acadiau.ca/academic_integrity.html",
+   "date_or_term": null,
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "prohibit-by-default",
+   "summary": "Tier 1: Short school-level academic integrity statement for computer science. It frames programming assignments as learning opportunities, defines submitting code one did not write (including AI-generated code from tools such as Copilot or ChatGPT) as plagiarism, and makes this the school default unless a syllabus or assignment allows generated code.",
+   "excerpts": [
+    {
+     "text": "Students who submit code that they did not write are both missing a learning opportunity",
+     "frag_start": "Students who submit code",
+     "frag_end": "as well as committing plagiarism.",
+     "section": "Academic Integrity Policy",
+     "topics": [
+      "learning-rationale",
+      "code-generation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "This includes copying code found on websites or having AI generate the code for you",
+     "frag_start": "This includes copying code",
+     "frag_end": "ChatGPT, etc).",
+     "section": "Academic Integrity Policy",
+     "topics": [
+      "code-generation",
+      "prohibited-uses"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "each individual class at Acadia will approach the use of AI-generated content differently",
+     "frag_start": "While each individual class",
+     "frag_end": "use of such generated code.",
+     "section": "Academic Integrity Policy",
+     "topics": [
+      "instructor-discretion"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "the Jodrey School of Computer Science will treat AI-generated work as plagiarism",
+     "frag_start": "While each individual class",
+     "frag_end": "use of such generated code.",
+     "section": "Academic Integrity Policy",
+     "topics": [
+      "default-stance",
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "department"
+    },
+    {
+     "text": "unless the syllabus/assignment direction specifically allows for the use of such generated code",
+     "frag_start": "While each individual class",
+     "frag_end": "use of such generated code.",
+     "section": "Academic Integrity Policy",
+     "topics": [
+      "syllabus-communication",
+      "default-stance"
+     ],
+     "phase": "course-start",
+     "actor": "instructor"
+    }
+   ]
+  },
+  {
+   "id": "cbu-ai-with-purpose",
+   "university": "Cape Breton University",
+   "country": "Canada",
+   "region": "NS",
+   "unit": "Office of the Associate Vice President Academic & Research / Chief Information Officer (AI with Purpose strategy)",
+   "level": "university-general",
+   "course": null,
+   "title": "Artificial Intelligence at Cape Breton University: AI With a Purpose",
+   "url": "https://www.cbu.ca/about-cbu/artificial-intelligence-at-cape-breton-university/",
+   "date_or_term": null,
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "mixed",
+   "summary": "Tier 4: Institution-wide, principle-based AI strategy (People First, Prudence, Accountability) rather than a rulebook. It declines universal rules, ties AI in teaching to existing academic integrity standards and the priority on critical thinking, and flags privacy, bias, copyright and environmental concerns; it is a living document overseen by an accountability committee.",
+   "excerpts": [
+    {
+     "text": "it is neither practical nor appropriate to impose rigid, universal rules",
+     "frag_start": "In this context, it is",
+     "frag_end": "allows for iterative adaptation.",
+     "section": "Foundational Assumptions",
+     "topics": [
+      "default-stance",
+      "policy-evolution"
+     ],
+     "phase": "before-course",
+     "actor": "department"
+    },
+    {
+     "text": "It is intended as a living document that reflects current knowledge and practices",
+     "frag_start": "It is intended as a living document",
+     "frag_end": "pedagogy, research and community needs.",
+     "section": "Foundational Assumptions",
+     "topics": [
+      "policy-evolution"
+     ],
+     "phase": "over-time",
+     "actor": "department"
+    },
+    {
+     "text": "CBU upholds current standards of academic integrity and educational values",
+     "frag_start": "CBU upholds current standards",
+     "frag_end": "in teaching and learning.",
+     "section": "\"Prudence\" Principle",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Cognitive and critical thinking development are prioritized when determining the role of artificial intelligence",
+     "frag_start": "Cognitive and critical thinking development",
+     "frag_end": "across varying disciplines.",
+     "section": "\"Prudence\" Principle",
+     "topics": [
+      "learning-rationale"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "AI content can be incomplete, inaccurate or biased and must not be treated as authoritative.",
+     "frag_start": "AI content can be incomplete",
+     "frag_end": "treated as authoritative.",
+     "section": "\"Accountability\" Principle",
+     "topics": [
+      "accountability-understanding",
+      "ethics-bias-environment"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Privacy is not guaranteed when data/information is entered into AI applications.",
+     "frag_start": "Privacy is not guaranteed",
+     "frag_end": "into AI applications.",
+     "section": "\"Accountability\" Principle",
+     "topics": [
+      "privacy-data"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "CBU employees are expected to remain mindful of the environmental impact of AI technologies.",
+     "frag_start": "CBU employees are expected",
+     "frag_end": "contributions to electronic waste.",
+     "section": "\"Accountability\" Principle",
+     "topics": [
+      "ethics-bias-environment",
+      "instructor-staff-use"
+     ],
+     "phase": "during-work",
+     "actor": "instructor"
+    }
+   ]
+  },
+  {
+   "id": "smu-csci1226",
+   "university": "Saint Mary's University",
+   "country": "Canada",
+   "region": "NS",
+   "unit": "Department of Mathematics and Computing Science",
+   "level": "course",
+   "course": "CSCI 1226 Introduction to Computers and Programming",
+   "title": "CSCI 1226 -- Introduction to Computers and Programming (Syllabus)",
+   "url": "https://cs.smu.ca/~myoung/csci1226/Syllabus.pl",
+   "date_or_term": null,
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "permit-with-conditions",
+   "summary": "Tier 1: Intro programming syllabus whose academic integrity section bans submitting LLM-generated code as one's own work but allows AI for learning purposes if its use is declared. Violations fall under the university's academic regulation and earn a zero on the whole submission.",
+   "excerpts": [
+    {
+     "text": "Using LLMs or other AI tools that generate code and submitting the results",
+     "frag_start": "Using LLMs or other AI tools",
+     "frag_end": "is prohibited.",
+     "section": "Academic Integrity",
+     "topics": [
+      "code-generation",
+      "prohibited-uses"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Students are allowed to use the AI tools for learning purposes,",
+     "frag_start": "Students are allowed to use the AI tools",
+     "frag_end": "as their original work.",
+     "section": "Academic Integrity",
+     "topics": [
+      "permitted-uses",
+      "learning-rationale"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "provided that they declare the use of AI in their submissions",
+     "frag_start": "Students are allowed to use the AI tools",
+     "frag_end": "as their original work.",
+     "section": "Academic Integrity",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Violation of this policy will be treated as an academic offense",
+     "frag_start": "Violation of this policy",
+     "frag_end": "pursuant to Academic Regulation 18.",
+     "section": "Academic Integrity",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "instructor"
+    },
+    {
+     "text": "The penalty for submitting any work that violates the academic integrity rules is a zero",
+     "frag_start": "The penalty for submitting any work",
+     "frag_end": "only part of the submission.",
+     "section": "Academic Integrity",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "instructor"
+    }
+   ]
+  },
+  {
+   "id": "smu-csci2341",
+   "university": "Saint Mary's University",
+   "country": "Canada",
+   "region": "NS",
+   "unit": "Department of Mathematics and Computing Science",
+   "level": "course",
+   "course": "CSCI 2341 Data Structures and Algorithms I",
+   "title": "CSCI 2341 Fall 2026 | Syllabus",
+   "url": "https://cs.smu.ca/~myoung/csci2341/Syllabus.html",
+   "date_or_term": "Fall 2026",
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "encourage",
+   "summary": "Tier 1: Data structures syllabus with a dedicated AI policy that encourages AI help for assignments and labs while requiring students to review and understand generated code. Mastery is checked by an in-person, paper final exam without AI, and AI-written code may be submitted only on activities where permission is given.",
+   "excerpts": [
+    {
+     "text": "AI tools are going to be a big part of future programming jobs.",
+     "frag_start": "AI tools are going to be",
+     "frag_end": "big part of future programming jobs.",
+     "section": "Policy on Artificial Intelligence",
+     "topics": [
+      "ai-literacy-career"
+     ],
+     "phase": "course-start",
+     "actor": "instructor"
+    },
+    {
+     "text": "you need to be able to understand the code they generate",
+     "frag_start": "But in order to use them effectively",
+     "frag_end": "and vulnerabilities.",
+     "section": "Policy on Artificial Intelligence",
+     "topics": [
+      "accountability-understanding",
+      "code-generation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "You are encouraged to use AI",
+     "frag_start": "You are encouraged to use AI",
+     "frag_end": "prepare your assignment and lab submissions.",
+     "section": "Policy on Artificial Intelligence",
+     "topics": [
+      "permitted-uses",
+      "default-stance"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "You should review the code the AI provides you with",
+     "frag_start": "You should review the code",
+     "frag_end": "how it accomplishes the task,",
+     "section": "Policy on Artificial Intelligence",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "You will not have access to AI during that exam.",
+     "frag_start": "At the end of term",
+     "frag_end": "you will find that exam incredibly hard.",
+     "section": "Policy on Artificial Intelligence",
+     "topics": [
+      "exams-in-person",
+      "assessment-design"
+     ],
+     "phase": "during-assessment",
+     "actor": "student"
+    },
+    {
+     "text": "If you have not been using AI to help you learn to program,",
+     "frag_start": "If you have not been using AI",
+     "frag_end": "you will find that exam incredibly hard.",
+     "section": "Policy on Artificial Intelligence",
+     "topics": [
+      "learning-rationale"
+     ],
+     "phase": "during-assessment",
+     "actor": "student"
+    },
+    {
+     "text": "you will be allowed to submit code written by an AI.",
+     "frag_start": "On certain activities",
+     "frag_end": "submit code written by an AI.",
+     "section": "Academic Integrity",
+     "topics": [
+      "code-generation",
+      "instructor-discretion"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    }
+   ]
+  },
+  {
+   "id": "stfx-csci161",
+   "university": "St. Francis Xavier University",
+   "country": "Canada",
+   "region": "NS",
+   "unit": "Department of Computer Science",
+   "level": "course",
+   "course": "CSCI 161 Introduction to Programming",
+   "title": "Computer Science 161 Section 10 — Introduction to Programming (Outline)",
+   "url": "http://modsurski.com/csci161/outline/outline.html",
+   "date_or_term": "Fall 2026",
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "prohibit-by-default",
+   "summary": "Tier 1: Intro programming course outline. Its only explicit AI rule is a ban on AI in the weekly labs, where students caught using AI are removed and get a zero for that lab. The outline also relies on similarity-detection software for assignments and closed-book tests.",
+   "excerpts": [
+    {
+     "text": "The use of AI is prohibited.",
+     "frag_start": "The use of AI is prohibited.",
+     "frag_end": "obtain a zero for the lab.",
+     "section": "Labs",
+     "topics": [
+      "prohibited-uses",
+      "default-stance"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Students using AI will be asked to leave and will obtain a zero",
+     "frag_start": "The use of AI is prohibited.",
+     "frag_end": "obtain a zero for the lab.",
+     "section": "Labs",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "student"
+    }
+   ]
+  },
+  {
+   "id": "algoma-student-genai-guidelines",
+   "university": "Algoma University",
+   "country": "Canada",
+   "region": "ON",
+   "unit": "Senate / Academic Integrity Office",
+   "level": "university-general",
+   "course": null,
+   "title": "Algoma University: Guidelines for the Responsible Use of Generative AI by Students",
+   "url": "https://library.algomau.ca/wp-content/uploads/2026/04/Algoma_University_-Guidelines_for_the_Responsible_Use_of_Generative_AI_by_-Students.pdf",
+   "date_or_term": "Approved by Algoma University Senate May 2, 2025",
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "prohibit-by-default",
+   "summary": "Tier 4: Senate-approved student guidelines that prohibit generative AI in all coursework unless the instructor explicitly permits it, and require written permission before use. Where AI is allowed, students must cite it, verify outputs and protect their privacy; instructors may use AI detectors, and sanctions range from a zero on the assignment or course to suspension or expulsion.",
+   "excerpts": [
+    {
+     "text": "is prohibited in all coursework at Algoma University unless explicitly permitted by the course instructor.",
+     "frag_start": "Any use of Generative Artificial Intelligence",
+     "frag_end": "permitted by the course instructor.",
+     "section": "Provisional Principles",
+     "topics": [
+      "default-stance",
+      "prohibited-uses"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Instructors have the discretion to determine the scope of permitted Generative AI",
+     "frag_start": "Instructors have the discretion",
+     "frag_end": "acceptable use of AI in each course.",
+     "section": "Provisional Principles",
+     "topics": [
+      "instructor-discretion",
+      "syllabus-communication"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "Students may not in an circumstances submit work entirely produced by Generative AI,",
+     "frag_start": "Students may not in an circumstances",
+     "frag_end": "authorship of work they submit.",
+     "section": "Provisional Principles",
+     "topics": [
+      "prohibited-uses",
+      "accountability-understanding"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "receiving a 0 in the assignment or a 0 in the course.",
+     "frag_start": "These repercussions can include",
+     "frag_end": "a 0 in the course.",
+     "section": "Academic Integrity",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "student"
+    },
+    {
+     "text": "you must obtain written permissions from the instructor before using it for any assignment",
+     "frag_start": "If you believe using a Generative AI tool",
+     "frag_end": "for any assignment or assessment.",
+     "section": "Seeking permission to Use Generative AI",
+     "topics": [
+      "permitted-uses",
+      "instructor-discretion"
+     ],
+     "phase": "course-start",
+     "actor": "student"
+    },
+    {
+     "text": "AI detection tools such as Copyleaks may be used by instructors to scan your work",
+     "frag_start": "AI detection tools such as Copyleaks",
+     "frag_end": "assess the authorship of your work.",
+     "section": "Best Practices for Completing Student Work",
+     "topics": [
+      "detection-tools"
+     ],
+     "phase": "when-misuse",
+     "actor": "instructor"
+    },
+    {
+     "text": "You must acknowledge the use of any Generative AI tool in your work.",
+     "frag_start": "You must acknowledge the use",
+     "frag_end": "Generative AI tool in your work.",
+     "section": "Be Transparent and Cite Your Sources",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Protect your personal information and carefully review the terms of service",
+     "frag_start": "Protect your personal information",
+     "frag_end": "Generative AI product you use.",
+     "section": "Protect your Privacy",
+     "topics": [
+      "privacy-data"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    }
+   ]
+  },
+  {
+   "id": "lakehead-chatgpt-ai-tools-faq",
+   "university": "Lakehead University",
+   "country": "Canada",
+   "region": "ON",
+   "unit": "Student Conduct / Academic Integrity (Student Life)",
+   "level": "university-general",
+   "course": null,
+   "title": "Can students use ChatGPT and other AI tools at Lakehead?",
+   "url": "https://www.lakeheadu.ca/students/student-life/student-conduct/academic-integrity/chatgpt-ai-tools",
+   "date_or_term": null,
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "instructor-discretion",
+   "summary": "Tier 4: Student-facing academic integrity FAQ with a stop-look-ask checklist. Whether AI is allowed depends on each instructor, and the page maps unauthorized use, unacknowledged use and passing off AI work as one's own to specific offences in the Academic Integrity Code. It also warns about fabricated sources, bias and harm to learning.",
+   "excerpts": [
+    {
+     "text": "The use of AI tools will ultimately depend on the specific course, context,",
+     "frag_start": "The use of AI tools will ultimately",
+     "frag_end": "guidelines provided by your instructor.",
+     "section": "Can I use ChatGPT or AI Tools at Lakehead?",
+     "topics": [
+      "instructor-discretion",
+      "default-stance"
+     ],
+     "phase": "course-start",
+     "actor": "instructor"
+    },
+    {
+     "text": "It's the student's responsibility to seek out clarification from the instructor",
+     "frag_start": "If there is not any direction provided",
+     "frag_end": "clarification from the instructor",
+     "section": "Can I use ChatGPT or AI Tools at Lakehead?",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "phase": "course-start",
+     "actor": "student"
+    },
+    {
+     "text": "If a student uses an AI tool without permission, when instructed not to,",
+     "frag_start": "If a student uses an AI tool without permission",
+     "frag_end": "this would be considered",
+     "section": "What is inappropriate use of AI?",
+     "topics": [
+      "prohibited-uses",
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "student"
+    },
+    {
+     "text": "but they fail to disclose or cite the original source(s) of the ideas/information",
+     "frag_start": "If a student uses an AI tool to generate ideas",
+     "frag_end": "this would be considered",
+     "section": "What is inappropriate use of AI?",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "they must go through a formal academic integrity investigation and disciplinary measures are implemented",
+     "frag_start": "Students do get caught",
+     "frag_end": "inconsistencies in students work.",
+     "section": "Will my instructor know if I use ChatGPT or GenAI tools?",
+     "topics": [
+      "integrity-sanctions",
+      "detection-tools"
+     ],
+     "phase": "when-misuse",
+     "actor": "student"
+    },
+    {
+     "text": "Generative AI tools often cite non-existent, fabricated sources",
+     "frag_start": "Generative AI tools often cite",
+     "frag_end": "non-existent, fabricated sources",
+     "section": "Checklist for Appropriate AI Use",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "AI usage can negatively impact the development of certain skills such as critical thinking",
+     "frag_start": "AI usage can negatively impact",
+     "frag_end": "understanding and memorization",
+     "section": "Checklist for Appropriate AI Use",
+     "topics": [
+      "learning-rationale"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    }
+   ]
+  },
+  {
+   "id": "nipissing-genai-guide-instructors",
+   "university": "Nipissing University",
+   "country": "Canada",
+   "region": "ON",
+   "unit": "Teaching and Learning Committee (Senate)",
+   "level": "university-general",
+   "course": null,
+   "title": "Generative AI Guide for Instructors",
+   "url": "https://web.archive.org/web/20240917202922id_/https://www.nipissingu.ca/sites/default/files/2023-07/Generative%20AI%20Guide%20for%20Instructors%20-%20July%207%2C%202023.pdf",
+   "date_or_term": "Approved by Senate on June 26, 2023",
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "instructor-discretion",
+   "summary": "Tier 4: Senate-approved instructor guide. The university does not restrict AI, so each instructor decides and must state the course rule and the expected citation format on the syllabus. It advises against banning specific tools and against AI detectors, forbids submitting student work to AI tools, notes AI's code-generation abilities, and suggests assessment redesign and equity limits on paid tools. Fetched via an Internet Archive snapshot because the live PDF sits behind a Cloudflare challenge.",
+   "excerpts": [
+    {
+     "text": "Currently, the University does not restrict the use of AI tools such as ChatGPT",
+     "frag_start": "Currently, the University does not restrict",
+     "frag_end": "for the courses they are teaching.",
+     "section": "Can students use Generative AI?",
+     "topics": [
+      "default-stance",
+      "instructor-discretion"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "a general prohibition on the use of AI technologies in university teaching",
+     "frag_start": "That said,",
+     "frag_end": "how and when to use them appropriately and ethically.",
+     "section": "What is Generative AI?",
+     "topics": [
+      "ai-literacy-career",
+      "default-stance"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "instructors should communicate to students the format for how students are expected to cite",
+     "frag_start": "Specifically,",
+     "frag_end": "the use of AI technologies in their work.",
+     "section": "If you choose to allow AI technologies in all or some part of your course",
+     "topics": [
+      "disclosure-citation",
+      "syllabus-communication"
+     ],
+     "phase": "course-start",
+     "actor": "instructor"
+    },
+    {
+     "text": "A student who uses AI technology to complete coursework for evaluation, without acknowledging its use,",
+     "frag_start": "A student who uses AI technology",
+     "frag_end": "defined under the Academic Integrity Policy",
+     "section": "If you choose to allow AI technologies in all or some part of your course",
+     "topics": [
+      "integrity-sanctions",
+      "disclosure-citation"
+     ],
+     "phase": "when-misuse",
+     "actor": "student"
+    },
+    {
+     "text": "It is advised that instructors don’t simply ban specific generative AI applications such as ChatGPT",
+     "frag_start": "It is advised that",
+     "frag_end": "integrated into many different applications,",
+     "section": "If you choose not to allow AI technologies in all or some part of your course",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "Therefore, the use of generative AI “detectors” is not recommended.",
+     "frag_start": "Therefore, the use of generative AI",
+     "frag_end": "is not recommended.",
+     "section": "Is it possible to detect whether a student has used Generative AI?",
+     "topics": [
+      "detection-tools"
+     ],
+     "phase": "when-misuse",
+     "actor": "instructor"
+    },
+    {
+     "text": "Instructors should not submit any portion of a student’s work to a generative AI tool.",
+     "frag_start": "No. Instructors should not submit",
+     "frag_end": "to a generative AI tool.",
+     "section": "Can Instructors use Generative AI to assess or grade student work?",
+     "topics": [
+      "faculty-grading-feedback",
+      "privacy-data",
+      "intellectual-property"
+     ],
+     "phase": "during-work",
+     "actor": "instructor"
+    },
+    {
+     "text": "instructors must provide a no-fee alternative for students if either of these",
+     "frag_start": "Thus, instructors must provide",
+     "frag_end": "are not satisfied.",
+     "section": "Instructors should be aware of the following issues",
+     "topics": [
+      "equity-access"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    }
+   ]
+  },
+  {
+   "id": "rmc-academic-regulations-genai",
+   "university": "Royal Military College of Canada",
+   "country": "Canada",
+   "region": "ON",
+   "unit": "Registrar's Office (Undergraduate Academic Regulations)",
+   "level": "university-general",
+   "course": null,
+   "title": "Undergraduate Academic Regulations",
+   "url": "https://www.rmc-cmr.ca/en/registrars-office/academic-regulations",
+   "date_or_term": null,
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "tiered",
+   "summary": "Tier 4: The undergraduate academic regulations write generative AI into the definitions of cheating and plagiarism. Students may use AI for search-engine- or dictionary-like tasks unless an instructor says otherwise; any further use needs instructor authorization and full disclosure. A mandatory academic integrity course covers GenAI rules.",
+   "excerpts": [
+    {
+     "text": "Unauthorized assistance includes generative artificial intelligence (AI) help beyond 23.1.a.i below and/or instructors’ permissions.",
+     "frag_start": "An act or attempt to give",
+     "frag_end": "including generative AI assistance, as outlined below;",
+     "section": "Academic integrity violations: Cheating",
+     "topics": [
+      "prohibited-uses",
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "student"
+    },
+    {
+     "text": "Students may use AI tools for the same tasks they accomplish with tools",
+     "frag_start": "Students may use AI tools",
+     "frag_end": "against a specific instructor’s direction.",
+     "section": "23.1.a.i",
+     "topics": [
+      "use-categories-levels",
+      "permitted-uses"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "any use of generative AI tools beyond 23.1.a.i above is prohibited.",
+     "frag_start": "Unless specifically authorized by instructors",
+     "frag_end": "above is prohibited.",
+     "section": "23.1.a.ii",
+     "topics": [
+      "use-categories-levels",
+      "instructor-discretion"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "AI-generated content must be fully disclosed, cited, and described in any work or presentation.",
+     "frag_start": "In any case in which an instructor allows",
+     "frag_end": "described in any work or presentation.",
+     "section": "23.1.a.iii",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Using the work of others, including generative AI content, and attempting to present it",
+     "frag_start": "Using the work of others",
+     "frag_end": "misuse of quotation marks or attribution;",
+     "section": "Academic integrity violations: Plagiarism",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "student"
+    },
+    {
+     "text": "including with regard to the use of generative artificial intelligence (GenAI) in academic work;",
+     "frag_start": "Academic integrity is fundamental to teaching",
+     "frag_end": "will constitute a pass in the course.",
+     "section": "Academic integrity course",
+     "topics": [
+      "ai-literacy-career"
+     ],
+     "phase": "course-start",
+     "actor": "student"
+    }
+   ]
+  }
+ ],
+ "excluded": [
+  {
+   "university": "Acadia University",
+   "title": "Departmental AI Policy - History and Classics",
+   "url": "https://history.acadiau.ca/departmental-ai-policy.html",
+   "reason": "Non-computing department."
+  },
+  {
+   "university": "Acadia University",
+   "title": "Plagiarism Policy - Psychology",
+   "url": "https://psychology.acadiau.ca/plagiarism-policy.html",
+   "reason": "Non-computing department."
+  },
+  {
+   "university": "Cape Breton University",
+   "title": "ChatGPT, Generative AI, and Writing (Writing Centre)",
+   "url": "https://www.cbu.ca/current-students/student-services/writing-centre/chatgpt-and-generativeai/",
+   "reason": "Writing Centre advice; strategy page used as the university-general document instead."
+  },
+  {
+   "university": "Saint Mary's University",
+   "title": "SMU Faculty Guidelines on the Use of Generative AI in Courses (May 2025)",
+   "url": "https://static1.squarespace.com/static/58d01deed482e982a9e679b5/t/6830c76ac1e8ab7a77eea692/1748027242930/SMU+Faculty+Guidelines+on+the+Use+of+Generative+AI_FINAL_May2025.pdf",
+   "reason": "Generic university guidance; computing-specific course documents found instead."
+  },
+  {
+   "university": "St. Francis Xavier University",
+   "title": "Syllabus Statements on Integrity and/or Generative AI",
+   "url": "https://www.stfx.ca/student-services/academic-services/academic-success-centre/academic-integrity/faculty-syllabus",
+   "reason": "Generic university guidance; computing course document found instead."
+  },
+  {
+   "university": "Algoma University",
+   "title": "COSC 3407 Course Outline (CourseHero copy)",
+   "url": "https://www.coursehero.com/file/240866207/COSC3407-Course-Outlinepdf/",
+   "reason": "Only on a third-party, login-gated site; not an official public source."
+  },
+  {
+   "university": "Laurentian University",
+   "title": "Laurentian drafts guidelines for responsible AI use (Sudbury.com news)",
+   "url": "https://www.sudbury.com/local-news/laurentian-drafts-guidelines-for-responsible-ai-use-12317796",
+   "reason": "News article about a draft; the underlying guidelines are not publicly posted."
+  }
+ ],
+ "new_codes": []
+}

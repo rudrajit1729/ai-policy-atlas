@@ -1,0 +1,518 @@
+<meta charset="utf-8">
+<title>AI Policy Atlas</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&family=Spectral:wght@500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a register-style report — sticky section index on the left (top bar on phones), numbered evidence blocks on the right. */
+:root {
+  --paper: #f6f7f4; --sheet: #ffffff; --ink: #1c2230; --muted: #5b6474; --rule: #dde1e6;
+  --accent: #2c4a9a; --accent-soft: #e4e9f6; --mark: #f2d65c;
+  --rule-c: #2c4a9a; --rec-c: #6f8fd6; --desc-c: #b8c3d6; --tmpl-c: #d9a441;
+  --display: "Spectral", Georgia, "Times New Roman", serif;
+  --body: "Public Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --paper: #13161c; --sheet: #1a1e26; --ink: #e6e8ec; --muted: #9aa3b2; --rule: #2c323d;
+  --accent: #8fa8ec; --accent-soft: #253154; --mark: #b99a2a;
+  --rule-c: #8fa8ec; --rec-c: #5d79bd; --desc-c: #3f4a5e; --tmpl-c: #c9963a; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --paper: #13161c; --sheet: #1a1e26; --ink: #e6e8ec; --muted: #9aa3b2; --rule: #2c323d;
+  --accent: #8fa8ec; --accent-soft: #253154; --mark: #b99a2a;
+  --rule-c: #8fa8ec; --rec-c: #5d79bd; --desc-c: #3f4a5e; --tmpl-c: #c9963a; color-scheme: dark }
+body { background: var(--paper); color: var(--ink); font: 15px/1.55 var(--body); }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 28px 64px; display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 40px; }
+nav { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 24px); align-self: start; display: grid; gap: 4px; font-size: 13px; }
+nav a { color: var(--muted); text-decoration: none; padding: 5px 10px; border-left: 2px solid transparent; }
+nav a[aria-current="page"] { color: var(--ink); border-left-color: var(--accent); font-weight: 600; }
+body.embed { background: transparent; }
+body.embed .wrap { padding-block: 0 24px; padding-left: 0; padding-right: 0; }
+nav a:hover, nav a:focus-visible { color: var(--ink); border-left-color: var(--accent); outline: none; }
+nav .brand { font: 600 18px/1.2 var(--display); color: var(--ink); padding: 0 10px 12px; }
+main { display: grid; gap: 44px; min-width: 0; }
+main > section, main > header { min-width: 0; }
+header h1 { font: 600 clamp(28px, 4vw, 40px)/1.15 var(--display); margin: 0 0 10px; text-wrap: balance; }
+header p { margin: 0; color: var(--muted); max-width: 66ch; }
+.stamp { font: 500 11px var(--mono); letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+section h2 { font: 600 24px/1.25 var(--display); margin: 0 0 6px; text-wrap: balance; }
+section > .lede { color: var(--muted); margin: 0 0 18px; max-width: 68ch; }
+h3 { font: 600 15px var(--body); margin: 22px 0 10px; }
+.tablewrap { overflow-x: auto; border: 1px solid var(--rule); background: var(--sheet); border-radius: 6px; }
+table { border-collapse: collapse; width: 100%; font-size: 14px; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; }
+th { font-weight: 600; font-size: 12px; color: var(--muted); letter-spacing: .03em; text-transform: uppercase; background: var(--paper); }
+td.n, th.n { text-align: right; }
+tr:last-child td { border-bottom: 0; }
+tr.total td { font-weight: 600; }
+tr.sep td { border-top: 2px solid var(--rule); }
+.mono { font-family: var(--mono); font-size: 12.5px; }
+.bars { display: grid; gap: 12px; }
+.barrow { display: grid; grid-template-columns: 150px minmax(0, 1fr) 56px; gap: 12px; align-items: center; font-size: 14px; }
+.stack { display: flex; height: 22px; border-radius: 3px; overflow: hidden; background: var(--rule); }
+.stack span { display: block; height: 100%; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 13px; color: var(--muted); margin-top: 10px; }
+.legend i { display: inline-block; width: 11px; height: 11px; border-radius: 2px; margin-right: 6px; vertical-align: -1px; }
+.callout { border-left: 3px solid var(--mark); background: var(--sheet); padding: 12px 16px; margin: 16px 0 0; max-width: 72ch; border-radius: 0 6px 6px 0; }
+.callout b { font-weight: 600; }
+ol.steps { margin: 0; padding-left: 22px; display: grid; gap: 8px; max-width: 72ch; }
+.themebars { display: grid; gap: 7px; }
+.trow { display: grid; grid-template-columns: minmax(0, 300px) minmax(0, 1fr) 90px; gap: 12px; align-items: center; font-size: 14px; cursor: pointer; padding: 3px 0; border: 0; background: none; color: inherit; text-align: left; font-family: inherit; }
+.trow:hover .tlabel, .trow:focus-visible .tlabel { color: var(--accent); }
+.trow:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.trow[aria-pressed="true"] .tlabel { color: var(--accent); font-weight: 600; }
+.track { height: 12px; background: var(--rule); border-radius: 2px; }
+.fill { height: 100%; background: var(--accent); border-radius: 2px; }
+.tnum { font-variant-numeric: tabular-nums; color: var(--muted); font-size: 13px; text-align: right; }
+.filters { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 4px 0 12px; }
+input[type=search] { font: inherit; padding: 8px 12px; border: 1px solid var(--rule); border-radius: 6px; background: var(--sheet); color: var(--ink); min-width: 0; flex: 1 1 240px; }
+input[type=search]:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.chip { font-size: 12px; padding: 2px 8px; border-radius: 99px; background: var(--accent-soft); color: var(--accent); white-space: nowrap; }
+td.origin { font-size: 13px; color: var(--muted); white-space: nowrap; }
+.btn { font: 500 13px var(--body); padding: 6px 12px; border: 1px solid var(--rule); background: var(--sheet); color: var(--ink); border-radius: 6px; cursor: pointer; }
+.btn:focus-visible { outline: 2px solid var(--accent); }
+dl.defs { display: grid; grid-template-columns: minmax(0, 200px) minmax(0, 1fr); gap: 10px 20px; margin: 0; max-width: 820px; }
+dl.defs dt { font-weight: 600; }
+dl.defs dd { margin: 0; color: var(--ink); }
+.alpha { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.alpha div { background: var(--sheet); border: 1px solid var(--rule); border-radius: 6px; padding: 12px 14px; }
+.alpha .v { font: 600 24px var(--display); font-variant-numeric: tabular-nums; }
+.alpha .k { font-size: 13px; color: var(--muted); }
+.alpha .ci { font: 12px var(--mono); color: var(--muted); }
+.ok { color: var(--accent); }
+.foot { color: var(--muted); font-size: 13px; max-width: 72ch; }
+.pset details { border-top: 1px solid var(--rule); padding: 8px 0; }
+.pset summary { cursor: pointer; list-style: none; display: grid; gap: 3px; }
+.pset summary::-webkit-details-marker { display: none; }
+.pset .ps { font-weight: 600; }
+.pset .pm { font-size: 13px; color: var(--muted); }
+.pset .st { font-size: 13px; margin: 6px 0 0 14px; display: grid; gap: 4px; max-height: 420px; overflow: auto; }
+.pset .st div { border-left: 2px solid var(--accent-soft); padding-left: 8px; }
+.pset h4 { margin: 18px 0 4px; font: 600 15px var(--body); }
+.pset h5 { margin: 10px 0 2px; font: 600 13px var(--body); color: var(--muted); }
+.pstabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 10px; }
+.pstabs button { font: 500 13px var(--body); padding: 6px 12px; border: 1px solid var(--rule); background: var(--sheet); color: var(--ink); border-radius: 6px; cursor: pointer; }
+.pstabs button[aria-selected="true"] { background: var(--accent); color: var(--sheet); border-color: var(--accent); }
+.pstabs button span { opacity: .75; margin-left: 4px; font-variant-numeric: tabular-nums; }
+.kchip { font-size: 11px; padding: 1px 7px; border-radius: 99px; background: var(--accent-soft); color: var(--accent); margin-right: 6px; }
+ul.donelist { margin: 0 0 8px; padding-left: 20px; display: grid; gap: 6px; max-width: 76ch; }
+.dmap { margin: 14px 0 6px; font-weight: 600; font-size: 14px; }
+.dmap span { font-weight: 400; color: var(--muted); font-size: 13px; }
+table.heat td { text-align: center; font-variant-numeric: tabular-nums; border: 2px solid var(--sheet); }
+table.heat th { text-align: center; }
+table.heat th.rh { text-align: left; }
+@media (max-width: 860px) {
+  .wrap { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  nav { position: static; display: flex; flex-wrap: wrap; gap: 2px 6px; }
+  nav .brand { width: 100%; padding: 0 0 6px; }
+  nav a { border-left: 0; border-bottom: 2px solid transparent; padding: 4px 6px; }
+  .barrow { grid-template-columns: 96px minmax(0, 1fr) 46px; }
+  .trow { grid-template-columns: minmax(0, 1fr) 70px; }
+  .trow .track { grid-column: 1 / -1; grid-row: 2; }
+  dl.defs { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  dl.defs dd { margin-bottom: 10px; }
+}
+@media (prefers-reduced-motion: no-preference) { .fill, .stack span { transition: width .4s ease; } }
+</style>
+
+<div class="wrap">
+  <nav aria-label="Sections">
+    <div class="brand">AI Policy Atlas</div>
+    <a href="#status">Status</a>
+    <a href="#pipeline">From statements to policies</a>
+    <a href="#policyset">The policy set</a>
+    <a href="#levels">Policies by level</a>
+    <a href="#frame">Course frame</a>
+    <a href="#method">What we did</a>
+    <a href="#write">What institutions write</a>
+    <a href="#stance">Where they stand</a>
+    <a href="#themes">Themes and types</a>
+    <a href="#reliability">Reliability</a>
+    <a href="#definitions">Definitions</a>
+    <a href="#next">Next</a>
+  </nav>
+  <main>
+    <header>
+      <div class="stamp">Working findings · <span id="gen"></span> · internal</div>
+      <h1>Generative AI policy at 342 US universities</h1>
+      <p>What universities, schools, computing departments and CS courses say about generative AI, coded statement by statement. Every number on this page is computed from the coded data; nothing is typed by hand.</p>
+    </header>
+
+    <section id="status">
+      <h2>Status</h2>
+      <p class="lede">Where the coding and the policies stand, and how the distinct policies spread across levels, the people they address and the stages of a course.</p>
+      <ul class="donelist" id="statusList"></ul>
+      <h3>Distinct policies by level, who they address and stage</h3>
+      <div id="distMaps"></div>
+      <div class="callout" id="distNote"></div>
+    </section>
+
+    <section id="pipeline">
+      <h2>From statements to policies</h2>
+      <p class="lede">How the policy set was built, step by step, and what each level means. Every policy can be opened to the statements behind it, and every statement links to its source.</p>
+      <dl class="defs" id="levelDefs"></dl>
+      <h3>Institutional policies (university, school, computing unit)</h3>
+      <div class="tablewrap"><table id="pipeInst"></table></div>
+      <h3>CS course policies (bottom-up from syllabi)</h3>
+      <div class="tablewrap"><table id="pipeCourse"></table></div>
+      <h3>Not everything coded is a policy</h3>
+      <p class="lede">Coding was exhaustive: every sentence a document says about AI was coded, so the set includes rules, advice, sample syllabus text, descriptions and background. Each policy is labelled by what kind of text its statements are.</p>
+      <div class="tablewrap"><table id="kindTable"></table></div>
+      <h3>What the background is</h3>
+      <div id="bgKinds"></div>
+    </section>
+
+    <section id="policyset">
+      <h2>The policy set</h2>
+      <p class="lede">Every synthesized policy. Search or filter, then open a policy to read every statement grouped into it, with its university and a link to the source.</p>
+      <div class="filters">
+        <select id="psLayer" aria-label="Layer"><option value="inst">Institutional policies</option><option value="course">CS course policies</option></select>
+        <select id="psActor" aria-label="Who"><option value="">Everyone addressed</option><option value="student">Students</option><option value="instructor">Instructors</option><option value="staff">Staff and administrators</option><option value="all">Everyone</option></select>
+        <input type="search" id="psQ" placeholder="Search policies" aria-label="Search policies">
+      </div>
+      <div class="pstabs" id="psTabs" role="tablist" aria-label="Kind of policy"></div>
+      <div class="callout" id="psTabNote"></div>
+      <p class="foot" id="psCount"></p>
+      <div id="psList"><p class="foot">Loading the policy set…</p></div>
+    </section>
+
+    <section id="levels">
+      <h2>Policies by level</h2>
+      <p class="lede">Almost all AI policy is written university-wide. CS-specific policy exists at few departments, so the CS picture is built bottom-up from course syllabi.</p>
+      <div class="tablewrap"><table id="levelTable"></table></div>
+      <div class="callout" id="courseNote"></div>
+    </section>
+
+    <section id="frame">
+      <h2>Why these courses</h2>
+      <p class="lede">The CS course layer uses the same fixed set of courses at every university, taken from the official catalog, so departments can be compared and nobody picks courses because they happen to post an AI policy.</p>
+      <div class="tablewrap"><table id="frameTable"></table></div>
+      <h3>Why a fixed frame, and why these</h3>
+      <ol class="steps" id="frameWhy"></ol>
+      <div class="callout" id="frameOut"></div>
+    </section>
+
+    <section id="method">
+      <h2>What we did</h2>
+      <ol class="steps" id="steps"></ol>
+    </section>
+
+    <section id="write">
+      <h2>What institutions actually write</h2>
+      <p class="lede">Each statement about AI is tagged by what kind of text it is: a <b>rule</b> the institution sets, a <b>recommendation</b>, a <b>description</b> (background, facts, rationale), or a <b>template</b> (sample text offered to instructors).</p>
+      <div class="bars" id="bindingBars"></div>
+      <div class="legend" id="bindingLegend"></div>
+      <div class="callout" id="bindingNote"></div>
+    </section>
+
+    <section id="stance">
+      <h2>Where documents stand</h2>
+      <p class="lede">The overall position of each document on student AI use.</p>
+      <div class="bars" id="stanceBars"></div>
+      <div class="legend" id="stanceLegend"></div>
+      <div class="callout" id="stanceNote"></div>
+    </section>
+
+    <section id="themes">
+      <h2>Themes and types</h2>
+      <p class="lede" id="themeLede"></p>
+      <div class="themebars" id="themeBars" role="group" aria-label="Filter types by theme"></div>
+      <h3 id="typesHead">All types</h3>
+      <div class="filters">
+        <input type="search" id="q" placeholder="Search types, e.g. disclosure, detector, data" aria-label="Search types">
+        <button class="btn" id="clear" type="button">Show all themes</button>
+      </div>
+      <div class="tablewrap"><table id="typeTable"></table></div>
+    </section>
+
+    <section id="reliability">
+      <h2>Reliability</h2>
+      <p class="lede">Agreement between the two independent coders, Krippendorff's α (nominal) with 95% bootstrap intervals over universities. 0.80 supports conclusions; 0.667–0.80 supports tentative ones.</p>
+      <div class="alpha" id="alpha"></div>
+      <div class="callout" id="alphaNote"></div>
+      <h3>Audit</h3>
+      <div class="tablewrap"><table id="auditTable"></table></div>
+      <div class="callout" id="auditNote"></div>
+    </section>
+
+    <section id="definitions">
+      <h2>Definitions</h2>
+      <p class="lede">How the data is counted and presented.</p>
+      <dl class="defs" id="defs"></dl>
+    </section>
+
+    <section id="next">
+      <h2>Next</h2>
+      <ol class="steps" id="nextSteps"></ol>
+      <p class="foot">Source files: v2/exports/atlas_v2.xlsx, v2/exports/course_layer.xlsx, v2/STATUS_AND_FINDINGS.md, v2/METHODS_DECISIONS.md.</p>
+    </section>
+  </main>
+</div>
+
+<script id="data" type="application/json">__DATA__</script>
+<script>
+const D = JSON.parse(document.getElementById('data').textContent);
+const EMBED = new URLSearchParams(location.search).has('embed');  // D68: shown inside the atlas site as its Method pages
+const $ = s => document.querySelector(s);
+const fmt = n => n.toLocaleString('en-US');
+const pct = (a, b) => b ? (100 * a / b) : 0;
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+$('#gen').textContent = D.generated;
+
+const LV = {university: 'University-wide', school: 'School or college', computing: 'Computing unit'};
+const order = ['university', 'school', 'computing'];
+const levels = order.map(k => D.levels.find(l => l.level === k));
+const totAI = levels.reduce((s, l) => s + l.about_ai, 0);
+const totS = levels.reduce((s, l) => s + l.statements, 0);
+const totD = levels.reduce((s, l) => s + l.documents, 0);
+let h = '<tr><th>Level</th><th class="n">Universities</th><th class="n">Documents</th><th class="n">Statements</th><th class="n">About AI</th><th class="n">Share</th></tr>';
+for (const l of levels) h += `<tr><td>${LV[l.level]}</td><td class="n">${fmt(l.universities)}</td><td class="n">${fmt(l.documents)}</td><td class="n">${fmt(l.statements)}</td><td class="n">${fmt(l.about_ai)}</td><td class="n">${pct(l.about_ai, totAI).toFixed(1)}%</td></tr>`;
+h += `<tr class="total"><td>Institutional total</td><td class="n">${D.universities}</td><td class="n">${fmt(totD)}</td><td class="n">${fmt(totS)}</td><td class="n">${fmt(totAI)}</td><td class="n">100%</td></tr>`;
+const C = D.course;
+h += `<tr class="sep"><td>CS courses (collected, not yet coded)</td><td class="n">${fmt(C.universities_with_ai_passage)}</td><td class="n">${fmt(C.syllabi)} syllabi</td><td class="n">${fmt(C.ai_passages)} AI passages</td><td class="n">–</td><td class="n">own layer</td></tr>`;
+$('#levelTable').innerHTML = h;
+const sl = C.slots;
+$('#courseNote').innerHTML = `<b>Course layer.</b> A fixed frame of courses per university (see Why these courses). For the four core courses (CS1, CS2, algorithms, software engineering): of ${fmt(Object.values(sl).reduce((a, b) => a + b, 0))} course slots, ${fmt(sl['public-ai-policy'] || 0)} have a current public syllabus with AI rules, ${fmt(sl['public-no-ai'] || 0)} a current syllabus that never mentions AI, ${fmt(sl['outdated'] || 0)} only a pre-ChatGPT syllabus, and ${fmt(sl['not-found'] || 0)} no findable syllabus. ${fmt(C.profiles['profile possible'] || 0)} universities have enough (3 of 4 courses) for a department profile.`;
+
+const FR = [
+  ['C1', 'CS1', 'First required programming course of the CS major', 'Novice programming, where AI most threatens learning and most course AI rules are written'],
+  ['C2', 'CS2', 'Next required programming course (often data structures)', 'Students are still building fundamentals'],
+  ['C3', 'Algorithms', 'Required algorithms course; else the required systems course', 'Proofs and analysis rather than code, so the AI question changes'],
+  ['C4', 'Software engineering', 'Required software engineering course; else the capstone', 'Team and professional practice, where AI tools are often expected'],
+  ['C5', 'AI / machine learning', 'Required AI or ML course; else the most-offered intro AI or ML course', 'AI is the subject as well as a tool (added)'],
+  ['C6', 'Systems or security', 'Upper-level OS, systems or security course, different from C3', 'Code-heavy work beyond the intro sequence (added)']];
+const bs = C.by_slot || {};
+const ai = s => (bs[s] || {})['public-ai-policy'] || 0, any = s => Object.values(bs[s] || {}).reduce((a, b) => a + b, 0);
+$('#frameTable').innerHTML = '<tr><th>Slot</th><th>Course</th><th>How it is chosen</th><th>Why it is in the frame</th><th class="n">Syllabi with AI rules</th></tr>' +
+  FR.map(([id, n, rule, why]) => `<tr><td class="mono">${id}</td><td>${n}</td><td>${rule}</td><td>${why}</td><td class="n">${any(id) ? fmt(ai(id)) + ' of ' + fmt(any(id)) : 'collecting'}</td></tr>`).join('');
+$('#frameWhy').innerHTML = [
+  'Every department contributes the same courses. These are required, or nearly universal, in US CS majors and core in the ACM/IEEE curriculum guidelines; electives vary too much to compare.',
+  'They follow a student through the degree, so we can ask whether course AI rules loosen as students advance, a CS question that university policy cannot answer.',
+  'A fixed frame avoids cherry-picking courses that post AI policies, which would overstate how much CS faculty write about AI. A missing syllabus is recorded as a finding, not skipped.',
+  'Each extra course is another search at 342 universities, and about half of the current slots have no findable syllabus, so the frame stays small.'].map(x => `<li>${esc(x)}</li>`).join('');
+$('#frameOut').innerHTML = '<b>Left out, but kept.</b> Other electives, intro courses for non-majors and graduate courses are outside the frame. Every course seen during collection that is not in the frame (catalog alternatives and syllabi found while searching departments) is kept in the Out of frame sheet of the course-layer file, so it can be collected and coded later. A department profile still uses C1 to C4.';
+
+const steps = [
+  'Collected every university, school and computing-unit AI policy document at 342 universities, then searched every computing unit a second time.',
+  'Screened 818 documents: 777 included, 19 excluded, 22 deferred.',
+  'Coded every policy statement rationale-first: two independent coders, then a reconciler. Original wording is cut from the saved document by script and checked; no AI-written text sits in any source column.',
+  'Kept the list of policy types open, adding a type whenever a pattern appeared at three or more universities.',
+  'Re-read all ' + fmt(totS) + ' statements in a theme review: each was tagged about-AI, binding and final type, and the codebook was rebuilt with content-only names, 12 new types and 15 themes.',
+  'Measured agreement between the coders (Krippendorff\'s α), then audited a 510-statement sample with Claude Opus and corrected the two systematic errors it found; a fresh 300-statement sample measured the error rate after correction, and GPT reviewed the audit\'s corrections.',
+  'Collected CS syllabi on a fixed six-course frame at every university (four core courses, an AI or machine-learning course, and a systems or security course) and coded their AI passages with a course codebook built from the syllabi alone.',
+  'Grouped the statements into policies: statements that ask the same group of people for the same thing became one policy, merged across wording, strength and type, each with a stage and its original wordings; the same was done bottom-up for the course statements.'];
+$('#steps').innerHTML = steps.map(s => `<li>${esc(s)}</li>`).join('');
+
+function stackRows(target, rows, keys, colors, labels) {
+  $(target).innerHTML = rows.map(r => {
+    const tot = keys.reduce((s, k) => s + (r.v[k] || 0), 0);
+    const segs = keys.map((k, i) => `<span style="width:${pct(r.v[k] || 0, tot)}%;background:var(${colors[i]})" title="${labels[i]}: ${fmt(r.v[k] || 0)} (${pct(r.v[k] || 0, tot).toFixed(0)}%)"></span>`).join('');
+    return `<div class="barrow"><span>${r.label}</span><div class="stack" role="img" aria-label="${keys.map((k, i) => labels[i] + ' ' + pct(r.v[k] || 0, tot).toFixed(0) + '%').join(', ')}">${segs}</div><span class="tnum">${fmt(tot)}</span></div>`;
+  }).join('');
+}
+const BK = ['rule', 'recommendation', 'description', 'template'], BC = ['--rule-c', '--rec-c', '--desc-c', '--tmpl-c'], BL = ['Rule', 'Recommendation', 'Description', 'Template'];
+stackRows('#bindingBars', levels.map(l => ({label: LV[l.level], v: l.binding})), BK, BC, BL);
+$('#bindingLegend').innerHTML = BL.map((l, i) => `<span><i style="background:var(${BC[i]})"></i>${l}</span>`).join('');
+const br = Object.fromEntries(levels.map(l => [l.level, pct(l.binding.rule || 0, l.about_ai)]));
+$('#bindingNote').innerHTML = `<b>Computing units write rules.</b> ${br.computing.toFixed(0)}% of what computing units publish about AI is a binding rule, against ${br.university.toFixed(0)}% at the university level, where most text is advice, background or sample syllabus language.`;
+
+const SK = ['prohibit', 'restrict', 'permit', 'encourage', 'delegates'], SC = ['--tmpl-c', '--desc-c', '--rec-c', '--rule-c', '--rule'], SL = ['Prohibit', 'Only listed uses', 'Allowed with conditions', 'Encourage', 'Instructor decides'];
+const ds = {};
+for (const [k, n] of Object.entries(D.doc_stance)) { const [lv, st] = k.split('|'); (ds[lv] = ds[lv] || {})[st] = n; }
+stackRows('#stanceBars', order.map(k => ({label: LV[k], v: ds[k] || {}})), SK, SC, SL);
+$('#stanceLegend').innerHTML = SL.map((l, i) => `<span><i style="background:var(${SC[i]})"></i>${l}</span>`).join('');
+const u = ds.university || {}, c = ds.computing || {};
+const uTot = SK.reduce((s, k) => s + (u[k] || 0), 0), cTot = SK.reduce((s, k) => s + (c[k] || 0), 0);
+$('#stanceNote').innerHTML = `<b>Universities delegate; computing units decide.</b> ${pct(u.delegates || 0, uTot).toFixed(0)}% of university-wide documents leave the decision to instructors. Among computing-unit documents only ${pct(c.delegates || 0, cTot).toFixed(0)}% do; the rest permit, restrict or prohibit.`;
+
+const T = D.types.filter(t => !t.retired);
+const nThemes = D.themes.length, nTypes = T.filter(t => t.statements > 0).length;
+const oc = o => T.filter(t => t.origin === o).length;
+$('#themeLede').textContent = `${nTypes} types in use, grouped into ${nThemes} themes. Origin says where each type came from: ${oc('initial list')} were on the initial list, ${oc('added during coding')} were added during coding when a pattern appeared at three or more universities, and ${oc('theme review')} were added when every statement was re-read in the theme review. Bars show how many universities address each theme. Select a theme to list its types. ${fmt(D.uncovered.statements)} statements fit no type yet; each is a pattern seen at only one or two universities.`;
+const maxU = Math.max(...D.themes.map(t => t.universities));
+let activeTheme = null;
+const themes = [...D.themes].sort((a, b) => b.universities - a.universities);
+$('#themeBars').innerHTML = themes.map(t => `<button class="trow" type="button" data-t="${t.id}" aria-pressed="false"><span class="tlabel">${esc(t.label)}</span><div class="track"><div class="fill" style="width:${pct(t.universities, maxU)}%"></div></div><span class="tnum">${t.universities} univ.</span></button>`).join('');
+const themeLabel = Object.fromEntries(D.themes.map(t => [t.id, t.label]));
+const ORIGIN = {'initial list': 'Initial list', 'added during coding': 'Added during coding', 'theme review': 'Added in theme review'};
+function renderTypes() {
+  const q = $('#q').value.trim().toLowerCase();
+  const rows = T.filter(t => (!activeTheme || t.theme === activeTheme) && (!q || (t.name + ' ' + (t.covers || '') + ' ' + t.id).toLowerCase().includes(q)))
+    .sort((a, b) => b.universities - a.universities);
+  $('#typesHead').textContent = activeTheme ? themeLabel[activeTheme] : 'All types';
+  $('#typeTable').innerHTML = '<tr><th>Type</th><th>Theme</th><th>Origin</th><th class="n">Universities</th><th class="n">Statements</th></tr>' +
+    rows.map(t => `<tr><td><span class="mono">${t.id}</span> ${esc(t.name)}<div class="foot">${esc((t.covers || '').split(' Evidence:')[0])}</div></td><td><span class="chip">${esc(themeLabel[t.theme] || '')}</span></td><td class="origin">${esc(ORIGIN[t.origin] || t.origin)}</td><td class="n">${fmt(t.universities)}</td><td class="n">${fmt(t.statements)}</td></tr>`).join('') +
+    (rows.length ? '' : '<tr><td colspan="5">No type matches this search.</td></tr>');
+  document.querySelectorAll('.trow').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.t === activeTheme)));
+}
+$('#themeBars').addEventListener('click', e => { const b = e.target.closest('.trow'); if (!b) return; activeTheme = activeTheme === b.dataset.t ? null : b.dataset.t; renderTypes(); });
+$('#q').addEventListener('input', renderTypes);
+$('#clear').addEventListener('click', () => { activeTheme = null; $('#q').value = ''; renderTypes(); });
+renderTypes();
+
+const AL = {actor: 'Actor', policy_type: 'Policy type', modality: 'Modality', phase: 'Phase', unit_stance: 'Statement stance', doc_stance: 'Document stance'};
+const af = D.alpha.fields;
+$('#alpha').innerHTML = Object.keys(AL).map(k => `<div><div class="k">${AL[k]}</div><div class="v ${af[k].alpha >= .8 ? 'ok' : ''}">${af[k].alpha.toFixed(2)}</div><div class="ci">${af[k].ci95[0].toFixed(2)}–${af[k].ci95[1].toFixed(2)}</div></div>`).join('');
+$('#alphaNote').innerHTML = `<b>Stance is tentative.</b> Actor, type, modality and phase meet 0.80. Statement and document stance fall between 0.67 and 0.80; document stance has ${(100 * af.doc_stance.percent_agreement).toFixed(0)}% raw agreement but a skewed distribution lowers α. The coders split sentences into statements the same way ${(100 * D.alpha.unitizing_agreement).toFixed(0)}% of the time; the reconciler resolved the rest against the source.`;
+
+if (D.audit) {
+  const b = D.audit.base, FL = {policy: 'Normalized statement', actor: 'Actor', phase: 'Phase', modality: 'Modality', unit_stance: 'Statement stance', about_ai: 'About AI', binding: 'Binding', final_type: 'Type', unit: 'Any field'};
+  const ac = D.audit.after_correction_D52 || {};
+  $('#auditTable').innerHTML = '<tr><th>Field</th><th class="n">Error rate</th><th class="n">95% CI</th><th class="n">After correction</th>' + (D.audit2 ? '<th class="n">Fresh sample after correction</th>' : '') + '</tr>' +
+    Object.keys(FL).map(f => `<tr><td>${FL[f]}</td><td class="n">${(100 * b[f].rate).toFixed(1)}%</td><td class="n">${(100 * b[f].ci95[0]).toFixed(1)}–${(100 * b[f].ci95[1]).toFixed(1)}%</td><td class="n">${ac[f] ? (100 * ac[f].rate).toFixed(1) + '%' : ''}</td>${D.audit2 ? `<td class="n">${(x => x ? (100 * x.rate).toFixed(1) + '%' : '')(D.audit2.fields[f === 'unit' ? 'any field' : f])}</td>` : ''}</tr>`).join('');
+  $('#auditNote').innerHTML = `<b>How the audit worked.</b> Claude Opus checked ${b.n} statements drawn in proportion to the themes, plus oversamples of computing, school, moved, not-about-AI and unplaced statements. It found two systematic errors: sentences inside sample syllabus statements tagged as rules instead of templates, and generic honor-code text in department documents counted as AI policy. A targeted pass re-checked 4,259 statements for these two errors. The after-correction rate is measured on the same sample, so it is optimistic${D.audit2 ? `; the last column is a fresh sample of ${D.audit2.n} other statements drawn after the correction and checked by Claude Opus, the out-of-sample rate to report` : ''}.${D.critique ? ` <b>GPT critique.</b> GPT (via Codex) reviewed ${D.critique.items} audit items. On the ${D.critique.corrected_fields} fields Opus corrected, GPT agreed with Opus on ${D.critique.sides.opus || 0}, sided with the original code on ${D.critique.sides.original || 0}, and proposed a third value on ${D.critique.sides.neither || 0}; it flagged ${D.critique.confirmations_flagged} of the ${D.critique.confirmations} codes Opus had confirmed.` : ''}`;
+}
+
+if (D.status) {
+  const S = D.status, sa = S.set_aside || {};
+  const items = [
+    `<b>Thematic coding.</b> ${fmt(S.typed)} of the ${fmt(S.about_ai)} statements about AI have a type (${S.types} types in ${S.themes} themes). ${fmt(S.placed)} statements that fit no type at first were placed in an existing policy; ${fmt(S.uncovered)} remain without a type: ${fmt(sa.unique || 0)} rare policies kept as candidates and ${fmt(sa.not_policy || 0)} that state no policy. ${fmt(sa.not_ai || 0)} more turned out not to be about AI and are no longer counted.`,
+    `<b>Policies.</b> ${fmt(S.policies)} distinct policies, each for one group of people and one action, with its stage, how many statements and universities state it, and up to three verified original wordings. ${fmt(S.merged)} of them merge policies that said the same thing in different words; ${fmt(S.multi_type)} sit under more than one type. ${fmt(S.background)} are background: definitions, reasons and facts with no time of action.`,
+    `<b>Levels.</b> University-wide, school or college, and computing-unit policies are all covered; the maps below show how they spread.`,
+    `<b>Course layer.</b> ${fmt(S.course_statements)} statements from CS course syllabi, coded with the course codebook (α = ${S.course_alpha.toFixed(3)}), grouped into ${fmt(S.course_policies)} course policies with stages (${fmt(S.course_background)} background).`];
+  $('#statusList').innerHTML = items.map(x => `<li>${x}</li>`).join('');
+  const ST = ['before-course', 'course-start', 'during-work', 'during-assessment', 'when-misuse', 'over-time', 'background'];
+  const STL = ['Before course', 'Course start', 'While working', 'Assessment', 'Misuse', 'Over time', 'Background'];
+  const AC = [['student', 'Students'], ['instructor', 'Instructors'], ['staff', 'Staff and administrators'], ['all', 'Everyone']];
+  const LV = [['university', 'University-wide'], ['school', 'School or college'], ['computing', 'Computing unit'], ['course', 'CS courses (bottom-up from syllabi)']];
+  const lvU = Object.fromEntries((D.levels || []).map(l => [l.level, l.universities]));
+  $('#distMaps').innerHTML = LV.filter(([k]) => D.distribution[k]).map(([k, lab]) => {
+    const m = D.distribution[k], mx = Math.max(1, ...Object.values(m)), tot = Object.values(m).reduce((a, b) => a + b, 0);
+    return `<div class="dmap">${lab} <span>${fmt(tot)} policies${lvU[k] ? ' · ' + lvU[k] + ' universities' : ''}</span></div><div class="tablewrap"><table class="heat"><tr><th class="rh"></th>${STL.map(x => `<th>${x}</th>`).join('')}</tr>` +
+      AC.map(([a, al]) => `<tr><th class="rh">${al}</th>${ST.map(p => { const v = m[a + '|' + p] || 0; const t = v ? Math.round(8 + 70 * Math.sqrt(v / mx)) : 0;
+        return `<td style="background:${v ? `color-mix(in srgb, var(--accent) ${t}%, transparent)` : 'transparent'};color:${t > 45 ? 'var(--sheet)' : 'var(--ink)'}">${v || '·'}</td>`; }).join('')}</tr>`).join('') + '</table></div>';
+  }).join('');
+  const sum = (k, f) => Object.entries(D.distribution[k] || {}).filter(([c]) => f(c)).reduce((a, [, v]) => a + v, 0);
+  const tot = k => sum(k, () => true);
+  const pct = (a, b) => b ? Math.round(100 * a / b) + '%' : '0%';
+  $('#distNote').innerHTML = `<b>Thin cells are findings.</b> Among stages of action, assessment is the one university-wide policies say least about (${pct(sum('university', c => c.endsWith('|during-assessment')), tot('university'))} of policies). Course syllabi say more about assessment (${pct(sum('course', c => c.endsWith('|during-assessment')), tot('course'))}) and least about what happens before the course (${pct(sum('course', c => c.endsWith('|before-course')), tot('course'))}) or over time (${pct(sum('course', c => c.endsWith('|over-time')), tot('course'))}). ` +
+    `Staff and administrators are addressed by ${pct(sum('university', c => c.startsWith('staff|')), tot('university'))} of university-wide policies, mostly before the course and over time (tool approval, review), and almost never in courses (${pct(sum('course', c => c.startsWith('staff|')), tot('course'))}). ` +
+    `Policies for students concentrate on the work itself (while working: ${pct(sum('university', c => c === 'student|during-work'), sum('university', c => c.startsWith('student|')))} of student policies university-wide, ${pct(sum('course', c => c === 'student|during-work'), sum('course', c => c.startsWith('student|')))} in courses). ` +
+    `School and computing units add comparatively few policies, so the CS picture rests mainly on course syllabi.`;
+}
+
+if (D.pipeline) {
+  const I = D.pipeline.inst, Cc = D.pipeline.course;
+  const ldefs = [
+    ['Statement', 'One sentence a document says about AI, coded once with who it addresses, when it applies, how strongly (must, should, may) and its topic. Each keeps its original wording and a link to the source. This is the data.'],
+    ['Policy', 'Statements that ask the same group of people for the same thing, merged across wording, strength and topic, written as one plain sentence. This is the synthesized unit. Each policy shows how many statements and universities it rests on, and opens to all of them.'],
+    ['Type (topic)', 'What a statement is about, e.g. "Verifying AI output". A topic holds many different policies.'],
+    ['Theme', 'A group of related topics, e.g. "Ownership, understanding and verification".'],
+    ['Stage', 'When a policy applies in a course: before it, at the start, while students work, during assessment, when misuse is suspected, or over time. Background policies (definitions, reasons, facts) have no stage.']];
+  $('#levelDefs').innerHTML = ldefs.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('');
+  const row = (step, n, note) => `<tr><td>${step}</td><td class="n">${n == null ? '' : fmt(n)}</td><td>${note}</td></tr>`;
+  const head = '<tr><th>Step</th><th class="n">Count</th><th>What happened</th></tr>';
+  $('#pipeInst').innerHTML = head +
+    row('Universities with coded documents', I.universities, 'Of 342 searched; university, school and computing-unit documents.') +
+    row('Documents', I.documents, 'Screened in as AI policy documents.') +
+    row('Statements coded', I.statements, 'Every sentence about AI, coded by two independent coders and reconciled.') +
+    row('Statements about AI', I.about_ai, `${fmt(I.not_ai)} statements turned out not to be about AI; kept in the Excel file, not counted.`) +
+    row('Statements with a topic', I.typed, `In ${I.types} topics and ${I.themes} themes. ${fmt(I.placed)} statements were placed after the policies were built; ${fmt(I.uncovered)} remain without a topic (rare one-off policies or no policy).`) +
+    row('Step 1: group within each topic', I.fine_positions, 'Statements asking the same people for the same thing, with the same strength and at the same time, form one group.') +
+    row('Step 2: merge must and should', I.force_merged, 'Groups asking the same people for the same act, differing only in how strongly, become one policy.') +
+    row('Step 3: merge across topics', I.cross_type_merged, `Policies that say the same thing under different topics become one, listed under each topic (${fmt(I.merged_groups)} policies are such merges).`) +
+    `<tr class="total"><td>Policy core: rules and recommendations</td><td class="n">${fmt((I.kinds.rule || 0) + (I.kinds.recommendation || 0))}</td><td>Plus ${fmt(I.background.fact.n)} facts and warnings kept beside them; the rest is shown apart.</td></tr>` +
+    `<tr class="total"><td>Final policy set</td><td class="n">${fmt(I.cross_type_merged)}</td><td>${['rule', 'recommendation', 'template', 'description', 'background'].map(k => `${fmt(I.kinds[k] || 0)} ${k === 'background' ? 'background' : k + 's'}`).join(' · ')}</td></tr>`;
+  $('#pipeCourse').innerHTML = head +
+    row('Universities checked', Cc.universities_checked, 'The same six courses at every university: CS1, CS2, algorithms, software engineering, an AI or machine-learning course, and a systems or security course.') +
+    row('Syllabi found', Cc.syllabi, 'Current or recent public syllabi.') +
+    row('AI passages', Cc.passages, `At ${Cc.universities_with_passage} universities; the syllabus's own words, cut by script.`) +
+    row('Statements coded', Cc.statements, `With a course codebook of ${Cc.types} topics in ${Cc.themes} themes, built from the syllabi alone.`) +
+    row('Step 1: group within each topic, must and should merged', Cc.course_grouped, `${Cc.course_not_ai_groups} groups (${fmt(Cc.course_not_ai_statements)} statements) were not about AI and are set aside.`) +
+    row('Step 2: merge across topics', Cc.course_merged, 'Course policies that say the same thing under different topics become one.') +
+    `<tr class="total"><td>Course policy core: rules and recommendations</td><td class="n">${fmt((Cc.kinds.rule || 0) + (Cc.kinds.recommendation || 0))}</td><td>Plus ${fmt(Cc.background.fact.n)} facts and warnings.</td></tr>` +
+    `<tr class="total"><td>Final course policy set</td><td class="n">${fmt(Cc.course_merged)}</td><td>${['rule', 'recommendation', 'description', 'background'].map(k => `${fmt(Cc.kinds[k] || 0)} ${k === 'background' ? 'background' : k + 's'}`).join(' · ')}</td></tr>`;
+  const KD = [['rule', 'Rule', 'The document itself requires, permits or forbids something.'], ['recommendation', 'Recommendation', 'Advice or good practice; not binding.'],
+    ['template', 'Template', 'Sample syllabus language a university offers instructors to adopt; the policy is what the sample says.'],
+    ['description', 'Description', 'Describes a practice, tool or situation without asking anyone to act.'], ['background', 'Background', 'A definition, reason, fact or resource with no time of action.']];
+  const USE = { rule: 'Policy core', recommendation: 'Policy core', template: 'Model wording, shown apart', description: 'Context, shown apart', background: 'Facts kept beside the core; reasons, definitions and resources shown apart' };
+  $('#kindTable').innerHTML = '<tr><th>Kind of policy</th><th>Meaning</th><th>How it is used</th><th class="n">Institutional</th><th class="n">CS courses</th></tr>' +
+    KD.map(([k, l, m]) => `<tr><td>${l}</td><td>${m}</td><td>${USE[k]}</td><td class="n">${fmt(I.kinds[k] || 0)}</td><td class="n">${k === 'template' ? '—' : fmt(Cc.kinds[k] || 0)}</td></tr>`).join('') +
+    `<tr class="total"><td>Total</td><td></td><td></td><td class="n">${fmt(I.cross_type_merged)}</td><td class="n">${fmt(Cc.course_merged)}</td></tr>`;
+  const BK = [['definition', 'Definitions and scope', 'What AI and generative AI mean, and whom and what the policy covers. Useful as a policy\'s definitions section.'],
+    ['reason', 'Reasons and principles', 'Why the policy exists: purpose, values, commitments. Useful as a preamble.'],
+    ['fact', 'Facts and warnings about AI', 'What AI can get wrong: errors, fabricated citations, bias, data retention. Useful as a "risks to know" section.'],
+    ['resource', 'Resources and support', 'Where to get help, which tools are licensed, which office decides. Useful as a contacts section.']];
+  $('#bgKinds').innerHTML = BK.map(([k, l, m]) => `<div class="callout"><b>${l}: ${fmt(I.background[k].n)} institutional, ${fmt(Cc.background[k].n)} course.</b> ${m}<ul>${I.background[k].examples.map(e => `<li>${esc(e)}</li>`).join('')}</ul></div>`).join('');
+}
+
+let PS = null;
+const KL = { rule: 'Rule', recommendation: 'Recommendation', template: 'Template', description: 'Description', background: 'Background' };
+const SLB = { 'before-course': 'Before the course', 'course-start': 'Course start', 'during-work': 'While students work', 'during-assessment': 'Assessment', 'when-misuse': 'Misuse', 'over-time': 'Over time', background: 'Background' };
+const ALB = { student: 'Students', instructor: 'Instructors', staff: 'Staff and administrators', all: 'Everyone' };
+// D67: the policy set is read by kind. Rules and recommendations are the policy core; facts and warnings are kept beside
+// them; templates, descriptions and the other background (reasons, definitions, resources) are shown apart for reference.
+const PTABS = [
+  ['core', 'Rules and recommendations', p => p.k === 'rule' || p.k === 'recommendation', 'The policy core: what institutions or courses require, permit, forbid or advise. This is the synthesized policy set.'],
+  ['fact', 'Facts and warnings', p => p.bk === 'fact', 'What policies say about AI itself: errors, fabricated citations, bias, data retention. Kept: they explain why the rules exist.'],
+  ['template', 'Templates', p => p.k === 'template', 'Sample syllabus language universities offer instructors. Not a rule of the university; useful as model wording, and its content mostly repeats the rules and recommendations.'],
+  ['description', 'Descriptions', p => p.k === 'description', 'Descriptions of practices, tools or situations that ask no one to act. Context only.'],
+  ['other', 'Reasons, definitions, resources', p => p.k === 'background' && p.bk !== 'fact', 'Purpose and values, definitions of AI and of the policy\'s scope, and where to get help. Shown for reference; definitions and resources are not analysed further.']];
+let psTab = 'core';
+function renderPS() {
+  if (!PS) return;
+  const lay = $('#psLayer').value, a = $('#psActor').value, q = $('#psQ').value.toLowerCase();
+  const base = PS[lay].filter(p => (!a || p.a === a) && (!q || p.s.toLowerCase().includes(q) || p.parts.some(x => x.toLowerCase().includes(q))));
+  $('#psTabs').innerHTML = PTABS.map(([id, lab, f]) => `<button role="tab" data-tab="${id}" aria-selected="${psTab === id}">${lab}<span>${fmt(base.filter(f).length)}</span></button>`).join('');
+  const T = PTABS.find(t => t[0] === psTab);
+  $('#psTabNote').innerHTML = `<b>${T[1]}.</b> ${T[3]}`;
+  const L = base.filter(T[2]);
+  $('#psCount').textContent = `${fmt(L.length)} of ${fmt(PS[lay].length)} policies · ${fmt(L.reduce((s, p) => s + p.n, 0))} statements`;
+  const byTh = {};
+  for (const p of L) ((byTh[p.th || 'other'] ||= {})[p.t[0]] ||= []).push(p);
+  $('#psList').innerHTML = `<div class="pset">` + Object.keys(byTh).sort().map(th => `<h4>${esc(PS.themes[th] || 'Other')}</h4>` +
+    Object.entries(byTh[th]).map(([t, ps]) => `<h5>${esc(PS.types[t] || t)}</h5>` + ps.sort((x, y) => y.u - x.u).map(p =>
+      `<details data-id="${esc(p.id)}"><summary><span class="ps">${esc(p.s)}</span><span class="pm"><span class="kchip">${KL[p.k] || p.k}</span>${ALB[p.a] || p.a} · ${SLB[p.st] || p.st} · ${fmt(p.n)} statements from ${fmt(p.u)} ${p.u === 1 ? 'university' : 'universities'}${p.parts.length ? ` · merged from ${p.parts.length} policies` : ''}${p.t.length > 1 ? ` · also under ${p.t.slice(1).map(x => esc(PS.types[x] || x)).join(', ')}` : ''}</span></summary><div class="st"></div></details>`).join('')).join('')).join('') + `</div>`;
+}
+$('#psList').addEventListener('toggle', e => {
+  const d = e.target; if (!d.open || d.dataset.filled) return;
+  const p = PS[$('#psLayer').value].find(x => x.id === d.dataset.id); d.dataset.filled = 1;
+  d.querySelector('.st').innerHTML = (p.parts.length ? `<div><b>Merged from:</b> ${p.parts.map(esc).join(' | ')}</div>` : '') +
+    p.m.map(([ui, lay, anc, link]) => `<div>“${esc(anc)}” · ${esc(PS.unis[ui])}${lay.length === 2 ? ' (' + lay + ')' : ''} · <a href="${esc(link)}" target="_blank" rel="noopener">source ↗</a></div>`).join('');
+}, true);
+['#psLayer', '#psActor'].forEach(id => $(id).addEventListener('change', renderPS));
+$('#psTabs').addEventListener('click', e => { const b = e.target.closest('button[data-tab]'); if (b) { psTab = b.dataset.tab; renderPS(); } });
+$('#psQ').addEventListener('input', renderPS);
+if (!EMBED) fetch('policyset.json').then(r => r.json()).then(j => { PS = j; renderPS(); }).catch(() => { $('#psList').innerHTML = '<p class="foot">The policy set file could not be loaded.</p>'; });
+
+const defs = [
+  ['Statement (policy unit)', 'One policy a document states, coded once. The unit everything is counted in.'],
+  ['Level', 'University-wide, school or college, computing unit (CS, CSE, EECS, ECE and CS-related departments), or course.'],
+  ['Original wording', 'The anchor and source passage, cut by script from the saved document and verified against it.'],
+  ['AI-normalized statement', 'A plain restatement of one statement written by a coder agent; labelled as such in the Excel file and never placed in an original-wording column.'],
+  ['AI rationale', 'The coder\'s reason for the codes, written before the codes were chosen.'],
+  ['Binding', 'Rule, recommendation, description, or template.'],
+  ['About AI', 'Whether the statement talks about AI. Statements that do not are kept but not quoted or counted.'],
+  ['Actor', 'Who a statement addresses, in four groups: students; instructors; staff and administrators (TAs, staff, administrators and offices, combined because each alone is small); and everyone (a rule addressed to the whole community rather than one role).'],
+  ['Policy', 'Statements that ask the same group of people for the same thing, merged across wording, strength (must or should) and type; shown as one sentence with who it asks, how many universities state it, and original wordings.'],
+  ['Background', 'A synthesized item that is a definition, reason, fact or resource with no time of action.'],
+  ['Policy set', 'The policies counted throughout: rules, recommendations, and facts and warnings about AI. Templates (sample syllabus language), descriptions, and reasons, definitions and resources are other coded text: kept and browsable, never counted in the policy set.'],
+  ['Stage', 'When a policy applies: before the course, course start, while students work, during assessment, when misuse is suspected, or over time; otherwise background.'],
+  ['Modality', 'Must, must not, may, should, should not, or informs.'],
+  ['Stance', 'Prohibit, restrict, permit, encourage, require, or neutral (statement); prohibit to encourage, or instructor decides (document).'],
+  ['Type', 'What the statement is about, named by content only. ' + nTypes + ' types in use.'],
+  ['Theme', 'One of ' + nThemes + ' content groupings of the types.'],
+  ['UNCOVERED', 'A statement no type fits yet; a pattern at only one or two universities, logged as a candidate type.']];
+$('#defs').innerHTML = defs.map(([k, v]) => `<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('');
+
+const next = [
+  'Human review of the policy set: ' + (D.status ? fmt(D.status.policy_set) + ' institutional and ' + fmt(D.status.course_policy_set) + ' course policy sentences' : 'the policy sentences') + ' against their original wordings.',
+  'Compare the institutional policies with the course policies (D43): where they say the same thing, one finding; where they differ, what each level can learn from the other.',
+  'Build the public app: browse real policies, record your own decisions, and generate a syllabus statement or department guideline.'];
+$('#nextSteps').innerHTML = next.map(s => `<li>${esc(s)}</li>`).join('');
+
+// D68: each section is its own sub-page; inside the site, status, pipeline and policy set live on the site's own pages
+if (EMBED) {
+  for (const id of ['status', 'pipeline', 'policyset']) { const el = document.getElementById(id); if (el) el.remove(); const a = document.querySelector(`nav a[href="#${id}"]`); if (a) a.remove(); }
+  const h = document.querySelector('main > header'); if (h) h.remove();
+  document.body.classList.add('embed');
+}
+const secs = [...document.querySelectorAll('main > section')];
+function showSec(id) {
+  secs.forEach(x => x.hidden = x.id !== id);
+  document.querySelectorAll('nav a').forEach(a => a.setAttribute('aria-current', a.getAttribute('href') === '#' + id ? 'page' : 'false'));
+  const f = window.frameElement; if (f) f.style.height = (document.documentElement.scrollHeight + 20) + 'px';
+}
+document.querySelector('nav').addEventListener('click', e => { const a = e.target.closest('a[href^="#"]'); if (!a) return; e.preventDefault(); showSec(a.getAttribute('href').slice(1)); window.scrollTo(0, 0); });
+showSec(secs.some(x => '#' + x.id === location.hash) ? location.hash.slice(1) : secs[0].id);
+</script>

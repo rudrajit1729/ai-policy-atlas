@@ -1,0 +1,16 @@
+{
+ "documents": 1,
+ "units_A": 67,
+ "units_B": 85,
+ "matched": 66,
+ "only_A": 1,
+ "only_B": 19,
+ "kept_only_A": 0,
+ "kept_only_B": 18,
+ "agree_actor": 0.924,
+ "agree_phase": 0.939,
+ "agree_modality": 0.848,
+ "agree_policy_type": 0.909,
+ "agree_stance_docs": 1.0,
+ "notes": "Final inst uses B's segmentation (B splits compound sentences more finely). Every A unit matched a B unit except A25 (sanctions pointer in the same sentence as A24), which was folded into B30 and counted as only_A but not kept separately. Matching used overlapping or adjacent anchors, with 5 manual realignments of neighbouring units. 19 B-only units (principles, risk statement, procurement, institutional-body duties, anonymization, access controls, interpretation clause) were checked against the source; all were kept except B84 (approval-meeting metadata, duplicate of the consultation unit). Main disagreements: (1) unit_stance, the largest gap (44/66 agree): A coded compliance and ethics duties neutral, B coded them restrict; resolved by using restrict only where AI use is conditioned on approval, authorization or vetting, else neutral. (2) modality: 'fomentara'/'propiciara' commitments (A informs, B should) resolved to should; sanction consequences (A informs, B must) resolved to informs. (3) policy_type: P56 vs P61 for scope (P61), P04 vs P107 for professor authorization (P107), P65 vs P50 for data-protection assurance (P50), P81 vs P71 for security-violation referral (P71), P52 vs P116 (P116), P70 vs P102 for studying advisory-committee reports (P102), P53 vs P56 for human-rights commitment (P56). (4) actor/phase: institutional commitments (admin vs all) and faculty AI use phase (during-work). The student exception clause 'a menos que el profesor...' is kept as an instructor may / P04 unit, separate from the student prohibition. Document stance delegates agreed. All fit_notes and the UNCOVERED note (military AI ban) from both coders were retained; no new_types."
+}

@@ -1,0 +1,99 @@
+{
+ "university": "University of Toledo",
+ "slug": "toledo",
+ "state": "OH",
+ "type": "R1",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "toledo-1",
+   "layer": "university",
+   "unit": "Center for Excellence in Teaching and Learning (Provost)",
+   "course": null,
+   "title": "Assignments, AI Tool and Policies (syllabus builder)",
+   "url": "https://www.utoledo.edu/offices/provost/utc/syllabus/assignments-ai-tool-usage.html",
+   "date_or_term": "current page",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "A syllabus-builder help page from the provost's teaching center. It makes an AI Tool Usage statement a required syllabus section but leaves the content of the rule (used, limited or prohibited) entirely to each instructor, and offers example language.",
+   "stance_why": "The page sets no AI rule of its own: it says instructors 'must select or enter a statement explaining how generative AI tools may be used, limited, or prohibited in the course', so the decision is handed to each instructor and the university only requires that a statement exist.",
+   "units": [
+    {
+     "why": "The page says the AI Tool Usage section is 'required and private and must be completed before submission', a duty on instructors to state AI expectations in every syllabus, so a syllabus-statement requirement (P09), not a stance on AI.",
+     "anchor": "private and must be completed before submission.",
+     "frag_start": "The AI Tool Usage section is",
+     "frag_end": "completed before submission.",
+     "policy": "The AI Tool Usage section of the syllabus is required and private and must be completed before submission.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P09",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "unit_stance": "neutral",
+     "resolution_why": "A anchored the next sentence (select or enter a statement) for P09; B anchored the 'required ... must be completed' sentence. Both gave instructor, before-course, must, P09. Source shows both sentences; the required-section sentence is the plainest statement of the duty, so it is used here and the statement-selection sentence is coded separately as P04."
+    },
+    {
+     "why": "'Instructors must select or enter a statement explaining how generative AI tools may be used, limited, or prohibited in the course' leaves the choice of AI rule to each instructor, so P04 (who decides), not P05 since no named tiers are given. The duty to complete the section is the separate P09 unit.",
+     "anchor": "how generative AI tools may be used, limited, or prohibited in the course",
+     "frag_start": "Instructors must select or enter",
+     "frag_end": "prohibited in the course.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P04",
+     "topics": [
+      "instructor-discretion",
+      "default-stance"
+     ],
+     "unit_stance": "neutral",
+     "resolution_why": "Both coders gave P04, instructor, before-course. A coded modality 'may' with the policy 'Each instructor decides'; B coded 'must'. The source sentence says 'Instructors must select or enter', so 'must' is faithful, and A's 'Each instructor decides' wording is dropped because the sentence itself is the rule (policy null, fuller anchor)."
+    },
+    {
+     "why": "'Clear AI guidance helps set expectations for academic integrity and responsible use of AI tools' gives the reason for requiring the statement, so it informs. P95 (fairness/honesty) fits only the integrity part; clarity of expectations is not what P95 defines, so UNCOVERED rather than a stretched fit.",
+     "anchor": "Clear AI guidance helps set expectations for academic integrity and responsible use",
+     "frag_start": "Clear AI guidance helps set",
+     "frag_end": "responsible use of AI tools.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "UNCOVERED",
+     "uncovered_note": "States that clear AI guidance in the syllabus helps set expectations for academic integrity and responsible AI use, as the reason for requiring the statement.",
+     "topics": [
+      "syllabus-communication",
+      "learning-rationale"
+     ],
+     "unit_stance": "neutral",
+     "fit_note": "Coder B's nearest type was P95 (fairness and honesty); it does not capture that clear guidance supports responsible use and clear expectations.",
+     "resolution_why": "A coded UNCOVERED, B coded P95 with a fit_note. The source gives clear guidance as the reason for the statement requirement, naming integrity only alongside expectations and responsible use. Per the codebook, prefer UNCOVERED over a stretched fit; both notes are kept."
+    },
+    {
+     "why": "'Examples and optional language for both sections are provided in the Help Text panel' means the university supplies sample syllabus language for instructors to adopt, so P110 (templates).",
+     "anchor": "Examples and optional language for both sections are provided in the Help Text panel.",
+     "frag_start": "Examples and optional language for",
+     "frag_end": "in the Help Text panel.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P110",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "unit_stance": "neutral",
+     "resolution_why": "Both coders gave P110, instructor, before-course, informs; no disagreement."
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Thin single page; only the AI Tool Usage paragraph is AI-specific. Recording, accommodation and respect policies are not about AI and were not coded. Coders split the 'required section' sentence and the 'select a statement' sentence differently; both are kept as separate units (P09, P04)."
+}

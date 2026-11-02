@@ -1,0 +1,808 @@
+{
+ "university": "Gonzaga University",
+ "slug": "gonzaga",
+ "state": "WA",
+ "type": "other",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "new_types": [],
+ "notes": "The Faculty AI Use Guide PDF (gonzaga.edu/__data/assets/pdf_file/0036/439929/AI-use_letter-size.pdf) is not in Wayback and a direct fetch returned nothing, so only the landing-page summary is captured. No School of Engineering and Applied Science or CS department AI policy found (SEAS pages describe AI programs only). Reconciled from Coder A and Coder B.",
+ "documents": [
+  {
+   "id": "gonzaga-student-guide",
+   "layer": "university",
+   "unit": "Instructional Design and Delivery (AI in Higher Education)",
+   "course": null,
+   "title": "AI Guides and Resources for Students: Asking the Right Questions: A Student Guide to Responsible AI Use in College",
+   "url": "https://www.gonzaga.edu/academics/ai-in-higher-education/ai-guides-and-resources-for-students",
+   "date_or_term": "current (2026 Wayback copy)",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "A student guide urging reflective AI use. It says each instructor sets the rules, tells students to ask when unsure, to be honest about use, and warns that over-reliance undermines learning.",
+   "stance_why": "The guide states \"Each faculty member sets their own expectations for AI use in their course\" and tells students to \"Always ask if you’re unsure\", so it sets no stance and defers to instructors.",
+   "text_file": "/Users/rudrajit/Documents/Current-Research/AI in education policy guidelines/.cache/text/v2-gonzaga-students.txt",
+   "units": [
+    {
+     "why": "The guide says \"Each faculty member sets their own expectations for AI use in their course.\" This hands the AI decision to each instructor, so P04 (instructor sets the rule), addressed to all and informing students.",
+     "anchor": "Each faculty member sets their own expectations for AI use in their course.",
+     "frag_start": "Each faculty member sets",
+     "frag_end": "in their course.",
+     "policy": null,
+     "actor": "all",
+     "phase": "course-start",
+     "modality": "informs",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "default-stance"
+     ]
+    },
+    {
+     "why": "\"Always ask if you’re unsure\" tells students to ask the instructor when they do not know the rule. That matches P10.",
+     "anchor": "Always ask if you’re unsure.",
+     "frag_start": "Always ask if",
+     "frag_end": "you’re unsure.",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P10",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "\"While AI tools can be helpful, relying on them too heavily can hinder your personal growth\" explains why heavy reliance is cautioned. It is a learning rationale, so P41 (AI shortcuts the practice that builds skill), informing.",
+     "anchor": "relying on them too heavily can hinder your personal growth",
+     "frag_start": "While AI tools can be helpful",
+     "frag_end": "your personal growth.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P41",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "The sentence \"When AI writes your arguments, solves your problems, or reflects for you, it undermines the very skills you're here to build\" explains why heavy AI reliance is harmful, so it is rationale (informs) about AI shortcutting skill practice (P41), actor student, phase general.",
+     "anchor": "When AI writes your arguments, solves your problems, or reflects for you",
+     "frag_start": "When AI writes your arguments,",
+     "frag_end": "you’re",
+     "policy": "When AI writes your arguments, solves your problems, or reflects for you, it undermines the very skills students are at Gonzaga to build.",
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P41",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale",
+      "prohibited-uses"
+     ],
+     "resolution_why": "Coder A coded unit_stance restrict and Coder B neutral with no normalized policy. The passage only explains harm to skill-building and sets no rule, so unit_stance is neutral; type P41, informs, actor and phase were already agreed. Kept A's normalized policy because the anchor is a fragment."
+    },
+    {
+     "why": "\"Am I using AI to enhance my learning, or to replace it?\" is a self-check prompt telling students to keep AI from replacing their own learning, which is P32 (student stays primary problem-solver); phrased as a question so modality is should.",
+     "anchor": "Am I using AI to enhance my learning, or to replace it?",
+     "frag_start": "Am I using AI to enhance",
+     "frag_end": "or to replace it?",
+     "policy": "Students ask themselves whether they are using AI to enhance their learning or to replace it.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P32",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding",
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "\"Does this use of AI reflect my own voice, ideas and values?\" is a self-check question prompting the student to keep their own thinking in the work, so it is guidance (should) for the student during work; it fits \"students stay the primary thinker\" (P32) better than P29, which concerns responsibility for or ownership of what is submitted.",
+     "anchor": "Does this use of AI reflect my own voice, ideas and values?",
+     "frag_start": "Does this use of AI reflect",
+     "frag_end": "ideas and values?",
+     "policy": "Students ask themselves whether a use of AI reflects their own voice, ideas and values.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P32",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "resolution_why": "Coder A chose P29 (students own what they submit), Coder B chose P32. The passage is about whether AI use reflects the student's own voice and ideas, i.e. who is doing the thinking, not accountability for the submission, and it sits directly after the P32 question about enhancing versus replacing learning. P32 chosen; actor, phase and modality agreed."
+    },
+    {
+     "why": "\"Don’t assume any AI use is acceptable\" sets a default for silence: no assumption of permission. That is a fallback (P06), not the ask-first advice coded separately as P10.",
+     "anchor": "Don’t assume any AI use is acceptable.",
+     "frag_start": "Don’t assume any AI use",
+     "frag_end": "is acceptable.",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "should-not",
+     "policy_type": "P06",
+     "unit_stance": "restrict",
+     "topics": [
+      "default-stance",
+      "syllabus-communication"
+     ],
+     "resolution_why": "Coder A coded should-not, Coder B must-not. The passage \"Don't assume any AI use is acceptable\" is an imperative in an advisory student guide that elsewhere uses \"Always ask\" and \"Consider asking\" and has no enforcement force, and it parallels the should-coded \"Always ask if you are unsure\". should-not chosen; P06 (silent-syllabus fallback), actor and phase agreed."
+    },
+    {
+     "why": "\"If AI use isn’t clearly addressed by the professor or course syllabus, have a conversation with your instructor\" tells unsure students to ask. P10 fits.",
+     "anchor": "have a conversation with your instructor",
+     "frag_start": "If AI use isn’t clearly addressed",
+     "frag_end": "with your instructor.",
+     "policy": "If AI use is not clearly addressed by the professor or course syllabus, students have a conversation with their instructor.",
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P10",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "\"Work with faculty to understand when and how AI can support (but not replace) your voice\" says AI may support but not replace the student’s own voice, with faculty deciding. P32 fits (AI must not replace thinking).",
+     "anchor": "when and how AI can support (but not replace) your voice",
+     "frag_start": "Work with faculty to understand",
+     "frag_end": "your voice.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P32",
+     "unit_stance": "permit",
+     "topics": [
+      "permitted-uses",
+      "accountability-understanding"
+     ],
+     "resolution_why": "Coder A coded unit_stance permit, Coder B restrict. \"Work with faculty to understand when and how AI can support (but not replace) your voice\" accepts AI support under a condition (not replacing the student's voice) and does not list narrow uses, so permit rather than restrict. Type P32, should, actor and phase agreed."
+    },
+    {
+     "why": "\"What counts as academic dishonesty can vary by course\" warns that rules differ between courses, so one course’s allowance does not carry over. This matches P11.",
+     "anchor": "What counts as academic dishonesty can vary by course.",
+     "frag_start": "What counts as academic dishonesty",
+     "frag_end": "vary by course.",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "informs",
+     "policy_type": "P11",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "\"always be honest and clear about how you’ve used AI in your work\" is a baseline disclosure expectation, so P24, with should since it is phrased as a baseline.",
+     "anchor": "always be honest and clear about how you’ve used AI in your work",
+     "frag_start": "As a baseline, always be honest",
+     "frag_end": "AI in your work.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "\"Learning requires struggle sometimes. Ask where AI could get in the way of your growth.\" gives productive struggle as the reason to ask where AI is off-limits. P41 fits.",
+     "anchor": "Learning requires struggle sometimes.",
+     "frag_start": "Learning requires struggle sometimes.",
+     "frag_end": "get in the way of your growth.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P41",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "\"Using AI responsibly doesn’t just mean avoiding plagiarism, it means making choices that help you become the learner\" states a principle for AI use at the university, so P56 (framework/principles).",
+     "anchor": "Using AI responsibly doesn’t just mean avoiding plagiarism",
+     "frag_start": "Using AI responsibly doesn’t just mean",
+     "frag_end": "you’re meant to be.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "The blurb says students should \"ensure your use of AI aligns with Gonzaga's values and policies\", pointing to the IT guidelines as a framework (P56).",
+     "anchor": "ensure your use of AI aligns with Gonzaga's values and policies",
+     "frag_start": "Gonzaga University provides clear guidelines",
+     "frag_end": "values and policies.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance"
+     ],
+     "resolution_why": "Coder A coded the resource blurb \"Gonzaga University provides clear guidelines to help students navigate the responsible use\" as informs; Coder B coded the closing directive \"Explore the full guidelines to ensure your use of AI aligns with Gonzaga's values and policies\" as should. Both are the same passage and type P56. The source tells students to explore the guidelines to ensure alignment, which is a recommendation, so should, with the directive span as anchor."
+    }
+   ]
+  },
+  {
+   "id": "gonzaga-it-guidelines",
+   "layer": "university",
+   "unit": "Information Technology Services / Office of Information Security",
+   "course": null,
+   "title": "Artificial Intelligence (AI) Guidelines",
+   "url": "https://www.gonzaga.edu/about/offices-services/information-technology-services/artificial-intelligence-guidelines",
+   "date_or_term": "approved tools list as of 2026",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "Information-security guidelines for the whole community. They list approved and unapproved AI tools for university data, give privacy and verification advice, mention bias, and include a glossary.",
+   "stance_why": "The page sets no rule on whether students may use AI for coursework; its rules concern which tools may be used with Gonzaga data (\"Approved AI List\"), so it sets no academic-use stance.",
+   "text_file": "/Users/rudrajit/Documents/Current-Research/AI in education policy guidelines/.cache/text/v2-gonzaga-itguidelines.txt",
+   "units": [
+    {
+     "why": "\"committed to providing guidance on the ethical and responsible use of generative Artificial Intelligence\" states the office’s purpose, so a framework statement (P56).",
+     "anchor": "committed to providing guidance on the ethical and responsible use of generative Artificial Intelligence",
+     "frag_start": "The Office of Information Security",
+     "frag_end": "students, faculty, and staff.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance",
+      "ethics-bias-environment"
+     ],
+     "resolution_why": "Coder A coded actor admin, Coder B all. The sentence \"The Office of Information Security at Gonzaga University is committed to providing guidance\" states the office's own commitment, so it binds the office (admin), not the whole community. P56, general, informs agreed."
+    },
+    {
+     "why": "\"our guidelines will continue to evolve\" says the guidelines are provisional, so P54.",
+     "anchor": "our guidelines will continue to evolve",
+     "frag_start": "As Gonzaga University advances its integration",
+     "frag_end": "faculty, and staff.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "informs",
+     "policy_type": "P54",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "\"We urge caution when using external AI systems, as they may not offer the same level of security and privacy\" is advice on privacy and tool choice, so P50, with should and a restrictive lean.",
+     "anchor": "We urge caution when using external AI systems",
+     "frag_start": "We urge caution when using",
+     "frag_end": "managed by the University.",
+     "policy": "The university urges caution when using external AI systems, as they may not offer the same level of security and privacy as AI systems managed by the University.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"Sandboxed means that the company/org will not use data uploaded into their AI training model\" defines a term that sets what the approved list covers, so P61.",
+     "anchor": "Sandboxed means that the company/org will not use data uploaded into their AI training model.",
+     "frag_start": "Sandboxed means that the",
+     "frag_end": "AI training model.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"Lower paid tiers and free tiers are usually NOT sandboxed\" is a fact about which tool tiers protect data, supporting P50 (vetted tools).",
+     "anchor": "Lower paid tiers and free tiers are usually NOT sandboxed.",
+     "frag_start": "Lower paid tiers and free",
+     "frag_end": "usually NOT sandboxed.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data",
+      "equity-access"
+     ]
+    },
+    {
+     "why": "Use of AI tools with Gonzaga data \"must be made with an AI tool that has been fully approved\" through contract review. A binding rule to use vetted tools, so P50 (not P65, which is about the institution’s review).",
+     "anchor": "fully approved through Gonzaga’s vendor integration contract review process",
+     "frag_start": "The use of the AI tools with Gonzaga data",
+     "frag_end": "managed by ITS.",
+     "policy": "The use of AI tools with Gonzaga data must be made with an AI tool that has been fully approved through Gonzaga’s vendor integration contract review process, resulting in a business data sharing agreement, and that is managed by ITS.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "Coder A coded phase general, Coder B during-work. The requirement that use of AI with Gonzaga data must be with a fully approved, ITS-managed tool is a standing data-protection rule, not tied to coursework or any stage of an assignment, so general. P50, must, actor all agreed."
+    },
+    {
+     "why": "The approved list marks \"Microsoft Copilot (when logged in using Gonzaga SSO)\" with a check, so it may be used with Gonzaga data. A list of vetted tools is P50.",
+     "anchor": "Microsoft Copilot (when logged in using Gonzaga SSO)",
+     "frag_start": "Microsoft Copilot (when logged",
+     "frag_end": "using Gonzaga SSO)",
+     "policy": "Microsoft Copilot, when logged in using Gonzaga SSO, is approved for use with Gonzaga University data.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "may",
+     "policy_type": "P50",
+     "unit_stance": "permit",
+     "topics": [
+      "privacy-data",
+      "course-provided-tools"
+     ],
+     "resolution_why": "Coder A coded P50 with phase general, Coder B P17 with phase during-work. The approved list says which external AI may be used with Gonzaga data; it does not say the university provides a course tool, so P50 (prefer university-vetted tools) fits and P17 does not. It is a standing data rule, so general. may, actor all agreed."
+    },
+    {
+     "why": "Gemini, NotebookLM and Consensus are marked approved when logged in using Gonzaga SSO. Same type as the Copilot entry, P50 (vetted tools).",
+     "anchor": "Gemini (when logged in using Gonzaga SSO)",
+     "frag_start": "Gemini (when logged",
+     "frag_end": "using Gonzaga SSO)",
+     "policy": "Gemini, NotebookLM and Consensus, when logged in using Gonzaga SSO, are approved for use with Gonzaga University data.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "may",
+     "policy_type": "P50",
+     "unit_stance": "permit",
+     "topics": [
+      "privacy-data",
+      "course-provided-tools"
+     ],
+     "resolution_why": "Only Coder A coded the Gemini, NotebookLM and Consensus rows of the approved-tools table. The source marks them approved with Gonzaga SSO, a distinct approval from the Copilot row, so the unit is a real policy and is kept (type P50, may, general as for the Copilot unit)."
+    },
+    {
+     "why": "ChatGPT, Claude, DeepSeek, Otter and unapproved Copilot are marked not approved, so they cannot be used with Gonzaga data. A restriction on tools for data protection, P50.",
+     "anchor": "All other NON-sandboxed AI",
+     "frag_start": "All other NON-sandboxed",
+     "frag_end": "NON-sandboxed AI",
+     "policy": "ChatGPT, Claude, DeepSeek, Otter, Microsoft Copilot when not logged in using Gonzaga SSO, and all other non-sandboxed AI are not approved for use with Gonzaga University data.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "Coder A coded phase general, Coder B during-work. The \"Not approved\" rows (ChatGPT, Claude, DeepSeek, Otter, all other non-sandboxed AI) are a standing data-protection rule, so general. P50, must-not, actor all agreed."
+    },
+    {
+     "why": "\"The restrictions above only apply to data covered by Gonzaga's IT Use Policy\" limits the scope of the approved-tools rules, so P61.",
+     "anchor": "The restrictions above only apply to data covered by Gonzaga's IT Use Policy.",
+     "frag_start": "The restrictions above only apply",
+     "frag_end": "IT Use Policy.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "Sensitive data such as PII and PHI \"should not be uploaded or processed on platforms not approved\". This is a data-protection rule, P50.",
+     "anchor": "should not be uploaded or processed on platforms not approved on the previous list",
+     "frag_start": "Data containing personally identifiable information",
+     "frag_end": "on the previous list.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "Coder A coded phase general, Coder B during-work. The rule that PII, PHI and sensitive data should not be uploaded to unapproved platforms is a standing data rule, so general. P50, should-not, actor all agreed."
+    },
+    {
+     "why": "\"Generative AIs often integrate all input they receive, including prompts\" explains why data should be protected: AI tools keep prompts. That is P50.",
+     "anchor": "Generative AIs often integrate all input they receive, including prompts",
+     "frag_start": "Generative AIs often integrate all input",
+     "frag_end": "sensitive information.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"You should only provide prompts and other data meant for public sharing\" limits what users put into AI tools, P50.",
+     "anchor": "You should only provide prompts and other data meant for public sharing.",
+     "frag_start": "You should only provide prompts",
+     "frag_end": "meant for public sharing.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"varying degrees of respect for authorial rights among providers\" raises the rights of authors in training data, so P52.",
+     "anchor": "varying degrees of respect for authorial rights among providers",
+     "frag_start": "Generative AIs also collect extensive data",
+     "frag_end": "unfeasible.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P52",
+     "unit_stance": "neutral",
+     "topics": [
+      "intellectual-property"
+     ]
+    },
+    {
+     "why": "\"they can sometimes yield inaccurate information that appears credible, potentially fabricating sources\" says AI output can be wrong, P31.",
+     "anchor": "they can sometimes yield inaccurate information that appears credible",
+     "frag_start": "Generative AI systems create text by forecasting",
+     "frag_end": "precise facts.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P31",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "\"It is essential to verify the accuracy of any information utilized\" tells users to verify AI output, P31. Modality should since the verb is \"essential\" without a command form.",
+     "anchor": "It is essential to verify the accuracy of any information utilized.",
+     "frag_start": "It is essential to verify",
+     "frag_end": "information utilized.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P31",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "resolution_why": "Coder A coded unit_stance permit, Coder B neutral. \"It is essential to verify the accuracy of any information utilized\" requires checking output and says nothing about whether AI use is allowed, so neutral. P31, should, general/during-work and actor all agreed."
+    },
+    {
+     "why": "\"Generative AIs mirror and can magnify biases embedded within their training datasets\" names bias as a harm, P53.",
+     "anchor": "Generative AIs mirror and can magnify biases embedded within their training datasets.",
+     "frag_start": "Generative AIs mirror and can magnify",
+     "frag_end": "marginalized communities.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P53",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment"
+     ]
+    },
+    {
+     "why": "\"We encourage our community to approach AI with a discerning mindset, advocating truth, equity, and the common good\" states a guiding principle, P56.",
+     "anchor": "We encourage our community to approach AI with a discerning mindset",
+     "frag_start": "We encourage our community to approach AI",
+     "frag_end": "all endeavors.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment",
+      "default-stance"
+     ],
+     "resolution_why": "Coder A coded unit_stance permit, Coder B neutral. \"We encourage our community to approach AI with a discerning mindset\" encourages a critical attitude, not AI use itself, so neutral. P56, should, general agreed."
+    },
+    {
+     "why": "The glossary defines \"Artificial Intelligence\" as \"a super-smart computer system that can imitate humans in some ways\". A definition setting terms, P61.",
+     "anchor": "Artificial intelligence is basically a super-smart computer system that can imitate humans in some ways",
+     "frag_start": "Artificial intelligence is basically",
+     "frag_end": "time.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "ai-literacy-career"
+     ]
+    },
+    {
+     "why": "The glossary defines generative AI: \"leverages the power of large language models to make new things\". Definition, P61.",
+     "anchor": "Generative AI leverages the power of large language models to make new things",
+     "frag_start": "Generative AI leverages the power",
+     "frag_end": "identify AI-generated content.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "ai-literacy-career"
+     ]
+    },
+    {
+     "why": "The glossary defines LLMs as using \"machine learning techniques to help them process language\". Definition, P61.",
+     "anchor": "Large language models, or LLMs, use machine learning techniques to help them process language",
+     "frag_start": "Large language models, or LLMs,",
+     "frag_end": "sound more conversational.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "ai-literacy-career"
+     ]
+    },
+    {
+     "why": "The glossary defines machine learning as \"a field of computer science, under the umbrella of AI\". Definition, P61.",
+     "anchor": "It’s a field of computer science, under the umbrella of AI",
+     "frag_start": "If artificial intelligence is the goal",
+     "frag_end": "process all that information.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "ai-literacy-career"
+     ]
+    },
+    {
+     "why": "The glossary defines hallucinations as \"inaccurate responses that developers refer to as hallucinations\". Definition, P61 (accuracy duty is coded as P31).",
+     "anchor": "they can give inaccurate responses that developers refer to as hallucinations",
+     "frag_start": "Generative AI systems can create stories",
+     "frag_end": "after it’s trained.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "The glossary defines \"Responsible AI\" as guiding people \"as they try to design systems that are safe and fair\". Definition of a term, P61.",
+     "anchor": "Responsible AI guides people as they try to design systems that are safe and fair",
+     "frag_start": "Responsible AI guides people",
+     "frag_end": "groups of people.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment"
+     ]
+    },
+    {
+     "why": "The glossary defines a prompt as \"an instruction entered into a system in language, images or code\". Definition, P61.",
+     "anchor": "A prompt is an instruction entered into a system in language, images or code",
+     "frag_start": "A prompt is an instruction",
+     "frag_end": "nutritious.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "ai-literacy-career"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "gonzaga-faculty-guide",
+   "layer": "university",
+   "unit": "Instructional Design and Delivery (AI in Higher Education)",
+   "course": null,
+   "title": "AI Guides and Resources for Faculty",
+   "url": "https://www.gonzaga.edu/academics/ai-in-higher-education/ai-guides-and-resources-for-faculty",
+   "date_or_term": "current (2026 Wayback copy)",
+   "stance": "delegates",
+   "tiers": [
+    "High Value",
+    "Some Value",
+    "Negative Value"
+   ],
+   "summary": "A faculty landing page describing the Faculty AI Use Guide with three value categories, videos on integrity, writing and hallucination, and links to the IT guidelines, library and teaching center. The guide PDF itself is not captured.",
+   "stance_why": "The page describes a guide sorting AI uses into \"High Value,\" \"Some Value,\" and \"Negative Value\" and leaves course decisions to instructors; it states no stance of its own.",
+   "text_file": "/Users/rudrajit/Documents/Current-Research/AI in education policy guidelines/.cache/text/v2-gonzaga-faculty.txt",
+   "units": [
+    {
+     "why": "\"The categories “High Value,” “Some Value,” and “Negative Value” indicate the potential benefit of specific AI uses\" defines named categories for classifying AI uses by learning benefit, so P05.",
+     "anchor": "The categories “High Value,” “Some Value,” and “Negative Value”",
+     "frag_start": "The categories “High Value,”",
+     "frag_end": "professional practice.",
+     "policy": "The Faculty AI Use Guide sorts specific AI uses into the categories High Value, Some Value and Negative Value, indicating the potential benefit of each use for student learning.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P05",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "\"supports instructors in using AI thoughtfully to enhance learning, uphold academic integrity\" describes the purpose of the Faculty AI Use Guide for instructors' own AI use in teaching work (P59). It is a description of a resource, not an instruction, so modality informs and the unit is neutral.",
+     "anchor": "supports instructors in using AI thoughtfully to enhance learning, uphold academic integrity",
+     "frag_start": "The guide linked below supports instructors",
+     "frag_end": "humanist mission.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P59",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use"
+     ],
+     "resolution_why": "Coder A coded P59 with unit_stance encourage; Coder B coded P56 (institution framework) with neutral, and a second B unit for \"provide instructors with guidelines for integrating AI into professional practice\" (P59), which is the same guide-purpose passage and is merged here. The subject is instructors using AI in their teaching, so P59; the page only describes what the guide does and does not itself urge AI use, so neutral and informs. Anchor-only."
+    },
+    {
+     "why": "\"In an AI-driven world, human insight and people-centered education are more valuable than ever\" states a principle about the role of human teachers. It is a framing principle, P56.",
+     "anchor": "human insight and people-centered education are more valuable than ever",
+     "frag_start": "In an AI-driven world, human insight",
+     "frag_end": "valuable than ever.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale",
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "\"Check the CTA Events schedule regularly for AI related training and workshops for faculty\" points instructors to AI training, so P63.",
+     "anchor": "Check the CTA Events schedule regularly for AI related training and workshops for faculty.",
+     "frag_start": "The Center for Teaching and Advising",
+     "frag_end": "workshops for faculty.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "The Academic Integrity video offers \"practical strategies for establishing clear expectations, adapting our pedagogy\" to faculty, which is faculty support (P63), not a rule.",
+     "anchor": "offering practical strategies for establishing clear expectations, adapting our pedagogy",
+     "frag_start": "In this presentation, Justin Marquis",
+     "frag_end": "in the AI age.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "assessment-design"
+     ],
+     "resolution_why": "Coder A coded P63 and Coder B P09 with phase course-start. The passage is a video description offering \"practical strategies for establishing clear expectations\"; it does not require an AI statement in syllabi (P09) but is faculty-development content (P63), and it is for instructors designing their policy, so before-course."
+    },
+    {
+     "why": "The writing-process video offers \"practical strategies for leveraging AI’s strengths to support student learning\", including \"Socratic tutor bots\", to faculty. This is faculty support, P63.",
+     "anchor": "practical strategies for leveraging AI’s strengths to support student learning",
+     "frag_start": "In this presentation, Chase Bollig",
+     "frag_end": "across disciplines.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "encourage",
+     "topics": [
+      "instructor-staff-use",
+      "permitted-uses"
+     ],
+     "resolution_why": "Coder A coded P63 for \"practical strategies for leveraging AI's strengths to support student learning\"; Coder B coded P35 (redesign assignments) for \"AI-integrated activities, from Socratic tutor bots to peer review exercises\". Both describe the same video. It is a faculty-learning resource demonstrating strategies, not a statement that assignments are redesigned, so P63. unit_stance encourage, informs, actor and phase agreed."
+    },
+    {
+     "why": "The librarian session provides \"the foundational knowledge needed to help students use these tools critically and ethically\", which supports faculty learning about AI (P63).",
+     "anchor": "the foundational knowledge needed to help students use these tools critically and ethically",
+     "frag_start": "In this presentation, faculty librarian Anthony Tardiff",
+     "frag_end": "trusting their outputs.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use",
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "\"Gonzaga University provides clear guidelines to help faculty and staff navigate the responsible use of artificial intelligence\" names the IT guidelines as the institutional framework, P56.",
+     "anchor": "Gonzaga University provides clear guidelines to help faculty and staff navigate the responsible use",
+     "frag_start": "Gonzaga University provides clear guidelines",
+     "frag_end": "values and policies.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance",
+      "instructor-staff-use"
+     ]
+    }
+   ]
+  }
+ ]
+}

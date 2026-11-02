@@ -1,0 +1,299 @@
+{
+ "university": "Medical College of Wisconsin",
+ "slug": "medical-college-wisconsin",
+ "state": "WI",
+ "type": "R2",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "mcw-ai-digest",
+   "layer": "university",
+   "unit": "Office of Educational Improvement, Faculty Development",
+   "course": null,
+   "title": "AI Digest | Teaching Toolbox",
+   "url": "https://www.mcw.edu/education/academic-and-student-services/office-of-educational-improvement/faculty-development/teaching-toolbox/ai-digest",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "A faculty-development news page summarising external AI resources (AAMC, AMA, CSU) and MCW's April 2024 guiding principles. It sets no course-level stance; it asks programs and courses to be mindful of the principles and lists highlights on privacy, verification and citation.",
+   "stance_why": "The page says 'MCW program and course policies should be mindful of the institution’s guiding principles' but gives no default rule on student AI use, leaving decisions to programs and courses.",
+   "units": [
+    {
+     "why": "The page tells programs and courses to align with MCW's guiding principles: 'should be mindful of the institution’s guiding principles'. It sets an institution-level framework that course policies must respect, so P56; course-level policy-setting is left to programs.",
+     "anchor": "MCW program and course policies should be mindful of the institution’s guiding principles",
+     "frag_start": "MCW program and course policies",
+     "frag_end": "reviewed and updated on a regular basis.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "policy-evolution"
+     ],
+     "resolution_why": "Both coders: P56, instructor, before-course, should. Topics differed (A instructor-discretion, B default-stance); kept A's, which matches the delegating wording. No code change."
+    },
+    {
+     "why": "States that the guiding principles are 'reviewed and updated on a regular basis', a review-cycle statement about the institutional policy, hence P54 and informs.",
+     "anchor": "which are reviewed and updated on a regular basis",
+     "frag_start": "MCW program and course policies",
+     "frag_end": "reviewed and updated on a regular basis.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "informs",
+     "policy_type": "P54",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ],
+     "resolution_why": "Both coders: P54, admin, over-time, informs. A wrote a normalized policy, B left policy null. The anchor alone states the rule, so policy is null."
+    },
+    {
+     "why": "Scope statement: the principles apply to 'all faculty, staff, and students conducting MCW business in any of the four missions', setting who and what the framework covers, so P56 informs. P61 is about defining AI, which this is not.",
+     "anchor": "applicable to all faculty, staff, and students conducting MCW business",
+     "frag_start": "MCW released guiding principles",
+     "frag_end": "four missions.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance"
+     ],
+     "resolution_why": "Both coders: P56, all, general, informs. Source: 'The principles are applicable to all faculty, staff, and students'. Agreement; extended frag_end to the sentence end."
+    },
+    {
+     "why": "Names the core of the principles: 'engaging in human-centered AI' with 'transparency being crucial'. A principle statement of the institution-wide framework, P56.",
+     "anchor": "engaging in human-centered AI, with transparency being crucial to fostering open communication",
+     "frag_start": "The core of these principles",
+     "frag_end": "AI use and decision making.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment",
+      "disclosure-citation"
+     ],
+     "resolution_why": "Both coders: P56, all, general, informs. A wrote a normalized policy, B used a fuller anchor with null; the anchor states it, so policy is null. Topics: added B's disclosure-citation because of 'transparency'."
+    },
+    {
+     "why": "Highlight of the principles: 'In the absence of a formal contract, treat all AI tools as public.' This is a data-protection rule about which tools to trust, so P50.",
+     "anchor": "In the absence of a formal contract, treat all AI tools as public.",
+     "frag_start": "In the absence of",
+     "frag_end": "tools as public.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "Coders disagreed on modality (A should, B must); actor, phase, P50 agree. Source: 'In the absence of a formal contract, treat all AI tools as public.' is a bare imperative in a list of highlights, like 'Never enter...', so must."
+    },
+    {
+     "why": "'Never enter protected information into a public AI model' is an explicit prohibition protecting confidential data, P50 with must-not.",
+     "anchor": "Never enter protected information into a public AI model.",
+     "frag_start": "Never enter protected information",
+     "frag_end": "public AI model.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "prohibit",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "Both coders agreed on all codes (P50, must-not, prohibit). Source: 'Never enter protected information into a public AI model.'"
+    },
+    {
+     "why": "'Review AI outputs for accuracy' tells users to verify AI output, so P31.",
+     "anchor": "Review AI outputs for accuracy and employ responsibility in its use.",
+     "frag_start": "Review AI outputs for",
+     "frag_end": "responsibility in its use.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P31",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "resolution_why": "Coders disagreed on modality (A should, B must). Source: 'Review AI outputs for accuracy and employ responsibility in its use.' is an unhedged imperative, so must. Type P31 and other codes agree."
+    },
+    {
+     "why": "'Cite AI outputs and use as appropriate' asks for acknowledgment of AI use, so P24; it does not say the details required (not P25).",
+     "anchor": "Cite AI outputs and use as appropriate.",
+     "frag_start": "Cite AI outputs and",
+     "frag_end": "use as appropriate.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P24",
+     "unit_stance": "neutral",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "resolution_why": "Coders disagreed on modality (A should, B must) and unit_stance (A neutral, B permit). Source: 'Cite AI outputs and use as appropriate.' The qualifier 'as appropriate' softens the duty, so should. It asks for citation and permits nothing new, so neutral. P24 agrees (no details listed, so not P25)."
+    },
+    {
+     "why": "'AI is a tool and is not meant to replace human wisdom and judgement' says AI must not replace human thinking. P32 is about students as primary problem-solver; this is broader (all users), so nearest type with fit note.",
+     "anchor": "AI is a tool and is not meant to replace human wisdom and judgement.",
+     "frag_start": "Remember that AI is",
+     "frag_end": "wisdom and judgement.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P32",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding",
+      "learning-rationale"
+     ],
+     "fit_note": "Addresses all MCW users, not only students, and speaks of human wisdom and judgement rather than the student as primary problem-solver (A). Addressed to all users including staff and applies to human judgement generally (B).",
+     "resolution_why": "Coders disagreed on modality (A should, B informs). Source opens 'Remember that AI is a tool and is not meant to replace human wisdom and judgement', an exhortation, so should. Both used P32 with a fit note; notes merged. Topics: added B's learning-rationale."
+    },
+    {
+     "why": "MCW urges its community to learn and apply the ETHICAL framework: 'We encourage members of the MCW community to become familiar with this framework, apply it to their own use of AI'. An adopted institutional framework, P56, encouraged rather than required.",
+     "anchor": "We encourage members of the MCW community to become familiar with this framework",
+     "frag_start": "We encourage members of",
+     "frag_end": "responsible use of AI in health sciences education.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P56",
+     "unit_stance": "encourage",
+     "topics": [
+      "ethics-bias-environment",
+      "ai-literacy-career"
+     ],
+     "fit_note": "Adopts an external framework (CSU ETHICAL) and encourages its use and discussion, rather than stating MCW's own principles.",
+     "resolution_why": "Both coders: P56, all, general, should, encourage. Source: 'We encourage members of the MCW community to become familiar with this framework'. Agreement. A's fit_note kept (external CSU framework)."
+    },
+    {
+     "why": "MCW points programs and instructors to a syllabus-policy repository 'to aid programs and instructors in developing their own policies', a resource supporting faculty in writing policy, P63. It also implies policies are set by programs and instructors.",
+     "anchor": "to aid programs and instructors in developing their own policies",
+     "frag_start": "Dr. Lance Eaton of",
+     "frag_end": "their own policies.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "syllabus-communication"
+     ],
+     "fit_note": "The page links an external repository of example syllabus policies; it is a resource, not workshops or consultations (B).",
+     "resolution_why": "Both coders: P63, instructor, before-course, informs. A used policy null, B a normalized policy. Anchor kept from A: 'to aid programs and instructors in developing their own policies'. unit_stance differed (A neutral, B encourage); it is a resource listing, not a recommendation, so neutral."
+    },
+    {
+     "why": "The InfoScope page 'provides a variety of resources to educate and support members of our institution on responsible, effective use of AI': institution-provided AI training/resources, P70.",
+     "anchor": "to educate and support members of our institution on responsible, effective use of AI",
+     "frag_start": "The Artificial Intelligence at",
+     "frag_end": "use of AI.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P70",
+     "unit_stance": "neutral",
+     "topics": [
+      "ai-literacy-career"
+     ],
+     "resolution_why": "Both coders: P70, all, general, informs. unit_stance differed (A neutral, B encourage); the InfoScope page 'provides a variety of resources', an offer and not a recommendation, so neutral."
+    },
+    {
+     "why": "The AAMC webinar series 'AI Skill Building for Medical Educators' with CME credit is faculty development on AI, P63.",
+     "anchor": "AI Skill Building for Medical Educators",
+     "frag_start": "The Association of American Medical",
+     "frag_end": "CME credit is available for this webinar.",
+     "policy": "The AAMC hosts an \"AI Skill Building for Medical Educators\" webinar series, and CME credit is available for the January 2026 session on AI integration into clinical education.",
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "ai-literacy-career",
+      "instructor-staff-use"
+     ],
+     "resolution_why": "Both coders: P63, instructor, informs. Phase differed (A general, B before-course); the passage lists a webinar with no step in course design, so general. unit_stance differed (A neutral, B encourage); a listed resource, so neutral. Policy wording follows B, faithful to the source ('CME credit is available for this webinar')."
+    },
+    {
+     "why": "The AMA modules are 'free of charge' and 'a foundation for understanding that aids us in preparing our students to use AI in practice', AI-literacy training for the community (P70), tied to professional preparation.",
+     "anchor": "free of charge and can provide a foundation for understanding",
+     "frag_start": "These modules are free",
+     "frag_end": "use AI in practice.",
+     "policy": "The AMA ChangeMedEd modules on AI in health care are free of charge and provide a foundation for understanding that aids in preparing students to use AI in practice.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P70",
+     "unit_stance": "encourage",
+     "topics": [
+      "ai-literacy-career"
+     ],
+     "fit_note": "Also frames the training as preparing students to use AI in practice (P44 theme).",
+     "resolution_why": "Both coders: P70, all, informs, encourage. Phase differed (A general, B before-course); general as the modules are offered to the community at large. Policy wording follows B, faithful to 'free of charge and can provide a foundation for understanding that aids us in preparing our students to use AI in practice'."
+    }
+   ]
+  },
+  {
+   "id": "mcw-student-policy-guide",
+   "layer": "university",
+   "unit": "Academic Affairs",
+   "course": null,
+   "title": "MCW All Student Policy Guide 2026",
+   "url": "https://www.mcw.edu/-/media/MCW/Education/Academic-Affairs/MCW-All-Student-Policy-Guide.pdf",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance": "prohibit",
+   "tiers": [],
+   "summary": "A 123k-character student policy guide whose only AI content is one bullet in the Academic Integrity section listing AI-generated content for submitted coursework as academic dishonesty.",
+   "stance_why": "The guide lists 'Using artificial intelligence (AI) tools to generate content for submitted coursework' as academic dishonesty with no exception for faculty permission, so use for that work is banned.",
+   "units": [
+    {
+     "why": "Lists 'Using artificial intelligence (AI) tools to generate content for submitted coursework' among acts defined as academic dishonesty under the Academic Integrity policy. It classifies this AI use as misconduct (P36). P19 also fits, but the defining feature is the integrity classification, so P36; the line has no permission exception.",
+     "anchor": "Using artificial intelligence (AI) tools to generate content for submitted coursework",
+     "frag_start": "Using artificial intelligence (AI) tools",
+     "frag_end": "for submitted coursework",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "prohibit",
+     "topics": [
+      "prohibited-uses",
+      "integrity-sanctions",
+      "code-generation"
+     ],
+     "fit_note": "Also bans AI-generated content in submitted coursework (P19); recorded as misconduct only. Unlike neighbouring items, no faculty exception for AI is stated.",
+     "resolution_why": "Both coders: P36, student, must-not, prohibit. Phase differed (A during-work, B general). Source lists the act under 'Academic dishonesty is defined as...' for 'any activity, work, or production which affects the grade', i.e. graded work, so during-work. This bullet has no 'unless explicitly permitted by faculty' clause, unlike neighbouring items. Both fit notes merged."
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Computing and school layers not found (medical school). The primary MCW Guiding Principles document was not fetched; only the AI Digest summary of it was coded. The ETHICAL, AAMC and AMA items on the digest are external resources and were coded only where MCW itself endorses them. Reconciler: coder B's three extra units were dropped: the Microsoft Co-Pilot link (names a resource only, no rule), the ETHICAL framework purpose sentence (describes an external CSU framework), and the AAMC 'will be updated as needed' (about AAMC's principles, not MCW's)."
+}

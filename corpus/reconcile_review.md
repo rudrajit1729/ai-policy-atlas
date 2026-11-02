@@ -1,0 +1,3468 @@
+# Reconciliation review
+
+## G01 Prohibit AI on graded work by default — 155 statements, 119 institutions
+- `acu-library-faculty-ai-guide-e8` [override] you are not authorized to use artificial intelligence engines
+- `algoma-student-genai-guidelines-e3` [rule] Students may not in an circumstances submit work entirely produced by Generative AI,
+- `appstate-cs3435-e1` [rule] All work that you submit in this class must be your own
+- `acc-cosc1436-fa25-csit-gai-e1` [rule] Computer Science and Information Technology ( CSIT) Generative AI (GAI) Policy
+- `apu-ai-classroom-use-guidelines-e3` [rule] Any use of A.I.-generated work to outline, write, create, or edit assignments
+- `baylor-csi3334-f25-hamerly-e1` [rule] all assignments should be your original work
+- `baylor-csi3334-f25-hamerly-e2` [rule] should not be produced in part or in total with the assistance of artificial intelligence
+- `bu-cas-cs391b-e1` [rule] answers to homework problems in the published literature, on the web, or using generative AI
+- `brandeis-ctl-ai-syllabus-statements-e3` [rule] You are not permitted to use generative AI while studying or completing work
+- `byu-cs111-e7` [rule] you should NOT use AI to write or debug any code.
+- `brown-csci0190-e3` [rule] for many tasks we will not allow you to use AI.
+- `brown-csci1377-e1` [rule] it is not acceptable to get a solution to a problem
+- `brynmawr-cs109-e1` [rule] AI tools may not be used to complete any programming assignments.
+- `calpoly-cpe453-e1` [rule] including the use of generative AI
+- `calpoly-csc248-e1` [rule] Do not use ChatGPT or similar tools for graded work in this class.
+- `csulb-optional-ai-syllabus-statements-e7` [rule] any use of AI tools for work in this class may be considered a violation
+- `carleton-cs111-e1` [rule] or generative AI (e.g ., ChatGPT)
+- `carleton-comp1405-e3` [rule] chatbots (e.g., ChatGPT, Google Bard, Bing Chart), research assistants (e.g., Elicit)
+- `cmu-10315-e1` [rule] complete all graded assignments in this course yourself, without any use of generative artificial intelligence
+- `cmu-10315-e2` [rule] Please refrain from using AI tools to generate any content
+- `cmu-15122-e2` [rule] You may not use AI tools for practice problems.
+- `cmu-15122-e4` [rule] You may not use AI tools for any part of work that you will submit
+- `chapman-provost-ai-syllabus-considerations-e8` [rule] more likely to increase academic integrity violations without a clear, direct benefit
+- `ccsf-cs110a-e1` [rule] submitting work written by someone else (including AI)
+- `colostate-cs312-e1` [rule] do not utilize generative AI for any graded work.
+- `columbia-coms4111-e2` [rule] By default, large language models (e.g., ChatGPT, Sonnet, Mistral, etc) are not permitted.
+- `concordia-ctl-genai-teaching-guidelines-e6` [rule] including tools like ChatGPT and other AI writing or coding assistants, is prohibited.
+- `cornell-cs1110-e4` [rule] You may not get aid from generative AI.
+- `cornell-info2950-e3` [rule] You may not make use of the technology to complete substantive portions of your assignments
+- `deanza-academic-integrity-use-of-ai-e3` [rule] students must use AI tools in accordance
+- `depaul-csc-355-e2` [rule] (even with later modifications)
+- `drexel-cs172-e2` [rule] Code submitted for a grade must be written by the student without assistance from AI.
+- `drexel-cs430-e1` [rule] You may not use generative tools to produce your programs.
+- `drexel-cs430-e2` [rule] You use generative tools to create portions of your assignments.
+- `duke-compsci101-e1` [rule] You cannot use any AI, such as LLMs to solve problems and write
+- `ecu-ofe-syllabus-language-e5` [rule] Students are not allowed to use advanced automated tools
+- `fsu-cop3330-e1` [rule] ALL WORK IN THIS COURSE IS INTENDED TO BE DONE INDIVIDUALLY
+- `gmu-cs-honor-code-e1` [rule] regarding ALL kinds of work for classes in the CS major
+- `gmu-cs-honor-code-e4` [rule] use assistive technology, artificial intelligence, or other tools to complete assignments
+- `gwu-csci-1012-e3` [rule] Using AI for anything
+- `gwu-csci-2113-e4` [rule] You may also not use an LLM for any other reason in this course.
+- `gatech-cs1331-chambers-e3` [rule] The use of generative AI is not permitted for completing assignments in this course.
+- `gatech-cs1331-musaev-e1` [rule] Use of ChatGPT, AI tools, Chegg
+- `gatech-cs1331-musaev-e2` [override] is strictly prohibited on programming assignments, quizzes, exams, or any graded work.
+- `iit-cs536-e1` [rule] looking up answers to questions on the web, and using generative AI tools like ChatGPT
+- `kstate-cis598-e2` [rule] You may not use any GenAI tools to complete this assignment.
+- `kennesaw-ccse-fye-policies-e1` [rule] Written by you, without the use of AI, or other external help
+- `kennesaw-ccse-fye-policies-e2` [override] Using AI complete or aid in the completion of any lab, assignment, quiz, or exam
+- `lafayette-cs150-e1` [rule] advanced automated tools (artificial intelligence or machine learning tools such as ChatGPT or Dall-E 2)
+- `lafayette-cs150-e2` [rule] complete each assignment without substantive assistance from others, including automated tools
+- `macalester-comp123-e5` [rule] solutions generated by AI of any kind are considered the use of a prohibited source
+- `mcmaster-compsci-2lc3-e1` [rule] Students are not permitted to use generative AI in this course.
+- `mcmaster-cs-2c03-e1` [rule] Use of generative AI is strictly prohibited
+- `mcmaster-cs-2c03-e2` [rule] permitted to use generative AI in this course.
+- `musc-ai-acceptable-use-framework-e4` [rule] AI may not be used at any point during the task
+- `mercer-ctl-sample-syllabus-ai-e5` [rule] do not use AI to produce, solve, analyze, code, create, rewrite, translate, or complete work
+- `mtu-provost-ai-syllabus-guidance-e6` [rule] The use of AI for assistance in completing other coursework is prohibited
+- `mtsu-policy-323-e4` [rule] GAI tools may not be used for any purpose in any graded assignment
+- `msstate-ece1013-e1` [rule] Generally, students are NOT permitted to use generative AI tools such as ChatGPT for assignments
+- `montana-state-csci232-f26-e1` [rule] You are not allowed to use any AI tools, Generative AI, or chatbots
+- `ncat-provost-universal-ai-guidelines-e7` [rule] the use of AI-generated content is strictly prohibited
+- `ncsu-csc316-e3` [rule] The use of these services are prohibited for assessed work in this class.
+- `neu-cs3650-e2` [rule] use of LLMs, chatbots, AI agents, etc. to complete homework assignments or projects is prohibited
+- `oberlin-csci150-labs-e1` [override] Use of generative AI for any reason is not allowed.
+- `ohio-ctla-genai-syllabus-statements-e2` [rule] Any use of generative AI at any stage of your work in this course
+- `okstate-itle-chatgpt-sample-syllabus-statements-e4` [rule] prohibited from using any generative AI tools such as ChatGPT, Bing AI, or Bard
+- `okstate-itle-chatgpt-sample-syllabus-statements-e7` [rule] to completely produce, reproduce, and/or manufacture paper and/or other assignments without using any personal effort
+- `odu-cs312-e1` [rule] The use of ChatGPT or other AI tools is not permitted in this class.
+- `pomona-cs-academic-honesty-policy-e1` [rule] information obtained from sources other than those approved by the instructors, including AI tools
+- `rice-comp321-e1` [rule] any AI-based tools, including, but not limited to, ChatGPT, GitHub Copilot, and TabNine,
+- `rice-comp321-e2` [rule] for any purpose in this course.
+- `rit-swen261-e1` [rule] Generative AI tools are not considered to be part of the official toolkit
+- `rit-swen261-e4` [rule] anything you submit must not have been created or modified by any AI means
+- `rosehulman-csse332-e1` [rule] without the use of generative AI platforms
+- `rowan-cs-04113-ioop-chien-e1` [rule] Generative AI is prohibited in this course and is also considered a violation
+- `sjsu-cs46a-tshukudu-e2` [rule] AI tools may NOT be used to generate work that you submit
+- `seattleu-syllabus-template-genai-e2` [rule] Use of generative AI tools is not permitted in this course because a key goal
+- `shu-ai-syllabus-statements-e3` [rule] Students are prohibited from using Artificial Intelligence (AI) tools to complete
+- `stfx-csci161-e1` [rule] The use of AI is prohibited.
+- `stanford-cs106b-honor-code-e1` [override] Use of generative AI tools is disallowed on graded work.
+- `stonybrook-cse114-e1` [rule] their use in completing exams, quizzes, or programming assignments is strictly prohibited.
+- `temple-cis-1068-e4` [rule] Do not use generative AI tools as a shortcut to completing your assignments
+- `tnstate-libguide-ai-syllabus-options-e2` [rule] Generative AI including but not limited to ChatGPT is not permitted.
+- `tnstate-libguide-ai-syllabus-options-e6` [rule] Students should not use AI outside of the parameters set by their instructor
+- `tcu-cosc30253-e1` [rule] AI and other unapproved assignment-help tools MAY NOT be used for course assignments
+- `tcu-cosc30253-e4` [rule] Using AI to brainstorm, formulate arguments, or template ideas for assignments;
+- `osu-cse2221-2231-policies-e1` [rule] You may not use Generative AI in these courses!
+- `uta-cse1310-e2` [rule] the use of Generative AI (GenAI) tools in completing assignments or assessments is strictly prohibited
+- `utaustin-cs314-e3` [override] Generative and agentic AI are utterly and completely disallowed on all aspects of programming assignments
+- `utaustin-cs314-e4` [rule] per CS department policy AI use on any course element with points attached
+- `uttyler-cosc3315-e6` [rule] Refrain from using AI tools to generate any course content for assignments.
+- `buffalo-cse331-e1` [override] not allowed to use ChatGPT (or any other generative AI tool) for your homeworks.
+- `ua-oaa-genai-guidelines-e7` [rule] Use of any generative AI tool in this course constitutes academic misconduct
+- `arizona-infosci-academic-integrity-e2` [rule] in all academic work including composition of text, computing code and media content
+- `ucalgary-cpsc219-e3` [rule] Submitting work generated by AI tools is strictly prohibited unless otherwise stated in the assessment.
+- `uci-ics33-e1` [rule] the use of generative AI tools is prohibited in this course
+- `ucf-cop3502c-e5` [override] strictly prohibited for completing any part of assignments, projects, or exams
+- `uchicago-cmsc25910-e1` [rule] we do not permit the use of any generative models for any prose
+- `ucincinnati-eece-6083-e3` [rule] Students must not seek the assistance of Generative AI Tools like ChatGPT.
+- `uga-ctl-genai-policies-e7` [rule] the use of generative AI (GAI) tools is strictly prohibited
+- `uiuc-grainger-ai-guidance-e6` [rule] The use of generative AI is strictly prohibited for homework assignments and project track 2.
+- `uiuc-ischool-is445-e4` [rule] to directly answer specific questions or complete entire assignments is strictly prohibited
+- `umanitoba-catl-genai-syllabus-statements-e4` [rule] including tools like ChatGPT and other AI writing or coding assistants, is prohibited
+- `umd-cmsc132-e1` [rule] Using any form of AI to produce any part of coursework that
+- `umass-compsci383-e6` [rule] the use of additional external generative AI tools (Claude, ChatGPT, etc.) are prohibited
+- `memphis-comp1900-e4` [rule] generative AI tools like ChatGPT
+- `unr-cs474-e1` [rule] any unauthorized use of generative AI tools (such as ChatGPT)
+- `unr-cs474-e5` [rule] Using AI to summarize or contextualize reading assignments or source materials.
+- `unh-provost-syllabus-guidance-ai-e5` [rule] is strictly prohibited in this course, even
+- `uncw-csc365-e2` [rule] they should not be used to complete assignments or projects in their entirety
+- `unc-comp110-e7` [rule] Chegg, CourseHero, or any generative AI model (e.g., ChatGPT).
+- `uncg-ism671-e2` [rule] We specifically forbid the use of generative artificial intelligence (GAI) tools at all
+- `ou-cs1323-mackay-e1` [rule] Do not use artificial intelligence systems like ChatGPT to complete your work.
+- `ou-cs2334-e2` [rule] is considered a violation of the academic integrity policy for this course
+- `pitt-cs0445-khattab-e1` [rule] make use of ChatGPT or any other generative AI applications at any time
+- `pitt-sci-cs1632-e4` [rule] As such, the use of generative AI for either is strictly prohibited.
+- `up-code-of-academic-integrity-misuse-of-ai-e3` [rule] submitting work generated by AI as one’s own without proper acknowledgement
+- `uprrp-circular-8-ia-e3` [rule] No se permite el uso de herramientas de la IA en ninguna parte
+- `uri-csc411-daniels-e3` [rule] you may not use generative tools to do your assignments
+- `rochester-csc171-e5` [rule] Use of AI to complete your homework
+- `usask-cmpt434-e1` [rule] Any use of Generative AI tools (e.g., ChatGPT) for the course assignments or the project
+- `usc-csci103l-e1` [rule] we do not allow AI use for any reason in this course
+- `usc-csci103l-e3` [rule] generative AI would remove any of that benefit, we do not allow its use
+- `utep-cs1310-e2` [rule] the use of ChatGPT or any similar AI language -generation tools is strictly prohibited
+- `utsa-cs1063-e1` [rule] Use of generative AI is not authorized in this course.
+- `utsa-cs1083-e2` [rule] The use of GenAI tools is strictly prohibited for all course activities
+- `utoronto-ischool-inf2214-e2` [rule] other AI writing or coding assistants, is prohibited.
+- `uvm-cs1210-e1` [rule] Using generative AI such as ChatGPT or Claude, or websites such as Chegg
+- `uva-sds-ai-policy-e5` [rule] The use of generative AI tools is NOT permitted for the following activities
+- `uw-cse312-ai-policy-e1` [rule] AI is not permitted on any graded work in this course.
+- `uwaterloo-cs114-e2` [rule] Most course components do not permit the use of GenAI.
+- `uwindsor-comp-1410-e1` [rule] Use of Generative AI (Artificial Intelligence) tools is prohibited
+- `uwinnipeg-acs1903-e1` [rule] The use of AI tools in this course is prohibited.
+- `uwinnipeg-acs1904-e1` [rule] The use of AI tools in this course is prohibited.
+- `uwinnipeg-acs1904-e2` [rule] This includes all forms of generative AI, like ChatGPT, Claude, Gemini, etc.
+- `wisc-cs220-syllabus-e1` [override] Generative AI is not allowed on Projects.
+- `uwm-syllabus-statements-genai-e7` [rule] The use of Generative Artificial Intelligence (AI) is not allowed in this class.
+- `uwyo-syllabus-template-ai-e3` [rule] Students are not permitted to use advanced automated artificial intelligence or machine learning tools
+- `uwyo-syllabus-template-ai-e4` [rule] without substantive assistance from others, including automated tools.
+- `ufv-tlc-ai-guidelines-e3` [rule] students should not use AI for generating or completing assigned tasks
+- `umoncton-integrite-ia-plans-de-cours-e2` [rule] sera formellement interdite lors de toutes les évaluations dans ce cours
+- `usherbrooke-ift339-e2` [rule] (IAg) est interdites pour la production de vos devoirs ainsi que lors des minitests
+- `uqam-inf1120-e1` [rule] outils externes d’IA générative (comme ChatGPT) dans le cadre de ce cours est strictement interdite
+- `uqam-inf2050-e1` [rule] Toute forme d’utilisation d’IA generative est strictément et formellement interdit.
+- `viu-csci159-wessels-e1` [rule] or AI tools such as CoPilot or chatGPT
+- `vcu-cmsc413-intro-cybersecurity-e7` [rule] You cannot use AI to complete hands-on system tasks
+- `wellesley-cs111-ai-tools-policy-e2` [rule] the use of AI-powered tools for learning and completing any type of assignments
+- `western-cs1026-e4` [rule] prohibited and cannot be used on assignments or tests (including exams and quizzes)
+- `western-cs1027-e5` [rule] is not permitted in the completion of any course assessments
+- `western-cs2120-e3` [rule] Generative AI tools (e.g., ChatGPT, Copilot, Claude, Gemini) are generally not permitted
+- `wwu-csci141-e1` [override] Use of AI is not allowed in this course for any assigned work.
+- `laurier-cp164-e1` [rule] The use of generative AI is not permitted in this course.
+- `wright-ceg4350-e1` [rule] You are not permitted to use generative AI tools for any work for this section
+- `wright-ceg4350-e2` [rule] This includes the use of popular tools like ChatGPT, Midjourney, GitHub Co-Pilot
+- `ets-log430-e1` [rule] L’utilisation des systèmes d’intelligence artificielle générative (SIAG) dans les activités d’évaluation constitue une infraction
+
+## G02 Permit or encourage AI by default — 73 statements, 55 institutions
+- `asu-cse110-ulc-e2` [rule] Use of AI tools is generally welcome and even encouraged in this class.
+- `bu-cas-cs391b-e2` [override] The use of generative AI tools like ChatGPT is permitted as long as it conforms
+- `byui-cse-genai-policy-e1` [rule] encourages students to utilize AI tools for enhancing learning, creativity, and productivity
+- `cmu-15112-e2` [rule] AI use is allowed and even encouraged on preps, homeworks, labs, and projects.
+- `cornell-info2950-e6` [rule] you may use generative AI as a resource as you complete assignments
+- `dartmouth-cs10-e2` [override] I do not consider it to be an honor principle violation for you
+- `famu-cop3014c-c01-e2` [override] the use of AI is required to support idea generation, drafting, and content refinement
+- `fiu-cap4104-hci-syllabus-e1` [override] intentionally leverage Generative AI (GenAI) tools to support parts of their workflow
+- `georgetown-cosc3450-e1` [override] you can use generative AI tools for homeworks and projects.
+- `hampton-chatgpt-ai-task-force-midyear-report-e1` [override] generative AI, including but not limited to ChatGPT, should not be banned from the university.
+- `harvard-cs61-e1` [override] We aren’t prohibiting AI use for problem sets.
+- `iu-indianapolis-teaching-iu-genai-policies-e8` [override] Banning them outright is not only likely a losing battle
+- `marquette-cosc3250-e2` [override] We assume that some students will make use of these tools
+- `marquette-cosc3410-e2` [override] I expect many of you will choose to leverage LLMs when coding in this course.
+- `middlebury-csci1010-e1` [rule] Use of AI systems is permitted and encouraged subject to the following restrictions and guidance.
+- `nyu-csci-ua-102-e1` [override] In this class, we will not ban these tools
+- `nyu-intro-cs-bloomberg-e3` [override] Students are welcome to use generative AI tools, such as ChatGPT, Gemini, GitHub Copilot,
+- `nyu-software-engineering-bloomberg-e4` [override] Students are welcome to use generative AI tools, such as ChatGPT, Gemini, GitHub Copilot,
+- `nipissing-genai-guide-instructors-e1` [override] Currently, the University does not restrict the use of AI tools such as ChatGPT
+- `nipissing-genai-guide-instructors-e2` [override] a general prohibition on the use of AI technologies in university teaching
+- `nipissing-genai-guide-instructors-e5` [override] It is advised that instructors don’t simply ban specific generative AI applications such as ChatGPT
+- `odu-cs355-e1` [override] ChatGPT and similar tools are not prohibited.
+- `oregonstate-coe-ai-chatbot-policy-example-e1` [override] You ARE allowed to use ChatGPT, Google Bard, Bing AI, or similar AI chatbots
+- `purdue-cs59300-ser-e1` [override] Students are permitted to use generative AI tools (e.g., ChatGPT) for any class assignments.
+- `smu-csci2341-e3` [override] You are encouraged to use AI
+- `scu-engineering-ai2-e6` [override] welcome and expected to use generative AI tools (e.g. ChatGPT, GPT-4, etc.) in this class
+- `smith-csc370-ai-guidelines-e1` [rule] Students in this course are cautiouly encouraged to employ AI when it supports their learning.
+- `syracuse-ist256-e2` [rule] we embrace the use of AI in this course with proper disclosure and citation
+- `tamu-csce420-e1` [override] Use of AI tools, including ChatGPT, is permitted in this course
+- `jefferson-gai-policy-e2` [override] Unless specifically prohibited, use of these tools is permissible
+- `twu-guidelines-genai-teaching-learning-e2` [override] Banning the use of generative AI for an entire course is not an option
+- `tulane-guidelines-ethical-responsible-use-ai-e3` [override] Rather than restricting AI, faculty are encouraged to explore its potential.
+- `ubc-cpsc210-genai-e3` [rule] Altogether banning its use seems futile.
+- `ucdavis-ecs154b-genai-e1` [override] I encourage you to use these tools when appropriate.
+- `uchicago-cmsc25700-nlp-e1` [rule] allowed as long as they are properly disclosed for each submission.
+- `uh-cosc4368-e1` [override] The use of AI-related tools, such ChatGPT, is permitted in this course.
+- `uic-cs218-data-ai-e2` [override] Not using Generative AI will likely result in you do poorly in this class!
+- `uic-cs218-data-ai-e4` [override] it is assumed you will use Generative AI (e.g. ChatGPT) extensively for just about everything.
+- `uic-cs218-data-ai-e6` [override] Use Generative AI to get your questions answered and to generate content.
+- `uiuc-cs124-ai-e1` [rule] CS 124 has embraced AI coding agents to prepare students for the future of programming.
+- `uiuc-cs124-syllabus-e3` [override] an AI coding agent will write most of your code, and we expect it to.
+- `uiuc-cs128-syllabus-e1` [rule] Using AI in this course is optional.
+- `uiuc-ischool-is445-e1` [override] allowed to utilize ChatGPT or similar AI language models for course assignments or tests
+- `memphis-comp7118-e1` [rule] you are welcome to use foundation models
+- `memphis-comp7118-e2` [override] in a totally unrestricted fashion, for any purpose, at no penalty
+- `memphis-comp7118-e7` [rule] the use of foundation models is encouraged
+- `miami-csc120-e2` [rule] You are welcome to use AI-tools to help you program.
+- `olemiss-cetl-syllabus-template-genai-e4` [override] outright bans on generative AI are increasingly difficult to enforce.
+- `unh-provost-syllabus-guidance-ai-e3` [rule] The university encourages guidance and support in students’ use of generative AI over blanket prohibition.
+- `uoregon-cs212-e1` [override] It is your choice if you want to utilize Generative AI (e.g., ChatGPT)
+- `uoregon-cs322-e2` [override] students can use genAI tools (e.g., ChatGPT, Claude Code, etc.) in this class
+- `uprm-upr-cert66-politica-ia-e2` [override] El estudiantado podrá utilizar IA como parte de su experiencia educativa,
+- `uregina-genai-hub-instructor-resources-e5` [rule] such as “No GenAI is allowed in this course”, is not helpful to students
+- `uri-csc212-e1` [override] and students are free to use it in this course.
+- `uri-csc461-e1` [rule] This course embraces the integration of AI tools such as
+- `usf-cap4111-e1` [override] The use of generative AI tools is permitted for course-related submissions
+- `utsa-cs2113-e4` [override] It is not my intension to stop or restrict the use of Generative AI
+- `utoronto-csc148-e1` [override] you may use generative artificial intelligence (AI) tools, including ChatGPT and GitHub Copilot
+- `uvic-csc361-e1` [rule] I welcome the use of generative AI for assignment completion
+- `uva-cs2120-e1` [rule] generative AI tools such as ChatGPT, Claude, and Gemini on problem sets is encouraged
+- `uva-sds-ai-policy-e8` [rule] the use of foundation models is encouraged
+- `uva-sds-ds1001-e2` [override] Generative AI (GenAI) tools can be a helpful part of your workflow when used well.
+- `teluq-inf1901-usage-ia-e1` [rule] l’usage d’assistants intelligents (ChatGPT, Claude, Gemini, etc) est évidemment encouragé !
+- `teluq-inf1901-usage-ia-e2` [override] Ceci s’applique autant aux travaux notés qu’au reste du contenu du cours.
+- `uqac-dim-8inf972-atelier-ia-e1` [override] L’usage des outils d’Intelligence Artificielle (p.ex. chatGPT, Github Copillot, etc.) est autorisé
+- `vanderbilt-sample-syllabi-genai-ece-e1` [override] You are free to use generative AI algorithms such as Chat-GPT in your work.
+- `villanova-ai-guidelines-e5` [override] Villanova University does not restrict the use of AI tools in the classroom.
+- `vt-cs3214-e2` [override] allow the use of AI assistants for these projects, but (not yet) require their use.
+- `wmu-ai-in-the-syllabus-e2` [override] tempting to take a prohibitive classroom policy stance against the use of AI tools
+- `wwu-csci301-e1` [rule] The use of generative AI tools is allowed with two conditions:
+- `wpi-cs3013-e1` [rule] this class both encourages the use of generative AI coding assistant tools
+- `wpi-cs3013-e5` [override] Students may use online resources and Generative AI tools to work on the assignments
+- `york-eecs4414-e1` [override] may be used in EECS 4414 to support learning, programming, experimentation, and project development
+
+## G03 Discourage AI without forbidding it — 13 statements, 12 institutions
+- `carleton-comp1406-e2` [rule] AI tools for any of the other programming activities in the course is strongly discouraged
+- `colby-cs151-e3` [rule] In general, the use of generative AI (like ChatGPT) in CS 151 is discouraged.
+- `grinnell-csc151-eikmeier-e1` [override] allowed, but not recommended in order to get as much learning as possible
+- `princeton-cos226-e2` [rule] We do not ban LLMs for programming assignments, but we strongly discourage using them
+- `utaustin-cs371n-e4` [override] use ChatGPT for conceptual questions on assignments, but discouraged from doing so
+- `ubc-cpsc210-genai-e6` [override] we'd really recommend you do the labs without AI
+- `ucmerced-cse176-e3` [rule] we discourage the use of AI systems
+- `cuboulder-csci3308-e1` [rule] generative AI tools to complete any aspect of assignments for this course are discouraged.
+- `umn-csci5271-e1` [override] can potentially be tools for learning, but they should be used with caution
+- `uvic-csc226-e1` [rule] is strongly discouraged as a study tool for this course
+- `uqam-inf3105-e2` [override] Il est donc recommandé d’éviter d’utiliser l’IA dans ce cours.
+- `uqam-inf3105-e4` [override] l’IA n’est pas formellement interdite dans le cours, elle est seulement déconseillée.
+- `vassar-cmpu224-e1` [rule] discourage the use of LLMs in this class but I do not explicitly forbid them
+
+## G04 Let each instructor or assignment set the rule — 156 statements, 134 institutions
+- `acu-library-faculty-ai-guide-e1` [rule] Best practice is to define what is acceptable and not acceptable in your class.
+- `acadia-jodrey-cs-academic-integrity-e3` [rule] each individual class at Acadia will approach the use of AI-generated content differently
+- `algoma-student-genai-guidelines-e2` [rule] Instructors have the discretion to determine the scope of permitted Generative AI
+- `algoma-student-genai-guidelines-e5` [override] you must obtain written permissions from the instructor before using it for any assignment
+- `american-oai-ai-academic-integrity-guidance-e1` [rule] there is currently no AI policy that applies to the entire university system
+- `american-oai-ai-academic-integrity-guidance-e3` [rule] Faculty are responsible for determining what use of generative AI tools, if any, is appropriate
+- `astate-ai-ethical-use-guidelines-e1` [rule] faculty retain the authority to determine the scope of acceptable usage of AI
+- `astate-ai-ethical-use-guidelines-e3` [override] the adoption of standardized, universally applicable AI policies proves impractical in the long run.
+- `augusta-ai-at-au-e4` [rule] You must always follow the specific AI guidance provided in your course syllabus.
+- `bsu-ai-use-guidelines-e4` [rule] Completion of the checkers does not automatically mean GenAI use is permitted on every assignment.
+- `bellevue-elearning-ai-for-students-e2` [rule] Individual classes and instructors will define their specific expectations regarding AI use
+- `brown-csci0190-e4` [override] some assignments where we make AI optional or even ask you to use it.
+- `ccny-cuny-academic-integrity-e2` [rule] Any use of generative AI tools must be in line with the usage policy
+- `cuny-gc-academic-integrity-policy-2024-e2` [rule] generative AI tools must be in line with the usage policy for specific
+- `caltech-provost-genai-guidance-e4` [rule] please make sure to follow the guidance provided by the course instructor
+- `fresno-state-ai-guidelines-e8` [rule] Each course may have its own rules and expectations regarding AI usage, set by the
+- `csuf-fdc-creating-genai-policy-e1` [rule] Each faculty member is empowered to determine the appropriate use of these tools
+- `csus-ctl-course-preparation-e1` [rule] how you will, or will not allow, the use of Artificial Intelligence (AI)
+- `cbu-ai-with-purpose-e1` [override] it is neither practical nor appropriate to impose rigid, universal rules
+- `cwru-provost-example-ai-policies-e1` [rule] the university respects faculty's academic freedom to manage their classes
+- `cmich-sample-syllabus-statements-e1` [rule] Faculty should adapt these examples to match their course outcomes
+- `cmich-sample-syllabus-statements-e5` [rule] appropriate within the context of a course, guidance on properly utilizing them
+- `chapman-provost-ai-syllabus-considerations-e1` [rule] allow individual instructors to determine their own syllabus statement identifying acceptable use of generative AI
+- `csuohio-ai-syllabus-statement-examples-e1` [rule] AI policy statements will be determined by individual instructors, departments, and programs.
+- `colgate-teaching-and-ai-e1` [rule] scholarship, and creative work is a faculty member's individual choice.
+- `colgate-teaching-and-ai-e6` [rule] some tools listed are not allowed or are discouraged in specific courses, and assignments.
+- `mines-csci437-computer-vision-e1` [override] is allowed outside of class but is prohibited during class activities where specified
+- `creighton-academic-misconduct-policy-e2` [rule] where such a practice has not been specifically approved by the instructor
+- `dal-csci4177-5709-ai-tools-e2` [override] specific assessments in this course will disallow the use of Al-driven tools
+- `davidson-artificial-intelligence-policy-e1` [rule] Faculty individually set the policy for acceptable use of AI in their classes
+- `deanza-academic-integrity-use-of-ai-e2` [rule] has established a course-specific policy on AI use, you are expected to follow those
+- `ecu-ofe-syllabus-language-e1` [rule] faculty have the ability to determine the extent to which artificial intelligence may be used
+- `etsu-ai-instructional-policy-e2` [rule] The department or instructor of record may also establish policies
+- `evms-vhs-ai-guidelines-e3` [rule] supplement that framework with guidance specific to the medical education context
+- `erau-student-code-ai-e7` [rule] Students are responsible for understanding and following any instructor-specific restrictions on AI use.
+- `emory-college-syllabus-additions-ai-e1` [rule] It is up to the instructor to determine whether student use of
+- `fau-ai-syllabus-statement-e3` [rule] Class policies related to AI use are decided by the individual faculty.
+- `fit-provost-genai-academic-work-e4` [rule] a course instructor has complete autonomy in determining the pedagogical use of GenAI tools
+- `gmu-cs-honor-code-e2` [rule] Your instructor may state further policies for his or her class
+- `gmu-cs-honor-code-e3` [rule] permission to do something on one assignment, in one class, or by one instructor
+- `georgiasouthern-provost-ai-academic-contexts-e1` [rule] faculty are free to use, not use, or otherwise structure the use of AI
+- `gonzaga-student-guide-responsible-ai-use-e1` [rule] Each faculty member sets their own expectations for AI use in their course.
+- `hec-montreal-daip-iag-evaluation-e1` [rule] HEC Montréal vous laisse le choix, et ce pour chacune de vos évaluations
+- `hampton-chatgpt-ai-task-force-midyear-report-e4` [rule] additional policies related to the usage of generative AI should be directed towards instructors
+- `hampton-chatgpt-ai-task-force-midyear-report-e7` [rule] the allowance of each department with the approval of their respective Dean(s) to determine
+- `hmc-ai-use-levels-pilot-e2` [rule] You can choose whether these policies apply to all student work for your course
+- `hofstra-provost-genai-resources-e1` [rule] generative artificial intelligence tools must be consistent with the instructor’s stated course policy
+- `isu-aic-best-practices-e1` [rule] Individual instructors have the freedom to decide if and how AI-generated material is allowed
+- `iastate-studentconduct-faculty-ai-e1` [rule] These tools may be permitted, restricted, or prohibited depending on the course, assignment
+- `jsu-common-syllabus-ai-policy-e2` [rule] individual faculty, departments, and/or colleges may have additional criteria in their syllabus
+- `jsu-common-syllabus-ai-policy-e4` [override] AI use is permissible when used for specific tasks as noted and approved
+- `kean-faculty-manual-genai-e1` [rule] faculty members specify in their course syllabi how AI and GenAI may be used
+- `kpu-tl-genai-student-guide-e1` [rule] Check your course syllabus for a statement on GenAI use for your course.
+- `lakehead-chatgpt-ai-tools-faq-e1` [rule] The use of AI tools will ultimately depend on the specific course, context,
+- `lamar-cosc3306-e1` [rule] grants instructors the freedom to set their own policies on the use of approved technology.
+- `lehigh-ai-policies-best-practices-e1` [rule] Students are expected to follow course-specific rules set by their instructors
+- `marshall-academic-affairs-ai-e3` [rule] what degree of generative AI use should be integrated in courses
+- `mun-citl-genai-syllabus-statements-e2` [rule] Some academic units or programs may encourage a consistent statement about GAI.
+- `mercer-ctl-sample-syllabus-ai-e1` [rule] Faculty decide whether, when, and how generative AI may be used in courses,
+- `miami-oh-cse-academic-integrity-e3` [rule] within the boundaries and limitations that have been explicitly set forth by the course instructor
+- `mtsu-policy-323-e1` [rule] individual faculty members have the discretion to set standards and procedures
+- `mtsu-policy-323-e2` [rule] Colleges, departments, and other university units are encouraged to provide broad guidance
+- `mst-tlc-gai-guidelines-e4` [rule] Instructors have academic freedom to set acceptable levels of GAI use in their classroom
+- `montclair-ofe-ai-course-policies-e5` [rule] instructors' authority to establish clear expectations about whether and how these tools may be used
+- `nmsu-syllabus-ai-statements-e5` [rule] You will be informed as to when, where, and how these tools are permitted
+- `ndsu-ai-goals-guidance-e3` [rule] Instructors set course policies (including if AI use is allowed at all)
+- `ndsu-ai-goals-guidance-e8` [override] Policies differ by course.
+- `niu-ai-teaching-learning-e3` [rule] faculty have primary responsibility for determining whether and how AI tools may be used
+- `okstate-itle-chatgpt-sample-syllabus-statements-e2` [rule] Faculty may wish to allow students to use generative AI tools, provide specific parameters
+- `oregonstate-ctl-ai-teaching-guidance-e2` [rule] Determination of permitted or prohibited AI use remains at the discretion of the instructor.
+- `pepperdine-ai-use-syllabus-statements-e1` [rule] AI-related syllabus statement is at the discretion of each instructor.
+- `pcc-student-learning-and-ai-e1` [rule] Expectations for AI use in a course are determined by the instructor
+- `pdx-cs-grad-handbook-e1` [rule] the use of generative AI may differ widely among CS courses
+- `rutgers-camden-guidance-ai-e1` [rule] will typically vary depending on the discipline, course, and/or instructor.
+- `smu-provost-genai-pedagogy-e1` [rule] at the discretion of the faculty member whether to use Generative AI in their classroom
+- `sju-academic-affairs-ai-principles-e2` [rule] Saint Joseph’s University affirms the role of faculty judgment in establishing expectations for AI use
+- `slu-syllabus-components-genai-e2` [rule] is determined by each individual instructor, unless otherwise directed by their academic leadership
+- `shsu-academic-affairs-ai-guidance-e1` [rule] It is up to each instructor to specify an AI policy for that particular class.
+- `sfsu-ceetl-teaching-generative-ai-e1` [rule] we recognize that disciplines may vary in their approaches to technology.
+- `scu-engineering-ai2-e1` [rule] a "one-size-fits-all" approach to syllabus statements is not suitable
+- `shu-ai-syllabus-statements-e6` [rule] students must submit a brief written proposal outlining how the AI tool will be used
+- `siuc-faculty-senate-ai-guidelines-e1` [rule] These guidelines are general by design to allow individual faculty members to chose the tools
+- `tc-dfi-genai-guidance-e7` [override] students must submit, in writing, a brief proposal
+- `twu-ai-syllabus-statements-e4` [rule] Faculty can create customized AI policies for each course based on their teaching goals.
+- `umt-teaching-gen-ai-e2` [override] in a coding class, collaboration with tools might be part of the process.
+- `utmb-ai-joint-policy-e1` [rule] students must abide by AI policies or statements for the UTMB schools and courses
+- `utmb-ai-joint-policy-e2` [rule] Faculty are strongly encouraged to develop their own policies regulating the use
+- `jefferson-gai-policy-e3` [rule] is under the purview of the faculty in accordance with department, college and University policies
+- `tulane-guidelines-ethical-responsible-use-ai-e4` [rule] Each instructor has the option of putting in place guidelines that make the most sense
+- `albany-catloe-design-ai-policies-e1` [rule] each instructor will need to do this work for each course they teach.
+- `albany-catloe-design-ai-policies-e8` [rule] students can and should negotiate their use of AI with you
+- `uakron-hci-syllabus-e3` [rule] Students should look to their instructors for guidance on the
+- `uab-provost-ai-working-group-report-e1` [rule] UAB does not dictate that teachers shall require or prohibit the use of generative AI
+- `uah-etl-ai-guidance-faculty-e2` [rule] Individual instructors should feel empowered to create policies specific to the use of AI models
+- `ualberta-cmput301-e2` [override] You can use GenAI tools in this course, within the guidelines specified for each assessment.
+- `arizona-infosci-academic-integrity-e4` [override] clear written instructions will specify the tools allowed or required
+- `arizona-infosci-academic-integrity-e5` [rule] students can use ChatGPT for an assignment if they have unambiguous written documentation
+- `uark-tips-genai-syllabus-statements-e1` [rule] UARK faculty have discretion over whether generative artificial intelligence tools (e.g., ChatGPT) can be used
+- `ubc-cpsc210-genai-e1` [override] its usage on the project and labs, but not in in-class exercises or the exams
+- `ubco-cosc111-e3` [override] Some assignments may explicitly include the use of AI tools
+- `berkeley-data100-e5` [override] Many homework assignments will have dedicated sections or directions outlining where LLM use is permitted
+- `cu-denver-tips-ai-e1` [rule] aid faculty in making informed decisions at the course level
+- `udayton-academic-honor-code-e3` [rule] is always subject to each instructor’s authority and guidelines.
+- `udel-genai-guidelines-faqs-e1` [rule] The ultimate decision on whether students can use generative AI tools rests with the instructor.
+- `guelph-provisional-recommendations-genai-e1` [rule] As an instructor, you determine whether and how AI is incorporated into your courses.
+- `uidaho-cetl-ai-guidelines-e2` [rule] you may conclude that you will not allow them to use AI tools
+- `uidaho-cetl-ai-guidelines-e8` [override] not to advocate for or against your use or your students use of such tools
+- `uiuc-grainger-ai-guidance-e4` [override] You will be informed as to when, where, and how these tools are permitted
+- `ku-ai-guidance-instructors-e2` [rule] Instructors may choose to teach about or use Generative AI (GenAI) tools as appropriate
+- `uleth-teachingcentre-ai-policies-e1` [rule] at the discretion of each individual instructor
+- `ull-academic-affairs-genai-guidance-e1` [rule] encourages academic colleges, departments, and individual faculty to develop specific policies for their students
+- `ull-academic-affairs-genai-guidance-e2` [rule] will be the ones to determine what constitutes proper use of GAI in their classroom
+- `louisville-genai-committee-report-e2` [rule] we propose that course directors and instructors collaborate on developing policies to govern all sections
+- `umb-ai-guidelines-e1` [rule] It will be at the course instructor's discretion to determine whether GenAI may be used
+- `umdearborn-genai-academic-integrity-e1` [rule] or not incorporate it at all, rests solely on each individual instructor.
+- `olemiss-cetl-syllabus-template-genai-e1` [rule] Every instructor may determine for their own class what uses of generative artificial intelligence
+- `uno-ai-for-students-canvas-e2` [rule] Instructors at UNO have the ability to choose how and if they want
+- `unl-ctt-developing-course-ai-policies-e2` [rule] It is entirely up to the individual instructor to determine which policy to use
+- `unl-ctt-developing-course-ai-policies-e5` [override] Maybe it could be useful for helping improve essays but prohibited on quizzes and exams.
+- `unr-cs474-e2` [rule] Some assignments may allow for the use of the authorized use of such tools
+- `une-ai-policy-guidance-faculty-e1` [rule] a single uniform approach to AI use is not practical
+- `unh-provost-syllabus-guidance-ai-e8` [override] they should be used only in the manner specified, and with
+- `uncg-ism671-e4` [rule] different classes may implement different GAI policies
+- `und-provost-ai-e6` [rule] Different fields, courses, and instructors will have different policies and guidelines
+- `unbc-provost-genai-coursework-guidance-e3` [rule] As an instructor, you have the freedom to choose when and how GenAI is used
+- `unco-cetl-syllabus-statements-ai-e3` [rule] whose use might or might not be appropriate depending on the academic discipline
+- `nd-cse-honor-code-guide-e1` [rule] in every course, the instructor has the final say about expectations of academic honesty.
+- `uottawa-academic-integrity-ai-e1` [rule] Some courses will use and permit the use of artificial intelligence tools
+- `uottawa-academic-integrity-ai-e2` [rule] there can be variations in AI use permitted between courses, and even between assignments
+- `up-code-of-academic-integrity-misuse-of-ai-e2` [rule] What constitutes use or misuse of AI will differ depending on context and discipline.
+- `upei-tlc-gait-provisional-guidelines-e2` [rule] Instructors have the freedom to choose whether or not to use generative AI tools
+- `uprm-upr-cert66-politica-ia-e3` [rule] siempre que sea autorizado por sus profesores en las materias asignadas.
+- `usfca-provost-syllabus-statement-options-genai-e3` [rule] only permitted within the parameters provided by the instructor, specific to each assignment
+- `usask-cmpt815-e1` [rule] for paper summaries, assignments, or the project, must be approved by the instructor
+- `usask-cs-grad-genai-policy-e1` [rule] permission to use generative AI in coursework is up to each instructor
+- `usask-cs-grad-genai-policy-e3` [override] the student must seek unambiguous written permission (by email) from the supervisor(s)
+- `usf-cap4111-e7` [override] these will be clearly marked in the assignment guidelines
+- `usm-provost-ai-e4` [rule] Each instructor will determine the permitted use of artificial intelligence in each course
+- `utep-cs1310-e3` [rule] Only assignments that clearly state that AI use is allowed may involve AI tools
+- `utah-ece-plagiarism-ai-policies-e2` [rule] use of AI in coursework will be at the discretion of the instructor
+- `utah-ece-plagiarism-ai-policies-e4` [override] The use of AI in research will be at the discretion of the student’s
+- `uwaterloo-cs136-e2` [override] expectations for using GenAI will discussed in class and outlined on assignment instructions
+- `uwinnipeg-acs3931-e6` [override] students can use AI tools only in assignment labs
+- `uwyo-syllabus-template-ai-e5` [override] on assignments in this course if instructor permission is obtained in advance.
+- `ufv-tlc-ai-guidelines-e1` [rule] Instructors can decide if and how extensively they wish to incorporate AI
+- `ulaval-principes-directeurs-ia-e3` [rule] relève des membres du corps professoral et du personnel enseignant
+- `umontreal-ebsi-ia-generative-e2` [rule] Il faut aussi vérifier auprès de vos enseignant.e.s les pratiques qui sont acceptées.
+- `uqat-guide-presentation-travaux-ia-e2` [override] restreindre l’usage pouvant être fait des outils d’IAG
+- `usu-teach-communicate-about-ai-e2` [rule] such guidelines must be clearly defined in the syllabus, and enforcement must follow the procedures
+- `valencia-cop1000c-e1` [override] tools is permitted in this course for specific, limited purposes
+- `villanova-ai-guidelines-e6` [rule] may choose to prohibit, to allow with attribution, or to encourage generative AI use
+- `wfu-guidelines-academic-use-gai-e2` [rule] permitted uses of GAI may not be the same in every course
+- `wayne-senate-ai-subcommittee-report-e5` [rule] The inclusion of such statements is the instructor’s decision.
+- `western-cs1026-e5` [rule] Some labs and in-class activities may permit their use with limitations.
+- `western-cs2120-e5` [rule] Some tutorials and in-class activities may permit the use of Generative AI with limitations.
+- `ets-log430-e2` [rule] sauf si elle est explicitement autorisée par la personne enseignante du cours
+
+## G05 Name explicit tiers or levels of AI use — 160 statements, 94 institutions
+- `astate-ai-ethical-use-guidelines-e6` [rule] weigh the potential benefits of four basic approaches to the use of generative AI
+- `astate-ai-ethical-use-guidelines-e7` [override] authorize students to utilize these tools throughout the course, provided they clearly cite
+- `auburn-biggio-genai-syllabus-language-e1` [rule] suggests one of four syllabus statements depending on the instructor's desired level of use
+- `auburn-biggio-genai-syllabus-language-e6` [rule] for specific assignments, as designated by the instructor
+- `augusta-ai-at-au-e8` [rule] Clearly define what level of AI assistance is permitted for each specific assignment
+- `apu-ai-classroom-use-guidelines-e2` [rule] Instructors can choose one of three use options to include in their syllabus.
+- `boise-cs-ai-department-approach-e4` [rule] GenAI is permitted only for specific, instructor-defined tasks (e.g., explaining error messages
+- `brandeis-ctl-ai-syllabus-statements-e2` [rule] the university offers four policy "templates" ranging from more restrictive to more permissive
+- `cpp-cafe-ai-sample-policies-e1` [rule] are not permitted in this class, since such work is not entirely your own
+- `cpp-cafe-ai-sample-policies-e2` [rule] unless the specific assignment clearly states that gAI use is allowed
+- `cpp-cafe-ai-sample-policies-e3` [rule] Some assignments in this class will specifically disallow or forbid the use of gAI tools
+- `cpp-cafe-ai-sample-policies-e4` [rule] is allowed in this class with detailed acknowledgement and description of its use
+- `csuf-fdc-creating-genai-policy-e7` [rule] AI use is not permitted at any stage of this assessment.
+- `csulb-optional-ai-syllabus-statements-e3` [rule] You are welcome to use generative AI tools (e.g., ChatGPT, Dall-e, etc.) in this class.
+- `csulb-optional-ai-syllabus-statements-e6` [override] is permitted in this course only for the following activities
+- `cwru-provost-example-ai-policies-e2` [rule] Students are prohibited from using any AI tools, algorithms, or technologies
+- `cwru-provost-example-ai-policies-e4` [rule] such as grammar checking or citation formatting
+- `cwru-provost-example-ai-policies-e6` [rule] AI tools and methodologies are encouraged to enhance learning outcomes
+- `cwru-provost-example-ai-policies-e7` [rule] including assignments, projects, research, and examinations
+- `chapman-provost-ai-syllabus-considerations-e4` [rule] Sample Syllabus Statements by Permission Level
+- `concordia-ctl-genai-teaching-guidelines-e3` [rule] sample syllabus statements for different approaches: encouraged use, limited use, or prohibited use
+- `cue-instructor-genai-guide-e2` [rule] The AIAS comes before the assessment task and should be discussed and negotiated with students.
+- `cornell-gai-education-report-e1` [rule] instructors can choose to prohibit, to allow with attribution, or to encourage GAI use
+- `duquesne-provost-ai-e5` [rule] segmented into three categories of use: permissive, limited and restrictive/no use
+- `ecu-ofe-syllabus-language-e4` [rule] three scenarios and examples of syllabus language
+- `ecu-ofe-syllabus-language-e6` [rule] on assignments in this course if instructor permission is obtained in advance
+- `fau-ai-syllabus-statement-e8` [rule] this specific course is permitted only for specific assignments as indicated by the instructor.
+- `fit-provost-genai-academic-work-e7` [rule] Option 2: Restricted Use
+- `fordham-provost-genai-principles-e2` [rule] Generative AI tools are not permitted in this course.
+- `fordham-provost-genai-principles-e4` [rule] This course allows the use of generative AI tools to facilitate exploration of innovative ideas
+- `georgiasouthern-provost-ai-academic-contexts-e3` [rule] specific guidance to students about forbidden, restricted, and permitted AI uses
+- `hmc-ai-use-levels-pilot-e1` [rule] to increase clarity for students about what AI usages are allowed or disallowed
+- `hmc-ai-use-levels-pilot-e3` [rule] AI Use Level 0: No AI Use Allowed as it Inhibits Learning in this Class
+- `hmc-ai-use-levels-pilot-e4` [rule] AI Use Level 2: Augmentative Usage Only
+- `hmc-ai-use-levels-pilot-e5` [rule] AI Use Level 3: Open AI Use
+- `iu-indianapolis-teaching-iu-genai-policies-e3` [rule] permitted in this course for all assignments and assessments with no penalty
+- `iu-indianapolis-teaching-iu-genai-policies-e5` [rule] is strictly prohibited for any part of your assignments
+- `kstate-cis598-e1` [rule] This course uses a stoplight approach regarding the use of generative artificial intelligence
+- `kstate-cis598-e6` [override] You may make unlimited use of GenAI tools to complete this assignment.
+- `lsu-faculty-senate-gai-guidelines-e8` [rule] Option 1: Prohibited – No Use of GAI
+- `macewan-ctl-genai-recommended-practices-e2` [rule] AI use may be encouraged, discouraged, or permitted to be used in some ways
+- `marshall-academic-affairs-ai-e4` [rule] Some assignments prohibit AI use entirely.
+- `musc-ai-acceptable-use-framework-e3` [rule] instructors will specify one of five categories
+- `musc-ai-acceptable-use-framework-e7` [override] Which MUSC AI Acceptable Use category fits, and how will I explain
+- `mun-citl-genai-syllabus-statements-e8` [rule] You are permitted to use generative AI tools in some assessments in this course.
+- `mercer-ctl-sample-syllabus-ai-e3` [rule] Label assignments as Red, Yellow, or Green and identify the specific AI functions
+- `mtu-provost-ai-syllabus-guidance-e1` [rule] These templates, categorized into three tiers—General Permission, Conditional Permission, and Prohibition
+- `mtu-provost-ai-syllabus-guidance-e2` [override] The use of GAI tools is permitted with the understanding that
+- `mst-tlc-gai-guidelines-e1` [rule] The task force produced three levels of GAI use in courses:
+- `montclair-ofe-ai-course-policies-e3` [rule] including no use of AI, some use of AI, or unrestricted use of AI
+- `morehouse-ai-academic-guidelines-2-e3` [rule] categorized under Open Use, Use with Disclosure, Use with
+- `nmsu-syllabus-ai-statements-e1` [rule] Select one of the following three statements that best fits your course to include.
+- `nmsu-syllabus-ai-statements-e2` [override] Use of AI tools is permitted in this course for students who wish
+- `ncat-provost-universal-ai-guidelines-e6` [rule] Faculty members have the flexibility to choose from the following options
+- `neu-cs3100-e3` [rule] ranging from "Not allowed" through "Permitted" to "Required."
+- `nau-provost-ai-faculty-e7` [rule] Submitting final work created by generative AI constitutes an academic integrity violation.
+- `niu-ai-teaching-learning-e4` [rule] Faculty should include one of the following policy approaches in their syllabus or assignment instructions.
+- `oakland-ai-faculty-e8` [rule] By situating each assessment on the scale, from GenAI-free to fully GenAI-integrated
+- `oregonstate-ctl-ai-teaching-guidance-e6` [rule] to generate or edit any portion of the substance of your work is not permitted
+- `oregonstate-eecs-ai-guidance-e8` [rule] this is the highest-stakes category and is prohibited unless explicitly permitted by the instructor
+- `psu-ist-genai-teaching-e6` [rule] embed icons that represent varying levels of acceptable GenAI use
+- `pepperdine-ai-use-syllabus-statements-e4` [rule] Level 1: Prohibited (AI Tools Not Allowed)
+- `pomona-cs-academic-honesty-policy-e2` [rule] launched a pilot AI Policy Tier System that all Computer Science courses will now follow
+- `pomona-cs-ai-policy-tier-system-e1` [rule] To provide a unified system and increase clarity about what AI usages are allowed
+- `pomona-cs-ai-policy-tier-system-e4` [override] generate code snippets, images, or videos, revise your writing, or check your work
+- `pomona-cs-ai-policy-tier-system-e8` [override] Students can freely use generative AI tools and do not need to credit their use.
+- `pomona-cs51-e1` [rule] CS51 is Tier 1 within the Computer Science AI Policy Tier System
+- `pvamu-cte-ai-syllabus-statements-e2` [rule] may be used for any assignment with appropriate citation
+- `pvamu-cte-ai-syllabus-statements-e4` [rule] may be used on select assignments in this course, as defined by the instructor
+- `pvamu-cte-ai-syllabus-statements-e5` [rule] The use of ChatGPT in this course is prohibited
+- `rmc-academic-regulations-genai-e3` [rule] any use of generative AI tools beyond 23.1.a.i above is prohibited.
+- `rutgers-otear-ai-in-education-e6` [rule] Use of AI such as ChatGPT is not permitted in any stages
+- `rutgers-otear-ai-in-education-e7` [rule] Use of AI such as ChatGPT is fully permitted, but you must cite the tool
+- `shsu-academic-affairs-ai-guidance-e8` [rule] ranging from a complete ban on AI tools to requiring the use of AI tools
+- `sdsu-senate-genai-assessment-guidelines-e6` [rule] classification levels determine the permitted use of GenAI in-course assessments and deliverables
+- `sdsu-senate-genai-assessment-guidelines-e7` [rule] Generative AI tools are strictly prohibited in this assessment or deliverable.
+- `seattleu-syllabus-template-genai-e1` [rule] explicitly state your policy (e.g., prohibited, sometimes permitted, always permitted, required)
+- `seattleu-syllabus-template-genai-e4` [rule] You are allowed to use generative AI tools for some, but not all, assignments
+- `sdsu-policy-2-3-syllabus-e2` [rule] example artificial intelligence syllabus statements reflecting different levels of expectation and limitation
+- `syracuse-ist256-e4` [rule] the full use of artificial intelligence as a tool, with disclosure and citation, is permitted
+- `tc-dfi-genai-guidance-e3` [rule] Students are prohibited from using generative Artificial Intelligence (AI) tools to complete coursework
+- `tc-dfi-genai-guidance-e5` [rule] Each assignment will specify whether AI can be used and, if so, how
+- `tc-dfi-genai-guidance-e8` [rule] Generative AI tools are generally permitted in this course for research and completion of assignments
+- `tnstate-libguide-ai-syllabus-options-e1` [rule] TSU has three different ways that professors can integrate (or not integrate) AI
+- `tnstate-libguide-ai-syllabus-options-e3` [override] allowed in specific situations and with explicit permission.
+- `tntech-citl-ai-syllabus-statements-e3` [rule] AI is allowed to be used throughout the course so long as
+- `tntech-citl-ai-syllabus-statements-e6` [rule] identify which assignments / assessments or course elements the use of AI is permitted
+- `tamuk-cfe-ai-syllabus-statements-e1` [rule] there is not a one-size-fits-all approach to these tools
+- `tamuk-cfe-ai-syllabus-statements-e3` [rule] are not permitted for any stage or phase of work in this class
+- `tamuk-cfe-ai-syllabus-statements-e4` [rule] You will be informed as to when, where, and how these tools are permitted
+- `tamuk-cfe-ai-syllabus-statements-e5` [rule] provided that you properly cite when and how you use the tool
+- `twu-ai-syllabus-statements-e7` [rule] must be entirely your own work, without AI tools.
+- `uthsc-tlc-syllabus-policies-e2` [rule] is permitted to augment the learning experience
+- `uthsc-tlc-syllabus-policies-e6` [rule] is permitted only on certain assignments as indicated by the instructor/faculty
+- `uthsc-tlc-syllabus-policies-e7` [rule] including but not limited to ChatGPT is strictly prohibited
+- `jefferson-gai-policy-e5` [rule] a.) Permitted Use of GAI b.) Restricted Use of GAI
+- `trent-genai-guidelines-2024-e3` [rule] statements to the Syllabus Builder for Instructors to choose from.
+- `trent-genai-guidelines-2024-e4` [rule] Option 3: Students are required to use generative AI in this course.
+- `twu-guidelines-genai-teaching-learning-e1` [rule] we offer three options for the use of generative AI in TWU courses
+- `uncc-legal-suggested-syllabus-policies-e2` [rule] Below are two suggested syllabus policies that may be used or adapted
+- `uah-etl-ai-guidance-faculty-e6` [rule] for assistance in completion of work for this course is strictly prohibited
+- `uah-etl-ai-guidance-faculty-e7` [rule] Those assignments which allow or call for AI use will be expressly listed as such
+- `ualberta-cmput301-e1` [rule] AI Use Generally Permitted
+- `uark-tips-genai-syllabus-statements-e4` [rule] I will communicate explicit permission as well as expectations and any pertinent limitations
+- `uark-tips-genai-syllabus-statements-e5` [rule] Students have permission to use generative artificial intelligence tools in any capacity
+- `uams-ai-policy-2-1-6-e4` [rule] whether GAI is prohibited (i.e., not allowed in any capacity), restricted
+- `ucla-tlc-genai-teaching-guide-e5` [rule] the use of AI writing tools is permitted in this course with no restrictions
+- `ucsb-cmpsc156-agentic-ai-e1` [rule] we encourage students to explore all four of these at different stages in the course
+- `ucsb-cmpsc156-agentic-ai-e2` [rule] Doing all development by hand, not using AI at all.
+- `ucsb-cmpsc156-agentic-ai-e4` [override] the AI is more of a “pair programmer” making suggestions
+- `ucsb-cmpsc156-agentic-ai-e5` [override] an AI is assigned an entire “issue”
+- `uccs-frc-ai-in-academics-e3` [rule] it will be explicitly noted in the assignment directions.
+- `uccs-frc-ai-in-academics-e7` [rule] The 5 Levels of AI-Integrated Assessment:
+- `uga-ctl-genai-policies-e2` [rule] The AI Assessment Scale identifies five ‘levels’ of generative AI use:
+- `uga-ctl-genai-policies-e8` [rule] provide students with a ‘traffic light’ breakdown of how generative AI
+- `uidaho-cetl-ai-guidelines-e7` [rule] We have three examples of language you can include in your syllabus
+- `uiuc-grainger-ai-guidance-e1` [rule] are not permitted for any stage or phase of work in this class.
+- `uiuc-grainger-ai-guidance-e2` [rule] you must document and attribute all AI contributions to your coursework
+- `uiuc-grainger-ai-guidance-e5` [rule] welcome in this class, provided that you cite when and how you use
+- `uky-ukadvance-instructional-guidelines-e2` [rule] those policies likely will fall within one of four areas on a spectrum
+- `uleth-teachingcentre-ai-policies-e3` [rule] may choose to permit, limit, or ban the use of tools such as AI
+- `missouri-provost-ai-syllabus-statements-e2` [rule] AI tools are not allowed for any assignments.
+- `missouri-provost-ai-syllabus-statements-e5` [rule] AI tools are allowed for specific assignments or tasks, as designated by the instructor
+- `missouri-provost-ai-syllabus-statements-e7` [rule] AI tools can be used broadly with ethical guidelines and proper citation.
+- `umkc-provost-ai-syllabus-statements-e2` [rule] three degrees of AI use permissions: Restrictive, Supervised and Permissive
+- `umsl-cmpsci-4390-deep-learning-e2` [rule] Not permitted
+- `unl-ctt-developing-course-ai-policies-e8` [rule] They generally fall into 3 categories
+- `unh-provost-syllabus-guidance-ai-e4` [rule] You may also consider using this AI Assessment Scale
+- `unf-ai-faculty-resources-e1` [rule] suggested syllabus language for various perspectives, ranging from incorporating generative AI into coursework to prohibiting
+- `unco-cetl-syllabus-statements-ai-e4` [rule] No Use of Generative AI Permitted
+- `unco-cetl-syllabus-statements-ai-e5` [rule] Use of Generative AI Permitted Under Some Circumstances or With Explicit Permission
+- `unco-cetl-syllabus-statements-ai-e6` [rule] Broader Use of Generative AI Permitted Within Guidelines
+- `nd-cse-honor-code-guide-e4` [rule] declare whether that activity is allowed, allowed only with proper citation, or not allowed.
+- `uoregon-cs322-e1` [rule] a scaffolded approach: no AI, AI-augmented pair programming, and force-multiply with AI
+- `uoregon-cs322-e5` [override] you can use a GenAI tool -- as a pair programmar -- to suggest
+- `uoregon-cs322-e8` [override] in the last project, you will unleash the power of AI to build anything
+- `uprrp-circular-8-ia-e2` [rule] se propone el establecimiento de cinco (5) niveles de uso
+- `usfca-provost-syllabus-statement-options-genai-e1` [rule] you may choose one of three options to address the use of generative AI tools.
+- `usfca-provost-syllabus-statement-options-genai-e2` [override] The comprehensive use of generative AI tools is permitted with appropriate attribution.
+- `usm-provost-ai-e3` [rule] options for artificial intelligence (full usage, limited or outline usage, and no usage permitted).
+- `uw-cse121-e1` [rule] CSE 121 will utilize the “AI for Support and Growth” Allen School AI Policy
+- `uwm-syllabus-statements-genai-e4` [override] you may use Generative Artificial Intelligence (AI) for assignments with appropriate citations
+- `umoncton-integrite-ia-plans-de-cours-e4` [override] sera permise lors de certaines évaluations dans ce cours et selon des directives
+- `umoncton-integrite-ia-plans-de-cours-e6` [override] sera permise lors des évaluations dans ce cours, mais selon des directives
+- `usherbrooke-ift339-e1` [rule] Devoirs (6) 24 % Interdite
+- `usherbrooke-ift339-e3` [rule] Le NIVEAU 0 signifie que l’utilisation est interdite.
+- `usherbrooke-ift339-e5` [rule] l’utilisation est autorisée uniquement pour assister l’apprentissage dans le domaine disciplinaire
+- `usherbrooke-ift339-e6` [rule] l’utilisation est autorisée pour produire un travail qui sera amélioré.
+- `usherbrooke-ift615-e1` [rule] Projet en IA (2) 40 % Balisée
+- `usu-teach-communicate-about-ai-e3` [rule] Class guidelines relative to AI typically fall into three broad categories:
+- `vcu-cmsc413-intro-cybersecurity-e1` [rule] Different assignments will have different policies regarding AI usage.
+- `vcu-cmsc413-intro-cybersecurity-e4` [rule] Some assignments will explicitly require the use of AI tools and will be clearly labeled
+- `vcu-cmsc413-intro-cybersecurity-e5` [rule] Some assignments will explicitly prohibit AI usage and will be clearly labeled
+- `wpi-cs3013-e7` [rule] May use ChatGPT, Co-Pilot, or other automated programming tools?
+- `yu-academic-integrity-resources-e3` [rule] The use of assistive artificial intelligence is allowed in this course.
+- `yu-academic-integrity-resources-e4` [rule] Generative artificial intelligence may be used,
+- `yu-academic-integrity-resources-e5` [rule] Both Generative and Assistive Artificial Intelligence may be used in this course without restriction.
+- `ets-log430-e3` [rule] Examen Final Utilisation interdite
+- `ets-log430-e4` [rule] Projet Phase 1 Monolithe (code et rapport) Utilisation libre
+- `ets-log430-e5` [rule] Projet Phase 3 Architecture Evénementielle oral Utilisation interdite
+
+## G06 Define the fallback rule when a syllabus is silent — 46 statements, 42 institutions
+- `acadia-jodrey-cs-academic-integrity-e5` [override] unless the syllabus/assignment direction specifically allows for the use of such generated code
+- `algoma-student-genai-guidelines-e1` [rule] is prohibited in all coursework at Algoma University unless explicitly permitted by the course instructor.
+- `apu-ai-classroom-use-guidelines-e1` [override] The revised policies stipulate that any use of A.I. tools must have prior instructor permission.
+- `baylor-csi3334-f25-hamerly-e3` [override] Use of artificial intelligence without my explicit permission
+- `drexel-se310-e1` [rule] is prohibited unless explicitly authorized by the instructor.
+- `fau-ai-syllabus-statement-e1` [rule] FAU students are not permitted to use AI for any course work unless explicitly allowed
+- `fit-provost-genai-academic-work-e1` [override] without instructor approval is considered a violation of academic integrity
+- `gonzaga-student-guide-responsible-ai-use-e2` [override] Don’t assume any AI use is acceptable.
+- `iup-academic-integrity-violations-e3` [rule] is not acceptable, unless authorized specifically by the instructor/administrator
+- `lamar-cosc3306-e2` [rule] Students should not assume that unclear or limited information means that it is permissible
+- `lamar-cosc3306-e6` [override] is permitted only with explicit, prior authorization from the instructor for that specific assignment.
+- `lsu-faculty-senate-gai-guidelines-e2` [override] Any use of GAI is only acceptable if clearly established by the course instructor.
+- `lsuno-academic-misconduct-e2` [override] unless you are specifically authorized by your course instructor to allow this
+- `luc-provost-ai-integrity-statement-e2` [rule] students are not to use AI assisted technology in the classroom unless they are specifically
+- `mcgill-comp480-e1` [rule] Students are not encouraged, unless otherwise stated, to make use of artificial intelligence tools,
+- `neiu-ctl-sample-ai-syllabus-statement-e2` [rule] refrain from using AI tools in this course unless with the express permission
+- `nvcc-nova-policies-syllabus-insert-e2` [override] without their instructors’ explicit permission to do so and to cite their sources
+- `ohio-ctla-genai-syllabus-statements-e3` [override] you should obtain advance permission from the instructor for any use of generative AI technologies.
+- `oregonstate-eecs-ai-guidance-e1` [rule] When no policy is stated, only routine grammar corrections are allowed
+- `rosehulman-csse232-e1` [rule] AI use is not permitted on any assignments unless when explicitly directed by your instructor.
+- `rowan-cs-04113-ioop-chien-e3` [override] Using ANY generative AI without instructor permission, accessing prohibited resources, receiving unauthorized assistance
+- `rutgers-camden-guidance-ai-e3` [rule] they should not be considered permissible for coursework unless clearly stated or communicated by instructors.
+- `sjsu-cs46a-tshukudu-e3` [rule] The default rule is that AI use is not permitted on assignments unless explicitly allowed.
+- `ttu-cs4366-e1` [override] to assist or produce work for this class EXCEPT on assignments specified in class
+- `newschool-ai-sample-syllabus-statements-e5` [override] is explicitly prohibited unless otherwise noted by the instructor.
+- `uttyler-cosc1337-e1` [rule] All homework must be self-generated unless otherwise assigned (i.e NO AI generated work
+- `trent-genai-guidelines-2024-e5` [rule] students should assume use of generative AI is prohibited in completing class assessments.
+- `uams-ai-policy-2-1-6-e3` [override] Use of GAI by students to satisfy course requirements must be authorized
+- `berkeley-data100-e1` [rule] to generate written or code solutions to assignments is prohibited, unless clearly specified otherwise
+- `louisville-genai-committee-report-e6` [rule] Students should assume that in the absence of a policy on the syllabus
+- `umassd-genai-guidelines-e2` [override] Absent explicit permission or syllabus policy of an instructor, students are prohibited from using GAI
+- `missouri-provost-ai-syllabus-statements-e3` [rule] Unless students are explicitly told otherwise, this course prohibits generative AI.
+- `unt-csce1030-su25-e3` [rule] Unless a professor or instructor gives explicit "authorization," AI cannot be used
+- `unbc-provost-genai-coursework-guidance-e2` [rule] Unless otherwise stated, students should assume use of GenAI might be restricted.
+- `ou-cs1323-mackay-e3` [override] using AI to perform assignments will be permitted in this class only when specified.
+- `ou-cs1323-mackay-e6` [override] If the assignment is silent on the use of generative AI tools
+- `usfca-provost-syllabus-statement-options-genai-e4` [rule] The use of generative AI tools is strongly discouraged or not permitted unless explicitly stated
+- `uva-sds-ai-policy-e2` [override] Any course without specific guidance on this topic will default to the School’s baseline parameters
+- `uw-allen-ai-support-and-growth-e2` [override] not allowed on any graded assignment that is not included in the authorized list
+- `umontreal-ebsi-ia-generative-e1` [override] sans autorisation explicite par un.e enseignant.e est reconnue comme un plagiat ou une fraude
+- `umontreal-ebsi-ia-generative-e4` [override] Normalement, sans autorisation explicite, leur utilisation n’est pas permise.
+- `vcu-cmsc357-computer-systems-e5` [override] you must obtain explicit permission from your instructor
+- `wvu-tlcommons-ai-syllabus-statements-e1` [rule] tools that can create and develop academic content are not allowed unless permission is given
+- `western-cs1026-e6` [rule] Unless otherwise noted, you should assume their use on labs and in-class activities is prohibited.
+- `western-cs1027-e7` [rule] students must assume that use is prohibited
+- `yu-academic-integrity-resources-e1` [rule] you should assume that you cannot use them
+
+## G07 Cover AI built into editors, IDEs, and agents — 26 statements, 23 institutions
+- `appstate-cs3435-e7` [rule] avoiding using AI directly integrated into your composition environment (IDE)
+- `byu-cs111-e3` [override] Do not use AI-assisted autocompletion (such as GitHub Copilot or ChatGPT,
+- `hunter-csci127-e4` [override] Do not use AI chat/suggestions.
+- `carleton-cs111-e2` [override] refrain from using coding tools such as GitHub Copilot to help with your code
+- `cmu-10301-601-e7` [override] Using an IDE with an AI assistant enabled
+- `cmu-15122-e1` [override] We require that you disable AI extensions from your programming environment
+- `colby-cs151-e2` [rule] If I see you using software like Co-Pilot it is considered academic dishonesty.
+- `drexel-cs172-e1` [rule] Students must disable any code completion features in their IDE.
+- `gwu-csci-1012-e4` [override] If AI is enabled in your internet searches, turn it off
+- `gatech-ic-cs7637-e3` [override] disable any AI assistance more advanced than a grammar checker inside your word processors
+- `georgiasouthern-provost-ai-academic-contexts-e7` [override] Use of agentive AI to complete assessments without human interaction is considered cheating.
+- `grinnell-csc151-rebelsky-e6` [override] If you do a Web search, please disable the AI summary
+- `hmc-cs70-e4` [rule] CS 70 has switched away from using Visual Studio Code to using the Helix editor
+- `macalester-comp123-e6` [rule] has some AI-related features that can be configured, and use of those is a violation
+- `neu-cs2100-e1` [rule] AI coding assistants like Cursor, Windsurf, and Copilot should not be used in this course.
+- `oregonstate-eecs-ai-guidance-e3` [rule] GitHub Copilot, VS Code or Cursor assistants, and similar IDE features fall within this policy
+- `rosehulman-csse232-e2` [override] This prohibition includes the use of AI tools in IDEs (like copilot)
+- `rosehulman-csse332-e3` [rule] Using any plugin in your IDE that interacts with these generative AI models
+- `utaustin-cs314-e1` [rule] You may NOT use an AI coding assistant in the IDE
+- `ucdavis-ecs154b-genai-e2` [override] Using GitHub Copilot to help you write code.
+- `umd-cmsc216-e4` [override] Disable LLM/AI/Chat tools in their programming environment to
+- `umsl-cmpsci-4390-deep-learning-e4` [override] Broadly permitted, including agentic coding tools such as Claude Code, Cursor, or Copilot.
+- `uw-allen-ai-support-and-growth-e3` [rule] This includes AI features built into IDEs, operating systems, or browsers
+- `uw-cse312-ai-policy-e3` [rule] ability to act autonomously (e.g., independently writing, running, and debugging code) does not exempt it
+- `wellesley-cs111-ai-tools-policy-e7` [rule] only use the IDEs that we have asked you: Thonny and Jupyter
+- `western-cs1027-e4` [rule] copying and pasting code generated by outside Generative AI sources is not allowed
+
+## G08 Stage AI permission as skills develop — 11 statements, 10 institutions
+- `columbia-coms4111-e3` [override] You may use GenAI to aid your development during Project 1 Part 3
+- `cornell-gai-education-report-e2` [override] We recommend using GAI in advanced courses as a tutor or helper in programming,
+- `haverford-cmsc-h360-e4` [override] for the final project you are welcome to use Github copilot
+- `msu-cse231-syllabus-e1` [override] you may use AI only after Project 4 and you must work independently
+- `neu-cs3100-e1` [override] AI coding assistants like Cursor, Windsurf, and Copilot are not permitted for the early assignments
+- `neu-cs3100-e4` [override] we introduce AI coding assistants mid-way through the course,
+- `seattleu-syllabus-template-genai-e5` [override] GenAI is only permitted once you have practiced essential skills
+- `uiuc-cs124-ai-e4` [override] CS 124 only teaches AI-supported programming on the independent project.
+- `uw-cse122-genai-e4` [override] Generate code to complete tasks that you have already mastered from previous coursework.
+- `wayne-senate-ai-subcommittee-report-e4` [override] undergraduate students may use AI as a support tool, whereas in graduate courses
+- `williams-csci104-e3` [override] We will discuss effective and appropriate use of AI tools later in the semester
+
+## G09 Require an AI statement in every syllabus — 201 statements, 144 institutions
+- `acu-library-faculty-ai-guide-e2` [rule] Under what circumstances AI use is permitted or forbidden
+- `astate-ai-ethical-use-guidelines-e2` [rule] Faculty are advised to include their AI policies in their syllabi
+- `augusta-ai-at-au-e7` [rule] Instructors should establish clear AI policies for their courses and communicate them
+- `bsu-ai-use-guidelines-e5` [rule] Students must still follow the GenAI Statement their instructor selected for the course
+- `bellevue-elearning-ai-for-students-e3` [rule] Students are responsible for reviewing and clarifying their instructor’s AI policy.
+- `boise-cs-ai-department-approach-e2` [rule] developing a short blurb that can be included in syllabi with a link
+- `bc-university-academic-integrity-policy-ai-e4` [rule] when, if ever, can artificial intelligence tools be used, etc.
+- `brandeis-ctl-ai-syllabus-statements-e1` [rule] include a policy in each of their course syllabi delineating acceptable and unacceptable uses
+- `brandon-science-course-outline-policy-e1` [rule] the use of artificial intelligence (AI) for coursework
+- `calstatela-cetl-recommendations-ai-e2` [rule] it is good idea to develop your own AI policy.
+- `calstatela-cetl-recommendations-ai-e3` [override] Identify (with examples) the uses and times you consider AI appropriate
+- `calstatela-cetl-recommendations-ai-e6` [rule] Consider allowing student to co-create their policy so that there is greater student buy in.
+- `fresno-state-ai-guidelines-e5` [rule] provide guidelines on appropriate vs. inappropriate use
+- `csuf-fdc-creating-genai-policy-e2` [rule] Students must adhere to the syllabus to ensure their usage of AI/Tech tools
+- `csuf-fdc-creating-genai-policy-e8` [rule] remind students about the rules for AI use on every assignment
+- `csulb-optional-ai-syllabus-statements-e1` [rule] Be specific and let students know what class activities are permitted and not permitted
+- `capilano-cte-genai-academic-integrity-e1` [rule] Clearly convey to students your classroom policies on the use of Generative AI
+- `cau-syllabus-template-e1` [rule] Faculty should consult the CAU Artificial Intelligence Guidelines document
+- `clarkson-ai-course-policies-e1` [rule] instructors provide a paragraph outlining the specific guidelines for student use of AI
+- `clarkson-ai-course-policies-e2` [rule] include a statement in their course syllabi beginning Fall 2023 regarding the use
+- `clemson-ugl-ai-academic-integrity-guidance-e1` [rule] your course AI policy is a required component of your syllabus
+- `clemson-ugl-ai-academic-integrity-guidance-e2` [rule] You may also consider repeating or referencing these
+- `colgate-teaching-and-ai-e2` [rule] Faculty are asked to be very clear with their students about any expectations
+- `colgate-teaching-and-ai-e3` [rule] whether or not you’ll permit students to use generative AI tools.
+- `colgate-teaching-and-ai-e4` [rule] Instructors should be as clear as possible in their syllabi
+- `concordia-ctl-genai-teaching-guidelines-e1` [rule] encouraged to clearly state their position on the use of GenAI in their courses
+- `cue-instructor-genai-guide-e1` [rule] clearly articulate their position with regards to AI use in their course
+- `cornell-gai-education-report-e4` [rule] Instructors should clearly and consistently communicate to students their expectations on the use of GAI
+- `davidson-artificial-intelligence-policy-e2` [rule] Students should consult the course syllabus and the instructor for guidance
+- `davidson-artificial-intelligence-policy-e4` [rule] Faculty are strongly urged to include a generative AI statement on their syllabi.
+- `duke-compsci101-e4` [rule] See our statement on limits on using AI above.
+- `duquesne-provost-ai-e1` [rule] Faculty are strongly recommended to develop an AI policy that stipulates acceptable uses of AI
+- `emory-college-syllabus-additions-ai-e2` [rule] statement that addresses the extent to which AI use is appropriate for the course
+- `emory-college-syllabus-additions-ai-e3` [rule] This may be included as part of the Honor Code statement for the course
+- `emory-college-syllabus-additions-ai-e4` [rule] you may use the suggested language below for the syllabus and assignments
+- `fau-ai-syllabus-statement-e7` [rule] Faculty should articulate their level of tolerance and potential penalties for noncompliance
+- `fit-provost-genai-academic-work-e6` [rule] Instructors are required to incorporate a course policy statement into their course syllabi
+- `fordham-provost-genai-principles-e8` [rule] Advise faculty to have an explicit statement on the acceptable use of generative AI
+- `georgiasouthern-provost-ai-academic-contexts-e2` [rule] each faculty member must create an AI syllabus statement
+- `gsu-cis3001-ai-mou-e1` [rule] This Memorandum of Understanding (MOU) was collaboratively developed during our first-class meeting
+- `grinnell-csc151-rebelsky-e4` [override] the College asks us to be clear about citation expectations
+- `hec-montreal-daip-iag-evaluation-e2` [rule] l’École a adopté des libellés de consignes
+- `hec-montreal-daip-iag-evaluation-e3` [rule] Ces libellés doivent être sélectionnés dans Zone cours par la personne coordonnatrice.
+- `hec-montreal-daip-iag-evaluation-e4` [rule] les personnes étudiantes ont pour consigne de s’informer au préalable de l’utilisation permise ou non
+- `howard-policy-100-022-ai-e3` [rule] Faculty shall establish and communicate, through course syllabi and other official course materials
+- `isu-aic-best-practices-e2` [rule] include a statement on each of your syllabi explaining your policy
+- `isu-aic-best-practices-e3` [rule] State clearly whether AI is allowed for each type of assignment
+- `iu-indianapolis-teaching-iu-genai-policies-e2` [rule] it may be useful for instructors to address generative AI more specifically
+- `iu-indianapolis-teaching-iu-genai-policies-e7` [rule] Remind students of the policy for each relevant assignment
+- `iastate-studentconduct-faculty-ai-e2` [rule] faculty and instructors are encouraged to clearly communicate expectations regarding AI use in their syllabi
+- `iastate-studentconduct-faculty-ai-e7` [override] Discuss appropriate and inappropriate uses of AI within the context of your discipline
+- `lehigh-ai-policies-best-practices-e2` [rule] Instructors are advised to give students clear guidance on the use of Generative AI tools
+- `lsu-faculty-senate-gai-guidelines-e1` [rule] obliged to include in each syllabus precise information on whether and how GAI
+- `lsuno-academic-misconduct-e5` [rule] Students should refer to each course’s syllabus for information on how to maintain academic integrity.
+- `luc-provost-ai-integrity-statement-e4` [override] is of course up to you, but you should include a statement in your syllabus
+- `macewan-ctl-genai-recommended-practices-e1` [rule] Discuss AI openly with your students
+- `macewan-ctl-genai-recommended-practices-e3` [rule] communicate to each of your classes to what extent (if any) AI is permitted
+- `marshall-academic-affairs-ai-e1` [rule] All Marshall instructors are required to have a generative AI policy in their syllabi.
+- `musc-ai-acceptable-use-framework-e8` [rule] CATL has developed a resource collection that includes:
+- `mun-citl-genai-syllabus-statements-e1` [rule] instructors are encouraged to provide students with guidance, via the course syllabus and assignment instructions
+- `mst-tlc-gai-guidelines-e2` [rule] faculty include their own written policy regarding students’ GAI use
+- `mst-tlc-gai-guidelines-e3` [rule] They will also be automatically included in syllabi created using Simple Syllabus.
+- `montclair-ofe-ai-course-policies-e2` [rule] the Montclair Syllabus template will come with a designated field for AI policy
+- `morehouse-ai-academic-guidelines-2-e1` [rule] shall list one of the syllabi statements
+- `ncat-provost-universal-ai-guidelines-e5` [rule] the policy in the syllabus should be explicitly stated with reference to the
+- `nau-provost-ai-faculty-e1` [rule] clear syllabus policy statements that define permitted and prohibited use in your courses
+- `niu-ai-teaching-learning-e1` [rule] Expectations for AI use should be clearly communicated to students in syllabi
+- `nova-lec-genai-faculty-e4` [rule] requires both proactive conversations with students and a clear syllabus policy
+- `nova-lec-genai-faculty-e5` [rule] Discuss your policy in multiple places, at multiple times, and in multiple ways.
+- `oakland-ai-faculty-e5` [rule] obliged to communicate those policies to students at the onset of the semester
+- `ohio-ctla-genai-syllabus-statements-e1` [rule] The CTLA recommends instructors establish a course policy on student use of generative artificial intelligence
+- `okstate-itle-chatgpt-sample-syllabus-statements-e3` [rule] It is important that faculty clearly communicate to students the acceptable use of generative AI
+- `oregonstate-ctl-ai-teaching-guidance-e1` [rule] All course syllabi must include an AI usage policy
+- `oregonstate-eecs-ai-guidance-e6` [rule] The school of EECS expects every course syllabus to include an AI statement.
+- `pepperdine-ai-use-syllabus-statements-e2` [rule] Be clear in what is allowed or prohibited, and any conditions such as citations,
+- `pvamu-cte-ai-syllabus-statements-e1` [rule] Faculty are encouraged to add one of the three sample statements below to their syllabi
+- `queens-computing-common-syllabus-e1` [override] will include a statement indicating whether generative AI tools are permitted in your course
+- `rush-ctei-faculty-guide-ai-e2` [rule] Set clear expectations for your students on whether and how they can use AI sources
+- `rutgers-camden-guidance-ai-e2` [rule] Faculty should consider providing guidance to students on the use of AI
+- `rutgers-otear-ai-in-education-e4` [rule] Develop clear policies for each course.
+- `smu-provost-genai-pedagogy-e2` [rule] SMU requires that faculty communicate to students about the use of AI via their syllabus
+- `smu-provost-genai-pedagogy-e3` [override] provide clear guidelines around AI use in the class for graded and ungraded assignments
+- `sju-academic-affairs-ai-principles-e3` [rule] Faculty should communicate clear guidance to students about when AI may be used
+- `slu-syllabus-components-genai-e1` [rule] make explicit whether or not GAI use is acceptable in the course
+- `slu-syllabus-components-genai-e4` [rule] The Reinert Center offers a set of sample templates for syllabus statements
+- `sdsu-senate-genai-assessment-guidelines-e1` [rule] all SDSU syllabi shall include a statement about how generative AI may
+- `sdsu-senate-genai-assessment-guidelines-e2` [override] The absence of a syllabus statement may be considered a factor
+- `sfsu-ceetl-teaching-generative-ai-e2` [rule] Whatever your stance is with AI, CEETL recommends transparency with students.
+- `sfsu-ceetl-teaching-generative-ai-e3` [rule] A statement as to how and why generative AI tools can and cannot be used
+- `smc-ar5500-1-academic-conduct-e2` [rule] expectations for acceptable academic conduct and behavior.
+- `shu-ai-syllabus-statements-e2` [rule] add a statement to syllabi clearly addressing the restrictions or appropriate
+- `sdsu-policy-2-3-syllabus-e1` [rule] a syllabus statement that outlines expectations for the use of generative artificial intelligence tools
+- `southernct-online-learning-genai-e1` [rule] inform students whether they are allowed to use Generative AI programs in your class
+- `siuc-faculty-senate-ai-guidelines-e4` [rule] include clear guidelines regarding the citation and acknowledgment of AI-generated content in academic submissions
+- `tarleton-ai-guidance-e3` [rule] including what is allowed, what requires disclosure, and what is not permitted
+- `tc-dfi-genai-guidance-e1` [rule] be explicit and transparent in communicating this policy to students
+- `tntech-citl-ai-syllabus-statements-e1` [rule] We recommend clearly outlining when and how students should use these tools within your courses.
+- `tamucc-dlai-teach-e1` [rule] Use your syllabus to communicate to students in class your expectations on the use of
+- `tamucc-dlai-teach-e2` [override] Remind students which platforms, if any, will be allowed
+- `tamuk-cfe-ai-syllabus-statements-e2` [rule] While you are not required to use the provided statements, we encourage you
+- `txst-cs3358-lk04-e1` [rule] “AI” has a broad definition and refers to any program or browser extension
+- `twu-ai-syllabus-statements-e1` [rule] Adding AI policies to courses helps set clear expectations for students
+- `umt-teaching-gen-ai-e1` [rule] All instructors should include a brief statement in their course syllabus
+- `uthsc-tlc-syllabus-policies-e1` [rule] What is your policy on how students should engage with generative AI when completing
+- `uwf-ai-academic-misconduct-e2` [rule] Clarify expectations regarding AI tools, online resources, and citation practices
+- `uwf-ai-academic-misconduct-e3` [rule] Explains course-specific expectations (i.e. acceptable A.I. Use)
+- `uwf-ai-academic-misconduct-e6` [rule] Students should not be expected to guess what is or is not permitted
+- `jefferson-gai-policy-e7` [rule] the instructor will identify in writing those instances, if any
+- `twu-guidelines-genai-teaching-learning-e4` [rule] By policy, faculty shall include a generative AI policy in course syllabi.
+- `uncc-legal-suggested-syllabus-policies-e1` [rule] faculty members should notify students how and when generative AI tools
+- `utrgv-coltt-generative-ai-e2` [rule] Clearly outline expectations regarding the use of Generative AI tools in your course.
+- `albany-catloe-design-ai-policies-e4` [rule] Communicate this in terms of the assignments in your course (both formative and summative).
+- `albany-catloe-design-ai-policies-e5` [rule] your policy needs to be framed as an inviting appeal
+- `albany-catloe-design-ai-policies-e7` [rule] Use your policy to begin this conversation
+- `ua-oaa-genai-guidelines-e2` [rule] In addition to verbal explanations, we recommend a syllabus statement on using AI.
+- `uab-provost-ai-working-group-report-e2` [rule] these decisions regarding the use of AI should be clearly outlined in the course syllabus
+- `uah-etl-ai-guidance-faculty-e5` [rule] we suggest adding an independent statement specifically addressing AI usage to course syllabi
+- `uaf-ctl-ai-in-education-e1` [rule] Clarify your expectations for the use of generative AI up front in your syllabus.
+- `uark-tips-genai-syllabus-statements-e2` [rule] Faculty are encouraged to communicate clear expectations regarding how these resources can be used
+- `ualr-provost-faculty-student-ai-e1` [rule] Setting clear expectations about the use of AI in your classroom is crucial
+- `ualr-provost-faculty-student-ai-e2` [rule] At the beginning of each course, explicitly state your policies on AI tools
+- `ualr-provost-faculty-student-ai-e3` [rule] Include these guidelines in your syllabus, and discuss them in class
+- `ualr-provost-faculty-student-ai-e4` [override] providing specific examples of acceptable and unacceptable uses of AI
+- `ucla-tlc-genai-teaching-guide-e1` [rule] Make your course’s GenAI policy clear in your syllabus.
+- `ucla-tlc-genai-teaching-guide-e2` [rule] Consider forming a policy in collaboration with your students at the beginning of the quarter
+- `ucsc-tlc-drafting-genai-use-policy-e1` [rule] it’s important that you include a clear AI-use policy in your syllabus
+- `udel-genai-guidelines-faqs-e2` [rule] Instructors are cautioned to be clear to students about the expectations
+- `udel-genai-guidelines-faqs-e7` [rule] Instructors who plan to use University-approved AI tools should include a short syllabus statement
+- `du-otl-concerns-about-student-ai-use-e1` [rule] Consider syllabus statements indicating whether and how AI tools can be used.
+- `du-otl-concerns-about-student-ai-use-e2` [rule] carve out time for robust discussions about academic honesty, integrity, and ethics
+- `guelph-provisional-recommendations-genai-e2` [rule] how students should demonstrate their learning and acknowledge AI use
+- `uidaho-cetl-ai-guidelines-e1` [rule] clearly explain your decision and the reasoning for your decision in your instructions
+- `uidaho-cetl-ai-guidelines-e3` [override] Also, explain what you will not allow and the reasoning for your decision.
+- `uiowa-clas-syllabus-template-ai-e2` [rule] students with clear instructions about permissible AI uses
+- `uiowa-clas-syllabus-template-ai-e4` [rule] Instructors also should initiate ongoing conversations about AI tools policies throughout the semester.
+- `uiowa-clas-syllabus-template-ai-e6` [rule] DEOs must review all syllabi to ensure compliance with UI and CLAS policies.
+- `ku-ai-guidance-instructors-e3` [rule] This may include statements in the course syllabus and reiteration of classroom policy
+- `uky-ukadvance-instructional-guidelines-e1` [rule] they should be made clear for students both verbally and on syllabi
+- `uky-ukadvance-instructional-guidelines-e3` [override] A specific description of what constitutes inappropriate use of generative AI in the course
+- `uleth-teachingcentre-ai-policies-e2` [rule] in your course outline to inform students if, when, and how they can use AI
+- `uleth-teachingcentre-ai-policies-e6` [rule] Repeat these expectations in multiple places, including course outline, course Moodle page, and assessments.
+- `ull-academic-affairs-genai-guidance-e3` [rule] it is the students’ responsibility to familiarize themselves with relevant expectations and policies
+- `ull-academic-affairs-genai-guidance-e4` [override] be explicit about what you allow in your class
+- `louisville-genai-committee-report-e1` [rule] faculty should have wide latitude in choosing/composing statements that suit their
+- `umaine-genai-teaching-learning-guidelines-e1` [rule] Instructors should make clear statements in syllabi and/or relevant areas of online course shells
+- `umb-ai-guidelines-e2` [rule] Instructors should include a statement in the syllabus regarding expectations about the use of AI
+- `umb-provost-academic-integrity-faculty-guidance-ai-e1` [rule] Faculty Council has recommended that all syllabi include one of two statements
+- `umb-provost-academic-integrity-faculty-guidance-ai-e3` [override] Faculty must either detail the assignments or types of assignments here
+- `umassd-genai-guidelines-e1` [rule] Faculty are encouraged to include a statement of their policy for AI use
+- `olemiss-cetl-syllabus-template-genai-e2` [rule] Instructors should be as clear as possible in their syllabi
+- `missouri-provost-ai-syllabus-statements-e1` [rule] communicate the extent to which AI use is permitted overall
+- `umkc-provost-ai-syllabus-statements-e1` [rule] UMKC recommends that instructors include a policy in all their syllabi regarding the use
+- `uno-ai-for-students-canvas-e1` [rule] Your policy should clearly state what your level of acceptance is
+- `unl-ctt-developing-course-ai-policies-e1` [rule] the faculty senate at UNL now requires that you
+- `unl-ctt-developing-course-ai-policies-e4` [rule] you might put an abbreviated version of your AI policy at the beginning
+- `unb-bremner-genai-policy-e1` [rule] generative AI in my courses will be governed by the policy in this document.
+- `une-ai-policy-guidance-faculty-e2` [rule] UNE has required all faculty members to articulate a policy on AI use
+- `une-ai-policy-guidance-faculty-e6` [rule] the policy must be specific enough that students know what is permitted, what is prohibited
+- `unh-provost-syllabus-guidance-ai-e1` [rule] be very explicit with their students about whether any use of automated
+- `und-provost-ai-e2` [rule] In the classroom, be clear about expectations for student use of AI in their coursework.
+- `und-provost-ai-e4` [rule] State these expectations clearly on your course syllabus and in any assignment prompts.
+- `unf-ai-faculty-resources-e2` [rule] set clear and upfront boundaries on its allowed and prohibited uses.
+- `unf-ai-faculty-resources-e3` [override] When AI is not tolerated, be explicit about your expectations and the consequences
+- `unbc-provost-genai-coursework-guidance-e4` [rule] students might reasonably assume its use is not restricted
+- `uprm-upr-cert66-politica-ia-e6` [rule] deberá incluir en el sílabo de cada curso las reglas sobre el uso
+- `uprrp-circular-8-ia-e1` [rule] Establecer que todo prontuario o sílabo de curso incluya el nivel de uso
+- `uprrp-circular-8-ia-e7` [rule] Se recomienda discutir estos lineamientos con el estudiantado al inicio del curso
+- `uregina-genai-hub-instructor-resources-e1` [rule] Include in your course syllabi a clearly articulated statement on the use of GenAI
+- `usask-cs-grad-genai-policy-e2` [rule] Instructors are required to provide clear instructions on the permissibility of GenAI in completing coursework
+- `southalabama-genai-coursework-policy-e4` [rule] Faculty must clearly communicate their GenAI policy in their syllabus
+- `southalabama-genai-coursework-policy-e5` [override] the use of GenAI are required to be included in course syllabi
+- `usd-ai-faculty-e1` [rule] Faculty are responsible for clearly communicating expectations regarding AI use in their courses.
+- `usd-ai-faculty-e2` [override] Stating whether AI use is allowed, limited or prohibited in each course syllabus.
+- `usm-provost-ai-e2` [rule] it requires courses to have a defined policy on whether using artificial intelligence is permissible
+- `utoledo-provost-ai-syllabus-statements-e1` [rule] Instructors must select or enter a statement explaining how generative AI tools may
+- `utoledo-provost-ai-syllabus-statements-e2` [rule] Clear AI guidance helps set expectations for academic integrity and responsible use
+- `utoledo-provost-ai-syllabus-statements-e3` [rule] Examples and optional language for both sections are provided in the Help Text panel.
+- `utah-ece-plagiarism-ai-policies-e3` [rule] and should be posted in the course syllabus.
+- `uva-sds-ai-policy-e1` [rule] The course syllabus must explain the allowable uses for AI tools for course activities
+- `uva-sds-ai-policy-e3` [override] Describing how, when, and in which instances students should disclose the use of AI tools
+- `uwm-syllabus-statements-genai-e1` [rule] Explicitly state your expectations for student Generative AI use in the syllabus.
+- `uwm-syllabus-statements-genai-e2` [rule] Include written expectations for Generative AI use on assignments and talk directly with students
+- `uwyo-syllabus-template-ai-e1` [rule] include a section focused on permitted/unpermitted AI technology use in each of their syllabi
+- `ufv-tlc-ai-guidelines-e7` [rule] mention both the level of authorized use of AI (Use Statements)
+- `ulaval-principes-directeurs-ia-e1` [rule] Les modalités d’utilisation de SIA sont explicitées au plan de cours
+- `teluq-inf1420-iag-e1` [rule] est régie par l’énoncé institutionnel de l’université sur l’utilisation de l’IAG
+- `umoncton-integrite-ia-plans-de-cours-e1` [rule] Trois propositions de mentions à intégrer dans les plans de cours selon vos choix pédagogiques
+- `umontreal-ebsi-ia-generative-e3` [rule] Ces dernières peuvent entre autres apparaître au plan de cours.
+- `uqtr-principes-ia-personnel-e1` [rule] De communiquer explicitement ses attentes aux personnes étudiantes quant à l’utilisation
+- `usu-teach-communicate-about-ai-e1` [rule] every teacher should address the topic of acceptable AI use in their courses
+- `villanova-ai-guidelines-e7` [rule] should include a statement within the course syllabus
+- `wfu-guidelines-academic-use-gai-e1` [rule] Include GAI expectations and policies on each course syllabus
+- `wfu-guidelines-academic-use-gai-e3` [override] The absence of GAI guidance in a course undermines the ability to recognize and adjudicate
+- `wfu-guidelines-academic-use-gai-e4` [override] A definition may be as simple as naming the use of GAI
+- `wayne-senate-ai-subcommittee-report-e1` [rule] communicate their expectations to their students about how AI should or should not be used
+- `wcu-generative-ai-framework-e5` [rule] faculty should be transparent about their expectations for AI use in the classroom
+- `wcu-generative-ai-framework-e6` [rule] syllabus statement on if and/or when students may use AI in their coursework.
+- `wvu-tlcommons-ai-syllabus-statements-e3` [rule] We highly encourage having a conversation with students early in the semester to articulate expectations
+- `wmu-ai-in-the-syllabus-e1` [rule] producing a clear AI statement and discussing it with students on the first day
+- `wmu-ai-in-the-syllabus-e5` [rule] AI syllabus policies should be being clear, flexible, learner-centered and process-focused
+- `wmu-ai-in-the-syllabus-e6` [rule] some educators are choosing to have students collaborate on the development of AI policies
+
+## G10 When unsure, students should ask before using AI — 44 statements, 39 institutions
+- `asu-cse110-ulc-e6` [rule] contact the instructor to discuss before submitting work.
+- `athabasca-provost-interim-genai-e2` [override] learners should always ask before using such tools.
+- `athabasca-provost-interim-genai-e3` [override] students should always seek guidance from their academic support before using ChatGPT
+- `bowdoin-csci2330-e6` [rule] If you have any questions regarding the use of generative AI, please ask!
+- `csus-ctl-course-preparation-e2` [rule] Be sure to consult your department/program for further consideration.
+- `carleton-comp1406-e5` [override] When in doubt, err on the safe side of not using AI
+- `deanza-academic-integrity-use-of-ai-e5` [rule] consult your instructor for clarification.
+- `gmu-cs-honor-code-e5` [rule] many types of assistive technology may be permitted, but you must ask permission
+- `gmu-cs-honor-code-e6` [rule] you are unsure if permission has been granted to do something, you must request clarification
+- `gatech-cs1301-e3` [rule] If you're unsure whether your use of AI is appropriate, please ask.
+- `hmc-ai-use-levels-pilot-e6` [rule] Being unsure about something doesn’t excuse a violation of the Honor Code
+- `howard-policy-100-022-ai-e4` [override] students shall seek clarification from the instructor prior to using AI tools
+- `kean-faculty-manual-genai-e7` [rule] Failure to seek clarification is not an
+- `lafayette-cs150-e4` [rule] It is your responsibility to ask questions if you are uncertain
+- `lafayette-cs150-e5` [override] I encourage you to discuss it with me without hesitation
+- `lakehead-chatgpt-ai-tools-faq-e2` [rule] It's the student's responsibility to seek out clarification from the instructor
+- `liu-academic-affairs-ai-statement-e5` [rule] When in doubt about permitted usage, please ask your instructors for clarification.
+- `mit-6102-e3` [rule] If you are unsure whether a code-generation tool is appropriate for use in 6.102,
+- `miami-oh-cse-academic-integrity-e6` [override] STOP and email or ask your instructor for help
+- `neiu-ctl-sample-ai-syllabus-statement-e7` [override] Seek assistance from the course instructor when in doubt about how to use
+- `ontariotech-should-i-use-chatgpt-e2` [override] Check with your instructor since works of creative writing and fiction may not allow
+- `ontariotech-should-i-use-chatgpt-e3` [override] Is there an expectation that the work should be done on your own?
+- `pomona-cs-ai-policy-tier-system-e6` [override] students must read the course syllabus carefully and discuss allowed uses with their instructor
+- `pcc-student-learning-and-ai-e4` [override] Speak with your instructor or use the
+- `queens-computing-common-syllabus-e2` [rule] Review that statement carefully and speak with your instructor if you have questions.
+- `rosehulman-csse232-e3` [rule] If you are not sure whether a tool is permitted,
+- `tcu-cosc30253-e6` [override] it is your responsibility to discuss your situation with the instructor
+- `uah-etl-ai-guidance-faculty-e1` [rule] Please consult your Department Chair for any Department- or College-specific policies and procedures
+- `ucdavis-ecs154b-genai-e7` [rule] please ask me to clarify before submitting work using these tools.
+- `udayton-academic-honor-code-e4` [override] Students should always check with the instructor before using these products to complete their coursework.
+- `uleth-teachingcentre-ai-policies-e4` [rule] Students shall consult with their Instructors or supervisory committee on the appropriate use
+- `umb-ai-guidelines-e7` [override] Always ask your instructor before using GenAI for class assignments.
+- `umdearborn-genai-academic-integrity-e2` [override] check with your professor, check your syllabus, and check per assignment
+- `uno-ai-for-students-canvas-e3` [override] If you don't see an AI policy, ask your instructor about their acceptance of it
+- `unt-csce1030-su25-e7` [override] Again, if uncertain contact the instructor prior to using AI tools.
+- `utk-cosc202-spring2024-syllabus-e6` [override] If in doubt, ask me or
+- `uwinnipeg-acs1903-e3` [rule] ask the instructor prior to using the tool for coursework
+- `uwinnipeg-acs1904-e4` [rule] ask the instructor prior to using the tool for coursework
+- `ulaval-principes-directeurs-ia-e2` [override] elles ont la responsabilité de questionner la personne responsable en cas d’ambiguïté
+- `uqat-guide-presentation-travaux-ia-e1` [override] vérifiez dans le plan de cours et les consignes spécifiques à chaque activité d’évaluation
+- `vsu-library-ai-academic-integrity-e2` [rule] Ask instructors about their AI use policies
+- `wfu-guidelines-academic-use-gai-e6` [rule] Students are responsible for requesting clarification when they are uncertain
+- `wesleyan-comp211-e6` [override] please consulate with me before using
+- `wright-ceg4350-e5` [override] check with your instructor first
+
+## G11 Each course's policy governs only that course — 6 statements, 5 institutions
+- `odu-cs312-e3` [override] This policy applies only for CS 312.
+- `ttu-cs4366-e2` [override] construe this limited use as permission to use these technologies in any other facet
+- `uthsc-tlc-syllabus-policies-e8` [override] this policy is specifically for this course and other courses may have more restrictive policies
+- `uiuc-cs124-ai-e8` [rule] This policy only applies to CS 124.
+- `uiuc-cs124-syllabus-e7` [rule] violating another course’s AI policy is academic dishonesty regardless of what CS 124 permits
+- `upei-tlc-gait-provisional-guidelines-e4` [override] this does not mean AI tools will be permitted by others
+
+## G12 Allow AI as a tutor for understanding concepts — 77 statements, 60 institutions
+- `acc-cosc1336-fa23-baldwin-e1` [rule] you are allowed to consult ChatGPT or other AI Assistants for help with assignments
+- `acc-cosc1436-fa25-csit-gai-e2` [rule] is permitted and encouraged as a learning aid when used responsibly and transparently
+- `acc-itse1302-sp24-baldwin-e1` [rule] you are allowed to consult ChatGPT or other AI tools for help with assignments
+- `bu-cas-cs391b-e3` [rule] you may use them for general research (as you might use a search engine)
+- `bowdoin-csci2330-e3` [rule] feel free to ask AI for help understanding concepts
+- `byu-cs111-e4` [rule] can be quite useful for helping you to understand a topic
+- `bucknell-csci203-e1` [rule] allowed to use online resources to help you understand a topic in this course
+- `hunter-csci127-e1` [rule] While Large Language Models (e.g. chatGPT, coPilot) can be used to assist in providing explanations
+- `carleton-comp1406-e4` [rule] You are permitted to use AI as a tutor
+- `clarku-cs103-e2` [rule] it’s okay to use AI for assistance with programming assignments
+- `mines-csci561-e1` [override] genAI is permitted as a resource and prohibited for solutions.
+- `colostate-cs220-e2` [rule] Using these tools to understand content from lectures or the book is perfectly fine.
+- `cornell-info2950-e2` [rule] You may make use of the technology as a reference tool
+- `dal-csci4177-5709-ai-tools-e1` [rule] You MAY use Al-driven tools to assist you in learning
+- `duke-compsci101-e3` [rule] You can use AI (LLMs) to answer information questions such as "What is X?"
+- `duke-compsci201-e6` [rule] We encourage you to use LLMs as part of understanding material in the course,
+- `fiu-cap4104-hci-syllabus-e4` [rule] GenAI may be used to suggest potential heuristic violations.
+- `gatech-ic-cs7637-e5` [override] can be great resources for improving your learning in the course
+- `grinnell-csc151-eikmeier-e2` [rule] You are allowed to use other resources
+- `harvard-cs61-e3` [rule] When doing problem sets, you may ask questions of generative AI tools,
+- `jmu-cs240-e4` [rule] You may use AI to help you understand concepts and as a general learning resource,
+- `kpu-tl-genai-student-guide-e6` [rule] Ask generative AI to break down the process for a specific problem
+- `lmu-cmsi3300-e4` [rule] limit the use of GenAI in programmatic assignments to the following cases
+- `lmu-cmsi3300-e5` [rule] Prompt the AI for the how-to’s,
+- `mit-6100a-e1` [override] Generative AI has been shown to help learning when used as a tutor.
+- `mit-6100a-e2` [rule] You may use it to help you understand concepts.
+- `middlebury-csci201-e1` [rule] only allowed to assist in your own learning of theoretical concepts
+- `nyu-csci-ua-102-e3` [rule] When you're stuck on a concept, use AI to explain it in different ways.
+- `neu-cs2100-e5` [rule] You may use AI language models for non-assignment-related things.
+- `ohsu-dmice-intro-bhi-genai-policy-e2` [rule] the final responses to discussion forums, quiz and test questions, and the term paper
+- `ohsu-dmice-intro-bhi-genai-policy-e7` [rule] students may use such tools as a source of information, but not to produce output
+- `polymtl-log2990-e2` [rule] les SIAG dans le cadre de ses travaux (sauf les évaluations individuelles)
+- `princeton-cos226-e5` [rule] using an LLM like a smarter search engine
+- `purdue-cs252-ai-policy-e1` [rule] You may use AI tools for learning but not for coding.
+- `rit-swen261-e5` [rule] the only place where you may use GPT or other AI tools is for searching
+- `smu-csci1226-e2` [rule] Students are allowed to use the AI tools for learning purposes,
+- `tarleton-ai-guidance-e4` [rule] Use AI to support learning and research in ways that align
+- `utaustin-cs314-e5` [rule] We encourage you to use ChatGPT or generative AIs as part of understanding concepts
+- `ubco-cosc111-e1` [rule] may be used in this course as a support for learning, not as a replacement
+- `ubco-cosc111-e2` [override] explain course material and clarify difficult concepts, get explanations for your own code
+- `ucsd-cse123-e1` [rule] you may use these tools to build an understanding of course material
+- `ucsd-dsc10-e1` [override] you may use these tools to build an understanding of course material
+- `ucsd-dsc80-e1` [override] you may use these tools to build an understanding of course material
+- `berkeley-data100-e3` [rule] break problems into steps and ask for help with each step in your own words
+- `ucf-cop3502c-e4` [override] may be used for general learning purposes—for example, to explore concepts, review examples
+- `uconn-cse1010-e2` [rule] As a follow-on resource, AI can be used to identify why the framework and understanding
+- `uconn-cse2050-e2` [rule] If using these tools helps you understand concepts, that’s fine
+- `uf-cop3530-e3` [override] AI tools may be used for learning concepts or subtasks, but not to produce solutions
+- `uiuc-cs124-syllabus-e2` [rule] asking questions is fine, getting answers is not.
+- `umd-cmsc132-e2` [rule] You are allowed to use AI to look up information about the
+- `miami-csc120-e1` [rule] online resources (e.g., generative AI tools) about general solution techniques for assignments
+- `umich-eecs183-python-syllabus-e3` [rule] Outside of the context of doing a graded task
+- `umich-umsi-si301-e1` [rule] we encourage you to use these tools if they help you deepen your understanding
+- `umn-csci5271-e3` [rule] It is generally okay to use these tools to support your understanding
+- `unm-cs491-dip-e1` [rule] It is allowed to use AI for learning purposes.
+- `penn-cis1100-e2` [rule] you may consult web resources, ask questions online, or use LLM/AI resources
+- `penn-cis1100-e5` [rule] It is acceptable to use AI to clarify and expand your understanding of lecture notes,
+- `uri-csc411-daniels-e2` [rule] You may use generative AI tools in a tutorial fashion where you ask general questions
+- `sandiego-msads-handbook-e5` [rule] You are encouraged to use ChatGPT and similar programs as a tool to
+- `utk-cosc202-spring2024-syllabus-e2` [rule] you are encouraged to use “resources” to help solve non-
+- `utk-cosc202-spring2024-syllabus-e3` [rule] You can also ask a generative AI/co-pilot
+- `utep-cs1310-e1` [rule] AI tools may be used for learning and reinforcement purposes only
+- `utsa-cs1083-e1` [override] tools may be used in this course as a learning and debugging aid
+- `utsa-cs2113-e1` [rule] a great tool to guide a student's learning by answering general questions
+- `utoronto-ischool-inf2214-e1` [rule] learning and practicing the concepts in this course, but these tools may NOT be used
+- `uvic-csc110-e1` [override] Use generative AI as a tutor to explain code snippets, break down problem descriptions
+- `uw-allen-ai-support-and-growth-e1` [rule] You may use AI for general course questions and ungraded work.
+- `uw-cse312-ai-policy-e2` [rule] as long as the work is not submitted for credit
+- `teluq-inf1901-usage-ia-e4` [rule] de ne pas hésiter à engager un dialogue avec l’agent
+- `viu-csci161-kabir-e1` [rule] Students may use artificial intelligence tools, including generative AI, in this course as learning aids
+- `vassar-cmpu224-e2` [rule] use AI tools to assist your learning, but not to do the work for you
+- `wsu-cpts317-e1` [rule] is allowed for learning purposes about material related to this course
+- `wustl-cse330-e1` [rule] AI tools (such as ChatGPT, Copilot, Gemini, or Claude) can be powerful aids
+- `wesleyan-comp211-e2` [rule] the only acceptable use of AI in this class is to improve understanding
+- `williams-csci104-e4` [rule] You may use AI assistants to gain a better understanding of the course material
+- `williams-csci334-e1` [rule] the only places where AI is permitted unless specifically instructed otherwise
+- `williams-csci334-e2` [rule] Getting clarifications about lecture material.
+
+## G13 Allow AI to explain errors and help debug — 25 statements, 21 institutions
+- `asu-cse110-ulc-e4` [rule] assist in debugging common code errors, provide additional clarification of course concepts,
+- `cmu-10301-601-e8` [rule] Use of generative AI tools for code, explanations, or debugging.
+- `columbusstate-cpsc1302k-e1` [rule] code explanation of examples, practice questions, and understanding compilation errors
+- `famu-cop3014c-c01-e3` [rule] Debugging assistance or code explanation (when noted as part of an assignment).
+- `hmc-cs70-e5` [rule] You may use LLMs to help explain compiler error messages or runtime errors.
+- `mercer-ctl-sample-syllabus-ai-e4` [rule] Students may use AI for specifically named purposes, such as brainstorming, practice, feedback, or debugging,
+- `nyu-csci-ua-102-e4` [override] Use AI to review your code and offer suggestions for improvement
+- `neu-cs2100-e6` [rule] You may use a search engine to look up documentation, errors, concepts, etc.
+- `psu-ist-genai-teaching-e5` [override] AI can help identify errors in student code and suggest possible fixes
+- `stanford-cs221-e5` [rule] acceptable to use ChatGPT to help with unfamiliar syntax or to debug a specific error
+- `utaustin-cs314-e6` [rule] You may use generative AIs to help understand why your program may have failed tests
+- `ucalgary-cpsc219-e2` [rule] use AI tools to get help understanding coding concepts, debugging, and improving their coding skills
+- `ucalgary-cpsc331-e4` [rule] Some uses of generative AI, such as for "rubber ducky" debugging, finding more practice problems
+- `ucsd-cse123-e3` [override] help you determine C syntax to do a specific task, or even debug errors
+- `ucsd-dsc10-e2` [rule] explain concepts you didn’t understand, and debug your implementation in code
+- `ucsc-tlc-drafting-genai-use-policy-e7` [rule] GenAI tools can assist in understanding course concepts, debugging code
+- `memphis-comp4745-e4` [rule] You may use generative AI to polish your writing or debug your code
+- `umsl-cmpsci-4390-deep-learning-e3` [override] Permitted for explaining error messages, reviewing code you have written, and exploring alternative approaches.
+- `unt-csce3201-applied-ai-e1` [rule] ChatGPT and Co-pilot may be used to aid syntax checking and debugging
+- `ou-cs2414-e1` [rule] to assist in understanding data structure concepts, debugging code, and generating ideas
+- `utsa-cs1083-e4` [override] Asking for help understanding why your own code is not working.
+- `valencia-cen3024c-e1` [rule] allowed to use AI – on certain assignments - for research and debugging
+- `vcu-cmsc357-computer-systems-e1` [override] Using AI tools to understand bugs in your program.
+- `vcu-cmsc357-computer-systems-e4` [rule] Using AI as a debugging tool to understand what went wrong in your program
+- `vcu-cmsc413-intro-cybersecurity-e3` [rule] AI tools may be used to help troubleshoot and debug your work
+
+## G14 Allow AI for practice, study aids, and review — 17 statements, 17 institutions
+- `auburn-biggio-genai-syllabus-language-e8` [rule] Students may use Generative AI tools as a study tool, but be forewarned
+- `mines-csci561-e2` [rule] explain complex concepts in different ways, generate additional examples and practice problems
+- `erau-student-code-ai-e4` [override] Practicing language, coding or problem-solving skills.
+- `gatech-cs1331-chambers-e4` [rule] Generative AI is an excellent resource for testing your knowledge, generating practice problems
+- `gsu-cis3001-ai-mou-e2` [rule] Creating study guides and summaries of course materials
+- `gonzaga-student-guide-responsible-ai-use-e4` [override] Am I allowed to use AI tools to help me study or prepare for quizzes
+- `jmu-cs149-e2` [rule] You are encouraged to use AI as a study aid outside of class,
+- `middlebury-csci451-e5` [rule] uses of generative AI which promote your practice and learning in critical reasoning
+- `oregonstate-coe-ai-chatbot-policy-example-e2` [override] You ARE allowed to use AI chatbots to verify algorithms.
+- `sjsu-cs46a-tshukudu-e1` [rule] may be used to support studying and learning, such as clarifying concepts
+- `tmu-cps420-e1` [rule] only for grammar correction or as a study tool for tests and exams
+- `ucsd-cse123-e4` [rule] help you preview material before lecture, summarize material after lecture
+- `umich-eecs280-syllabus-e2` [rule] Learning course concepts, generating examples of a particular coding pattern, interactively checking your knowledge, etc.
+- `umdearborn-genai-academic-integrity-e4` [rule] AI can increase learning by constructing study aids, brainstorming material, and improving grammar.
+- `uno-ai-for-students-canvas-e5` [rule] use AI as a resource to study, brainstorm, write rough drafts, or find information
+- `williams-csci334-e3` [rule] Creating study guides or other materials to aid in your learning.
+- `yale-cpsc2010-e2` [rule] I suggest that you use these models as a study aid,
+
+## G15 Allow AI for brainstorming and exploring approaches — 20 statements, 20 institutions
+- `amherst-ai-usage-guidelines-e3` [rule] Members of the community may use these tools to generate ideas, drafts, and analyses
+- `fiu-cap4104-hci-syllabus-e6` [override] GenAI may assist with ideation, but final designs must reflect student reasoning.
+- `gatech-cs1301-e1` [rule] you may use AI tools to brainstorm, explore ideas, or clarify concepts
+- `jhu-en601220-e6` [rule] AI tools can help with brainstorming, boilerplate generation, and learning alternative approaches to coding problems.
+- `okstate-itle-chatgpt-sample-syllabus-statements-e6` [rule] Appropriate uses may include generating ideas for writing assignments, checking facts of a phenomenon
+- `odu-cs422-e2` [rule] ChatGPT and such tools may be used to get some ideas,
+- `txst-cs3358-lk04-e2` [rule] You may use AI tools for brainstorming, exploring responses, and creative work
+- `newschool-ai-sample-syllabus-statements-e8` [override] You MAY use AI in the initial stages of research, idea generation, and drafting.
+- `ucalgary-cpsc219-e1` [rule] Students are encouraged to use AI tools to explore concepts, generate ideas
+- `uidaho-cetl-ai-guidelines-e4` [override] An AI text generator can provide an outline for writing or coding
+- `uiuc-ischool-is445-e2` [rule] restricted to brainstorming, seeking inspiration, expanding ideas, and improving writing
+- `umich-eecs280-syllabus-e3` [rule] Brainstorming and identifying potential edge cases for testing
+- `umkc-provost-ai-syllabus-statements-e6` [rule] there is no limitation on the use of generative AI for brainstorming, developing ideas
+- `uncw-csc365-e1` [rule] AI tools may be used for brainstorming, coding assistance, and enhancing understanding of course material.
+- `uri-csc461-e2` [rule] leverage these technologies for brainstorming, concept exploration, code analysis, and problem-solving approaches
+- `southalabama-genai-coursework-policy-e7` [rule] Brainstorming and Idea Generation: Using GenAI to explore topics, generate initial
+- `utep-cs4379-5375-e4` [rule] can be beneficial during the early brainstorming stages of an activity
+- `utoronto-csc148-e6` [override] recommend treating generative AI as a supplementary tool only for exploration or drafting content
+- `wisc-cs540-about-e3` [override] You may consult an AI tool to brainstorm approaches, clarify instructions, review concepts.
+- `valencia-cop1000c-e2` [rule] you may use AI tools to help brainstorm topic ideas or create an initial outline
+
+## G16 Allow AI-generated code under stated conditions — 36 statements, 32 institutions
+- `acc-cosc1436-fa25-csit-gai-e3` [override] You may use AI to assist with drafting, proofreading, coding, or creating visual elements
+- `byui-cse-genai-policy-e3` [rule] Use generative AI tools for code completion, debugging, and optimization
+- `brown-csci1377-e4` [rule] generating small snippets of code that you could otherwise write by hand
+- `carleton-comp2401-e3` [rule] generative AI to help understand concepts and generate small amounts of code
+- `cornell-cs1110-e2` [rule] allowed to use generative AI for code that you do not submit
+- `cornell-info5001-e5` [rule] You may use GAI tools to assist in writing code in this class.
+- `jmu-cs470-e1` [rule] AI-assisted code generation tools such as Github Copilot are allowed on the labs and projects
+- `jhu-en601220-e4` [rule] Any code segment resulting from collaboration should be no more than ten lines long.
+- `lsu-faculty-senate-gai-guidelines-e4` [rule] GAI can review, modify, and generate code snippets or entire programs
+- `lmu-cmsi3300-e8` [override] agentic coding is generally acceptable, but you must (1) be able to understand, validate
+- `mit-6110-e1` [rule] You are allowed to use LLM-generated code.
+- `mit-6110-e2` [rule] We encourage you to try to use LLM-generated code in your project.
+- `msstate-ece1013-e5` [override] Any work with more than the allowable percentage of AI-generated material
+- `njit-cs698-ml-time-series-e1` [override] In most cases, you will be allowed to integrate this information into your solution.
+- `nyu-csci-ua-102-e5` [override] Come up with a detailed step by step algorithm and ask it to generate code
+- `oregonstate-coe-ai-chatbot-policy-example-e3` [rule] You ARE allowed to use AI chatbots for small snippets of code
+- `rit-ctl-syllabus-guidance-genai-e2` [rule] Smart in-context code completion such as GitHub Copilot (free for students)
+- `smu-csci2341-e7` [override] you will be allowed to submit code written by an AI.
+- `sfu-cmpt120-e2` [rule] may use any AI tool to help you write code for all assignments and labs
+- `smith-csc370-ai-guidelines-e3` [override] using AI to complete the implementation may be a sensible approach.
+- `utaustin-cs371n-e2` [override] You are allowed to use ChatGPT and Copilot for programming assignments
+- `uttyler-cosc1337-e3` [override] to find code examples for solutions that you "hit a brick wall"
+- `ucalgary-cpsc231-e3` [rule] external sources (including generative AI) may be used if cited via a comment
+- `berkeley-info256-e2` [override] so I don't care if you're using Copilot
+- `berkeley-info256-e4` [override] Feel free to use automatic coding assistants for some low-level aspects of this work
+- `uchicago-cmsc25910-e4` [rule] Using a generative model to turn natural language into a few lines of code
+- `uchicago-cmsc25910-e5` [override] Using more than 4 lines of code at a time from a generative model
+- `cuboulder-csci3308-e2` [override] you may submit AI-generated code, or code that is based on or derived from
+- `umd-cmsc216-e1` [rule] Students may utilize LLMs, Chat Bots, and other AI tools while constructing solutions.
+- `usc-csce491-e1` [override] You may use generative AI as a development tool, but keep the following in mind:
+- `uva-sds-ds4021-e1` [override] is acceptable and even encouraged for the coding aspects of the lab assignments
+- `uw-cse121-e2` [rule] Students may use AI freely on projects.
+- `uwaterloo-cs349-e2` [override] generative AI source must be documented and no single source can constitute more than 15%
+- `vcu-cmsc357-computer-systems-e3` [rule] Using AI to refactor or optimize your code after you have written a working solution
+- `vt-cs3214-e5` [rule] There are no restrictions regarding the use of generative AI tools for generating or
+- `wustl-cse4202-e1` [override] use AI-driven content generators such as ChatGPT or GitHub CoPilot with proper attribution
+
+## G17 Provide a sanctioned, course-specific AI tool — 20 statements, 16 institutions
+- `boise-cs-ai-department-approach-e8` [rule] You are a tutoring system and not allowed to provide full code
+- `byu-cs111-e5` [rule] The rubber duck is powered by ChatGPT and is designed to be a “Virtual TA”
+- `cgu-ai-guidance-e5` [rule] Claremont Graduate University has acquired a ChatGPT EDU license
+- `cornell-info5001-e4` [rule] the main motivation for providing the Beebe AI assistant for the class
+- `davidson-artificial-intelligence-policy-e3` [rule] The availability of an AI tool from the college does not correspond to permission
+- `harvard-cs50-e1` [rule] Using CS50’s own AI-based software, including the CS50 Duck (ddb)
+- `harvard-cs50-e2` [override] Using AI-based software other than CS50’s own (e.g., ChatGPT, Claude, Copilot, Gemini, et al.)
+- `nyu-software-engineering-bloomberg-e1` [rule] has been trained on this course’s lecture notes and documents.
+- `shsu-academic-affairs-ai-guidance-e3` [rule] SHSU has access to Microsoft’s Copilot, Gemini, and Google NotebookLM using your SHSU sign on.
+- `syracuse-ist256-e3` [rule] This course offers a free AI chatbot
+- `syracuse-ist256-e6` [rule] This reporting is not necessary when using the course-provided AI assistant
+- `tufts-cs15-e1` [rule] you have access to a unique resource: the CS 15 AI Chatbot.
+- `tufts-cs15-e2` [rule] It will help guide you through problems, but without solving them for you,
+- `berkeley-cs61a-e4` [rule] Homeworks will be completed alongside an AI tutor called Preceptor
+- `umass-compsci383-e3` [rule] we have developed an internal tool, called “383GPT,”
+- `umass-compsci383-e5` [override] You can use the resulting code produced by 383GPT
+- `umich-eecs183-python-syllabus-e2` [rule] There are no special “allowed” rules for university-provided AI tools.
+- `utoronto-csc108-e7` [rule] use an AI tool called LearnAid, which has been trained on the course material
+- `wisc-cs220-syllabus-e2` [rule] We provide an AI feedback server to offer assistance on some project questions.
+- `western-cs1027-e1` [rule] will guide you on your assignments for this course without giving you the entire solution
+
+## G18 Treat AI for prose separately from AI for code — 38 statements, 31 institutions
+- `brock-cosc1p02-e1` [override] Emails written, ‘polished’, or otherwise generated by AI are incredibly unprofessional
+- `brock-cosc1p02-e2` [override] trying to trick a human being into interacting with a machine
+- `brown-csci0190-e5` [rule] You should never, ever use AI for writing prose.
+- `brown-csci0190-e6` [rule] The only “AI” writing tools we allow you to use are spelling- and grammar-checkers,
+- `brown-csci2952c-e3` [override] Tools that only suggest spelling and grammar changes are not considered AI-based assistants
+- `csulb-optional-ai-syllabus-statements-e8` [override] Writing entire sentences, paragraphs or papers to complete class assignments
+- `carleton-comp2401-e2` [override] This explanation cannot be AI-generated.
+- `chapman-provost-ai-syllabus-considerations-e6` [override] Writing entire sentences, paragraphs, or papers to complete class assignments.
+- `clarku-cs103-e1` [override] Using AI systems to answer writing assignments (e.g., summarizing the readings, writing essays, etc.)
+- `cornell-info2950-e5` [rule] unless instructed otherwise, you may not use GAI to write narrative on assignments.
+- `cornell-info5001-e8` [rule] unless instructed otherwise, you may not use GAI to write narrative on assignments.
+- `ilstu-cipd-genai-classroom-e3` [rule] Using them to create text for a written assignment would be plagiarism
+- `kent-policy-3-01-8-cheating-plagiarism-gai-e5` [override] AI used for auto-complete, minor text-predictions, and/or grammar/spelling/punctuation suggestions
+- `morehouse-ai-academic-guidelines-2-e4` [rule] Writing submission that are written by Gen AI is
+- `oregonstate-coe-ai-chatbot-policy-example-e5` [rule] use chatbots in manners similar to the above for generating written reports
+- `tmu-cps188-e1` [rule] Students may use Generative AI (e.g. ChatGPT, Grammarly, Perplexity, DeepL Translator) for grammar correction only.
+- `berkeley-info256-e6` [rule] You are free to use LLMs to rephrase text that you are the author of
+- `ucdavis-ecs154b-genai-e3` [rule] Using ChatGPT to help improve grammar in your writing.
+- `ucdavis-ecs154b-genai-e4` [rule] Using ChatGPT to write text for you without editing or reviewing it.
+- `uci-ics33-e5` [rule] those words should be yours (and yours alone)
+- `uf-cop3530-e2` [rule] use AI tools to write/translate reports
+- `umbc-cmsc491-691-e5` [rule] use of these tools may be, but is not required to be, disclosed
+- `umich-eecs183-python-syllabus-e4` [override] Spelling and grammar checkers
+- `unb-bremner-genai-policy-e6` [rule] You may use automated tools to provide suggestions and writing feedback
+- `ou-cs2334-e3` [rule] this includes using Generative AI to write or edit your assignments
+- `usf-cis4219-e6` [override] permitted to use AI tools as a supplemental resource (i.e., as an editor)
+- `uvic-csc226-e4` [override] AI-based tools for translation, formatting, typesetting, or as a brainstorming tool
+- `uva-sds-ds4021-e3` [rule] using LLM in the writing parts of the assignments and final project is discouraged
+- `uw-ischool-hcid520-e2` [override] You may use them to generate the essays required in this course
+- `uw-ischool-hcid520-e5` [override] you only consider very narrow uses of them for things like 1) spell checking
+- `uwinnipeg-acs1903-e2` [override] as well as AI writing and paraphrasing tools, such as Grammarly, Quillbot, etc.
+- `uwinnipeg-acs1904-e3` [override] AI writing and paraphrasing tools, such as Grammarly, Quillbot, etc.
+- `valencia-cop1000c-e3` [override] use AI tools to check grammar and style on drafts you have already written
+- `vassar-cmpu224-e6` [rule] Generating prose for any part of your assignment, such as code comments,
+- `vcu-cmsc413-intro-cybersecurity-e2` [rule] AI tools may be used for writing support: fixing grammar, improving clarity, rewriting reports
+- `vt-cs3214-e8` [override] we do not allow their use for impersonation in contexts where you are expected
+- `wayne-senate-ai-subcommittee-report-e2` [rule] whether AI tools that help with editing (e.g., Quillbot, Paraphrase, Grammarly) are permitted
+- `wvu-tlcommons-ai-syllabus-statements-e8` [rule] (AI) to proofread a student’s own written work (such as spellcheck or Grammarly) are acceptable
+
+## G19 Do not have AI produce the work you submit — 174 statements, 125 institutions
+- `acadia-jodrey-cs-academic-integrity-e2` [rule] This includes copying code found on websites or having AI generate the code for you
+- `appstate-cs3435-e5` [rule] Heuristic 1: Never hit “Copy” within your conversation with an AI assistant.
+- `bc-university-academic-integrity-policy-ai-e2` [rule] reading, synthesizing, interpreting, writing, coding, programming, etc.
+- `bu-cas-cs111-e1` [rule] using ChatGPT, GitHub Copilot or other forms of generative AI when writing code
+- `bu-cas-cs112-e1` [rule] using tools that automate (e.g. ChatGPT) and/or assist with the writing of code
+- `bowdoin-csci2330-e4` [rule] You should never use AI to write your code for you.
+- `brandeis-ctl-ai-syllabus-statements-e4` [rule] you may not use generative AI to refine written work and/or code
+- `bucknell-csci203-e3` [rule] not allowed to search for specific code or solutions to specific problems
+- `bucknell-csci203-e4` [rule] This includes the use of AI-supported chatbots and assistants such as ChatGPT, Claude, or CoPilot.
+- `ccny-cuny-academic-integrity-e3` [rule] including but not limited to language models or code generators, without written authorization
+- `cuny-gc-academic-integrity-policy-2024-e3` [rule] including but not limited to language models or code generators, without
+- `hunter-csci127-e2` [override] these tools may not be used to generate answers to graded assignments.
+- `csuf-fdc-creating-genai-policy-e5` [rule] generate content that is directly used in an assignment (such as code, text, images
+- `carleton-cs111-e3` [rule] It is a violation of the academic integrity to use any tool
+- `carleton-comp2401-e4` [rule] Avoid having an AI generate whole functions or implementing whole algorithms.
+- `carleton-comp2401-e7` [rule] or generative AI to write code for your project
+- `cmu-10301-601-e6` [override] you may not directly ask an AI tool to answer a homework problem
+- `cmu-15122-e3` [rule] not allowed to refer to solutions and/or code written by past or present students, ChatGPT
+- `csuohio-ai-syllabus-statement-examples-e6` [rule] (and try using AI), you must all create your own code, output and answers.
+- `colby-cs151-e1` [rule] You may not turn in any AI-generated code or written text.
+- `mines-csci561-e4` [rule] using genAI to produce solutions to graded assignments such as homeworks and programming projects
+- `colostate-cs152-e1` [rule] to write or “improve” your code or written work at *any* stage is prohibited
+- `colostate-cs220-e3` [rule] for an AI in order to obtain solutions and/or hints is not allowed.
+- `colostate-cs312-e3` [rule] Using any form of AI Coding Assistance.
+- `columbusstate-cpsc1302k-e5` [rule] using these tools for solution generation is not permitted
+- `concordia-ctl-genai-teaching-guidelines-e5` [rule] may not use artificial intelligence tools for taking tests, writing research papers, creating computer code
+- `depaul-csc-355-e1` [rule] Turning in solutions generated by a chatbot, other generative AI, or automated code generator
+- `drexel-cs172-e3` [rule] You use an LLM service (e.g., ChatGPT, CoPilot, DeepSeek, etc.) to help you write
+- `duke-compsci201-e7` [rule] you should not ask an LLM to write code specific to an assignment
+- `etamu-ai-500-foundations-ai-e1` [rule] chatbots, or other software that has the capacity to generate code, and textual answers.
+- `famu-cop3014c-c01-e4` [rule] Generate entire solutions for coding assignments, tests, or the course project.
+- `famu-cop3014c-c04-e7` [rule] Generating project code, test cases, or any other work to be submitted
+- `fsu-cop3330-e2` [rule] NOT APPROPRIATE to utilize AI Tools, like ChatGPT, to write assignment code for you
+- `fordham-provost-genai-principles-e1` [rule] as well as in the creation and debugging of computer programs
+- `gwu-csci-1012-e2` [rule] Copying code from any website or app (including copying code from “AI” tools)
+- `gwu-csci-2113-e2` [rule] Use any LLM (such as ChatGPT) to generate any of your code
+- `gwu-csci-2113-e3` [rule] or generate a skeleton of your code that you then modify.
+- `grinnell-csc151-rebelsky-e1` [rule] You may not use AI-based programming assistants, such as Claude Code, ChatGPT, GitHub Copilot
+- `hmc-cs70-e1` [rule] may not use any kind of AI assistant (such as GitHub Co-Pilot) to write code
+- `haverford-cmsc-h360-e2` [rule] (or any other software for automaticallly generating code) is not allowed for this course
+- `iit-cs442-e1` [rule] Using AI coding assistants such as Copilot / ChatGPT to blindly generate most
+- `ilstu-cipd-genai-classroom-e2` [rule] Using AI content generation services to solve equations or develop code would be examples
+- `jsu-common-syllabus-ai-policy-e5` [override] no final assignment, presentation, paper, or other graded work can be fully created by AI
+- `jmu-cs240-e1` [rule] explicitly forbidden from using AI-based code generation tools such as ChatGPT or GitHub copilot
+- `jmu-cs240-e3` [rule] AI to generate solutions, hints, or otherwise do your work for you is explicitly forbidden.
+- `jhu-en601220-e2` [rule] you must not generate, co-develop or share whole solutions.
+- `kean-faculty-manual-genai-e2` [override] Content created by Generative AI cannot be presented as original student
+- `kent-policy-3-01-8-cheating-plagiarism-gai-e1` [override] Using GAI to generate content in satisfaction of assigned coursework, except as expressly permitted
+- `kpu-tl-genai-student-guide-e2` [override] Simply paraphrasing GenAI output does not, by itself, make it your own work.
+- `mit-6100a-e3` [rule] You may NOT use it to generate code for you
+- `mit-6100a-e4` [rule] you may not copy or base your solution on any posted code
+- `mit-6102-e1` [rule] Using generative AI tools to write text or code
+- `mit-6102-e2` [rule] You may not use code or text produced by advanced code-authoring tools,
+- `mun-citl-genai-syllabus-statements-e3` [rule] This includes but is not limited to essays, research papers, computer code
+- `msu-cse231-syllabus-e3` [rule] never submit a code that is not yours even if you received that code
+- `mtsu-policy-323-e3` [override] students must not outsource the work they are expected to complete
+- `middlebury-csci201-e2` [rule] you may not use a generative AI tool to write any code for you
+- `montana-state-csci132-s26-e1` [rule] You should not use any bots or AI to develop your solutions
+- `montclair-ofe-ai-course-policies-e4` [override] generative artificial intelligence (AI), photographs, apps, websites, and services) to generate a work product
+- `njit-cs490-guided-design-se-e1` [rule] output of a generative AI tool such as ChatGPT that you prompted yourself
+- `njit-cs490-guided-design-se-e4` [override] output of a generative AI tool prompted by someone other than you
+- `nmsu-syllabus-ai-statements-e8` [override] which includes hiring a person or a company to write assignments and using AI tools.
+- `ncsu-csc316-e1` [rule] use AI tools or services, like ChatGPT, to generate partial or complete solutions to assessments
+- `ncsu-csc316-e2` [override] should not be used as a starting point that the student will then edit
+- `neu-cs3650-e3` [rule] you may not use any tool, including Generative AI, to generate your submission code.
+- `northwestern-cs213-intro-computer-systems-e1` [rule] “Prompt engineering” or “vibe coding” your way through labs and homeworks
+- `oberlin-csci150-eck-e1` [rule] using code generated by ChatGPT or other AI systems, etc., is prohibited
+- `odu-cs422-e1` [override] simple sharing and copying from other students, ChatGPT, and similar tools are prohibited,
+- `oregonstate-coe-ai-chatbot-policy-example-e7` [override] ARE NOT allowed to use AI chatbots to simply write your software for you
+- `pomona-cs-academic-honesty-policy-e3` [rule] Copying solutions from any source, including the web, AI tools, or students
+- `pomona-cs51-e2` [rule] This includes AI tools, such as coPilot, Claude, and chatGPT.
+- `rpi-csci1200-e1` [rule] Students should not use ChatGPT, GitHub Copilot, Gemini, Claude, or any other generative AI chatbot,
+- `rit-csci633-e1` [rule] an LLM to write your code/text will be treated as not producing your own work
+- `rit-ctl-syllabus-guidance-genai-e1` [override] we do not want generative AI tools to do your work
+- `rutgers-cs111-e1` [rule] You MAY NOT use generative AI software (such as ChatGPT or GitHub Copilot)
+- `smu-csci1226-e1` [rule] Using LLMs or other AI tools that generate code and submitting the results
+- `sjsu-cs146-taylor-e1` [rule] Don't have LLMs or AI write your code for you.
+- `scu-engineering-ai2-e5` [rule] code generation tools (AI-based or otherwise), such as ChatGPT, GPT4, CoPilot, are strictly prohibited
+- `sfu-cmpt373-e1` [rule] use of AI for generating code interferes with the learning outcomes
+- `sfu-cmpt373-e3` [rule] use Copilot and other AI tools, avoid them or disable them during this course
+- `smith-csc370-ai-guidelines-e2` [rule] writing the code for yourself is the best way: do not use AI.
+- `stanford-cs106b-honor-code-e4` [rule] disallowed from using generative AI tools (like ChatGPT) to create, modify, or debug code
+- `swarthmore-cs35-e2` [override] you did not develop yourself (even if you asked a robot to do it)
+- `swarthmore-cs75-e1` [rule] This thusly applies to solutions produced by generative AI.
+- `swarthmore-cs75-e2` [rule] or solutions provided by generative AI (e.g. ChatGPT or Copilot)
+- `tamu-csce312-e1` [override] may not copy or paraphrase work in whole or in part from other sources
+- `tcu-cosc30253-e3` [override] Incorporating any part of an AI-generated response in an assignment;
+- `txst-cs3358-gholoom-e2` [rule] work produced with assistance from a generative AI such as ChatGTP , CoPilot, Grok,
+- `newschool-ai-sample-syllabus-statements-e3` [override] you may not submit materials generated with any AI tool as your own.
+- `osu-cse2221-2231-policies-e2` [rule] any other form of generative AI to help write your code is NOT permitted
+- `utd-cs2336-e1` [override] free to use AI code generation tools to learn, but all code should be written
+- `tmu-cps420-e3` [rule] the use of Generative A.I. for code generation is completely prohibited.
+- `utrgv-coltt-generative-ai-e1` [rule] Completing programming assignments
+- `buffalo-cse331-e3` [rule] the above restriction applies to all questions on the homeworks (including the programming question).
+- `uab-provost-ai-working-group-report-e6` [rule] The use of generative AI tools to develop code is strictly prohibited in this course.
+- `ualberta-cmput401-e1` [override] You MUST not submit work by ChatGPT as your own, that is plagiarism.
+- `arizona-csc120-e1` [override] submit work from other sources such as ChatGPT (or any AI), stack overflow, GitHub, etc.
+- `arizona-infosci-academic-integrity-e3` [rule] Generating and submitting, in whole or in part, text or code through Artificial Intelligence
+- `ubc-cpsc110-e2` [override] you must start your designs from scratch
+- `ubc-cpsc110-e4` [rule] Any solutions or code found online, including code produced by generative AI tools (e.g., ChatGPT).
+- `ubco-cosc111-e4` [rule] For all other assignments, you must write your own code and understand it thoroughly.
+- `ucsd-cse29-e1` [rule] the use of generative AI tools (e.g., ChatGPT, GitHub Copilot) for assignments is prohibited
+- `berkeley-cs61a-e1` [rule] AI tools such as Github Copilot or ChatGPT to fill in or correct your code
+- `berkeley-data8-e1` [override] you may not use answers that you find online or that are generated by AI
+- `ucsc-tlc-drafting-genai-use-policy-e4` [rule] writing code, editing/debugging code, solving equations, answering quiz questions
+- `ucsc-tlc-drafting-genai-use-policy-e5` [rule] Submitting AI-generated code as your own work is strictly prohibited.
+- `ucf-cop3502c-e1` [rule] DO NOT use code from third party resource, including generative AI (online or offline).
+- `uchicago-cmsc23530-policies-e4` [rule] must not use Generative AI systems (GenAI), such as ChatGPT or GitHub Copilot, to write
+- `uchicago-cmsc23530-policies-e7` [override] never to request that the system generate any code for you.
+- `uconn-cse2050-e1` [rule] Similarly, do not use code written by AI tools such as ChatGPT.
+- `uf-cop3502-e1` [rule] using AI-generated or -suggested code, or using someone else to code your solution is
+- `uf-cop3530-e1` [rule] use genAI tools such as ChatGPT to generate entire functions/programs
+- `hawaii-ics311-e1` [rule] or LLMs (such as ChatGPT, Claude, etc.) to find solutions is NOT permitted
+- `uic-cs218-data-ai-e7` [override] Have someone else (including ChatGPT) do your work, either in person or online
+- `uiuc-cs124-syllabus-e1` [override] All homework and quiz code you submit must be written by you.
+- `uiuc-cs128-syllabus-e3` [override] it may not produce your product, i.e., the code you submit
+- `uiuc-cs128-syllabus-e4` [rule] you may not submit test code verbatim as an AI tool produced it.
+- `uiuc-grainger-ai-guidance-e7` [rule] its use is expressly forbidden for writing database-related code, including SQL queries
+- `umanitoba-catl-genai-syllabus-statements-e3` [rule] may not use artificial intelligence tools for taking tests, writing research papers, creating computer code
+- `umbc-cmsc491-691-e2` [rule] This applies to prose, code, or any form of content creation.
+- `umd-cmsc131-e1` [rule] or AI use to develop your code, are all violations of the Code
+- `umd-cmsc131-e3` [rule] Using any type of AI tool to create code for you such as chatGPT.
+- `uml-academic-integrity-policy-e2` [rule] Uses generative AI tools, such as chatbots, image generators, or code generators
+- `memphis-comp1900-e2` [rule] NEVER submit any code that you did not write yourself.
+- `memphis-comp1900-e3` [rule] Copying code that you did not write yourself (including code from
+- `memphis-comp4745-e1` [rule] in any manner to write your project reports or codes
+- `umich-eecs280-syllabus-e4` [rule] Generating project code, test cases, or any other work to be submitted
+- `umn-csci5271-e5` [rule] this includes getting the idea of a solution from such a tool
+- `unr-cs474-e4` [override] Incorporating any part of an AI -written response into a submitted assignment
+- `unm-cs491-dip-e4` [rule] Submitting AI-generated code, copying from others without proper disclosure
+- `unt-csce1030-su25-e1` [rule] use answers from Generative AI /LLMs such ChatGPT, Gemini or Copilot
+- `unt-csce3201-applied-ai-e2` [rule] but must not be used to construct solutions on their own
+- `uoregon-cs322-e4` [rule] You cannot use content such as text or code generated by GenAI tools
+- `uottawa-academic-integrity-ai-e6` [override] Avoid using AI to generate answers or complete assignments that should be original
+- `penn-cis1100-e3` [rule] You must not use or copy from a solution that you find online
+- `penn-cis1100-e6` [rule] You may not use AI for generating code or text for assignments.
+- `penn-cis1200-e1` [rule] Using an AI tool (ChatGPT, Claude, etc.) to generate code is not allowed.
+- `uregina-genai-hub-instructor-resources-e6` [rule] Modifications are to be your own original code and cannot be generated by AI
+- `uregina-genai-hub-instructor-resources-e7` [rule] Using an AI tool to do it for you would undermine this learning objective.
+- `rochester-csc171-e8` [rule] Note that this also applies to solutions obtained from AI assistants,
+- `southalabama-genai-coursework-policy-e6` [rule] Submitting AI-generated content as one's own original work: This includes essays, reports, code
+- `usf-cap4111-e5` [rule] Literate copying AI-generated content, including code or writing, is not allowed
+- `usc-csci103l-e4` [rule] MAY NOT use AI, help from other students / 3rd parties, or external solutions
+- `utk-cosc202-spring2024-syllabus-e1` [override] All graded work should go from your head to your fingers to submission
+- `utep-cs4379-5375-e3` [rule] copy solutions directly from AI tools or other sources
+- `utep-cs4379-5375-e6` [override] you are not allowed to submit any AI-generated work in this course as your own
+- `utsa-cs1083-e3` [rule] students may not use GenAI to generate complete solutions or substantial portions
+- `utsa-cs1083-e5` [rule] Copying or substantially modifying AI-generated code and submitting it as your own.
+- `utsa-cs2113-e2` [override] I hazard against using AI to write code or provide complete solutions
+- `utoronto-csc108-e1` [rule] Using Generative AI tools, such as ChatGPT and GitHub CoPilot, to produce code is prohibited
+- `utoronto-csc108-e6` [rule] You must not use these tools to generate code for for-credit coursework
+- `uvic-csc110-e2` [rule] copying (even partial) solutions from ChatGPT is not permitted.
+- `wisc-cs220-syllabus-e3` [rule] using generative AI to write the code for you
+- `wisc-cs540-about-e5` [rule] use AI to generate and/or copy solutions, code, or written work, even partially.
+- `uqam-inf1120-e2` [rule] la rédaction de contenu, la production de code informatique.
+- `valencia-cop1000c-e4` [override] You may not submit anything generated by AI as your own work.
+- `vanderbilt-sample-syllabi-genai-ece-e4` [rule] I recommend that you not ask it to write code for you.
+- `vassar-cmpu224-e5` [rule] Submitting any code that was generated by an AI tool.
+- `vassar-cmpu224-e8` [rule] copying and pasting code from an AI into your assignment
+- `vcu-cmsc210-computers-programming-e4` [override] don't ask it to solve an assignment for you
+- `vcu-cmsc357-computer-systems-e2` [override] Using AI tools to write your program.
+- `vcu-cmsc357-computer-systems-e6` [rule] the use of AI tools for generating solutions, writing significant portions of code
+- `wsu-cpts317-e2` [rule] using generative AI tools to produce solutions for graded assignments is not permitted
+- `wesleyan-comp211-e1` [rule] prohibited for the generation of ideas, problem-solving, and writing of code
+- `wvu-tlcommons-ai-syllabus-statements-e4` [rule] Forms of coding and/or problem-solving assistance that use generative artificial intelligence (AI)
+- `wmu-ai-in-the-syllabus-e7` [rule] Generative-AI tools, such as ChatGPT and Microsoft CoPilot, should only be used in this course
+- `western-cs1026-e1` [rule] may not use generative AI or tools capable of generating code or comments for assignments
+- `western-cs1026-e3` [rule] AI (ChatGPT, Copilot, and others) is not allowed.
+- `western-cs1027-e3` [override] another AI system to do all or a portion of any assignment or lab
+- `western-cs1027-e6` [rule] Using such tools for content generation, code writing, problem solving, translation, or summarization
+- `western-cs2120-e1` [rule] may NOT use generative AI nor any other tools capable of generating code or comments
+- `wwu-csci241-e4` [rule] code completion tools are off the table
+- `wm-csci304-e1` [rule] code from the internet, including AI (e.g., ChatGPT), or consulting with other students
+- `williams-csci104-e6` [rule] That includes asking generative AI tools like ChatGPT to provide answers or solutions.
+
+## G20 Do not feed assignment specs or your code to AI — 23 statements, 19 institutions
+- `bu-cas-cs391b-e4` [rule] you may not prompt them to answer specific homework problems
+- `hunter-csci127-e3` [rule] Do not upload the assignment questions to an LLM as a prompt.
+- `colostate-cs220-e5` [override] copying substantial amounts of text into and out of a chat interface
+- `columbusstate-cpsc1302k-e6` [override] Providing instructions for an assignment, quiz or exam to AI tools is not allowed
+- `neu-cs2100-e4` [rule] Putting in assignment instructions into such a model and getting out code or test cases
+- `ohsu-dmice-intro-bhi-genai-policy-e5` [override] not use generative AI with the questions themselves until after they have submitted their answers
+- `princeton-cos226-e6` [rule] sharing assignment code with an LLM; asking an LLM how to proceed on the assignment
+- `rit-ctl-syllabus-guidance-genai-e3` [rule] Uploading/pasting large sections of assignments with the intent of having the AI complete
+- `tcu-cosc30253-e2` [override] Submitting all or any part of an assignment statement to an AI or unapproved assignment-
+- `tcu-cosc30253-e5` [override] Submitting your own work for this class to an AI or unapproved assignment-help tool
+- `berkeley-cs61b-e1` [rule] allow an LLM or any GenAI tool to read, analyze, or interface with your codebase
+- `berkeley-cs61b-e6` [rule] Any prompt that involves copying, uploading, rewording, or paraphrasing more than approximately 15 words
+- `berkeley-data100-e2` [override] into a large language model (LLM) is considered cheating in Data 100
+- `uiuc-ischool-is445-e3` [override] You cannot copy full-text of assignment questions and input directly into an LLM
+- `uml-academic-integrity-policy-e3` [override] This includes entering assignment or exam questions into AI tools to generate answers
+- `umich-eecs183-python-syllabus-e6` [override] Disguising graded code as study examples in order to get feedback
+- `uno-ai-for-students-canvas-e4` [override] Entering assignment questions into an AI tool and copying and pasting the response
+- `unr-cs474-e3` [override] Submitting any part or all of an assignment statement or test questions
+- `unr-cs474-e6` [override] Submitting your own work for this class to a large language model AI tool
+- `uri-csc411-daniels-e4` [rule] You may not copy and paste your assignments or code into the tool
+- `uva-sds-ds1001-e4` [override] it is inappropriate to ask it assignment questions, copy large sections of output
+- `uw-cse122-genai-e7` [rule] asking an AI tool to translate that code into the language required
+- `vassar-cmpu224-e4` [override] You should not simply paste your code and ask the AI to
+
+## G21 Do not use AI to debug or check graded work — 9 statements, 8 institutions
+- `cmu-15122-e5` [override] generating solutions, checking solutions, explaining tasks or solutions, formatting code, adding comments to code,
+- `famu-cop3014c-c04-e6` [override] Proofreading your code to find and/or correct any mistakes
+- `oberlin-csci150-labs-e2` [override] This includes for both writing code and for debugging or reformatting code you wrote.
+- `stanford-cs221-e3` [rule] you may not use generative AI tools to "check" your work
+- `umich-eecs183-python-syllabus-e5` [rule] Pasting error messages or erroneous output into AI tools
+- `umich-eecs280-syllabus-e5` [rule] Exhaustively proofreading your code to find and/or correct any mistakes
+- `penn-cis1200-e2` [rule] Asking a tool, such as ChatGPT, to debug your code is not allowed.
+- `uw-cse312-ai-policy-e4` [rule] AI to fix a bug or rewrite a proof for you on any graded assignment
+- `williams-csci104-e2` [rule] refain from using ChatGPT to produce, refine, or check answers for the assigned coursework
+
+## G22 No AI on exams, quizzes, or in-class assessments — 74 statements, 59 institutions
+- `augusta-ai-at-au-e5` [rule] Using AI during exams unless explicitly allowed
+- `bu-cas-cs111-e2` [rule] failing to power off and put away all devices during an exam
+- `bu-cas-cs112-e2` [rule] Using ChatGPT or any other on-line source for solutions.
+- `bu-cds-gaia-e3` [rule] Not use AI tools during in-class examinations, or assignments, unless explicitly permitted and instructed.
+- `byu-cs111-e1` [rule] You are allowed to use your IDE with no AI assistance
+- `carleton-cs111-e5` [rule] Quizzes and classwork are closed-book, closed-note, and will be taken on paper.
+- `carleton-comp1406-e1` [rule] AI tools are prohibited for the midterm and final exam within the course.
+- `carleton-comp2401-e6` [rule] You may NOT use generative AI, course notes, compilers, or additional resources.
+- `cmu-10301-601-e5` [override] You are never allowed to use an AI assistant during the coding lab
+- `cmu-15112-e5` [rule] All AI use is strictly forbidden on all assessments, including comps, quizzes, and exams.
+- `cmu-heinz-95865-e5` [rule] exams in this class will explicitly not allow electronics
+- `clarku-cs103-e3` [rule] be aware that you won’t have access to AI when you take the exams.
+- `mines-csci437-computer-vision-e2` [rule] during exams, including lecture notes, online searches, generative AI, calculators, and smartphones.
+- `colostate-cs152-e4` [rule] in-classroom quizzes and exams where you will not have access to these tools.
+- `colostate-cs220-e6` [rule] All exams are to be done without the aid of notes, AI, or outside assistance
+- `cornell-cs1110-e7` [rule] You may not have any phone or electronic device visible while taking an exam
+- `cornell-cs1110-e8` [override] Discussion section is a no-AI zone.
+- `dartmouth-cs10-e4` [rule] these tools will not be available on the midterms and final,
+- `duke-compsci201-e3` [rule] For in-class exams and for APT quizzes, **you may not use any AI-assistance.
+- `famu-cop3014c-c04-e8` [rule] Using generative AI tools during exams
+- `gsu-cis3001-ai-mou-e4` [rule] Using AI to answer questions during exams or quizzes
+- `harvard-cs61-e8` [rule] Again, no collaboration, including with generative AI, is allowed on tests and exams.
+- `hmc-cs70-e6` [rule] LLMs must not be used for any take-home exams or quizzes.
+- `jmu-cs149-e3` [rule] The use of AI is strictly prohibited during quizzes and exams
+- `jmu-cs240-e5` [rule] No use of AI or other forms of collaboration is allowed.
+- `kennesaw-ccse-fye-policies-e4` [rule] Student MAY NOT use AI.
+- `kent-policy-3-01-8-cheating-plagiarism-gai-e2` [rule] content generated by internet-based generative artificial intelligence programs (GAI), in examinations, tests and quizzes
+- `marquette-cosc3250-e5` [rule] No such tools will be permitted for written exams and lab practical exams.
+- `mit-6100a-e5` [rule] No collaboration or Internet access is allowed during the quizzes.
+- `middlebury-csci201-e4` [rule] use of generative AI tools is not allowed in any way for exams.
+- `nyu-csci-ua-102-e7` [rule] exams and other assessments in this class will not be given with access to AI
+- `ohsu-dmice-intro-bhi-genai-policy-e6` [rule] students must not access generative AI during the final exam
+- `princeton-cos226-e1` [rule] You may not use generative AI for exams or quizzes.
+- `purdue-cs252-ai-policy-e3` [rule] there are programming questions that have to be answered without the help of AI
+- `rpi-csci1200-e4` [rule] exams in this course will be paper and pencil without access to the internet
+- `rice-comp321-e4` [rule] During the exam, you may not use a computer or access the Internet.
+- `rosehulman-csse332-e4` [rule] you will be asked to refrain from using an IDE, and are restricted to
+- `smu-csci2341-e5` [rule] You will not have access to AI during that exam.
+- `sfu-cmpt120-e6` [rule] No computers or AI tools are permitted on the quizzes, midterm or final exam.
+- `swarthmore-cs35-e5` [rule] may not have any electronic devices or course materials in their possession
+- `txst-cs3358-lk04-e5` [rule] will also impact your performance taking exams
+- `osu-cse2221-2231-policies-e3` [rule] These tools won't be available during exams (midterms and final).
+- `utaustin-cs371n-e7` [rule] Use of electronic communication devices (phones, laptops, calculators, ChatGPT, etc.) is banned during the exam.
+- `ubco-cosc111-e6` [rule] Exams will be conducted without access to AI tools
+- `ucalgary-cpsc219-e4` [rule] assist during exams, quizzes, or any other summative assessment is considered cheating
+- `ucalgary-cpsc231-e5` [rule] No aids are allowed during examinations.
+- `ucalgary-cpsc331-e3` [rule] the coding exams, where you will not have access to the internet or generative AI
+- `berkeley-cs61a-e6` [rule] complete the quiz on their computer, without assistance from AI or from other students
+- `uconn-cse2050-e3` [rule] refrain from using online resources, including internet searches or assistance from platforms like ChatGPT.
+- `uiuc-cs124-ai-e3` [rule] We will continue to prohibit AI use on our proctored quizzes
+- `uiuc-cs128-syllabus-e8` [rule] no collaboration is permitted, no AI tool may be used
+- `umd-cmsc216-e5` [rule] Using an LLM, AI too, internet search, arbitrary unauthorized website
+- `umd-cmsc216-e6` [rule] The coding environment setup provided for students will disable LLM / AI / Chat tools.
+- `umich-eecs183-python-syllabus-e7` [rule] All tools during exams
+- `umich-eecs280-syllabus-e6` [rule] Using generative AI tools during exams
+- `umn-csci5421-e1` [rule] examinations yourself, on your own, and without the use of AI.
+- `unlv-cs301-social-implications-e6` [rule] All exams are closed book, closed notes, all electronic devices turned off.
+- `uoregon-cs212-e2` [rule] Generative AI will not be allowed during the exams
+- `penn-cis1100-e1` [rule] or use LLM/AI resources like ChatGPT, Claude.ai, Copilot, and all other similar tools.
+- `pitt-sci-cs1632-e3` [rule] searching the web and asking an AI is prohibited
+- `uri-csc212-e4` [override] This holds up until the next quiz, where the model is not in the room.
+- `usc-csce763-e3` [rule] shall not use AI tools during quizzes, exams , or homework assignments
+- `usf-cis4219-e5` [rule] You cannot use AI during quizzes or exams.
+- `utep-cs2401-e2` [rule] but their use is restricted during exams and quizzes.
+- `utoronto-csc148-e2` [rule] not be permitted to use generative AI on the midterm test or final exam
+- `uvic-csc226-e3` [rule] the use of generative AI for any part of graded work (problem sets, labs, exams)
+- `uva-sds-ds4021-e4` [rule] their use is strictly prohibited during and for quizzes
+- `uw-cse121-e3` [rule] Students may not use AI on computer quizzes or paper quizzes.
+- `uw-cse122-genai-e6` [rule] Using AI tools on official assessments where uses have been expressly forbidden
+- `teluq-inf1420-iag-e4` [rule] l’utilisation de l’IAG est interdite durant les épreuves orales et les examens surveillés
+- `vcu-cmsc210-computers-programming-e6` [rule] On quizzes, tests, and exams, AI tools are prohibited under the same device policy
+- `wwu-csci301-e4` [rule] Exams will be closed-book, so generative AI tools will not be available to you.
+- `wpi-cs3013-e4` [rule] Students may not access reference materials, resources on the Internet, generative AI tools
+- `wpi-cs3013-e6` [rule] on quizzes, students may not submit work that has been generated by automated programming
+
+## G23 Keep AI conversations apart from the work itself — 14 statements, 8 institutions
+- `appstate-cs3435-e6` [override] Do not have your assignment and the AI agent open at the same time.
+- `cornell-cs1110-e3` [override] we strongly recommend that you limit such work to a chat interface
+- `gatech-cs1301-e4` [override] Do not copy and paste AI-generated text into your assignment.
+- `gatech-cs1301-e5` [override] Do NOT work on your assignment and use an AI tool simultaneously.
+- `gatech-cs1301-e6` [override] After using AI, close the tool and write your assignment independently
+- `gatech-ic-cs7637-e2` [override] you may not copy anything directly from an AI agent into your document
+- `gatech-ic-cs7637-e6` [override] Never hit “Copy” within your conversation with an AI assistant.
+- `gatech-ic-cs7637-e7` [override] Do not have your assignment and the AI agent itself open on your device
+- `kpu-tl-genai-student-guide-e8` [override] the direct outputs of those tools are not present in submitted course work
+- `berkeley-cs61b-e2` [override] this interaction must take place exclusively through browser-based chatbots
+- `berkeley-cs61b-e4` [override] no LLM-generated code should ever enter your codebase
+- `ucr-cs-141-e3` [override] When you write down your solution, it MUST be close-book.
+- `uga-ctl-genai-policies-e6` [override] Never copy output from GAI tools into your assignment.
+- `williams-csci334-e6` [override] you should refrain from using AI for anything related to it until you have completed
+
+## G24 Disclose AI use with each submission — 239 statements, 188 institutions
+- `acu-library-faculty-ai-guide-e3` [rule] How students should cite or credit AI
+- `acu-library-faculty-ai-guide-e6` [rule] Please include a paragraph at the end of any assignment that uses AI
+- `algoma-student-genai-guidelines-e7` [rule] You must acknowledge the use of any Generative AI tool in your work.
+- `american-oai-ai-academic-integrity-guidance-e4` [rule] Identify ways you’d like students to acknowledge their use of AI.
+- `amherst-ai-usage-guidelines-e8` [rule] When AI tools play a significant role in the creation of written, analytical, or creative
+- `athabasca-provost-interim-genai-e5` [rule] they must cite and acknowledge its use
+- `auburn-biggio-genai-syllabus-language-e3` [rule] students must disclose any AI-generated material they use and properly attribute it
+- `auburn-biggio-genai-syllabus-language-e5` [rule] The author(s) would like to acknowledge the use of [Generative AI Tool Name]
+- `acc-cosc1336-fa23-baldwin-e2` [rule] "I received the following help from (name of AI tool): ..."
+- `acc-cosc1436-fa25-csit-gai-e6` [rule] What part of the assignment was created, edited, or enhanced with AI?
+- `acc-itse1302-sp24-baldwin-e2` [rule] "I received the following help from (name of AI tool): ..."
+- `binghamton-policy-312-genai-e3` [rule] Clearly disclose when GenAI tools are used in academic work
+- `bc-university-academic-integrity-policy-ai-e3` [rule] without both the explicit permission of the instructor and complete attribution and citation
+- `bu-cds-gaia-e1` [rule] Give credit to AI tools whenever used, even if only to generate ideas
+- `bowdoin-csci2330-e2` [rule] any use of ChatGPT should be cited
+- `bowiestate-catalog-plagiarism-ai-e1` [rule] that use must be detailed and cited according to the academic publishing guidelines
+- `brandeis-ctl-ai-syllabus-statements-e6` [rule] In these cases, you must always cite your use of generative AI.
+- `byui-cse-genai-policy-e6` [rule] A statement indicating that AI was used to aid in its production is required
+- `brown-csci2952c-e2` [rule] Any unacknowledged use of AI-based assistants
+- `bucknell-csci203-e2` [rule] Any online sources (including AI-supported chatbots such as ChatGPT) that you use must be cited
+- `cpp-cafe-ai-sample-policies-e5` [rule] ALL usage of gAI tools must be disclosed.
+- `fresno-state-ai-guidelines-e2` [rule] AI generated content must be properly cited, clearly disclosed, and used in accordance
+- `fresno-state-ai-guidelines-e6` [rule] Consider requiring students to disclose AI-assisted work and reflect on how they used
+- `csulb-optional-ai-syllabus-statements-e4` [rule] use of AI tools must be properly documented and cited
+- `cmu-15112-e8` [rule] We do not require that you submit citations for your allowed collaboration,
+- `cmu-heinz-95865-e1` [override] If you use any of these in your homework, please cite them.
+- `cmich-sample-syllabus-statements-e6` [rule] appropriate methods of citation for direct quotations, ideas, diagrams, code, or paraphrased text generated
+- `chapman-provost-ai-syllabus-considerations-e5` [rule] a student’s use of AI tools must be properly documented and referenced
+- `csuohio-ai-syllabus-statement-examples-e2` [rule] you are required to acknowledge use of AI in any work you submit for class.
+- `csuohio-ai-syllabus-statement-examples-e3` [rule] Text directly copied from AI sites must be treated as any other direct quote
+- `colby-cs151-e4` [rule] You must include an AI usage statement in each project report.
+- `mines-csci561-e6` [rule] you must document and credit your source
+- `columbia-coms4111-e1` [rule] This includes referring to an external website, asking a colleague, and using GenAI.
+- `columbusstate-cpsc1302k-e3` [rule] If you use an AI tool to assist with a graded assignment, include a statement
+- `cornell-gai-education-report-e5` [rule] when GAI is permitted, it should be correctly attributed,
+- `cornell-info5001-e1` [rule] All work produced using GenAI should be described and attributed.
+- `dal-csci4177-5709-ai-tools-e4` [rule] Where tools are allowed: you MUST acknowledge all tools used to assist you.
+- `dartmouth-cs10-e8` [rule] Please write whether your work was your own and any sources
+- `ecu-ofe-syllabus-language-e3` [rule] using an AI tool without properly citing its use is also plagiarism
+- `ecu-ofe-syllabus-language-e7` [rule] students must also include a brief (2-3 sentences) description of how they used the tool
+- `etsu-ai-instructional-policy-e5` [rule] Shall disclose the use of GAI; and
+- `erau-student-code-ai-e6` [rule] including expectations for disclosure and labeling of AI-generated content
+- `famu-cop3014c-c01-e5` [rule] Acknowledge the use of AI tools in your submission
+- `famu-cop3014c-c04-e3` [rule] students should clearly identify and disclose the AI-generated contributions
+- `fau-ai-syllabus-statement-e6` [rule] then use of the AI tool must be properly documented and cited.
+- `fit-provost-genai-academic-work-e2` [rule] students must clearly disclose the use of GenAI tool(s) and their specific contribution
+- `fiu-cap4104-hci-syllabus-e3` [rule] Students must document how, when, and why GenAI tools were used
+- `fordham-provost-genai-principles-e3` [rule] clearly indicate the sections of your work that were generated using them
+- `gsu-cis3001-ai-mou-e5` [rule] Students must document their use of AI tools in the following situations:
+- `gsu-cis3001-ai-mou-e6` [rule] The student's role in verifying and modifying AI-generated content
+- `gonzaga-student-guide-responsible-ai-use-e5` [rule] always be honest and clear about how you’ve used AI in your work.
+- `grinnell-csc151-rebelsky-e3` [rule] If you choose to use an AI-based programming assistant, you must cite it.
+- `grinnell-csc151-rebelsky-e5` [override] If you choose to use such tools, you must cite them.
+- `hmc-cs70-e7` [rule] Any significant ideas or insights gained from LLMs must be cited in your work.
+- `howard-policy-100-022-ai-e2` [rule] Use of AI shall be disclosed when required by the academic, research, administrative
+- `iu-indianapolis-teaching-iu-genai-policies-e4` [rule] Any use of such tools must be appropriately acknowledged and cited.
+- `jsu-common-syllabus-ai-policy-e7` [rule] the submitted work must cite such usage properly in accordance with current citation formats
+- `jmu-cs470-e2` [override] must include an "AI-Assist Statement" that discloses the extent of your use of AI-assist technologies
+- `jmu-cs470-e3` [rule] you may simply state "I did not use any AI-assist tools while creating this solution."
+- `jhu-en601220-e3` [rule] All collaboration (including internet/AI-assistance) must be clearly documented in your submission,
+- `kean-faculty-manual-genai-e3` [rule] any content generated by AI must be cited and attributed just like ideas, text
+- `kean-faculty-manual-genai-e8` [rule] Require students to disclose when and how they use AI in their work.
+- `lamar-cosc3306-e7` [rule] Students are required to disclose which tool(s) were used and how it contributed
+- `lehigh-ai-policies-best-practices-e3` [rule] appropriately cite any Generative AI tools that assisted in your work.
+- `liu-academic-affairs-ai-statement-e3` [rule] Your use of AI tools must be properly documented in accordance with university policies
+- `lsu-faculty-senate-gai-guidelines-e3` [rule] If GAI is used, include a note explaining the use of GAI.
+- `lsuno-academic-misconduct-e3` [rule] using this when authorized to do so must be correctly attributed (cited.)
+- `lmu-cmsi3300-e1` [rule] Acknowledgements are also required for nontrivial help obtained from online forums and AI chatbots.
+- `marshall-academic-affairs-ai-e5` [rule] critiqued, cross-referenced with primary sources of information, and properly cited
+- `mit-6110-e5` [rule] you should explain your general approach to using LLMs in your project report
+- `mcgill-comp480-e4` [rule] Any content produced by an artificial intelligence tool must be cited appropriately.
+- `mcw-ai-digest-e6` [rule] Cite AI outputs and use as appropriate.
+- `musc-ai-acceptable-use-framework-e6` [rule] are not intended as surveillance mechanisms.
+- `mercer-ctl-sample-syllabus-ai-e6` [rule] may need to disclose AI assistance even when a formal citation is not appropriate.
+- `mtu-provost-ai-syllabus-guidance-e4` [rule] Transparency in AI tool usage is mandatory
+- `middlebury-csci1010-e5` [rule] Clearly cite all sources and acknowledge all contributors (both people and AI systems).
+- `middlebury-csci1010-e6` [rule] but also embedded tools (e.g,, GitHub Copilot in VSCode, Google Gemini in Colab)
+- `middlebury-csci1010-e7` [rule] if you are proud of how you used AI tools
+- `msstate-ece1013-e4` [rule] give credit and cite any AI-generated material according to citation-specific rules (e.g., IEEE style),
+- `mst-tlc-gai-guidelines-e7` [rule] When GAI is allowed you must verify and cite all claims and information appropriately.
+- `montclair-ofe-ai-course-policies-e6` [rule] Cite a generative AI tool whenever work created by the tool is paraphrased, quoted
+- `montclair-ofe-ai-course-policies-e7` [rule] the use of the tool for this function should be acknowledged in the work
+- `morehouse-ai-academic-guidelines-2-e5` [rule] Students should follow their instructor’s directive for acknowledging or citing AI use.
+- `njit-cs698-ml-time-series-e2` [rule] you must always give the appropriate credit and citations (e.g. links)
+- `nmsu-syllabus-ai-statements-e3` [rule] Students must cite any AI-generated material that informed their work
+- `nmsu-syllabus-ai-statements-e6` [rule] they should be used with caution and proper citation.
+- `nyu-csci-ua-102-e8` [rule] use any non-human resources, you need to acknowledge that in your submissions
+- `nipissing-genai-guide-instructors-e3` [rule] instructors should communicate to students the format for how students are expected to cite
+- `ncat-provost-universal-ai-guidelines-e2` [rule] This includes providing proper attribution when AI-generated content is used or presented.
+- `ndsu-ai-goals-guidance-e4` [rule] all AI contributions must be credited
+- `ndsu-ai-goals-guidance-e6` [rule] Both instructors and students must document AI use and safeguard sensitive data.
+- `neiu-ctl-sample-ai-syllabus-statement-e3` [override] disclosing that this tool has been used to generate ideas or write portions
+- `nau-provost-ai-faculty-e6` [rule] there is an expectation to acknowledge what content was generated by generative AI tools
+- `niu-ai-teaching-learning-e6` [rule] students must document how they were used and reflect on their impact on learning
+- `ohio-ctla-genai-syllabus-statements-e4` [rule] students must cite any use of generative AI that informs their work.
+- `okstate-itle-chatgpt-sample-syllabus-statements-e8` [rule] Students are expected to provide attribution for any text created using generative AI tools
+- `odu-cs355-e2` [rule] any use must be properly cited in a form similar to all other online resources.
+- `ohsu-dmice-intro-bhi-genai-policy-e4` [rule] they must also attribute use of generative AI when it is used in discussion forums
+- `oregonstate-eecs-ai-guidance-e4` [rule] When you use AI on permitted work, disclose it at the point of submission
+- `psu-ist-genai-teaching-e2` [rule] Always disclose AI assistance when used in coursework.
+- `pepperdine-ai-use-syllabus-statements-e7` [rule] If you use an AI tool when completing an assignment, it should be cited
+- `pepperdine-ai-use-syllabus-statements-e8` [rule] Please include a paragraph at the end of any assignment that uses AI
+- `polymtl-log2990-e4` [rule] l’utilisation est clairement indiquée dans la remise des travaux.
+- `pomona-cs-academic-honesty-policy-e5` [rule] all external sources, including AI tools, if permitted, must be properly cited
+- `pomona-cs-ai-policy-tier-system-e7` [rule] they should be credited in the same way that you would share authorship
+- `pomona-cs51-e5` [rule] When in doubt, credit your sources.
+- `purdue-cs59300-ser-e2` [rule] students are expected to state how the tool was used in detail
+- `rit-swen261-e7` [rule] Provide a confirming statement that GPT was used as reference only
+- `rowan-cs-04113-ioop-chien-e5` [rule] all labs MUST include the academic integrity statement and all code MUST compile
+- `rmc-academic-regulations-genai-e4` [rule] AI-generated content must be fully disclosed, cited, and described in any work or presentation.
+- `rush-ctei-faculty-guide-ai-e4` [rule] Require your students to declare their use of AI sources
+- `rush-ctei-faculty-guide-ai-e5` [rule] include an AI Use Disclosure even if they only used AI tools for brainstorming
+- `rush-ctei-faculty-guide-ai-e6` [rule] Require your students to cite the specific AI-generated content
+- `smu-csci1226-e3` [rule] provided that they declare the use of AI in their submissions
+- `shsu-academic-affairs-ai-guidance-e2` [rule] should include an acknowledgement of your AI use.
+- `sdsu-senate-genai-assessment-guidelines-e8` [rule] the name and URL of the AI system, the specific purpose
+- `scu-engineering-ai2-e2` [rule] Where and how should students disclose their use of AI?
+- `scu-engineering-ai2-e7` [rule] a clear description of how you incorporated their input into your work is required.
+- `seattleu-syllabus-template-genai-e7` [rule] You must also include an AI disclosure statement.
+- `sfu-cmpt120-e3` [rule] If use use an AI tool, you must mention it in your code,
+- `smith-csc370-ai-guidelines-e7` [rule] Generative AI was not used in the preparation of this work.
+- `stanford-cs221-e2` [rule] you must acknowledge generative AI tools as collaborators
+- `syracuse-ist256-e5` [rule] they must explicitly and fully indicate which tools were used and describe how
+- `tarleton-ai-guidance-e5` [rule] Properly cite AI-generated content when it contributes to academic work
+- `tntech-citl-ai-syllabus-statements-e4` [rule] students must openly disclose any AI-generated material they utilize and provide proper attribution
+- `tamu-csce420-e2` [rule] students must cite any AI-generated material that informed their work
+- `tamu-csce420-e4` [override] as long as this use is properly documented.
+- `tcu-cosc10403-e1` [rule] if used for class work, must be clearly mentioned.
+- `tcu-cosc10403-e2` [rule] any code snippet, phrases, sentences, paragraphs, or ideas found in published volumes
+- `ttuhsc-op5221-e1` [rule] AI use must be disclosed and documented appropriately.
+- `twu-ai-syllabus-statements-e5` [rule] requiring students to disclose AI usage may be more practical than outright bans
+- `twu-ai-syllabus-statements-e6` [rule] If you do, briefly explain how you used the tool
+- `newschool-ai-sample-syllabus-statements-e2` [rule] faculty are encouraged to ask or require students to document how they used the tools
+- `newschool-ai-sample-syllabus-statements-e7` [rule] the nature of your usage (for example, in programming code, images, and/or text/writing).
+- `umt-teaching-gen-ai-e3` [rule] You will be asked to acknowledge or cite any substantial AI contributions
+- `uthsc-tlc-syllabus-policies-e3` [rule] the use of AI must be appropriately acknowledged and cited
+- `utmb-ai-joint-policy-e7` [rule] clearly indicate the contributions of AI-generated content in accordance with academic citation guidelines
+- `uttyler-cosc3315-e2` [rule] All uses of AI should be acknowledged
+- `uwf-ai-academic-misconduct-e5` [rule] Citation expectations for AI-generated content
+- `tulane-guidelines-ethical-responsible-use-ai-e5` [rule] students should be encouraged to describe how AI tools were used.
+- `uncc-legal-suggested-syllabus-policies-e3` [rule] students must disclose any AI-generated material they use and properly attribute it
+- `utrgv-coltt-generative-ai-e4` [rule] Encourage transparency by asking students to acknowledge AI use when appropriate.
+- `buffalo-cse331-e4` [rule] you will have to explicitly cite which one of the above sources you used
+- `ua-oaa-genai-guidelines-e4` [rule] Students should be required to explain how they utilized these tools in their work.
+- `ua-oaa-genai-guidelines-e6` [rule] Within this assignment, the [Generative AI Tool Name] was used for purposes such as
+- `uab-provost-ai-working-group-report-e4` [rule] Require complete and accurate documentation of how AI is employed to complete assignments.
+- `uaf-ctl-ai-in-education-e2` [rule] instruct students on how they should cite ChatGPT
+- `ualberta-cmput401-e2` [rule] you must cite it. This includes the Entity, Resource, Subject, and Date.
+- `arizona-infosci-academic-integrity-e1` [rule] exercise transparency and integrity in collaborations and in the use of tools and resources
+- `uams-ai-policy-2-1-6-e2` [override] must fully disclose how and where they used GAI technology in their work.
+- `ucalgary-cpsc231-e1` [rule] you must indicate the source and extent of the aid
+- `ucsd-dsc10-e7` [rule] includes any content generated by an AI tool, it should be cited
+- `ucsd-dsc10-e8` [rule] you will be provided with a space to cite your use of GenAI tool(s)
+- `berkeley-info256-e8` [rule] For the use of any AI assistance in your final project deliverables
+- `ucla-tlc-genai-teaching-guide-e4` [rule] you need to cite the specific AI writing tool as a source
+- `ucmerced-cse176-e1` [rule] you must disclose whatever sources you used to complete your work
+- `uccs-frc-ai-in-academics-e2` [rule] Your use of AI tools must be properly documented and cited
+- `uconn-cse1010-e4` [rule] You must document, in your submission, if you used AI.
+- `udel-genai-guidelines-faqs-e3` [rule] Users should be transparent in the use of generative AI tools
+- `udel-genai-guidelines-faqs-e4` [rule] Students should confer with faculty to determine whether a particular style of citation is preferred.
+- `uf-cop3502-e2` [rule] cite the peer who you discussed it with or cite the internet resource you
+- `uga-ctl-genai-policies-e3` [rule] require students to include statements declaring/ citing their use of generative AI
+- `uh-cosc4368-e2` [rule] student reports must cite all AI-related tools and other tools and documents
+- `uidaho-cetl-ai-guidelines-e6` [rule] the key is to be transparent
+- `uic-cs218-data-ai-e5` [rule] "Generative AI was used to help in the creation of this work."
+- `uiuc-grainger-ai-guidance-e8` [rule] any use of generative AI is clearly disclosed in your submission.
+- `uiuc-ischool-is445-e7` [rule] Clearly indicate any sections or contents that are AI-generated.
+- `uiowa-clas-syllabus-template-ai-e5` [rule] how to cite or acknowledge their use of these tools.
+- `uky-ukadvance-instructional-guidelines-e4` [rule] It is good practice to include the website or software that was used
+- `ull-academic-affairs-genai-guidance-e6` [rule] require citations where there is AI usage
+- `louisville-genai-committee-report-e3` [rule] faculty should teach students how they are to acknowledge the use of AI
+- `umaine-genai-teaching-learning-guidelines-e2` [rule] Students must acknowledge the use of generative AI any time they use it
+- `umb-ai-guidelines-e8` [rule] students should appropriately acknowledge and cite their use of GenAI applications
+- `umd-cmsc216-e3` [rule] students describe how they constructed their solutions, who was involved, and what sources were utilized.
+- `umb-provost-academic-integrity-faculty-guidance-ai-e4` [rule] students must cite any AI-generated material that informed their work
+- `umassd-genai-guidelines-e3` [rule] This disclosure should include a description of the GAI's role in the work.
+- `umassd-genai-guidelines-e5` [rule] including text, image, code, etc. that has been generated by GAI
+- `memphis-comp7118-e5` [rule] its contribution must be acknowledged in the hand-in
+- `umich-umsi-si301-e6` [rule] AI is a tool that needs to be cited.
+- `olemiss-cetl-syllabus-template-genai-e7` [rule] If you use an AI tool to complete an assignment, please disclose your use
+- `uno-ai-for-students-canvas-e6` [rule] all work that was completed with the help of AI should be cited.
+- `unl-ctt-developing-course-ai-policies-e7` [rule] asking them to explicitly state how they used AI for help
+- `unlv-cs301-social-implications-e2` [rule] Any use of generative AI to create content or make translations for use
+- `unlv-cs301-social-implications-e3` [rule] identifying the "imported" GenAI content in the document(s) affected
+- `unc-comp110-e4` [rule] declare, explain, and cite any use of AI in the creation of your work
+- `und-provost-ai-e1` [rule] Document and be transparent about all uses of Generative AI
+- `und-provost-ai-e8` [override] Your work is considered to be your own. Document any use of generative AI
+- `nd-cse-honor-code-guide-e7` [rule] I asked ChatGPT to explain quicksort
+- `uottawa-academic-integrity-ai-e3` [rule] Cite the specific tool as a source and explain how it was used
+- `penn-cis1100-e7` [rule] make sure to cite the AI when you use that code in this class.
+- `uprrp-circular-8-ia-e5` [rule] El estudiantado debe citar el uso de herramientas de IA en las referencias
+- `uregina-genai-hub-instructor-resources-e3` [rule] Require students to disclose when and how they have incorporated GenAI into their coursework
+- `uri-csc212-e2` [rule] disclosure: note where a tool was used and what it contributed.
+- `uri-csc461-e3` [rule] All student submissions that incorporate AI-generated content must include proper citation.
+- `sandiego-msads-handbook-e1` [rule] If you are using ChatGPT and similar programs, you must be transparent
+- `sandiego-msads-handbook-e2` [rule] disclose any generated content as being produced by an AI program
+- `sandiego-msads-handbook-e3` [rule] This includes, but is not limited to, written assignments, research papers
+- `usask-cs-grad-genai-policy-e4` [rule] can only be used providing they are disclosed either through a transparency statement
+- `usc-csce763-e1` [rule] students shall give credit to AI tools whenever used, even if only to generate ideas
+- `usf-cap4111-e3` [rule] Properly citing all AI-generated content used in their submissions.
+- `usf-cis4219-e2` [rule] You must cite all AI-generated content used in submissions.
+- `usf-cis4219-e3` [rule] you must explicitly detail how AI-generated content was used in your submission
+- `usm-provost-ai-e5` [rule] You are required to cite usage of these tools in academic work
+- `utep-cs2401-e3` [rule] Proper citation of sources is required to adhere to citation guidelines and copyright regulations
+- `utep-cs4379-5375-e1` [rule] including papers, online articles, and any information obtained from AI tools
+- `utah-ece-plagiarism-ai-policies-e6` [rule] shall be disclosed in the acknowledgments section of any article submitted to an IEEE publication.
+- `uvic-csc361-e4` [rule] provide proper citation of the tools you used and describe how you used it
+- `uw-allen-ai-support-and-growth-e4` [rule] specify the tool you used and how you utilized it in your work
+- `uw-cse122-genai-e5` [rule] you should always include a statement about how they were used
+- `uw-ischool-hcid520-e3` [rule] you must credit the tools and the billions of people who created the writing
+- `uwaterloo-cs114-e1` [override] may be used under specific conditions in this course with proper documentation, citation, and acknowledgement
+- `uwaterloo-cs136-e1` [override] may be used in this course with proper documentation, citation, and acknowledgement
+- `uwinnipeg-acs3931-e3` [rule] If AI tools are permitted, students must cite them.
+- `uwinnipeg-acs3931-e4` [rule] cite a generative AI tool whenever you paraphrase, quote, or incorporate into your own
+- `uwinnipeg-acs3931-e5` [rule] acknowledge all functional uses of the tool (like editing your prose or translating words)
+- `uwinnipeg-acs3931-e7` [rule] If no AI tools is used, just specify ‘No AI tool used for this part’.
+- `uwm-syllabus-statements-genai-e3` [rule] provide information on how students are expected to cite Generative AI use for assignments
+- `uwyo-syllabus-template-ai-e6` [rule] if that use is properly documented and credited.
+- `uwyo-syllabus-template-ai-e7` [rule] Material generated using other tools should follow a similar citation convention.
+- `uwyo-syllabus-template-ai-e8` [override] no special documentation or citation is required.
+- `ufv-tlc-ai-guidelines-e2` [rule] both instructors and students must fully disclose the nature and extent of use
+- `ulaval-principes-directeurs-ia-e8` [rule] les personnes étudiantes déclarent cette utilisation selon les modalités précisées
+- `teluq-inf1420-iag-e2` [rule] devez documenter toute utilisation de l’IAG dans le cadre de vos travaux
+- `umoncton-integrite-ia-plans-de-cours-e5` [rule] devront ajouter une note explicative à leur travail afin de décrire la façon dont
+- `usherbrooke-ift339-e8` [rule] vous devez TOUJOURS mentionner de façon explicite toute utilisation de l’intelligence artificielle
+- `uqat-guide-presentation-travaux-ia-e3` [rule] de quelle façon les outils d’IAG ont été utilisés
+- `uqat-guide-presentation-travaux-ia-e5` [rule] qu’un formulaire de Déclaration d’intégrité intellectuelle soit rempli et joint avec le travail
+- `uqo-dii-cyb6023-e2` [rule] Vous devez traiter les résultats de cette utilisation comme une citation dans le texte
+- `usu-teach-communicate-about-ai-e7` [rule] include a statement with each assignment submission stating 1) which AI tool(s) they used
+- `valencia-cen3024c-e7` [rule] indicate how and where you used it within your assignment submission
+- `viu-csci159-carruthers-e3` [rule] unless proper attribution (citation) acknowledges any outside sources, including LLM
+- `vanderbilt-sample-syllabi-genai-ece-e3` [rule] any code that you had it generate for you.
+- `villanova-ai-guidelines-e3` [rule] Disclose when a work product was created wholly or partially using an AI tool
+- `vsu-library-ai-academic-integrity-e3` [rule] Cite AI tools using your class’s citation style (APA, MLA, etc.)
+- `wfu-guidelines-academic-use-gai-e5` [rule] including method(s) for disclosing or citing such use
+- `wayne-senate-ai-subcommittee-report-e7` [rule] state at the beginning of the assignment when, why, and how you have used AI
+- `wcu-generative-ai-framework-e8` [rule] Share the name of the tool or tools used, when the AI was used
+- `wvu-tlcommons-ai-syllabus-statements-e5` [rule] the use of such tools must be documented and clearly cited in all submitted work
+- `wmu-ai-in-the-syllabus-e8` [rule] you must be fully transparent with your use, including proper citation
+
+## G25 Cite the tool, the prompt, and the output — 51 statements, 48 institutions
+- `apu-ai-classroom-use-guidelines-e6` [rule] Cite all A.I. tools used and the generated prompts and outputs.
+- `caltech-provost-genai-guidance-e3` [rule] When using GenAI, always disclose promptly, or reference the use of GenAI tools
+- `colby-cs151-e5` [rule] acknowledge which part you used it on and include the prompts that you used
+- `dal-csci4177-5709-ai-tools-e7` [rule] the prompt used, the code generated by the AI, where the code was implemented
+- `dartmouth-cs10-e5` [rule] Cite the tool and prompt(s) you used for each method (function) created or debugged
+- `duquesne-provost-ai-e6` [rule] Both the prompt and original response from the AI tool must be provided
+- `fordham-provost-genai-principles-e7` [rule] Require students to submit the prompts used for GAI
+- `grinnell-csc151-eikmeier-e3` [rule] the name of the model you used, the exact prompt you used
+- `hec-montreal-daip-iag-evaluation-e7` [rule] tout en exigeant que les membres de la classe fournissent les requêtes (prompts) utilisées
+- `kstate-cis598-e4` [rule] Citations should include the tool used, the prompt(s) given, context provided to the tool
+- `kpu-tl-genai-student-guide-e7` [rule] Maintain a record of your process and prompts
+- `mtu-provost-ai-syllabus-guidance-e5` [rule] including prompt appendices, AI-generated outputs, and reflective analyses.
+- `middlebury-csci201-e3` [rule] cite which tool you used, (2) the prompt you entered, and (3) the response
+- `njit-cs485-usable-security-privacy-e2` [rule] required to clearly specify which one(s), how it was used (including any prompts you provided
+- `njit-cs490-guided-design-se-e2` [rule] if you include a link to a record of your interaction with the model
+- `neiu-ctl-sample-ai-syllabus-statement-e5` [rule] including (a) the prompt or prompts provided to the tool
+- `nova-lec-genai-faculty-e6` [rule] Ask them to be honest and open to share their prompts
+- `ohio-ctla-genai-syllabus-statements-e5` [rule] including what prompts you used and how you validated any AI-generated citations.
+- `rit-swen261-e6` [rule] Submit your prompts for GPT (as a separate file) as part of your work
+- `shu-ai-syllabus-statements-e5` [rule] Proper citations detailing the specific AI tools and models used must be included.
+- `tc-dfi-genai-guidance-e6` [rule] Students must include citations or disclosure detailing the specific AI tools and models used.
+- `tntech-citl-ai-syllabus-statements-e5` [rule] The author(s) acknowledge the utilization of [Generative AI Tool Name], a language model
+- `tamu-csce420-e5` [rule] the lists of prompts you employed and (2) also the outputs thereby obtained.
+- `newschool-ai-sample-syllabus-statements-e4` [rule] Please also submit all prompts you used and any interim steps using AI
+- `uttyler-cosc1337-e4` [rule] If AI generated, include the prompt in the comments
+- `twu-guidelines-genai-teaching-learning-e7` [rule] Cite all AI tools used and submit the prompts and outputs.
+- `uab-provost-ai-working-group-report-e7` [override] if this use is properly documented in the comments: you need to include the prompt
+- `ualberta-cmput301-e4` [rule] This includes the corporation that made the AI, the AI, Subject, and Date.
+- `ucalgary-cpsc219-e5` [rule] Citation should include the name/url and the initial prompt.
+- `ucmerced-cse176-e2` [override] I consulted an AI system (such as ChatGPT). Give its URL
+- `ucsc-tlc-drafting-genai-use-policy-e8` [override] You include the queries/searches used in the report.pdf
+- `uchicago-cmsc23530-policies-e5` [rule] you must always provide citations when using GenAI, including the exact prompt you used
+- `uchicago-cmsc25910-e3` [rule] include at the top of your assignment the prompt you provided the model
+- `cuboulder-csci3308-e3` [rule] you need to include the prompt and the significant parts of the response.
+- `uf-cop3530-e4` [rule] If GenAI tools are used for learning, you must cite the tool, model, and prompt.
+- `umbc-cmsc491-691-e1` [rule] including providing the prompt, original generation, and your edits
+- `umich-umsi-si301-e7` [rule] describing exactly how AI was used and listing the prompts used and output generated
+- `unb-bremner-genai-policy-e3` [override] you are responsible for citing the original source, not only the generative AI service.
+- `uncw-csc365-e3` [rule] explaining how these tools were used, what the prompt was, and how they contributed
+- `ou-cs2414-e4` [rule] students must submit any prompts they used to generate or refine their code
+- `uoregon-cs322-e6` [rule] For these two projects, you also should submit your prompts.
+- `uri-csc411-daniels-e5` [rule] you must provide the prompt that you used and the result of the prompt
+- `usf-cda4621-e2` [override] If generating code with AI tools exact prompts and results must be submitted.
+- `uwm-syllabus-statements-genai-e6` [rule] Generative AI use must be cited and include the prompt used to generate
+- `uqat-guide-presentation-travaux-ia-e4` [override] que soient indiquées les questions posées, les instructions demandées à l’outil d’IAG
+- `valencia-cop1000c-e5` [rule] you must include a specific note describing which tool and prompts you used
+- `viu-csci161-kabir-e4` [rule] students must list the exact inputs entered at the prompt
+- `vanderbilt-sample-syllabi-genai-ece-e2` [rule] includes the exact query or prompt that you used to get the results.
+- `wustl-cse330-e5` [rule] should include copy-pasted prompts and responses from any AI tools you used
+- `wustl-cse4202-e3` [rule] the exact prompts you used, and an explanation (in your own words!)
+- `wayne-senate-ai-subcommittee-report-e8` [rule] This includes the prompts you used to generate the results.
+
+## G26 Keep and submit transcripts, logs, or reflections — 49 statements, 40 institutions
+- `apu-ai-classroom-use-guidelines-e7` [rule] The entire exchange between you and the AI, highlighting the most relevant sections
+- `bu-cds-gaia-e2` [rule] add an appendix showing (a) the entire exchange, highlighting the most relevant sections;
+- `csuf-fdc-creating-genai-policy-e6` [rule] you are required to keep drafts of assignments and generative AI logs
+- `concordia-ctl-genai-teaching-guidelines-e4` [rule] as an appendix with their assignments, any content produced by an artificial intelligence tool
+- `cornell-info5001-e6` [rule] will require a written self-reflection to consider how you used GAI tools
+- `dal-csci4177-5709-ai-tools-e5` [rule] If applicable, you MUST provide links to chat logs.
+- `dal-csci4177-5709-ai-tools-e8` [override] Copy and paste the entirety of the code generated by the AI Tool listed above.
+- `georgetown-cosc3450-e4` [rule] provide with your submission either a link to or a transcript of the session.
+- `georgetown-cosc3450-e5` [override] If a tool does not provide this functionality, then you can not use it.
+- `hampton-chatgpt-ai-task-force-midyear-report-e6` [override] Any approved AI-generated content must be submitted in its entirety and cited
+- `harvard-cs61-e7` [rule] your turnin must mention this and describe the interaction (e.g., include a transcript
+- `haverford-cmsc-h360-e5` [override] you'll be asked to reflect on your experience.
+- `mit-6110-e6` [override] document their use of LLM generated code via a LLM code usage survey
+- `mun-citl-genai-syllabus-statements-e7` [rule] you must provide the sequence of prompts used in an appendix
+- `njit-cs698-ml-time-series-e3` [rule] must say that you did so and present the entire transcript
+- `oakland-ai-faculty-e4` [rule] Faculty may request that students provide prompt logs or tool settings
+- `ohio-ctla-genai-syllabus-statements-e7` [override] Students may be asked to save the AI chat as a PDF file for verification.
+- `oregonstate-ctl-ai-teaching-guidance-e7` [rule] you are required to keep drafts of assignments and generative AI logs
+- `rit-ctl-syllabus-guidance-genai-e4` [override] you are required to include a link to your chat history (if available)
+- `smith-csc370-ai-guidelines-e4` [override] An AI statement, describing your reasons for using AI and assessing its success.
+- `smith-csc370-ai-guidelines-e5` [rule] A full transcript of the AI session(s), including both your prompts and the AI responses.
+- `smith-csc370-ai-guidelines-e8` [override] Did it solve the problem correctly? How much direction was necessary? Were there any hallucinations?
+- `stanford-cs221-e4` [rule] If you use generative AI tools, you must provide a transcript of the interaction
+- `stanford-cs221-e6` [override] You may not use generative AI tools that do not support attribution or transcript sharing.
+- `ucsd-dsc80-e7` [override] you will be provided with a space to explain and reflect on your use
+- `ucr-cs-141-e2` [override] you need to provide the full conversation with it
+- `uiuc-cs128-syllabus-e7` [rule] you must submit the AI Usage Reflection Form together with the complete transcript
+- `uiuc-grainger-ai-guidance-e3` [rule] keep a journal documenting prompts, AI responses, and your usage.
+- `ull-academic-affairs-genai-guidance-e7` [rule] saving and uploading for instructor review transcripts of GAI interaction, or screenshots of GAI sessions
+- `louisville-genai-committee-report-e4` [override] Some instructors require students to turn in the AI output(s) with their final assignment
+- `umaine-genai-teaching-learning-guidelines-e5` [override] instructors may require students to submit a document that explains how
+- `umanitoba-catl-genai-syllabus-statements-e1` [rule] Students must submit, as an appendix with their assignments, any content produced
+- `umb-provost-academic-integrity-faculty-guidance-ai-e5` [rule] as an appendix to the assignment
+- `missouri-provost-ai-syllabus-statements-e4` [override] Maintain evidence of your work (drafts, notes, sources) to demonstrate originality.
+- `missouri-provost-ai-syllabus-statements-e6` [rule] you are required to keep drafts of assignments and generative AI logs
+- `unlv-cs301-social-implications-e4` [override] Students must retain the complete GenAI content until the end-of-term
+- `une-ai-policy-guidance-faculty-e3` [rule] some faculty members may ask students to submit a transcript of the conversation with AI
+- `uri-csc212-e7` [override] covering where AI tooling was used and what the team had to fix or reject
+- `usc-csce763-e2` [rule] add an appendix showing (a) the entire exchange, highlighting the most relevant sections;
+- `utep-cs4379-5375-e2` [override] include a link to your tool’s search history (e.g., share your ChatGPT
+- `uva-cs2120-e5` [rule] document any use of AI tools, and include links to transcripts
+- `uwaterloo-cs114-e6` [rule] you should keep your rough notes, including sources, research notes, brainstorming, drafting notes and prompts
+- `uwaterloo-cs114-e7` [rule] You may be asked to submit these notes along with earlier drafts of your work
+- `teluq-inf1420-iag-e7` [override] lorsque pertinent, inclure des extraits ou des traces de vos interactions avec l’IAG
+- `viu-csci161-kabir-e3` [rule] The use of generative AI must be documented in an appendix for each assignment.
+- `wustl-cse330-e3` [rule] For each assignment, you must complete an AI Reflection worth 5 points
+- `wustl-cse330-e4` [override] When will you use AI, and when will you avoid it?
+- `wwu-csci301-e3` [rule] You submit a transcript of your interactions alongside the assignment you used it for.
+- `yu-academic-integrity-resources-e7` [override] it is helpful for students to show provenance of their work
+
+## G27 Mark AI-derived code where it is used — 24 statements, 22 institutions
+- `acc-itse1302-sp24-baldwin-e3` [override] update the code with comments showing that you understand the code
+- `acc-itse1302-sp24-baldwin-e4` [override] include comments explaining any corrections that you may have needed to make
+- `byui-cse-genai-policy-e7` [rule] students should indicate what and where these portions are in the work
+- `carleton-comp2401-e5` [rule] you must cite that source in the comments of the code at the top
+- `columbia-coms4111-e4` [rule] You must document the portions of your code that were derived from GenAI,
+- `duke-compsci201-e8` [rule] indicate that in the README you'll submit as part of the required written _analysis section_
+- `harvard-cs50-e4` [rule] Failing to cite (as with comments) the origins of code or techniques
+- `haverford-cmsc-h360-e1` [rule] you should always include detailed comments that indicates on which parts
+- `kennesaw-ccse-fye-policies-e3` [rule] Failing to cite with comments the origins of code or techniques
+- `marquette-cosc3250-e3` [rule] any such tools will be listed in the authorship section of the mandatory comment block
+- `marquette-cosc3410-e3` [rule] you must clearly note any passages that are not your own with comment blocks
+- `princeton-cos226-e7` [rule] you must disclose any use of an LLM in your acknowledgments.txt file.
+- `rpi-csci1200-e7` [rule] must be listed in the README.txt file submitted with the assignment.
+- `uttyler-cosc1337-e5` [override] Comment on each line of code in the imported method
+- `ualberta-cmput301-e5` [rule] specify you used it in your assignment or project README and estimate how comprehensively
+- `uncw-csc365-e6` [override] Which lines of code were AI generated
+- `ou-cs2414-e3` [rule] students must explicitly acknowledge its use by adding comments in their code or submissions
+- `uri-csc461-e4` [rule] clearly indicate which portions of their work were created with AI assistance
+- `utk-cosc202-spring2024-syllabus-e4` [rule] but you must cite in your comments what you used
+- `uwaterloo-cs349-e3` [rule] you must document the source as a comment where the specific code is used
+- `uqac-dim-8inf972-atelier-ia-e2` [rule] vous devez en faire mention à l’aide d’un commentaire qui précède le contenu généré
+- `vanderbilt-sample-syllabi-genai-ece-e6` [override] you must comment every single logical object
+- `vassar-cmpu224-e7` [rule] must include a specific acknowledgement at the top of your submission files
+- `wustl-cse4202-e2` [override] clear indication of exactly which lines of code were generated by the AI
+
+## G28 Make disclosure safe and nondisclosure the violation — 60 statements, 52 institutions
+- `appstate-cs3435-e4` [override] Including anything you did not write in your assignment without proper citation will be treated
+- `asu-cse110-ulc-e5` [rule] Using AI tools to generate content without proper attribution will be considered a violation
+- `augusta-ai-at-au-e3` [override] the undisclosed use of AI in academic work may violate our academic integrity policies
+- `brandeis-ctl-ai-syllabus-statements-e7` [override] submit AI-generated work as if it were your own, without proper citation
+- `ccny-cuny-academic-integrity-e4` [override] even when paraphrased, without citing the AI as the source
+- `cuny-gc-academic-integrity-policy-2024-e4` [override] content generated or altered by AI or digital paraphrasing tools without proper citation
+- `cuny-gc-academic-integrity-policy-2024-e5` [override] Copying another person’s or an AI tool’s actual words or images without the
+- `csuohio-ai-syllabus-statement-examples-e8` [override] Failure to cite your use of AI or using fabricated information could result
+- `colby-cs151-e7` [rule] You will not lose points for claiming to use generative AI
+- `colby-cs151-e8` [rule] You cannot receive extension points without an AI usage statement.
+- `cornell-cs1110-e5` [rule] though you will receive a grade penalty depending on the amount of aid received.
+- `famu-cop3014c-c01-e7` [override] Plagiarism or over-reliance on AI (submitting AI-generated work as your own without disclosure)
+- `famu-cop3014c-c01-e8` [override] Using AI to generate work without disclosure counts as plagiarism.
+- `lakehead-chatgpt-ai-tools-faq-e4` [override] but they fail to disclose or cite the original source(s) of the ideas/information
+- `marquette-cosc3250-e4` [override] Failure to note the contributions of a generative A/I tool will be considered
+- `mit-6110-e3` [override] will have no effect, either positive or negative, on your grade
+- `mun-citl-genai-syllabus-statements-e4` [override] Using AI tools without proper citation constitutes plagiarism
+- `msstate-ece1013-e6` [rule] Failure to acknowledge use of generative AI could be reported as an Honor Code violation.
+- `njit-cs485-usable-security-privacy-e5` [override] not disclosing your usage will receive more serious consequences than if you are forthcoming
+- `njit-cs490-guided-design-se-e3` [override] generative AI tool (such as ChatGPT) without citing your source
+- `njit-cs698-ml-time-series-e5` [override] Failure to give appropriate credit when using the work of others (whether human or AI)
+- `nipissing-genai-guide-instructors-e4` [override] A student who uses AI technology to complete coursework for evaluation, without acknowledging its use,
+- `pcc-student-learning-and-ai-e2` [rule] Using AI-generated text without citation is a violation under Article IV
+- `princeton-cos226-e8` [rule] There is no penalty for disclosure, even if you used an LLM heavily,
+- `shsu-academic-affairs-ai-guidance-e4` [override] a student’s undisclosed use of generative AI in assignments outside the boundaries
+- `shu-ai-syllabus-statements-e7` [override] Failure to properly attribute AI-assisted work will be considered
+- `sfu-cmpt120-e4` [override] There is no deduction for using AI tools.
+- `smith-csc370-ai-guidelines-e6` [override] without the required documentation is a potential breach of academic integrity.
+- `stanford-cs106b-honor-code-e6` [rule] a violation of the Honor Code, regardless of whether that use is disclosed
+- `tamu-csce312-e3` [override] Failure to acknowledge sources is considered plagiarism.
+- `tamu-csce420-e3` [override] Using an AI tool to generate content without proper attribution qualifies as academic dishonesty.
+- `tamuk-cfe-ai-syllabus-statements-e6` [override] Using an AI tool to generate content without proper attribution qualifies as a violation
+- `uab-provost-ai-working-group-report-e5` [override] wherever AI assistance has been used when unauthorized, or when authorized, has not been disclosed
+- `ualberta-cmput301-e3` [rule] Failure to acknowledge AI use may be considered cheating
+- `uark-tips-genai-syllabus-statements-e7` [override] content generated by artificial intelligence, without proper citation, will be considered academic dishonesty
+- `ucalgary-cpsc231-e4` [override] will not receive credit for the assignment even if the borrowed content is cited
+- `berkeley-cs61b-e8` [override] we will not penalize asking about the accuracy of LLM output on course platforms
+- `ucr-cs-141-e1` [rule] using any source without citing them will be treated as cheating
+- `uga-ctl-genai-policies-e4` [override] you will not be penalized for using Generative AI tools (GAI) in this course.
+- `uga-ctl-genai-policies-e5` [override] without proper citation will be treated as an academic misconduct case.
+- `uh-cosc4368-e3` [override] Not acknowledging the use of AI and related other tools in course tasks
+- `uic-cs218-data-ai-e8` [override] Turn in the GenAI product as your own without giving attribution
+- `uky-ukadvance-instructional-guidelines-e5` [override] even if a student attributes their use of generative AI, it may still be
+- `umaine-genai-teaching-learning-guidelines-e4` [override] Failure to properly cite and acknowledge the use of AI-generated material will be considered plagiarism
+- `umbc-cmsc491-691-e3` [rule] Not disclosing is an academic integrity violation.
+- `umb-provost-academic-integrity-faculty-guidance-ai-e6` [override] Misuse or failure to cite AI help is considered academic dishonesty.
+- `umassd-genai-guidelines-e6` [override] Failure to do so is evidence of academic dishonesty.
+- `uml-academic-integrity-policy-e4` [override] failing to disclose the use of AI in creating submissions when required.
+- `memphis-comp7118-e6` [override] you will be penalized for using a foundation model without acknowledgment
+- `umich-umsi-si301-e8` [override] Failure to provide this information is a violation of academic integrity.
+- `umkc-provost-ai-syllabus-statements-e7` [override] Failure to document use of these tools will be considered academic dishonesty.
+- `umsl-cmpsci-4390-deep-learning-e5` [override] Undisclosed use, or use in a “not permitted” row above, is academic dishonesty.
+- `uottawa-academic-integrity-ai-e4` [override] AI-generated text as part of your academic work without permission or a citation
+- `uri-csc461-e6` [override] using uncredited AI-generated content is strictly prohibited.
+- `usf-cda4621-e1` [override] including use of AI tools is considered plagiarism, unless clear and precise references
+- `utah-ece-plagiarism-ai-policies-e5` [override] NOT acknowledging the use of AI in research, writing, editing, etc. can be considered plagiarism.
+- `teluq-inf1420-iag-e6` [override] une utilisation de l’IAG sans déclaration peut être considérée comme une faute à l’intégrité académique
+- `teluq-inf1420-iag-e8` [override] Déclarer votre utilisation de l’IAG vous protège
+- `wvu-tlcommons-ai-syllabus-statements-e7` [override] Not acknowledging AI-generated work will be treated as academic dishonesty.
+- `yu-academic-integrity-resources-e6` [override] Failure to cite Generative AI use may result in plagiarism charges
+
+## G29 Students own everything they submit — 91 statements, 86 institutions
+- `acu-library-faculty-ai-guide-e4` [rule] clear rules regarding students’ accountability for AI output
+- `asu-cse110-ulc-e3` [rule] it is expected that all assignment submissions in this class are authored by the student
+- `athabasca-provost-interim-genai-e6` [rule] The AI tool should never be the author
+- `apu-ai-classroom-use-guidelines-e5` [rule] You will be responsible for any errors or omissions provided by the tool.
+- `calstatela-cetl-recommendations-ai-e4` [rule] the student, not the AI, will be responsible for any errors.
+- `fresno-state-ai-guidelines-e3` [rule] You are ultimately responsible for the quality, originality, and integrity of your
+- `csulb-optional-ai-syllabus-statements-e5` [rule] You are responsible for the information you submit based on an AI query
+- `capilano-cte-genai-academic-integrity-e8` [rule] students are ultimately accountable for the work they submit
+- `ccsf-cs110a-e2` [rule] All code and work that you submit must be written by you.
+- `cornell-cs1110-e1` [rule] You may not submit work the work of others and claim it as your own.
+- `cornell-info2950-e7` [rule] You are ultimately responsible for the work you turn in
+- `cornell-info5001-e2` [rule] students are still expected to understand and write their own code
+- `deanza-academic-integrity-use-of-ai-e4` [rule] when students use AI, the work submitted represents the students’
+- `duke-compsci201-e2` [rule] All your work, even when done collaboratively, is your responsibility
+- `duquesne-provost-ai-e8` [rule] Students maintain full responsibility for all content generated by AI.
+- `etamu-ai-500-foundations-ai-e3` [override] Programming assignments should be done individually.
+- `fau-ai-syllabus-statement-e4` [rule] When AI is authorized, the student is also responsible and accountable for the content
+- `fiu-cap4104-hci-syllabus-e2` [rule] while maintaining full responsibility for analysis, judgment, and final design decisions
+- `gwu-csci-1012-e1` [rule] you must write your own solutions to homework assignments from scratch, by yourself.
+- `gwu-csci-2113-e1` [rule] Solve all homework, quizzes, projects, and labs on your own
+- `georgetown-cosc3450-e2` [rule] You must use these tools responsibly.
+- `jhu-en601220-e7` [rule] responsibility for all submitted code rests solely with the submitting student(s).
+- `liu-academic-affairs-ai-statement-e2` [rule] You are responsible for the information you submit based on an AI query
+- `marquette-cosc3410-e4` [rule] it is never OK to paste your name on submitted work
+- `mcgill-comp480-e3` [rule] However, students are ultimately accountable for the work they submit.
+- `musc-ai-acceptable-use-framework-e5` [rule] students are responsible for understanding and complying with the MUSC Plagiarism and Artificial Intelligence Guidelines
+- `mun-citl-genai-syllabus-statements-e5` [rule] Students are accountable for the work they submit.
+- `mercer-ctl-sample-syllabus-ai-e2` [rule] People who submit, publish, or share AI-assisted content remain responsible for that content.
+- `miami-oh-cse-academic-integrity-e1` [override] you must solve the problems and write your solutions independently
+- `msu-cse231-syllabus-e2` [override] Claiming that your code was generated by AI will not be considered a valid excuse.
+- `mtu-provost-ai-syllabus-guidance-e3` [rule] Responsibility for the work's integrity remains with the student
+- `middlebury-csci451-e1` [rule] You are intellectually responsible for all work that you submit for assessment.
+- `mst-tlc-gai-guidelines-e8` [rule] not adopt generated content without reflection and revision to make it your work
+- `njit-cs698-ml-time-series-e4` [rule] Your ‘conversation’ with it must be entirely yours
+- `nmsu-syllabus-ai-statements-e7` [override] all work submitted by students will be generated by the students themselves
+- `nyu-intro-cs-bloomberg-e4` [rule] all work submitted for a grade must be a student’s own,
+- `ncat-provost-universal-ai-guidelines-e8` [override] the majority of the work must still be the original creation of the student
+- `ontariotech-should-i-use-chatgpt-e7` [rule] Are you willing to take full responsibility (legal, moral, etc.) for any missed inaccuracies?
+- `psu-ist-genai-teaching-e3` [rule] Understand that they are responsible for their submissions, even when AI is used.
+- `polymtl-log2990-e3` [rule] la majorité du travail doit provenir des étudiants;
+- `rice-comp321-e3` [rule] you must write all of your own code.
+- `rutgers-otear-ai-in-education-e5` [override] is the student’s own and created without the aid of impermissible technologies, materials, or collaborations
+- `sdsu-senate-genai-assessment-guidelines-e4` [rule] Students must take full responsibility for GenAI-generated materials
+- `siuc-faculty-senate-ai-guidelines-e5` [rule] Emphasis should be placed on the importance of originality and honesty in using AI-generated content
+- `txst-cs3358-gholoom-e1` [override] All submissions must be the original work of the student.
+- `ttuhsc-op5221-e2` [rule] Human users have final responsibility for all decisions and outcomes resulting from AI use.
+- `uttyler-cosc3315-e4` [rule] You are ultimately responsible for the quality and content of the information you submit.
+- `jefferson-gai-policy-e6` [rule] accept responsibility as owner of their work submitted
+- `tufts-cs15-e4` [rule] you will not win them back by blaming the chatbot.
+- `uncc-legal-suggested-syllabus-policies-e4` [rule] students are responsible for any errors or information that is misrepresented or inaccurate
+- `uakron-hci-syllabus-e1` [override] All submitted work (assignments and tests) must be your own, not
+- `ubc-cpsc110-e1` [rule] All work that you submit in the course must be your own work.
+- `ucalgary-cpsc231-e2` [rule] All work submitted by students must be their own creation.
+- `berkeley-info256-e5` [rule] you're the one who's ultimately accountable for plagiarizing
+- `ucdavis-ecs154b-genai-e6` [rule] You are responsible for all of the code and text you submit.
+- `ucmerced-cse176-e4` [override] You should solve the assignments using your own intelligence and effort.
+- `ucincinnati-eece-6083-e1` [rule] it is expected that all submitted work is produced by the students themselves
+- `umanitoba-catl-genai-syllabus-statements-e2` [rule] students are ultimately accountable for the work they submit to be assessed
+- `umassd-genai-guidelines-e7` [rule] students should never present work generated by GAI as their own original work
+- `memphis-comp7118-e4` [rule] You will be responsible for any inaccurate, biased, offensive, or otherwise unethical content you submit
+- `olemiss-cetl-syllabus-template-genai-e8` [rule] you are responsible for the work you submit for this course
+- `uno-ai-for-students-canvas-e7` [rule] Students are solely responsible for their submissions, whether they use AI or not.
+- `unlv-cs301-social-implications-e1` [rule] All students are responsible for submitted work, irrespective of tools used to create it.
+- `une-ai-policy-guidance-faculty-e4` [rule] Students must always be able to justify their AI-informed work
+- `unc-comp110-e5` [rule] Understand that you are ultimately 100% responsible for your final product.
+- `uncg-ism671-e1` [rule] We expect that all work students submit for this course will be their own.
+- `ou-cs2414-e5` [rule] students are responsible for ensuring their final submission is functional, accurate
+- `uoregon-cs212-e3` [rule] it is your responsibility to make sure that you understand the material fully
+- `pitt-cs0445-khattab-e2` [rule] All work completed and/or submitted in this course must be your own
+- `upei-tlc-gait-provisional-guidelines-e8` [rule] You are responsible for the quality and honesty of your work.
+- `rochester-csc171-e4` [override] If you choose to use AI tools, you should use them responsibly,
+- `usfca-provost-syllabus-statement-options-genai-e5` [rule] students must present work that is authentically their own.
+- `usask-cs-grad-genai-policy-e5` [rule] may not cite reliance on GenAI as a basis for appeal
+- `usf-cda4621-e4` [rule] Lab grades will be based on actual code developed by the student.
+- `uw-cse122-genai-e2` [override] you are responsible for the accuracy and correctness of the work that you submit
+- `uwaterloo-cs136-e5` [override] accountable for the content and accuracy of all work you submit in this class
+- `wisc-cs540-about-e1` [rule] All submitted work must be your own.
+- `ulaval-principes-directeurs-ia-e5` [rule] assument la responsabilité de l’utilisation faite des contenus générés par les SIA
+- `usherbrooke-ift339-e7` [rule] Vous assumez la responsabilité de tout le contenu produit, avec ou sans IAG
+- `uqat-guide-presentation-travaux-ia-e7` [rule] vous êtes responsables des informations fournies
+- `uqar-politique-c3-d117-ia-e4` [rule] responsable de s’assurer de l’intégrité et de la validité du contenu généré
+- `viu-csci159-wessels-e2` [override] must be completed as strictly individual work
+- `viu-csci161-kabir-e2` [rule] students are ultimately accountable for the work they submit
+- `vassar-cmpu224-e3` [rule] You are responsible for every line of code and answer you submit.
+- `vcu-cmsc357-computer-systems-e8` [rule] Using AI does not transfer responsibility from you to the tool
+- `vcu-cmsc413-intro-cybersecurity-e8` [rule] Using AI does not transfer responsibility from you to the tool
+- `vsu-library-ai-academic-integrity-e4` [rule] tools like Grammarly, ChatGPT, or Quillbot are aids, not authors
+- `wsu-cpts317-e3` [rule] Any solution you submit for grading for homeworks must be your own work.
+- `wustl-cse330-e6` [rule] When using AI, you are still fully responsible for your submission.
+- `wcu-generative-ai-framework-e4` [rule] you are accountable for all output based on the prompts you enter.
+- `york-eecs4414-e3` [override] You are responsible for everything you submit, including its correctness, originality,
+
+## G30 Students must be able to explain every line — 53 statements, 49 institutions
+- `american-oai-ai-academic-integrity-guidance-e5` [rule] Let students know that they should be able to discuss the contents of work
+- `brandeis-ctl-ai-syllabus-statements-e5` [rule] can you explain the idea in conversation, in your own words
+- `byu-cs111-e6` [rule] the first thing they will do is ask you to explain your code
+- `cmu-15112-e4` [rule] you fully understand it and can clearly explain it to course faculty or TAs.
+- `cmu-heinz-95865-e3` [override] I want to make sure that you actually understand the material
+- `cwru-provost-example-ai-policies-e5` [rule] students must demonstrate a clear understanding of both the AI methods employed
+- `dartmouth-cs10-e6` [rule] Be able to explain every line of code in your solution;
+- `famu-cop3014c-c01-e6` [rule] ensuring you understand and can explain all work you submit
+- `fit-provost-genai-academic-work-e8` [override] have reviewed, modified, debugged, and optimized the code to ensure it functions as required
+- `gatech-cs1331-chambers-e2` [rule] We do expect that you understand and can explain the homework solution that you submit.
+- `harvard-cs61-e4` [rule] you must be able to explain your code without the help of an AI assistant.
+- `iit-cs442-e3` [override] AI coding assistants are great, but you need to understand the code being generated!
+- `ilstu-cipd-genai-classroom-e5` [rule] If a student can’t explain how they arrived at a certain answer
+- `jmu-cs149-e4` [rule] you must be able to explain and defend every part of the program you submit.
+- `kstate-cis598-e5` [rule] The student should understand and be able to clearly explain all submitted work and code
+- `lmu-cmsi3300-e2` [override] responsibility to deeply understand every line of software you produce
+- `miami-oh-cse-academic-integrity-e2` [override] simply copying a solution and then understanding it after the fact is not a substitute
+- `msu-cse231-syllabus-e6` [override] Course staff will not assist you if you do not understand your own code.
+- `middlebury-csci1010-e3` [rule] You must understand and be able to explain the code and experimental results you submit.
+- `nyu-csci-ua-102-e6` [rule] You need to be able to explain the answers and code that it produces.
+- `oregonstate-eecs-ai-guidance-e2` [rule] students are expected to be able to explain and defend any work they submit
+- `polymtl-log2990-e5` [override] Ne prenez pas la solution proposée si vous ne la comprenez pas!
+- `purdue-cs252-ai-policy-e2` [override] you know and can write the code for the labs on your own.
+- `smu-csci2341-e2` [override] you need to be able to understand the code they generate
+- `sfu-cmpt120-e5` [override] In the end, you must be able to write the code yourself.
+- `utaustin-cs371n-e6` [rule] possible for you to explain what each line of your code is doing.
+- `uttyler-cosc1337-e7` [override] Try to rewrite the code into your own style with level-appropriate coding
+- `twu-guidelines-genai-teaching-learning-e8` [rule] be prepared at any time to explain, either orally or in writing
+- `ucsd-dsc10-e6` [override] Don’t submit any code that you don’t understand
+- `ucsd-dsc80-e5` [override] Don’t submit any code that you don’t understand
+- `berkeley-info256-e3` [override] you should understand what it's doing, be able to answer questions about it
+- `ucsb-cmpsc156-coding-with-ai-e3` [override] try to understand the code and the test.
+- `ucsc-tlc-drafting-genai-use-policy-e6` [override] All submitted code must be written and fully understood by you.
+- `uconn-cse1010-e8` [override] Never use anything from AI in your solutions if you don’t fully understand
+- `uiuc-cs128-syllabus-e2` [rule] you must write your own code, and you must be able to explain every line
+- `umsl-cmpsci-4390-deep-learning-e7` [rule] be able to explain any solution, code, or analysis you submit
+- `unm-cs491-dip-e2` [override] But all students must fully understand their code!
+- `ou-cs2414-e6` [override] Directly copying AI-generated solutions without comprehension or modification is not acceptable
+- `uri-csc461-e5` [override] For programming assignments, a thorough comprehension of any AI-suggested code is essential before incorporation.
+- `rochester-csc171-e6` [rule] You must be able to discuss and explain the logic of your submitted work
+- `utsa-cs1083-e6` [rule] responsible for understanding, testing, and being able to explain all work they submit
+- `uw-allen-ai-support-and-growth-e5` [rule] you should be able to explain and defend every part of what you submit
+- `uwaterloo-cs114-e5` [rule] You should be able to readily demonstrate your knowledge of your submissions.
+- `teluq-inf1420-iag-e3` [override] Vous demeurez entièrement responsables du contenu remis et devez être en mesure d’en expliquer
+- `teluq-inf1901-usage-ia-e3` [override] nous vous conseillons de vous assurer d’avoir une compréhension viscérale des réponses qu’il fournira
+- `usherbrooke-ift615-e4` [override] surtout si vous ne comprenez pas la réponse générée
+- `uqam-inf3105-e5` [override] vous devez toujours être capable de comprendre et d’expliquer votre code source.
+- `valencia-cen3024c-e2` [override] you must know how to write your own code
+- `vcu-cmsc210-computers-programming-e5` [rule] submit its output as your own understanding if you can't explain and reproduce it
+- `vcu-cmsc357-computer-systems-e7` [rule] You must be able to explain your code and how it works
+- `wvu-tlcommons-ai-syllabus-statements-e6` [rule] be prepared to explain/answer any questions about the work submitted
+- `wpi-cs3013-e8` [rule] Must be able to explain all submitted work?
+- `york-eecs4414-e4` [rule] You should be able to explain and defend any submitted work without assistance from AI.
+
+## G31 Verify AI output; it is often wrong — 111 statements, 91 institutions
+- `amherst-ai-usage-guidelines-e2` [rule] Users are responsible for the accuracy and integrity of any material they create
+- `augusta-ai-at-au-e2` [override] be aware that generated code may contain bugs, security vulnerabilities, or logic errors
+- `acc-cosc1436-fa25-csit-gai-e4` [rule] you are responsible for verifying accuracy, refining outputs, and ensuring your work aligns
+- `binghamton-policy-312-genai-e5` [rule] Verify GenAI outputs for accuracy and fairness
+- `binghamton-policy-312-genai-e6` [override] Treat GenAI outputs as advisory-qualified humans must review and approve
+- `boise-cs-ai-department-approach-e5` [override] Students must verify, understand, and modify all AI-generated code.
+- `caltech-provost-genai-guidance-e6` [rule] you should always review and assess all output generated by GenAI tools for accuracy
+- `cbu-ai-with-purpose-e5` [override] AI content can be incomplete, inaccurate or biased and must not be treated as authoritative.
+- `cmu-heinz-95865-e4` [override] you have enough background knowledge to check for yourself
+- `colby-cs151-e6` [rule] It's your responsibility to verify the correctness of the answers from generative AI.
+- `mines-csci561-e3` [override] material generated by these tools may be inaccurate, incomplete, biased, or otherwise problematic.
+- `colostate-cs152-e6` [rule] These tools are prone to generating imperfect or even incorrect solutions
+- `columbusstate-cpsc1302k-e2` [rule] Be aware that AI tools may not always be reliable.
+- `dartmouth-cs10-e1` [override] generative AI might not produce the correct results
+- `etsu-ai-instructional-policy-e4` [rule] Shall confirm the accuracy of the GAI output received before utilizing the
+- `erau-student-code-ai-e5` [rule] responsible for evaluating and verifying any material produced, summarized, transformed or suggested by AI tools
+- `fiu-cap4104-hci-syllabus-e5` [rule] Students must validate, revise, or reject AI-generated suggestions.
+- `harvard-cs61-e6` [override] generative AI tools can provide information that is subtly or dramatically wrong.
+- `hmc-cs70-e8` [rule] Always critically evaluate any information or suggestions provided by LLMs.
+- `haverford-cmsc-h360-e3` [override] often create code that is not well understood by the user.
+- `howard-policy-100-022-ai-e1` [rule] accountable for verifying the accuracy and appropriateness of AI-generated outputs before using them.
+- `iit-cs536-e4` [override] it has no model of formal logic, a necessary component of producing formal proofs
+- `jhu-en601220-e8` [rule] Blind or uncritical reliance on AI output is not acceptable and may result in penalty
+- `kean-faculty-manual-genai-e4` [override] students must meticulously review all AI-generated content
+- `lakehead-chatgpt-ai-tools-faq-e6` [override] Generative AI tools often cite non-existent, fabricated sources
+- `lehigh-ai-policies-best-practices-e4` [rule] always check the output for accuracy and bias.
+- `mcw-ai-digest-e5` [rule] Review AI outputs for accuracy and employ responsibility in its use.
+- `msu-cse231-syllabus-e7` [override] Debugging and understanding code generated by AI is part of the challenge
+- `mru-comp3309-e3` [override] current AI tools do not produce writing with the specificity required for academic writing
+- `njit-cs485-usable-security-privacy-e3` [rule] You are responsible for the correctness of your work
+- `nyu-software-engineering-bloomberg-e2` [rule] any responses should be verified by directly reviewing the course materials.
+- `ndsu-ai-goals-guidance-e5` [rule] Users are accountable for reliability, accuracy, and privacy (e.g., FERPA compliance).
+- `neiu-ctl-sample-ai-syllabus-statement-e6` [rule] double-checking and verifying the accuracy of any content generated by using this tool.
+- `neu-cs2100-e7` [rule] you are responsible for validating any information you find.
+- `neu-cs3100-e5` [rule] you remain responsible for verifying accuracy against authoritative sources:
+- `ontariotech-should-i-use-chatgpt-e1` [rule] evaluate whether it is safe or appropriate to use ChatGPT in higher education
+- `ontariotech-should-i-use-chatgpt-e6` [rule] Do you have the expertise to verify that the output is accurate?
+- `ontariotech-should-i-use-chatgpt-e8` [rule] Be sure to verify each output word and sentence for accuracy and common sense
+- `oregonstate-coe-ai-chatbot-policy-example-e6` [rule] You should never blindly submit something based on AI chatbots without using critical thinking
+- `pvamu-cte-ai-syllabus-statements-e3` [override] You are responsible for fact-checking statements composed by AI Generative Software.
+- `rosehulman-csse332-e7` [rule] a human still needs to be able to evaluate if the work was done properly
+- `rush-ctei-faculty-guide-ai-e3` [rule] Encourage your students to use non-AI sources to verify accuracy
+- `rutgers-camden-guidance-ai-e7` [rule] You are responsible for ensuring the accuracy and appropriateness of AI-generated content
+- `esf-cns-generative-ai-e1` [override] Generative AI requires human input, editing, and evaluation.
+- `esf-cns-generative-ai-e2` [rule] It is our responsibility to review and revise AI-generated content to ensure its accuracy
+- `sju-academic-affairs-ai-principles-e5` [rule] faculty and students are accountable for the accuracy, quality, and integrity of their work
+- `smu-csci2341-e4` [override] You should review the code the AI provides you with
+- `seattleu-syllabus-template-genai-e6` [override] it’s vital that you fact-check any GenAi material you draw on
+- `southernct-online-learning-genai-e5` [rule] Encourage students to verify that the content generated by the model is a genuine reflection
+- `tnstate-libguide-ai-syllabus-options-e5` [override] You are responsible for fact checking statements composed by all generative AI models.
+- `tamu-csce420-e6` [override] it is entirely your responsibility to identify errors in program logic through comprehensive, documented testing.
+- `tamu-csce420-e7` [override] generated code, even if syntactically correct, may have significant scope for improvement
+- `ttuhsc-op5221-e3` [rule] This is particularly critical in academic, research, clinical, and other high- risk settings
+- `twu-ai-syllabus-statements-e8` [rule] You are responsible for the accuracy and ethics of any artificial intelligence outputs
+- `uthsc-tlc-syllabus-policies-e4` [rule] responsibility to ensure the accuracy of the output including references
+- `utmb-ai-joint-policy-e6` [override] Students must review all AI-generated content very carefully
+- `tufts-cs15-e3` [rule] It is ultimately your responsibility to verify the correctness of its output.
+- `ua-oaa-genai-guidelines-e5` [rule] students should follow the “verify everything” approach to the content generated by these AI tools.
+- `ua-oaa-genai-guidelines-e8` [override] You cannot rely on ChatGPT-generated content for research, learning and education.
+- `uab-provost-ai-working-group-report-e8` [override] It is your responsibility to identify errors in program logic through comprehensive, documented testing.
+- `ualberta-cmput401-e3` [rule] you need to double-check that what it tells you is actually correct.
+- `ualberta-cmput401-e4` [override] Stackoverflow is always a better resource than Large Language Models such as ChatGPT
+- `uark-tips-genai-syllabus-statements-e6` [rule] verify the accuracy of the content generated before submitting any work for credit.
+- `ucsd-cse123-e5` [override] GenAI tools are not a consistently reliable source of quality information
+- `ucsd-dsc80-e2` [rule] they often provide answers and write code that look correct, but aren’t actually correct
+- `ucdavis-ecs154b-genai-e5` [override] You should always review the output of these tools before submitting it.
+- `uchicago-cmsc23530-policies-e6` [rule] the content we provide in the class always takes precedence.
+- `cuboulder-csci3308-e4` [override] It is your responsibility to identify errors in program logic through comprehensive, documented testing.
+- `cu-denver-tips-ai-e3` [rule] Any content generated by AI should be thoroughly verified for accuracy.
+- `udel-genai-guidelines-faqs-e5` [rule] The Directive requires users of generative AI tools to confirm the accuracy of the output
+- `uiuc-cs124-ai-e5` [rule] you are still responsible for validating all the code in your project.
+- `uiuc-ischool-is445-e5` [override] Include your “validation plan” for each statement that you use from the LLM.
+- `uiuc-ischool-is445-e6` [override] you will need to create your own validation tests to run the code
+- `ull-academic-affairs-genai-guidance-e5` [rule] Reaffirm that students are responsible for accuracy, bias, and integrity of any use of GAI.
+- `umd-cmsc132-e3` [override] since AI is often wrong, or may have correct
+- `memphis-comp4745-e5` [rule] it is your responsibility to ensure the correctness of your work
+- `memphis-comp7118-e3` [override] code generation models have a tendency to produce inaccurate outputs
+- `miami-csc120-e3` [override] the programs generated by AI-tools often do not meet the requirements of CSC120
+- `miami-csc120-e4` [override] AI-generated code often is nasty nasty nasty.
+- `umich-umsi-si301-e2` [override] Don't believe anything that AI tells you.
+- `umn-csci5271-e6` [override] AI-generated answers are sometimes incorrect
+- `umkc-provost-ai-syllabus-statements-e8` [rule] You are still responsible for the accuracy and correctness of anything you submit
+- `unb-bremner-genai-policy-e4` [override] Generative AI services are not acceptable as sources of facts.
+- `unb-bremner-genai-policy-e5` [rule] you are responsible for verifying that those sources actually exist
+- `unh-provost-syllabus-guidance-ai-e7` [rule] You are responsible for the accuracy of your assignments
+- `uoregon-cs322-e3` [override] genAI tools can hallucinate. So, use this at your own risk.
+- `uottawa-academic-integrity-ai-e7` [override] AI can generate realistic-looking citations that actually don’t exist
+- `uprrp-circular-8-ia-e6` [override] debe(s) evaluar y modificar críticamente cualquier contenido generado por la IA
+- `uri-csc212-e3` [override] only worth something to someone who can tell whether the answer is actually correct
+- `uri-csc461-e7` [override] It's crucial to verify AI-generated information, as these tools can produce errors or outdated content.
+- `sandiego-msads-handbook-e4` [rule] You are responsible for critically evaluating the accuracy, reliability
+- `usf-cap4111-e2` [rule] must cross-verify the information word by word produced by these tools with reliable sources
+- `usf-cis4219-e7` [rule] You will be responsible for the accuracy of your submissions
+- `utk-cosc202-spring2024-syllabus-e5` [override] it is your responsibility the solution works as intended (aka passes tests)
+- `utep-cs2401-e1` [override] Exercise caution when utilizing AI tools like ChatGPT.
+- `utep-cs4379-5375-e5` [override] these technologies often “hallucinate” or produce materials and information that are inaccurate or incomplete
+- `utoronto-csc108-e5` [override] it can sometimes give incorrect answers or explanations
+- `uvic-csc361-e6` [override] Generative AI hallucinates and may provide false or/and made-up information
+- `uva-cs2120-e3` [rule] a severe risk today that AI tools will give outputs that are wrong
+- `uva-sds-ai-policy-e6` [override] Acknowledging that code generation models may produce inaccurate outputs.
+- `uva-sds-ds4021-e2` [override] any code generated by this kind of tools should be carefully checked
+- `uw-ischool-hcid520-e1` [override] and ones that are not particularly good at writing, illustration, or other content generation
+- `uwm-syllabus-statements-genai-e5` [rule] your responsibility to critically evaluate all responses generated with the use of Generative AI
+- `usherbrooke-ift615-e3` [override] Il faut toujours vérifier les sources véritables pour valider les réponses générées par l’IA.
+- `uqat-guide-presentation-travaux-ia-e6` [override] valider les informations reçues avec des sources bibliographiques fiables et crédibles
+- `uqtr-principes-ia-personnel-e3` [override] Que l’extrant qui sera utilisé a fait l’objet d’un examen approfondi et critique;
+- `vanderbilt-sample-syllabi-genai-ece-e5` [override] You must thoroughly test the code to prove that it works.
+- `vcu-cmsc413-intro-cybersecurity-e6` [override] they frequently generate irrelevant, inaccurate, or non-functional responses
+- `wustl-cse330-e2` [rule] you are responsible for understanding the material, verifying correctness
+- `wustl-cse330-e7` [rule] Failure to review AI outputs is the same as submitting incorrect work.
+- `wwu-csci241-e2` [rule] current AI tools are significantly less reliable than calculators
+
+## G32 Students stay the primary problem-solver — 21 statements, 20 institutions
+- `apu-ai-classroom-use-guidelines-e4` [override] to support, not replace, your efforts in completing your assignments.
+- `byui-cse-genai-policy-e4` [rule] Maintain an active role in decision-making throughout the automation process.
+- `cmu-15112-e3` [rule] at no point can you use AI to replace your thinking or your understanding.
+- `famu-cop3014c-c04-e1` [override] tools in this programming course is intended to be strictly assistive
+- `famu-cop3014c-c04-e2` [override] should not be utilized to substitute critical thinking, decision-making, planning, execution, coding
+- `lmu-cmsi3300-e6` [override] Treat GenAI as an assistant, not a subcontractor.
+- `mcw-ai-digest-e7` [override] AI is a tool and is not meant to replace human wisdom and judgement.
+- `neiu-ctl-sample-ai-syllabus-statement-e4` [override] Use such tools as a supplement to and not a replacement for one’s own work.
+- `txst-cs3358-lk04-e3` [override] AI can provide feedback and assistance, but instructor guidance and your input is essential.
+- `utaustin-cs371n-e3` [override] You should come up with the high-level skeleton of the solution yourself
+- `ucsd-dsc10-e3` [override] Human supervision of GenAI tools is always necessary.
+- `uconn-cse1010-e3` [override] You need to learn from what AI is telling you.
+- `umdearborn-genai-academic-integrity-e3` [override] AI should be used as a collaborative tool, not as a sole source
+- `umn-csci5271-e4` [override] you are not allowed to use an AI to substitute for your own understanding
+- `unc-comp110-e1` [override] AI should help you think, not think for you.
+- `uprm-upr-cert66-politica-ia-e4` [override] El estudiantado no podrá sustituir su esfuerzo intelectual mediante el empleo
+- `usf-cap4111-e4` [override] not as the primary means of completing assignments and writing emails
+- `utoronto-csc148-e7` [rule] you (and not any AI tool) are responsible for your own learning in this course
+- `wisc-cs540-about-e4` [override] for debugging help as long as you remain the primary problem-solver.
+- `vt-cs3214-e4` [override] namely, by using AI as an assistant, not by becoming an assistant to AI.
+- `york-eecs4414-e2` [override] AI may accelerate your work, but it may not replace your understanding.
+
+## G33 Shift weight to proctored, unassisted assessment — 15 statements, 14 institutions
+- `clemson-ugl-ai-academic-integrity-guidance-e5` [override] Provide in-class/proctored assignments when appropriate.
+- `csuohio-ai-syllabus-statement-examples-e7` [override] Quizzes will be done in class and must be solely your own work.
+- `gatech-cs1331-chambers-e1` [rule] We have chosen to focus the assessment of students' individual knowledge
+- `middlebury-csci451-e2` [rule] expecting you to demonstrate your learning in settings without access to external aids
+- `sfu-cmpt120-e7` [override] can be earned by a student who unable to work without an AI
+- `txst-cs3358-gholoom-e5` [override] Midterm Exam - 1 : 20 % ( face-to-face )
+- `utaustin-cs314-e2` [override] The increase is due to the availability of generative AI chatbots
+- `ucsd-dsc10-e4` [override] you will be tested on your independent ability to apply course material to novel problems
+- `ucsd-dsc80-e3` [override] you will be tested on your independent ability to apply course material to novel problems
+- `ou-cs2334-e5` [override] assignments have been designed to either occur in a controlled environment
+- `usc-csce491-e3` [override] will be covered by the in-class, written closed book midterm and final exam.
+- `uva-cs2120-e4` [override] the tests to assess your learning in the class will be done in class
+- `uqam-inf3105-e6` [override] vous aurez à programmer de petites parties de code pour résoudre des problèmes
+- `vt-cs3214-e3` [rule] We will increase the number of unassisted, proctored assessments (exams and quizzes).
+- `wpi-cs3013-e3` [rule] where students do not have access to generative AI tools (e.g., in class quizzes)
+
+## G34 Check understanding through code reviews, interviews, or oral exams — 35 statements, 32 institutions
+- `clemson-ugl-ai-academic-integrity-guidance-e4` [rule] Create assignments that have an ‘oral defense’ component to them
+- `cornell-info5001-e7` [override] I reserve the right to orally assess any student on their submissions
+- `fordham-provost-genai-principles-e5` [rule] Require oral presentation of coursework to assess students' understanding
+- `harvard-cs61-e5` [override] We may quiz you orally to check your understanding.
+- `iastate-studentconduct-faculty-ai-e8` [override] consider discussing the student's work and process with them
+- `lamar-cosc3306-e4` [override] Should misuse be suspected, you may be asked to provide evidence of your work.
+- `middlebury-csci1010-e4` [override] oral exam and orally present your project work without access to reference materials, AI systems
+- `neu-cs2100-e8` [rule] they may ask to meet with the student and have them explain their code.
+- `niu-ai-teaching-learning-e7` [rule] Incorporating in-class, oral or applied assessments
+- `princeton-cos226-e3` [rule] code reviews ask you to demonstrate that you understand how your code works
+- `purdue-cs252-ai-policy-e4` [rule] there is an oral implementation exam administered by the TAs
+- `rit-ctl-syllabus-guidance-genai-e8` [override] we reserve the right to require you to explain and/or recreate your work
+- `rit-swen261-e8` [override] you will be asked to reproduce/explain without assistance
+- `sjsu-cs46a-tshukudu-e5` [override] Students may be asked to explain their code or reasoning to demonstrate their understanding.
+- `uttyler-cosc1337-e2` [override] The instructor reserves the right to ask you to explain any assignment
+- `uttyler-cosc1337-e6` [override] I may have you appear personally to explain how a method works
+- `ucalgary-cpsc219-e6` [rule] explain the code and its functionality in a one-on-one interview
+- `ucsd-cse29-e4` [override] will have a scheduled in person code review with the staff
+- `berkeley-cs61b-e5` [rule] we may be conducting random code interviews for all projects
+- `berkeley-info256-e7` [override] if we ask and you don't know, your grade will be influenced by it
+- `umd-cmsc216-e2` [override] are asked to explain their submitted work and cannot do so.
+- `memphis-comp4745-e3` [override] you may be asked to explain the code or re-create aspects
+- `umsl-cmpsci-4390-deep-learning-e8` [override] The final oral exam is where I test this
+- `unm-cs491-dip-e3` [override] There will be a random check after each submission, where they may be asked questions
+- `ou-cs1323-mackay-e7` [override] will invite the student to her office to explain the assignment solution in detail
+- `uottawa-academic-integrity-ai-e5` [override] Your professor may also ask you to explain how AI has been used
+- `uri-csc212-e5` [override] where a student talks through their submitted work with the instructor or a TA
+- `rochester-csc171-e7` [override] Failure to adequately discuss your work may be grounds for reducing the grade
+- `usc-csce491-e2` [override] you will be responsible for explaining your project code during project demonstrations,
+- `usd-ai-faculty-e8` [override] Asking students to explain or defend their work orally.
+- `usf-cis4219-e4` [override] The professor can insist that you demonstrate a deep understanding of the subject matter
+- `utsa-cs1083-e7` [override] Failure to adequately explain or demonstrate an understanding of submitted work
+- `uwaterloo-cs349-e4` [rule] meet with the instructor or TA to explain how your submitted code works
+- `uqam-inf1120-e3` [override] l’enseignant peut demander à rencontrer la personne étudiante pour lui demander d’expliquer
+- `vt-cs3214-e7` [override] we may require you to explain, defend, revise, or orally demonstrate any AI-assisted submission.
+
+## G35 Redesign assignments and grading around AI — 63 statements, 49 institutions
+- `boise-cs-ai-department-approach-e6` [rule] Producing working code, alone, will not be adequate to receive a passing grade
+- `boise-cs-ai-department-approach-e7` [rule] at least half of all course points will come from demonstration of understanding
+- `bu-cds-gaia-e5` [rule] Treat work by students who declare no use of AI tools as the baseline
+- `bu-cds-gaia-e6` [rule] Use a lower baseline for students who declare use of AI tools,
+- `bu-cds-gaia-e7` [override] Impose a significant penalty for low-energy or unreflective reuse of material generated by AI tools
+- `brown-csci0190-e8` [rule] to avoid creating an incentive for you to use AI or otherwise cheat,
+- `csuf-fdc-creating-genai-policy-e3` [rule] A description of how you will authenticate student work where relevant
+- `capilano-cte-genai-academic-integrity-e2` [rule] Consider adopting alternative assessment approaches to render AI-based cheating unfeasible
+- `carleton-comp1405-e1` [rule] designed to be completed individually and without the use of any artificial intelligence -based tools
+- `cmu-10301-601-e1` [override] Submit only pure human work to Slot A, no AI assistance is permitted
+- `cmu-10301-601-e2` [override] Submit AI assisted work to Slot B, three days after you receive feedback
+- `cmu-10301-601-e3` [override] to practice using AI efficiently and effectively in a second, distinct pass
+- `fiu-cap4104-hci-syllabus-e7` [rule] Heuristics misapplied or largely copied from AI without validation
+- `fiu-cap4104-hci-syllabus-e8` [rule] Insightful discussion of GenAI strengths, limitations, and bias
+- `hampton-chatgpt-ai-task-force-midyear-report-e5` [rule] instructors must re-evaluate how learning is assessed in the presence of this innovative technology.
+- `harvard-cs50-e3` [override] Quizzes are 20 minutes long interactive conversations with the CS50 Duck, course’s AI-based software
+- `harvard-cs61-e2` [rule] we are planning to evaluate problem set turnins only at a high level;
+- `hmc-ai-use-levels-pilot-e7` [override] Normalize struggle while learning and provide as many options as possible
+- `hofstra-provost-genai-resources-e3` [rule] Design assignments that provide opportunities for students to get feedback from you or peers
+- `hofstra-provost-genai-resources-e4` [rule] Ask students to reflect and share their process by either giving a presentation
+- `hofstra-provost-genai-resources-e5` [rule] Require students to submit written assignments using Google Docs.
+- `hofstra-provost-genai-resources-e6` [override] Submit a program or line of code then ask students to evaluate the response
+- `isu-aic-best-practices-e6` [rule] students produce preliminary work before the final deadline
+- `ilstu-cipd-genai-classroom-e6` [rule] Consider connecting your assignment prompts deeply to in-class discussions and activities.
+- `iastate-studentconduct-faculty-ai-e6` [rule] Consider incorporating drafts, reflections, process documentation, in-class work, presentations
+- `lehigh-ai-policies-best-practices-e5` [rule] make AI "cheating" both less necessary and less appealing
+- `marshall-academic-affairs-ai-e6` [rule] Departments and programs should provide instructors with sample assignments
+- `mit-6110-e4` [rule] you will get full credit if the compiler satisfies the course requirements
+- `mru-comp3309-e6` [rule] Written assessments will have to be submitted electronically (either as a Google Doc
+- `ncat-provost-universal-ai-guidelines-e3` [rule] explore alternative assessment approaches and technology tools
+- `northwestern-cs213-intro-computer-systems-e3` [rule] The labs and homeworks are a substantial portion of the grade for a good reason.
+- `nova-lec-genai-faculty-e2` [rule] recommend that faculty restructure their courses to reduce the temptation to use AI tools
+- `pepperdine-ai-use-syllabus-statements-e6` [rule] your work will be assessed on the value you add to the initial output.
+- `rush-ctei-faculty-guide-ai-e7` [rule] recognizing that AI usage cannot be fully eliminated for most activities and assessments
+- `rutgers-otear-ai-in-education-e1` [rule] Test your assignments by submitting them to ChatGPT and/or other AI tools
+- `rutgers-otear-ai-in-education-e3` [rule] Develop rubrics that emphasize critical thinking, application of knowledge, and evaluation of knowledge
+- `sfsu-ceetl-teaching-generative-ai-e6` [rule] protect student learning from AI shortcuts by redesigning assignments to make them AI-resistant
+- `southernct-online-learning-genai-e6` [rule] reduce the number of high stakes summative assessments
+- `southernct-online-learning-genai-e7` [rule] create assignments that are harder to complete with AI
+- `txst-cs3358-lk04-e4` [rule] If you do not do the assignment according to specifications/requirements, you will earn
+- `uwf-ai-academic-misconduct-e4` [rule] Structuring assessments that emphasize process over memorization
+- `trent-genai-guidelines-2024-e7` [rule] Instructors are encouraged to have students document their work process
+- `twu-guidelines-genai-teaching-learning-e5` [rule] We discourage attempts to switch lengthy writing assignments from home to class.
+- `utrgv-coltt-generative-ai-e6` [rule] If exams or quizzes are used, consider avoiding high-stakes weighting.
+- `albany-catloe-design-ai-policies-e6` [rule] Describe how you will help them regulate their behavior and the temptation to use AI
+- `ua-oaa-genai-guidelines-e3` [rule] Create assignments that are not easily completed using AI.
+- `uab-provost-ai-working-group-report-e3` [rule] Ensure AI cannot be used as a proxy to pass a university course.
+- `uah-etl-ai-guidance-faculty-e4` [rule] understand the way AI can be used and plan your instruction and assessment accordingly
+- `ucsd-cse29-e5` [rule] ensure that students demonstrate their own understanding of the course objectives
+- `uccs-frc-ai-in-academics-e8` [rule] Include adherence to the AI scale level as a part of the grading rubric.
+- `cu-denver-tips-ai-e4` [rule] Instructors should carefully consider how to adapt to these developments.
+- `du-otl-concerns-about-student-ai-use-e3` [rule] assess student learning throughout the course through
+- `uiuc-cs124-syllabus-e4` [rule] Your project grade is based on the total hours of engaged work you complete
+- `uiuc-cs124-syllabus-e5` [override] So dishonesty on the project is not about authorship at all.
+- `umbc-cmsc491-691-e4` [rule] your answer may receive anywhere from 0 to full credit
+- `umass-compsci383-e2` [rule] the teaching staff cannot see how much of the programs written are your creation
+- `olemiss-cetl-syllabus-template-genai-e5` [rule] make modifications to their assessments that would prevent or discourage AI misuse
+- `olemiss-cetl-syllabus-template-genai-e6` [rule] will likely have a larger effect on students’ AI use than a simple syllabus policy
+- `uri-csc212-e6` [rule] and build it with AI assistance, deliberately
+- `usd-ai-faculty-e3` [rule] design assignments that emphasize process, reflection, iteration and critical engagement
+- `uw-cse121-e4` [rule] will have very permissive policies for collaboration and tool usage (including AI)
+- `ulaval-principes-directeurs-ia-e7` [rule] garantissent que les résultats obtenus reflètent les apprentissages et les compétences
+- `uqtr-principes-ia-personnel-e4` [rule] Que les modalités d’utilisation respectent le principe d’alignement pédagogique
+
+## G36 Treat unauthorized AI use as academic misconduct — 229 statements, 184 institutions
+- `acu-library-faculty-ai-guide-e7` [override] Any work written, developed, created, or inspired by artificial intelligence (AI) is considered plagiarism
+- `acadia-jodrey-cs-academic-integrity-e4` [override] the Jodrey School of Computer Science will treat AI-generated work as plagiarism
+- `amherst-ai-usage-guidelines-e4` [rule] including the Student Code of Conduct
+- `appstate-cs3435-e8` [rule] Deviating from these heuristics does not automatically qualify as academic misconduct
+- `auburn-biggio-genai-syllabus-language-e7` [override] Use of a Generative AI Tool to complete an assignment constitutes academic dishonesty.
+- `augusta-ai-at-au-e6` [rule] Submitting AI-generated content as original work when not permitted is academic dishonesty.
+- `acc-cosc1436-fa25-csit-gai-e5` [rule] This applies to text, images, code, or any other material.
+- `binghamton-policy-312-genai-e4` [rule] Use GenAI in ways that align with Binghamton's academic integrity
+- `bishops-university-regulations-academic-integrity-e1` [override] using the internet, AI, or other electronic means to source answers to assessment items
+- `bishops-university-regulations-academic-integrity-e2` [override] employing AI tools or services to generate answers
+- `bishops-university-regulations-academic-integrity-e3` [rule] Utilizing AI, machine learning tools, or any other digital instruments to complete assignments
+- `bc-university-academic-integrity-policy-ai-e1` [override] work generated through unsanctioned and/or undocumented artificial intelligence (A.I.) assistance.
+- `brown-csci0190-e7` [rule] any (suspected) use of an AI tool will be viewed as a violation
+- `ccny-cuny-academic-integrity-e1` [override] artificial intelligence (AI) systems, or communication during an academic exercise
+- `ccny-cuny-academic-integrity-e5` [rule] generating entire assignments or exam responses using AI without authorization
+- `cuny-gc-academic-integrity-policy-2024-e1` [rule] Cheating is the unauthorized use or attempted use of material, information, notes, study
+- `hunter-csci127-e5` [rule] Submitting such as your own work is a form of cheating and plagiarism.
+- `calpoly-csc248-e2` [rule] I consider this academic dishonesty.
+- `fresno-state-ai-guidelines-e7` [rule] may result in academic misconduct penalties
+- `csuf-fdc-creating-genai-policy-e4` [override] Use of these tools will be considered a violation of the CSUF Academic Dishonesty Policies
+- `capilano-cte-genai-academic-integrity-e7` [override] Use of these tools is considered cheating through the use of unauthorized aids.
+- `carleton-cs111-e4` [rule] a report will immediately be made to the Academic Standing Committee
+- `carleton-comp1405-e2` [override] the use of any artificial-intelligence based tools will be considered academic misconduct
+- `carleton-comp1406-e6` [rule] using artificial intelligence tools such as ChatGPT when your assessment instructions or course outline
+- `cmu-10301-601-e4` [rule] you will be penalized with an Academic Integrity Violation (AIV) and a penalty
+- `cmu-10315-e3` [rule] constitutes a violation of CMU's academic integrity policy
+- `cmu-15112-e7` [rule] The course faculty reserve the right to respond to such cases as we deem appropriate,
+- `cmu-15122-e6` [rule] Use of these tools on assignments will be reported as an academic integrity violation.
+- `cmich-sample-syllabus-statements-e2` [override] including submitting artificial intelligence (AI)-generated products as your own original work, is prohibited
+- `cmich-sample-syllabus-statements-e4` [override] is prohibited and a violation of CMU’s Academic Integrity policy
+- `chapman-provost-ai-syllabus-considerations-e2` [rule] will be governed by Chapman’s Academic Integrity Committee
+- `cau-syllabus-template-e2` [rule] Students who submit course requirements which are not their own
+- `clemson-ugl-ai-academic-integrity-guidance-e6` [rule] please reach out to our team and we can
+- `mines-csci561-e7` [rule] is considered Academic Misconduct in violation of the Mines Academic Integrity Policy
+- `colostate-cs152-e2` [rule] treated as turning in work created by someone else, namely an act of plagiarism
+- `colostate-cs312-e2` [rule] will be considered a breach of the CSU Academic Integrity Policy
+- `creighton-academic-misconduct-policy-e1` [override] unauthorized use of artificial intelligence
+- `dal-csci4177-5709-ai-tools-e6` [override] Using Al-driven tools where prohibited constitutes an academic offence.
+- `davidson-artificial-intelligence-policy-e5` [rule] Violations of this policy may be handled as with any matter of academic integrity
+- `depaul-csc-355-e4` [rule] penalties for cheating, plagiarism, and/or complicity
+- `drexel-se310-e2` [rule] Unauthorized use of such tools will be treated as a violation
+- `ecu-ofe-syllabus-language-e2` [rule] using an AI tool, if prohibited by the instructor, is considered an academic integrity violation
+- `etsu-ai-instructional-policy-e1` [override] to fabricate data or research results, or to falsify academic content is strictly prohibited.
+- `etsu-ai-instructional-policy-e7` [rule] Violations of this policy will be subject to the University
+- `etamu-ai-500-foundations-ai-e2` [override] Any use of such software is not allowed, and constitutes an instance of academic dishonesty
+- `erau-student-code-ai-e1` [override] Using artificial intelligence or automated technologies in violation of University, program, course or instructor requirements
+- `emory-college-syllabus-additions-ai-e5` [override] constitutes plagiarism and is a violation of the Honor Code
+- `emory-college-syllabus-additions-ai-e6` [rule] without permission from the instructor may also constitute seeking unauthorized assistance
+- `emory-college-syllabus-additions-ai-e7` [rule] Any suspicion of academic misconduct will be reported to the Honor Council.
+- `famu-cop3014c-c04-e4` [rule] Plagiarism involving AI-generated text or work is strictly prohibited.
+- `fau-ai-syllabus-statement-e5` [rule] may constitute a violation of the Florida Atlantic Code of Academic Integrity,
+- `gatech-cs1301-e2` [override] Submitting content generated by AI tools will be treated as academic misconduct.
+- `gatech-cs1301-e8` [rule] Deviating from them does not automatically mean misconduct, but it increases the risk.
+- `gatech-ic-cs7637-e8` [rule] Deviating from these heuristics does not automatically qualify as academic misconduct
+- `georgiasouthern-provost-ai-academic-contexts-e6` [rule] Any use of AI to generate content that is submitted as one's work
+- `gsu-cis3001-ai-mou-e3` [override] The following uses of AI are strictly prohibited and constitute academic dishonesty
+- `gsu-cis3001-ai-mou-e7` [rule] Violations of this MOU may result in:
+- `hec-montreal-daip-iag-evaluation-e5` [rule] toute utilisation non autorisée d’un outil d’IAG peut constituer une infraction sanctionnable
+- `hampton-chatgpt-ai-task-force-midyear-report-e3` [rule] An addendum that qualifies the use of generative AI to substitute or supplement an assessment
+- `harvard-cs50-e6` [rule] Acts considered not reasonable by the course are handled harshly.
+- `isu-aic-best-practices-e7` [rule] Develop a plan for potential instances of misuse of AI.
+- `iit-cs442-e5` [rule] if we identify what we believe is plagiarism or rampant AI use
+- `ilstu-cipd-genai-classroom-e8` [rule] follow the same process you would during any other academic integrity concern
+- `iup-academic-integrity-violations-e1` [rule] Plagiarism applies to any type of source, whether published or unpublished, human or AI-generated
+- `iastate-studentconduct-faculty-ai-e3` [rule] The use of AI is not inherently academic misconduct.
+- `iastate-studentconduct-faculty-ai-e4` [rule] replaces the student's own demonstration of learning
+- `jhu-en601220-e5` [rule] downloading/generating full solutions from the internet (including chatGPT or similar AI-assisted coding tools).
+- `kent-policy-3-01-8-cheating-plagiarism-gai-e4` [rule] a material portion of the ideas or words of another (e.g. person, persons, or GAI)
+- `kpu-tl-genai-student-guide-e3` [rule] Misue of AI can result in an academic integrity breach.
+- `lafayette-cs150-e3` [rule] The use of any prohibited AI tools in this class will be regarded as plagiarism.
+- `lakehead-chatgpt-ai-tools-faq-e3` [override] If a student uses an AI tool without permission, when instructed not to,
+- `lakehead-chatgpt-ai-tools-faq-e5` [rule] they must go through a formal academic integrity investigation and disciplinary measures are implemented
+- `liu-academic-affairs-ai-statement-e4` [rule] found to have used generative AI tools in unauthorized ways will be subject to
+- `lsuno-academic-misconduct-e1` [override] using any AI generated content for your course work (such as using ChatGPT or similar)
+- `lsuno-academic-misconduct-e4` [rule] Instructors are to report all suspected academic misconduct.
+- `luc-provost-ai-integrity-statement-e1` [rule] an obligation to complete our academic and scholarly work with absolute integrity and honesty
+- `macewan-ctl-genai-recommended-practices-e4` [rule] Using AI is a form of student misconduct when its use (or attempted use)
+- `marquette-cosc3410-e1` [rule] it is a violation of University policy to claim A/I-generated output as your own.
+- `mcmaster-compsci-2lc3-e2` [rule] Using Generative AI tools is a form of contract cheating.
+- `mcmaster-compsci-2lc3-e3` [rule] Charges of academic dishonesty will be brought forward to the Office of Academic Integrity.
+- `mcmaster-cs-2c03-e3` [rule] This includes work created by generative AI tools.
+- `mcmaster-cs-2c03-e4` [rule] tools is a form of contract cheating.
+- `mun-citl-genai-syllabus-statements-e6` [rule] Any suspicions of use of generative AI tools in this course is plagiarism
+- `miami-oh-cse-academic-integrity-e4` [override] using Generative AI tools when not explicitly approved by the course instructor
+- `mtu-provost-ai-syllabus-guidance-e7` [rule] will be considered the use of an unauthorized aide
+- `mtsu-policy-323-e8` [rule] Student use of GAI in ways not allowed by this policy or faculty-specified standards
+- `msstate-ece1013-e2` [rule] constitutes academic dishonesty and may be reported as an Honor Code violation.
+- `mst-tlc-gai-guidelines-e5` [rule] When an academic honesty issue is raised, a clear statement on the syllabus
+- `morehouse-ai-academic-guidelines-2-e2` [rule] Violations of the AI
+- `njit-cs485-usable-security-privacy-e4` [override] Failure to follow this policy will be treated as a violation of academic integrity
+- `nmsu-syllabus-ai-statements-e4` [rule] Using an AI tool to generate content without proper attribution qualifies as academic dishonesty.
+- `neiu-ctl-sample-ai-syllabus-statement-e1` [override] using generative AI including ChatGPT and similar technologies are forms of academic dishonesty.
+- `nau-provost-ai-faculty-e2` [rule] Unauthorized uses of GenAI, as defined by the instructor, may constitute an academic integrity violation.
+- `niu-ai-teaching-learning-e5` [rule] Use of AI-generated content without permission may be considered a violation of academic integrity.
+- `nvcc-nova-policies-syllabus-insert-e1` [rule] The use of AI to complete assigned work may be considered a violation
+- `northwestern-cs213-intro-computer-systems-e4` [rule] if we detect blatant cheating, we will deal with the cheaters as per Northwestern guidelines
+- `northwestern-cs213-intro-computer-systems-e5` [rule] Please note that you are subject to the Academic Integrity Policy.
+- `oakland-ai-faculty-e1` [override] unauthorized GenAI-assisted submissions must be treated as a form of potential misrepresentation
+- `oakland-ai-faculty-e2` [rule] Any confirmed, unauthorized use of GenAI should be reported as academic misconduct.
+- `ontariotech-should-i-use-chatgpt-e4` [rule] Using ChatGPT output for your work may violate academic integrity expectations.
+- `oregonstate-coe-ai-chatbot-policy-example-e8` [rule] Any student that submits generated responses will be subject to an Academic Integrity violation.
+- `psu-ist-genai-teaching-e7` [rule] students use them anyway, that is considered an academic integrity violation by Penn State
+- `pepperdine-ai-use-syllabus-statements-e5` [override] AI-generated submissions are not permitted and will be treated as plagiarism.
+- `pomona-cs-ai-policy-tier-system-e3` [rule] it is considered a violation of our Departmental Academic Honor Policy
+- `pvamu-cte-ai-syllabus-statements-e6` [rule] Using these tools without my permission puts your academic integrity at risk.
+- `rosehulman-csse332-e2` [rule] Work wholly or partially created through generative AI will be treated as any other form
+- `rmc-academic-regulations-genai-e1` [override] Unauthorized assistance includes generative artificial intelligence (AI) help beyond 23.1.a.i below and/or instructors’ permissions.
+- `rmc-academic-regulations-genai-e5` [rule] Using the work of others, including generative AI content, and attempting to present it
+- `rutgers-cs111-e3` [rule] A report is made to the Office of Student Conduct for an Academic Integrity review.
+- `rutgers-camden-guidance-ai-e4` [rule] created without the aid of impermissible technologies, materials, or collaborations.
+- `rutgers-otear-ai-in-education-e2` [rule] Become familiar with the student conduct requirements for charging students with violations of academic integrity
+- `smu-csci1226-e4` [rule] Violation of this policy will be treated as an academic offense
+- `sdsu-senate-genai-assessment-guidelines-e3` [override] “representing work produced by generative artificial intelligence (AI) as one’s own.”
+- `sjsu-cs46a-tshukudu-e4` [rule] submitting AI-generated code or text, or copying from other sources is considered plagiarism
+- `smc-ar5500-1-academic-conduct-e1` [override] Violating the instructor’s AI policy as stated on their class syllabus and/or course content
+- `smc-ar5500-1-academic-conduct-e4` [rule] Complete and submit the Academic Dishonesty Report Form, along with any related evidence
+- `seattleu-syllabus-template-genai-e3` [rule] Use of GenAI tools in this course counts as an academic integrity violation
+- `sfu-cmpt373-e2` [rule] learning outcomes and also constitutes a violation of academic integrity.
+- `stonybrook-cse114-e3` [rule] Plagiarism or unauthorized assistance, including AI-generated code, will result in disciplinary action.
+- `syracuse-ist256-e8` [rule] This includes passing off AI output as your own work.
+- `tnstate-libguide-ai-syllabus-options-e4` [rule] Any misuse or improper use of generative AI will be considered a violation
+- `tntech-citl-ai-syllabus-statements-e7` [override] The use of a Generative AI Tool to complete coursework constitutes academic misconduct
+- `tamucc-dlai-teach-e3` [rule] may lead to a student conduct referral.
+- `tcu-cosc10403-e3` [rule] may be academic misconduct and/or a violation of discipline-specific professional ethics
+- `ttu-cs4366-e3` [rule] Submission of AI-generated content as your own work is a violation of academic integrity
+- `ttuhsc-op5221-e4` [override] completion of academic work in a manner not allowed by the instructor;
+- `uthsc-tlc-syllabus-policies-e5` [rule] Violations of this policy will be considered academic dishonesty.
+- `uta-cse1310-e4` [rule] Any work found to be generated by AI will be subject to academic review.
+- `utaustin-cs314-e7` [override] You are committing academic dishonesty if you use a generative AI chatbot such as ChatGPT
+- `uttyler-cosc3315-e5` [rule] Misusing AI tools that violate the guidelines specified for this course
+- `uwf-ai-academic-misconduct-e1` [rule] Unauthorized use of artificial intelligence or online resources
+- `jefferson-gai-policy-e4` [rule] Use of GAI beyond the approved instance and/or lacking appropriate citation is a violation
+- `tru-ed05-academic-integrity-policy-e1` [override] including the use of unapproved human assistance or unapproved tools which generate content
+- `tru-ed05-academic-integrity-policy-e3` [override] including the output of unapproved AI tools
+- `trent-genai-guidelines-2024-e6` [rule] student use of generative AI in assessments is an academic integrity violation.
+- `uncc-legal-suggested-syllabus-policies-e5` [rule] use of a generative AI tool that is not specifically authorized by the instructor
+- `uakron-hci-syllabus-e2` [rule] Submission of work that is entirely or partly not yours will
+- `uakron-hci-syllabus-e4` [rule] unethical use of such technologies will violate the Code of Student Conduct as
+- `uaf-ctl-ai-in-education-e3` [rule] clarify the protocol you will follow should a student deliberately misuse the tool
+- `uark-tips-genai-syllabus-statements-e3` [override] will be considered academic dishonesty in this course and reported to the Office
+- `uams-ai-policy-2-1-6-e1` [override] UAMS considers the presentation of AI-generated work as one’s own work
+- `ubc-cpsc110-e3` [rule] Submitting any amount of copied code is considered academic misconduct.
+- `ubco-cosc111-e7` [rule] for any assessed portions of this course is not permitted and will be considered plagiarism
+- `berkeley-data100-e6` [rule] Plagiarism or inappropriate use of LLMs on any assignment
+- `ucla-tlc-genai-teaching-guide-e3` [override] Any confirmed use of AI writing tools will be treated as academic dishonesty
+- `ucla-tlc-genai-teaching-guide-e6` [rule] please follow the Guidance for Addressing Suspected AI Misconduct
+- `ucf-cop3502c-e8` [rule] will be considered academic misconduct and will be handled according to cheating policy
+- `ucincinnati-eece-6083-e4` [rule] to complete an assignment in any capacity constitutes academic dishonesty.
+- `cuboulder-csci3308-e6` [rule] Multiple violations will lead to a report to the Honor Code council
+- `cu-denver-tips-ai-e6` [rule] You may be interested in this policy as it relates to student use of AI
+- `uconn-cse1010-e6` [rule] The use of AI in this manner is considered academic misconduct.
+- `uconn-cse2050-e4` [rule] Using AI-tools like ChatGPT to write code for an assignment
+- `udayton-academic-honor-code-e1` [rule] the use of artificial intelligence (AI) products in a way that violates an instructor’s guidelines
+- `udayton-academic-honor-code-e2` [override] complete coursework in a way not expressly permitted by the instructor, is prohibited.
+- `du-otl-concerns-about-student-ai-use-e6` [rule] you can decide how to proceed based on your course and/or department/program policies
+- `uiuc-cs128-syllabus-e5` [override] It is an academic integrity violation in this course
+- `uiowa-clas-syllabus-template-ai-e3` [rule] specific guidance on academic integrity policies related to the use and misuse of AI tools
+- `ku-ai-guidance-instructors-e4` [rule] Remind students of academic integrity obligations
+- `uleth-teachingcentre-ai-policies-e5` [override] regarding the use of AI tools is an Academic Offence
+- `ull-academic-affairs-genai-guidance-e8` [rule] then the use of GAI in that course constitutes academic misconduct
+- `louisville-genai-committee-report-e5` [rule] Suspected violations of this nature will be reported to the Dean of Students.
+- `umanitoba-catl-genai-syllabus-statements-e5` [rule] Use of genAI in this course may be considered use of an unauthorized aid
+- `umb-ai-guidelines-e4` [rule] Use of AI would constitute academic misconduct in academic work wherever AI is prohibited
+- `umd-cmsc131-e2` [rule] We take this very seriously and will report you to the Office of Student Conduct.
+- `umd-cmsc216-e8` [override] used AI to complete a project and utilizes part of that code during
+- `umb-provost-academic-integrity-faculty-guidance-ai-e2` [override] including hiring others or using AI tools like ChatGPT
+- `uml-academic-integrity-policy-e1` [override] Uses unauthorized materials or fabricated data, including online sources, devices, social media, artificial intelligence
+- `umich-eecs183-python-syllabus-e8` [rule] Violating the AI policy above.
+- `umich-eecs280-syllabus-e7` [override] the use of generative AI in a deceptive or malicious fashion is prohibited.
+- `umdearborn-genai-academic-integrity-e5` [rule] in which it is prohibited, you may be found responsible for violating the ACC.
+- `umn-csci5421-e2` [rule] use of AI to generate solutions is defined to be plagiarism in this class
+- `unb-bremner-genai-policy-e7` [rule] considered either as plagiarism or as non-completion of the relevant deliverable
+- `unc-comp110-e6` [override] Guidance offered in this syllabus would be referenced should an issue be referred
+- `uncg-ism671-e3` [rule] Violations of this policy will be considered violations of the Academic Integrity policy.
+- `und-provost-ai-e7` [rule] may be considered academic dishonesty and may result in academic and/or behavior consequences
+- `unt-csce1030-su25-e4` [rule] Doing so will result in a "cheating" violation.
+- `unco-cetl-syllabus-statements-ai-e1` [rule] and/or unauthorized use of artificial intelligence (AI)
+- `ou-cs1323-mackay-e5` [rule] Students who copy generated AI results into assignments are committing plagiarism
+- `uoregon-cs322-e7` [rule] I may submit a report of suspected academic misconduct to the Office of Student Conduct
+- `penn-cis1100-e8` [rule] Engaging in unacceptable use of AI tools will result in academic consequences,
+- `pitt-sci-cs1632-e6` [rule] Any assistance from generative AI is considered cheating as well.
+- `up-code-of-academic-integrity-misuse-of-ai-e1` [rule] is considered a violation of academic integrity comparable to cheating or plagiarism
+- `up-code-of-academic-integrity-misuse-of-ai-e4` [override] accessing or using AI tools without authorization
+- `uprm-upr-cert66-politica-ia-e5` [rule] será considerada como un acto de deshonestidad académica
+- `uprrp-circular-8-ia-e4` [rule] será considerado una violación de las normas de integridad académica.
+- `uprrp-circular-8-ia-e8` [rule] El estudiantado deberá firmar un acuerdo de integridad académica
+- `sandiego-msads-handbook-e8` [rule] It is the responsibility of the instructor to determine whether a violation has occurred.
+- `usfca-provost-syllabus-statement-options-genai-e8` [rule] This is an important consideration in terms of punitive consequences.
+- `usask-cs-grad-genai-policy-e8` [rule] Contravening these guidelines will constitute academic misconduct.
+- `southalabama-genai-coursework-policy-e8` [rule] Instances of unauthorized GenAI use in coursework will be treated as a violation
+- `usf-cda4621-e3` [rule] including use of AI tools with the same prompt, output, or any code
+- `usc-csci103l-e6` [rule] COLLABORATION OR AI USAGE OUTSIDE OF THESE GUIDELINES WILL LEAD TO ACADEMIC INTEGRITY
+- `usm-provost-ai-e6` [rule] Any use of AI outside of acceptable use in the course is in violation
+- `utep-cs2401-e4` [rule] Violations of these guidelines will lead to referrals to the Office of Student Conduct
+- `utep-cs4379-5375-e7` [rule] will be treated as plagiarism and reported to the Office of Community Standards
+- `utoronto-csc108-e4` [rule] It is an academic offense to submit work that is not your own
+- `utoronto-csc148-e4` [rule] If your submission is found to be substantially similar to that of another student
+- `utoronto-ischool-inf2214-e3` [rule] for the completion of, or to support the completion of, an examination, term test, assignment
+- `uw-cse121-e6` [rule] All potential violations of this policy will be reported
+- `uw-cse312-ai-policy-e6` [rule] In cases of group work, all students will be held equally responsible for violation
+- `uwindsor-comp-1410-e2` [override] Github Co-pilot, DaLL-E, and Midjourney) is considered an unauthorized aid
+- `uwindsor-comp-1410-e3` [rule] is considered academic misconduct and may be subject to discipline under Bylaw 31
+- `uwinnipeg-acs1903-e4` [rule] Suspected misuse of AI may result in a report to the Senate Academic Standards
+- `uwinnipeg-acs1904-e5` [rule] Suspected misuse of AI may result in a report to the Senate Academic Standards
+- `uwinnipeg-acs3931-e1` [override] Students must follow principles of academic integrity (e.g., honesty, respect, fairness, and responsibility)
+- `uwinnipeg-acs3931-e2` [rule] students may face an allegation of academic misconduct if using them to do assignments
+- `wisc-cs220-syllabus-e5` [rule] will be addressed through UW–Madison’s academic misconduct policy
+- `uwm-syllabus-statements-genai-e8` [rule] will be considered Academic Misconduct as defined by
+- `ufv-tlc-ai-guidelines-e8` [override] Using Generative AI tools is a form of contract cheating.
+- `umoncton-integrite-ia-plans-de-cours-e3` [rule] sera considérée comme du plagiat en vertu du règlement universitaire 10.9.3 sur la fraude
+- `usherbrooke-ift339-e4` [rule] elle doit dénoncer les faits auprès de la personne responsable des dossiers disciplinaires universitaires
+- `uqat-guide-presentation-travaux-ia-e8` [rule] utiliser un outil d’intelligence artificielle pour faire un travail à sa place
+- `uqam-inf1120-e4` [rule] ce qui inclut l’utilisation d’outils d’intelligence artificielle
+- `uqam-inf2050-e3` [rule] sans exception, considérée comme une tentative de plagiat et signalée au comité des infractions
+- `valencia-cen3024c-e8` [rule] Using AI despite being told not to is a violation of the academic integrity policy.
+- `valencia-cop1000c-e6` [rule] Using AI beyond these specified limits or without proper disclosure violates the college's
+- `viu-csci161-kabir-e5` [rule] shall be treated as a breach of academic integrity
+- `vanderbilt-sample-syllabi-genai-ece-e8` [rule] that will be an honor code violation and you will be referred
+- `vcu-cmsc210-computers-programming-e3` [rule] it's plagiarism coming from an AI tool too
+- `vsu-library-ai-academic-integrity-e1` [rule] Using AI without permission or proper citation can lead to plagiarism
+- `wayne-senate-ai-subcommittee-report-e6` [override] will constitute a violation of the Student Code of Conduct
+- `wellesley-cs111-ai-tools-policy-e5` [rule] conversation with you about your code, and/or file an Honor Code charge against you
+- `wesleyan-comp211-e5` [rule] use of AI tools in this class for any homework, lab, or exam question
+- `wvu-tlcommons-ai-syllabus-statements-e2` [rule] Unauthorized use of AI tools may result in academic dishonesty charges.
+- `western-cs2120-e6` [override] Generative AI that has not been approved will be considered an academic offence
+- `wwu-csci141-e3` [rule] the standard department policy for violating academic integrity applies
+- `laurier-cp164-e2` [rule] to aid in or fully complete your coursework will be considered academic misconduct
+- `williams-csci334-e4` [override] Any other use of generative AI will be considered academic dishonesty.
+- `wright-ceg4350-e4` [rule] will be considered a violation of the university's academic integrity policies
+
+## G37 State concrete penalties in advance — 90 statements, 76 institutions
+- `algoma-student-genai-guidelines-e4` [rule] receiving a 0 in the assignment or a 0 in the course.
+- `american-oai-ai-academic-integrity-guidance-e2` [rule] they may not deduct points or otherwise penalize a grade
+- `bu-cas-cs111-e3` [rule] students who engage in misconduct will receive a score of 0
+- `bu-cas-cs112-e3` [rule] Any submission suspected of violating course policy will receive an automatic score of 0
+- `bowiestate-catalog-plagiarism-ai-e2` [rule] ranging from failure for the assignment to failure in the course
+- `bowiestate-catalog-plagiarism-ai-e3` [override] The instructor shall determine the appropriate sanction to be imposed.
+- `byu-cs111-e2` [rule] if you are caught using AI, you automatically fail the exam
+- `cpp-cafe-ai-sample-policies-e6` [rule] The use of unauthorized AI tools will result in a failing grade for the assignment
+- `csulb-optional-ai-syllabus-statements-e2` [override] think about the appropriate level of penalty for first-time offenders
+- `cmu-10315-e4` [rule] will also result in a -100% score on the associated assignment/exam
+- `cwru-provost-example-ai-policies-e3` [override] any violation of this policy may result in academic penalties
+- `chapman-provost-ai-syllabus-considerations-e3` [override] appropriate level of penalty for first-time offenders and those who repeatedly violate policies
+- `ccsf-cs110a-e3` [rule] It will result in a grade of 0 on the assignment or test in question
+- `colostate-cs152-e7` [override] Exams – You will be given an F in the course
+- `colostate-cs312-e4` [override] you will be given an F and an Academic Misconduct report will be filed
+- `columbusstate-cpsc1302k-e7` [rule] Use of an AI tool to provide a solution for a graded assignment
+- `columbusstate-cpsc1302k-e8` [rule] is the result of algorithm (for example, Claude, ChatGPT, etc), zero points will be awarded
+- `creighton-academic-misconduct-policy-e3` [rule] Serious penalties (suspension or dismissal) may be appealed to the Provost
+- `drexel-cs430-e3` [override] found in violation of the Academic Honesty policy will receive an 'F' in the class.
+- `duke-compsci201-e4` [rule] you will earn 0% credit for that exam as well as an additional letter-grade deduction
+- `gwu-csci-2113-e5` [rule] Penalties for violating the code or the policies described here include failing this course.
+- `gatech-cs1331-musaev-e3` [rule] work significantly influenced by AI tools, will receive a zero and be
+- `iit-cs536-e2` [rule] will result in a zero on the relevant assignment or exam
+- `iu-indianapolis-teaching-iu-genai-policies-e6` [rule] Sanctions for academic misconduct in this course may include a failing grade on the assignment
+- `jsu-common-syllabus-ai-policy-e6` [rule] coursework for a grade that is fully created by AI will receive a zero
+- `kstate-cis598-e3` [rule] may result in a grade of 0 for the assignment and other sanctions
+- `kean-faculty-manual-genai-e6` [rule] may include failing the assignment, failing the course, and/or further disciplinary
+- `kennesaw-ccse-fye-policies-e5` [rule] any penalty up to and including a 0 on the assignment or an F
+- `kent-policy-3-01-8-cheating-plagiarism-gai-e6` [rule] Assign a grade of "F" for the course in which the cheating or plagiarism
+- `lamar-cosc3306-e8` [rule] an academic penalty on the assignment, failure of the course, and/or referral to the university
+- `macalester-comp123-e7` [rule] Violation of this policy will result in no credit for the work in question.
+- `mit-6100a-e7` [rule] Violations of this policy will result in a 0 on the assignment
+- `montana-state-csci132-s26-e2` [rule] If it is found that you used such a tool, you will receive a zero
+- `montana-state-csci232-f26-e2` [rule] to write an entire solution, you will receive a zero on the assignment.
+- `morehouse-ai-academic-guidelines-2-e8` [override] students and faculty will receive a written warning first
+- `mru-comp3309-e2` [rule] resulted in students receiving a zero grade and a record added to their account
+- `okstate-itle-chatgpt-sample-syllabus-statements-e5` [rule] will be considered plagiarism and could result in the student failing the course
+- `pomona-cs-academic-honesty-policy-e7` [rule] A first offense results in a zero and no less than a half-letter-grade reduction.
+- `pomona-cs51-e4` [rule] immediate reporting to the Dean of the Students, a zero in the assignment/exam
+- `rowan-cs-04113-ioop-chien-e4` [rule] Students committing any act of academic dishonesty may fail the assignment, fail the course
+- `smu-csci1226-e5` [rule] The penalty for submitting any work that violates the academic integrity rules is a zero
+- `smc-ar5500-1-academic-conduct-e3` [rule] Assign a failing grade to the examination or assignment
+- `stfx-csci161-e2` [rule] Students using AI will be asked to leave and will obtain a zero
+- `swarthmore-cs35-e4` [rule] failure in the course and, as appropriate, suspension for a semester
+- `tcu-cosc10403-e4` [rule] may result in sanctions, including failing the course, program dismissal, suspension, or expulsion
+- `txst-cs3358-gholoom-e3` [rule] will be considered cheating , a grade of zero will be assigned for that assignment
+- `newschool-ai-sample-syllabus-statements-e6` [rule] may receive a zero and / or be reported for academic misconduct.
+- `umt-teaching-gen-ai-e7` [override] Unintentional use + policy clear = Warning + resubmission or partial credit
+- `uttyler-cosc1337-e8` [rule] Failure to follow the above rules will result in your work considered as "plagiarism"
+- `tmu-cps188-e2` [rule] Failure to stay within these limits will be considered a breach of Policy 60.
+- `tmu-cps420-e2` [rule] Failure to stay within these limits will be considered a breach of Policy 60.
+- `buffalo-cse331-e2` [rule] Using ChatGPT/Generative AI for your homeworks will result in an immediate course grade
+- `buffalo-cse331-e6` [override] irrespective of whether it is the student's first violation or not
+- `arizona-csc120-e2` [rule] policy may result in no credit for any assignment or exam that was not completed
+- `uams-ai-policy-2-1-6-e5` [override] could include disciplinary action up to and including dismissal.
+- `ubc-cpsc110-e5` [rule] will result in a 0 on the work containing misconduct and will be reported
+- `ucalgary-cpsc219-e7` [rule] First Offence: A warning and a requirement to redo or complete an alternative assessment
+- `ucalgary-cpsc219-e8` [rule] Second Offence: Zero in the course and referral to the academic integrity office
+- `ucsd-cse29-e3` [rule] may result in penalties, including failing grades on assignments or the course
+- `berkeley-data100-e7` [rule] we reserve the right to give you a negative full score (-100%) or lower
+- `ucmerced-cse176-e5` [rule] zero in an assignment if we deem that the use of AI was excessive
+- `ucr-cs-141-e4` [rule] using ML tools such as chatGPT) will be a zero grade for the whole assignment
+- `ucf-cop3502c-e2` [rule] I will award you a -100% on the assignment for the first offense
+- `cuboulder-csci3308-e5` [rule] It will also be counted as plagiarism and will result in a 0.
+- `uconn-cse2050-e5` [override] The penalty for academic misconduct is an F in the course.
+- `uf-cop3502-e3` [rule] a zero on that assignment and a two letter final grade decrement
+- `uf-cop3530-e5` [rule] will receive a failing grade (an ‘E’) for the course.
+- `hawaii-ics311-e3` [rule] will result in the grade of F in the course
+- `uml-academic-integrity-policy-e5` [rule] A lower or failing grade on the assignment or test;
+- `memphis-comp1900-e5` [rule] the first offense will result in a 0 for that grade item
+- `umsl-cmpsci-4390-deep-learning-e6` [rule] a failing grade for the semester and referral to the Office of Academic Integrity
+- `uncw-csc365-e4` [rule] will result in disciplinary action and a grade of 0
+- `uncw-csc365-e5` [rule] work that appears to be more than 20% AI-generated will receive a grade of 0
+- `unt-csce1030-su25-e5` [override] the first instance of a student found to have violated the academic integrity
+- `unbc-provost-genai-coursework-guidance-e8` [override] that work will be found to not have met the terms of the assignment
+- `unco-cetl-syllabus-statements-ai-e2` [rule] may have their grade impacted at the discretion of the instructor
+- `ou-cs2334-e6` [rule] could result in a zero for an assignment or a failing grade on the course
+- `uri-csc411-daniels-e6` [rule] Any violation of these rules may result in a grade of 0 on the assignment.
+- `usf-cap4111-e6` [rule] may range from a reduction in an individual assignment grade to larger academic sanctions
+- `usf-cda4621-e5` [override] Any level of plagiarism in the labs will result in an automatic “F”
+- `utep-cs1310-e4` [rule] Failure to comply with this policy will be considered a violation of academic integrity.
+- `utsa-cs1063-e2` [override] Using AI to create your programs will result in a 0 for those assignments/exams.
+- `uva-sds-ai-policy-e7` [rule] Failure to adhere to these guidelines will result in a failing grade on the assignment
+- `uw-allen-ai-support-and-growth-e8` [rule] will, at minimum, receive no credit for the affected assignment
+- `uw-cse121-e7` [rule] will not be eligible to receive a course grade higher than 2.5
+- `uw-cse122-genai-e8` [rule] will, at minimum, receive no credit for the assignment on which the violation occurred
+- `uwindsor-comp-1410-e4` [override] Use of generative AI or other forms of plagiarism means no bonus marks are received.
+- `usu-teach-communicate-about-ai-e6` [rule] Possible sanctions may include a reduced grade and/or requirement to resubmit the assignment.
+- `western-cs1026-e2` [rule] will result in a zero grade and referral to the department’s integrity committee
+- `williams-csci334-e5` [rule] that will be considered grounds for failure in the course
+
+## G38 Offer a self-report window or amnesty — 4 statements, 4 institutions
+- `harvard-cs50-e5` [rule] bring it to the attention of the course’s heads within 72 hours
+- `stanford-cs221-e8` [rule] the consequences will be much less severe than if we approach you
+- `uf-cop3530-e6` [rule] emailing me and withdrawing your assignment within 48 hours of the submission.
+- `wwu-csci141-e2` [override] you have 48 hours after the deadline to contact the instructor to apologize
+
+## G39 Do not rely on AI detectors — 71 statements, 58 institutions
+- `american-oai-ai-academic-integrity-guidance-e6` [override] OAI does not use detection / “originality scores” as evidence
+- `astate-ai-ethical-use-guidelines-e8` [override] these should be used as a guide rather than a confirmation
+- `calstatela-cetl-recommendations-ai-e7` [override] the campus does not have plans to separately purchase the AI detection feature in Turnitin
+- `calstatela-cetl-recommendations-ai-e8` [override] AI detectors are susceptible to bias against non-native English writers
+- `capilano-cte-genai-academic-integrity-e5` [override] does not recommend or support the use of detection tools
+- `capilano-cte-genai-academic-integrity-e6` [override] potential bias against non-native speakers of English
+- `clemson-ugl-ai-academic-integrity-guidance-e7` [override] While AI detector results alone are not sufficient to support an academic integrity charge
+- `concordia-ctl-genai-teaching-guidelines-e8` [override] the use of them by staff or faculty is not permitted due to privacy laws
+- `cue-instructor-genai-guide-e3` [override] There are no tools that can detect the use of generative AI with 100% accuracy.
+- `cue-instructor-genai-guide-e4` [override] AI detection tools can generate false positives or negatives.
+- `cornell-cs1110-e6` [rule] We promise not to use AI detectors in this course.
+- `cornell-gai-education-report-e6` [rule] technical methods are not currently very helpful for regulating AI usage in the classroom.
+- `cornell-info5001-e3` [override] I generally do not police AI usage in this class
+- `duquesne-provost-ai-e4` [override] Faculty should exercise caution when using AI detection tools to review student assignments
+- `fordham-provost-genai-principles-e6` [override] may also inaccurately identify work by non-native writers as AI-generated
+- `hec-montreal-daip-iag-evaluation-e8` [override] aucun outil n’est infaillible pour identifier le contenu créé par l’IAG
+- `hofstra-provost-genai-resources-e2` [override] the ability to discern machine-generated text from human-generated text will diminish
+- `iastate-studentconduct-faculty-ai-e5` [override] rather than relying on AI-detection tools alone
+- `lamar-cosc3306-e3` [rule] The university does not currently allow instructors to use AI detection software
+- `lsu-faculty-senate-gai-guidelines-e6` [override] faculty must not rely on outputs from such tools alone to report or penalize students
+- `macewan-ctl-genai-recommended-practices-e5` [override] it is usually not recommended to rely on online AI detectors
+- `macewan-ctl-genai-recommended-practices-e6` [override] results from a detector should not be the only evidence or rationale presented
+- `mercer-ctl-sample-syllabus-ai-e8` [override] A detector score should not be treated as proof of misconduct
+- `mst-tlc-gai-guidelines-e6` [override] Faculty are therefore cautioned against attempting to use this type of software.
+- `nipissing-genai-guide-instructors-e6` [override] Therefore, the use of generative AI “detectors” is not recommended.
+- `nau-provost-ai-faculty-e4` [override] results such detectors produce cannot be considered as definitive evidence of an academic integrity violation
+- `nova-lec-genai-faculty-e1` [override] AI detection tools often result in false positives and false negatives
+- `oakland-ai-faculty-e3` [override] GenAI detection software products are unreliable
+- `ohsu-dmice-intro-bhi-genai-policy-e8` [override] We recognize we cannot police all inappropriate use of AI or other activities.
+- `oregonstate-eecs-ai-guidance-e7` [rule] AI detection tools are not reliable indicators of AI use
+- `psu-ist-genai-teaching-e8` [override] they should not be relied upon as definitive proof
+- `queens-computing-common-syllabus-e4` [rule] These results are not reported to your instructor at this time
+- `rush-ctei-faculty-guide-ai-e8` [override] it is not advisable for instructors to rely on AI detectors, including Turnitin’s
+- `shsu-academic-affairs-ai-guidance-e5` [override] Instructors should be cautious in relying on an AI detection tool
+- `scu-engineering-ai2-e3` [override] There currently isn’t any tool that I found that is geared towards detecting written code.
+- `southernct-online-learning-genai-e2` [override] many of the tools have a high rate of false positives
+- `southernct-online-learning-genai-e3` [override] will not support or endorse any of the products currently available
+- `tamucc-dlai-teach-e4` [override] Understand the limitations of detection and promote ethical AI use.
+- `umt-teaching-gen-ai-e4` [override] faculty should not use AI detection tools because UM does not have an enterprise contract
+- `umt-teaching-gen-ai-e5` [override] these tools are unreliable and should not be used as sole evidence of misconduct
+- `twu-guidelines-genai-teaching-learning-e3` [override] TWU does not support tools designed to detect generative AI.
+- `uncc-legal-suggested-syllabus-policies-e7` [override] designated as DO NOT USE by OneIT
+- `uncc-legal-suggested-syllabus-policies-e8` [override] such tools should not be relied on as presumptive of the use of generative AI
+- `utrgv-coltt-generative-ai-e7` [override] should never be used as the sole basis for academic misconduct decisions
+- `ualr-provost-faculty-student-ai-e6` [override] use these tools as part of a broader assessment rather than relying on them exclusively
+- `uams-ai-policy-2-1-6-e6` [override] AI detection software currently available is inaccurate and unreliable.
+- `ucsc-tlc-drafting-genai-use-policy-e2` [override] Multiple studies have found that AI detection tools are neither accurate nor reliable
+- `uccs-frc-ai-in-academics-e5` [override] there are currently no tools that can accurately detect AI writing
+- `du-otl-concerns-about-student-ai-use-e4` [override] Don’t rely on AI checking software to confirm your suspicions.
+- `guelph-provisional-recommendations-genai-e4` [override] cannot be used to support an allegation of a breach of academic integrity
+- `ku-ai-guidance-instructors-e5` [override] Use of GenAI plagiarism detection tools is not recommended
+- `ku-ai-guidance-instructors-e6` [override] may produce false positives and may introduce bias against non-native English speakers
+- `uky-ukadvance-instructional-guidelines-e6` [override] we recommend against the use of generative AI detectors for determining academic offenses
+- `umb-ai-guidelines-e5` [override] It is not recommended that instructors rely on AI detection tools
+- `umdearborn-genai-academic-integrity-e6` [override] UM-Dearborn will not be adopting an official AI Detection system
+- `umdearborn-genai-academic-integrity-e7` [override] cannot be used in disciplinary actions (informal or formal) with students.
+- `umkc-provost-ai-syllabus-statements-e5` [override] we do not recommend using these detection tools as the single piece of evidence
+- `une-ai-policy-guidance-faculty-e7` [override] UNE does not recommend using AI detection software as part of an AI policy
+- `une-ai-policy-guidance-faculty-e8` [override] must not be the sole source of information that leads to discipline
+- `und-provost-ai-e5` [override] websites that purport to detect the use of AI are flawed
+- `unbc-provost-genai-coursework-guidance-e7` [override] detectors are not endorsed by UNBC
+- `upei-tlc-gait-provisional-guidelines-e6` [override] third-party tools designed to detect AI-generated content can not be used
+- `uregina-genai-hub-instructor-resources-e8` [override] GenAI detection tools can misidentify complex language, advanced vocabulary, or non-native English patterns
+- `usd-ai-faculty-e6` [override] rather than relying solely on detection tools, which are unreliable and raise privacy concerns
+- `ufv-tlc-ai-guidelines-e6` [override] Refrain from using AI detection tools to investigate academic misconduct, as they are unreliable.
+- `uqam-inf3105-e3` [override] L’usage de l’IA peut être difficile à détecter et à prouver.
+- `villanova-ai-guidelines-e2` [override] certain academic integrity detection tools are known to have biases
+- `wfu-guidelines-academic-use-gai-e7` [override] should not allow for AI detectors alone to constitute a sufficient standard of proof
+- `wayne-senate-ai-subcommittee-report-e3` [override] AI detection tools remain unreliable
+- `wmu-ai-in-the-syllabus-e3` [override] it is nearly impossible to detect, and therefore enforce, the use of AI
+- `wmu-ai-in-the-syllabus-e4` [override] AI detectors have also been shown to be biased against English language learners
+
+## G40 Use similarity checks and process evidence instead — 55 statements, 50 institutions
+- `algoma-student-genai-guidelines-e6` [rule] AI detection tools such as Copyleaks may be used by instructors to scan your work
+- `apu-ai-classroom-use-guidelines-e8` [rule] Take advantage of the AI-writing detector in Canvas Assignments.
+- `bu-cds-gaia-e4` [rule] Employ AI detection tools and originality checks prior to submission,
+- `bgsu-its-ai-resources-e4` [rule] instructors may need to rely on AI detection tools to assist in determining
+- `brock-cosc1p02-e3` [rule] additional tools and scripts to assist with detection of academic misconduct
+- `bucknell-csci203-e6` [rule] submitted code from all CSCI 203 sections may be run through a similarity checker
+- `cmu-15122-e8` [rule] We will be using the MOSS system to detect software plagiarism.
+- `chapman-provost-ai-syllabus-considerations-e7` [rule] If I suspect that your response was produced by an LLM, I will check
+- `clarku-cs103-e4` [rule] I will run automatic plagiarism detection software on assignments,
+- `csuohio-ai-syllabus-statement-examples-e5` [rule] I reserve the right to use various plagiarism checking tools
+- `duke-compsci201-e5` [rule] other students as well as solutions developed by LLMs.
+- `famu-cop3014c-c04-e5` [rule] The course instructor will monitor the use of AI tools to ensure compliance
+- `gatech-cs1331-musaev-e4` [rule] review and analyze submissions for indicators of plagiarism or AI use.
+- `georgiasouthern-provost-ai-academic-contexts-e4` [rule] communicates the possible use of tools to address unethical usage of AI
+- `kean-faculty-manual-genai-e5` [rule] AI detection tools integrated into Canvas, demonstrated mastery of learning
+- `lmu-cmsi3300-e7` [rule] will be able to easily detect inappropriate student use of these tools
+- `mit-6100a-e6` [rule] We run code similarity software on all code handed in.
+- `msu-cse231-syllabus-e4` [rule] Your code will still be checked for plagiarism.
+- `middlebury-csci201-e5` [rule] Alongside manual inspection, I may use automated tools for detecting software similarity.
+- `msstate-ece1013-e3` [rule] All submitted work will be filtered through Turnitin’s AI writing detection tool,
+- `morehouse-ai-academic-guidelines-2-e7` [rule] The use of Gen AI to
+- `mru-comp3309-e1` [rule] it is still quite easy for me to discern this
+- `njit-cs485-usable-security-privacy-e6` [rule] we retain the discretion to submit your work to any such services
+- `nvcc-nova-policies-syllabus-insert-e3` [rule] NOVA faculty may choose to use tools such as Turnitin
+- `oberlin-csci150-eck-e2` [rule] We will be running MOSS, an automated plagiarism detection tool, on submissions.
+- `pomona-cs-academic-honesty-policy-e4` [rule] use software and other tools to detect similarities between submissions and generative AI content
+- `queens-computing-common-syllabus-e3` [rule] collected and analyzed by Turnitin for detecting Artificial Intelligence (AI)-generated text
+- `rpi-csci1200-e8` [rule] We use an automatic code comparison tool to help spot homework assignments
+- `rutgers-cs111-e2` [rule] Autolab uses JPlag to detect plagiarism.
+- `smu-provost-genai-pedagogy-e6` [rule] Use plagiarism detection tools to check the authenticity of student work.
+- `sjsu-cs146-taylor-e2` [override] It will frequently indicate to me that you didn't write your code
+- `sjsu-cs146-taylor-e3` [rule] I will recognize it when if I see it again this semester
+- `stanford-cs106b-honor-code-e7` [rule] compare submissions against a wide variety of online solutions and code produced by generative AI
+- `stanford-cs221-e7` [rule] we may also review commit history for evidence of overreliance on AI tools
+- `tamucc-dlai-teach-e5` [rule] Pair detection tools with reflective student assignments.
+- `txst-cs3358-gholoom-e4` [rule] programs will be run through an Internet service designed for detecting plagiarism
+- `utaustin-cs314-e8` [rule] Plagiarism detection software shall be used on assignments to find students who have copied
+- `buffalo-cse331-e5` [rule] specifically designed to see if you used a source other than those allowed
+- `ualr-provost-faculty-student-ai-e5` [rule] Platforms like Turnitin now offer AI-detection features
+- `berkeley-cs61a-e7` [rule] an extension called Provenance tracks how you created your submission by logging activity
+- `uconn-cse1010-e5` [rule] It is extremely easy to determine when the solution is AI generated.
+- `uiuc-cs124-syllabus-e6` [rule] We will run automated checks on reported session activity, session transcripts, and code changes.
+- `umich-eecs280-syllabus-e8` [rule] we use both manual inspection and automated software to compare present solutions
+- `unt-csce1030-su25-e6` [rule] program will be used to compare your work to the work of all other students
+- `ou-cs1323-mackay-e4` [rule] Do not assume that copying from AI cannot be detected or proven.
+- `usm-provost-ai-e7` [rule] may reserve the right to send any submitted work through AI detection software.
+- `wisc-cs220-syllabus-e6` [rule] we use automated tools to looks for similarities across submissions.
+- `wisc-cs540-about-e7` [rule] One application of AI is to develop sophisticated plagiarism detection techniques!
+- `uqam-inf2050-e2` [rule] Différents outils de détection seront utilisés.
+- `usu-teach-communicate-about-ai-e5` [rule] assignment submissions may be reviewed by AI detection software such as Copyleaks
+- `wellesley-cs111-ai-tools-policy-e4` [rule] automatically analyze your submitted code to check for signs of AI-generated code
+- `western-cs1027-e8` [rule] tools may be used to determine if code was shared or generated by Generative AI
+- `western-cs2120-e2` [rule] Submitted code will be run through similarity-checking software.
+- `yu-academic-integrity-resources-e2` [rule] All assignments will be analyzed by Turn-it-in for plagiarism and AI use.
+- `yu-academic-integrity-resources-e8` [rule] Anything with a 5-10% AI likelihood in turn-it-in should be scrutinized further.
+
+## G41 Explain that AI shortcuts the practice that builds skill — 156 statements, 114 institutions
+- `acu-library-faculty-ai-guide-e5` [rule] the need to use AI as a tool to learn, not just to produce content
+- `acadia-jodrey-cs-academic-integrity-e1` [rule] Students who submit code that they did not write are both missing a learning opportunity
+- `astate-ai-ethical-use-guidelines-e4` [rule] Instructors are encouraged to articulate the rationale behind their policies to their students
+- `acc-cosc1336-fa23-baldwin-e3` [rule] Don't allow the use of AI tools to interfere with your learning
+- `acc-cosc1436-fa25-csit-gai-e7` [rule] AI should support—not replace—your learning.
+- `acc-itse1302-sp24-baldwin-e5` [rule] Don't allow the use of AI tools to interfere with your learning
+- `bowdoin-csci2330-e5` [rule] improper use of AI is likely to compromise your learning
+- `brandeis-ctl-ai-syllabus-statements-e8` [rule] It is only by developing your own capacities as a critical thinker
+- `byu-cs111-e8` [rule] Building the skill to do so is the purpose of this class.
+- `byui-cse-genai-policy-e5` [rule] using AI as a complement to, rather than a replacement for, personal learning efforts
+- `brown-csci1377-e3` [rule] only your instructors and TAs are trained to help you without giving you the solution
+- `brown-csci1377-e5` [override] you should not use LLMs to skip the parts of a problem
+- `calstatela-cetl-recommendations-ai-e5` [rule] Explain that use of AI can lead to the deterioration of hard-earned skills.
+- `calpoly-csc248-e3` [rule] miss out on the educational benefit of working through homework problems on your own,
+- `fresno-state-ai-guidelines-e1` [rule] serving as a support rather than a substitute for personal effort, critical thinking,
+- `cbu-ai-with-purpose-e4` [rule] Cognitive and critical thinking development are prioritized when determining the role of artificial intelligence
+- `capilano-cte-genai-academic-integrity-e4` [rule] the negative impact that relying on AI can have on development of skills
+- `carleton-comp1406-e3` [rule] over-rely on these tools, which can have a profoundly negative impact on learning
+- `carleton-comp2401-e1` [rule] We want you to be more than the middleware for AI and search engines.
+- `cmu-15112-e6` [rule] You cannot pass the course if you over-rely on AI
+- `csuohio-ai-syllabus-statement-examples-e4` [rule] using AI tools as a supplement rather than a replacement for your own work.
+- `mines-csci561-e5` [rule] hinders your learning by robbing you of the “productive struggle” to reach solutions yourself
+- `colostate-cs152-e3` [rule] They rob you of the ability to think and learn the concepts for yourself.
+- `colostate-cs220-e4` [rule] If you are unsure whether your use of AI is compromising your education
+- `columbusstate-cpsc1302k-e4` [rule] These same tools can also thwart learning by providing easy solutions.
+- `cornell-gai-education-report-e3` [rule] the concern is that students will rely on GAI and will not learn the skills
+- `cornell-info2950-e1` [rule] GAI is not used as a substitute or replacement for student learning
+- `dal-csci4177-5709-ai-tools-e3` [rule] A graduate must be able to analyze, assess and produce work unassisted by AI technology.
+- `dartmouth-cs10-e3` [rule] I strongly urge you to write the solutions yourself,
+- `deanza-academic-integrity-use-of-ai-e1` [rule] AI can also be misused in ways that undermine the learning process.
+- `duquesne-provost-ai-e7` [rule] Use AI in ways that support learning, not replace it.
+- `erau-student-code-ai-e3` [rule] AI use should strengthen, and not replace, the student’s own understanding, judgment, intellectual effort
+- `fau-ai-syllabus-statement-e2` [rule] output generated by artificial intelligence (AI), such as written words, computations, code
+- `gwu-csci-1012-e5` [rule] if you find that you are stuck on a problem: talk to a TA
+- `gatech-ic-cs7637-e4` [rule] using the AI agent as a learning assistant rather than as a homework assistant
+- `gonzaga-student-guide-responsible-ai-use-e3` [rule] When AI writes your arguments, solves your problems, or reflects for you, it undermines
+- `gonzaga-student-guide-responsible-ai-use-e6` [rule] Using AI responsibly doesn’t just mean avoiding plagiarism
+- `grinnell-csc151-rebelsky-e2` [rule] it is essential for you to build understanding without relying on these tools
+- `hec-montreal-daip-iag-evaluation-e6` [rule] l’IAG peut jouer un double rôle : remplacer les processus cognitifs de la personne étudiante
+- `iit-cs442-e2` [rule] But this will rob you of hours needed to actually master the material!
+- `iit-cs536-e5` [rule] when learning a new skill, it's important to learn to do it yourself
+- `iup-academic-integrity-violations-e2` [rule] AI-generated work is not reflective of a student’s own understanding and effort
+- `jsu-common-syllabus-ai-policy-e3` [rule] to supplement student learning, not to replace human creativity, ingenuity, or critical thinking
+- `jmu-cs240-e2` [rule] will tend to be short-circuited by the use of code generation tools.
+- `lakehead-chatgpt-ai-tools-faq-e7` [rule] AI usage can negatively impact the development of certain skills such as critical thinking
+- `lamar-cosc3306-e5` [rule] they must not substitute original thought, critical analysis, and intellectual labor.
+- `luc-provost-ai-integrity-statement-e3` [rule] not allowing AI to do the learning for us
+- `macalester-comp123-e1` [rule] AI can both interfere with and enhance our capacity to learn.
+- `macalester-comp123-e2` [rule] Using AI coding assistance is like using a robot to lift the weights
+- `macalester-comp123-e3` [override] using any kind of AI assistance to write code eliminates that thinking
+- `macalester-comp123-e4` [rule] the hard work of figuring things out is a crucial, utterly necessary part of learning
+- `marquette-cosc3410-e6` [rule] that's gonna mean writing and debugging your own code for the projects
+- `mcgill-comp480-e2` [rule] working through the assignments on your own will help you gain a better understanding
+- `musc-ai-acceptable-use-framework-e2` [rule] a student who has outsourced their reasoning to a machine
+- `middlebury-csci451-e3` [rule] Asking LLMs for the answer to a problem prevents you from the learning
+- `middlebury-csci451-e4` [rule] relying heavily on LLMs in unfamiliar settings or for learning new material
+- `middlebury-csci451-e6` [override] uses of generative AI which outsource your practice and learning to the model
+- `montana-state-csci232-f26-e3` [rule] it is very important that you learn this stuff organically
+- `njit-cs485-usable-security-privacy-e1` [rule] the use of AI tools will hurt rather than help the educational objectives
+- `nyu-csci-ua-102-e2` [rule] Using AI to do all of your coding work for you will be a detriment
+- `northwestern-cs213-intro-computer-systems-e2` [rule] will make it unlikely that you learn anything.
+- `oakland-ai-faculty-e6` [rule] GenAI use must support, not be a substitute for, learning.
+- `ohio-ctla-genai-syllabus-statements-e6` [rule] a tool to enhance academic research, not as a replacement for critical thinking
+- `okstate-itle-chatgpt-sample-syllabus-statements-e1` [rule] it should not be used to replace or undermine students’ original work and effort
+- `odu-cs312-e2` [rule] Using aids just to complete an assignment in the quest for high marks
+- `ohsu-dmice-intro-bhi-genai-policy-e1` [rule] These tools should not, however, be used to substitute one’s own knowledge.
+- `princeton-cos226-e4` [rule] LLMs have a habit of "solving the problem for you"
+- `rpi-csci1200-e3` [rule] Some students wrongly assume that carefully reading through the solution created by an AI,
+- `rit-csci633-e2` [rule] to master the craft of machine learning, you must work through the mathematics
+- `rit-swen261-e2` [rule] are not ones that can be gained by prompting for an automated response
+- `rosehulman-csse232-e4` [rule] Any actions that reduce your ability or your opportunity to learn
+- `rowan-cs-04113-ioop-chien-e2` [rule] defeat that purpose and misrepresent your mastery of the material
+- `sju-academic-affairs-ai-principles-e1` [rule] The use of AI should complement, not replace, the human effort required for meaningful learning.
+- `smu-csci2341-e6` [rule] If you have not been using AI to help you learn to program,
+- `sjsu-cs146-taylor-e4` [rule] it isn't your job to write working programs, it is your job to learn how
+- `sjsu-cs146-taylor-e6` [rule] With the programs that I assign, AI will hurt that goal, not help it.
+- `sfu-cmpt120-e1` [rule] they also make it really easy to not learn how to code
+- `stanford-cs106b-honor-code-e2` [rule] students develop their own skills to create, modify, and debug code
+- `stanford-cs106b-honor-code-e3` [rule] it will be the effort itself (not the product) that is most valuable!
+- `stonybrook-cse114-e2` [override] Utilizing AI tools to generate or complete your code undermines the educational goals
+- `stonybrook-cse114-e4` [rule] all work submitted must be done independently to ensure you fully develop the skills needed
+- `swarthmore-cs35-e1` [rule] actions which shortcut the learning process are forbidden
+- `temple-cis-1068-e1` [rule] in this course you're trying to develop a skill
+- `temple-cis-1068-e2` [rule] it's essential that you spend time practicing problem solving and writing code
+- `temple-cis-1068-e3` [rule] Your instructors and the peer tutors are here to help you.
+- `newschool-ai-sample-syllabus-statements-e1` [rule] how the use of these tools can support or undermine their learning in your course.
+- `osu-cse2221-2231-policies-e4` [rule] AI-Generated code often contains mistakes.
+- `osu-cse2221-2231-policies-e6` [rule] Generative AI tools will undercut and undermine that learning gain.
+- `uta-cse1310-e1` [rule] the focus is on the development of independent critical thinking
+- `uta-cse1310-e3` [rule] direct measurement of each student's learning against the course's Student Learning Outcomes
+- `utaustin-cs371n-e5` [rule] Heavily relying on ChatGPT for your answers will negatively impact your learning.
+- `utrgv-coltt-generative-ai-e3` [rule] Policies should align with course learning outcomes and institutional guidance.
+- `utrgv-coltt-generative-ai-e5` [rule] Too much reliance on AI shortcuts can limit opportunities to develop essential skills
+- `albany-catloe-design-ai-policies-e2` [rule] Would artificial intelligence help your students develop this skill?
+- `albany-catloe-design-ai-policies-e3` [rule] make sure that your students’ learning is your primary consideration.
+- `uaf-ctl-ai-in-education-e6` [rule] Revisiting the learning outcomes in your course may help you determine if and how
+- `ubc-cpsc210-genai-e2` [rule] This process is what we care about---not the outputted code.
+- `ubc-cpsc210-genai-e7` [rule] LLM use will almost definitely reduce the understanding you gain from doing the task
+- `ubco-cosc111-e5` [rule] Over-reliance on AI to generate code will undermine your learning.
+- `ucalgary-cpsc331-e1` [rule] train your brain to solve difficult problems like a computer scientist
+- `ucalgary-cpsc331-e2` [rule] it is strongly recommended that you attempt all in-class and practice problems
+- `ucsd-cse29-e2` [rule] relying on them for coursework undermines the integrity of your learning and assessment
+- `ucsd-dsc10-e5` [rule] overreliance on GenAI for assignments will rob you of opportunities to learn
+- `ucsd-dsc80-e4` [rule] overreliance on GenAI for assignments will rob you of opportunities to learn
+- `berkeley-cs61a-e3` [rule] even without AI assistance, remains a core learning goal of this course
+- `berkeley-data8-e2` [rule] Relying on AI or online solutions to solve assignments is a bad idea
+- `uci-ics33-e2` [rule] The primary educational goal is developing one's own programming skills
+- `ucsb-cmpsc156-agentic-ai-e3` [rule] There are times when this is appropriate, especially when learning a new technology.
+- `ucf-cop3502c-e3` [rule] Your first resource for solving problems should always be the class notes
+- `ucf-cop3502c-e7` [rule] you will miss the opportunity to develop the skills needed to succeed
+- `uchicago-cmsc23530-policies-e1` [rule] use them in a way that supplements your learning, instead of substituting your learning.
+- `uchicago-cmsc23530-policies-e3` [rule] Asking GenAI to solve programming tasks for you is like trying to learn
+- `uchicago-cmsc25700-nlp-e2` [rule] we encourage you to implement it on your own so that it maximizes your learning
+- `ucincinnati-eece-6083-e2` [rule] Generative AI tools is not aligned with the goals of this course.
+- `uccs-frc-ai-in-academics-e1` [rule] Caution is urged with what you allow students to use from generative AI.
+- `uconn-cse1010-e1` [rule] The use of AI as a first resource is strongly discouraged.
+- `uconn-cse1010-e7` [rule] Attempt the problem several times on your own before going to AI.
+- `uga-ctl-genai-policies-e1` [rule] generative AI is best approached as a pedagogical design decision.
+- `hawaii-ics311-e2` [rule] for you to spend the time (and possibly struggle) with the problem
+- `umanitoba-catl-genai-syllabus-statements-e7` [rule] clarify for the students why this decision was made
+- `memphis-comp1900-e1` [rule] To improve your programming skills, you must get plenty of practice yourself.
+- `umich-eecs183-python-syllabus-e1` [rule] Using AI to generate code or otherwise complete course work bypasses the neural connections
+- `umich-umsi-si301-e5` [rule] We encourage you not to use AI to solve problems on weekly assignments.
+- `umsl-cmpsci-4390-deep-learning-e1` [rule] these tools can augment your thinking
+- `unl-ctt-developing-course-ai-policies-e6` [rule] explain why you place limits on AI use in terms of how it
+- `uncw-csc365-e7` [rule] AI should be used to enhance learning rather than replace the student's own efforts.
+- `unt-csce1030-su25-e2` [rule] Individual programming assignments (i.e., projects) given outside of the lab
+- `nd-cse-honor-code-guide-e5` [rule] these systems are particularly prone to providing more help than asked for
+- `ou-cs2334-e1` [rule] Even the brainstorming and initial draft phase is a time of discovery
+- `ou-cs2334-e4` [override] then you should not rely on the Generative AI output and engage instead
+- `ou-cs2414-e2` [rule] it should complement learning rather than replace critical thinking and hands-on programming experience
+- `pitt-sci-cs1632-e2` [rule] attempting to complete the assignment without any help and asking targeted questions
+- `uregina-genai-hub-instructor-resources-e2` [rule] Make sure to explain your reasoning for restricting or permitting GenAI use
+- `uri-csc411-daniels-e1` [rule] they can be both impediments and enhancements to learning
+- `rochester-csc171-e2` [rule] it is unclear whether the benefits of AI for education yet outweigh the risks.
+- `rochester-csc171-e3` [rule] If you use an AI tool to complete your homework,
+- `sandiego-msads-handbook-e6` [rule] support your own learning and critical thinking, but not as a replacement
+- `sandiego-msads-handbook-e7` [rule] accompanied by the development of your critical thinking skills
+- `usc-csce763-e4` [rule] AI tools should be used wisely and reflectively with an aim to deepen understanding
+- `usf-cis4219-e1` [rule] raising potential issues related to academic integrity and the authenticity of student work
+- `usc-csci103l-e2` [rule] Coding, like exercise or weight training, cannot produce its intended benefit
+- `usc-csci103l-e5` [override] if you simply ask a LLM to do the coding work for you
+- `utsa-cs1083-e8` [rule] GenAI should be treated as a tutor or debugging assistant
+- `utsa-cs2113-e6` [rule] USE IT TO LEARN and not simply to do the students work for them
+- `uw-cse122-genai-e1` [rule] relying on AI tools to complete tasks denies you the opportunity to learn
+- `uw-ischool-hcid520-e4` [rule] relying on them to do your thinking means not learning, and settling for mediocre thinking
+- `wisc-cs220-syllabus-e4` [rule] does not support the learning objectives of this course and is prohibited.
+- `ulaval-principes-directeurs-ia-e4` [rule] L’utilisation de SIA ne doit pas compromettre le développement des compétences essentielles
+- `teluq-inf1901-usage-ia-e5` [rule] le but de ce cours est la construction de bons modèles mentaux
+- `valencia-cen3024c-e3` [override] similar to having someone else hold the steering wheel while you drive
+- `valencia-cen3024c-e4` [rule] Merely copying and pasting AI's suggestions is not genuine learning.
+- `viu-csci159-carruthers-e4` [rule] students should be cautious of bypassing learning opportunities
+- `villanova-ai-guidelines-e4` [rule] Overreliance on AI tools for tasks such as writing, coding, or research analysis
+- `wwu-csci301-e2` [rule] You are making a genuine effort to use AI as a learning tool.
+- `williams-csci104-e1` [rule] weakens your ability to learn, retain, and apply the material
+- `wright-ceg4350-e3` [rule] can only fairly and accurately evaluate work that is not assisted by generative AI
+
+## G42 Protect novices; fundamentals come first — 25 statements, 23 institutions
+- `athabasca-provost-interim-genai-e4` [rule] should consider how to apply the basic principles of academic integrity
+- `boise-cs-ai-department-approach-e1` [rule] help CS students learn the fundamental concepts of CS without relying on AI
+- `colostate-cs152-e5` [override] more likely to use these tools in an effective manner if you already have expertise
+- `cornell-gai-education-report-e8` [rule] prohibiting their use where basic skills need to be developed,
+- `duke-compsci101-e2` [rule] This is a beginning programming course, so you need to do the problem solving
+- `montclair-ofe-ai-course-policies-e1` [override] Students new to a discipline are likely to over-estimate AI’s accuracy and usefulness
+- `neu-cs2100-e3` [rule] would be like using a calculator before a course on arithmetic
+- `neu-cs3100-e2` [rule] we have not yet taught you to effectively review the code
+- `neu-cs3650-e1` [rule] students early in foundational courses who use AI tools to complete assignments
+- `rpi-csci1200-e2` [rule] reliance on these tools for introductory programming is a short cut and a crutch
+- `rosehulman-csse332-e5` [rule] Basically, because we want you to learn how to do it
+- `sdsu-senate-genai-assessment-guidelines-e5` [override] To use GenAI effectively, students should have a firm grasp of the subject matter.
+- `scu-engineering-ai2-e4` [rule] Since gaining basic programming skills are part of the learning outcomes of this course,
+- `osu-cse2221-2231-policies-e5` [override] Seasoned software developers can sometimes recognize the mistakes relatively easily, but novices/learners often don't.
+- `uci-ics33-e3` [override] it's necessary for you to build your skills first
+- `uchicago-cmsc23530-policies-e2` [rule] but you are not yet a software developer!
+- `memphis-comp4745-e2` [rule] When learning fundamental skills, you need to ensure that you master the basics.
+- `penn-cis1100-e4` [rule] it's essential to develop a strong understanding of fundamental processes before relying on AI.
+- `uvic-csc226-e2` [override] you may be unable to verify the correctness of material generated by generative AI
+- `uw-cse121-e5` [rule] there is still enormous value in learning the fundamentals of programming
+- `uqam-inf3105-e1` [override] maitriser les fondements de base demeure important, notamment pour réviser le code généré par l’IA.
+- `wellesley-cs111-ai-tools-policy-e6` [rule] novice learners might be more harmed rather than benefit from using them
+- `wesleyan-comp211-e3` [override] hard to evaluate code correctness or debug code if you couldn't actually write it
+- `western-cs2120-e4` [rule] has been shown to hinder the learning of students who are new to programming
+- `wwu-csci241-e1` [rule] this does not preclude the necessity of learning the fundamentals of the tasks
+
+## G43 Warn that AI gives a false sense of mastery — 14 statements, 12 institutions
+- `bucknell-csci203-e5` [rule] will not prepare you to be able to complete problems on exams on your own
+- `cmu-15122-e7` [rule] Using generative AI or other improper help for this practice negates learning
+- `marquette-cosc3410-e5` [override] not actually fluent in the languages, structures and concepts that will be tested
+- `mcmaster-compsci-2lc3-e4` [rule] exams are supposed to test your understanding of the course material
+- `msu-cse231-syllabus-e8` [rule] Relying on AI to finish your assignments will affect your performance in the exams.
+- `rpi-csci1200-e5` [rule] Students who have over-relied on tutors or AI tools for homework will not be prepared
+- `ucsd-cse123-e2` [override] no tool is a substitute for a strong understanding of course concepts on the exams
+- `pitt-sci-cs1632-e5` [override] be able to demonstrate your competency without the help of AI
+- `utsa-cs2113-e3` [rule] they will find themselves grossly underprepared in the very near future
+- `utoronto-csc108-e2` [rule] these tools can give you a false sense of mastery of the course material
+- `utoronto-csc108-e3` [override] are not developing the programming skills necessary to be successful on both supervised coursework
+- `utoronto-csc148-e8` [rule] may give you a false sense of how much you’ve actually learned
+- `uqo-dii-cyb6023-e1` [rule] Les solutions requises pour les TP et dans les examens se prêtent mal
+- `uqam-inf2050-e4` [rule] leur réalisation sérieuse (complète, sans utilisation d’IA générative) est essentielle pour réussir les examens.
+
+## G44 Teach effective AI use as a professional skill — 76 statements, 65 institutions
+- `asu-cse110-ulc-e1` [rule] are being used in workplaces all over the world to save time and improve outcomes
+- `astate-ai-ethical-use-guidelines-e5` [rule] Instructing students on when and how to use AI tools and how to cite content
+- `bsu-ai-use-guidelines-e2` [rule] before using GenAI tools for coursework
+- `byui-cse-genai-policy-e8` [rule] supports the development of proficient and ethical software developers
+- `ccny-cuny-academic-integrity-e6` [rule] students must become facile with the use of AI to learn effectively
+- `cuny-gc-academic-integrity-policy-2024-e6` [rule] students must become facile with the use of AI to learn effectively in today’s world
+- `cmu-15112-e1` [override] We embrace the importance of AI as a powerful tool,
+- `cgu-ai-guidance-e3` [rule] Digital and information literacy is an essential part of a core education
+- `clemson-ugl-ai-academic-integrity-guidance-e3` [rule] learning how to use these tools effectively and ethically is an important
+- `mines-csci437-computer-vision-e3` [rule] encourages the University community to explore the uses and impacts of generative AI technologies
+- `duke-compsci201-e1` [rule] Utilize LLMs to explore data structures and algorithms, to help develop solutions to problems
+- `evms-vhs-ai-guidelines-e4` [rule] a medical student learning to use these tools responsibly
+- `erau-student-code-ai-e2` [rule] Embry-Riddle Aeronautical University encourages students to develop fluency in artificial intelligence.
+- `famu-cop3014c-c01-e1` [override] are part of the professional computing landscape and will be used in this course
+- `georgiasouthern-provost-ai-academic-contexts-e8` [rule] Complete the required AI training provided by the University.
+- `hampton-chatgpt-ai-task-force-midyear-report-e2` [rule] recommends that HU requires academic integrity training as it relates to the evolving forms
+- `isu-aic-best-practices-e4` [rule] Ask them how they have used AI or ChatGPT in the past
+- `isu-aic-best-practices-e5` [rule] Teach students how to employ AI tools in an ethical way
+- `iit-cs536-e3` [rule] Generative AI tools are likely to be with us for the long run
+- `ilstu-cipd-genai-classroom-e7` [rule] Use content generated by an AI content generation service for student critique and discussion.
+- `jmu-cs149-e1` [rule] learning to use AI in ways that build your understanding rather than replace it.
+- `lmu-cmsi3300-e3` [rule] It will not be available for job interviews.
+- `marquette-cosc3250-e1` [override] Generative artificial intelligence tools for coding assistance have now become ubiquitous.
+- `marshall-academic-affairs-ai-e2` [rule] mirrors industry/discipline norms, needs, and standards
+- `msu-cse231-syllabus-e5` [override] We do not provide explicit support or training in the use of these tools.
+- `mru-comp3309-e5` [rule] employers are not interested in hiring people for their copy and paste
+- `njit-cs490-guided-design-se-e5` [rule] intended to mimic what is acceptable in industry when working as a software engineer
+- `ncat-provost-universal-ai-guidelines-e1` [override] faculty members at the university should promote ethical use of these tools
+- `ndsu-ai-goals-guidance-e7` [rule] Students develop prompt design, output evaluation, and AI literacy as professional competencies.
+- `neu-cs2100-e2` [rule] using an AI assistant is an important skill that should be covered
+- `polymtl-log2990-e1` [rule] Les outils d’ingénierie sont en constante évolution et nous devons savoir comment bien les utiliser.
+- `rpi-csci1200-e6` [rule] the hiring process for software internships and full-time positions is changing in response
+- `rmc-academic-regulations-genai-e6` [rule] including with regard to the use of generative artificial intelligence (GenAI) in academic work;
+- `smu-csci2341-e1` [rule] AI tools are going to be a big part of future programming jobs.
+- `shsu-academic-affairs-ai-guidance-e7` [rule] integrate AI into classroom learning and student research projects
+- `sfsu-ceetl-teaching-generative-ai-e4` [rule] The first law encourages faculty to teach students about Gen AI
+- `sfsu-ceetl-teaching-generative-ai-e5` [override] teaching students to work with AI tools where appropriate, to enhance student learning
+- `sjsu-cs146-taylor-e5` [rule] AI will likely be a useful tool to make you more productive at your job.
+- `scu-engineering-ai2-e8` [override] for generating Verilog Hardware Description Language (HDL) code will be explored.
+- `syracuse-ist256-e1` [rule] Learning to use AI responsibly is an important skill.
+- `tarleton-ai-guidance-e2` [rule] Promote ethical and responsible AI use by modeling best practices and guiding student engagement.
+- `utaustin-cs371n-e1` [override] capabilities of these systems and their boundaries is a major focus of this class
+- `utrgv-coltt-generative-ai-e8` [rule] instructors may consider designing activities that intentionally incorporate AI use
+- `uah-etl-ai-guidance-faculty-e3` [rule] a clear understanding of the tools' strengths and limitations
+- `uaf-ctl-ai-in-education-e4` [override] Use this example to explain the difference between plagiarizing with AI and using it
+- `uams-ai-policy-2-1-6-e8` [rule] all faculty, staff, and students will be required to take annual AI and GAI training.
+- `berkeley-cs61a-e2` [override] students will use AI coding agents in their final project
+- `berkeley-cs61b-e7` [rule] nearly all of the code you’ll generate during your professional career
+- `berkeley-data100-e4` [rule] AI assistants will be a key part of your future
+- `berkeley-info256-e1` [rule] understand how to use LLMs sensibly while still prioritizing learning outcomes
+- `ucsb-cmpsc156-agentic-ai-e6` [rule] use them appropriately to help you learn to be a more effective software engineer.
+- `ucsb-cmpsc156-coding-with-ai-e1` [override] effective uses of AI agents (e.g. GitHub Copilot, Google Gemini, ChatGPT, Jetbrains Junie, etc.)
+- `ucsb-cmpsc156-coding-with-ai-e2` [rule] it is important to provide the AI agent with as much context as possible.
+- `ucsb-cmpsc156-coding-with-ai-e4` [override] Focus on using the agent as a way to learn more about writing good tests
+- `uccs-frc-ai-in-academics-e6` [rule] we should be teaching them how to use it responsibly and ethically
+- `uic-cs218-data-ai-e1` [rule] Designing, refining, and critically evaluating AI prompts to generate useful outputs
+- `uic-cs218-data-ai-e3` [rule] post insights and advice to your classmates on how to get the most
+- `uiuc-cs124-ai-e2` [rule] Employers expect graduates to know these skills.
+- `louisville-genai-committee-report-e7` [override] it is better for faculty to teach students the ethical use of AI
+- `umbc-cmsc491-691-e6` [override] We'll discuss other permitted and encouraged uses of ChatGPT, CoPilot, and other generative AI systems.
+- `umass-compsci383-e1` [rule] will undoubtedly be an essential part of any modern technical career.
+- `uncw-csc365-e8` [rule] Examples of acceptable AI use will be provided
+- `unf-ai-faculty-resources-e4` [rule] Mentor them on how to use AI securely and responsibly.
+- `uprm-upr-cert66-politica-ia-e7` [rule] que el estudiantado sea debidamente informado sobre los riesgos y desafíos
+- `utsa-cs2113-e5` [rule] it is becoming an integral part of coding in the real world
+- `uva-cs2120-e2` [rule] learning when and how to use these tools is itself a valuable skill.
+- `uva-cs2120-e6` [override] We plan to include some demonstrations using AI tools in the class
+- `uva-sds-ds1001-e1` [rule] to include the adoption of generative-AI tools
+- `usherbrooke-ift615-e2` [rule] L’IAg n’est pas considéré comme de la documentation, mais un outil de facilitation
+- `vanderbilt-sample-syllabi-genai-ece-e7` [rule] learn how to use generative AI as an assistant to increase your productivity
+- `vcu-cmsc210-computers-programming-e1` [override] AI tools are a normal part of how programmers work today
+- `vt-cs3214-e6` [rule] It is likely that employers will continue to assess job candidates in unassisted or
+- `wellesley-cs111-ai-tools-policy-e3` [rule] required to read an AI academic paper and present it to the class
+- `wesleyan-comp211-e4` [rule] good to have some sense of the security risks of using AI tools
+- `williams-csci104-e5` [rule] We are happy to help you find effective ways to use AI
+- `wpi-cs3013-e2` [rule] want to recruit people who know how to use these tools effectively
+
+## G45 Treat AI like a human collaborator under existing rules — 58 statements, 45 institutions
+- `appstate-cs3435-e3` [rule] the same way we treat collaboration with other people
+- `bowdoin-csci2330-e1` [rule] should follow the same basic guidelines as for any other external resources
+- `byui-cse-genai-policy-e2` [rule] with the same collaborative spirit as pair programming, tutoring sessions
+- `brown-csci1377-e2` [rule] This rule applies no matter whether you are consulting Google, an LLM
+- `brown-csci2952c-e1` [override] All work submitted or presented in this course should be treated with the same standards
+- `calstatela-cetl-recommendations-ai-e1` [override] the misuse of AI generally falls under standards regarding plagiarism and the misrepresentation of work
+- `caltech-provost-genai-guidance-e1` [override] adherence to the honor code, course requirements, research integrity, and publication ethics
+- `caltech-provost-genai-guidance-e7` [override] extends to the use of GenAI tools
+- `cbu-ai-with-purpose-e3` [override] CBU upholds current standards of academic integrity and educational values
+- `cmu-heinz-95865-e2` [rule] I will view these as external collaborators (no different than if you got help
+- `colostate-cs220-e1` [rule] as if they were a person outside of class.
+- `depaul-csc-355-e3` [rule] are all considered "another person's work" in this context.
+- `gatech-cs1301-e7` [override] This is equivalent to allowing someone else to write part of your assignment.
+- `gatech-cs1331-chambers-e5` [override] is equivalent to plagiarism or copying code from another student;
+- `gatech-ic-cs7637-e1` [rule] you are welcome to consult with AI agents just as you would consult with classmates
+- `hmc-cs70-e2` [rule] like adding a CS senior as a third member of your pair-programming team
+- `hmc-cs70-e3` [rule] using AI (such as ChatGPT or GitHub Copilot) is equivalent to turning to a friend
+- `ilstu-cipd-genai-classroom-e1` [override] academic integrity policy already prohibits the use of unauthorized resources, including AI content generators
+- `jhu-en601220-e1` [override] some collaboration with others in the course and/or AI-assisted tools is permitted.
+- `kent-policy-3-01-8-cheating-plagiarism-gai-e3` [override] Having another person, or GAI, take one's place for any academic performance
+- `miami-oh-cse-academic-integrity-e5` [rule] Giving or receiving code fragments to fix a problem in a program.
+- `middlebury-csci1010-e2` [rule] Effective collaboration, whether with a person or an AI system, helps you gain understanding
+- `nyu-intro-cs-bloomberg-e1` [rule] copying to/from other humans apply equally to generative AI tools, unless explicit permission is given.
+- `nyu-software-engineering-bloomberg-e3` [rule] copying to/from other humans apply equally to generative AI tools, unless explicit permission is given.
+- `ndsu-ai-goals-guidance-e1` [override] All use of AI falls under existing academic integrity, technology and other student/employee policies.
+- `rit-ctl-syllabus-guidance-genai-e6` [rule] use generative AI to do anything you are allowed to do with another person
+- `rmc-academic-regulations-genai-e2` [override] Students may use AI tools for the same tasks they accomplish with tools
+- `stanford-cs106b-honor-code-e5` [rule] treats use of generative AI analogously to receiving assistance from another human
+- `stanford-cs106b-honor-code-e8` [override] you must not solicit solutions from anyone, animate or inanimate.
+- `stanford-cs221-e1` [rule] generative AI tools such as Co-Pilot and ChatGPT as you would use a human collaborator
+- `swarthmore-cs35-e3` [override] is also considered to be unauthorized collaboration with an outside source
+- `syracuse-ist256-e7` [override] AI is included in the “someone else.”
+- `tamu-csce312-e2` [rule] writing you find on online, programs like ChatGPT, other large language models, etc.
+- `utmb-ai-joint-policy-e3` [rule] shall be treated similarly to assistance from another person or an uncited resource
+- `tulane-guidelines-ethical-responsible-use-ai-e1` [override] the major questions about the use of AI by our students are already covered
+- `uah-etl-ai-guidance-faculty-e8` [rule] shall be treated as collaborative work and should be properly documented and cited
+- `berkeley-cs61b-e3` [rule] Use LLMs in the same way you might use a friend in the class
+- `uchicago-cmsc23530-policies-e8` [rule] imagine GenAI as a helpful but fallible classmate
+- `uchicago-cmsc25700-nlp-e3` [override] treating them as collaborators in the learning process.
+- `uchicago-cmsc25910-e2` [override] these models can be used and cited similar to a StackOverflow post
+- `guelph-provisional-recommendations-genai-e3` [override] existing academic misconduct provisions (Unauthorized Aids and Assistance) cover unauthorized use of AI
+- `memphis-comp4745-e6` [rule] consider generative AI tools to be an error-prone partner whose work you need to check
+- `umich-eecs280-syllabus-e1` [rule] is permitted only in the same contexts where collaboration with another person is allowed
+- `umn-csci5271-e2` [rule] compare consulting with an AI tool with consulting with a person outside of class
+- `unl-ctt-developing-course-ai-policies-e3` [override] violations of your course AI policy should be treated the same as any other
+- `nd-cse-honor-code-guide-e2` [rule] output of these systems should be regarded as the work of another, not your own.
+- `nd-cse-honor-code-guide-e3` [rule] in this document we largely treat all these kinds of sources in a uniform way
+- `pitt-sci-cs1632-e1` [override] This includes asking for help from your instructor, your classmates, and even generative AI
+- `upei-tlc-gait-provisional-guidelines-e1` [override] UPEI’s existing academic integrity regulations apply when using generative AI.
+- `uva-sds-ds1001-e3` [rule] Think of them like a study partner: great for clarifying questions, polishing wording
+- `uva-sds-ds1001-e5` [rule] if you wouldn’t do it with a friend, don’t do it with GenAI
+- `uwaterloo-cs349-e1` [override] is also considered using code from other sources
+- `wisc-cs540-about-e2` [rule] in this class only as you might consult a peer for help
+- `wisc-cs540-about-e6` [rule] If the answer is no, it’s not okay to have an AI do it either.
+- `uwyo-syllabus-template-ai-e2` [rule] faculty clearly communicate their expectations of course collaboration policies (with other students)
+- `vcu-cmsc210-computers-programming-e2` [override] use them the same way you'd use a TA, a classmate, or a textbook
+- `wellesley-cs111-ai-tools-policy-e1` [rule] is considered equivalent to consulting a student who took CS 111 in prior semesters
+- `wwu-csci241-e3` [override] AI tools are not strictly prohibited, but your usage must pass a simple test
+
+## G46 Humans, not AI, assign grades — 20 statements, 18 institutions
+- `brown-csci0190-e2` [rule] we will never use AI to grade your work.
+- `fresno-state-ai-guidelines-e4` [rule] Faculty should not use ChatGPT to evaluate student work or generate student grades.
+- `mines-csci561-e8` [override] I will not use AI to replace my role as your instructor
+- `cue-instructor-genai-guide-e5` [rule] Yes, you can use GenAI to help you grade assignments — but should you?
+- `cue-instructor-genai-guide-e7` [rule] You are responsible for the accuracy of your grading and the quality of your feedback.
+- `duquesne-provost-ai-e3` [rule] faculty are not permitted to use AI programs in student assessment
+- `georgiasouthern-provost-ai-academic-contexts-e5` [rule] Only University-approved AI tools may be used for assessing student work.
+- `howard-policy-100-022-ai-e5` [override] shall not undermine learning objectives, assessment integrity, or the evaluation of student work
+- `kstate-cis598-e7` [rule] GenAI will never be used to suggest or assign grades for any student-submitted work.
+- `morehouse-ai-academic-guidelines-2-e6` [rule] Faculty remain responsible for course design, assessment, and grading decisions.
+- `oregonstate-ctl-ai-teaching-guidance-e4` [rule] instructors are ultimately responsible for assigning grades based on their human evaluation
+- `oregonstate-eecs-ai-guidance-e5` [rule] Grades must reflect the faculty member's own evaluation of student work.
+- `stevens-genai-appropriate-use-guidance-e3` [rule] such as grading or assessment of student work
+- `ualberta-cmput301-e7` [rule] Regardless of the tool’s involvement, final responsibility for all grades rests with the instructor.
+- `uams-ai-policy-2-1-6-e7` [rule] any use of GAI by instructors to assist or review grading
+- `guelph-provisional-recommendations-genai-e6` [rule] Substantive academic evaluations should never be made independently by AI
+- `rochester-csc171-e1` [rule] AI will not be used to determine student grades or feedback in any way.
+- `usd-ai-faculty-e5` [rule] GenAI should not replace faculty judgment, grading or evaluative decision‑making.
+- `uqar-politique-c3-d117-ia-e5` [rule] un système effectue la correction de travaux et octroie une note sans le regard
+- `uqtr-principes-ia-personnel-e6` [override] la personne enseignante demeure en tout temps responsable de l’activité d’enseignement
+
+## G47 Disclose instructor AI use to students — 32 statements, 29 institutions
+- `boise-cs-ai-department-approach-e3` [rule] the department should strongly encourage faculty members to experiment and gain experience
+- `capilano-cte-genai-academic-integrity-e3` [rule] make sure you are disclosing this with your students
+- `concordia-ctl-genai-teaching-guidelines-e2` [rule] If you are working with a teaching assistant, review your course policy with them
+- `concordia-ctl-genai-teaching-guidelines-e7` [rule] Faculty share with students how they are using GenAI in course design
+- `davidson-artificial-intelligence-policy-e7` [rule] Faculty use of AI tools in their teaching, research and creative work
+- `duquesne-provost-ai-e2` [rule] they should disclose this to students in their AI syllabus statement
+- `hmc-ai-use-levels-pilot-e8` [rule] Be transparent about the ways that you use generative AI tools (or not)
+- `iit-cs442-e4` [rule] When I do in-class demos, I will have my AI code assistant turned on
+- `kstate-cis598-e8` [override] Instructors may use GenAI tools to assist with code reviews
+- `montclair-ofe-ai-course-policies-e8` [rule] Disclose and explain how you use AI to support your teaching
+- `smu-provost-genai-pedagogy-e4` [override] if AI is used for other pedagogical aspects such as assignment building or grading
+- `stevens-genai-appropriate-use-guidance-e1` [rule] seek prior approval from your supervisor and/or department chair for new AI uses
+- `twu-ai-syllabus-statements-e2` [rule] Faculty are expected to abide by these restrictions on their own AI use
+- `trent-genai-guidelines-2024-e1` [rule] All use of AI in teaching, assessments, and/or grading should be disclosed
+- `ualberta-cmput301-e6` [rule] This course uses AI-assisted tools—specifically Gemini—to support parts of the grading process.
+- `ualberta-cmput301-e8` [override] you may choose to opt out
+- `ubc-cpsc210-genai-e4` [rule] we don't abstain from GenAI use ourselves
+- `uci-ics33-e4` [rule] it will be me (and me alone) doing that communicating
+- `guelph-provisional-recommendations-genai-e8` [rule] Decide what constitutes acceptable use of AI by TAs in support of the course
+- `umaine-genai-teaching-learning-guidelines-e3` [override] Instructors should inform students if they use an AI tool to assess students’ work
+- `umb-ai-guidelines-e3` [override] instructors should nevertheless be able to provide feedback and transparency into their assessments
+- `umkc-provost-ai-syllabus-statements-e3` [override] be transparent with students about how you use GenAI
+- `une-ai-policy-guidance-faculty-e5` [rule] describes the ways in which they may use AI to design and deliver the course
+- `unh-provost-syllabus-guidance-ai-e2` [rule] This includes faculty use.
+- `uprm-upr-cert66-politica-ia-e1` [rule] El personal docente podrá utilizar herramientas de IA para:
+- `uregina-genai-hub-instructor-resources-e4` [rule] transparently disclosing when and how you have used GenAI in your teaching material
+- `southalabama-genai-coursework-policy-e2` [override] Faculty are permitted to use authorized university licensed GenAI tools for grading purposes.
+- `southalabama-genai-coursework-policy-e3` [override] Student graders may utilize GenAI for grading only with explicit direction and approval
+- `uqar-politique-c3-d117-ia-e6` [override] Le recours à l'IA pour les décisions fondées sur un processus automatisé doit être transparent
+- `uqtr-principes-ia-personnel-e7` [rule] doivent se conformer aux consignes de la personne responsable
+- `usu-teach-communicate-about-ai-e8` [override] If you are planning to use AI to help provide feedback for grading, inform students
+- `wcu-generative-ai-framework-e7` [rule] Do faculty indicate where AI was used to generate questions, assist with grading and feedback
+
+## G48 Review and disclose AI-made course materials — 23 statements, 21 institutions
+- `brown-csci0190-e1` [rule] the course staff used AI to help redesign this course from scratch.
+- `cue-instructor-genai-guide-e8` [rule] A good use of genAI is rubric creation.
+- `mtsu-policy-323-e6` [rule] faculty should not rely on content produced solely by GAI to create entire courses
+- `middlebury-csci1010-e8` [rule] portions of the course materials were generated with a variety of AI tools
+- `neu-cs3100-e6` [rule] Some course materials were developed with AI assistance, and all such content has been reviewed
+- `neu-cs3100-e7` [rule] Drafting project requirements, instructions, solutions, test cases, and initial rubrics
+- `neu-cs3100-e8` [rule] Every piece of AI-assisted content goes through the same critical review process
+- `nau-provost-ai-faculty-e5` [rule] generate variations of exam questions that assess student learning
+- `nova-lec-genai-faculty-e3` [override] Outputs from generative AI should always be reviewed for accuracy, accessibility, and inclusivity
+- `oregonstate-ctl-ai-teaching-guidance-e5` [rule] required to review instructional materials created by AI
+- `psu-ist-genai-teaching-e4` [rule] you should be transparent with students by clearly stating that you have done it
+- `rit-ctl-syllabus-guidance-genai-e5` [rule] We will be using ChatGPT (or equivalent) to help develop course materials.
+- `tarleton-ai-guidance-e1` [rule] Credit AI-generated materials used in course design, instruction, or assessments.
+- `tamucc-dlai-teach-e6` [rule] Co-create lesson plans with AI as a thought partner.
+- `trent-genai-guidelines-2024-e2` [rule] If instructors use generative AI in preparing any course materials they should
+- `guelph-provisional-recommendations-genai-e7` [rule] double check AI products for accuracy and bias as you are accountable
+- `uidaho-cetl-ai-guidelines-e5` [rule] responsibility to have the final say in how your course is taught
+- `uiuc-ischool-is445-e8` [rule] class policy on the use of AI for course assignments were generated by ChatGPT
+- `upei-tlc-gait-provisional-guidelines-e3` [rule] they should describe in the course outline and/or materials the extent
+- `southalabama-genai-coursework-policy-e1` [rule] Faculty are permitted to use GenAI tools for the development of appropriate course content
+- `uva-sds-ai-policy-e4` [rule] Disclose usage of AI tools in the preparation of their class
+- `ufv-tlc-ai-guidelines-e4` [rule] Clearly disclose AI use in the creation of course materials and assessments.
+- `uqtr-principes-ia-personnel-e2` [rule] De déclarer l’utilisation qu’elle fait de l’IA générative dans la préparation
+
+## G49 Do not upload course materials to AI tools — 11 statements, 10 institutions
+- `cornell-info2950-e4` [override] you may not upload your data file to a GAI platform
+- `kpu-tl-genai-student-guide-e4` [override] content made by instructors or other students to AI tools without permission infringes on copyright.
+- `pomona-cs-academic-honesty-policy-e6` [rule] you should never use course materials or assignments as a prompt for an AI tool
+- `pomona-cs51-e3` [rule] This includes submitting them to AI tools for assistance.
+- `uchicago-cmsc25910-e7` [override] not permitted to feed any text we've written as part of the assignment description
+- `umd-cmsc132-e4` [rule] cannot upload any course materials that I created to any AI
+- `unh-provost-syllabus-guidance-ai-e6` [override] Using AI to transcribe or summarize course lectures.
+- `uvm-cs1210-e2` [override] This includes submission of protected works as prompts to generative AI.
+- `uvic-csc226-e5` [override] Providing problem set materials (such as questions from the problem sets) in any form
+- `uw-cse312-ai-policy-e5` [rule] Do not upload course-specific materials
+- `viu-csci159-carruthers-e2` [override] All course content is the IP of the instructor and permission is not granted
+
+## G50 Protect personal data and prefer vetted tools — 94 statements, 77 institutions
+- `algoma-student-genai-guidelines-e8` [rule] Protect your personal information and carefully review the terms of service
+- `amherst-ai-usage-guidelines-e5` [rule] do not include sensitive, confidential, or personally identifiable information (PII)
+- `amherst-ai-usage-guidelines-e6` [rule] should be entered into college-licensed AI tools only
+- `appstate-cs3435-e2` [override] students may use the University licensed versions of Copilot, Gemini, and NotebookLM
+- `auburn-biggio-genai-syllabus-language-e2` [override] All technology must be vetted through the Auburn University vetting process prior to use.
+- `auburn-biggio-genai-syllabus-language-e4` [rule] avoid sharing any sensitive or private information when using these tools
+- `augusta-ai-at-au-e1` [rule] these may only be used with public, unrestricted information
+- `bsu-ai-use-guidelines-e3` [rule] appropriate GenAI use, data privacy, academic integrity, attribution, disclosure, and responsible decision-making
+- `binghamton-policy-312-genai-e2` [rule] into any Generative AI (GenAI) tool is prohibited unless approval has been granted.
+- `bgsu-its-ai-resources-e1` [override] The use of ChatGPT is permitted; however, users must change their memory settings
+- `bgsu-its-ai-resources-e2` [rule] Do not share any personal information, proprietary BGSU information or confidential information
+- `bgsu-its-ai-resources-e3` [rule] instructors provide students with information on data privacy risks associated with AI tools
+- `caltech-provost-genai-guidance-e5` [rule] do not enter, contribute, or otherwise input sensitive, confidential, or restricted information
+- `cbu-ai-with-purpose-e6` [rule] Privacy is not guaranteed when data/information is entered into AI applications.
+- `colgate-teaching-and-ai-e5` [rule] Avoid entering confidential data, per the University’s Data Categorization Policy, into AI tools.
+- `cue-instructor-genai-guide-e6` [rule] care should be taken not to submit student work to a third-party for grading.
+- `dartmouth-cs10-e7` [rule] these tools typically store and analyze your prompts, potentially building a profile of you.
+- `davidson-artificial-intelligence-policy-e6` [rule] Public data may be uploaded to or analyzed in any publicly-available AI platform
+- `etsu-ai-instructional-policy-e6` [rule] when using AIT, including GAI for grading purposes, personal student data must be de-
+- `fit-provost-genai-academic-work-e3` [rule] Students must avoid inputting sensitive information such as university-specific, confidential, or personal data
+- `howard-policy-100-022-ai-e6` [rule] Confidential Information, PII, or student education records shall not be entered into AI
+- `ilstu-cipd-genai-classroom-e4` [override] instructors should never put their students’ work into services
+- `jsu-common-syllabus-ai-policy-e8` [rule] prohibited from inputting any personal, sensitive, or otherwise confidential information
+- `kpu-tl-genai-student-guide-e5` [rule] Avoid sharing personal or sensitive information with generative AI tools.
+- `lehigh-ai-policies-best-practices-e6` [rule] no AI tool may be used with Class I Critical data
+- `lehigh-ai-policies-best-practices-e7` [override] use an approved AI tool like Gemini and other Google AI tools
+- `lsu-faculty-senate-gai-guidelines-e7` [override] Inputting any student’s work into a GAI tool for ungraded feedback or generating content
+- `mcw-ai-digest-e3` [rule] In the absence of a formal contract, treat all AI tools as public.
+- `mcw-ai-digest-e4` [rule] Never enter protected information into a public AI model.
+- `mtsu-policy-323-e7` [rule] prohibited from inputting confidential data
+- `nipissing-genai-guide-instructors-e7` [override] Instructors should not submit any portion of a student’s work to a generative AI tool.
+- `nau-provost-ai-faculty-e8` [rule] Any data above a level 2 classification on NAU’s
+- `niu-ai-teaching-learning-e8` [rule] Do not upload student work, grades or non-public instructional materials into public AI tools
+- `nova-lec-genai-faculty-e8` [rule] Identifiable information, like names and personal data, should be removed from any inputs.
+- `oakland-ai-faculty-e7` [rule] Sensitive or personal data or intellectual property must not be input into GenAI tools.
+- `oregonstate-ctl-ai-teaching-guidance-e3` [rule] may not input student work into any AI tools or applications
+- `pcc-student-learning-and-ai-e3` [rule] PCC-provided tools have been vetted by the PCC Information Security team.
+- `rit-ctl-syllabus-guidance-genai-e7` [rule] entering your work into generative AI could be effectively equivalent to posting it online
+- `rosehulman-csse332-e6` [rule] generative AI platforms can store and repeat what they’re given.
+- `rutgers-camden-guidance-ai-e5` [override] only Rutgers-approved AI tools should be used at the university.
+- `rutgers-camden-guidance-ai-e6` [rule] Confidential information, Protected Health Information (PHI), and other proprietary Rutgers information may not be appropriate
+- `smu-provost-genai-pedagogy-e5` [rule] having access to data does not imply permission to scrape the data
+- `smu-provost-genai-pedagogy-e7` [rule] Never submit any Personally Identifiable Information (PII) or other sensitive or confidential material
+- `esf-cns-generative-ai-e3` [rule] users should only enter SUNY ESF data when working in the following
+- `southernct-online-learning-genai-e4` [rule] responsible use of the systems that does not include personal information
+- `stevens-genai-appropriate-use-guidance-e2` [rule] Use of Stevens data is only permissible with licensed AI tools
+- `tarleton-ai-guidance-e7` [rule] Choose AI platforms that uphold strong data privacy standards
+- `tntech-citl-ai-syllabus-statements-e2` [rule] Faculty and students should be mindful and refrain from sharing any sensitive or private data
+- `ttuhsc-op5221-e5` [override] creation of non-public instructional materials; and grading.
+- `ttuhsc-op5221-e6` [rule] This includes, but is not limited to, student records protected under FERPA,
+- `twu-ai-syllabus-statements-e3` [rule] will not be entered by faculty into any third‑party AI tool
+- `uthealth-sbmi-educational-technology-e1` [rule] should be considered unsuitable for inputting Intellectual Property(IP) or copyrighted information
+- `uthealth-sbmi-educational-technology-e2` [rule] There is no way to extract/recall data input into a GPT
+- `uthealth-sbmi-educational-technology-e3` [override] before using GPTs for coursework and research at UTHealth.
+- `uthealth-sbmi-educational-technology-e4` [rule] Only licenses purchased by UTHealth for staff and faculty are FERPA and HIPAA compliant.
+- `uthealth-sbmi-educational-technology-e5` [override] available for academic and research purposes for MSMBI students, faculty, and staff.
+- `uthealth-sbmi-educational-technology-e6` [override] is a safe resource to use for IP sensitive information.
+- `utmb-ai-joint-policy-e4` [override] creation of non-public instructional materials; and grading
+- `utmb-ai-joint-policy-e5` [rule] Students may not enter data classified as confidential, including non-public research data
+- `uttyler-cosc3315-e3` [rule] must not use protected information, data, or copyrighted materials when using any AI tool
+- `tufts-cs15-e5` [rule] we will keep an anonymous log of all interactions with the chatbot.
+- `tulane-guidelines-ethical-responsible-use-ai-e2` [rule] should not be entered into publicly available generative AI tools
+- `uncc-legal-suggested-syllabus-policies-e6` [rule] avoid sharing any sensitive or private information when using these tools
+- `uaf-ctl-ai-in-education-e5` [rule] Generative AIs do not always comply with FERPA and HIPPA policies.
+- `ualberta-cmput401-e5` [rule] ChatGPT and similar services are recording everything you tell it, and tracking you.
+- `cu-denver-tips-ai-e2` [override] The list below are approved AI tools at CU Denver.
+- `udel-genai-guidelines-faqs-e8` [rule] Faculty should avoid uploading student work or protected data without appropriate consent
+- `guelph-provisional-recommendations-genai-e5` [rule] identifiable student work is confidential information and cannot be shared in public AI tools
+- `uky-ukadvance-instructional-guidelines-e7` [rule] Student education records should not be input into third-party generative AI detection tools
+- `umaine-genai-teaching-learning-guidelines-e7` [rule] instructors must coordinate with UMS Information Technology (IT) to confirm that data protection protocols
+- `umb-ai-guidelines-e6` [override] AI detection tools may expose students' information to third parties without proper authorization
+- `umass-compsci383-e4` [rule] while recording your prompts for the teaching staff to review.
+- `umassd-genai-guidelines-e4` [rule] faculty must take care, when requiring the use of GAI, to protect students’ identities
+- `umich-umsi-si301-e3` [rule] no guarantees or expectations of privacy when using AI, so avoid including any personal information
+- `olemiss-cetl-syllabus-template-genai-e3` [override] use of AI detection software, which is not FERPA-protected, may violate students’ privacy
+- `umkc-provost-ai-syllabus-statements-e4` [rule] upload or copy and paste student work into any GenAI product to help with assessment
+- `uno-ai-for-students-canvas-e8` [rule] not feeding private or confidential information into the AI tool
+- `unc-comp110-e3` [rule] Do not put personal or confidential data into these tools.
+- `und-provost-ai-e3` [rule] Data classified as private or restricted should not be entered into generative AI tools
+- `uottawa-academic-integrity-ai-e8` [rule] we strongly advise against sharing personal or private information
+- `upei-tlc-gait-provisional-guidelines-e7` [rule] Exposing a student’s work to any AI tool requires the consent of the student.
+- `usask-cs-grad-genai-policy-e7` [rule] privacy may be violated if experimental human data is uploaded to a GenAI tool
+- `usd-ai-faculty-e4` [override] USD’s preferred and approved platform for GenAI is Microsoft Copilot
+- `utoronto-csc148-e3` [rule] these tools have not been vetted by the University of Toronto
+- `uvic-csc361-e2` [override] You will be able to access Microsoft Copilot using your UVic credentials.
+- `uw-allen-ai-support-and-growth-e6` [rule] can automatically access files beyond what you explicitly share
+- `uw-allen-ai-support-and-growth-e7` [override] using Purple or Allen School-provided tools is advised if possible
+- `uwaterloo-cs114-e3` [override] students should use the University’s version of Co-Pilot and login with their UW ID
+- `uwaterloo-cs114-e4` [rule] Data entered into other systems can be added to training sets
+- `ufv-tlc-ai-guidelines-e5` [rule] Ask students for their consent before inputting their work into AI tools.
+- `uqar-politique-c3-d117-ia-e2` [rule] la personne utilisatrice doit s’assurer de ne jamais inclure de renseignements personnels
+- `valencia-cen3024c-e6` [rule] Refrain from feeding personal details into any AI system.
+- `villanova-ai-guidelines-e1` [rule] You should not enter data that is classified as Restricted or Private
+- `wcu-generative-ai-framework-e2` [rule] submit student’s work to an AI tool without their express permission.
+
+## G51 Do not require paid tools; keep access equitable — 47 statements, 40 institutions
+- `bu-cds-gaia-e8` [rule] subscription versions of AI tools, which are not affordable for some students;
+- `cgu-ai-guidance-e2` [rule] This technology must be easily accessible to people from diverse backgrounds to bridge accessibility gaps.
+- `cgu-ai-guidance-e6` [override] welcome to use the free versions of AI tools such as ChatGPT, Google Gemini,
+- `cornell-gai-education-report-e7` [rule] lack of affordable access for all students could exacerbate systemic inequalities.
+- `fit-provost-genai-academic-work-e5` [rule] must ensure students have equitable access to the respective tool
+- `howard-policy-100-022-ai-e7` [rule] shall comply with applicable accessibility, disability accommodation, and non-discrimination obligations
+- `macewan-ctl-genai-recommended-practices-e7` [rule] Be aware that students’ access to AI tools will vary as well.
+- `macewan-ctl-genai-recommended-practices-e8` [rule] Consider offering alternative forms of activities and assessments for those students who might object
+- `mercer-ctl-sample-syllabus-ai-e7` [rule] Do not require students to purchase a premium AI subscription unless it is an approved
+- `mtsu-policy-323-e5` [rule] permission must be granted or denied to all students in a particular course
+- `nipissing-genai-guide-instructors-e8` [rule] instructors must provide a no-fee alternative for students if either of these
+- `nau-provost-ai-faculty-e3` [rule] Faculty should provide a non-GenAI option for students when incorporating these tools into student assignments.
+- `niu-ai-teaching-learning-e2` [rule] Faculty should consider student access, cost, accessibility and potential bias when integrating AI tools.
+- `nova-lec-genai-faculty-e7` [rule] Not everyone has the same access or the same ability to use Generative AI tools
+- `psu-ist-genai-teaching-e1` [override] they should be given an option to use Copilot
+- `pepperdine-ai-use-syllabus-statements-e3` [rule] Be mindful of equity. Establish a level playing field for all students
+- `pomona-cs-ai-policy-tier-system-e5` [rule] ask your instructor about whether tools for translating words or texts between languages are allowed
+- `shu-ai-syllabus-statements-e4` [rule] If you are a student registered with DSS with an AI accommodation, please speak with
+- `siuc-faculty-senate-ai-guidelines-e2` [rule] proactively investigate the accessibility and costs of AI tools before requiring students to use them
+- `siuc-faculty-senate-ai-guidelines-e3` [rule] instructors are encouraged to indicate this in their course descriptions and syllabi
+- `siuc-faculty-senate-ai-guidelines-e7` [rule] ensuring that all AI technologies are accessible to every member of our community
+- `tc-dfi-genai-guidance-e2` [rule] Equity and access for all students
+- `tc-dfi-genai-guidance-e4` [rule] If you are a student registered with OASID with a generative AI accommodation
+- `umt-teaching-gen-ai-e8` [rule] supports more equitable GenAI access through increased student familiarity
+- `trent-genai-guidelines-2024-e8` [rule] Some generative AI tools are limited to users who are 18 or older.
+- `uaf-ctl-ai-in-education-e7` [rule] generative AI can also be considered an assistive technology
+- `ubc-cpsc210-genai-e5` [rule] makes it a reasonable place to allow its use without creating equity issues
+- `ubc-cpsc210-genai-e8` [override] we don't want to teach you to code in any way that depends on access
+- `berkeley-cs61a-e5` [rule] who would prefer to talk to a human may instead elect to answer questions
+- `ucla-tlc-genai-teaching-guide-e8` [rule] ensures that the technology does not come at a cost to students.
+- `uccs-frc-ai-in-academics-e4` [rule] consider creating alternative learning pathways for students who do not want to use AI tools
+- `uiuc-cs124-ai-e6` [rule] speak to Geoff if this amount represents a barrier to your success
+- `umaine-genai-teaching-learning-guidelines-e6` [rule] Equal access to reliable and credible generative AI tools and services will be instrumental
+- `umanitoba-catl-genai-syllabus-statements-e6` [rule] Please consider offering students a choice to opt-out of using a system
+- `umd-cmsc216-e7` [rule] Students who normally use corrective eyewear or hearing aids with AI features should disclose this
+- `unbc-provost-genai-coursework-guidance-e5` [override] require the use of GenAI tools if those tools have been authorized
+- `unbc-provost-genai-coursework-guidance-e6` [rule] offer, upon request, an alternative assignment or assignment method
+- `upei-tlc-gait-provisional-guidelines-e5` [rule] students may opt out of learning activities or assessments that require
+- `usfca-provost-syllabus-statement-options-genai-e7` [rule] This presents a significant equity issue
+- `utoronto-csc148-e5` [rule] Generative AI is not required to complete any aspect of this course
+- `uvic-csc361-e3` [rule] you can opt not to use generative AI at all
+- `ulaval-principes-directeurs-ia-e6` [rule] Les inégalités en termes d'accès aux SIA
+- `teluq-inf1420-iag-e5` [override] (par exemple Claude, ChatGPT, Copilot, Grok, etc.) est permise mais demeure optionnelle
+- `wfu-guidelines-academic-use-gai-e8` [rule] is expected to ensure that all students have access to the necessary GAI tools
+- `wcu-generative-ai-framework-e3` [rule] students who can afford paid versions of generative AI tools have a clear advantage
+- `western-cs1027-e2` [rule] This tool is completely optional and is not for marks.
+- `yale-cpsc2010-e1` [rule] Yale provides free access to three large language models:
+
+## G52 Consider licensing and copyright of AI output — 14 statements, 13 institutions
+- `bgsu-its-ai-resources-e5` [rule] Disputes may arise over who owns IP developed with AI help
+- `georgetown-cosc3450-e3` [rule] you must own the information in your queries
+- `georgetown-cosc3450-e6` [override] violate the terms of use of any generative AI tool
+- `nyu-intro-cs-bloomberg-e2` [rule] material produced by generative AI often involves inaccuracies, plagiarism, copyright infringement,
+- `ncat-provost-universal-ai-guidelines-e4` [rule] aware of the licensing agreements and terms of service
+- `oregonstate-coe-ai-chatbot-policy-example-e4` [rule] do not introduce software license restrictions or the possibility of copyright
+- `sju-academic-affairs-ai-principles-e6` [rule] respect for intellectual property, privacy, and ethical standards.
+- `udel-genai-guidelines-faqs-e6` [rule] should not use University-approved AI tools to create, share, or distribute materials
+- `unlv-cs301-social-implications-e5` [rule] any use of GenAI must be consistent with existing intellectual property laws and UNLV policies
+- `unb-bremner-genai-policy-e2` [rule] will be interpreted as the creator of the original work
+- `uw-cse122-genai-e3` [rule] Including code from AI tools that you do not understand could expose the university
+- `uwaterloo-cs136-e4` [rule] the legal/copyright status of generative AI inputs and outputs is unclear
+- `uqar-politique-c3-d117-ia-e3` [rule] s’abstenir d’inclure du matériel protégé par le droit d’auteur dans une requête
+- `viu-csci159-carruthers-e1` [rule] only input their own content or IP into any Large Language Model
+
+## G53 Name bias, harms, and environmental costs — 23 statements, 22 institutions
+- `amherst-ai-usage-guidelines-e7` [rule] Generative AI systems can be inaccurate, inconsistent, or biased.
+- `bgsu-its-ai-resources-e6` [rule] they have the potential to make biased or discriminatory decisions
+- `cbu-ai-with-purpose-e7` [rule] CBU employees are expected to remain mindful of the environmental impact of AI technologies.
+- `carleton-comp2401-e8` [rule] The high power consumption of training and operating large language models,
+- `etsu-ai-instructional-policy-e3` [override] Shall not utilize GAI to create malicious content (e.g., malware, viruses, worms,
+- `lsu-faculty-senate-gai-guidelines-e5` [override] Use GAI to create, modify, distribute and/or execute any malicious code.
+- `mru-comp3309-e4` [rule] For a course that endeavors to inculcate an awareness of the ethical responsibilities
+- `ontariotech-should-i-use-chatgpt-e5` [rule] These AI tools can also produce flawed, biased, and misleading output.
+- `sju-academic-affairs-ai-principles-e4` [rule] evaluate the cost to our environment that the use of AI poses
+- `siuc-faculty-senate-ai-guidelines-e6` [rule] ethical considerations such as transparency, accountability, discrimination, bias, and safety are at the forefront
+- `tarleton-ai-guidance-e6` [rule] including issues of accuracy, bias, and ethical use
+- `twu-guidelines-genai-teaching-learning-e6` [rule] consider how using these tools conflicts with our Christian values and ethical principles
+- `ucla-tlc-genai-teaching-guide-e7` [rule] algorithms can and do replicate and produce biased, racist, and sexist outputs
+- `uiuc-cs124-syllabus-e8` [rule] they consume enormous resources, they were trained on data collected without consent
+- `umich-umsi-si301-e4` [rule] these technologies have large carbon footprints
+- `unc-comp110-e2` [rule] You must evaluate AI-generated outputs for potential biases, limitations, inaccuracies, false output, and ethical implications.
+- `usask-cs-grad-genai-policy-e6` [rule] must be aware of the biased nature of training data
+- `uvic-csc361-e5` [rule] Generative AI may provide biased and inaccurate answers
+- `uwaterloo-cs136-e3` [rule] may therefore contain inaccuracies or reflect biases
+- `uqar-politique-c3-d117-ia-e7` [rule] s’assurer que les résultats d’une requête ne contiennent pas de contenu biaisé, discriminatoire,
+- `uqar-politique-c3-d117-ia-e8` [rule] utiliser l’IA de manière à favoriser des comportements de l’ordre de la sobriété numérique
+- `valencia-cen3024c-e5` [rule] Large language models draw from diverse human-authored content, which may contain biases.
+- `wellesley-cs111-ai-tools-policy-e8` [rule] is bought by the traumatization of workers who filter out the horrific stuff
+
+## G54 Revisit the policy regularly — 34 statements, 33 institutions
+- `acc-cosc1336-fa23-baldwin-e4` [rule] I would like to hear your thoughts regarding these tools via ACC email.
+- `bsu-ai-use-guidelines-e1` [rule] These are living guidelines and are continuously updated as new information is received.
+- `caltech-provost-genai-guidance-e2` [rule] written for the present moment and will likely evolve alongside the technology
+- `cbu-ai-with-purpose-e2` [rule] It is intended as a living document that reflects current knowledge and practices
+- `cmich-sample-syllabus-statements-e3` [rule] are new technological additions to the higher education landscape and are rapidly evolving
+- `clarkson-ai-course-policies-e3` [rule] the Senate amended the proposal by making it a recommendation instead of a mandate
+- `gsu-cis3001-ai-mou-e8` [rule] these guidelines may be updated as needed throughout the semester
+- `howard-policy-100-022-ai-e8` [rule] This policy will be reviewed annually and updated as necessary by the Responsible Officer.
+- `jsu-common-syllabus-ai-policy-e1` [rule] this policy may adjust based on this evolution at the course instructor’s discretion
+- `jmu-cs470-e4` [rule] This policy is experimental and will be re-evaluated throughout the semester,
+- `jmu-cs470-e5` [rule] Any revisions to the policy will be broadcast via Canvas announcement and discussed in class
+- `luc-provost-ai-integrity-statement-e5` [rule] Loyola will continue evaluating and responding to the opportunities and challenges these tools present
+- `mtu-provost-ai-syllabus-guidance-e8` [rule] Course policies therefore are provisional and subject to change.
+- `oregonstate-ctl-ai-teaching-guidance-e8` [rule] Revisit the statement each term.
+- `pomona-cs-ai-policy-tier-system-e2` [rule] we are piloting in Fall 2026; we plan to revisit it regularly
+- `rit-swen261-e3` [rule] we want to hear from you if/how you are using
+- `rutgers-otear-ai-in-education-e8` [rule] Schools and departments should discuss these issues as the tools and their use evolve.
+- `ttuhsc-op5221-e7` [rule] This OP will be reviewed by March 1 of each odd-numbered year
+- `utmb-ai-joint-policy-e8` [rule] This policy shall be periodically reviewed and updated as necessary to reflect emerging technologies
+- `tufts-cs15-e6` [rule] review conversations in order to inform future improvements to the chatbot.
+- `tulane-guidelines-ethical-responsible-use-ai-e6` [rule] There will be on-going efforts to enhance and revise our policies
+- `ucsc-tlc-drafting-genai-use-policy-e3` [rule] Revisit and revise your policy each time you teach the course.
+- `uchicago-cmsc25910-e6` [rule] we are revising our course policy moving forward to require
+- `cu-denver-tips-ai-e5` [rule] CU Denver will be working towards policies and practices for AI in the coming year.
+- `udayton-academic-honor-code-e5` [rule] Guidelines about these practices may change over time, so students should be sure to ask
+- `uiowa-clas-syllabus-template-ai-e1` [rule] AI generation technologies are rapidly evolving and have impacted all aspects of higher education.
+- `umaine-genai-teaching-learning-guidelines-e8` [rule] the UTC, or a task force it forms, will assess these guidelines
+- `nd-cse-honor-code-guide-e6` [override] Standards for citation of generative AI systems are still evolving.
+- `utoronto-csc108-e8` [rule] may update this AI tool usage policy
+- `utah-ece-plagiarism-ai-policies-e1` [rule] As new policies are developed at the university, college, or department level
+- `uqtr-principes-ia-personnel-e8` [rule] Le présent document sera mis à jour chaque trimestre.
+- `vt-cs3214-e1` [rule] Current coding agents such as Codex or Claude can produce fully working artifacts
+- `wcu-generative-ai-framework-e1` [rule] This framework is a living document,
+- `wwu-csci301-e5` [rule] This policy is subject to change.
+
+## G55 Gather evidence on how AI affects learning — 8 statements, 7 institutions
+- `ohsu-dmice-intro-bhi-genai-policy-e3` [override] This policy is based in part on the results of this study.
+- `ucsd-dsc80-e6` [override] students who used ChatGPT to help with assignments ended up with code that was difficult
+- `ucf-cop3502c-e6` [override] My initial data indicates that AI is WORSE for learning than previous methods.
+- `uiuc-cs124-ai-e7` [rule] we will continue to monitor student performance in CS 124 and in later
+- `uiuc-cs128-syllabus-e6` [override] Their median quiz score was 30 percentage points lower than that of students
+- `ou-cs1323-mackay-e2` [override] no evidence that allowing students to use AI to complete programming assignments develops
+- `usm-provost-ai-e1` [override] reported academic integrity violations have increased significantly due to unauthorized use and misuse
+- `uqtr-principes-ia-personnel-e5` [override] Que les effets de l’IA générative sur le développement cognitif sont inconnus
+
+## G56 Set an institution-wide framework for responsible AI use — 30 statements, 25 institutions
+- `amherst-ai-usage-guidelines-e1` [override] These guidelines apply to all members of the Amherst community
+- `athabasca-provost-interim-genai-e1` [override] the committee will develop a set of principles and guidelines for AU students and faculty
+- `bellevue-elearning-ai-for-students-e1` [override] Bellevue College has established rules and guidelines to support the responsible use of AI
+- `binghamton-policy-312-genai-e1` [override] supports the responsible use of Generative Artificial Intelligence (GenAI) tools for faculty, staff, and students
+- `cgu-ai-guidance-e1` [override] People, not technology, must be at the center of our work
+- `cgu-ai-guidance-e4` [override] AI tools should enhance teaching and learning
+- `evms-vhs-ai-guidelines-e1` [override] VHS at ODU supports thoughtful, responsible integration of these tools
+- `evms-vhs-ai-guidelines-e2` [override] These guidelines operate within the ODU institutional framework.
+- `iu-indianapolis-teaching-iu-genai-policies-e1` [override] IU does not currently have any specific policies around the use of generative AI
+- `liu-academic-affairs-ai-statement-e1` [override] Use of generative AI tools by any member of the LIU community will follow
+- `mcw-ai-digest-e1` [override] MCW program and course policies should be mindful of the institution’s guiding principles
+- `mcw-ai-digest-e2` [override] The principles are applicable to all faculty, staff, and students
+- `musc-ai-acceptable-use-framework-e1` [override] This is not a policy statement.
+- `ndsu-ai-goals-guidance-e2` [override] provided a framework for how AI is approached at NDSU, not a formal policy
+- `rush-ctei-faculty-guide-ai-e1` [override] AI should be seen as a tool to support and enhance teaching and learning
+- `slu-syllabus-components-genai-e3` [override] There is no single, University-level syllabus statement about GAI use.
+- `shsu-academic-affairs-ai-guidance-e6` [override] While there is no defining university policy on AI
+- `shu-ai-syllabus-statements-e1` [override] the University’s policies on academic integrity do not include a separate
+- `southern-ai-use-policy-brief-e1` [override] establishes a university-wide framework for the ethical, responsible, and compliant use of Artificial Intelligence
+- `southern-ai-use-policy-brief-e2` [override] The policy defines acceptable AI use, establishes institutional oversight through an AI Advisory Council
+- `southern-ai-use-policy-brief-e3` [override] academic integrity, privacy protection, and responsible innovation while prohibiting misuse of AI technologies
+- `uttyler-cosc3315-e1` [override] UT Tyler is committed to exploring and using artificial intelligence (AI) tools as appropriate
+- `jefferson-gai-policy-e1` [override] capable of generating original text, images, audio, video, and computer code
+- `tru-ed05-academic-integrity-policy-e2` [override] including the production of text, images, code, video, or summaries
+- `ua-oaa-genai-guidelines-e1` [override] generative AI tools (such as ChatGPT, DALL.E, Midjourney, Stable Diffusion, and Codex)
+- `ku-ai-guidance-instructors-e1` [override] KU supports thoughtful use of AI to enrich course content, support instructional goals
+- `unbc-provost-genai-coursework-guidance-e1` [override] This guidance in itself is not binding, and not enforceable
+- `usfca-provost-syllabus-statement-options-genai-e6` [override] this third syllabus statement option is provided, it may not be enforceable.
+- `uqar-politique-c3-d117-ia-e1` [override] Cette politique n’ établit pas de modalités spécifiques d’utilisation dans les contextes d’enseignement
+- `usu-teach-communicate-about-ai-e4` [override] This includes chatbots like ChatGPT and Copilot, image generators, coding assistants, and similar technologies.
+
+## G57 Talk with the student before escalating suspected misuse — 9 statements, 8 institutions
+- `csus-ctl-course-preparation-e3` [override] meet with students 1:1 to address suspected academic misconduct before reporting.
+- `colostate-cs312-e5` [override] students will be given a chance to meet with the instructor to discuss their case
+- `sfsu-ceetl-teaching-generative-ai-e7` [override] Academic integrity should focus on teaching, not policing
+- `umt-teaching-gen-ai-e6` [override] Treating AI misuse as a moment for learning, not just discipline
+- `ualr-provost-faculty-student-ai-e7` [override] Begin by discussing your concerns with the student
+- `ualr-provost-faculty-student-ai-e8` [override] clearly explain how the student’s use of AI violated your course policies
+- `du-otl-concerns-about-student-ai-use-e5` [override] Instead of assuming the worst and demonizing the student, take the time
+- `uky-ukadvance-instructional-guidelines-e8` [override] we suggest consultation with the department chair or school director and the Academic Ombud
+- `usd-ai-faculty-e7` [override] the recommended next step is engagement and education, not accusation

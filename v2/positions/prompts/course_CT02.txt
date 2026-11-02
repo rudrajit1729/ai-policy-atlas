@@ -1,0 +1,121 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT02 "Default stance: AI allowed or encouraged" (AI is allowed, welcomed or encouraged for course work ("AI use encouraged", "LLMs allowed on programming assignments", "AI assumed on projects").).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..96 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | arizona-state | C1 | all | informs | AI use welcomed and encouraged | Use of AI tools is generally welcome and even encouraged in this class.
+1 | austin-community-college | C2 | student | may | AI encouraged as learning aid | is permitted and encouraged as a learning aid when used responsibly and transparently.
+2 | brigham-young-idaho | C5 | student | should | AI encouraged for learning | It encourages students to utilize AI tools for enhancing learning, creativity, and productivity
+3 | brown | C5 | student | may | generative AI permitted within limits | They are also permitted to solicit help from generative AI—within limits.
+4 | california-berkeley | C5 | student | may | AI allowed on assignments with care | You can carefully use GenAI on assignments
+5 | california-polytechnic-state-san-luis-obispo | C5 | instructor | informs | AI use allowed | I am open to the use of such tools
+6 | california-san-diego | C3 | student | may | AI allowed on programming assignments | similar tools, may be used for programming assignments
+7 | california-santa-cruz | C2 | student | should | AI encouraged for learning | Generative AI (GenAI) tools are encouraged to support learning and foster creativity.
+8 | carleton-college | C3 | instructor | informs | AI not prohibited | I am not going to prohibit the use of LLMs for this class
+9 | carleton-college | C6 | student | may | AI use open | you may use LLMs as you see fit
+10 | central-florida | C2 | student | may | AI encouraged for group project | Your group is allowed to and encouraged to use AI for this project if you deem that it would be helpful.
+11 | city-college-san-francisco | C1 | student | may | AI use free outside graded work | Outside of class assignments and exams, I leave it up to you to decide how to use these tools.
+12 | colby-college | C5 | student | should | AI encouraged to build proficiency | I encourage you to use AI in this course to build your proficiency.
+13 | colorado-state | C4 | student | may | AI use allowed | We allow the use of AI in this course
+14 | cornell | C1 | student | may | AI allowed for unsubmitted code | generative AI for code that you do not submit to us.
+15 | cornell | C1 | student | may | AI outside class not violation | violation if you use generative AI for an independent activity outside of class.
+16 | cornell | C2 | student | may | AI allowed for assignments | to assist with your assignments
+17 | cornell | C3 | student | may | AI allowed for all take-home work | You may use AI systems — including generative tools, coding assistants, and agents — for all take-home work in this course
+18 | cornell | C3 | student | may | no permission needed | You may decide when and how to use them without requesting permission
+19 | cornell | C4 | student | may | AI allowed for coding | You may use AI tools to assist with coding
+20 | cornell | C6 | student | may | AI tools allowed | Use of AI tools is allowed
+21 | dartmouth-college | C2 | student | may | AI allowed for creating or debugging code | consider it to be an honor principle violation for
+22 | georgia-tech | C1 | student | should | AI encouraged as assistant | We encourage use of these tools as assistants when working on exercises
+23 | georgia-tech | C3 | student | may | AI allowed for homework and study | You can use AI to help with both homework and studying
+24 | georgia-tech | C4 | all | informs | students should use AI | We recognize that students will use AI - that they should use AI
+25 | harvey-mudd-college | C1 | student | may | AI welcome not required | AI is an tool well-suited to computational exploration; it is welcome, though not required.
+26 | hawaii-manoa | C1 | student | may | AI allowed on homework | You are free to use the Internet and AI, such as ChatGPT, to help you with your homework.
+27 | hawaii-manoa | C4 | student | should | use AI to develop code | Use AI to help develop code
+28 | houston | C3 | student | may | AI allowed on homework | It is acceptable to use AI websites to solve homeworks, but an explanation must be given
+29 | james-madison | C2 | student | may | AI allowed to support learning | You may use AI technology in general ways that support your learning.
+30 | james-madison | C4 | student | may | AI allowed to support learning | You are permitted to use AI technology in ways that support your learning.
+31 | loyola-marymount | C1 | all | informs | appropriate AI use is academic honesty | includes the appropriate use of technology as an aid for learning and productivity.
+32 | loyola-marymount | C1 | student | must | use GenAI responsibly | Modern GenAI provides fast solutions to a variety of computing problems but must be used responsibly
+33 | loyola-marymount | C1 | student | should | AI is assistant not subcontractor | Treat GenAI as an assistant, not a subcontractor.
+34 | loyola-marymount | C2 | all | informs | appropriate AI use is academic honesty | includes the appropriate use of technology as an aid for learning and productivity.
+35 | loyola-marymount | C2 | student | must | use GenAI responsibly | Modern GenAI provides fast solutions to a variety of computing problems but must be used responsibly
+36 | loyola-marymount | C2 | student | should | AI is assistant not subcontractor | Treat GenAI as an assistant, not a subcontractor.
+37 | loyola-marymount | C2 | student | must | AI limited to listed uses | limit the use of GenAI in programmatic assignments to the following cases:
+38 | loyola-marymount | C3 | all | informs | appropriate AI use is academic honesty | includes the appropriate use of technology as an aid for learning and productivity.
+39 | loyola-marymount | C3 | student | must | use GenAI responsibly | Modern GenAI provides fast solutions to a variety of computing problems but must be used responsibly
+40 | loyola-marymount | C3 | student | should | AI is assistant not subcontractor | Treat GenAI as an assistant, not a subcontractor.
+41 | loyola-marymount | C3 | student | must | AI limited to listed uses | limit the use of GenAI in programmatic assignments to the following cases:
+42 | marquette | C4 | all | informs | AI use for code assumed | make use of these tools to assist them with coding, and also for
+43 | marquette | C6 | instructor | informs | AI assumed on programming projects | We assume that some students will make use of
+44 | maryland-college-park | C5 | student | may | AI tools permitted with guidelines | The use of AI tools like Chat GPT, Claude, Grok, Llama etc. are permitted in this class, however,
+45 | massachusetts-amherst | C1 | student | may | AI allowed for learning | In this course, we allow the use of AI technologies like ChatGPT as a means of learning and improving your understanding of the subject matter.
+46 | memphis | C3 | student | may | AI use unrestricted | you are welcome to use foundation models (ChatGPT, Gemini, DALL-E, Claude,
+47 | memphis | C3 | student | should | AI use encouraged | Despite these disclaimers, the use of foundation models is encouraged,
+48 | memphis | C4 | student | may | AI allowed on project only | During the project only, students are free to use outside resources (e.g., coding blog
+49 | miami | C1 | student | may | AI allowed for programming help | You are welcome to use AI-tools to help you program.
+50 | michigan-state | C1 | student | may | AI optional on projects | You may choose to use generative AI in your projects.
+51 | michigan-state | C1 | student | may | AI coding tools optional | You may choose to take advantage of AI tools that support software development, such as ChatGPT.
+52 | new-jersey-institute-technology | C6 | student | may | AI allowed in projects with conditions | The use of AI tools, such as ChatGPT, in course projects is allowed but must adhere to the following
+53 | new-york | C2 | instructor | informs | AI not banned | In this class, we will not ban these tools;
+54 | new-york | C2 | student | should | AI encouraged as learning partner | we encourage you to use AI as a learning partner, leveraging its capabilities in the following ways:
+55 | north-carolina-chapel-hill | C3 | student | may | AI use unrestricted on assignments | You are free to use Artiﬁcial Intelligence tools as you see ﬁt for assignments,
+56 | north-texas | C1 | student | should | AI use encouraged | you are encouraged to use Generative AI (GenAI) tools such as Claude,
+57 | north-texas | C4 | student | should | AI encouraged as development aid | AI tools (GitHub Copilot, Claude, ChatGPT) are encouraged as development aids and must be
+58 | northeastern | C5 | student | may | exploring and discussing with AI welcome | You are welcome to explore these tools and engage in discussion with
+59 | oklahoma | C4 | instructor | should | AI use encouraged to build skills | I encourage their use to improve your skills on using them.
+60 | oklahoma | C4 | student | may | AI fine if shows understanding | or online tools (including AI) are fine, but your submissions must show your understanding.
+61 | oklahoma | C6 | student | may | consulting AI tools allowed | others or consult external resources (such as the internet or generative AI tools)
+62 | oklahoma | C6 | student | may | generative AI tools permitted | Students are permitted to use Generative AI tools, such as ChatGPT and
+63 | old-dominion | C6 | student | may | AI permitted to some extent | The use of ChatGPT or other AI tools is permitted to some extent in this class.
+64 | princeton | C2 | instructor | informs | LLMs allowed on programming assignments | We do not ban LLMs for programming assignments
+65 | princeton | C3 | instructor | may | AI permitted on programming assignments | this term we will permit all students to use generative AI tools
+66 | rhode-island | C5 | instructor | informs | course embraces AI tools | This course embraces the integration of AI tools such as
+67 | rochester | C5 | student | may | AI allowed, use mindfully | You are allowed to use AI in this class; however, you should do so mindfully.
+68 | rochester | C5 | student | must | permissive with transparency | by default this course is permissive, with the requirement that you are transparent about your usage
+69 | rose-hulman-institute-technology | C1 | student | may | AI allowed for non-coding uses | You ARE permitted to use these tools for anything else, including:
+70 | san-francisco | C6 | student | may | AI encouraged outside class | Outside a session: use AI freely, and often.
+71 | south-florida | C4 | instructor | informs | encourage ethical AI adaptation | The purpose of this policy is to foster a dynamic learning environment that encourages technological adaptation
+72 | south-florida | C4 | student | may | AI permitted for all submissions | The use of generative AI tools is permitted for course-related submissions, including assignments,
+73 | southern-california | C1 | student | may | AI-assisted code allowed on homework | we will allow you to submit code that you have developed through collaboration with other students or through the help of AI assistance.
+74 | stony-brook | C4 | student | may | AI assistants permitted and encouraged | are permitted and encouraged throughout this course, including on the project.
+75 | swarthmore-college | C5 | student | should | encouraged to experiment with AI | I encourage you to experiment with ChatGPT and its competitors during this course, but
+76 | temple | C5 | student | may | AI allowed on homework | You can use them when doing homework,
+77 | temple | C6 | student | may | AI allowed if it supports learning | You may use generative AI tools (e.g., ChatGPT, Gemini, Claude) only when such use
+78 | texas-el-paso | C1 | student | may | free AI use option | is permitted in this class.
+79 | texas-el-paso | C2 | student | may | AI acceptable to complement learning | It is acceptable to use these tools to com-
+80 | texas-el-paso | C3 | student | may | AI permitted if acknowledged | The use of generative AI tools such as Chat GPT is permitted in this course, provided such use is properly
+81 | uiuc | C2 | student | may | non-generative tools always permitted | Dictionaries, translation tools, spell checkers, and non-generative editor
+82 | uiuc | C2 | instructor | informs | Claude recommended | We recommend Claude.
+83 | uiuc | C2 | student | may | other chat tools also allowed | Other tools such as ChatGPT or Gemini may also be used in accordance with this
+84 | uiuc | C2 | student | may | AI may support the process | AI may support your process, e.g., understanding the
+85 | uiuc | C2 | student | may | AI allowed for listed uses | You may use AI tools to assist your work on graded lessons, recitation activities, and machine problems in the
+86 | uiuc | C6 | student | may | AI use on projects allowed | Using AI here is not a violation
+87 | vanderbilt | C5 | student | may | AI free for all project stages | You are free to use AIs, like chatGPT, to design, implement, document, and evaluate the AI system
+88 | vanderbilt | C5 | student | should | AI encouraged on programming assignments | you are encouraged to use AI tools to design, implement, document, and evaluate your programming assignments
+89 | virginia-commonwealth | C3 | student | may | AI allowed as learning aid | Generative AI tools may be used in this course as a learning aid, such
+90 | virginia-tech | C3 | student | may | AI assistants allowed on projects | We will allow the use of AI assistants for these projects
+91 | virginia-tech | C3 | student | may | AI free for code and debugging | There are no restrictions regarding the use of generative AI tools for generating or
+92 | virginia | C4 | student | may | AI welcome for coding questions | students are welcome to use generative AI
+93 | washington-in-st-louis | C6 | student | may | AI allowed with attribution | You may also use AI-driven content generators such as ChatGPT or
+94 | west-chester-pennsylvania | C4 | student | may | AI permitted and encouraged | my AI policy is that I permit and even encourage AI usage in my classes
+95 | worcester-polytechnic-institute | C6 | student | may | AI assistance allowed on individual work | must be done individually, potentially with the assistance from Generative AI tools.
+96 | worcester-polytechnic-institute | C6 | student | may | AI allowed on assignments | Students may use online resources and Generative AI tools to work on the assignments

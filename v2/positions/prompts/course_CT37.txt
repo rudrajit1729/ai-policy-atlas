@@ -1,0 +1,78 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT37 "Penalties for AI misuse" (Stated consequences: zero, grade reduction, course failure, report.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..53 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | appalachian-state | C4 | all | informs | integrity violations bring sanctions | Violations of the academic integrity policy can result in various sanctions.
+1 | arizona-state | C2 | student | informs | violation brings academic sanctions | willbeconsideredacademicdishonestyandaviolationoftheASUAcademicIntegrityPolicy.Students confirmedtobeengaginginnon-allowableuseofgenerativeAIwillbesanctionedaccordingtotheacademic integritypolicyandFSEsanctioningguidelines.
+2 | arizona | C2 | student | informs | no credit for violations | policy may result in no credit for any assignment or exam that was not completed
+3 | austin-community-college | C1 | student | informs | violation brings academic penalties | Any violation of this policy will result in academic penalties which may include a failing grade
+4 | brigham-young-idaho | C1 | student | informs | penalty zero, fail, or removal | may result in receiving a 0 on the assignment, failing the course, or being removed from the program.
+5 | brigham-young-idaho | C2 | student | informs | penalty zero, fail, or removal | may result in receiving a 0 on the assignment, failing the course, or being removed from the program.
+6 | bucknell | C6 | student | informs | grade reduction if cannot explain | If a student is unable to fully explain the logic, syntax, or structure of their submitted code, they will receive a
+7 | bucknell | C6 | student | informs | zero and report if no understanding | In cases where a student cannot demonstrate any foundational understanding of the submitted work, a
+8 | buffalo-suny | C3 | student | informs | automatic F for AI violation | Using ChatGPT/Generative AI for your homeworks will result in an immediate course grade of
+9 | california-santa-cruz | C2 | instructor | informs | misuse disciplinary penalty | Misuse will also result in disciplinary action, which may include receiving a failing grade for the assignment or the course
+10 | carleton-college | C3 | instructor | informs | AI help on homework graded zero | OK, BUT YOU GET A ZERO
+11 | central-florida | C1 | instructor | informs | escalating negative-grade penalties | I will award you a -100% on the assignment for the first offense and a -200% on the second, doubling each time
+12 | central-florida | C1 | instructor | informs | penalty for assisting AI cheating | Anyone that knowingly assists someone in using unauthorized resources or cheating will also earn a -100% on the assignment
+13 | clemson | C3 | instructor | informs | uncited AI code earns zero | Failure to cite either the AI app or the specs used will receive a zero for the assignment.
+14 | colby-college | C2 | instructor | informs | violation penalties range | may result in penalties ranging from a warning to a failing grade for the assignment or course
+15 | colorado-boulder | C4 | instructor | informs | violation earns zero | It will also be counted as plagiarism and will result in a 0.
+16 | colorado-state | C2 | instructor | informs | negative grade for AI use | Assignment will be penalized with a negative grade if you used Gen AI
+17 | colorado-state | C2 | instructor | informs | fail course for AI in exams | you will fail the course if you use Gen AI in any exam (Unit and/or Final)
+18 | colorado-state | C2 | instructor | informs | fail course for repeat misconduct | or you repeat a misconduct in an assignment.
+19 | duke | C2 | instructor | informs | zero on exam for violation | you will earn 0% credit for that exam
+20 | duke | C2 | instructor | informs | letter-grade deduction for violation | as well as an additional letter-grade deduction of your final grade.
+21 | duke | C2 | instructor | informs | zero on all APT quizzes for violation | you will earn 0% credit for all APT quizzes during the semester
+22 | georgia-southern | C1 | instructor | informs | AI use earns zero and report | will be treated as academic dishonesty and reported to the Office of Student Conduct, with a recommended grade of zero for the assignment.
+23 | georgia-southern | C2 | instructor | informs | AI use earns zero and report | will be treated as academic dishonesty and reported to the Office of Student Conduct, with a grade of zero for the assignment.
+24 | georgia-southern | C6 | student | must-not | AI-rephrased answers score zero | If the answer is rephrased by AI, then your score for the test will be zero.
+25 | grinnell-college | C3 | instructor | must | AI output earns automatic zero | Submitted work that includes text or code produced by an AI tool will receive an automatic zero.
+26 | grinnell-college | C6 | instructor | must | AI in class earns zero | you will receive an automatic zero for that day
+27 | hawaii-manoa | C1 | instructor | informs | uncited AI code earns zero | If you use code from the Internet or ChatGPT without citing the source, you will receive a 0 for the assignment.
+28 | kansas | C4 | instructor | informs | AI misuse earns zero | Minimum consequences include a zero on
+29 | kansas | C4 | instructor | informs | course failure for severe misuse | failure in the course
+30 | lehigh | C5 | instructor | informs | AI violation may mean WF | the failing grade WF in the course
+31 | new-hampshire | C3 | instructor | informs | cheating earns failing grade | If you cheat on a quiz or exa m, you will receive a failing grade
+32 | new-jersey-institute-technology | C6 | instructor | informs | whole-project AI earns zero | These attempts are easily detectable by both human graders and software tools and will result in a grade of
+33 | oklahoma | C2 | instructor | informs | zero or course failure penalty | could result in a zero for an assignment or a failing grade on the course
+34 | oklahoma | C4 | instructor | informs | zero or expulsion penalty | Serious violations can mean a zero on the assignment or even expulsion
+35 | oregon | C4 | student | must | fail class if unattributed AI | without providing complete attribution , the student will fail the class
+36 | pennsylvania | C1 | instructor | informs | grade penalties for misuse | will result in academic consequences, which may include grade penalties, academic warnings, or other actions
+37 | prairie-view-aandm | C4 | instructor | informs | reduced grade or zero penalty | may result in a reduced grade or grade of zero
+38 | rowan | C1 | instructor | informs | failing grade or sanctions | Students committing any act of academic dishonesty may fail the assignment, fail the course, or face other sanctions.
+39 | rowan | C1 | instructor | informs | failing grade or sanctions | Students committing any act of academic dishonesty may fail the assignment, fail the course, or face other sanctions.
+40 | san-francisco-state | C3 | instructor | informs | violations treated seriously | Violation of this rule will be treated seriously
+41 | san-jose-state | C6 | instructor | informs | zero and report if unexplained | If the student can't explain the answer to a question
+42 | south-florida | C4 | instructor | informs | AI misuse gets penalties | Misuse of AI tools, including use of AI that undermines the student learning objectives of the course or assignment
+43 | stony-brook | C2 | instructor | informs | AI code leads to discipline | Plagiarism or unauthorized assistance, including AI-generated code, will result in disciplinary action.
+44 | temple | C6 | instructor | informs | zero if documentation omitted | Omitting this required documentation will result in a grade of zero (0) for the project.
+45 | texas-austin | C2 | instructor | informs | penalties up to course F | and request penalties up to and including an F in the course.
+46 | texas-christian | C2 | instructor | informs | misuse sanctions up to expulsion | Conduct Policy or other relevant policies and may result in sanctions, including failing
+47 | texas-christian | C2 | instructor | informs | zero tolerance for cheating | I have a zero-tolerance policy for cheating, and all
+48 | texas-tyler | C2 | instructor | informs | noncompliance counted as plagiarism | Failure to follow the above rules will result in your work considered as
+49 | texas-tyler | C2 | instructor | informs | repeat plagiarism leads to discipline | Repeated plagiarism may result in University disciplinary action.
+50 | uiuc | C1 | ta-staff | informs | off-project time removed | time spent on work that is not your project is removed.
+51 | vermont | C5 | instructor | informs | zero participation for discussion AI | you will be asked to stop, and you’ll receive a zero for participation if the discussion
+52 | washington-state | C6 | instructor | informs | points lost for flagged AI | If AI has been flagged but not fixed, points will be lost.
+53 | yale | C3 | instructor | informs | plagiarism earns zero | receive a 0 on your assignment.

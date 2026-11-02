@@ -1,0 +1,54 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT19 "Ask AI for explanations, not code" (Students may prompt AI for how-to explanations or hints but not for solution code; examples of appropriate and inappropriate prompts.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..29 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | california-berkeley | C2 | student | may | AI for conceptual questions only | You may ONLY interact with LLMs and GenAI tools conceptually
+1 | california-berkeley | C2 | student | may | conceptual questions are acceptable | These are things that are reasonable to ask an LLM
+2 | california-berkeley | C3 | student | may | AI for conceptual questions only | the use of LLMs in this class is permitted with extreme caution for conceptual help only
+3 | california-berkeley | C3 | student | may | conceptual questions are acceptable | These are things that are reasonable to ask an LLM.
+4 | harvey-mudd-college | C5 | student | must | avoid accidentally generating solutions | You are responsible for being cautious with your queries to avoid accidentally generating a solution.
+5 | harvey-mudd-college | C6 | student | should | avoid AI direct help on assignments | avoid using AI assistants for direct help with assignments or code (conceptual discussions about lesson materials would be okay)
+6 | harvey-mudd-college | C6 | student | should | prompt AI to teach not give code | I need to be the author of all code changes, so please don't give me any code snippets to copy into my assignment
+7 | harvey-mudd-college | C6 | student | should | in-your-head rule | apply the “in your head” rule and leave the conversation with new understanding in your head
+8 | louisville | C6 | student | may | AI for learning only | Please note that AI tools may be used as learning resources but may not be used to generate or
+9 | loyola-marymount | C1 | student | should | ask AI how-to not final code | Prompt the AI for the how-to’s,
+10 | loyola-marymount | C2 | student | should | ask AI how-to not final code | Prompt the AI for the how-to’s,
+11 | loyola-marymount | C3 | student | should | ask AI how-to not final code | Prompt the AI for the how-to’s,
+12 | loyola-marymount | C5 | student | should | prompt for how-to not final code | Prompt the AI for the how-to’s,
+13 | loyola-marymount | C6 | student | should | prompt for how-to not final code | Prompt the AI for the how-to’s,
+14 | massachusetts-institute-technology | C2 | student | must-not | no step-by-step AI instructions | step-by-step, algorithmic instructions either in code or at a code level
+15 | michigan | C3 | student | must-not | no AI hints on current homework | for hints on a homework problem for the current week
+16 | north-carolina-state | C2 | student | must | AI as learning assistant only | ensure that you are using the AI agent as a learning assistant rather than as a homework assistant
+17 | old-dominion | C6 | student | should | AI only as learning aid | AI tools should be used only as learning aids
+18 | rochester-institute-technology | C3 | student | must | use resources only for hints | If a resource happens to include a solution to the problem, do not read it in full: use it as a resource for hints.
+19 | rose-hulman-institute-technology | C1 | student | may | AI advice without code generation | Asking an AI for advice on something that does not cause the AI to generate
+20 | rose-hulman-institute-technology | C1 | student | must | ignore AI-generated example code | (If the query does generate example code, ignore it.)
+21 | stanford | C2 | student | should | high-level questions and citations | high level questions, citations where needed, etc.
+22 | stanford | C6 | student | may | high-level questions and citations | high level questions, citations where needed, etc.
+23 | stony-brook | C3 | student | should | AI for clues not solutions | use them judiciously to get clues instead of solutions.
+24 | texas-austin | C2 | student | must-not | AI must not do the work | (for example when studying class content or studying for exams), but not to do the
+25 | uiuc | C1 | student | may | asking questions OK, getting answers not | asking questions is fine, getting answers is not.
+26 | uiuc | C2 | student | may | appropriate prompt: ask for explanation | Can you explain how a destructor works in C++?
+27 | uiuc | C2 | student | must-not | inappropriate prompt: write my code | Write a destructor for my LinkedList class.
+28 | virginia | C6 | student | may | conceptual questions to AI allowed | So you can ask
+29 | virginia | C6 | student | must-not | no AI for code or answers | conceptual questions, etc. but not for code (even for labs), specific

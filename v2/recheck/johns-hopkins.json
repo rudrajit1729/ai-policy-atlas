@@ -1,0 +1,68 @@
+{
+ "slug": "johns-hopkins",
+ "university": "Johns Hopkins University",
+ "units_searched": [
+  {
+   "unit": "Department of Computer Science (Whiting School of Engineering)",
+   "layer": "computing",
+   "site": "https://www.cs.jhu.edu/",
+   "queries": [
+    "site:cs.jhu.edu generative AI policy",
+    "site:cs.jhu.edu academic integrity ChatGPT students",
+    "Johns Hopkins Computer Science department undergraduate handbook AI use policy",
+    "site:cs.jhu.edu \"AI\" policy undergraduate students course collaboration",
+    "site:cs.jhu.edu syllabus \"generative AI\" OR ChatGPT OR Copilot cs.jhu.edu course"
+   ],
+   "pages_checked": [
+    "https://www.cs.jhu.edu/",
+    "https://www.cs.jhu.edu/academic-programs/academic-integrity-code/",
+    "https://www.cs.jhu.edu/academic-programs/undergraduate-studies/undergraduate-academics/current-undergraduate-students/",
+    "https://www.cs.jhu.edu/academic-programs/graduate-studies/current-graduate-students/"
+   ],
+   "result": "none-found",
+   "note": "Fetched texts (v2-johns-hopkins-cs-integrity, -cs-ug, -cs-grad, -cs-home) contain no AI/ChatGPT/generative rule; the CS Academic Integrity Code page has no AI language. Search returned no cs.jhu.edu AI policy page."
+  },
+  {
+   "unit": "Whiting School of Engineering (contains CS, ECE and other computing units)",
+   "layer": "school",
+   "site": "https://engineering.jhu.edu/",
+   "queries": [
+    "site:engineering.jhu.edu generative AI policy students",
+    "site:ece.jhu.edu academic integrity AI"
+   ],
+   "pages_checked": [
+    "https://engineering.jhu.edu/ctld/chatgpt/student-use",
+    "https://engineering.jhu.edu/ctld/wp-json/wp/v2/pages/4336"
+   ],
+   "result": "inaccessible",
+   "note": "A WSE CTLD page 'Student Use of Generative AI' exists (search snippet only; it recommends talking with students about differing perspectives, not a rule). Fetch returns a Cloudflare block (curl, fetch_text.py, WebFetch 403); the saved text v2-johns-hopkins-wse-student is the block page and is unusable."
+  },
+  {
+   "unit": "Engineering for Professionals (WSE; hosts online MS in Computer Science, AI, Cybersecurity, Data Science)",
+   "layer": "school",
+   "site": "https://ep.jhu.edu/",
+   "queries": [
+    "Johns Hopkins Engineering for Professionals computer science generative AI policy students academic integrity"
+   ],
+   "pages_checked": [
+    "https://ep.jhu.edu/?p=283285"
+   ],
+   "result": "inaccessible",
+   "note": "Search snippet of 'Purpose and Instructor Responsibility' (ep.jhu.edu/?p=283285) says EP faculty define and communicate acceptable student GenAI use in their courses. Page is Cloudflare-blocked (403); not collected. Worth retrying from another network."
+  },
+  {
+   "unit": "Electrical and Computer Engineering",
+   "layer": "computing",
+   "site": "https://engineering.jhu.edu/ece/",
+   "queries": [
+    "site:ece.jhu.edu academic integrity AI"
+   ],
+   "pages_checked": [],
+   "result": "none-found",
+   "note": "No ECE AI policy surfaced in search; engineering.jhu.edu blocks automated fetching so ECE pages could not be read."
+  }
+ ],
+ "documents": [],
+ "course_examples": [],
+ "notes": "No document collected. JHU CS's own accessible pages have no AI rule. The WSE and EP school layers could not be read because the sites block automated fetching, so absence there is unconfirmed. University-wide guidance (per snippets) leaves AI use to instructors."
+}

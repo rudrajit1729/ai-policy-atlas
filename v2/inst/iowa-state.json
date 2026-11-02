@@ -1,0 +1,316 @@
+{
+ "university": "Iowa State University",
+ "slug": "iowa-state",
+ "state": "IA",
+ "type": "R1",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "iowa-state-conduct-faculty-staff",
+   "layer": "university",
+   "unit": "Office of Student Conduct (Dean of Students Office)",
+   "course": null,
+   "title": "Know the Code Resources: Faculty and Staff (Artificial Intelligence section)",
+   "url": "https://studentconduct.dso.iastate.edu/know-code-resources/facultystaff",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance_why": "The document sets no AI rule of its own: AI tools \"may be permitted, restricted, or prohibited depending on the course, assignment, or instructor expectations\", and faculty are only \"encouraged to clearly communicate expectations\". The decision is handed to instructors, so the stance is delegates.",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "The Office of Student Conduct's faculty page has a short AI section that treats generative AI as permitted, restricted or prohibited depending on the course, assignment or instructor. It urges instructors to state expectations, discuss them, design assignments that show student process, and not rely on AI detectors alone, and it points to CELT syllabus language and sample statements.",
+   "units": [
+    {
+     "why": "The sentence says AI tools \"may be permitted, restricted, or prohibited depending on the course, assignment, or instructor expectations\", so the university sets no single rule and leaves it to course, assignment or instructor. P04 fits better than P05 because no named tiers are defined.",
+     "anchor": "may be permitted, restricted, or prohibited depending on the course, assignment, or instructor expectations.",
+     "frag_start": "These tools may be permitted",
+     "frag_end": "instructor expectations.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "default-stance"
+     ]
+    },
+    {
+     "why": "\"faculty and instructors are encouraged to clearly communicate expectations regarding AI use in their syllabi, assignment instructions, and course discussions\" asks instructors to state AI expectations; \"encouraged\" makes it a should, addressed to instructors at course start. P09 is the type for stating AI expectations in syllabus or assignments.",
+     "anchor": "faculty and instructors are encouraged to clearly communicate expectations regarding AI use in their syllabi",
+     "frag_start": "faculty and instructors are encouraged",
+     "frag_end": "and course discussions.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"The use of AI is not inherently academic misconduct\" tells faculty that AI use alone is not a violation, framing when AI use becomes a conduct issue. P36 is the nearest type (classification of AI use as misconduct); modality is informs because it states a boundary rather than an order.",
+     "anchor": "The use of AI is not inherently academic misconduct.",
+     "frag_start": "The use of AI",
+     "frag_end": "academic misconduct.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions",
+      "default-stance"
+     ],
+     "resolution_why": "Coder A coded P36 (classification of AI use as misconduct); coder B coded P04 (rule set per course). The source says \"The use of AI is not inherently academic misconduct\" and the next sentence says concerns arise when use violates course expectations. The sentence is about when AI use counts as misconduct, which is where a reader looking for the misconduct boundary would look, so P36 stands; P04 is already coded on the preceding sentence."
+    },
+    {
+     "why": "\"concerns arise when AI is used in a manner that violates course expectations, provides unauthorized assistance, or replaces the student's own demonstration of learning\" defines which AI uses count as conduct concerns, i.e. classification of improper AI use as an integrity matter (P36); it is a definition so modality is informs.",
+     "anchor": "concerns arise when AI is used in a manner that violates course expectations",
+     "frag_start": "Rather, concerns arise when",
+     "frag_end": "demonstration of learning.",
+     "policy": "Concerns arise when AI is used in a manner that violates course expectations, provides unauthorized assistance, or replaces the student's own demonstration of learning.",
+     "actor": "all",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions",
+      "prohibited-uses"
+     ],
+     "resolution_why": "Both coders gave P36, informs, restrict. Coder B also split off \"replaces the student's own demonstration of learning\" as a separate P32 unit; that clause is one of three conditions in the same definitional sentence, not a student duty, so it is kept inside this unit and the P32 unit is dropped. Coder A's normalized policy is faithful to the sentence and is kept because the anchor alone does not state the whole rule."
+    },
+    {
+     "why": "\"faculty should focus on course expectations ... rather than relying on AI-detection tools alone\" tells instructors not to treat AI detectors as sufficient evidence; \"should\" and the detector reference make it P39 rather than P40, since it limits reliance rather than endorsing tools.",
+     "anchor": "rather than relying on AI-detection tools alone",
+     "frag_start": "When evaluating concerns, faculty should",
+     "frag_end": "AI-detection tools alone.",
+     "policy": "When evaluating concerns, faculty should focus on course expectations, assignment requirements, the student's work product, and any other relevant information rather than relying on AI-detection tools alone.",
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should-not",
+     "policy_type": "P39",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ],
+     "resolution_why": "Coder A coded modality should, coder B should-not. The source says faculty \"should focus on course expectations ... rather than relying on AI-detection tools alone\"; the anchor is the limit on relying on detectors alone, which is a discouragement, so should-not. Type P39 agreed."
+    },
+    {
+     "why": "\"CELT has developed resources that may assist faculty in developing syllabus language, discussing AI use with students, and designing assignments\" describes teaching-center support for faculty on AI policy and assignment design, matching P63 (resources for faculty); informs since it describes resources.",
+     "anchor": "CELT has developed resources that may assist faculty in developing",
+     "frag_start": "CELT has developed resources",
+     "frag_end": "course learning objectives.",
+     "policy": "CELT has developed resources that may assist faculty in developing syllabus language, discussing AI use with students, and designing assignments and assessments that align with course learning objectives.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "assessment-design"
+     ],
+     "resolution_why": "Coder A coded actor admin (CELT is the provider), coder B instructor. The passage says CELT resources \"may assist faculty\"; the actor is whom the statement is addressed to, which is faculty, so instructor. Type P63, phase before-course and informs agreed."
+    },
+    {
+     "why": "\"Faculty may also review the Office of Student Conduct's guidance regarding referrals involving suspected unauthorized AI use\" points faculty to referral guidance for suspected unauthorized AI use; it concerns handling suspected misuse (P36) and is a \"may\" pointer, not a rule.",
+     "anchor": "guidance regarding referrals involving suspected unauthorized AI use",
+     "frag_start": "Faculty may also review",
+     "frag_end": "suspected unauthorized AI use.",
+     "policy": "Faculty may review the Office of Student Conduct's guidance regarding referrals involving suspected unauthorized AI use.",
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "may",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "\"Clearly communicate course and assignment expectations regarding AI use, including whether use is permitted, restricted, or prohibited\" is a recommended strategy to state AI expectations; P09 fits and the \"consider the following strategies\" frame makes it should.",
+     "anchor": "Clearly communicate course and assignment expectations regarding AI use, including whether use is permitted",
+     "frag_start": "Clearly communicate course and",
+     "frag_end": "restricted, or prohibited.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"Discuss appropriate and inappropriate uses of AI within the context of your discipline and course learning objectives\" asks instructors to talk with students about proper AI use. It is not a syllabus statement (P09), a tier (P05) or ask-first advice (P10); no type covers in-class discussion of acceptable AI use, so UNCOVERED.",
+     "anchor": "Discuss appropriate and inappropriate uses of AI within the context of your discipline",
+     "frag_start": "Discuss appropriate and inappropriate",
+     "frag_end": "course learning objectives.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "permitted-uses"
+     ],
+     "resolution_why": "Coder A coded UNCOVERED (class discussion of appropriate AI use), coder B P09. The page itself lists \"course discussions\" alongside syllabi and assignment instructions as places to communicate AI expectations, and P09 sits in the theme 'Communicating expectations'. Discussing appropriate and inappropriate uses is communicating expectations, so it fits P09 and no new type is needed. Rejected P44 because nothing here teaches AI as a professional skill."
+    },
+    {
+     "why": "\"Design assignments that require students to demonstrate their own learning, reasoning, analysis, and application of course concepts\" recommends redesigning assignments in response to AI; P35 fits, and it is a should for instructors before the course.",
+     "anchor": "Design assignments that require students to demonstrate their own learning, reasoning, analysis, and application",
+     "frag_start": "Design assignments that require",
+     "frag_end": "of course concepts.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design"
+     ]
+    },
+    {
+     "why": "\"Consider incorporating drafts, reflections, process documentation, in-class work, presentations\" proposes assessment formats that show how students reached their product; P35 fits better than P26 because it is a design option for instructors, not a student submission duty.",
+     "anchor": "Consider incorporating drafts, reflections, process documentation, in-class work, presentations",
+     "frag_start": "Consider incorporating drafts, reflections,",
+     "frag_end": "arrived at their final product.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design"
+     ]
+    },
+    {
+     "why": "\"Encourage students to seek clarification when they are unsure whether a particular use of AI or another resource is permitted\" is the ask-before-using rule (P10), addressed to instructors who should encourage it.",
+     "anchor": "Encourage students to seek clarification when they are unsure whether a particular use of AI",
+     "frag_start": "Encourage students to seek",
+     "frag_end": "is permitted.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P10",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"consider discussing the student's work and process with them as part of gathering relevant information\" tells instructors to talk with the student when concerns arise, before concluding misuse, which is P57.",
+     "anchor": "consider discussing the student's work and process with them as part of gathering relevant information",
+     "frag_start": "When concerns arise, consider",
+     "frag_end": "gathering relevant information.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P57",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "\"Online study, tutoring, answer-sharing, and AI platforms may be used appropriately or inappropriately depending on course expectations and instructor authorization\" says AI platform use depends on course expectations and instructor authorization, so P04.",
+     "anchor": "may be used appropriately or inappropriately depending on course expectations and instructor authorization",
+     "frag_start": "Online study, tutoring, answer-sharing, and",
+     "frag_end": "instructor authorization.",
+     "policy": "Online study, tutoring, answer-sharing, and AI platforms may be used appropriately or inappropriately depending on course expectations and instructor authorization.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "\"Faculty are encouraged to communicate clear expectations regarding the use of these resources in their syllabi, assignments, and course discussions\" repeats the communication request for study sites and AI tools in a separate section; a should for instructors, type P09.",
+     "anchor": "Faculty are encouraged to communicate clear expectations regarding the use of these resources",
+     "frag_start": "Faculty are encouraged to",
+     "frag_end": "and course discussions.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"CELT and the Office of Student Conduct have created ... sample statements regarding the use of artificial intelligence\" offers ready-made AI syllabus statements to faculty; it is support for instructors writing policy (P63), not a tier definition (P05) since no tiers are listed in the text.",
+     "anchor": "sample statements regarding the use of artificial intelligence",
+     "frag_start": "CELT and the Office",
+     "frag_end": "regarding the use of artificial intelligence",
+     "policy": "CELT and the Office of Student Conduct have created sample statements regarding the use of artificial intelligence.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "resolution_why": "Coder A coded actor admin, coder B instructor. The sentence says CELT and the Office of Student Conduct \"have created sample statements\" for faculty to use in syllabi, so it is addressed to faculty: instructor. Type P63 agreed."
+    },
+    {
+     "why": "The tutorial discussion question \"What should a student do when they are unsure whether a resource, an AI tool, or a form of collaboration is allowed?\" prompts class discussion of asking when unsure about AI use, so P10; it is a \"may\" suggestion for instructors.",
+     "anchor": "unsure whether a resource, an AI tool, or a form of collaboration is allowed?",
+     "frag_start": "What should a student do",
+     "frag_end": "collaboration is allowed?",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "may",
+     "policy_type": "P10",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "resolution_why": "Coder A coded modality may, coder B should. The source is a tutorial discussion question (\"What should a student do when they are unsure ...\"), a prompt instructors may use, not a directive, so may. Type P10 agreed."
+    },
+    {
+     "why": "\"faculty should focus on course expectations, assignment requirements, the student's work product, and any other relevant information\" says what evidence instructors weigh when judging a suspected AI concern. P40 covers detection tools and process logs and P57 covers talking with the student; neither covers weighing course expectations and work product, so UNCOVERED.",
+     "anchor": "faculty should focus on course expectations, assignment requirements, the student's work product",
+     "frag_start": "When evaluating concerns, faculty should",
+     "frag_end": "AI-detection tools alone.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "uncovered_note": "Prescribes which evidence faculty should weigh (course expectations, assignment requirements, work product, other information) when judging suspected AI misuse.",
+     "topics": [
+      "integrity-sanctions",
+      "detection-tools"
+     ],
+     "resolution_why": "Found only by coder B. Coder A folded this into the P39 unit's policy text. The source sentence holds two rules: what to focus on, and not relying on detectors alone. They are distinct, and the first fits no type, so it is kept as UNCOVERED."
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Single included document (Office of Student Conduct faculty page); only AI-related passages coded. CELT syllabus-options page not resolved in collection. One UNCOVERED unit (evidence basis for judging AI concerns)."
+}

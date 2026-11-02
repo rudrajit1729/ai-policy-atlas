@@ -1,0 +1,78 @@
+Below are policies found in US computer-science course syllabi (generative-AI policies), all addressed to everyone (the whole community). Each line:
+policy id | topic (policy type) | stage | universities | policy sentence.
+
+Task 1. MERGE policies that say the same thing, even when they sit under different topics or use different words.
+Judge both semantic equivalence (the same requirement, permission, prohibition or fact, worded differently) and latent
+equivalence (the same underlying intent and the same act asked of the same people, even if one is phrased as a rule and
+the other as advice). Examples of the same policy: "Students disclose any AI use in their submissions" and "Students
+acknowledge AI assistance on each assignment". Do NOT merge when the action differs, the object differs (code vs prose,
+data vs output), a condition differs materially (with permission vs always), or the direction differs (prohibit vs
+permit). Merely related or co-occurring policies stay separate. Be exhaustive: check every policy against all others.
+For each merged group give the member ids, one merged "sentence" (at most 20 words, naming the actor, stating the policy
+directly, adding nothing) and a one-line "why" they are the same.
+
+Task 2. Each policy whose stage is "general" has no stage yet. Give it one:
+  - if it asks someone to do or not do something at an identifiable point, its stage: before-course | course-start |
+    during-work | during-assessment | when-misuse | over-time;
+  - if it is a definition, scope statement, reason, value or fact with no time of action: "background".
+
+Return ONLY this JSON, no prose, no code fence:
+{"merges": [{"members": ["P24.03", "P96.02"], "sentence": "...", "why": "..."}],
+  "stages": [{"pid": "P61.01", "stage": "background"}]}
+List only groups of 2 or more in "merges". List every "general" policy in "stages".
+
+CT02.c03 | Default stance: AI allowed or encouraged | course-start | 2 | The course assumes students will use AI tools for coding and programming projects.
+CT02.c11 | Default stance: AI allowed or encouraged | background | 1 | Appropriate use of technology as an aid for learning counts as academic honesty.
+CT04.c13 | Rules vary by assignment or deliverable | background | 1 | Universities acknowledge that there are legitimate uses of AI.
+CT04.c14 | Rules vary by assignment or deliverable | course-start | 2 | AI rules vary by assignment or deliverable.
+CT07.c01 | Named levels of AI use | course-start | 1 | The course adopts the department's defined AI usage levels.
+CT20.c07 | AI in the editor (autocomplete, Copilot, IDE assistants) | background | 1 | Copilot can almost fully autocomplete code when you start typing.
+CT25.c16 | Disclosing AI use | course-start | 1 | The instructor will disclose their own use of generative AI and expects the same from students.
+CT29.c02 | Disclosure safe harbor and nondisclosure | when-misuse | 3 | Using any source, including AI, without citing it is a violation or cheating.
+CT31.c07 | Verify and test AI output | when-misuse | 4 | Incorrect or uncritically used AI output costs points and leads to poor submissions.
+CT32.c09 | Work must be one's own | background | 1 | AI output is drawn from previously published work and is not original work.
+CT33.c02 | AI under collaboration rules | background | 3 | Using AI is like getting help from a friend who took the class or an extra team member.
+CT33.c03 | AI under collaboration rules | background | 3 | AI use is treated like use of other online resources or located information.
+CT33.c04 | AI under collaboration rules | course-start | 3 | The collaboration policy applies equally to AI tools; AI is permitted only where collaboration is allowed.
+CT34.c03 | No AI during exams and quizzes | during-assessment | 3 | Students will have no access to AI tools or the internet during assessments, which are on paper.
+CT36.c07 | AI misuse as misconduct | background | 7 | Using generative AI for assignments counts as cheating or misconduct under the integrity policy.
+CT36.c14 | AI misuse as misconduct | background | 2 | AI chatbots make unauthorized assistance easier and have raised cheating.
+CT36.c15 | AI misuse as misconduct | background | 1 | Deviating from the AI heuristics does not automatically qualify as academic misconduct.
+CT38.c08 | Detecting AI use | background | 3 | AI tends to produce similar code for different users, so copied code gets flagged.
+CT40.c01 | AI undermines learning | background | 29 | Using AI to do the work undermines learning, understanding and retention of skills.
+CT40.c02 | AI undermines learning | background | 7 | AI use or reliance hinders students' own critical, creative and independent thinking.
+CT40.c03 | AI undermines learning | background | 14 | Learning comes from doing the work yourself: practice, effort, debugging and working through problems.
+CT40.c06 | AI undermines learning | background | 4 | AI can solve homework, gives too much help, and hands over others' solutions.
+CT40.c07 | AI undermines learning | background | 2 | Outsourcing homework to AI gains students nothing and gives no incentive.
+CT41.c03 | Fundamentals before AI | background | 9 | Fundamentals must be mastered before relying on AI, and unaided programming remains a core learning goal.
+CT41.c04 | Fundamentals before AI | background | 3 | AI works best for skilled coders, and judging AI output takes experience.
+CT41.c05 | Fundamentals before AI | background | 1 | Novice learners may be harmed rather than helped by AI, and prompting is easy to learn later.
+CT42.c01 | AI output is unreliable or insecure | background | 14 | AI output, code and explanations can be wrong, inaccurate, hallucinated, incomplete or misleading.
+CT42.c02 | AI output is unreliable or insecure | background | 3 | AI-generated code can have security flaws and put the institution at risk.
+CT42.c03 | AI output is unreliable or insecure | background | 3 | AI-generated code often fails course requirements, grading tests and good style.
+CT42.c04 | AI output is unreliable or insecure | background | 1 | AI tools are trained on old information and may be outdated.
+CT42.c05 | AI output is unreliable or insecure | background | 1 | Using AI without knowing what you are doing leads to poor homework submissions.
+CT42.c09 | AI output is unreliable or insecure | background | 1 | Students using AI often get stuck when debugging.
+CT43.c01 | AI homework hurts exam performance | background | 10 | Relying on AI for homework leaves students unprepared and hurts their performance on exams.
+CT43.c02 | AI homework hurts exam performance | background | 3 | AI tools are not available on quizzes and exams, which students must solve without external materials.
+CT44.c01 | Careers and industry | background | 3 | Industry expects AI fluency, so future software engineers need to learn to use AI tools effectively and responsibly.
+CT44.c02 | Careers and industry | background | 5 | Employers assess job candidates without AI, and interviews do not allow AI, so unaided skills matter.
+CT44.c03 | Careers and industry | background | 2 | Over-reliance on AI means missing insights from doing the work and leaves students less prepared for industry.
+CT44.c04 | Careers and industry | background | 1 | Much of the software industry prohibits AI use because of serious concerns.
+CT45.c01 | Benefits of AI for learning | background | 8 | AI is a valuable and helpful tool for learning the material.
+CT45.c03 | Benefits of AI for learning | course-start | 5 | Using AI is a skill the course wants students to learn and be exposed to.
+CT46.c02 | Ethics, privacy and cost | background | 2 | AI tools store and analyze prompts and can leak confidential data.
+CT46.c08 | Ethics, privacy and cost | background | 1 | AI training data is usually harvested from the internet without consent.
+CT46.c09 | Ethics, privacy and cost | background | 2 | AI-generated code is based on others' code and may come with licenses it does not carry over.
+CT46.c10 | Ethics, privacy and cost | background | 1 | AI systems depend on moderation labor by human workers.
+CT46.c11 | Ethics, privacy and cost | background | 2 | AI systems consume huge amounts of energy and water and create real resource costs.
+CT46.c13 | Ethics, privacy and cost | background | 2 | LLMs raise serious ethical issues, and AI misuse can harm others.
+CT48.c01 | Pointer to other policies | course-start | 2 | The course's current AI policy and further details are on the course or section page.
+CT48.c02 | Pointer to other policies | course-start | 4 | University and department AI policies also apply in this course.
+CT48.c05 | Pointer to other policies | course-start | 1 | Labs have the same AI policy as the lecture section.
+CT48.c06 | Pointer to other policies | course-start | 1 | This AI policy applies only to this course.
+CT49.c02 | AI as course content | course-start | 1 | The course teaches how LLMs aid software engineering tasks.
+OTHER.c01 | Other | background | 3 | Generative AI means any text, image or code generating system; course-built models and all coursework are covered or exempted as stated.
+OTHER.c19 | Other | background | 2 | Powerful AI technology calls for caution and informed consent, and AI empowers bad actors.
+OTHER.c23 | Other | course-start | 1 | Detailed AI policy is given elsewhere in the syllabus.
+OTHER.c24 | Other | course-start | 1 | The class decides the policy on using AI coding assistants.

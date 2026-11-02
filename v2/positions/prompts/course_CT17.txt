@@ -1,0 +1,217 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT17 "AI writing submitted code or solutions" (Whether AI may produce the code, answers or solutions students submit (most often banned).).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..192 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | appalachian-state | C6 | student | must-not | no AI code generation on assignments | You are not allowed to use AI to generate partial or complete code for your lab assignments.
+1 | arizona | C2 | student | must-not | no submitting AI or online work | work from other sources such as ChatGPT (or any AI), stack overflow, GitHub, etc.
+2 | arizona | C2 | student | must-not | no submitting AI or online work | sources such as ChatGPT (or any AI), stack overflow, GitHub, etc.
+3 | arizona | C3 | student | must-not | no AI creating solutions | artificial intelligences, etc.) or have other entities create part or all
+4 | austin-community-college | C4 | student | must-not | no AI in final work uncited | It is not to be used for final submissions unless explicitly cited and discussed.
+5 | boston | C1 | student | must-not | no AI for homework code | using ChatGPT, GitHub Copilot or other forms of generative AI when
+6 | boston | C2 | student | must-not | no tools that write code | using tools that automate (e.g. ChatGPT) and/or assist with the writing of code or the
+7 | boston | C2 | student | must-not | no ChatGPT for solutions | Using ChatGPT or any
+8 | boston | C3 | student | must-not | no AI for assigned problems | CS330 is in general not the place where you should employ these. In this class we forbid the use
+9 | bowdoin-college | C6 | student | should-not | no asking AI for solutions | you should not blindly ask ChatGPT for solutions
+10 | bowdoin-college | C6 | student | must-not | no AI writing your code | You should never use AI to write your code for you.
+11 | brandeis | C1 | student | must-not | no code from ChatGPT or online | You may not get code from online sources including Chat GPT.
+12 | brigham-young-idaho | C1 | student | must-not | no AI code generation on assignments | Do not use AI to generate the code for your programs in this course.
+13 | brigham-young-idaho | C2 | student | must-not | no AI code generation on assignments | Do not use AI to generate the code for this program.
+14 | brigham-young-idaho | C4 | student | must-not | no AI answers to assignment questions | Use AI to generate answers to the case study questions.
+15 | brown | C5 | student | must-not | no AI solving homework | but you cannot ask language models to solve your homework problems for you.
+16 | brown | C6 | student | must-not | no asking AI to write code | You must not ask anyone else, human or AI, to write text or code
+17 | brown | C6 | student | must-not | no AI solving assignments | use AI agents to solve assignments for you, either
+18 | bucknell | C1 | student | must-not | no AI for assigned-problem solutions | You are not allowed to search for specific code or solutions to specific problems you’re assigned.
+19 | bucknell | C2 | student | must-not | no AI for assigned-problem solutions | You are not allowed to search the Internet or an AI chatbot for specific code or solutions to specific problems you’re assigned.
+20 | bucknell | C6 | student | must-not | no AI generating graded work | Using AI to generate text, code, or solutions for any homework, lab, quiz, or exam is prohibited.
+21 | california-berkeley | C1 | student | must-not | no AI to write or fix code | Do not use AI tools such as Github Copilot or ChatGPT to fill in or correct your code.
+22 | california-berkeley | C2 | student | must | must type code directly | You must directly type your code in IntelliJ/VSCode.
+23 | california-berkeley | C2 | student | must-not | no AI-generated code in submissions | no LLM-generated code should ever enter your codebase
+24 | california-berkeley | C5 | all | informs | AI is consultant, not author | GenAI is a consulting tool, not an author.
+25 | california-berkeley | C6 | student | must-not | copying from AI tools prohibited | copying other people’s code, solution sets, or from
+26 | california-san-diego | C4 | student | may | AI code generation allowed | it is permissible to use an AI code generator such as Github Copilot to help you generate code
+27 | california-san-diego | C6 | student | must-not | no LLM-generated code or data | Internet, or created using LLM tools such as CoPilot, ChatGPT
+28 | california-santa-cruz | C2 | student | must-not | no submitting AI code as own | Submitting AI-generated code as your own work is strictly prohibited
+29 | california-santa-cruz | C2 | student | must-not | no AI replacing effort | Using AI tools to complete assignments, projects, or assessments without substantial personal effort and understanding is not allowed
+30 | california-santa-cruz | C3 | student | must-not | no submitting AI-produced work | Submitting work that was produced by artificial intelligence (e.g., ChatGPT)
+31 | carnegie-mellon | C5 | student | must-not | no AI-generated submission content | generative AI tools may not be used to generate any part of your assignment submission
+32 | city-college-san-francisco | C1 | student | should-not | no AI to write assignment code | I expect you to refrain from using AI tools in this way.
+33 | colby-college | C1 | student | must-not | no AI-generated work submitted | You may not turn in any AI-generated code or written text.
+34 | colby-college | C2 | student | must-not | no AI-generated code or answers | Using AI to generate any code, solutions, or answers is strictly prohibited and considered academic misconduct
+35 | colgate | C3 | student | must-not | no AI answers or code | you cannot ask these systems to directly give you answers or write code for you
+36 | colgate | C3 | student | must-not | no AI-sketched algorithms | Give the model a problem description and ask it to sketch an algorithm for you or write you pseudo code.
+37 | colgate | C3 | student | must-not | no AI code from description | Give the model a function description and ask it to generate code for you.
+38 | colorado-boulder | C4 | student | may | AI-generated code allowed if documented | in principle you may submit AI-generated code, or code that is based on or derived from AI-generated code
+39 | colorado-state | C2 | student | must-not | AI for solutions prohibited | the use of these tools for generating assignment solutions is prohibited
+40 | colorado-state | C4 | student | should-not | AI writing project artifacts discouraged | Asking AI to write text, code, or tests for this course project can be problematic
+41 | drexel | C1 | student | must | graded code written without AI | Code submitted for a grade must be written by the student without assistance from AI.
+42 | drexel | C2 | student | must | graded code written without AI | Code submitted for a grade must be written by the student without assistance
+43 | duke | C1 | student | must-not | no AI for direct answers | Refrain from using AI tools to directly retrieve answers or solve problems presented in the coursework.
+44 | duke | C2 | student | should-not | no LLM code for assignments | you should not ask an LLM to write code specific to an assignment
+45 | duke | C3 | student | must-not | no presenting LLM solutions as own | Inappropriate uses of LLMs include asking to solve problems and presenting the solutions (with or without your editing) as your own work.
+46 | duke | C5 | student | must-not | code generators not permitted | The use of automatic code generators is
+47 | duke | C6 | student | must-not | no AI for writing code | Note that you must not use these tools to
+48 | emory | C2 | student | must-not | no submitting AI-written code | Submit code written wholly or in part by an AI tool as your own work.
+49 | emory | C2 | student | must-not | no AI completing assignments | Ask an AI tool to complete an assignment, lab, homework, or project for you.
+50 | emory | C2 | student | must-not | no copying AI output | Copy AI-generated code, comments, variable names, or test cases into a submission.
+51 | florida-state | C2 | student | must-not | no AI writing assignment code | It is NOT APPROPRIATE to utilize AI Tools, like ChatGPT, to write
+52 | florida | C1 | student | must-not | AI-generated code strictly prohibited | using AI-generated or -suggested code, or using someone else to code your solution is
+53 | florida | C1 | student | must-not | AI-generated code strictly prohibited | using AI-generated or -suggested code
+54 | george-mason | C6 | student | must-not | no code from generative AI | You are not allowed to use code from Generative AI or LLMs.
+55 | georgia-tech | C2 | student | must-not | no AI-generated homework or test solutions | The use of machine learning (ML) or artificial intelligence (AI) to generate
+56 | georgia-tech | C3 | student | must-not | AI must not solve problems directly | however you should NOT ask it to
+57 | harvard | C1 | student | must-not | outside AI tools not allowed | Using AI-based software other than CS50’s own (e.g., ChatGPT, Claude, Copilot, Gemini, et al.)
+58 | harvard | C2 | student | must-not | no AI doing the work | Bad uses usurp the learning by doing your work for you.
+59 | harvard | C6 | student | must-not | no AI writing code | Do not ask generative AI tools like ChatGPT or
+60 | harvey-mudd-college | C5 | student | must-not | AI cannot replace own solution | they may not be used in place of developing a solution to an assigned problem.
+61 | harvey-mudd-college | C6 | student | must-not | no AI assistants for code | you may not use any kind of AI assistant (such as GitHub Co-Pilot) to write code for this class
+62 | harvey-mudd-college | C6 | student | must-not | no AI code generation | Using LLMs to generate code for assignments or projects is strictly prohibited.
+63 | james-madison | C2 | student | must-not | no AI doing homework | do not ask ChatGPT or similar tools to do your homework for you.
+64 | johns-hopkins | C2 | student | must-not | no AI whole solutions | co-develop or share whole solutions.
+65 | johns-hopkins | C2 | student | must-not | no AI full solutions | downloading/generating full solutions from the internet
+66 | johns-hopkins | C3 | student | must-not | no AI for homework answers | you must not go looking for outside resources to get answers for homework questions.
+67 | kansas | C1 | student | must-not | no AI doing your work | Using chegg, chatGPT, etc to do your work for you
+68 | kansas | C2 | student | must-not | no AI doing your work | Using chegg, chatGPT, etc to do your work for you
+69 | kansas | C4 | student | must-not | AI cannot generate final work | but must not generate final submissions.
+70 | louisville | C6 | student | must-not | no AI for programming solutions | in the development of solutions for programming assignments
+71 | louisville | C6 | student | must-not | code and pseudocode generation banned | This includes, but is not limited to, generating code, pseudocode,
+72 | louisville | C6 | student | must-not | no AI pseudocode for solutions | Give me pseudocode for implementing this scheduler.
+73 | louisville | C6 | student | must-not | no AI code generation for projects | Generate the code for the file system traversal.
+74 | loyola-marymount | C5 | student | should | AI as assistant not subcontractor | Treat GenAI as an assistant, not a subcontractor.
+75 | loyola-marymount | C6 | student | should | AI as assistant not subcontractor | Treat GenAI as an assistant, not a subcontractor.
+76 | macalester-college | C2 | student | must-not | no AI code on coursework | In this class, using any form of AI-generated code on in-class activities, take-home exercises,
+77 | maryland-college-park | C1 | student | must-not | no AI creating code | Using any type of AI tool to create code for you such as chatGPT.
+78 | maryland-college-park | C2 | student | must-not | no AI for graded work | Using any form of AI to produce any part of coursework that w ill be graded.
+79 | maryland-college-park | C2 | student | must-not | AI cannot create graded work | but not to create any graded coursework.
+80 | massachusetts-amherst | C5 | student | must-not | AI for code and homework prohibited | Assistance from AI systems such as ChatGPT for writing code or answering homework questions is also strictly prohibited.
+81 | massachusetts-boston | C1 | student | should-not | no AI writing assignments | a person or a company to write assignments and using AI tools like ChatGPT.
+82 | massachusetts-boston | C2 | student | should-not | no AI writing assignments | a person or a company to write assignments and using AI tools like ChatGPT.
+83 | massachusetts-institute-technology | C1 | student | must-not | no generative AI output | For example, you may not use any output from generative AI (GenAI) tools like ChatGPT, Copilot, Gemini, Claude, etc.
+84 | massachusetts-institute-technology | C2 | all | must-not | no AI for writing code | For several reasons, we do not allow the use of these tools for writing code in 6.101:
+85 | massachusetts-institute-technology | C2 | student | must-not | no AI to write or improve code | you cannot use AI tools to write code or to improve code you have written
+86 | massachusetts-institute-technology | C2 | student | must-not | no consulting AI-provided code | You cannot consult code provided to you by an AI tool,
+87 | massachusetts-institute-technology | C4 | student | must-not | no generative AI for text or code | Using generative AI tools to write text or code
+88 | massachusetts-institute-technology | C4 | student | must-not | no code or text from AI tools | You may not use code or text produced by advanced code-authoring tools,
+89 | massachusetts-institute-technology | C6 | student | should-not | no AI for lab code | Please do not use AI tools to write lab solution code, or to help
+90 | memphis | C2 | student | must-not | no AI generating solutions | but not for generating or completing solutions.
+91 | miami | C1 | student | must-not | no copying solutions | but it is not ok to copy solutions in part or as a whole.
+92 | michigan | C1 | student | must-not | no AI generating submitted work | Generating project code, test cases, or any other work to be submitted (with or without modifications)
+93 | michigan | C3 | student | must-not | no copying solutions including AI | Copying solutions in whole or in part (including from the Internet, an AI bot, etc.), even if the solution is modified
+94 | michigan | C3 | student | must-not | no AI solving current homework | how to solve a homework problem for the current week
+95 | minnesota | C4 | student | must-not | no AI responses in assignments | Incorporating AI generated responses of parts in an assignment
+96 | new-york | C2 | student | may | AI codes from your own algorithm | Come up with a detailed step by step algorithm and ask it to generate code that follows those steps exactly.
+97 | north-carolina-chapel-hill | C1 | student | must-not | no copying code including AI | Copying code found on any website or community such as StackOverflow, Github, Chegg, CourseHero, or any generative AI model (e.g., ChatGPT).
+98 | north-carolina-chapel-hill | C2 | student | must-not | no AI to write code | You may not use AI (e.g., ChatGPT) to write code for the assignment.
+99 | north-carolina-state | C1 | student | must-not | no AI generating solutions | You MAY NOT use AI tools or services, like ChatGPT or Copilot, to generate partial or complete solutions
+100 | north-carolina-state | C2 | student | must-not | no AI generating assignment drafts | Use of AI tools to partially or fully generate drafts, responses, or submissions for course assignments is
+101 | north-carolina-state | C2 | student | must-not | no AI generating code or tests | You may not use AI to generate code or tests from pseudo code or the project requirements,
+102 | north-carolina-state | C3 | student | must-not | no AI generating assignment drafts | Use of AI tools to partially or fully generate drafts, responses, or submissions for course assignments is
+103 | north-texas | C2 | student | must-not | no using AI answers | Generative AI/LLMs such as ChatGPT, Gemini, or Copilot, etc. Specifically, you should never
+104 | north-texas | C5 | student | must-not | no online or past solutions | Students are NOT allowed to use online solutions from previous course offerings,
+105 | north-texas | C5 | student | must-not | ChatGPT banned as online source | websites (including ChatGPT), etc.
+106 | northeastern | C5 | student | should-not | no asking AI to solve assignments | but you should not be asking them to solve assignments
+107 | northeastern | C5 | student | should-not | no copying answers from AI | and you should not be copying
+108 | northern-illinois | C2 | student | must-not | AI-written code is cheating | using AI software such as ChatGPT, Google Bard, Github Copilot, Cody AI, etc. to write some (or all) of your code
+109 | northwestern | C2 | student | must-not | code generation tools not allowed | Code/text/etc. generation tools (AI-based or otherwise), such as Github Copilot, ChatGPT, etc.
+110 | oberlin-college | C1 | student | must-not | AI-generated code prohibited | using code generated by ChatGPT or other AI systems, etc., is prohibited
+111 | oberlin-college | C2 | student | must-not | AI-generated code prohibited | using code generated by ChatGPT or other AI systems, etc., is prohibited
+112 | oberlin-college | C6 | student | must-not | AI-generated code prohibited | using code generated by ChatGPT or other AI systems, etc., is prohibited
+113 | oklahoma | C1 | student | should-not | no copying solutions from AI | Solutions should not be copied from internet sources, including websites, artificial intelligence software (like ChatGPT), and paid professional programmers.
+114 | oklahoma | C1 | student | must-not | AI banned for completing work | Do not use artificial intelligence systems like ChatGPT to complete your work.
+115 | oklahoma | C3 | student | should-not | no pasting LLM text in homework | You should not copy text from LLM and paste into your homework, even with some modification.
+116 | old-dominion | C5 | student | must-not | no copying from ChatGPT | copying from other students, ChatGPT, and similar tools are prohibited, which will be considered as a
+117 | old-dominion | C6 | student | must-not | no whole assignment to AI | Students may not submit an entire assignment, homework question, or programming task to a generative AI tool
+118 | pennsylvania | C1 | student | must-not | no copying AI-generated solutions | You must not use or copy from a solution that you find online or that has been generated by an LLM/AI.
+119 | pennsylvania | C1 | student | must-not | no AI generating code or text | You may not use AI for generating code or text for assignments.
+120 | pennsylvania | C2 | student | must-not | no AI generating code | Using an AI tool (ChatGPT, Claude, etc.) to generate code is not allowed.
+121 | pennsylvania | C5 | student | must-not | no LLM help on homework | we expect you to write your homework without help from an LLM or from a classmate
+122 | pomona | C2 | student | should-not | no AI for code or debugging | either to generate code or to assist you in debugging code
+123 | pomona | C3 | student | must-not | submitting AI answers is violation | Submitting an answer copied from another student, found on the internet, or generated by an AI-powered system such as ChatGPT is considered an academic honesty violation
+124 | princeton | C5 | student | must-not | no complete AI solutions | To generate complete solutions
+125 | princeton | C6 | student | must-not | no complete functions from AI | forbidding students from asking it to generate complete functions and solutions
+126 | rochester-institute-technology | C1 | student | must-not | AI code generation banned | You can not use generative AI code generation.
+127 | rochester-institute-technology | C3 | student | must-not | no copying code from sources | you are not allowed to copy answers or (parts of) code from other sources
+128 | rochester-institute-technology | C4 | student | must-not | submissions must not be AI-made | anything you submit must not have been created or modified by any AI means.
+129 | rochester-institute-technology | C6 | student | must-not | no AI to write programs | generative AI tools in any manner to write your programs.
+130 | rose-hulman-institute-technology | C1 | student | must-not | no AI-sourced code snippets | except Generative AI (see Rule 4 below).
+131 | rose-hulman-institute-technology | C1 | student | must-not | AI banned for coding and design | You are NOT permitted to use these for coding or program design, except possibly
+132 | rutgers-new-brunswick | C1 | student | must-not | no copying code from chatbots | Copy code/solutions from: No No No No
+133 | rutgers-new-brunswick | C1 | student | must-not | no AI to create or debug code | You MAY NOT use generative AI software (such as ChatGPT or GitHub Copilot) to create or debug programming assignment code.
+134 | rutgers-new-brunswick | C2 | student | must-not | no copying code from chatbots | Copy code/solutions from: No No No No
+135 | rutgers-new-brunswick | C2 | student | must-not | no AI to create or debug code | You MAY NOT use generative AI software (such as ChatGPT or GitHub Copilot) to create or debug programming assignment code.
+136 | rutgers-new-brunswick | C5 | student | must-not | proofs must not use GenAI | Please prepare the proof by yourself, not by GenAI.
+137 | san-jose-state | C1 | student | must-not | no AI-generated submissions | However, AI tools may NOT be used to generate work
+138 | san-jose-state | C6 | student | must-not | never copy code from AI | Never copy any code you
+139 | southern-california | C1 | student | must-not | no copying or viewing AI code | copying (and then modification) or just “viewing for reference” any portion of code from Internet sources (including AI or fellow students is prohibited unless explicitly cleared with the instructor
+140 | southern-california | C2 | student | must-not | no copying or viewing AI code | or just “viewing for reference” any portion of code from Internet sources (including AI or websites) or fellow students is prohibited.
+141 | southern-california | C3 | student | must-not | no LLM-written solutions | Having ChatGPT or any other LLM-based software write your solution or parts thereof.
+142 | stanford | C2 | student | should-not | no AI-written code on graded work | you should not use AI tools to write code/responses for you on assignments or any graded work.
+143 | stanford | C5 | student | must-not | no asking AI for answers | generative AI tools for answers or copy solutions,
+144 | stanford | C5 | student | must-not | AI completing work prohibited | The use of generative AI tools to substantially complete an assignment or exam (e.g. by directly copying) is prohibited
+145 | temple | C2 | student | must-not | no AI shortcut for assignments | Do not use generative AI tools as a shortcut to completing your assignments in the course.
+146 | temple | C6 | student | must-not | AI doing assignments prohibited | Using AI to complete all or parts of your assignments for you
+147 | texas-aandm | C3 | student | should-not | AI tools count as outsourcing | artificial intelligence tools like ChatGPT.
+148 | texas-arlington | C3 | student | must-not | no copying solutions including AI ones | Copying or looking at an existing solution for the entire homework or a significant
+149 | texas-arlington | C3 | student | must-not | no exception for inspiration or ideas | This is not allowed in any form, not even for
+150 | texas-arlington | C3 | student | must-not | no GenAI in developing homework | Any use of Generative AI in developing a homework solution
+151 | texas-austin | C2 | student | must-not | no acquiring solutions from any source | Students may not acquire from any source (e.g., another student, an
+152 | texas-austin | C2 | student | must-not | AI-generated or AI-fixed code is dishonesty | You are committing academic dishonesty if you use
+153 | texas-austin | C2 | student | must-not | AI-produced code is a violation | agentic AI to produce your code for you
+154 | texas-austin | C2 | student | must-not | no AI to write assignment code | You shall not use a generative AI
+155 | texas-austin | C2 | student | must-not | no code from web or AI | You shall not make use of code you find from other sources including
+156 | texas-austin | C5 | student | must-not | no AI output as own work | AI-generated code or text must not be submitted directly as a student's own work.
+157 | texas-austin | C6 | student | must-not | AI-generated solutions are dishonesty | GitHub Copilot, to generate your solutions---whether code or text---is also
+158 | texas-christian | C5 | student | must-not | no AI output in assignment | Incorporating any part of an AI-generated response in an assignment;
+159 | texas-christian | C6 | student | must-not | no AI output in assignment | Incorporating any part of an AI-generated response in an assignment;
+160 | texas-el-paso | C1 | student | must-not | no submitting AI work as own | you are not allowed to submit any AI-generated work in this course as your own.
+161 | texas-el-paso | C6 | student | must-not | no submitting AI work as own | That said, you are not allowed to submit any
+162 | texas-tyler | C4 | student | may | AI allowed to generate project code | AI will be allowed to generate code, presentations, and associated documentation.
+163 | texas-tyler | C4 | student | may | AI allowed to generate project code | AI will be allowed to generate code, presentations, and associated documentation.
+164 | tufts | C1 | student | must-not | no copying solutions including AI ones | Lifting partial or complete solutions from anyone (classmates, online sources,
+165 | uiuc | C1 | student | must | submitted code must be self-written | All homework and quiz code you submit must be written by you.
+166 | uiuc | C1 | student | must-not | no code from AI or others | Not by another student, not from the internet, and not by an AI assistant.
+167 | uiuc | C1 | student | must-not | no helper may produce submitted code | What you may not do is have any of them produce the code you turn in.
+168 | uiuc | C2 | student | must-not | no asking AI for the solution | Asking the AI to complete an assignment or produce a solution for you.
+169 | uiuc | C2 | student | must-not | no requests for solution code | or making any comparable request for solution code you should
+170 | uiuc | C2 | student | must-not | AI may not produce submitted code | it may not produce your product, i.e., the code you submit,
+171 | uiuc | C6 | student | must-not | no AI on weekly programming assignments | Do not use AI assistants or agentic coding tools to write, complete, or debug your solution.
+172 | vermont | C1 | student | should-not | don't rely on AI to produce work | you should not rely on others or online resources or generative AI to
+173 | virginia-commonwealth | C3 | student | must-not | no AI-generated entire solution | students may not use AI to generate an entire solution
+174 | virginia-commonwealth | C3 | student | must-not | no AI code submitted as own | generated code as their own work.
+175 | virginia-commonwealth | C6 | student | must-not | no turning in AI-written code | • You may not turn in code written by these generative AI
+176 | washington | C1 | student | must-not | no pasting AI output into work | You may not copy and paste any work generated by AI into any graded submission
+177 | washington | C1 | student | must-not | no AI generating assignment work | Generating code, comments, reflections, or any other work for an assignment
+178 | washington | C3 | student | must-not | no AI solving lab or homework | On the other hand, prompts that deal with solving parts your lab/homework are not permitted.
+179 | washington | C3 | student | must-not | no AI completing assignment | Asking generative AI to complete an assignment for you
+180 | washington | C3 | student | must-not | no AI language translation of code | Writing a code solution in a language you know and then
+181 | washington | C3 | student | must-not | no copying or starting from AI | Copying or starting a solution from generative AI.
+182 | washington | C6 | student | must-not | no AI to write code | Use AI tools to write code or solutions
+183 | wellesley-college | C1 | student | must-not | no search-found code solutions | you are not allowed to use these directly in your solutions.
+184 | wellesley-college | C2 | student | must-not | no AI-generated code | Generate code of any kind.
+185 | wellesley-college | C2 | student | must-not | no AI solving homework | Solve problems on your homework.
+186 | wellesley-college | C6 | student | must-not | no reusing AI-generated code | reuse or adapt any other code, including code found online or code from generative AI tools (e.g., ChatGPT, CoPilot, Bard, etc.).
+187 | wellesley-college | C6 | student | must-not | no AI to solve problems | use AI to solve any problem in the course.
+188 | wesleyan | C1 | student | must-not | no AI completing work | substantially complete an assignement or exam is prohibited.
+189 | west-chester-pennsylvania | C4 | student | should-not | no shortcutting to end goal | but not to fast-track you to the end goal
+190 | west-chester-pennsylvania | C4 | student | must-not | no AI completing lab | AI to complete the lab for you
+191 | williams-college | C1 | student | must-not | AI code generation violates Honor Code | technology (e.g. ChatGPT, Github Copilot) for code generation is
+192 | williams-college | C3 | student | must-not | no looking up solutions with AI | Looking up complete or partial solutions by using problem-specific prompts on the internet or AI tools

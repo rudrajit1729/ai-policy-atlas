@@ -1,0 +1,40 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT43 "AI homework hurts exam performance" (Relying on AI for homework leaves students unprepared for unaided quizzes and exams.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..15 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | bowdoin-college | C6 | all | informs | improper AI use hurts learning | improper use of AI is likely to compromise your learning and lead to poor performance on exams.
+1 | colorado-boulder | C3 | student | must | exams without external materials | To achieve any standard in the class, the student must solve problems on an exam without any external materials
+2 | colorado-state | C2 | all | informs | reason: no AI in exams | You will struggle with the in-classroom quizzes and exams where you will not have access to these tools.
+3 | dartmouth-college | C2 | all | informs | reason: no AI on exams | these tools will not be available on the midterms and final
+4 | kennesaw-state | C1 | all | informs | AI does not prepare for exams | Policy and will not help you prepare for the tests/exams
+5 | michigan-state | C1 | student | informs | warning: AI reliance hurts exams | Relying on AI to finish your assignments will affect your performance in the exams.
+6 | north-carolina-chapel-hill | C3 | student | should | warning: exams are closed-book | exams are closed-book, and so it is in your best interest to ensure you are not reliant on these tools.
+7 | northeastern | C3 | student | informs | warning: AI homework hurts exams | homework are the students who struggle on the midterms.
+8 | southern-california | C1 | instructor | informs | AI reliance risks exam readiness | using these forms of assistance very likely means you may NOT be prepared for the exams
+9 | stony-brook | C3 | instructor | informs | AI reliance risks exam performance | will not learn the material well enough to thrive on closed book/AI exams without experience in the actual design process.
+10 | uiuc | C1 | instructor | informs | homework is practice for proctored quiz | Every one of these problems is practice for a proctored quiz you will take without help,
+11 | uiuc | C2 | instructor | informs | past flagged students scored lower | In a previous semester, we flagged approximately 150
+12 | uiuc | C3 | student | informs | AI reliance hurts unplugged exams | Cause poor performance in unplugged exams and interviews
+13 | washington | C3 | all | informs | over-reliance harms preparation | consistent over-reliance on AI tools may prevent you from being
+14 | west-chester-pennsylvania | C4 | all | informs | AI crutch leaves unprepared | if you use AI as a crutch, you might get through the labs or assignments
+15 | yale | C3 | all | informs | AI homework hurts exam | then your punishment may just end up being

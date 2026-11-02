@@ -1,0 +1,30 @@
+Below are policies found in US computer-science course syllabi (generative-AI policies), all addressed to teaching assistants, staff and administrators. Each line:
+policy id | topic (policy type) | stage | universities | policy sentence.
+
+Task 1. MERGE policies that say the same thing, even when they sit under different topics or use different words.
+Judge both semantic equivalence (the same requirement, permission, prohibition or fact, worded differently) and latent
+equivalence (the same underlying intent and the same act asked of the same people, even if one is phrased as a rule and
+the other as advice). Examples of the same policy: "Students disclose any AI use in their submissions" and "Students
+acknowledge AI assistance on each assignment". Do NOT merge when the action differs, the object differs (code vs prose,
+data vs output), a condition differs materially (with permission vs always), or the direction differs (prohibit vs
+permit). Merely related or co-occurring policies stay separate. Be exhaustive: check every policy against all others.
+For each merged group give the member ids, one merged "sentence" (at most 20 words, naming the actor, stating the policy
+directly, adding nothing) and a one-line "why" they are the same.
+
+Task 2. Each policy whose stage is "general" has no stage yet. Give it one:
+  - if it asks someone to do or not do something at an identifiable point, its stage: before-course | course-start |
+    during-work | during-assessment | when-misuse | over-time;
+  - if it is a definition, scope statement, reason, value or fact with no time of action: "background".
+
+Return ONLY this JSON, no prose, no code fence:
+{"merges": [{"members": ["P24.03", "P96.02"], "sentence": "...", "why": "..."}],
+  "stages": [{"pid": "P61.01", "stage": "background"}]}
+List only groups of 2 or more in "merges". List every "general" policy in "stages".
+
+CT09.c05 | AI for debugging and error messages | during-work | 1 | Only course staff may provide solution-specific debugging assistance.
+CT30.c07 | Understand and explain every line | during-work | 1 | Course staff will not help students who do not understand their own code.
+CT31.c05 | Verify and test AI output | during-work | 1 | Course staff are not responsible for fixing bugs in AI-generated code.
+CT37.c07 | Penalties for AI misuse | when-misuse | 1 | Time spent on work that is not the student's own project is removed.
+CT38.c07 | Detecting AI use | during-work | 1 | Staff may review session transcripts.
+OTHER.c04 | Other | during-work | 1 | Teaching staff steer students back on track when they seem to give up on their learning.
+OTHER.c07 | Other | during-work | 1 | Staff and peer tutors are available to help students.

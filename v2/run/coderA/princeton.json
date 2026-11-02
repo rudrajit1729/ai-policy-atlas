@@ -1,0 +1,799 @@
+{
+ "university": "Princeton University",
+ "slug": "princeton",
+ "state": "NJ",
+ "type": "R1",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "princeton-scholarly",
+   "layer": "university",
+   "unit": "Office of the Dean of the College / Scholarly Integrity",
+   "course": null,
+   "title": "Disclosing Generative AI Use (students)",
+   "url": "https://scholarlyintegrity.princeton.edu/students/disclosing-generative-ai-use",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance_why": "The page says 'instructors may make generative AI off limits entirely' in some courses, permit 'limited use' in others, and invite broad experiments in some, and tells students their 'first responsibility is always to determine whether, how, and to what extent a given course allows you to use generative AI'. It sets no university-wide default on use, only a disclosure rule, so delegates.",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "The Office of the Dean of the College's scholarly-integrity page tells students that each course sets its own generative AI rules and that they must find out those rules and disclose any permitted use. It quotes Rights, Rules, Responsibilities 2.4, treats AI as an algorithm rather than a source, makes nondisclosure an integrity violation, and offers a disclosure template.",
+   "units": [
+    {
+     "why": "The passage says 'you will encounter a wide range of policies about generative AI depending on the learning goals for the course overall or for a particular assignment'. Rules vary by course and assignment, so P04 (let each instructor or assignment set the rule) fits; the audience is students and the modality informs.",
+     "anchor": "you will encounter a wide range of policies about generative AI",
+     "frag_start": "In your classes, you",
+     "frag_end": "for a particular assignment.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "default-stance"
+     ]
+    },
+    {
+     "why": "This sentence lists a possible outcome: 'instructors may make generative AI off limits entirely'. It leaves the choice to instructors and names no tiers, so P04 fits better than P05.",
+     "anchor": "instructors may make generative AI off limits entirely",
+     "frag_start": "In some cases, instructors",
+     "frag_end": "AI off limits entirely.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "may",
+     "policy_type": "P04",
+     "unit_stance": "prohibit",
+     "topics": [
+      "instructor-discretion",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "The sentence 'There may also be courses that focus on generative AI as a topic of study, inviting students to experiment broadly' describes courses where broad AI use is invited. It encourages AI use there, so P02 with a fit_note that this is course-specific, not a default.",
+     "anchor": "inviting students to experiment broadly with these new tools",
+     "frag_start": "There may also be",
+     "frag_end": "with these new tools.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P02",
+     "unit_stance": "encourage",
+     "topics": [
+      "permitted-uses",
+      "instructor-discretion"
+     ],
+     "fit_note": "Applies only to courses that study generative AI as a topic, not to a university-wide default."
+    },
+    {
+     "why": "'Your first responsibility is always to determine whether, how, and to what extent a given course allows you to use generative AI' puts a duty on students to learn the course rule before using AI. P10 covers asking when unsure, but this is an unconditional duty to find out, so UNCOVERED.",
+     "anchor": "determine whether, how, and to what extent a given course allows",
+     "frag_start": "Your first responsibility** is",
+     "frag_end": "to use generative AI.",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "must",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "accountability-understanding"
+     ],
+     "uncovered_note": "Students must find out for themselves what each course permits before using generative AI."
+    },
+    {
+     "why": "'your second responsibility is to always explicitly disclose your use of it' is a duty to disclose, conditional on AI being permitted. It belongs in P24 (disclose AI use with each submission); the actor is the student and the modality must.",
+     "anchor": "is to always explicitly disclose your use of it",
+     "frag_start": "When generative AI is",
+     "frag_end": "your use of it.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "The RRR quote says students 'are responsible for familiarizing themselves with and adhering to course and departmental policies regarding the use of generative AI'. Like the first-responsibility sentence it is a duty to know and follow the local rules, which no existing type captures, so UNCOVERED.",
+     "anchor": "responsible for familiarizing themselves with and adhering to course and departmental policies",
+     "frag_start": "Students are responsible for",
+     "frag_end": "use of generative AI.",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "must",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding",
+      "syllabus-communication"
+     ],
+     "uncovered_note": "Students must learn and follow the course and departmental AI policies that apply to them."
+    },
+    {
+     "why": "The RRR text says inappropriate uses 'would constitute violations of academic integrity'. It classifies improper AI use as an integrity violation, which is P36 (treat unauthorized AI use as academic misconduct). The listed behaviors are coded separately.",
+     "anchor": "would constitute violations of academic integrity",
+     "frag_start": "Inappropriate uses of the",
+     "frag_end": "violations of academic integrity.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "prohibit",
+     "topics": [
+      "integrity-sanctions",
+      "academic-integrity"
+     ]
+    },
+    {
+     "why": "The same sentence names 'directly copying the output' and 'representing output generated by or derived from generative AI as their own' as violations. This bans having AI produce the work one submits as one's own, P19.",
+     "anchor": "representing output generated by or derived from generative AI as their own",
+     "frag_start": "Inappropriate uses of the",
+     "frag_end": "violations of academic integrity.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P19",
+     "unit_stance": "prohibit",
+     "topics": [
+      "prohibited-uses",
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "'exceeding the parameters specified by the instructor' is named as a violation. It makes the instructor's limits binding on AI use; P04 captures that the instructor sets the rule, and the unit adds that exceeding it is a violation.",
+     "anchor": "exceeding the parameters specified by the instructor",
+     "frag_start": "Inappropriate uses of the",
+     "frag_end": "violations of academic integrity.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P04",
+     "unit_stance": "restrict",
+     "topics": [
+      "instructor-discretion",
+      "integrity-sanctions"
+     ],
+     "fit_note": "Also says that exceeding the instructor's AI parameters is itself an academic-integrity violation."
+    },
+    {
+     "why": "'failing to disclose its use' is listed as a violation of academic integrity. Nondisclosure as the violation is P28.",
+     "anchor": "failing to disclose its use",
+     "frag_start": "Inappropriate uses of the",
+     "frag_end": "violations of academic integrity.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P28",
+     "unit_stance": "prohibit",
+     "topics": [
+      "disclosure-citation",
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "The RRR text says generative AI 'is not a source, since its output is not produced by a person'. It sets AI apart from citable sources, which is neither P45 (AI like a human collaborator) nor a disclosure instruction itself, so UNCOVERED.",
+     "anchor": "generative artificial intelligence (AI) is not a source",
+     "frag_start": "As defined in section",
+     "frag_end": "produced by a person.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "uncovered_note": "Generative AI is defined as not a source because its output is not produced by a person."
+    },
+    {
+     "why": "'students must disclose its use rather than cite or acknowledge the use' is a disclosure rule: disclose, do not cite. It is P24 with a fit_note because it also says disclosure replaces citation.",
+     "anchor": "students must disclose its use rather than cite or acknowledge the use",
+     "frag_start": "If generative AI is",
+     "frag_end": "rather than a source.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "fit_note": "Says disclosure takes the place of citation or acknowledgment because AI is an algorithm, not a source."
+    },
+    {
+     "why": "'If generative AI is permitted by the instructor (for brainstorming, outlining, etc.)' gives brainstorming and outlining as example permitted uses, gated by the instructor. P15 (brainstorming) is the nearest type; fit_note notes the instructor gate.",
+     "anchor": "If generative AI is permitted by the instructor (for brainstorming, outlining, etc.)",
+     "frag_start": "If generative AI is",
+     "frag_end": "rather than a source.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P15",
+     "unit_stance": "permit",
+     "topics": [
+      "permitted-uses",
+      "instructor-discretion"
+     ],
+     "fit_note": "Brainstorming and outlining are only examples, and are allowed only if the instructor permits AI."
+    },
+    {
+     "why": "'students must not pass off any output by generative AI as their own' bars submitting AI output as one's own work, which is P19.",
+     "anchor": "students must not pass off any output by generative AI as their own",
+     "frag_start": "All the tenets of",
+     "frag_end": "a scholarly integrity violation.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P19",
+     "unit_stance": "prohibit",
+     "topics": [
+      "prohibited-uses",
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "'a failure of disclosure, even in a course where generative AI is permitted, is a scholarly integrity violation' makes nondisclosure the violation even when AI use is allowed. This is P28.",
+     "anchor": "a failure of disclosure, even in a course where generative AI is permitted",
+     "frag_start": "All the tenets of",
+     "frag_end": "a scholarly integrity violation.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P28",
+     "unit_stance": "prohibit",
+     "topics": [
+      "disclosure-citation",
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "'Check with your instructor about the disclosure template or use the template below' tells students to follow the instructor's disclosure format or the default template. It is a disclosure instruction, P24.",
+     "anchor": "Check with your instructor about the disclosure template or use the template below",
+     "frag_start": "Check with your instructor",
+     "frag_end": "use the template below.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation",
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "The template opens 'This document was created with assistance from AI tools. Specifically, I used [tool] for [purpose]' and asks for the tool and the purpose in the disclosure. Naming the tool and purpose is P25, though no prompt or output is required, hence the fit_note.",
+     "anchor": "This document was created with assistance from AI tools. Specifically, I used",
+     "frag_start": "This document was created",
+     "frag_end": "tools. Specifically, I used",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P25",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "fit_note": "Asks for tool and purpose (and pages affected) but not the prompt or output."
+    },
+    {
+     "why": "The template says 'I have reviewed and edited this work and have retained records of my generative AI use.' Students attest that they kept records. Records are kept, not submitted, so P26 is only a partial fit.",
+     "anchor": "have retained records of my generative AI use",
+     "frag_start": "I have reviewed and",
+     "frag_end": "my generative AI use.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P26",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation",
+      "accountability-understanding"
+     ],
+     "fit_note": "Students attest that they kept records; the template does not require submitting them, and also has them attest to reviewing and editing the work."
+    },
+    {
+     "why": "'different fields have different expectations for how to properly disclose—and in some disciplines, cite—generative AI' tells students that disclosure format varies by field. It is background to P24, coded P24 informs.",
+     "anchor": "different fields have different expectations for how to properly disclose",
+     "frag_start": "Be aware that different",
+     "frag_end": "some disciplines, cite—generative AI.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P24",
+     "unit_stance": "neutral",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "The MLA example expects 'a URL for accessing your conversation with the AI tool'. It gives the details a citation includes (bibliographic information, conversation link), so P25.",
+     "anchor": "provide a URL for accessing your conversation with the AI tool you used",
+     "frag_start": "For example, the Modern",
+     "frag_end": "AI tool you used",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "informs",
+     "policy_type": "P25",
+     "unit_stance": "neutral",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "The sentence links varied university rules to professional readiness: 'good preparation for the varied norms you will encounter in the professional world'. P44 is nearest; the fit_note says it frames rule-following, not AI skill.",
+     "anchor": "good preparation for the varied norms you will encounter in the professional world",
+     "frag_start": "Keep in mind that",
+     "frag_end": "in the professional world.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P44",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale",
+      "ai-literacy-career"
+     ],
+     "fit_note": "Frames following varied AI rules as preparation for professional norms rather than teaching effective AI use."
+    },
+    {
+     "why": "'Some industries may have very strict use policies to assure client privacy, uphold license agreements, and protect data' names privacy, license and data obligations in professional AI use. P50 is nearest but this is about industry practice, hence the fit_note.",
+     "anchor": "very strict use policies to assure client privacy, uphold license agreements, and protect data",
+     "frag_start": "Some industries may have",
+     "frag_end": "agreements, and protect data.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data",
+      "ai-literacy-career"
+     ],
+     "fit_note": "Describes industry policies on privacy and licenses as a reason to learn field norms, not a rule for students."
+    }
+   ]
+  },
+  {
+   "id": "princeton-mcgraw",
+   "layer": "university",
+   "unit": "McGraw Center for Teaching and Learning",
+   "course": null,
+   "title": "Generative AI (McGraw Center)",
+   "url": "https://mcgraw.princeton.edu/generative-ai",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance_why": "The page says 'Faculty are empowered to set AI policies for their courses' and offers sample language and guidance rather than a rule of its own. It states no default for students, so delegates.",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "The McGraw Center's landing page frames AI as a teaching challenge and defines generative and agentic AI. It leaves policy to faculty, offers sample language, recommends talking with students about risks, recommends against detectors, and links to guidance on AI-resilient assignments and oral exams.",
+   "units": [
+    {
+     "why": "The page says 'Generative AI creates human-like output — text, code, images, music, and other forms of media.' It defines the term that sets what the guidance covers, so P61 informs.",
+     "anchor": "Generative AI creates human-like output — text, code, images, music, and other forms of media",
+     "frag_start": "Generative AI creates human-like",
+     "frag_end": "other forms of media.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "governance"
+     ]
+    },
+    {
+     "why": "'AI agents can act on your behalf' defines agentic AI, which widens the scope of the guidance to agents. P61 (definition and scope) fits better than P07 because no rule about agents is stated.",
+     "anchor": "AI agents can act on your behalf",
+     "frag_start": "Agentic AI is built",
+     "frag_end": "act on your behalf.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "governance"
+     ]
+    },
+    {
+     "why": "The president's line 'may tempt us to skip the journey that makes learning possible' states the concern that AI shortcuts the practice that builds learning. P41 fits.",
+     "anchor": "may tempt us to skip the journey that makes learning possible",
+     "frag_start": "The easy availability of",
+     "frag_end": "that makes learning possible…",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P41",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "'advise you to review the University's policies on AI' tells instructors to read the university policy before setting course rules. P77 is nearest because it ties course practice to existing university policy; the fit_note says it is advice to instructors.",
+     "anchor": "advise you to review the University’s",
+     "frag_start": "We have developed this",
+     "frag_end": "to review the University’s",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "governance",
+      "instructor-discretion"
+     ],
+     "fit_note": "Advises instructors to read the university policy; does not state a compliance duty."
+    },
+    {
+     "why": "'We recognize that AI will continue to develop ... and will regularly update these pages' says the guidance is provisional and will be updated. P54.",
+     "anchor": "We recognize that AI will continue to develop",
+     "frag_start": "We recognize that AI",
+     "frag_end": "regularly update these pages.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "informs",
+     "policy_type": "P54",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "'We also invite you to consult with us' offers consultations to faculty on AI. Consultation and support for faculty learning is P63.",
+     "anchor": "We also invite you to",
+     "frag_start": "We also invite you",
+     "frag_end": "also invite you to",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use",
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "'Faculty are empowered to set AI policies for their courses.' The university leaves the policy to each instructor, which is P04.",
+     "anchor": "Faculty are empowered to set AI policies for their courses",
+     "frag_start": "Faculty are empowered to",
+     "frag_end": "policies for their courses.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "default-stance"
+     ]
+    },
+    {
+     "why": "'Here we offer guidance on setting a policy and sample language you can use or adapt for your classes.' It provides sample policy wording for instructors. P63 (support for faculty) is the nearest type; the fit_note says it is sample syllabus language.",
+     "anchor": "sample language you can use or adapt for your classes",
+     "frag_start": "Here we offer guidance",
+     "frag_end": "adapt for your classes.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "instructor-discretion"
+     ],
+     "fit_note": "Offers sample policy language that instructors may adapt, not workshops or consultations."
+    },
+    {
+     "why": "'We recommend that faculty talk with their students about the risks associated with generative AI.' This asks instructors to discuss risks with students, P66.",
+     "anchor": "We recommend that faculty talk with their students about the risks associated with generative AI",
+     "frag_start": "We recommend that faculty",
+     "frag_end": "associated with generative AI.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P66",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment",
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "'AI impacts classroom dynamics, peer interactions, and the social experience of learning.' The page points to early reports and studies on this, so it concerns evidence on how AI affects learning, P55.",
+     "anchor": "AI impacts classroom dynamics, peer interactions, and the social experience of learning",
+     "frag_start": "AI impacts classroom dynamics,",
+     "frag_end": "social experience of learning.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "over-time",
+     "modality": "informs",
+     "policy_type": "P55",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale",
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "'Generative AI requires us to be very intentional about assignment design.' The page offers guidance on designing 'AI resilient' assignments, which is redesigning assignments around AI, P35.",
+     "anchor": "Generative AI requires us to be very intentional about assignment design",
+     "frag_start": "Generative AI requires us",
+     "frag_end": "intentional about assignment design.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design"
+     ]
+    },
+    {
+     "why": "'Faculty may want to experiment with AI as a tool for teaching and learning.' It invites instructors to use AI in their teaching, so P59 (instructor use of AI for teaching work), with a fit_note that it also covers student-facing activities.",
+     "anchor": "Faculty may want to experiment with AI as a tool for teaching and learning",
+     "frag_start": "Faculty may want to",
+     "frag_end": "for teaching and learning.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P59",
+     "unit_stance": "encourage",
+     "topics": [
+      "instructor-staff-use",
+      "permitted-uses"
+     ],
+     "fit_note": "Also suggests activities and assignments that ask students to engage with the technology."
+    },
+    {
+     "why": "'We recommend against using AI detection tools to determine if students have violated your AI policy.' This is advice not to rely on detectors, P39.",
+     "anchor": "We recommend against using AI detection tools to determine if students",
+     "frag_start": "We recommend against using",
+     "frag_end": "violated your AI policy.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should-not",
+     "policy_type": "P39",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools",
+      "integrity-sanctions"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "princeton-libguide",
+   "layer": "university",
+   "unit": "University Library",
+   "course": null,
+   "title": "Disclosing the Use of AI (Library research guide)",
+   "url": "https://libguides.princeton.edu/generativeAI/disclosure",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance_why": "The guide says students 'must confirm AI is permitted by an instructor and disclose the use of AI', so the instructor decides whether AI is allowed and the guide adds only a disclosure rule. Most of the page covers publisher policies, so delegates.",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "The Library's research guide restates the Rights, Rules, Responsibilities rule that students confirm instructor permission and disclose AI use, then mostly covers publisher AI policies, disclosure tools and citation styles for research and publication.",
+   "units": [
+    {
+     "why": "The guide says students 'must confirm AI is permitted by an instructor' before using it. That requires checking permission first; P10 is nearest, with a fit_note that this is a requirement, not only advice when unsure.",
+     "anchor": "students must confirm AI is permitted by an instructor",
+     "frag_start": "Princeton University students must",
+     "frag_end": "in any academic work.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P10",
+     "unit_stance": "restrict",
+     "topics": [
+      "permitted-uses",
+      "instructor-discretion"
+     ],
+     "fit_note": "Stated as a firm requirement to confirm permission before any use, not advice for students who are unsure."
+    },
+    {
+     "why": "The same sentence requires students to 'disclose the use of AI in any academic work', a disclosure duty, P24.",
+     "anchor": "disclose the use of AI in any academic work",
+     "frag_start": "Princeton University students must",
+     "frag_end": "in any academic work.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "'Princeton's AI disclosure policy aligns with broader conventions about AI and authorship in academic publishing' connects the student rule to publishing norms. Scholarship and publication rules are P62.",
+     "anchor": "aligns with broader conventions about AI and authorship in academic publishing",
+     "frag_start": "Princeton's AI disclosure policy",
+     "frag_end": "authorship in academic publishing.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P62",
+     "unit_stance": "neutral",
+     "topics": [
+      "disclosure-citation",
+      "research-use"
+     ]
+    },
+    {
+     "why": "'If this information is not available for a specific publisher, authors and reviewers should reach out to the publisher or editor' defers to venue rules, which P62 names.",
+     "anchor": "authors and reviewers should reach out to the publisher or editor",
+     "frag_start": "If this information is",
+     "frag_end": "the use of AI.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P62",
+     "unit_stance": "neutral",
+     "topics": [
+      "research-use",
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "The Elsevier passage says authors 'should document their use of AI, including the name of the AI Tool used, the purpose of the use, and the extent of their oversight'. It is a publisher rule on research writing, so P62, not P25 which is for course citations; the fit_note records the tool and purpose detail.",
+     "anchor": "document their use of AI, including the name of the AI Tool used",
+     "frag_start": "Authors should document their",
+     "frag_end": "extent of their oversight.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P62",
+     "unit_stance": "permit",
+     "topics": [
+      "research-use",
+      "disclosure-citation"
+     ],
+     "fit_note": "Quotes a publisher's disclosure content (tool, purpose, oversight), which resembles P25 but is for manuscripts."
+    },
+    {
+     "why": "The Science passage says 'Authors are accountable for the accuracy of the work and for ensuring that there is no plagiarism.' It is a publisher accountability rule for AI-assisted manuscripts, so P62.",
+     "anchor": "Authors are accountable for the accuracy of the work",
+     "frag_start": "Authors are accountable for",
+     "frag_end": "there is no plagiarism.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P62",
+     "unit_stance": "neutral",
+     "topics": [
+      "research-use",
+      "accountability-understanding"
+     ],
+     "fit_note": "Accountability for accuracy and plagiarism (P29, P31) in a publisher setting."
+    },
+    {
+     "why": "'Publishers emphasize that authors are accountable for their submitted work, so it is important to review publisher policies for changes' tells authors to check venue policies. P62.",
+     "anchor": "it is important to review publisher policies for changes",
+     "frag_start": "Publishers emphasize that authors",
+     "frag_end": "or review you submit.",
+     "policy": null,
+     "actor": "all",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P62",
+     "unit_stance": "neutral",
+     "topics": [
+      "research-use",
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "'Tools and use taxonomies are being developed to help identify AI use and draft disclosure statements' points students to disclosure builders. It supports disclosure (P24); the tools are optional starting points.",
+     "anchor": "help identify AI use and draft disclosure statements",
+     "frag_start": "Tools and use taxonomies",
+     "frag_end": "variety of use cases.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P24",
+     "unit_stance": "neutral",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "fit_note": "Offers optional disclosure-statement tools and says they may not meet an instructor's full requirements."
+    },
+    {
+     "why": "'it is possible that traditional citation for an AI prompt or output will be necessary in some contexts' says a citation of prompt or output may be required, which is P25.",
+     "anchor": "traditional citation for an AI prompt or output will be necessary in some contexts",
+     "frag_start": "While many publishers prohibit",
+     "frag_end": "necessary in some contexts.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "informs",
+     "policy_type": "P25",
+     "unit_stance": "neutral",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "'Different citation styles take different approaches, so check with the citation style preferred by your field and the publisher.' It tells users to follow the style's format for AI citations, P25.",
+     "anchor": "check with the citation style preferred by your field and the publisher",
+     "frag_start": "Different citation styles take",
+     "frag_end": "field and the publisher.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P25",
+     "unit_stance": "neutral",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "'please reach out to your Princeton University Library subject specialist' directs users to a librarian for help with citations. P72 (human help).",
+     "anchor": "please reach out to your Princeton University Library subject specialist",
+     "frag_start": "If you have any",
+     "frag_end": "University Library subject specialist",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P72",
+     "unit_stance": "neutral",
+     "topics": [
+      "disclosure-citation"
+     ]
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Course layer deferred in collect file. RRR 2.4 itself was not collected; its text is coded only as quoted in the scholarly-integrity page. Two scholarly-integrity sentences (first responsibility; RRR familiarize-with-policies) coded UNCOVERED: student duty to find out and follow local AI rules."
+}

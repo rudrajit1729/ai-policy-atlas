@@ -1,0 +1,400 @@
+Each numbered statement below comes from a CS course syllabus passage about generative AI that was coded after the
+course policies were built. Decide for each:
+  "place": it states one of the existing COURSE POLICIES listed below (same meaning, same actor) -> give that policy id;
+  "new": it states a course policy none of them states -> give "sentence" (the policy stated directly, at most 20 words,
+         naming its actor), "actor" (student|instructor|ta-staff|all) and "stage" (one of before-course|course-start|during-work|during-assessment|when-misuse|over-time|background);
+  "not_ai": it is not about AI (generic course or integrity rules).
+Statements from the same passage that state the same new policy must get the identical "sentence".
+Return ONLY this JSON, no prose, no code fence:
+{"decisions": [{"n": 0, "decision": "place", "pid": "CT17.c02"}, {"n": 1, "decision": "new", "sentence": "...", "actor": "student", "stage": "during-work"}]}
+Decide every statement.
+
+STATEMENTS (n | university | course slot | course topic | actor | force | coder label | original wording)
+0 | buffalo-suny | C3 | Penalties for AI misuse | student | informs | AI use earns course grade F | Using ChatGPT/Generative AI for your homeworks will result in an immediate course grade of
+1 | washington | C3 | Ask staff when unsure | student | should | ask staff when unsure | don't hesitate to reach out to the course staff about the situation!
+2 | harvard | C2 | AI misuse as misconduct | student | informs | misuse is integrity and honor violation | Inappropriate use of generative AI systems such as LLMs is a
+3 | north-texas | C3 | AI misuse as misconduct | student | informs | AI use is integrity violation | Using GenAI to complete any part of an assignment, exam, or coursework will be considered
+4 | stanford | C2 | AI misuse as misconduct | student | informs | AI-written work violates honor code | Doing so is a violation of the Stanford Honor Code.
+5 | washington | C3 | AI output is unreliable or insecure | all | informs | AI code risks university reputation | not understand could expose the university to loss of reputation or
+6 | harvard | C2 | AI for understanding concepts and material | student | may | AI allowed for clarifying concepts | Good uses can be very helpful for clarifying concepts and improving
+7 | old-dominion | C6 | AI for understanding concepts and material | student | should | AI encouraged for understanding and review | I encourage you to use these tools to help deepen your understanding and to review material you find challenging.
+8 | washington | C3 | AI for understanding concepts and material | student | may | AI allowed to explain topics | Explain a given topic, or to provide an example of how programming constructs are used.
+9 | washington | C3 | AI for understanding concepts and material | student | may | AI allowed to explain code | Explain provided code or your program one line at a time.
+10 | buffalo-suny | C3 | AI writing submitted code or solutions | student | informs | ban covers programming questions too | questions on the homeworks (including the programming question).
+11 | old-dominion | C6 | AI writing submitted code or solutions | student | should | AI assists but must not replace work | These tools are best used to help you work smarter, not do your work for you.
+12 | old-dominion | C6 | AI writing submitted code or solutions | student | must-not | no whole assignment to AI | Students may not submit an entire assignment, homework question, or programming task to a generative AI tool
+13 | stanford | C2 | AI writing submitted code or solutions | student | should-not | no AI-written code for graded work | you should not use AI tools to write code/responses for you on assignments or any graded work.
+14 | washington | C3 | AI writing submitted code or solutions | student | must-not | AI completing assignment not allowed | Asking generative AI to complete an assignment for you -
+15 | washington | C3 | AI writing submitted code or solutions | student | must-not | no AI code translation to required language | Writing a code solution in a language you know and then
+16 | washington | C3 | AI writing submitted code or solutions | student | must-not | no AI prompts solving lab or homework | prompts that deal with solving parts your lab/homework are not permitted.
+17 | california-polytechnic-state-san-luis-obispo | C5 | Default stance: AI allowed or encouraged | student | may | AI tools allowed in AI course | Since most of my classes have an AI component, I am open to the use of such tools.
+18 | harvard | C2 | Default stance: AI allowed or encouraged | student | informs | LLM use not banned outright | This doesn’t mean that LLMs should never be used.
+19 | old-dominion | C6 | Default stance: AI allowed or encouraged | student | may | AI tools permitted to some extent | The use of ChatGPT or other AI tools is permitted to some extent in this class.
+20 | washington | C3 | AI for debugging and error messages | student | may | AI allowed to explain errors | Explain the meaning of error messages.
+21 | buffalo-suny | C3 | Default stance: AI not allowed | student | must-not | generative AI banned on homework | allowed to use ChatGPT (or any other generative AI tool) for your homeworks
+22 | north-texas | C3 | Default stance: AI not allowed | student | must-not | generative AI not permitted | ChatGPT, Gemini, etc. is not permitted.
+23 | harvard | C2 | Work must be one's own | student | should | submitted work must be own | that you turn in as your work in the course should have been generated
+24 | north-texas | C3 | Work must be one's own | all | informs | tools blur authorship | allowed as they blur authorship and misrepresent your independent work.
+25 | north-texas | C3 | Work must be one's own | student | must | all work must be own | work. All work must be
+26 | old-dominion | C2 | Work must be one's own | student | must | submitted code must be own | and the code submitted must be students' own.
+27 | harvard | C2 | AI undermines learning | all | informs | programming learned by doing | learned by doing, not by watching someone else.
+28 | harvard | C2 | AI undermines learning | student | should-not | AI doing your work is bad use | Bad uses usurp the learning by doing your work for you.
+29 | north-texas | C3 | AI undermines learning | all | informs | AI undermines independent thinking | they do not align with our goal of fostering the development of your independent thinking.
+30 | old-dominion | C6 | AI undermines learning | student | informs | blind AI homework use harms learning | If you use them to blindly do your homework for you, your learning will suffer and it will be obvious.
+31 | stanford | C1 | AI undermines learning | all | informs | AI gives away the solution | Why this is not allowed: virtually any AI would give you too much information about the problem,
+32 | stanford | C1 | AI undermines learning | all | informs | programming learned by figuring it out | One of the key ways to learn how to program is to
+33 | stanford | C2 | AI undermines learning | all | informs | students must build own skills | it is important that you develop your own skills and abilities to write, debug and think critically.
+34 | washington | C3 | AI undermines learning | all | informs | AI reliance denies learning | and relying on AI tools to complete tasks denies you the
+35 | washington | C3 | AI undermines learning | student | must-not | no use that blocks learning | Any use that may prevent your personal academic growth
+36 | stanford | C2 | Other | student | should | use support resources instead | please take advantage of the support resources above - we are eager to help!
+37 | washington | C3 | Other | all | informs | AI misuse harms other students | You could expose other students to harm
+38 | washington | C3 | Other | all | informs | AI misuse burdens faculty | the use of AI tools requires time and energy, and is emotionally
+39 | washington | C3 | Other | student | should | use support hours when stuck | visit support hours or post on the Ed discussion board
+40 | washington | C3 | Verify and test AI output | student | should | double-check AI output | then you should always double-check the content.
+41 | washington | C3 | Verify and test AI output | student | must | student responsible for AI content accuracy | content then you are responsible for the accuracy and correctness
+42 | california-polytechnic-state-san-luis-obispo | C5 | Disclosing AI use | student | must | must disclose AI use | If you use them, I expect you to disclose this
+43 | california-polytechnic-state-san-luis-obispo | C5 | Disclosing AI use | student | must | state student versus AI contributions | to include a statement about the contributions that you made and the ones generated by AI tools
+44 | old-dominion | C2 | Disclosing AI use | student | must | must cite AI sources | The students must properly cite the sources of that,
+45 | old-dominion | C2 | Disclosing AI use | student | must | must cite online code | and any other code found on the Internet, according to the guidelines provided below.
+46 | old-dominion | C6 | Disclosing AI use | student | must | must list references consulted | For all homework assignments, you must include a list of websites or other references that you consult in solving the assignment.
+47 | old-dominion | C6 | Benefits of AI for learning | all | informs | experience with AI tools is valuable | These tools are being rapidly adopted, so it is important that you have some experience with their use.
+48 | old-dominion | C2 | AI for brainstorming and planning | student | may | AI allowed for getting ideas | ChatGPT and such tools may be used to get some ideas
+49 | washington | C3 | AI homework hurts exam performance | all | informs | over-reliance harms later preparation | consistent over-reliance on AI tools may prevent you from being
+50 | north-texas | C3 | Pointer to other policies | instructor | informs | violations follow integrity policy | be addressed according to the Student Academic Integrity policy.
+51 | old-dominion | C6 | Pointer to other policies | all | informs | policy applies only to this course | Note that this policy applies only to CS 471/571 and does not imply that generative AI tools are permitted in other courses
+52 | washington | C3 | Pointer to other policies | student | must | AI use must follow course policy | that it is in line within course policy.
+53 | north-texas | C3 | AI for documentation, comments and formatting | student | must-not | writing and translation aids banned too | Grammarly, spellcheck, predictive text, speech -to-text, and translation tools, etc. are not
+54 | old-dominion | C6 | Prompts, transcripts and logs | student | must | must submit AI conversation record | You must include the website for the tool and either a link to, or screenshot of, the conversation you had with the tool.
+55 | old-dominion | C6 | Prompts, transcripts and logs | student | must | must report initial prompt used | You must also write out in your homework report the initial prompt that you used.
+56 | washington | C3 | Understand and explain every line | student | should | must understand generated code | It is important that you understand how any generated code works
+57 | washington | C3 | Rules vary by assignment or deliverable | student | must-not | no AI on forbidden assessments | Using AI tools on official assessments where uses have been
+58 | old-dominion | C6 | Careers and industry | all | informs | AI shortcuts hurt later success | Using aids just to complete an assignment in the quest for high marks will not help you after you leave school.
+59 | washington | C3 | Careers and industry | student | should | learn AI for industry jobs | after graduation at your job. Therefore, you should learn to use
+60 | harvard | C2 | Default stance: AI discouraged but allowed | student | should | when in doubt avoid AI | it’s undoubtedly bad. Avoid it.
+61 | washington | C3 | Fundamentals before AI | student | should | master basics before using AI | It is important to understand that you need to master simple
+62 | stanford | C1 | Entering assignments, course materials or own code into AI | student | must-not | no sharing code or assignment questions | share any code or direct assignment questions to an AI for help.
+63 | harvard | C2 | Ask AI for explanations, not code | student | informs | why-questions are appropriate queries | You can often identify appropriate queries because they are
+64 | old-dominion | C6 | Ask AI for explanations, not code | student | should | AI allowed as learning aid only | AI tools should be used only as learning aids (e.g., asking for explanations of concepts, debugging hints, or clarifications)
+65 | stanford | C1 | Ask AI for explanations, not code | student | may | AI allowed for general programming help | help on programming, or general algorithms and data structures.
+66 | stanford | C1 | Ask AI for explanations, not code | student | informs | conceptual language questions are allowed | I don’t understand how when I would use a set over a vector in C++.
+67 | stanford | C2 | Ask AI for explanations, not code | student | should | only high-level AI questions allowed | high level questions, citations where needed, etc.
+68 | stanford | C1 | AI under collaboration rules | student | must | treat AI like a human helper | Rule 3: You must treat any artificial intelligence help (e.g., ChatGPT, Claude, etc.) as if it was a real human person.
+69 | stanford | C2 | AI under collaboration rules | student | should | use AI like asking a classmate | you should only use AI tools in the same way that you would ask a friend in the class for help,
+70 | washington | C3 | AI for study and practice | student | may | AI allowed for similar examples | Produce an example that is similar to assignment questions.
+
+COURSE POLICIES (id | actor | stage | sentence)
+CT04.c03 | instructor | before-course | Instructors may permit AI use or grant exceptions for specific assignments.
+CT35.c08 | instructor | before-course | The instructor reduces program weight and designs projects for humans with minimal AI.
+CT04.c02 | instructor | before-course | Individual instructors may disallow AI entirely for assignments.
+CT04.c04 | instructor | before-course | Class AI policies are decided by individual faculty.
+CT01.c02 | student | course-start | Students must not use AI at all in this course, for any purpose.
+CT02.c01 | student | course-start | Students are encouraged or welcome to use AI tools in this course.
+CT04.c05 | instructor | course-start | Instructors state in each assignment whether and how AI may be used.
+CT02.c02 | instructor | course-start | The instructor welcomes, embraces or does not ban AI tools.
+CT38.c05 | instructor | course-start | Instructors and TAs can easily recognize AI-generated work, and students will be caught.
+CT40.c05 | instructor | course-start | The course's AI restrictions exist to protect learning, original thought and authentic understanding.
+CT47.c01 | student | course-start | Using AI is optional, and students may opt out.
+CT45.c03 | all | course-start | Using AI is a skill the course wants students to learn and be exposed to.
+CT48.c02 | all | course-start | University and department AI policies also apply in this course.
+CT48.c01 | all | course-start | Detailed AI policy is given elsewhere in the course materials.
+CT36.c06 | student | course-start | Students are accountable for their AI use under the university's academic integrity or dishonesty policy.
+CT49.c01 | instructor | course-start | The course teaches students to use AI tools and coding agents to build software, with emphasis on experimentation.
+CT46.c07 | student | course-start | Students are not required to pay for AI tools.
+CT02.c03 | all | course-start | The course assumes students will use AI tools for coding and programming projects.
+CT04.c14 | all | course-start | AI rules vary by assignment or deliverable.
+CT38.c04 | instructor | course-start | The instructor does not use AI detectors or actively look for AI use, because detectors are unreliable.
+CT46.c03 | student | course-start | Course chatbot interactions are logged, and enrollment implies consent to use of student submissions.
+CT47.c02 | instructor | course-start | The course is designed so students can earn full marks without using AI.
+CT01.c09 | instructor | course-start | ChatGPT and other generative AI tools are not part of the official toolkit.
+CT02.c13 | instructor | course-start | The instructor recommends Claude.
+CT07.c01 | all | course-start | The course adopts the department's defined AI usage levels.
+CT08.c04 | instructor | course-start | The instructor encourages students to use AI to deepen understanding and review challenging material.
+CT16.c04 | instructor | course-start | The course offers its own AI chatbot as a resource.
+CT25.c16 | all | course-start | The instructor will disclose their own use of generative AI and expects the same from students.
+CT25.c17 | instructor | course-start | The instructor gives examples of what a proper attribution looks like.
+CT43.c04 | instructor | course-start | Homework problems are practice for proctored quizzes that students take without help.
+CT46.c04 | instructor | course-start | The instructor does not consent to class being recorded by AI tools.
+CT46.c06 | student | course-start | Students must purchase a Claude Pro subscription for the project and should expect two to three months of cost.
+CT46.c12 | instructor | course-start | The instructor judges the resource costs of students using AI on this task to be acceptable.
+CT47.c04 | instructor | course-start | Exceptions to the AI policy are made only for approved circumstances, including accommodations case by case.
+CT48.c04 | student | course-start | Students should read the department's supplemental academic integrity policy.
+CT48.c05 | all | course-start | Labs have the same AI policy as the lecture section.
+CT48.c06 | all | course-start | This AI policy applies only to this course.
+CT49.c02 | all | course-start | The course teaches how LLMs aid software engineering tasks.
+CT49.c03 | instructor | course-start | The course is not about writing prompts to have an AI do your work.
+CT49.c04 | instructor | course-start | Responsible use of AI is part of what the course teaches.
+OTHER.c08 | instructor | course-start | The instructor provides no explicit support or training in using AI tools.
+OTHER.c24 | all | course-start | The class decides the policy on using AI coding assistants.
+CT17.c03 | student | during-work | Students must not ask AI to produce answers, solutions or code for graded assignments.
+CT25.c01 | student | during-work | Students must disclose or cite any AI use in their work, including permitted use.
+CT08.c01 | student | during-work | Students may ask AI to explain course concepts and material.
+CT17.c02 | student | during-work | Students must not submit AI-generated code or text as their own work.
+CT30.c02 | student | during-work | Students must understand and be able to explain all code they submit.
+CT06.c01 | student | during-work | Students should ask staff when unsure whether an AI use or tool is allowed.
+CT17.c01 | student | during-work | Students must not use AI to write or generate code for assignments.
+CT20.c02 | student | during-work | Students must not use AI coding assistants or autocomplete such as Copilot.
+CT31.c01 | student | during-work | Students must verify and critically evaluate AI output before using it.
+CT04.c01 | student | during-work | Students may use AI only when the instructor or assignment explicitly permits it.
+CT01.c01 | student | during-work | Students must not use generative AI on graded work, assignments, homework, projects or exams.
+CT17.c04 | student | during-work | Students must not copy or look up solutions or code from online sources, including AI.
+CT31.c03 | student | during-work | Students are accountable for all content they submit, including AI-generated content.
+CT02.c04 | student | during-work | Students may use AI on coursework, assignments, homework and projects.
+CT23.c01 | student | during-work | Students must not use AI to write essays, reports, reflections, analyses, or other prose deliverables.
+CT25.c08 | student | during-work | Students must place the AI disclosure in a specified location in their submission, such as a file, README, appendix, or checkbox.
+CT27.c01 | student | during-work | Students must include the prompts they used, in a file, README, comments, or the hand-in.
+CT25.c11 | student | during-work | Students must cite all sources and outside help, including AI, as they would any source.
+CT40.c08 | student | during-work | Students should use AI to support their learning, never to replace it.
+CT32.c04 | student | during-work | Students must not use AI in place of their own thinking and work.
+CT22.c01 | student | during-work | Students must not paste or upload assignment text, instructions, or questions into AI tools.
+CT36.c03 | student | during-work | Students must not use AI without instructor permission, attribution or disclosure; such use violates integrity policy.
+CT06.c04 | student | during-work | Students should seek help from course staff rather than from AI.
+CT02.c10 | student | during-work | Students must use AI responsibly and within the stated limits and policies.
+CT30.c05 | instructor | during-work | Instructors may question students live or in interviews to check they understand their code.
+CT02.c08 | student | during-work | Students may use AI to support their learning and understanding.
+CT03.c01 | student | during-work | Students may use AI, but are discouraged from it.
+CT33.c05 | student | during-work | Students must not use AI, which counts as forbidden outside help.
+CT13.c01 | student | during-work | Students may use AI for exam study, self-testing and practice problems.
+CT10.c01 | student | during-work | Students may use AI to review, critique or suggest improvements to code, proofs or algorithms they wrote themselves.
+CT14.c01 | student | during-work | Students may use AI to brainstorm ideas, find topics and research before writing their own work.
+CT25.c02 | student | during-work | Students must describe how, why, and to what extent AI was used, for example by giving the prompt.
+CT38.c01 | instructor | during-work | The instructor runs similarity and plagiarism tools on submissions, including AI-generated solutions and code found online.
+CT33.c06 | student | during-work | Students may use AI as a consultant or limited helper, not as an author.
+CT01.c08 | student | during-work | The AI ban covers any use at every stage, including planning, checking, formatting, brainstorming, writing and debugging.
+CT26.c01 | student | during-work | Students must cite or disclose AI use in comments within their code.
+CT17.c05 | student | during-work | Students must not use AI to debug or fix their own code.
+CT04.c06 | student | during-work | Students may use AI on projects (final, team or capstone), sometimes only for debugging or non-core parts.
+CT08.c02 | student | during-work | Students may use AI to explain code, syntax, language features and error messages.
+CT15.c01 | student | during-work | Students may use AI like a search engine to look up and summarize information.
+CT27.c02 | student | during-work | Students must submit the full conversation, transcript, or session record of their AI interactions.
+CT32.c05 | student | during-work | Students must write their own code and must not copy, share, or submit code they did not write.
+CT33.c01 | student | during-work | Students should use AI only as they would a friend, classmate, or outside helper.
+CT17.c06 | student | during-work | Students must produce the work they submit themselves.
+CT04.c07 | student | during-work | Students may use AI for limited listed uses such as learning, open-format homework or study, with citation.
+CT09.c01 | student | during-work | Students may use AI to interpret or explain error messages, but not to provide a fix.
+CT22.c03 | student | during-work | Students must not upload or paste course materials, including copyrighted or protected ones, into AI tools.
+CT25.c03 | student | during-work | Students must name the AI tool used in their disclosure or citation, including its version.
+CT26.c02 | student | during-work | Students must mark exactly which lines, functions or classes AI generated.
+CT26.c06 | student | during-work | Students must cite code from online or other outside sources, including AI, in comments.
+CT18.c02 | student | during-work | Students may draw on AI code examples but must rewrite rather than copy them.
+CT01.c04 | student | during-work | Students must not use named AI tools such as ChatGPT, Copilot, Claude or Gemini.
+CT02.c05 | student | during-work | Students may use AI as they see fit without needing permission.
+CT03.c03 | student | during-work | Students should use AI only sparingly, with caution, and as a supplement to learning.
+CT08.c05 | student | during-work | Students may use AI only for learning concepts, not for other course work.
+CT09.c02 | student | during-work | Students may use AI for debugging help, hints, and code explanations.
+CT19.c04 | student | during-work | Students should use AI as a learning aid for clues, not as a homework assistant.
+CT22.c02 | student | during-work | Students must not upload, post, or share their own code with AI tools or chatbots.
+CT25.c04 | student | during-work | Students must state which parts of their work are AI-generated and which are their own contribution.
+OTHER.c17 | student | during-work | Students are invited to share their AI experiences and feedback.
+CT02.c06 | student | during-work | Students may use AI to help with coding, programming and debugging.
+CT10.c02 | student | during-work | Students must not use AI to check, proofread or iterate on their own work.
+CT42.c06 | student | during-work | Students should be cautious with AI and understand its limitations.
+CT34.c06 | student | during-work | Students must not use AI in class or discussions unless the instructor permits.
+CT05.c01 | student | during-work | Students must assume AI is not allowed when an assignment gives no instructions about AI.
+CT08.c03 | student | during-work | Students may use AI to get example programs and review examples to learn from.
+CT12.c02 | student | during-work | Students may use AI for formatting, LaTeX, proofreading and editing non-code documents.
+CT16.c02 | student | during-work | Students may use the course's own or approved AI tool for explanations, homework and studying.
+CT17.c08 | student | during-work | Students may use AI to generate code under stated conditions, such as documentation or their own algorithm.
+CT18.c03 | student | during-work | Code taken from AI or other sources must be limited to a few lines.
+CT25.c12 | student | during-work | Students must acknowledge AI tools, like other people, as helpers or collaborators.
+CT26.c03 | student | during-work | Students must record the AI tool used, with version, and the prompt in the code.
+CT28.c02 | student | during-work | Students must explain how they used AI, how they modified its output, challenges faced and what they learned.
+CT46.c01 | student | during-work | Students must not share personal, identifying or confidential data with AI tools, and should keep AI from storing their results.
+CT21.c02 | student | during-work | Students must interact with AI only through a chat interface.
+CT11.c02 | student | during-work | Students must write their own tests and not have AI generate test cases.
+CT19.c03 | student | during-work | Students must avoid AI interactions that produce solution code.
+CT02.c07 | student | during-work | Students may use AI freely outside graded work and for code they do not submit.
+CT04.c12 | student | during-work | Students must follow the course or assignment AI policy when using AI.
+CT06.c06 | instructor | during-work | The instructor invites students to reach out with questions or when stuck.
+CT08.c06 | student | during-work | Students must not use AI to summarize or contextualize assigned readings and source materials.
+CT08.c07 | student | during-work | Students must not use AI as a tutor or to discuss concepts.
+CT11.c01 | student | during-work | Students may use AI to generate unit tests and to brainstorm edge cases, scenarios and boundary conditions.
+CT12.c03 | student | during-work | Students may use spell and grammar checkers that do not use generative AI.
+CT12.c04 | student | during-work | Students must not use writing aids that revise sentences or clean up their English.
+CT14.c03 | student | during-work | Students must not use AI to brainstorm, plan or generate pseudocode and solution designs.
+CT18.c04 | student | during-work | Students must not generate whole projects with AI or rely on it as the main source.
+CT24.c01 | student | during-work | Students should attempt problems and homework themselves before turning to AI or looking up answers.
+CT25.c09 | student | during-work | Students must not give false or misleading information about AI use; honest disclosure and self-reporting are relied on.
+CT28.c01 | student | during-work | Students must reflect on whether and how AI enhanced or limited their learning and skills.
+CT31.c04 | student | during-work | Students must test, run and debug AI-generated code themselves.
+CT38.c02 | instructor | during-work | The instructor uses AI detectors such as Turnitin on student submissions.
+CT41.c01 | student | during-work | Students should learn to develop code and apply fundamental concepts on their own, treating AI as scaffolding.
+OTHER.c06 | instructor | during-work | The instructor provides guidance on AI through course materials and office hours and welcomes discussion or disagreement.
+CT16.c07 | student | during-work | Students must not use any AI tool other than the course's approved one.
+CT02.c14 | student | during-work | Students may use AI for listed purposes, such as supporting their process and understanding.
+CT04.c10 | instructor | during-work | Some assignments may require students to use AI.
+CT07.c02 | student | during-work | At the restricted level, students may use AI only as a reference or in limited circumstances.
+CT07.c03 | student | during-work | At the permissive levels, students may use AI as a partner or with any assistance they desire.
+CT07.c05 | student | during-work | At the no-AI level, students must not use any AI on the assignment.
+CT09.c03 | student | during-work | Students must diagnose the problem themselves first, and not ask AI to fix it in their place.
+CT12.c01 | student | during-work | Students may use AI to generate docstrings, type hints, comments and other documentation, if cited.
+CT14.c02 | student | during-work | Students may use AI to plan a high-level approach, break down an assignment and explore alternatives.
+CT15.c02 | student | during-work | Students should not rely on AI output and must review and cite the actual sources.
+CT16.c05 | instructor | during-work | The course AI tutor guides students without solving, limiting hints per exercise.
+CT20.c03 | student | during-work | Students may use IDEs and built-in autocomplete when AI features are disabled.
+CT20.c04 | student | during-work | Students may use AI suggestions and coding assistants productively and responsibly.
+CT20.c06 | student | during-work | Code produced by Copilot or advanced code-completion tools counts as others' code and must be shown as own work.
+CT21.c01 | student | during-work | Students are expected to use AI coding agents on projects, which are built around the agent writing the code.
+CT23.c02 | student | during-work | Students may use AI for drafting, proofreading, or non-code project materials, provided they disclose it.
+CT25.c05 | student | during-work | Students must include an AI use statement even when no AI was used.
+CT25.c06 | student | during-work | Students are not required to submit a form or note when they did not use AI.
+CT25.c10 | student | during-work | Students must not present AI-generated or external text as their own without citation.
+CT26.c04 | student | during-work | Students must cite AI code even after editing it, and say whether it is verbatim or modified.
+CT27.c03 | student | during-work | Students must keep complete records of their AI interactions for possible review, and are encouraged to use a logging tool.
+CT28.c04 | student | during-work | Students must fill out the AI reflection form to receive credit for each assignment where they used AI.
+CT30.c08 | student | during-work | Students must comment their code to show they understand it and what it does.
+CT33.c11 | student | during-work | Students must treat generative AI tools the same way as any other resource or external source.
+CT40.c12 | student | during-work | Students must spend time practicing and take responsibility for learning from the work.
+CT42.c07 | student | during-work | Students should use only course-listed packages and classes, not those AI suggests.
+CT48.c03 | student | during-work | Students must understand and follow the AI policy of every course they take; policies differ by course.
+CT50.c01 | student | during-work | Students must not share their AI prompts, outputs, session transcripts or repository access with others.
+OTHER.c02 | instructor | during-work | The instructor discloses when and where the instructor uses AI.
+CT02.c12 | student | during-work | Students may use non-generative tools and other chat tools such as ChatGPT or Gemini.
+CT05.c02 | student | during-work | Students should ask before using AI when an assignment is silent about it.
+CT05.c03 | student | during-work | Students should avoid AI when in doubt about whether a use is allowed.
+CT06.c05 | instructor | during-work | Students are not penalized for asking about the accuracy of LLM output on course platforms.
+CT07.c04 | student | during-work | Students choose their own level of AI use.
+CT09.c05 | staff | during-work | Only course staff may provide solution-specific debugging assistance.
+CT10.c03 | student | during-work | Students must not use AI to grade their homework before the deadline has passed.
+CT12.c05 | student | during-work | Students must not have AI generate their code comments.
+CT13.c03 | student | during-work | Students must not use AI tools for practice problems.
+CT13.c04 | student | during-work | Students are discouraged from using LLMs for studying and should use course materials and the textbook instead.
+CT14.c04 | student | during-work | Students must keep design decisions human and use AI only for implementation.
+CT15.c03 | student | during-work | Students may use AI only for searching and reference, and nothing else.
+CT15.c04 | student | during-work | Students must not use code fragments found through search directly in their solutions.
+CT16.c01 | student | during-work | Students should start every AI session with the course-provided tutor prompt.
+CT16.c03 | student | during-work | Students must complete homework alongside the course's AI tutor.
+CT16.c06 | student | during-work | Students must log in to the approved AI tool with university credentials.
+CT20.c05 | student | during-work | Students must be able to tell whether AI code completion is enabled.
+CT21.c04 | student | during-work | Students with significant programming experience may use agentic coding on comprehensive projects.
+CT21.c05 | student | during-work | Students are encouraged to use coding agents as learning tools.
+CT21.c06 | student | during-work | Students may set an agent up on a long task and walk away.
+CT22.c04 | student | during-work | Students must not upload solutions to AI platforms or websites.
+CT22.c05 | student | during-work | No files or images may be uploaded to the university's Gemini.
+CT22.c06 | student | during-work | Students should not have their code or assignment open while interacting with an AI assistant.
+CT22.c07 | student | during-work | Students should share the project spec with AI only in their own words.
+CT23.c03 | student | during-work | Students must not create discussion posts with generative AI without proper attribution.
+CT24.c02 | instructor | during-work | The course first has students write and debug code themselves before using tools.
+CT25.c07 | student | during-work | Students need not cite their use of LLMs for writing code, since LLMs are a standard coding tool.
+CT25.c13 | student | during-work | Students must acknowledge nontrivial help from online forums and AI chatbots.
+CT25.c15 | student | during-work | Students cannot receive extension points without an AI usage statement.
+CT26.c05 | student | during-work | Students must cite AI code only when it is nontrivial.
+CT26.c07 | student | during-work | Students must list AI-written lines in the README.
+CT26.c08 | student | during-work | The AI citation needs to appear only once, in the file's header comment.
+CT26.c09 | student | during-work | Students must not copy code from AI without citing it.
+CT27.c05 | student | during-work | Links to logs are not accepted as submitted transcripts.
+CT27.c06 | student | during-work | Students must submit each AI session report within 24 hours of the conversation.
+CT28.c03 | instructor | during-work | Each assignment includes a section for students to reflect on their use of generative AI.
+CT28.c05 | student | during-work | Students must submit the AI usage reflection form by the day after submitting the work.
+CT28.c06 | student | during-work | Students must submit the explanation of AI use as a separate document with the project.
+CT29.c04 | instructor | during-work | The instructor provides an anonymized open drop box for reporting AI use.
+CT30.c07 | staff | during-work | Course staff will not help students who do not understand their own code.
+CT31.c05 | staff | during-work | Course staff are not responsible for fixing bugs in AI-generated code.
+CT31.c06 | student | during-work | Students must disclose how they validated and revised AI output.
+CT35.c12 | student | during-work | Students do exercises in class on their own keyboard, and make-up sessions follow the same rules.
+CT35.c13 | instructor | during-work | Every AI assistant is blocked on the classroom network.
+CT35.c14 | student | during-work | Students must submit homework as scans of handwritten originals.
+CT36.c09 | student | during-work | Students must not use generative AI deceptively or maliciously, such as to impersonate people or harass others.
+CT36.c10 | student | during-work | Students must not misrepresent their own engagement, such as inflating hours, having others run AI sessions, or copying session logs.
+CT38.c07 | staff | during-work | Staff may review session transcripts.
+CT38.c09 | student | during-work | Students should not rely on AI so heavily that their submission is no longer their own.
+CT40.c11 | student | during-work | Students must not use generative AI on homework.
+CT41.c02 | student | during-work | Students may use AI only after Project 4 and Exam 1, and must work independently.
+CT42.c08 | student | during-work | Course materials and instructor guidance take precedence over AI output.
+CT43.c03 | student | during-work | Students should not rely on AI tools, because exams are closed-book.
+CT44.c05 | student | during-work | Students should consider carefully how showing AI-produced work affects how employers see them.
+CT47.c05 | student | during-work | Students may choose to answer questions with a human staff member instead of an AI tutor.
+CT49.c05 | student | during-work | Students must read an AI academic paper and present it to the class.
+OTHER.c04 | staff | during-work | Teaching staff steer students back on track when they seem to give up on their learning.
+OTHER.c07 | staff | during-work | Staff and peer tutors are available to help students.
+OTHER.c14 | student | during-work | Students must not use AI for note-taking.
+OTHER.c26 | student | during-work | Each prompt earns at most ten minutes of the time Claude spends working on it.
+CT34.c01 | student | during-assessment | Students must not use AI during exams or quizzes.
+CT35.c01 | instructor | during-assessment | Instructors base grades on proctored, controlled assessments rather than unproctored code work.
+CT34.c03 | all | during-assessment | AI tools are not available on quizzes and exams.
+CT04.c08 | student | during-assessment | Students must not use AI on exams, quizzes, labs, code review or non-project assignments.
+CT36.c08 | student | during-assessment | Using AI assistants during exams, quizzes or in-class sessions is an integrity violation.
+CT21.c03 | student | during-assessment | Using agentic AI to complete assessments without human interaction is cheating.
+CT22.c08 | student | during-assessment | Students must not post any portion of an exam to AI services or online platforms.
+CT28.c07 | student | during-assessment | Students must discuss their AI use during the demo with the TA.
+CT34.c05 | student | during-assessment | Students must attest that quizzes are completed without AI assistance.
+CT35.c03 | student | during-assessment | Students must record their screen during quizzes.
+CT35.c04 | instructor | during-assessment | The instructor reviews screen recordings as one way to see students' work.
+CT35.c09 | instructor | during-assessment | The instructor grades projects on functionality and correctness.
+CT35.c10 | student | during-assessment | Students whose test answer can be found on the internet receive a zero for the test.
+CT35.c11 | student | during-assessment | Students must not use an IDE on exams and are restricted to a terminal editor.
+CT35.c15 | student | during-assessment | Students who lean too heavily on generative AI earn little credit.
+CT35.c16 | instructor | during-assessment | Assessment values team-specific detail about how the team was impacted.
+CT35.c17 | student | during-assessment | Students must demonstrate their progress to the teaching staff at the end of the assignment.
+CT35.c18 | instructor | during-assessment | Students are graded on progress, learning outcomes and collaboration, not the product.
+OTHER.c03 | instructor | during-assessment | The instructor will never use AI to grade.
+OTHER.c22 | instructor | during-assessment | Citing AI use will not prevent a low score.
+CT39.c01 | instructor | when-misuse | Instructors refer suspected AI misuse to formal academic integrity or disciplinary processes.
+CT37.c01 | instructor | when-misuse | AI misuse earns a zero or no credit on the assignment, exam or project.
+CT37.c03 | instructor | when-misuse | AI misuse can lead to a failing grade for the assignment or the course.
+CT37.c05 | instructor | when-misuse | AI misuse can bring academic sanctions, disciplinary action, reporting or expulsion.
+CT36.c05 | student | when-misuse | Using AI against the course AI policy is an academic integrity violation.
+CT37.c04 | instructor | when-misuse | AI misuse can lead to other grade reductions, including negative or escalating grade penalties.
+CT29.c03 | instructor | when-misuse | Disclosed or permitted AI use is not penalized and is not misconduct.
+CT30.c06 | instructor | when-misuse | Students who cannot explain their submitted code face penalties, a lower grade or an integrity charge.
+CT31.c07 | all | when-misuse | Using AI output uncritically or without understanding leads to poor submissions and lost points.
+CT27.c04 | student | when-misuse | Students must not edit, truncate, tamper with, scrub, or regenerate transcripts and logs, and must attest they are complete.
+CT29.c02 | all | when-misuse | Using any source, including AI, without citing it is a violation or cheating.
+CT37.c02 | instructor | when-misuse | Uncited AI use or missing AI documentation earns a zero.
+CT38.c06 | instructor | when-misuse | The instructor checks homework to enforce the AI policy, and the ban is strictly enforced.
+CT27.c08 | instructor | when-misuse | The instructional team may ask students for their prompt transcripts.
+CT36.c11 | student | when-misuse | Submitting the required reflection form and transcript does not excuse a violation of the AI conditions.
+CT37.c06 | instructor | when-misuse | Students who knowingly help others use AI to cheat also receive a penalty.
+CT37.c07 | staff | when-misuse | Time spent on work that is not the student's own project is removed.
+CT38.c03 | instructor | when-misuse | Work flagged as less than 5% AI-generated can be ignored.
+CT39.c02 | instructor | when-misuse | Multiple violations lead to a report to the Honor Code council and harsher sanctions.
+CT39.c04 | instructor | when-misuse | The instructor may talk with the student before any report.
+OTHER.c27 | student | when-misuse | Students may change flagged parts of their work and resubmit as necessary.
+OTHER.c09 | instructor | over-time | The instructor may amend the AI policy during the semester; the current policy may be only interim.
+CT06.c07 | student | over-time | Students may tell staff if the policy disallows something that should be allowed.
+CT09.c06 | student | over-time | Students may use generative AI to understand why tests failed after the deadline.
+CT10.c04 | student | over-time | Students may use AI on past homework, after the deadline, and to check rubric scoring of graded work.
+CT40.c01 | all | background | Having AI do the work undermines learning, which comes from doing the work yourself.
+CT42.c01 | all | background | AI output, code and explanations can be wrong, inaccurate, hallucinated, incomplete or misleading.
+CT43.c01 | all | background | Relying on AI for homework leaves students unprepared and hurts their performance on exams.
+CT41.c03 | all | background | Fundamentals must be mastered before relying on AI, and unaided programming remains a core learning goal.
+CT40.c04 | instructor | background | The course is designed to build students' own skills, understanding and independent problem-solving.
+CT45.c01 | all | background | AI is a valuable and helpful tool for learning the material.
+CT36.c07 | all | background | Using generative AI for assignments counts as cheating or misconduct under the integrity policy.
+CT40.c02 | all | background | AI use or reliance hinders students' own critical, creative and independent thinking.
+CT33.c02 | all | background | AI use is treated like help from a collaborator, under the collaboration policy.
+CT44.c02 | all | background | Employers assess job candidates without AI, and interviews do not allow AI, so unaided skills matter.
+CT41.c04 | all | background | AI helps experienced coders more than novices, who may be harmed by it.
+CT40.c06 | all | background | AI can solve homework, gives too much help, and hands over others' solutions.
+CT33.c03 | all | background | AI use is treated like use of other online resources or located information.
+CT38.c08 | all | background | AI tends to produce similar code for different users, so copied code gets flagged.
+CT42.c02 | all | background | AI-generated code can have security flaws and put the institution at risk.
+CT42.c03 | all | background | AI-generated code often fails course requirements, grading tests and good style.
+CT44.c01 | all | background | Industry expects AI fluency, so future software engineers need to learn to use AI tools effectively and responsibly.
+OTHER.c01 | all | background | Generative AI means any text, image or code generating system; course-built models and all coursework are covered or exempted as stated.
+OTHER.c18 | instructor | background | Fair evaluation of student work needs work not assisted by AI; past bans disadvantaged honest students.
+CT35.c07 | instructor | background | AI can solve nearly any exercise instantly, so submitted code no longer shows understanding.
+CT36.c14 | all | background | AI chatbots make unauthorized assistance easier and have raised cheating.
+CT44.c03 | all | background | Over-reliance on AI means missing insights from doing the work and leaves students less prepared for industry.
+CT46.c02 | all | background | AI tools store and analyze prompts and can leak confidential data.
+CT46.c09 | all | background | AI-generated code is based on others' code and may come with licenses it does not carry over.
+CT46.c11 | all | background | AI systems consume huge amounts of energy and water and create real resource costs.
+CT46.c13 | all | background | LLMs raise serious ethical issues, and AI misuse can harm others.
+CT48.c07 | instructor | background | Future or advanced CS courses will likely have stricter or different AI policies.
+OTHER.c19 | all | background | Powerful AI technology calls for caution and informed consent, and AI empowers bad actors.
+CT02.c11 | all | background | Appropriate use of technology as an aid for learning counts as academic honesty.
+CT04.c13 | all | background | Universities acknowledge that there are legitimate uses of AI.
+CT20.c07 | all | background | Copilot can almost fully autocomplete code when you start typing.
+CT21.c07 | instructor | background | Current coding agents can produce complete projects without human help.
+CT27.c07 | student | background | Integrity policies cover students' agent session transcripts and the activity their hooks report.
+CT30.c09 | student | background | Being able to walk someone through your project shows you understand it and own it.
+CT32.c09 | all | background | AI output is drawn from previously published work and is not original work.
+CT36.c15 | all | background | Deviating from the AI heuristics does not automatically qualify as academic misconduct.
+CT39.c06 | instructor | background | Reporting students for cheating is exhausting for the instructor.
+CT42.c04 | all | background | AI tools are trained on old information and may be outdated.
+CT42.c09 | all | background | Students using AI often get stuck when debugging.
+CT43.c05 | instructor | background | In a previous semester, students flagged for AI use scored lower.
+CT44.c04 | all | background | Much of the software industry prohibits AI use because of serious concerns.
+CT46.c08 | all | background | AI training data is usually harvested from the internet without consent.
+CT46.c10 | all | background | AI systems depend on moderation labor by human workers.
+OTHER.c20 | instructor | background | The instructor wants students' own ideas, not what a chatbot says.
+OTHER.c21 | instructor | background | A generous late policy is designed in part to reduce the temptation to use AI.

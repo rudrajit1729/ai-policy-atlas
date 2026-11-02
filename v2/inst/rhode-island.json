@@ -1,0 +1,484 @@
+{
+ "university": "University of Rhode Island",
+ "slug": "rhode-island",
+ "state": "RI",
+ "type": "R1",
+ "searched": {
+  "university": "found",
+  "school": "found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "uri-responsible-ai",
+   "layer": "university",
+   "unit": "Information Technology Services",
+   "course": null,
+   "title": "Responsible Use of AI at URI",
+   "url": "https://web.uri.edu/draft-its/responsible-use-of-ai-at-uri/",
+   "date_or_term": "2025-01-14",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "An ITS page that welcomes AI for teaching, learning and research and sets four principles (transparency, accountability, fairness, privacy) plus data-security, accessibility and IP standards. It sets no default for coursework AI use: educators communicate acceptable use and students follow each instructor's policy and attribute AI content.",
+   "stance_why": "The page \"embraces\" AI but sets no rule on what is allowed in coursework; it tells educators to \"clearly communicate acceptable AI use to students\" and students to \"Follow instructors’ AI policies\", so the decision is handed to instructors (delegates).",
+   "units": [
+    {
+     "why": "\"embraces artificial intelligence (AI) as a powerful tool for teaching, learning, research, and innovation\" states a welcoming institutional position, so actor all, phase general, modality informs, encourage. P02 (permit or encourage by default) is where a reader asking whether URI welcomes AI would look; P56 fits less because the sentence states a position, not a framework.",
+     "resolution_why": "Coder A chose P56 (framework preamble), coder B chose P02 (encourage by default); actor, phase, modality agreed. The source sentence is a headline position that AI is embraced, which is a stance on AI use; the framework content follows in later units. P02 chosen, with a fit_note because it is not a coursework default.",
+     "anchor": "embraces artificial intelligence (AI) as a powerful tool for teaching, learning, research, and innovation",
+     "frag_start": "The University of Rhode Island (URI) embraces",
+     "frag_end": "research, and innovation.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P02",
+     "unit_stance": "encourage",
+     "topics": [
+      "default-stance",
+      "learning-rationale"
+     ],
+     "fit_note": "Institution-wide welcome of AI for teaching, learning, research and innovation; it is not a coursework default (the page delegates that to instructors)."
+    },
+    {
+     "why": "\"ensuring AI is used securely, ethically, and responsibly\" states the purpose and values of the page (\"transparency, fairness, and accountability\"), so an institution-wide framework (P56), informs. P116 is a close alternative but this sentence names the framework's values.",
+     "resolution_why": "Both coders agreed on all codes (P56, general, informs, neutral). Only topic tags differed; kept the corpus topic vocabulary (B's ethics-bias-environment) plus governance from A. Anchor taken from B, a tighter quote.",
+     "anchor": "ensuring AI is used securely, ethically, and responsibly",
+     "frag_start": "However, we recognize the importance",
+     "frag_end": "and accountability.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment",
+      "governance"
+     ]
+    },
+    {
+     "why": "\"Clearly disclose when AI tools are used to create content or make decisions\" is the Transparency principle, a disclosure rule for all users; P24. It sits under \"Guiding Principles\", framed as values the approach is \"built on\", so should rather than must. Unit stance permit: AI use is allowed on condition of disclosure.",
+     "resolution_why": "Coders agreed on actor, phase, P24. Modality: A must, B should. The sentence is in the Guiding Principles list (not the \"URI enforces the following standards\" list), so should. Unit stance: A permit, B require; \"require\" would mean AI use itself is required, which the text does not say; disclosure is a condition on permitted use, so permit.",
+     "anchor": "Clearly disclose when AI tools are used to create content or make decisions",
+     "frag_start": "Clearly disclose when AI tools",
+     "frag_end": "or make decisions.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "\"Validate the accuracy of AI outputs\" is the first clause of the Accountability principle, a verification duty; P31. The second clause (take responsibility) is coded separately as P29. Should, as a principle.",
+     "resolution_why": "Coders agreed on P31, general, all. A coded one unit for the whole sentence (must), B split the sentence into two units. The two clauses are two distinct rules, so split as B did. Modality should as the item is in the Guiding Principles list. Unit stance neutral (B said require, which is not supported).",
+     "anchor": "Validate the accuracy of AI outputs",
+     "frag_start": "Validate the accuracy of AI",
+     "frag_end": "responsibility for their use.",
+     "policy": "Validate the accuracy of AI outputs",
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P31",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding",
+      "verification-accuracy"
+     ],
+     "fit_note": "Coder A noted the sentence also says users take responsibility for the use of outputs (ownership); that clause is coded as its own unit."
+    },
+    {
+     "why": "\"take responsibility for their use\" is the second clause of the Accountability principle, making users answerable for how they use AI outputs; closest to P29 (own what is submitted), although the text is not limited to submitted work.",
+     "resolution_why": "Only coder B found this as a separate unit (A folded it into a fit_note on the P31 unit). The source sentence states two rules joined by 'and', so the second was kept as its own unit. P29 with a fit_note; modality should as for the other principles; unit stance neutral (B's require not supported).",
+     "anchor": "take responsibility for their use",
+     "frag_start": "Validate the accuracy of AI",
+     "frag_end": "responsibility for their use.",
+     "policy": "Users take responsibility for their use of AI outputs",
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P29",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "fit_note": "Applies to all users' use of AI outputs, not only to submitted student work."
+    },
+    {
+     "why": "\"Mitigate biases and ensure AI systems respect diversity and equity\" is the Fairness and Inclusivity principle naming bias; P53. A Guiding Principle, so should.",
+     "resolution_why": "Coders agreed on P53, general, all, neutral; only modality differed (A must, B should). Item is in the Guiding Principles list, so should.",
+     "anchor": "Mitigate biases and ensure AI systems respect diversity and equity",
+     "frag_start": "Mitigate biases and ensure AI",
+     "frag_end": "diversity and equity.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P53",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment",
+      "equity-access"
+     ]
+    },
+    {
+     "why": "\"Protect sensitive and institutional data from misuse and unauthorized access\" is the Privacy and Security principle; P50. A Guiding Principle, so should.",
+     "resolution_why": "Coders agreed on P50, general, all, neutral; only modality differed (A must, B should). Item is in the Guiding Principles list, so should.",
+     "anchor": "Protect sensitive and institutional data from misuse and unauthorized access",
+     "frag_start": "Protect sensitive and institutional data",
+     "frag_end": "unauthorized access",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"URI Data Classification Schema and Guidelines\" is listed under Key Resources with a description of what it covers, a pointer to further guidance; P115, informs.",
+     "resolution_why": "Only coder A coded this resource link separately (B merged both Key Resources into one unit). It is a real pointer to guidance named by the institution, so kept; policy normalized from the page's own description.",
+     "anchor": "URI Data Classification Schema and Guidelines",
+     "frag_start": "URI Data Classification Schema and",
+     "frag_end": "Guidelines",
+     "policy": "The URI Data Classification Schema and Guidelines detail the classification and management of data, including restricted and sensitive information, relevant to AI practices.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P115",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"Guidelines for the Secure and Ethical Use of Artificial Intelligence\" is listed under Key Resources with a description of its coverage, a pointer to further guidance; P115, informs.",
+     "resolution_why": "Both coders coded this resource as P115, general, informs, neutral. A anchored only the title, B anchored the description and wrote a normalized policy; B's wording is faithful to the source and kept. Topics: policy-evolution replaced by governance.",
+     "anchor": "comprehensive guidance on AI transparency, accountability, and compliance with accessibility, privacy",
+     "frag_start": "Guidelines for the Secure and Ethical",
+     "frag_end": "intellectual property standards",
+     "policy": "Guidelines for the Secure and Ethical Use of Artificial Intelligence provide guidance on AI transparency, accountability, and compliance with accessibility, privacy, and intellectual property standards",
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P115",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data",
+      "governance"
+     ]
+    },
+    {
+     "why": "\"Follow URI’s Data Classification Guidelines to avoid exposing restricted or sensitive information\" is the Data Security and Privacy standard, an enforced standard binding all users; P50, must.",
+     "resolution_why": "Coders agreed on P50, general, all, must. Unit stance: A neutral, B restrict. The standard requires following data guidelines; it does not ban AI use, so neutral.",
+     "anchor": "to avoid exposing restricted or sensitive information.",
+     "frag_start": "Follow URI’s Data Classification Guidelines",
+     "frag_end": "restricted or sensitive information.",
+     "policy": "Follow URI’s Data Classification Guidelines to avoid exposing restricted or sensitive information",
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"Ensure all AI tools comply with Web Content Accessibility Guidelines (WCAG) and the Americans with Disabilities Act (ADA)\" is an enforced standard on accessibility of AI tools; P97, must.",
+     "resolution_why": "Coders agreed on every code (P97, general, must, neutral). Only topic tags differed; kept the corpus topic equity-access.",
+     "anchor": "Ensure all AI tools comply with Web Content Accessibility Guidelines (WCAG)",
+     "frag_start": "Ensure all AI tools comply",
+     "frag_end": "Disabilities Act (ADA).",
+     "policy": "Ensure all AI tools comply with Web Content Accessibility Guidelines (WCAG) and the Americans with Disabilities Act (ADA)",
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P97",
+     "unit_stance": "neutral",
+     "topics": [
+      "equity-access"
+     ]
+    },
+    {
+     "why": "\"Avoid inputting private or restricted data, such as Personally Identifiable Information (PII) or patient records, into public AI tools like ChatGPT\" is the Prohibited Data Use standard, a ban on one kind of input, so must-not. P50 (protect personal data) fits it; AI use itself stays allowed, so unit stance restrict.",
+     "resolution_why": "Coders agreed on P50, general, all, must-not. Unit stance: A restrict, B prohibit. The ban covers only one kind of data in public tools and AI use otherwise continues, so restrict. B's fit_note kept.",
+     "anchor": "Avoid inputting private or restricted data",
+     "frag_start": "Avoid inputting private or restricted",
+     "frag_end": "into public AI tools like ChatGPT.",
+     "policy": "Avoid inputting private or restricted data, such as Personally Identifiable Information (PII) or patient records, into public AI tools like ChatGPT",
+     "actor": "all",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ],
+     "fit_note": "Bans entering PII or restricted data into public AI tools; P50 is about protecting data and preferring vetted tools, not specifically about a prohibition."
+    },
+    {
+     "why": "\"Be cautious when using AI platforms, as data entered may be transmitted to third-party servers\" is the Data Handling Awareness standard, a caution about data privacy; P50, should because \"be cautious\" is advisory.",
+     "resolution_why": "Coders agreed on every code (P50, general, all, should, neutral).",
+     "anchor": "data entered may be transmitted to third-party servers",
+     "frag_start": "Be cautious when using AI",
+     "frag_end": "third-party servers.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"Where possible, disable history and logging features to prevent information from being stored or used for AI training without consent\" is the Disabling Data Logging standard, a hedged privacy practice; P50, should because of \"Where possible\".",
+     "resolution_why": "Coders agreed on every code (P50, general, all, should, neutral). B's wording of the policy is faithful to the source and kept.",
+     "anchor": "disable history and logging features to prevent information from being stored",
+     "frag_start": "Where possible, disable history and",
+     "frag_end": "for AI training without consent.",
+     "policy": "Where possible, disable history and logging features to prevent information from being stored or used for AI training without consent",
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"Respect copyrights and avoid using confidential data in AI systems without appropriate protections in place\" is the Intellectual Property Compliance standard, an enforced standard; P52 chosen for the copyright clause, must.",
+     "resolution_why": "Coders agreed on P52, general, all, must. Unit stance: A neutral, B restrict. The data clause is conditional on protections and AI is not otherwise limited, so neutral. Both coders' fit_notes (the same point) kept as one.",
+     "anchor": "Respect copyrights and avoid using confidential data in AI systems",
+     "frag_start": "Respect copyrights and avoid using",
+     "frag_end": "appropriate protections in place.",
+     "policy": "Respect copyrights and avoid using confidential data in AI systems without appropriate protections in place",
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P52",
+     "unit_stance": "neutral",
+     "topics": [
+      "intellectual-property",
+      "privacy-data"
+     ],
+     "fit_note": "Also says to avoid confidential data in AI systems without protections, which is a privacy rule (P50)."
+    },
+    {
+     "why": "\"Attend sessions on responsible AI use tailored for faculty, staff, and students\" encourages training participation under Education and Training; P70. An imperative inside a list of opportunities, so should.",
+     "resolution_why": "Coders agreed on P70, general, all, encourage. Modality: A should, B may. The text uses the imperative \"Attend\", so should.",
+     "anchor": "Attend sessions on responsible AI use tailored for faculty, staff, and students",
+     "frag_start": "Attend sessions on responsible AI",
+     "frag_end": "faculty, staff, and students.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P70",
+     "unit_stance": "encourage",
+     "topics": [
+      "ai-literacy-career"
+     ]
+    },
+    {
+     "why": "\"Access documents and guidelines like the AI Use Guidelines to deepen understanding\" points users to training materials under Education and Training; P70, should for the same imperative form as the neighbouring item.",
+     "resolution_why": "Only coder A coded this item (A: may). It is a real statement under Education and Training and distinct from the workshops item, so kept; modality set to should to match the imperative form used for \"Attend sessions\".",
+     "anchor": "Access documents and guidelines like the",
+     "frag_start": "Access documents and guidelines like",
+     "frag_end": "AI Use Guidelines",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P70",
+     "unit_stance": "encourage",
+     "topics": [
+      "ai-literacy-career"
+     ]
+    },
+    {
+     "why": "\"Learn how to make AI tools and outputs more inclusive\" under Accessibility Resources is a learning duty about accessible AI; P97 rather than P70 because its content is accessibility. Should (imperative, advisory training).",
+     "resolution_why": "Coders agreed on P97, general, all, should. Unit stance: A encourage, B neutral; it is about inclusivity rather than AI use itself, so neutral.",
+     "anchor": "Learn how to make AI tools and outputs more inclusive",
+     "frag_start": "Learn how to make AI",
+     "frag_end": "accessibility programs.",
+     "policy": "Learn how to make AI tools and outputs more inclusive through URI’s accessibility programs",
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P97",
+     "unit_stance": "neutral",
+     "topics": [
+      "equity-access",
+      "ai-literacy-career"
+     ]
+    },
+    {
+     "why": "\"Before using any AI platform, take the time to understand how it works, what data it collects, and how it handles that data\" asks users to evaluate a tool before use; P117, should.",
+     "resolution_why": "Coders agreed on every code (P117, general, all, should, neutral).",
+     "anchor": "Before using any AI platform, take the time to understand how it works",
+     "frag_start": "Before using any AI platform",
+     "frag_end": "handles that data.",
+     "policy": "Before using any AI platform, users take the time to understand how it works, what data it collects, and how it handles that data",
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P117",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"Incorporate URI’s guidelines into course design\" tells educators to build the university's AI guidelines into how they design courses; P77 (comply with existing university policy), with a fit_note because the rule is specifically about course design. Phase before-course; should, as an Additional Guideline.",
+     "resolution_why": "Coder A: UNCOVERED, should; coder B: P77, should. Actor, phase agreed. The \"AI Use Guidelines\" are university policy and the rule is to comply with them in course design, so P77 fits; the design-specific point is kept in a fit_note (A's uncovered_note merged).",
+     "anchor": "Incorporate URI’s guidelines into course design",
+     "frag_start": "Incorporate URI’s guidelines into course",
+     "frag_end": "course design",
+     "policy": "Educators incorporate URI’s guidelines into course design",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use",
+      "syllabus-communication"
+     ],
+     "fit_note": "Specifically concerns aligning course design with the university's AI guidelines (coder A had coded this UNCOVERED: educators should build the university AI guidelines into their course design)."
+    },
+    {
+     "why": "\"clearly communicate acceptable AI use to students\" makes educators state their AI expectations; P09 (AI statement) with a fit_note because the syllabus is not mentioned. Instructor, course-start, should.",
+     "resolution_why": "Coders agreed on every code (P09, instructor, course-start, should, neutral) and both wrote the same fit_note; kept once.",
+     "anchor": "clearly communicate acceptable AI use to students",
+     "frag_start": "Incorporate URI’s guidelines into course",
+     "frag_end": "create course materials",
+     "policy": "Educators clearly communicate acceptable AI use to students",
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "fit_note": "Says to communicate acceptable use to students but not specifically in the syllabus."
+    },
+    {
+     "why": "\"disclose when AI was used to create course materials\" is instructor disclosure of AI-made materials; P48 (review and disclose AI-made materials), before-course, should as an Additional Guideline.",
+     "resolution_why": "Coders agreed on P48, instructor, before-course. Modality: A must, B should; the item is in Additional Guidelines worded as role guidance, so should. Unit stance: A neutral, B require; neutral, as the text does not require AI use.",
+     "anchor": "disclose when AI was used to create course materials",
+     "frag_start": "and disclose when AI was",
+     "frag_end": "create course materials",
+     "policy": "Educators disclose when AI was used to create course materials",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P48",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use",
+      "disclosure-citation"
+     ],
+     "fit_note": "Disclosure is stated; review of materials is not mentioned."
+    },
+    {
+     "why": "\"Follow instructors’ AI policies\" makes each instructor's policy the rule students follow; P78, student, general, should as an Additional Guideline.",
+     "resolution_why": "Coders agreed on P78, student, general, neutral. Modality: A must, B should; Additional Guidelines are role guidance, so should. A's anchor \"Follow instructors\" was too short; B's anchor used.",
+     "anchor": "Follow instructors’ AI policies",
+     "frag_start": "Follow instructors’ AI policies, properly",
+     "frag_end": "Student Code of Conduct",
+     "policy": "Students follow instructors’ AI policies",
+     "actor": "student",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P78",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"properly attribute AI-generated content\" asks students to attribute AI output; P24, during-work, should as an Additional Guideline. Unit stance permit: use is allowed on condition of attribution.",
+     "resolution_why": "Coders agreed on P24, student, during-work. Modality: A must, B should; chose should as for the other Additional Guidelines. Unit stance: A permit, B require; permit, because attribution is a condition and AI use is not required.",
+     "anchor": "properly attribute AI-generated content",
+     "frag_start": "Follow instructors’ AI policies, properly",
+     "frag_end": "Student Code of Conduct",
+     "policy": "Students properly attribute AI-generated content",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "\"avoid using AI in ways that breach URI’s Student Code of Conduct\" ties AI use to existing conduct rules; P77, should-not, restrict. P36 fits less because it does not classify misuse as misconduct or name a process.",
+     "resolution_why": "Coders agreed on P77, student, general, restrict. Modality: A must-not, B should-not; Additional Guidelines are role guidance, so should-not.",
+     "anchor": "avoid using AI in ways that breach URI’s Student Code of Conduct",
+     "frag_start": "Follow instructors’ AI policies, properly",
+     "frag_end": "Student Code of Conduct",
+     "policy": "Students avoid using AI in ways that breach URI’s Student Code of Conduct",
+     "actor": "student",
+     "phase": "general",
+     "modality": "should-not",
+     "policy_type": "P77",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions",
+      "academic-integrity"
+     ]
+    },
+    {
+     "why": "\"Consult with your department and comply with regulations when using AI tools in research\" sets research AI duties and defers to department and regulations; P62. The Researchers guideline has no actor value of its own, so actor all; should as an Additional Guideline.",
+     "resolution_why": "Coders agreed on P62, general, all, neutral. Modality: A must, B should; Additional Guidelines, so should. A's fuller anchor kept, with B's normalized policy.",
+     "anchor": "Consult with your department and comply with regulations when using AI tools in research",
+     "frag_start": "Consult with your department and",
+     "frag_end": "sensitive or proprietary data",
+     "policy": "Researchers consult with their department and comply with regulations when using AI tools in research, particularly for handling sensitive or proprietary data",
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P62",
+     "unit_stance": "neutral",
+     "topics": [
+      "research-use",
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"For more information about URI’s AI practices and resources, contact: karen_lokey@uri.edu\" points to a contact for further information; P115, informs.",
+     "resolution_why": "Only coder A coded the closing contact line. It is a pointer to further AI information, so kept. A's anchor was only the email address; replaced with the full sentence. A's fit_note kept.",
+     "anchor": "For more information about URI’s AI practices and resources, contact: karen_lokey@uri.edu",
+     "frag_start": "For more information about URI",
+     "frag_end": "karen_lokey@uri.edu",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P115",
+     "unit_stance": "neutral",
+     "topics": [
+      "governance"
+     ],
+     "fit_note": "Names a contact person for information, not an owner of the policy."
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Only uri-responsible-ai was coded; uri-grad-ai (a thin Graduate School news post) was screened out in the collect file. Imperatives in the Guiding Principles and Additional Guidelines were coded should/should-not; imperatives in the 'URI enforces the following standards' list were coded must/must-not. B's corpus-standard topic tags were used."
+}

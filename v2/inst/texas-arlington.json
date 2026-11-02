@@ -1,0 +1,976 @@
+{
+ "university": "The University of Texas at Arlington",
+ "slug": "texas-arlington",
+ "state": "TX",
+ "type": "R1",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "texas-arlington-1",
+   "layer": "university",
+   "unit": "Artificial Intelligence at UTA (Information Security, Legal Affairs, AI Steering Committee)",
+   "course": null,
+   "title": "Guidelines: UTA Advice on Generative AI",
+   "url": "https://ai.uta.edu/guidelines",
+   "date_or_term": null,
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "An employee-focused advisory from Information Security, Legal Affairs and the AI Steering Committee. It welcomes staff use of GenAI, restricts what data may go into public tools, points to a tool-review route, and asks faculty to state allowed or limited use in each syllabus.",
+   "stance_why": "The only teaching-related rule is that 'faculty should state in the course syllabus any allowed or limited use of GenAI Tools within the course'; the university sets no student-use rule and hands the decision to each course, so the stance is delegates.",
+   "units": [
+    {
+     "why": "The opening says employees should use GenAI: \"a resounding, Yes.\" This is a stance toward staff use, so it is the institution-wide pro-use default (P02), addressed to all.",
+     "anchor": "The answer to the first part of that questions is a resounding,",
+     "frag_start": "So, should UTA’s staff",
+     "frag_end": "is a resounding, “Yes.”",
+     "policy": "UTA staff should use GenAI: the answer is \"Yes.\"",
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P02",
+     "unit_stance": "encourage",
+     "topics": [
+      "default-stance",
+      "instructor-staff-use"
+     ],
+     "fit_note": "The anchor is the conditional half; the welcome itself ('a resounding Yes') spans lines in the text.",
+     "resolution_why": "Coder A: actor=all, phase=general, modality=should, policy_type=P02. Coder B: actor=admin, phase=general, modality=should, policy_type=P02. A said actor all, B said admin (both P02, should, general). The source asks 'should UTA's staff use it' and answers 'a resounding Yes', addressed to employees generally, so all. B's anchor covers the welcome itself, which resolves A's fit_note."
+    },
+    {
+     "why": "\"it is important to follow guidance and familiarize yourself with UTA’s policies and resources before diving in head first\" tells users to learn the current guidance before using GenAI; P102 fits better than P56 because it is a duty to know the guidance.",
+     "anchor": "familiarize yourself with UTA’s policies and resources before diving in head first",
+     "frag_start": "However, it is important",
+     "frag_end": "diving in head first.",
+     "policy": "It is important to follow guidance and familiarize yourself with UTA’s policies and resources before using GenAI.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P102",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ],
+     "resolution_why": "Coder B only. Only B coded this sentence as its own unit (A folded it into its P02 unit). The source says 'it is important to follow guidance and familiarize yourself with UTA's policies and resources before diving in head first', a distinct duty to know current guidance, so P102 fits. Kept."
+    },
+    {
+     "why": "The sentence pairs 'UTA is exploring all the ways in which GenAI can help us' with 'we must consider the inherent risks of using this technology'. It is the preamble's balanced posture, general and informing, so P56 rather than P87, which is for named benefits such as personalization or efficiency.",
+     "anchor": "we must consider the inherent risks of using this technology.",
+     "frag_start": "While UTA is exploring",
+     "frag_end": "of using this technology.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale",
+      "privacy-data"
+     ],
+     "resolution_why": "Coder A: actor=all, phase=general, modality=informs, policy_type=P56. Coder B: actor=all, phase=general, modality=informs, policy_type=P87. A coded P56, B coded P87 for the same sentence. It names no concrete benefit and mainly frames the guidance's posture toward risk, so P56."
+    },
+    {
+     "why": "The advisory states its producers and its purpose, 'guidance for UTA employees on how to use GenAI Tools safely'; it sets the scope (employees, data safety) of the framework, so P56 rather than P84 because it names purpose and scope more than process.",
+     "anchor": "guidance for UTA employees on how to use GenAI Tools safely",
+     "frag_start": "This advisory, jointly produced",
+     "frag_end": "university data at risk.",
+     "policy": "The advisory gives guidance for UTA employees on how to use GenAI Tools safely, without putting personal, proprietary or university data at risk.",
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data",
+      "policy-evolution"
+     ],
+     "fit_note": "It also names the three bodies that produced it (Information Security Office, Legal Affairs, AI Steering Committee).",
+     "resolution_why": "Coder A only. Only A coded this. The source says the advisory gives 'guidance for UTA employees on how to use GenAI Tools safely, without putting personal, proprietary or university data at risk', a statement of purpose and audience. Real framing statement, P56. Kept."
+    },
+    {
+     "why": "The advisory states who issued it and its purpose: \"jointly produced by the Information Security Office, the Office of Legal Affairs and the AI Steering Committee\" to guide safe use. This describes who made the guidance, so P84 (not P56, which is the principles preamble).",
+     "anchor": "jointly produced by the Information Security Office, the Office of Legal Affairs",
+     "frag_start": "This advisory, jointly produced",
+     "frag_end": "university data at risk.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P84",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "The advisory defines its scope by naming the tools: \"ChatGPT, Bard, and DALL-E (collectively GenAI Tools)\". This sets what the policy covers, so P61.",
+     "anchor": "generative artificial intelligence tools, including ChatGPT, Bard, and DALL-E",
+     "frag_start": "The use of generative",
+     "frag_end": "research, or academic functions.",
+     "policy": "Generative artificial intelligence tools, including ChatGPT, Bard, and DALL-E, are collectively \"GenAI Tools.\"",
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance"
+     ],
+     "resolution_why": "Coder B only. Only B coded this. The source defines 'generative artificial intelligence tools, including ChatGPT, Bard, and DALL-E (collectively \"GenAI Tools\")', which sets what the advisory covers, so P61. Kept."
+    },
+    {
+     "why": "Under ALLOWABLE USE, GenAI may be used with public data; this permits use of GenAI tools conditioned on data classification, so the nearest type is P50 (protect data) with a permit stance; modality 'may'.",
+     "anchor": "GenAI Tools may be used with data that is publicly available",
+     "frag_start": "GenAI Tools may be",
+     "frag_end": "Standard (Login required) .",
+     "policy": "GenAI Tools may be used with data that is publicly available or defined as Public by UTA's Data Classification Standard.",
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P50",
+     "unit_stance": "permit",
+     "topics": [
+      "privacy-data"
+     ],
+     "fit_note": "The unit grants a permission limited to Public data rather than only urging protection of data."
+    },
+    {
+     "why": "\"must be consistent with UTA’s and other relevant policies\" makes all GenAI use subject to existing policy, so P77.",
+     "anchor": "GenAI Tools use must be consistent with UTA’s and other relevant policies",
+     "frag_start": "In all cases, GenAI",
+     "frag_end": "and other relevant policies.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "\"faculty should state in the course syllabus any allowed or limited use of GenAI Tools\" tells instructors to put the AI rule in the syllabus: P09 (syllabus statement). Because it also leaves the allowed uses to each course, P04 was considered, but the sentence is about the duty to state.",
+     "anchor": "faculty should state in the course syllabus any allowed or limited use of GenAI Tools",
+     "frag_start": "Consistent with this guidance,",
+     "frag_end": "context of this guidance.",
+     "policy": "Faculty should state in the course syllabus any allowed or limited use of GenAI Tools within the course.",
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "fit_note": "Also implies that the course-level allowed or limited use is set by the faculty member (P04)."
+    },
+    {
+     "why": "Instructors state the allowed or limited use course by course, so the decision of what AI use is allowed is left to the faculty member, 'any allowed or limited use ... within the course'; the university sets no rule itself, so P04 (instructor sets the rule).",
+     "anchor": "any allowed or limited use of GenAI Tools within the course",
+     "frag_start": "Consistent with this guidance,",
+     "frag_end": "context of this guidance.",
+     "policy": "Each course's allowed or limited GenAI use is set by the faculty member and stated in the course syllabus.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion"
+     ],
+     "resolution_why": "Coder A only. Only A coded this second unit on the syllabus sentence. The phrase 'any allowed or limited use of GenAI Tools within the course' leaves each course's rule to the instructor, a separate rule (P04) from the duty to state it (P09). Kept; policy wording stays within the source."
+    },
+    {
+     "why": "Tools installed on UTA-controlled computers or under a contract that protects university data 'may be designated as a permittable tool' for non-public data; this is an institutional approval route for tools, P65 (review and approve tools), not P92 because it is about designating approval for data classes.",
+     "anchor": "may be designated as a permittable tool for use with non-public data classifications",
+     "frag_start": "Any use of GenAI",
+     "frag_end": "accordance with relevant policies.",
+     "policy": "GenAI tools installed on a UTA-controlled computer or under a vendor contract that specifically protects university data and its use in the AI model may be designated as a permittable tool for use with non-public data classifications in accordance with relevant policies.",
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P65",
+     "unit_stance": "permit",
+     "topics": [
+      "privacy-data",
+      "policy-evolution"
+     ],
+     "resolution_why": "Coder A: actor=admin, phase=before-course, modality=may, policy_type=P65. Coder B: actor=all, phase=during-work, modality=may, policy_type=P92. A coded P65 (admin, before-course); B coded P92 (all, during-work). The source says tools 'may be designated as a permittable tool for use with non-public data classifications', an institutional designation (approval) step, not a user rule to use licensed tools, so P65, actor admin (the designator), before-course."
+    },
+    {
+     "why": "\"student records subject to FERPA ... must not be used within public AI models\" bans putting confidential data into public AI; this is data protection (P50), and the ban is about data, not course materials (P49).",
+     "anchor": "student records subject to FERPA, health information, proprietary information",
+     "frag_start": "In general, student records",
+     "frag_end": "within public AI models.",
+     "policy": "Student records subject to FERPA, health information, proprietary information, and any other information classified as Confidential or Controlled under UTA's Data Classification Standards must not be used within public AI models.",
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "prohibit",
+     "topics": [
+      "privacy-data"
+     ],
+     "fit_note": "The type centers on protecting data and preferring vetted tools; this unit is the explicit ban on putting classified data in public models."
+    },
+    {
+     "why": "A blanket rule that GenAI cannot be used for illegal, unethical or fraudulent activity is a general conduct ban, P74 (deceptive or malicious use), not P77 because it names fraud and unethical use directly.",
+     "anchor": "cannot be used for any activity that would be illegal, unethical, fraudulent",
+     "frag_start": "Gen AI Tools of",
+     "frag_end": "or UT System policies.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P74",
+     "unit_stance": "prohibit",
+     "topics": [
+      "ethics-bias-environment",
+      "policy-evolution"
+     ],
+     "fit_note": "Also bans activity that violates state or federal law or UTA or UT System policies (P77)."
+    },
+    {
+     "why": "\"all content entered into, or generated by, a public GenAI tool are available to the public\" warns of no privacy protection; a data-privacy fact, so P50.",
+     "anchor": "all content entered into, or generated by, a public GenAI tool",
+     "frag_start": "It is imperative that",
+     "frag_end": "available to the public.",
+     "policy": "All content entered into, or generated by, a public GenAI tool is available to the public.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ],
+     "fit_note": "It is a risk statement, not a rule to protect data or use vetted tools.",
+     "resolution_why": "Coder A: actor=all, phase=general, modality=informs, policy_type=P50. Coder B: actor=admin, phase=general, modality=informs, policy_type=P50. A coded actor all, B admin. The sentence says 'UTA employees understand ...', addressing employees generally, so all."
+    },
+    {
+     "why": "The sentence states that using public AI tools 'could expose individual users and UTA to the potential loss and/or abuse of sensitive data'; this explains risk (privacy), P50, informs.",
+     "anchor": "could expose individual users and UTA to the potential loss and/or abuse of sensitive data",
+     "frag_start": "Consequently, the use of",
+     "frag_end": "sensitive data and information.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ],
+     "fit_note": "Risk statement rather than a protective rule."
+    },
+    {
+     "why": "Warns that accepting click-through agreements \"without authority\" can bring personal consequences; this concerns the terms of use of tools, so P52 (terms of use) is nearest.",
+     "anchor": "Individuals who accept click through agreements without authority may face personal consequences",
+     "frag_start": "Click-through agreements are contracts.",
+     "frag_end": "with terms and conditions.",
+     "policy": "Individuals who accept click-through agreements without authority may face personal consequences, including responsibility for compliance with terms and conditions.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P52",
+     "unit_stance": "neutral",
+     "topics": [
+      "intellectual-property",
+      "privacy-data"
+     ],
+     "fit_note": "Type centers on copyright and ownership of outputs; this unit is about terms-of-use contracts and personal liability. | About contract authority and personal liability for terms and conditions, not copyright or ownership of outputs.",
+     "resolution_why": "Coder A: actor=all, phase=general, modality=informs, policy_type=P52. Coder B: actor=admin, phase=general, modality=informs, policy_type=P52. A coded actor all, B admin. The warning is to 'Individuals who accept click through agreements', so all."
+    },
+    {
+     "why": "The advisory recommends processing all GenAI tools through UTA's TAP process, i.e. institutional review before use, 'It is recommended to process all GenAI Tools through UTA's TAP process'; P65 (review and approve tools) with modality should.",
+     "anchor": "It is recommended to process all GenAI Tools through",
+     "frag_start": "It is recommended to",
+     "frag_end": "to ensure appropriate use.",
+     "policy": "It is recommended to process all GenAI Tools through UTA's TAP process to ensure appropriate use.",
+     "actor": "all",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P65",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data",
+      "policy-evolution"
+     ],
+     "resolution_why": "Coder A: actor=all, phase=before-course, modality=should, policy_type=P65. Coder B: actor=admin, phase=before-course, modality=should, policy_type=P65. A coded actor all, B admin. 'It is recommended to process all GenAI Tools through UTA's TAP process' is addressed to anyone adopting tools, not an office, so all."
+    },
+    {
+     "why": "Readers needing more help are directed to ai.uta.edu and security concerns to the Information Security Office; this names a contact for the policy, P80 (who owns the policy), informs.",
+     "anchor": "For security concerns, please contact the Information Security Office",
+     "frag_start": "For security concerns, please",
+     "frag_end": "Office at security@uta.edu .",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P80",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ],
+     "fit_note": "Names a contact for security concerns rather than an enforcing or exception-granting office.",
+     "resolution_why": "Coder A only. Only A coded this. 'For security concerns, please contact the Information Security Office' names a contact for the guidance; it is a procedural pointer rather than a rule on AI use, but the codebook counts statements that explain enforcement or contacts. Kept, with fit_note: it names a contact, not an enforcing or exception-granting office."
+    },
+    {
+     "why": "\"Start Using it Now ... open ... Microsoft Copilot\" encourages trying a specific university-available tool, so P02 for encouragement.",
+     "anchor": "An easy way to try GenAI is to open your internet browser",
+     "frag_start": "An easy way to",
+     "frag_end": "navigate to Microsoft Copilot",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P02",
+     "unit_stance": "encourage",
+     "topics": [
+      "course-provided-tools"
+     ],
+     "resolution_why": "Coder B only. Only B coded this. The source says 'An easy way to try GenAI is to open your internet browser and navigate to Microsoft Copilot' under 'Start Using it Now', a recommendation to try a university-available tool, so P02 encourage. Kept."
+    },
+    {
+     "why": "The AI Council suggestion 'Fact Check Everything' says GenAI 'will assert its errors with great confidence' and content must be reviewed for accuracy; this is P31 (verify AI output), should, addressed to employees.",
+     "anchor": "Review and check all AI-created content for accuracy.",
+     "frag_start": "Review and check all",
+     "frag_end": "AI-created content for accuracy.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P31",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "resolution_why": "Coder A: actor=all, phase=during-work, modality=should, policy_type=P31. Coder B: actor=all, phase=during-work, modality=must, policy_type=P31. A coded should, B coded must. The sentence sits under 'ADDITIONAL SUGGESTIONS ... from our AI Council', so it is a suggestion: should."
+    },
+    {
+     "why": "Where content is beyond one's expertise, the user should seek a human with that expertise to review it; this points to human help beside AI, P72.",
+     "anchor": "seek a human being with that expertise to review the content",
+     "frag_start": "If the content is",
+     "frag_end": "to review the content.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P72",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "\"you should consider transparently saying so\" recommends disclosing AI use in work; the wording is soft (\"consider\"), so should-modality and disclosure P24.",
+     "anchor": "you should consider transparently saying so",
+     "frag_start": "If you use GenAI",
+     "frag_end": "consider transparently saying so",
+     "policy": "If you use GenAI in your work, you should consider transparently saying so.",
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P24",
+     "unit_stance": "neutral",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "fit_note": "Disclosure is only to be considered, and the audience is employees rather than students submitting work. | Only a recommendation to consider disclosing; gives example statements naming the tool."
+    },
+    {
+     "why": "The advisory says transparency 'may also encourage others to give AI tools a try'; this is a benefit claim about AI adoption, P87, informs.",
+     "anchor": "Your transparency may also encourage others to give AI tools a try.",
+     "frag_start": "Your transparency may also",
+     "frag_end": "AI tools a try.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P87",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale"
+     ],
+     "fit_note": "Closest to a stated benefit; it is really a rationale for disclosure.",
+     "resolution_why": "Coder A only. Only A coded this. 'Your transparency may also encourage others to give AI tools a try' is a rationale for disclosure that touts AI uptake. Real statement; P87 is the nearest type and A's fit_note is kept. Kept."
+    },
+    {
+     "why": "\"Do Not Conceal AI Use from colleagues, students or others\" is a direct disclosure duty, so P24; the AI-notetaker example also adds a notification rule (P86 considered, but the heading is the broader rule).",
+     "anchor": "Do Not Conceal AI Use",
+     "frag_start": "Do Not Conceal AI",
+     "frag_end": "colleagues, students or others.",
+     "policy": "Do not conceal AI use from colleagues, students or others.",
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P24",
+     "unit_stance": "neutral",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "fit_note": "Concealment is barred as a rule for employees and no consequence is stated, so it is not P28 (nondisclosure as the violation); the AI note-taking example is coded as its own P86 unit.",
+     "resolution_why": "Coder A: actor=all, phase=during-work, modality=must-not, policy_type=P28. Coder B: actor=all, phase=during-work, modality=must-not, policy_type=P24. A coded P28, B coded P24. P28 covers how disclosure affects grading or integrity (nondisclosure as the violation); 'Do Not Conceal AI Use from colleagues, students or others' states a disclosure duty with no consequence, so P24 with a fit_note."
+    },
+    {
+     "why": "\"we should be transparent if we have an AI taking notes\" parallels telling people about recording; consent or notice before AI transcription, so P86.",
+     "anchor": "we should be transparent if we have an AI taking notes",
+     "frag_start": "in the same way",
+     "frag_end": "an AI taking notes.",
+     "policy": "We should be transparent if we have an AI taking notes, in the same way that we notify others that we are recording a Teams or Zoom meeting.",
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P86",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data",
+      "disclosure-citation"
+     ],
+     "fit_note": "It asks for notice, not explicit permission, before AI note-taking."
+    },
+    {
+     "why": "Notes made by AI 'can make mistakes or misunderstand different accents' and must be reviewed for accuracy; this is verify output, P31.",
+     "anchor": "It is important to review these notes for accuracy.",
+     "frag_start": "It is important to",
+     "frag_end": "these notes for accuracy.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P31",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "resolution_why": "Coder A: actor=all, phase=during-work, modality=should, policy_type=P31. Coder B: actor=all, phase=during-work, modality=informs, policy_type=P31. A coded should (anchor 'It is important to review these notes for accuracy'), B coded informs (anchor 'The AI can make mistakes'). The adjacent sentences form one passage: the first is the reason, the second the instruction to review, so should."
+    },
+    {
+     "why": "\"Know if Your Tools use GenAI ... understand if or how your vendors are using GenAI\" asks managers of tools to review vendor AI use and data security, so P65.",
+     "anchor": "it’s important you understand if or how your vendors are using GenAI",
+     "frag_start": "If you manage the",
+     "frag_end": "vendors are using GenAI.",
+     "policy": "If you manage the selection or use of tools in your area, it is important to understand if or how your vendors are using GenAI.",
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P65",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data",
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "\"Use UTA’s Technology Acquisition Helper when selecting new solutions\" directs staff to the institutional approval route for tools, P65.",
+     "anchor": "Use UTA’s Technology Acquisition Helper when selecting new solutions",
+     "frag_start": "Use UTA’s Technology Acquisition",
+     "frag_end": "solutions for your area.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P65",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ],
+     "resolution_why": "Coder B only. Only B coded this. 'Use UTA's Technology Acquisition Helper when selecting new solutions for your area' is a separate rule (use the approval route) from the vendor-awareness rule, so P65. Kept."
+    },
+    {
+     "why": "The page lists 'AI Feature Certification Policy (WIP)', signaling that a policy is under development; it states the policy is provisional, P54.",
+     "anchor": "AI Feature Certification Policy (WIP)",
+     "frag_start": "AI Policies – AI",
+     "frag_end": "Feature Certification Policy (WIP)",
+     "policy": "UTA lists an AI Feature Certification Policy that is a work in progress.",
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "informs",
+     "policy_type": "P54",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ],
+     "fit_note": "Shows a policy in development, not an explicit commitment to revisit. | Only signals that a certification policy is a work in progress; no revision cycle is described."
+    }
+   ]
+  },
+  {
+   "id": "texas-arlington-2",
+   "layer": "university",
+   "unit": "Center for Research on Teaching and Learning Excellence (CRTLE)",
+   "course": null,
+   "title": "Getting Started with AI and Teaching",
+   "url": "https://www.uta.edu/administration/crtle/ai-learning-teaching-hub/getting-started-with-ai-teaching",
+   "date_or_term": null,
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "A faculty-facing hub that points to UTA's required syllabus AI statement, its campus guidelines for instruction and a list of blog posts and workshops. It says AI use may be restricted, guided or integrated by instructor and gives a checklist for stating expectations.",
+   "stance_why": "The page says 'UTA supports faculty choice: AI use may be restricted, guided, or integrated depending on disciplinary context and course goals', so it sets no stance and leaves the decision to instructors.",
+   "units": [
+    {
+     "why": "The page opens as support for faculty beginning to explore AI, 'beginner-friendly and low-pressure'; it is faculty support for learning AI, P63.",
+     "anchor": "intentionally designed to be beginner‑friendly and low‑pressure",
+     "frag_start": "It is intentionally designed",
+     "frag_end": "and campus‑wide AI guidance.",
+     "policy": "The page is designed for UTA faculty who are beginning to explore AI in teaching and learning to be beginner-friendly and low-pressure.",
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "Foundational ideas state that generative AI systems 'do not think, reason, or understand in human ways'; this defines what AI is and is not, P61.",
+     "anchor": "they do not think, reason, or understand in human ways",
+     "frag_start": "Generative AI systems generate",
+     "frag_end": "understand in human ways.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "learning-rationale",
+      "default-stance"
+     ]
+    },
+    {
+     "why": "'Effective teaching with AI begins with pedagogy and learning goals, not with tools' ties AI decisions to learning goals, P83.",
+     "anchor": "begins with pedagogy and learning goals, not with tools",
+     "frag_start": "Effective teaching with AI",
+     "frag_end": "goals, not with tools.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P83",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "assessment-design"
+     ]
+    },
+    {
+     "why": "\"UTA supports faculty choice: AI use may be restricted, guided, or integrated\" leaves the stance to faculty and names three levels; P04 (who decides) is the primary fit, with the levels a secondary feature of P05.",
+     "anchor": "UTA supports faculty choice: AI use may be restricted, guided, or integrated",
+     "frag_start": "UTA supports faculty choice:",
+     "frag_end": "context and course goals.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion"
+     ],
+     "fit_note": "Also names three modes (restricted, guided, integrated) that resemble tiers (P05).",
+     "resolution_why": "Coder A: actor=instructor, phase=before-course, modality=may, policy_type=P04. Coder B: actor=instructor, phase=before-course, modality=informs, policy_type=P04. A coded may, B informs. 'UTA supports faculty choice: AI use may be restricted, guided, or integrated' describes the institution's position on who decides; the 'may' belongs to the listed options, not to a permission granted by the page, so informs."
+    },
+    {
+     "why": "The guidelines are 'campus-approved' and 'outline how faculty can make transparent, ethical decisions'; they address integrity, accessibility, privacy and communication and are the starting point for aligning with expectations; P56 as an institution-wide framework.",
+     "anchor": "This campus‑approved guidance outlines how faculty can make transparent, ethical decisions about AI use.",
+     "frag_start": "This campus‑approved guidance outlines",
+     "frag_end": "decisions about AI use.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "UTA faculty authored an open educational resource with 'practical, classroom-ready activities' for integrating AI into teaching; this is support for faculty in learning AI, P63.",
+     "anchor": "practical, classroom‑ready activities and examples for integrating AI into teaching",
+     "frag_start": "This freely available book",
+     "frag_end": "into teaching across disciplines.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "The Institute materials cover \"prompt design, authenticity, workforce relevance, and ethical boundaries\" for faculty; this is faculty training, so P63.",
+     "anchor": "introduce faculty‑relevant AI concepts such as prompt design, authenticity, workforce relevance",
+     "frag_start": "These Institute materials introduce",
+     "frag_end": "relevance, and ethical boundaries.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use"
+     ],
+     "resolution_why": "Coder B only. Only B coded this. 'These Institute materials introduce faculty-relevant AI concepts such as prompt design, authenticity, workforce relevance, and ethical boundaries' describes faculty training content, consistent with the other faculty-support units (P63). Kept."
+    },
+    {
+     "why": "Institute materials introduce prompt design, authenticity, workforce relevance and ethical boundaries and 'emphasize experimentation over surveillance'; this describes faculty AI support, P63; the experimentation-over-surveillance stance is partly P60-like but not a statement of declining to police.",
+     "anchor": "emphasize experimentation over surveillance",
+     "frag_start": "They model a ‘start",
+     "frag_end": "emphasize experimentation over surveillance.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use",
+      "detection-tools",
+      "integrity-sanctions"
+     ],
+     "fit_note": "It also takes a stance preferring experimentation to surveillance; it describes workshop emphasis, not a staff statement that they will not police students, so P60 does not fit.",
+     "resolution_why": "Coder A: actor=instructor, phase=before-course, modality=informs, policy_type=P63. Coder B: actor=instructor, phase=when-misuse, modality=informs, policy_type=P60. A coded P63, before-course; B coded P60, when-misuse. The sentence describes what Institute materials model ('start small', 'experimentation over surveillance'), i.e. faculty training content, not a statement that staff decline to police student AI use; so P63, before-course, with a fit_note."
+    },
+    {
+     "why": "The AI Essentials Modules are 'short, faculty-focused modules' on AI capabilities and limitations; providing training for faculty is P63 (faculty-only support, not P70).",
+     "anchor": "short, faculty‑focused modules build declarative knowledge about AI capabilities, limitations",
+     "frag_start": "These short, faculty‑focused modules",
+     "frag_end": "limitations, and pedagogical implications.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "The institute discussions show 'instructors are reframing assignments and learning outcomes rather than focusing solely on detection or restriction'; this is redesign around AI, P35.",
+     "anchor": "reframing assignments and learning outcomes rather than focusing solely on detection or restriction",
+     "frag_start": "These materials highlight how",
+     "frag_end": "on detection or restriction.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design",
+      "detection-tools"
+     ]
+    },
+    {
+     "why": "The page says CRTLE workshop materials give 'examples of syllabus language, discussion prompts, and instructional framing' for stating expectations; it offers faculty support, P63.",
+     "anchor": "provide examples of syllabus language, discussion prompts, and instructional framing",
+     "frag_start": "CRTLE workshop materials such",
+     "frag_end": "expectations clearly and consistently.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "Step 3 suggests students critique an AI-generated response to find errors or missing perspectives; this is a classroom activity that builds evaluation of AI output, nearest P31 (verify output), with a note that the unit is an instructor practice.",
+     "anchor": "Have students critique an AI‑generated response to identify strengths, errors",
+     "frag_start": "Have students critique an",
+     "frag_end": "errors, or missing perspectives.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P79",
+     "unit_stance": "encourage",
+     "topics": [
+      "assessment-design",
+      "accountability-understanding"
+     ],
+     "fit_note": "Shows an assignment that builds AI use into coursework, offered as a suggestion rather than a requirement.",
+     "resolution_why": "Coder A: actor=instructor, phase=during-work, modality=may, policy_type=P79. Coder B: actor=instructor, phase=during-work, modality=should, policy_type=P35. A coded P79/may, B coded P35/should. The page lists 'Have students critique an AI-generated response' among 'Examples' of a small practice, i.e. AI built into coursework as an option: P79 fits; P35 is for redesigned grading or protocols. Modality may because the list gives examples."
+    },
+    {
+     "why": "The page suggests AI role-play or simulation tools 'to support practice-based learning'; instructors may build AI use into coursework, P79 (AI built into coursework).",
+     "anchor": "Use AI role‑play or simulation tools to support practice‑based learning",
+     "frag_start": "Use AI role‑play or",
+     "frag_end": "interviews or client conversations.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P79",
+     "unit_stance": "encourage",
+     "topics": [
+      "assessment-design"
+     ],
+     "fit_note": "Offered as an example of a small teaching practice, not a requirement. | A suggestion to instructors for optional small experiments, not a requirement that students use AI.",
+     "resolution_why": "Coder A: actor=instructor, phase=during-work, modality=may, policy_type=P79. Coder B: actor=instructor, phase=during-work, modality=should, policy_type=P79. A coded may, B should (both P79). The item is one of the 'Examples' of small practices to try, not an instruction, so may."
+    },
+    {
+     "why": "Instructors may 'use AI privately to draft rubrics, discussion prompts, or feedback language, then revise'; this is instructor AI use for teaching work, P59.",
+     "anchor": "Use AI privately to draft rubrics, discussion prompts, or feedback language",
+     "frag_start": "Use AI privately to",
+     "frag_end": "to reflect your expertise.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P59",
+     "unit_stance": "encourage",
+     "topics": [
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "The checklist item 'Clearly state whether AI use is allowed, restricted, or guided' tells instructors to state their AI position to students; this is P09 (state in the syllabus or assignment).",
+     "anchor": "Clearly state whether AI use is allowed, restricted, or guided",
+     "frag_start": "Clearly state whether AI",
+     "frag_end": "allowed, restricted, or guided",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"Specify what types of AI use are acceptable (e.g., brainstorming, revision, coding support)\" tells instructors to list permitted uses; communicating expectations (P09) rather than the permissions themselves.",
+     "anchor": "Specify what types of AI use are acceptable (e.g., brainstorming, revision, coding support)",
+     "frag_start": "Specify what types of",
+     "frag_end": "brainstorming, revision, coding support)",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "instructor-discretion"
+     ],
+     "fit_note": "Gives brainstorming, revision and coding support as examples of acceptable uses."
+    },
+    {
+     "why": "\"Explain what is not permitted (e.g., submitting AI-generated work as original without acknowledgment)\" tells instructors to state prohibited uses; the example is P19 content but the unit is about communicating, so P09.",
+     "anchor": "Explain what is not permitted (e.g., submitting AI‑generated work as original without acknowledgment)",
+     "frag_start": "Explain what is not",
+     "frag_end": "as original without acknowledgment)",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "prohibited-uses"
+     ],
+     "fit_note": "The example also signals that AI work passed off as original without acknowledgment is a misuse. | The example names submitting AI-generated work as original without acknowledgment as not permitted (P19)."
+    },
+    {
+     "why": "The checklist tells instructors to 'tell students how to acknowledge or cite AI assistance'; the rule is that instructors set a citation method, nearest P24 (disclose AI use), addressed to instructors.",
+     "anchor": "Tell students how to acknowledge or cite AI assistance",
+     "frag_start": "Tell students how to",
+     "frag_end": "or cite AI assistance",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P24",
+     "unit_stance": "neutral",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "fit_note": "Addressed to instructors to explain the method; it does not itself oblige students to disclose. | Addressed to instructors as a duty to explain how students acknowledge AI, not a student disclosure rule itself."
+    },
+    {
+     "why": "The page says the crowd-sourced Quick Start language \"does not replace the required AI policy statement per the syllabus statement\": a syllabus AI policy statement is required, so P09.",
+     "anchor": "does not replace the required AI policy statement per the syllabus statement above",
+     "frag_start": "This does not replace",
+     "frag_end": "required AI policy statement.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "must",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "resolution_why": "Coder A: actor=instructor, phase=course-start, modality=must, policy_type=P09. Coder B: actor=instructor, phase=course-start, modality=must, policy_type=P09. A wrote a policy 'A required AI policy statement appears in every UTA syllabus'; the source says only 'the required AI policy statement per the syllabus statement', so 'every' goes beyond it. Final policy is null with B's anchor."
+    },
+    {
+     "why": "The page points to the Provost's UTA syllabus statements, which have AI policy options on pages 12-13; this is a university-provided set of syllabus options (tiers/options), P05, offered to faculty.",
+     "anchor": "with AI policy options on pages 12-13",
+     "frag_start": "UTA Statements to Use",
+     "frag_end": "options on pages 12-13)",
+     "policy": "UTA provides AI policy options for syllabus statements on pages 12-13 of its Statements to Use in Your Syllabus document.",
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "informs",
+     "policy_type": "P05",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "fit_note": "The options themselves are not in the fetched text, so the tiers are not named. | Says only that AI policy options exist in a syllabus statements file; the options themselves are not in this text."
+    },
+    {
+     "why": "A blog summary describes shifting 'from detecting misuse to preparing students for AI-mediated workplaces' and AI literacy as a learning outcome; this is the career-based reason to teach AI, P44.",
+     "anchor": "preparing students for AI‑mediated workplaces",
+     "frag_start": "This reflective, practice‑oriented post",
+     "frag_end": "for AI‑mediated workplaces .",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P44",
+     "unit_stance": "encourage",
+     "topics": [
+      "learning-rationale",
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "The IgniteAI description stresses \"transparency and instructor control\" of AI in Canvas, tools that save instructors time; faculty use of AI for teaching work, P59.",
+     "anchor": "AI features embedded directly in Canvas (such as rubric generators and discussion insights)",
+     "frag_start": "This post explains AI",
+     "frag_end": "transparency and instructor control.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "informs",
+     "policy_type": "P59",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use"
+     ],
+     "resolution_why": "Coder B only. Only B coded this. The post is said to highlight 'AI features embedded directly in Canvas (such as rubric generators and discussion insights)' and 'transparency and instructor control', describing instructor use of AI for teaching work, P59. Weak, descriptive, but a statement about instructor AI use. Kept."
+    },
+    {
+     "why": "A blog recap says it focuses on 'clarity, transparency, and assignment-specific AI policies'; it endorses setting AI rules per assignment, P04.",
+     "anchor": "clarity, transparency, and assignment‑specific AI policies",
+     "frag_start": "this post focuses on",
+     "frag_end": "assignment‑specific AI policies .",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "syllabus-communication"
+     ],
+     "resolution_why": "Coder A: actor=instructor, phase=before-course, modality=informs, policy_type=P04. Coder B: actor=instructor, phase=course-start, modality=informs, policy_type=P04. A coded phase before-course, B course-start. The recap concerns designing 'assignment-specific AI policies', which is policy design: before-course."
+    },
+    {
+     "why": "The Perusall recap says reading and annotation can be \"redesigned in response to AI-driven summarization tools\"; assignment redesign around AI, P35.",
+     "anchor": "reading and annotation practices can be redesigned in response to AI‑driven summarization tools",
+     "frag_start": "This recap explores how",
+     "frag_end": "social annotation, and transparency",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P35",
+     "unit_stance": "neutral",
+     "topics": [
+      "assessment-design"
+     ],
+     "resolution_why": "Coder B only. Only B coded this. 'reading and annotation practices can be redesigned in response to AI-driven summarization tools' is a concrete statement about redesigning assignments around AI, P35. Kept."
+    },
+    {
+     "why": "The page says 'AI tools and policies will continue to evolve' and that faculty should view AI learning as ongoing; this is a provisional-policy statement, P54.",
+     "anchor": "AI tools and policies will continue to evolve.",
+     "frag_start": "AI tools and policies",
+     "frag_end": "will continue to evolve.",
+     "policy": null,
+     "actor": "all",
+     "phase": "over-time",
+     "modality": "informs",
+     "policy_type": "P54",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "The page tells faculty to visit ai.uta.edu for \"updates, and guidelines\" and join future sessions; staying informed, P102.",
+     "anchor": "Visit https://ai.uta.edu for campus‑wide AI initiatives, updates, and guidelines",
+     "frag_start": "Visit https://ai.uta.edu for campus‑wide",
+     "frag_end": "and Faculty Voices sessions.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "over-time",
+     "modality": "should",
+     "policy_type": "P102",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ],
+     "resolution_why": "Coder B only. Only B coded this. 'Visit https://ai.uta.edu for campus-wide AI initiatives, updates, and guidelines' directs faculty to keep up with guidance, P102. Kept."
+    },
+    {
+     "why": "'UTA's approach to AI in teaching emphasizes faculty agency, ethical practice, and community learning' states an institution-level principle in general terms, addressed to all readers, so P56, general; P04 is not chosen because the sentence names values rather than saying who sets a course's rule.",
+     "anchor": "UTA’s approach to AI in teaching emphasizes faculty agency, ethical practice, and community learning",
+     "frag_start": "UTA’s approach to AI",
+     "frag_end": "practice, and community learning.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution",
+      "instructor-discretion",
+      "learning-rationale"
+     ],
+     "fit_note": "Also names ethical practice and community learning as values. | Also names faculty agency, which touches P04 (instructor sets the rule), but as a value rather than a rule.",
+     "resolution_why": "Coder A: actor=instructor, phase=general, modality=informs, policy_type=P04. Coder B: actor=all, phase=general, modality=informs, policy_type=P56. A coded P04 (instructor), B coded P56 (all). The sentence states the university's approach and values (faculty agency, ethical practice, community learning), a principle, so P56 with actor all; the faculty-agency element is recorded in fit_note."
+    },
+    {
+     "why": "CRTLE offers 'one-on-one teaching consultations, workshops, and AI-focused resources' to help faculty refine syllabus language; this supports faculty in learning AI, P63.",
+     "anchor": "one‑on‑one teaching consultations, workshops, and AI‑focused resources",
+     "frag_start": "CRTLE offers one‑on‑one teaching",
+     "frag_end": "support faculty across disciplines.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use"
+     ]
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Two university-layer documents; no school or computing documents found; course layer deferred. The Guidelines for Instruction PDF, the syllabus-statements file (AI policy options pp. 12-13) and the Quick Start page were not available, so student-facing rules are not in the text. Reconciliation: one A unit dropped as a duplicate (doc 2 'an essential starting point for aligning AI use with UTA expectations', same sentence as the P56 campus-guidance unit); one B unit dropped (doc 2 recap of 'policy as a foundation, authentic assessment, and faculty work time for redesign', a theme list not a statement). Topic codes from coder B that were not in the AGENT_BRIEF codebook (faculty-use, governance, definitions, rationale, syllabus, tools, ethics, verification, pedagogy, enforcement, policy-design) were mapped to codebook codes; 'definitions' mapped to default-stance. Some anchors contain non-breaking hyphens copied from the source."
+}

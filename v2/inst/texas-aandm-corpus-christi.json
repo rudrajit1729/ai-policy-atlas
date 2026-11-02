@@ -1,0 +1,85 @@
+{
+ "university": "Texas A&M University–Corpus Christi",
+ "slug": "texas-aandm-corpus-christi",
+ "state": "TX",
+ "type": "R2",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "texas-aandm-corpus-christi-u1",
+   "layer": "university",
+   "unit": "Office of Student Conduct",
+   "course": null,
+   "title": "Student Code of Conduct (academic misconduct provisions naming artificial intelligence)",
+   "url": "https://www.tamucc.edu/conduct-advocacy/conduct/codeofconduct.php",
+   "date_or_term": "current page, 2026",
+   "text_file": ".cache/text/v2-texas-aandm-corpus-christi-conduct.txt",
+   "stance_why": "Coder A said delegates, coder B said restrict. The Code itself sets the default: cheating is using \"unauthorized materials, information, notes, study aids or other devices (including artificial intelligence)\" and \"artificial intelligence software) when these are not authorized\". AI is banned unless authorized, which is restrict. The line that faculty may prohibit behavior in the syllabus is general and does not name AI, and the Code offers no tiers or hand-off of the AI decision, so delegates does not fit.",
+   "stance": "restrict",
+   "tiers": [],
+   "summary": "A university-wide student code of conduct that names artificial intelligence in three places within its academic-misconduct definitions (cheating, an example of unauthorized devices, and collusion). It treats unauthorized AI as cheating but sets no AI-specific rules, permitted uses or tiers; authorization is left to the instructor.",
+   "units": [
+    {
+     "why": "The cheating definition lists 'artificial intelligence' among 'unauthorized materials, information, notes, study aids or other devices', so unauthorized AI use is classed as academic misconduct. This is P36 because it classifies misuse as cheating; it binds students in any academic exercise (during-work), and it is a prohibition on unauthorized use.",
+     "anchor": "unauthorized materials, information, notes, study aids or other devices (including artificial intelligence)",
+     "frag_start": "using, attempting to use, or acquiring",
+     "frag_end": "in any academic exercise",
+     "policy": "Using, attempting to use, or acquiring unauthorized materials, information, notes, study aids or other devices, including artificial intelligence, in any academic exercise is cheating, a violation of academic misconduct.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "academic-integrity",
+      "prohibited-use"
+     ],
+     "resolution_why": "Both coders chose P36, student, must-not. A put phase general, B during-work. The passage covers \"any academic exercise\", i.e. work, so during-work. B's normalized policy is faithful to the passage and is kept."
+    },
+    {
+     "why": "The example 'Using books, notes or other devices (e.g. calculators, cell phones, computers, web sources or apps, or artificial intelligence software) when these are not authorized' gives a concrete case of cheating. It also implies AI is barred where not authorized, but the main point is the misconduct classification, so P36 fits better than P06.",
+     "anchor": "artificial intelligence software) when these are not authorized",
+     "frag_start": "Using books, notes or other devices",
+     "frag_end": "when these are not authorized",
+     "policy": "Using books, notes or other devices, including artificial intelligence software, when these are not authorized is cheating.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "academic-integrity",
+      "prohibited-use"
+     ],
+     "fit_note": "Also implies AI is banned wherever the instructor has not authorized it, an implicit default rule.",
+     "resolution_why": "A chose P06 and phase during-work, B chose P36 and phase during-assessment. The source gives a cheating example with no mention of exams, so during-work. The passage classifies the act as cheating, so P36; the implied default (AI barred where not authorized) is recorded in fit_note."
+    },
+    {
+     "why": "Under collusion, 'Receiving unauthorized assistance from a source such as software or artificial intelligence' treats AI as an outside helper whose unauthorized help is misconduct. P36 is chosen because the passage classifies this help as academic dishonesty; P45 is not used because the code does not compare AI to a human collaborator, it just lists it under collusion.",
+     "anchor": "Receiving unauthorized assistance from a source such as software or artificial intelligence.",
+     "frag_start": "Receiving unauthorized assistance from a source",
+     "frag_end": "software or artificial intelligence",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "academic-integrity",
+      "prohibited-use"
+     ],
+     "fit_note": "It is listed as an example under collusion, so AI is framed as an unauthorized helper.",
+     "resolution_why": "Both coders chose P36, student, must-not; A used phase general, B during-work. The collusion example concerns help received while doing work, so during-work."
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "AI is named in three lines of the Code, and these are the three units kept. Coder A also coded three units that do not name AI (false data by software, with fit_note 'Does not name AI; refers to software or online means generally'; faculty-prohibited behavior in the syllabus, with fit_note 'Does not name AI; general rule'; adjudication procedure 13.02.99.C0.04). Checked against the source, they are general misconduct provisions, so they were dropped; their fit_notes are preserved here."
+}

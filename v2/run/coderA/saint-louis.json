@@ -1,0 +1,1009 @@
+{
+ "university": "Saint Louis University",
+ "slug": "saint-louis",
+ "state": "MO",
+ "type": "R1",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "saint-louis-ai-guidelines",
+   "layer": "university",
+   "unit": "Office of the Provost",
+   "course": null,
+   "title": "Complete AI Guidelines",
+   "url": "https://www.slu.edu/provost/ai-guidelines/complete-ai-guidelines.php",
+   "date_or_term": "undated (checked 2026-10-25)",
+   "stance_why": "For students the page says \"Unless an instructor includes a clear statement in their syllabus granting permission, the use of generative AI tools to complete an assignment or exam is prohibited\", so AI is banned unless explicitly permitted. It is not delegates because it sets this fallback itself.",
+   "stance": "restrict",
+   "tiers": [],
+   "summary": "University-wide guidelines from the Provost on AI use by the whole community: ethics, disclosure, data protection, accuracy and bias, plus separate sections on teaching and learning, research, and administrative use. Students may use generative AI on assignments only when the instructor permits it in the syllabus.",
+   "units": [
+    {
+     "why": "The opening principle says AI \"must be used in ways that uphold academic integrity, fairness and human dignity\", a general framework statement for the whole community, so P56 (framework and principles) with phase general.",
+     "anchor": "AI must be used in ways that uphold academic integrity, fairness and human dignity.",
+     "frag_start": "AI must be used in",
+     "frag_end": "and human dignity.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment",
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "\"Usage of AI tools in academic work, research, or administrative activities must be clearly disclosed\" requires disclosure of AI use; P24 is the disclosure type and the actor is the whole community.",
+     "anchor": "must be clearly disclosed.",
+     "frag_start": "Usage of AI tools in academic",
+     "frag_end": "the work product.",
+     "policy": "Usage of AI tools in academic work, research, or administrative activities must be clearly disclosed, transparently, prominently and sufficiently for others to understand the role AI played in the work product.",
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "\"AI use must comply with SLU data protection policies and relevant laws (e.g., FERPA, HIPAA, GDPR)\" ties AI use to existing law and policy; P77 fits better than P50 because it is a general compliance duty, not a specific data-handling rule.",
+     "anchor": "AI use must comply with SLU data protection policies and relevant laws",
+     "frag_start": "AI use must comply with",
+     "frag_end": "GDPR).",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"AI should support, not replace, human decision-making in critical academic and administrative functions\" keeps humans responsible for decisions, matching P73.",
+     "anchor": "AI should support, not replace, human decision-making",
+     "frag_start": "AI should support, not replace,",
+     "frag_end": "administrative functions.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P73",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "\"AI technologies must be assessed for potential biases and actively designed to promote equity\" names bias and equity concerns about AI; P53 fits and the duty falls on those who adopt tools, so admin.",
+     "anchor": "AI technologies must be assessed for potential biases",
+     "frag_start": "AI technologies must be assessed",
+     "frag_end": "promote equity.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P53",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment",
+      "equity-access"
+     ]
+    },
+    {
+     "why": "\"must not input any restricted use data into generative AI tools\" is an absolute ban on one data class; data protection is P50.",
+     "anchor": "must not input any",
+     "frag_start": "SLU community members must not",
+     "frag_end": "into generative AI tools.",
+     "policy": "SLU community members must not input any restricted use data into generative AI tools.",
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"must not input any confidential data into generative AI tools, except when permitted by validated contract language\" bans confidential data with an ITS-approved exception, so P50 (protect data, prefer vetted tools).",
+     "anchor": "except when permitted by validated contract language and security controls",
+     "frag_start": "SLU community members must not",
+     "frag_end": "(approved by Information Technology Services (ITS)).",
+     "policy": "SLU community members must not input any confidential data into generative AI tools, except when permitted by validated contract language and security controls approved by ITS.",
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"must not input any personal information about SLU employees, students, faculty, or other stakeholders\" bans personal data entry with an ITS exception; a data-privacy rule, P50.",
+     "anchor": "must not input any personal information about SLU employees, students, faculty,",
+     "frag_start": "SLU community members must not",
+     "frag_end": "(approved by ITS).",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "SLU Madrid members \"must also receive approval from the data protection officer (DPO)\" is an extra campus-specific data approval step, still a data-protection rule so P50.",
+     "anchor": "must also receive approval from the data protection officer",
+     "frag_start": "SLU Madrid students, faculty, and staff",
+     "frag_end": "The DPO may be contacted at",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ],
+     "fit_note": "Adds a campus-specific approval step by the Madrid data protection officer, which P50 does not name."
+    },
+    {
+     "why": "\"All members of the SLU community must respect IP rights\" and know tool terms and conditions; IP and terms of use are P52.",
+     "anchor": "All members of the SLU community must respect IP rights",
+     "frag_start": "SLU community members must be aware",
+     "frag_end": "identity theft crimes.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P52",
+     "unit_stance": "neutral",
+     "topics": [
+      "intellectual-property"
+     ]
+    },
+    {
+     "why": "\"some publishers are asserting that using their content with AI tools is not allowed\" warns that vendor licenses may restrict AI use of library content, a licensing and terms issue (P52); it also tells users to contact the Libraries.",
+     "anchor": "some publishers are asserting that using their content with AI tools is not allowed",
+     "frag_start": "Please note that vendor licenses",
+     "frag_end": "large language model.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P52",
+     "unit_stance": "neutral",
+     "topics": [
+      "intellectual-property"
+     ]
+    },
+    {
+     "why": "\"must check the accuracy of information generated by generative AI tools prior to relying on\" it requires verification because output \"can be inaccurate, biased or entirely fabricated\", i.e. P31.",
+     "anchor": "must check the accuracy of information generated by generative AI tools",
+     "frag_start": "SLU community members must check",
+     "frag_end": "(sometimes called “hallucinations”).",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P31",
+     "unit_stance": "permit",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "\"You are responsible for any content that you publish that includes AI-generated material\" makes the user answerable for what is published, i.e. P29.",
+     "anchor": "You are responsible for any content that you publish that includes AI-generated material.",
+     "frag_start": "You are responsible for any",
+     "frag_end": "AI-generated material.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P29",
+     "unit_stance": "permit",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "\"Do not rely on any output that is indicative of a potential bias\" asks users to check output for disparate impact; this is about bias in AI output so P53, though it also asks for checking (P31).",
+     "anchor": "Do not rely on any output that is indicative of a potential bias.",
+     "frag_start": "SLU community members must consider",
+     "frag_end": "potential bias.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P53",
+     "unit_stance": "restrict",
+     "topics": [
+      "ethics-bias-environment"
+     ],
+     "fit_note": "Also asks users to examine inputs and outputs for disparate impact on protected classes, which P53 states only generally."
+    },
+    {
+     "why": "\"must disclose that those materials and that work product is based on or derives from the use of generative AI\" requires disclosure on produced work, P24.",
+     "anchor": "must disclose that those materials and that work product",
+     "frag_start": "SLU community members who leverage",
+     "frag_end": "use of generative AI.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "\"must not hold out any output generated by generative AI tools as their own\" bars passing off AI output as one's own; closest is P29 (submitted work must be own), P19 not chosen because it is about having AI produce the work, not about claiming it.",
+     "anchor": "must not hold out any output generated by generative AI tools as their own.",
+     "frag_start": "SLU community members must not hold out",
+     "frag_end": "as their own.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P29",
+     "unit_stance": "restrict",
+     "topics": [
+      "accountability-understanding",
+      "disclosure-citation"
+     ],
+     "fit_note": "Bars representing AI output as one's own work rather than requiring ownership of all submitted work."
+    },
+    {
+     "why": "\"you are not plagiarizing another party's existing work or otherwise violating another party's intellectual property rights\" asks users to check that quoted AI output does not infringe third-party IP, so P52.",
+     "anchor": "confirm that the output is accurate and that you are not plagiarizing",
+     "frag_start": "If you quote, paraphrase or borrow",
+     "frag_end": "intellectual property rights.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P52",
+     "unit_stance": "permit",
+     "topics": [
+      "intellectual-property"
+     ],
+     "fit_note": "Also requires confirming accuracy of borrowed AI output, which P52 does not mention."
+    },
+    {
+     "why": "\"prohibited from using generative AI tools to generate malicious content, such as malware, viruses\" is a conduct ban on malicious AI use, P74.",
+     "anchor": "prohibited from using generative AI tools to generate malicious content",
+     "frag_start": "SLU community members are prohibited",
+     "frag_end": "respective networks.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P74",
+     "unit_stance": "prohibit",
+     "topics": [
+      "prohibited-uses",
+      "ethics-bias-environment"
+     ]
+    },
+    {
+     "why": "\"prohibited from using AI tools with the intent to harm another person\" is a second, separate conduct ban on harmful AI use, P74.",
+     "anchor": "prohibited from using AI tools with the intent to harm another person.",
+     "frag_start": "SLU community members are prohibited",
+     "frag_end": "harm another person.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P74",
+     "unit_stance": "prohibit",
+     "topics": [
+      "prohibited-uses",
+      "ethics-bias-environment"
+     ]
+    },
+    {
+     "why": "\"expected to complete training in how to properly use AI before using any such AI tools\" asks the community to complete AI training; P70.",
+     "anchor": "expected to complete training in how to properly use AI",
+     "frag_start": "SLU community members are expected",
+     "frag_end": "laws, regulations or policies.",
+     "policy": "SLU community members are expected to complete training in how to properly use AI before using AI tools that could implicate ethical, legal or policy considerations.",
+     "actor": "all",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P70",
+     "unit_stance": "neutral",
+     "topics": [
+      "ai-literacy-career"
+     ]
+    },
+    {
+     "why": "\"expected to exercise it and opt out of training\" tells users to opt out of model training with their data where possible; a data-protection practice, P50.",
+     "anchor": "are expected to exercise it and opt out of training.",
+     "frag_start": "Some generative AI systems permit",
+     "frag_end": "opt out of training.",
+     "policy": null,
+     "actor": "all",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P50",
+     "unit_stance": "neutral",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"Students must follow the academic integrity policy, faculty syllabi, and any applicable guidance\" when using AI makes existing rules binding for AI use; P77 (comply with existing policy).",
+     "anchor": "Students must follow the academic integrity policy, faculty syllabi,",
+     "frag_start": "Students must follow the academic",
+     "frag_end": "other intelligent systems.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P77",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding",
+      "syllabus-communication"
+     ],
+     "fit_note": "Names academic integrity policy, syllabi and the handbook as the governing sources and covers agentic AI."
+    },
+    {
+     "why": "\"Unless an instructor includes a clear statement in their syllabus granting permission, the use of generative AI tools to complete an assignment or exam is prohibited\" is a fallback default of prohibition when the syllabus is silent: P06.",
+     "anchor": "Unless an instructor includes a clear statement in their syllabus granting permission",
+     "frag_start": "Unless an instructor includes a",
+     "frag_end": "assignment or exam is prohibited.",
+     "policy": "Unless an instructor includes a clear statement in their syllabus granting permission, the use of generative AI tools to complete an assignment or exam is prohibited.",
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "must-not",
+     "policy_type": "P06",
+     "unit_stance": "prohibit",
+     "topics": [
+      "default-stance",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "\"Unauthorized use of AI will be treated similarly to unauthorized assistance and/or plagiarism\" classifies unauthorized AI use as misconduct, P36.",
+     "anchor": "Unauthorized use of AI will be treated similarly to unauthorized assistance",
+     "frag_start": "Unauthorized use of AI",
+     "frag_end": "and/or plagiarism.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "\"Instructors are encouraged to insert a syllabus statement regarding the use of GAI\" asks instructors to put an AI statement in the syllabus (P09); modality should since it says \"encouraged\".",
+     "anchor": "Instructors are encouraged to insert a syllabus statement regarding the use of GAI",
+     "frag_start": "Instructors are encouraged to insert",
+     "frag_end": "in their courses.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"students are encouraged to acknowledge and properly cite any use of AI applications\" asks for disclosure and citation of permitted AI use; P24 with modality should.",
+     "anchor": "students are encouraged to acknowledge and properly cite any use of AI applications",
+     "frag_start": "If permitted by the course",
+     "frag_end": "professional standards.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "\"Students are encouraged to speak with their instructors regarding their expectations for AI tool usage\" tells students to ask the instructor about AI rules, P10.",
+     "anchor": "Students are encouraged to speak with their instructors",
+     "frag_start": "Students are encouraged to speak",
+     "frag_end": "in each course.",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P10",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"instructors are required to share clear expectations at the beginning of each semester through the syllabus\" mandates communicating AI expectations in the syllabus, P09.",
+     "anchor": "instructors are required to share clear expectations at the beginning of each semester",
+     "frag_start": "Instructors should provide clear expectations",
+     "frag_end": "and class discussion.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "must",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"Encourage discussions about AI in the classroom and online forums\" asks instructors to discuss AI with students and explain tools, benefits and limits; P66 (explain and discuss the rules).",
+     "anchor": "Encourage discussions about AI in the classroom and online forums.",
+     "frag_start": "Encourage discussions about AI in",
+     "frag_end": "and student learning.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P66",
+     "unit_stance": "encourage",
+     "topics": [
+      "syllabus-communication",
+      "learning-rationale"
+     ]
+    },
+    {
+     "why": "\"Develop statements about the use of AI tools in courses, clearly defining what is considered appropriate and inappropriate use\" tells instructors to write course AI statements; a separate sentence from the syllabus mandate, still P09.",
+     "anchor": "Develop statements about the use of AI tools in courses",
+     "frag_start": "Develop statements about the use",
+     "frag_end": "inappropriate use.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "\"AI tools should be used to enhance pedagogy, not to replace instruction and engagement\" says how instructors should use AI in teaching, P59.",
+     "anchor": "AI tools should be used to enhance pedagogy, not to replace instruction and engagement.",
+     "frag_start": "AI tools should be used",
+     "frag_end": "instruction and engagement.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P59",
+     "unit_stance": "permit",
+     "topics": [
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "\"individual consultations and learning communities offered by the Reinert Center\" are support for instructors dealing with AI, P63.",
+     "anchor": "Utilize available support resources for AI tools in the classroom",
+     "frag_start": "Utilize available support resources for",
+     "frag_end": "Teaching and Learning.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "\"AI detection tools carry risks of misidentification and have not been widely proven to detect AI use\" says detectors are unreliable and urges care, P39.",
+     "anchor": "AI detection tools carry risks of misidentification",
+     "frag_start": "Be aware that AI detection",
+     "frag_end": "assessing student work.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "should",
+     "policy_type": "P39",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ]
+    },
+    {
+     "why": "\"Instructors should not inappropriately employ GAI in their teaching activities, including the design of courses, syllabi development\" restricts instructor AI use in teaching work, P59.",
+     "anchor": "Instructors should not inappropriately employ GAI in their teaching activities",
+     "frag_start": "Instructors should not inappropriately employ",
+     "frag_end": "institutional standards and policies.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "should-not",
+     "policy_type": "P59",
+     "unit_stance": "restrict",
+     "topics": [
+      "instructor-staff-use"
+     ]
+    },
+    {
+     "why": "Researchers \"must comply with all applicable federal regulations, agency guidance, sponsor requirements\" and university policy; AI rules for research that defer to funders and regulators are P62.",
+     "anchor": "Researchers utilizing AI must comply with all applicable federal regulations,",
+     "frag_start": "Researchers utilizing AI must comply",
+     "frag_end": "use of specific AI tools or platforms.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P62",
+     "unit_stance": "neutral",
+     "topics": [
+      "ethics-bias-environment",
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"Be transparent regarding AI use in research, including describing methods, acknowledgements\" requires research disclosure; P62 because the setting is research, not coursework.",
+     "anchor": "Be transparent regarding AI use in research",
+     "frag_start": "Be transparent regarding AI use",
+     "frag_end": "as appropriate.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P62",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "\"AI-generated research output must be clearly identified, and authorship must reflect substantive human contributions\" governs identification and authorship in research, P62.",
+     "anchor": "AI-generated research output must be clearly identified",
+     "frag_start": "AI-generated research output must be",
+     "frag_end": "output is published.",
+     "policy": "AI-generated research output must be clearly identified, and authorship must reflect substantive human contributions.",
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P62",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation",
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "\"Researchers are responsible for the accuracy of any content created by AI\" and note AI invents citations; accountability for accuracy, P31.",
+     "anchor": "Researchers are responsible for the accuracy of any content created by AI",
+     "frag_start": "Researchers are responsible for the",
+     "frag_end": "were never conducted.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P31",
+     "unit_stance": "permit",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "\"Avoid uploading or using as input any unpublished research data\" is a data-protection rule for researchers, P50.",
+     "anchor": "Avoid uploading or using as input any unpublished research data",
+     "frag_start": "Avoid uploading or using as",
+     "frag_end": "privacy violations.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "should-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data",
+      "intellectual-property"
+     ]
+    },
+    {
+     "why": "\"some funding agencies (e.g., NIH, NSF) prohibit using generative AI for peer review\" is a fact about funder rules on AI in peer review, P62.",
+     "anchor": "prohibit using generative AI for peer review",
+     "frag_start": "This includes unpublished manuscripts or",
+     "frag_end": "for peer review.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P62",
+     "unit_stance": "prohibit",
+     "topics": [
+      "research-use"
+     ]
+    },
+    {
+     "why": "\"Avoid uploading, or using as input, confidential information belonging to SLU or other individuals or organizations\" is a confidentiality rule for researchers, P50.",
+     "anchor": "Avoid uploading, or using as input, confidential information belonging to SLU",
+     "frag_start": "Avoid uploading, or using as",
+     "frag_end": "personal information related to research subjects.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "during-work",
+     "modality": "should-not",
+     "policy_type": "P50",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"Researchers are expected to follow the policies of journals, funding agencies, and professional societies\" defers AI rules to venues and funders, P62.",
+     "anchor": "Researchers are expected to follow the policies of journals, funding agencies,",
+     "frag_start": "Researchers are expected to follow",
+     "frag_end": "or graphics).",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P62",
+     "unit_stance": "neutral",
+     "topics": [
+      "research-use"
+     ]
+    },
+    {
+     "why": "\"may require Institutional Review Board (IRB) or other research compliance committee approvals\" sets IRB review for AI in sensitive research, P62.",
+     "anchor": "may require Institutional Review Board (IRB) or other research compliance committee approvals",
+     "frag_start": "The application of AI in",
+     "frag_end": "for more information.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P62",
+     "unit_stance": "neutral",
+     "topics": [
+      "research-use",
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"may enhance efficiency, optimize resources, and empower employees\" frames administrative AI as beneficial; it states a purpose for operational AI use, P76.",
+     "anchor": "may enhance efficiency, optimize resources, and empower employees",
+     "frag_start": "The thoughtful implementation of AI",
+     "frag_end": "corporate purposes.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P76",
+     "unit_stance": "encourage",
+     "topics": [
+      "ai-literacy-career"
+     ]
+    },
+    {
+     "why": "\"must be regularly audited for fairness and accuracy\" governs AI in admissions, hiring and student services, i.e. operational AI use, P76.",
+     "anchor": "must be regularly audited for fairness and accuracy",
+     "frag_start": "AI systems used in critical administrative",
+     "frag_end": "fairness and accuracy.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "must",
+     "policy_type": "P76",
+     "unit_stance": "restrict",
+     "topics": [
+      "ethics-bias-environment"
+     ]
+    },
+    {
+     "why": "\"must go through the normal contract approval processes and be reviewed by ITS for appropriate contract language and security controls\" is review of AI vendor contracts, P65.",
+     "anchor": "must go through the normal contract approval processes",
+     "frag_start": "As stated previously, the implementation",
+     "frag_end": "contract language and security controls.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P65",
+     "unit_stance": "restrict",
+     "topics": [
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"Automated decision-making processes must include a mechanism for human review and appeal\" keeps humans responsible for decisions about people, P73.",
+     "anchor": "must include a mechanism for human review and appeal.",
+     "frag_start": "Automated decision-making processes must include",
+     "frag_end": "review and appeal.",
+     "policy": "Automated decision-making processes must include a mechanism for human review and appeal.",
+     "actor": "admin",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P73",
+     "unit_stance": "restrict",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "\"Staff should not inappropriately employ GAI in their work, plagiarize by submitting work that is not their own\" governs staff administrative AI use, P76.",
+     "anchor": "Staff should not inappropriately employ GAI in their work",
+     "frag_start": "Staff should not inappropriately employ",
+     "frag_end": "with a GAI provider.",
+     "policy": null,
+     "actor": "ta-staff",
+     "phase": "during-work",
+     "modality": "should-not",
+     "policy_type": "P76",
+     "unit_stance": "restrict",
+     "topics": [
+      "instructor-staff-use",
+      "privacy-data"
+     ]
+    },
+    {
+     "why": "\"AI tools may be implemented by an administrative unit when appropriate safeguards are in place\" with approval from ITS, General Counsel and the University AI Committee; operational AI governance, P76.",
+     "anchor": "AI tools may be implemented by an administrative unit when appropriate safeguards",
+     "frag_start": "AI tools may be implemented",
+     "frag_end": "existing contract approval processes.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P76",
+     "unit_stance": "permit",
+     "topics": [
+      "privacy-data"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "saint-louis-syllabus-components",
+   "layer": "university",
+   "unit": "Office of the Provost (Faculty Affairs)",
+   "course": null,
+   "title": "Course Syllabus Components (Print-Friendly)",
+   "url": "https://www.slu.edu/provost/faculty-affairs/teaching-resources-for-faculty/course-syllabus-information/syllabus-statements/print-friendly-syllabus-components-slu.pdf",
+   "date_or_term": "undated",
+   "stance_why": "The document says \"If/how students are permitted to use GAI ... is determined by each individual instructor\" and \"There is no single, University-level syllabus statement about GAI use\", so it sets no stance and hands the decision to instructors.",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "A syllabus checklist from the Provost requiring every syllabus to say explicitly whether generative AI use is acceptable. The decision rests with each instructor unless academic leadership directs otherwise, and the Reinert Center offers sample statements.",
+   "units": [
+    {
+     "why": "\"make explicit whether or not GAI use is acceptable in the course\" is a required syllabus component, so it is P09; it binds instructors before the course.",
+     "anchor": "make explicit whether or not GAI use is acceptable in the course",
+     "frag_start": "Provide written information to make",
+     "frag_end": "in which circumstances.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "must",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ]
+    },
+    {
+     "why": "\"determined by each individual instructor, unless otherwise directed by their academic leadership\" hands the decision to instructors, P04.",
+     "anchor": "is determined by each individual instructor",
+     "frag_start": "If/how students are permitted",
+     "frag_end": "(e.g., chair, director, dean).",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "default-stance"
+     ]
+    },
+    {
+     "why": "\"There is no single, University-level syllabus statement about GAI use\" says the university sets no single position and leaves rules to instructors; closest is P04.",
+     "anchor": "There is no single, University-level syllabus statement about GAI use.",
+     "frag_start": "There is no single,",
+     "frag_end": "about GAI use.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion"
+     ],
+     "fit_note": "States that no single university-wide AI syllabus statement exists, rather than assigning the decision to instructors directly."
+    },
+    {
+     "why": "\"The Reinert Center offers a set of sample templates for syllabus statements (with a range of possible positions)\" supports instructors in writing AI statements, P63; the templates are not defined here so P05 does not fit.",
+     "anchor": "The Reinert Center offers a set of sample templates for syllabus statements",
+     "frag_start": "Note: The Reinert Center offers",
+     "frag_end": "choose to use them.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "\"The School of Law, School of Medicine, and SLU-Madrid may have different expectations\" says these units may set their own AI expectations; no type covers unit-level carve-outs.",
+     "anchor": "may have different expectations due to accreditation, regulatory, and/or other",
+     "frag_start": "The School of Law, School of",
+     "frag_end": "location-specific differences.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion"
+     ],
+     "uncovered_note": "Some university units (Law, Medicine, Madrid campus) may have different AI expectations from the university-wide syllabus rule because of accreditation or location."
+    }
+   ]
+  },
+  {
+   "id": "saint-louis-academic-integrity",
+   "layer": "university",
+   "unit": "Office of the Provost",
+   "course": null,
+   "title": "Academic Integrity Policy",
+   "url": "https://www.slu.edu/provost/policies/academic-and-course/academic-integrity-policy.pdf",
+   "date_or_term": "undated",
+   "stance_why": "The policy defines cheating as using \"artificial intelligence or other technology ... not authorized by the instructor\", so AI is misconduct unless authorized, and uncited AI-generated work counts as plagiarism.",
+   "stance": "restrict",
+   "tiers": [],
+   "summary": "The university Academic Integrity Policy mentions AI inside its definitions of academic integrity, cheating and plagiarism, and in faculty responsibilities. AI content must be acknowledged and unauthorized AI use counts as cheating.",
+   "units": [
+    {
+     "why": "\"Acknowledging the source of information whether taken from another person, artificial intelligence, or other technology\" lists acknowledging AI sources as part of integrity, i.e. P24.",
+     "anchor": "whether taken from another person, artificial intelligence, or other technology.",
+     "frag_start": "Acknowledging the source of information",
+     "frag_end": "other technology.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation",
+      "accountability-understanding"
+     ],
+     "fit_note": "Frames acknowledgment of AI sources as a general integrity responsibility rather than a per-submission disclosure."
+    },
+    {
+     "why": "Cheating includes \"Using assistance, notes, aids, artificial intelligence or other technology ... not authorized by the instructor\", defining unauthorized AI as cheating and so P36; implicitly AI is allowed only if authorized.",
+     "anchor": "artificial intelligence or other technology, cell phones, calculators,",
+     "frag_start": "Using assistance, notes, aids,",
+     "frag_end": "or to complete assignments.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "prohibited-uses",
+      "integrity-sanctions",
+      "exams-in-person"
+     ],
+     "fit_note": "Defines misconduct as AI use not authorized by the instructor in quizzes, exams or assignments."
+    },
+    {
+     "why": "Plagiarism includes presenting work \"generated or created by ... artificial intelligence\" without quotation marks or citation; a definition of misconduct, P36.",
+     "anchor": "by artificial intelligence, or by other technology without quotation marks",
+     "frag_start": "Directly presenting the written, artistic,",
+     "frag_end": "proper citation to the source.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions",
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "Plagiarism includes paraphrasing \"ideas, concepts, arguments\" generated by AI \"without proper citation\"; a separate item covering AI-derived ideas, P36.",
+     "anchor": "by artificial intelligence, or by other technology without proper citation of the source.",
+     "frag_start": "Paraphrasing or incorporating the ideas,",
+     "frag_end": "citation of the source.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions",
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "Plagiarism includes \"Presenting information from the internet, produced by artificial intelligence ... so that it appears to be the student's own work\", passing off AI output, P36.",
+     "anchor": "produced by artificial intelligence, or by other",
+     "frag_start": "Presenting information from the internet,",
+     "frag_end": "student’s own work.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions",
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "Plagiarism includes submitting work \"prepared, either entirely or in part, by ... artificial intelligence ... without proper citation\", P36.",
+     "anchor": "by another person, group, commercial firm, artificial intelligence, or by other technology",
+     "frag_start": "Submitting as the student’s own,",
+     "frag_end": "proper citation.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions",
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "Faculty are responsible for \"sharing relevant parts of the policy on their syllabi and assignments (e.g., an explicit statement on use of artificial intelligence\" so a duty to state AI rules, P09.",
+     "anchor": "an explicit statement on use of artificial intelligence and/or other technology",
+     "frag_start": "sharing relevant parts of the policy",
+     "frag_end": "other technology);",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "must",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "fit_note": "Part of a longer list of faculty responsibilities for academic integrity."
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "No school or computing-unit policy found; course layer deferred. Faculty researcher items coded with actor instructor. Unit stance for guidance rationale/definitions mostly neutral."
+}

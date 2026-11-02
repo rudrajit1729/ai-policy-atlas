@@ -1,0 +1,2361 @@
+{
+ "group": "pass3-u-11",
+ "searched_universities": [
+  {
+   "university": "Dalhousie University",
+   "result": "included",
+   "notes": "pass3. 2 WebSearches. No department-level CS policy; web.cs.dal.ca pages (CSCI 4150 AI.html, CSCI 6505 syllabus statement) have no AI-use rules. Found a Faculty of Computer Science course statement (CSCI4177/CSCI5709 'Use of Artificial Intelligence Tools' + README AI citation template) reproduced in the Dal Centre for Learning and Teaching GenAI book; included as level course. The Dal CLT AI_Resource page is 404; the Libraries GenAI guide was the university-general fallback, not needed."
+  },
+  {
+   "university": "Northwestern University",
+   "result": "included",
+   "notes": "pass3. 3 WebSearches. No public CS (McCormick) course/department AI policy; the 100/200-level prohibition claim appears only in a CE magazine article (excluded). Included the Provost 'Principles Regarding Academic Integrity' (GenAI text) as university-general. The Provost 'Generative AI tools' teaching page now redirects to the NNCI homepage; the Searle Center statement is a philosophy statement, not a policy. addendum4: tier1 found by browsing CS faculty course sites: CS 213 Fall 2025 syllabus (Dinda) has an 'AI' section (vibe-coding warning); F24 version only had a one-line integrity sentence; Provost principles moved to excluded. tier2 (MSAI program pages, AI major) not needed; tier3 McCormick-level policy not found (NU-Q syllabus template is the Qatar campus, not relevant). 6 WebSearches."
+  },
+  {
+   "university": "Missouri University of Science and Technology",
+   "result": "included",
+   "notes": "pass3. 2 WebSearches. No CS course/department AI policy found. Included the TLC GAI Guidelines (three traffic-light levels) as university-general. addendum4: tier2 none (CS/Applied AI MS pages, mst.edu site search); tier3: no College of Engineering and Computing AI policy; dos.mst.edu academic-integrity AI page is campus-wide. Remains Tier 4."
+  },
+  {
+   "university": "Florida International University",
+   "result": "included",
+   "notes": "pass3. 1 WebSearch. Browsed the KFSCIS syllabi directory (www4.cis.fiu.edu/courses/Syllabi/): COP 2047/3045/3410/3538/3835/4338/4610, CAI 4002 etc. have no AI-use text; the 2026-08-NewSyllabi/CAP_4104.docx (HCI) has a substantive AI-assisted assignment and rubric. Included as level course."
+  },
+  {
+   "university": "Emory University",
+   "result": "included",
+   "notes": "pass3. 3 WebSearches. No public CS syllabus with AI text. Included the Emory College Syllabus Additions PDF (AAFP; AI statement + Honor Council language) as university-general. Also seen: Honor Council 'considerations for detection' PDF (not included; one per university). addendum4: reclassified the Emory College Syllabus Additions as Tier 3 school-general (Emory College of Arts and Sciences houses CS). tier1 re-check: cs.emory.edu site search and CS 170 (Cheung) syllabus have no AI text; tier2: Data and Decision Sciences (former QTM) dept search found no public AI policy."
+  },
+  {
+   "university": "Saint Louis University",
+   "result": "included",
+   "notes": "pass3. 2 WebSearches. No CS course AI policy. Included the Provost Course Syllabus Components (July 2025), which require a GenAI statement, as university-general. Academic Integrity FAQ also references AI (not included). addendum4: tier2 none (CS/AI MS catalog pages; cs.slu.edu faculty course pages last updated 2020); tier3: no School of Science and Engineering AI policy (only Provost Complete AI Guidelines). Remains Tier 4."
+  },
+  {
+   "university": "Ontario Tech University",
+   "result": "included",
+   "notes": "pass3. 2 WebSearches. No Faculty of Science/CS AI course policy. The academic-integrity 'Using Generative AI' page is just a flowchart image; included its linked plain-text decision tree (docx, Academic Integrity/TLC) as university-general. addendum4: tier2 none (Faculty of Business and IT / new School of AI: no course-outline AI policy found); tier3: no Faculty of Science or Engineering AI policy found (ontariotechu.ca site search). Remains Tier 4."
+  },
+  {
+   "university": "Wake Forest University",
+   "result": "included",
+   "notes": "pass3. 2 WebSearches. No public CSC syllabus with AI text; the CAT crowdsourced syllabus archive is Lance Eaton's general doc (not WFU CS). Included ai.wfu.edu 'Guidelines for Academic Use' (March 2025 working group) as university-general. addendum4: tier2 none; tier3: no Engineering or Arts & Sciences AI policy (wfu.edu site search; CAT says schools/departments may set approaches but none public). Remains Tier 4."
+  },
+  {
+   "university": "Oklahoma State University",
+   "result": "included",
+   "notes": "pass3. 2 WebSearches. No CS course AI policy. itle.okstate.edu returns a Cloudflare challenge to curl; text taken from the Wayback snapshot (https://web.archive.org/web/2025/https://itle.okstate.edu/chatgpt -> 20260409170051) via fetch_text.py. Included ITLE ChatGPT page with OSU sample syllabus statements as university-general. AI Misuse Guidelines page also available via archive (not included). addendum4: tier2 none (MS AI pages in CEAT/CS have no policy); tier3: no CEAT or Arts & Sciences AI policy (okstate.edu site search). Remains Tier 4."
+  },
+  {
+   "university": "Jackson State University",
+   "result": "included",
+   "notes": "pass3. 1 WebSearch. No CSC syllabus with AI text; the ECE&CS students page returned 502 live (archived copy has no AI policy). Included the common-syllabus AI Policy (THEE Pathway) as university-general; live page timed out, text from Wayback snapshot 20260217002543 via fetch_text.py. addendum4: tier2 none; tier3: no College of Science, Engineering and Technology AI policy (search); common-syllabus policy itself says colleges may add criteria. Remains Tier 4."
+  },
+  {
+   "university": "New Jersey Institute of Technology",
+   "result": "included",
+   "notes": "pass3. 1 WebSearch. Retries: (1) live digitalcommons.njit.edu still 403/Cloudflare to curl, incl. /context/cs-syllabi/article/N/viewcontent (302 to challenge); (2) Wayback 'available' API: no snapshots for article=1621 (CS 301-003) or 1627 (CS 332-H01), and the CDX index has no archived cs-syllabi PDFs for article>=1600 except 1599, so CS 301/332/375/450/786 remain unverifiable; (3) Wayback CDX found ~31 archived Fall 2024 cs-syllabi PDFs (articles 1501-1539, 1599); fetched all, AI text in CS 435, 444, 485-007, 490, 670, 732, 698-004. Included 3 with the most substantive AI text: CS 490 (Au24), CS 485-007 (Fall 2024), CS 698-004 (Spring 2025); text from web.archive.org snapshots, URLs are the original Digital Commons links."
+  },
+  {
+   "university": "University of Mississippi",
+   "result": "included",
+   "notes": "pass3. 3 WebSearches. No CSCI syllabus AI text. Included the CETL Syllabus Template (docx linked from the UM Libraries AI guide, ld.php?content_id=77996771) GenAI section as university-general. addendum4: tier2 none; tier3: no School of Engineering AI policy (olemiss.edu site search; only a physics lab syllabus). Remains Tier 4."
+  },
+  {
+   "university": "University of Guelph",
+   "result": "included",
+   "notes": "pass3. 2 WebSearches. No SoCS/CIS course outline with AI text. Included the OTL 'Provisional Recommendations for the Use of Generative AI' page (now the Sept 3, 2026 AVP Academic memo) as university-general. addendum4: tier2 none (CSAI collaborative specialization pages; CIS*1300/2500 outlines not public); tier3: no CEPS/CCMPS AI policy (uoguelph.ca site search). Remains Tier 4."
+  },
+  {
+   "university": "Georgia State University",
+   "result": "included",
+   "notes": "pass3. 2 WebSearches. No CSC course AI policy. The University AI Policy on PolicyStat is JS-only; included its attached 'AI Policy Supplement' (disclosure standards for faculty/students) as university-general. addendum4: tier1 none (CSC 1301 search, CETLOE search). tier2: CIS 3001 Managing IT Projects (Computer Information Systems dept, Robinson College) class AI MOU, Google Drive file linked from CETLOE blog post 2025-04-10; fetched via drive direct-download (uc?export=download&id=...); included as course, AI Policy Supplement moved to excluded. Borderline: CIS is an information-systems unit in the business college. tier3 not needed."
+  },
+  {
+   "university": "Western Michigan University",
+   "result": "included",
+   "notes": "pass3. 1 WebSearch. No CS 1110/1120 syllabus AI text (CS 1110 AI story is news). Included 'AI in the Syllabus' (page moved to wmich.edu/x/instructors/resources/ai-syllabus) as university-general. addendum4: tier2 none; tier3: no CEAS AI policy (CS 1110 AI learning-aid item is a news story); wmich.edu site search. Remains Tier 4."
+  },
+  {
+   "university": "University of Wisconsin–Milwaukee",
+   "result": "included",
+   "notes": "pass3. 1 WebSearch. No COMPSCI syllabus AI text. Included Center for Advancing Student Learning 'Syllabus Statements: Guiding Student Generative AI Usage in Your Class' as university-general. addendum4: tier2: School of Information Studies course-syllabi page links INFOST sample syllabi on SharePoint, all login-only (not public); tier3: no CEAS AI policy found. Remains Tier 4."
+  },
+  {
+   "university": "UT Rio Grande Valley",
+   "result": "included",
+   "notes": "pass3. 2 WebSearches. CSCI 1370 syllabi (Tomai) have no AI text. Included COLTT 'Generative AI Technology' page as university-general. addendum4: tier1 re-check: CSCI/CMPE 1370 (Schweller) syllabus has no AI text; tier2 none; tier3: no College of Engineering and Computer Science AI policy (utrgv.edu site search; /ai/policy is university-wide). Remains Tier 4."
+  },
+  {
+   "university": "Utah State University",
+   "result": "included",
+   "notes": "pass3. 1 WebSearch. No CS course AI syllabus found. Included USU Teach 'AI in Teaching: Communicate about AI' (templates; explicitly names coding assistants) as university-general. addendum4: tier2 none; tier3: no College of Engineering/School of Computing AI policy (usu.edu site search found only an ITLS course and teaching-center pages). Remains Tier 4."
+  },
+  {
+   "university": "UNLV",
+   "result": "included",
+   "notes": "pass3. 1 WebSearch. Found CS 301 Social Implications of Computer Technology (Spring 2026, Berghel) syllabus with a GenAI policy; live page now 404, text from Wayback snapshot 20260516075129 (URL recorded is the snapshot). Included as level course."
+  },
+  {
+   "university": "Cal State LA",
+   "result": "included",
+   "notes": "pass3. 1 WebSearch. No public CS syllabi with AI text. Included CETL 'Recommendations for Teaching & Learning with AI' as university-general. addendum4: tier2 none; tier3: no ECST college AI policy (calstatela.edu site search; CS handbook is 2018). Remains Tier 4."
+  }
+ ],
+ "documents": [
+  {
+   "id": "dal-csci4177-5709-ai-tools",
+   "university": "Dalhousie University",
+   "country": "Canada",
+   "region": "NS",
+   "unit": "Faculty of Computer Science (statement reproduced in the Centre for Learning and Teaching GenAI book)",
+   "level": "course",
+   "course": "CSCI 4177 / CSCI 5709",
+   "title": "Classroom Policies and Syllabus Statements: Use of Artificial Intelligence Tools (CSCI4177 Advanced Web Services and CSCI5709 Advanced Topics in Web Development)",
+   "url": "https://pressbooks.atlanticoer-relatlantique.ca/genaiandteaching/chapter/classroom-policies-and-syllabus-statements-for-a-i-tool-use/",
+   "date_or_term": "Copyright 2025 (book)",
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "permit-with-conditions",
+   "summary": "Tier 1. Syllabus statement from two Dalhousie computer science web-development courses, published as an exemplar in the Centre for Learning and Teaching's GenAI book. AI tools may support learning, but some assessments forbid them; allowed use must be acknowledged with chat logs, and a README template asks students to record the tool, prompt, generated code and how it was modified.",
+   "excerpts": [
+    {
+     "text": "You MAY use Al-driven tools to assist you in learning",
+     "frag_start": "You MAY use Al-driven tools",
+     "frag_end": "course competencies and outcomes.",
+     "section": "Sample Syllabus Statements (CSCI4177 / CSCI5709)",
+     "topics": [
+      "permitted-uses",
+      "learning-rationale"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "specific assessments in this course will disallow the use of Al-driven tools",
+     "frag_start": "While you may use tools",
+     "frag_end": "have attained course learning outcomes.",
+     "section": "Sample Syllabus Statements (CSCI4177 / CSCI5709)",
+     "topics": [
+      "assessment-design",
+      "prohibited-uses"
+     ],
+     "phase": "during-assessment",
+     "actor": "student"
+    },
+    {
+     "text": "A graduate must be able to analyze, assess and produce work unassisted by AI technology.",
+     "frag_start": "A graduate must be able",
+     "frag_end": "unassisted by AI technology.",
+     "section": "Sample Syllabus Statements (CSCI4177 / CSCI5709)",
+     "topics": [
+      "learning-rationale",
+      "accountability-understanding"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Where tools are allowed: you MUST acknowledge all tools used to assist you.",
+     "frag_start": "Where tools are allowed: you",
+     "frag_end": "tools used to assist you.",
+     "section": "Sample Syllabus Statements (CSCI4177 / CSCI5709)",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "If applicable, you MUST provide links to chat logs.",
+     "frag_start": "If applicable, you MUST provide",
+     "frag_end": "links to chat logs.",
+     "section": "Sample Syllabus Statements (CSCI4177 / CSCI5709)",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Using Al-driven tools where prohibited constitutes an academic offence.",
+     "frag_start": "Using Al-driven tools where prohibited",
+     "frag_end": "constitutes an academic offence.",
+     "section": "Sample Syllabus Statements (CSCI4177 / CSCI5709)",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "student"
+    },
+    {
+     "text": "the prompt used, the code generated by the AI, where the code was implemented",
+     "frag_start": "If in completing your lab",
+     "frag_end": "how it was modified.",
+     "section": "README.txt File Template",
+     "topics": [
+      "disclosure-citation",
+      "code-generation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Copy and paste the entirety of the code generated by the AI Tool listed above.",
+     "frag_start": "Copy and paste the entirety",
+     "frag_end": "AI Tool listed above.",
+     "section": "README.txt File Template",
+     "topics": [
+      "disclosure-citation",
+      "code-generation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    }
+   ]
+  },
+  {
+   "id": "northwestern-cs213-intro-computer-systems",
+   "university": "Northwestern University",
+   "country": "USA",
+   "region": "IL",
+   "unit": "Department of Computer Science, McCormick School of Engineering",
+   "level": "course",
+   "course": "CS 213",
+   "title": "CS 213 Introduction to Computer Systems Fall 2025 (syllabus)",
+   "url": "https://users.cs.northwestern.edu/~pdinda/ics-f25/syllabus.pdf",
+   "date_or_term": "Fall 2025",
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "mixed",
+   "summary": "Tier 1. Syllabus for Northwestern's core computer systems course. A short section titled 'Cheating, AI, and Inadvertent Disclosures' warns that prompt-engineering or vibe-coding through labs and homework will prevent learning, notes that these graded tasks carry weight for that reason, and points to the university academic integrity policy for blatant cheating.",
+   "excerpts": [
+    {
+     "text": "“Prompt engineering” or “vibe coding” your way through labs and homeworks",
+     "frag_start": "“Prompt engineering” or “vibe coding”",
+     "frag_end": "unlikely that you learn anything.",
+     "section": "Cheating, AI, and Inadvertent Disclosures",
+     "topics": [
+      "code-generation",
+      "learning-rationale"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "will make it unlikely that you learn anything.",
+     "frag_start": "“Prompt engineering” or “vibe coding”",
+     "frag_end": "unlikely that you learn anything.",
+     "section": "Cheating, AI, and Inadvertent Disclosures",
+     "topics": [
+      "learning-rationale"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "The labs and homeworks are a substantial portion of the grade for a good reason.",
+     "frag_start": "The labs and homeworks are",
+     "frag_end": "for a good reason.",
+     "section": "Cheating, AI, and Inadvertent Disclosures",
+     "topics": [
+      "assessment-design",
+      "learning-rationale"
+     ],
+     "phase": "during-work",
+     "actor": "instructor"
+    },
+    {
+     "text": "if we detect blatant cheating, we will deal with the cheaters as per Northwestern guidelines",
+     "frag_start": "Nonetheless, if we detect blatant",
+     "frag_end": "as per Northwestern guidelines.",
+     "section": "Cheating, AI, and Inadvertent Disclosures",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "instructor"
+    },
+    {
+     "text": "Please note that you are subject to the Academic Integrity Policy.",
+     "frag_start": "Please note that you are",
+     "frag_end": "the Academic Integrity Policy.",
+     "section": "Cheating, AI, and Inadvertent Disclosures",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "student"
+    }
+   ]
+  },
+  {
+   "id": "mst-tlc-gai-guidelines",
+   "university": "Missouri University of Science and Technology",
+   "country": "USA",
+   "region": "MO",
+   "unit": "Teaching and Learning Center (GAI task force)",
+   "level": "university-general",
+   "course": null,
+   "title": "GAI Guidelines",
+   "url": "https://tlc.mst.edu/teaching/gaiguidelines/",
+   "date_or_term": "spring 2024 task force",
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "tiered",
+   "summary": "Tier 4. Campus guidance from a spring 2024 faculty task force that set three traffic-light levels of generative AI use (green, yellow, red) for syllabi and assignments, with official icons added to syllabus materials and Simple Syllabus. It stresses instructor academic freedom, asks faculty to write their own policy, advises against AI checkers, and gives optional statements on verifying and citing AI output.",
+   "excerpts": [
+    {
+     "text": "The task force produced three levels of GAI use in courses:",
+     "frag_start": "The task force produced three",
+     "frag_end": "GAI use in courses:",
+     "section": "GAI Guidelines",
+     "topics": [
+      "use-categories-levels"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "faculty include their own written policy regarding students’ GAI use",
+     "frag_start": "These categories are not intended",
+     "frag_end": "regarding students’ GAI use.",
+     "section": "GAI Guidelines",
+     "topics": [
+      "syllabus-communication",
+      "instructor-discretion"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "They will also be automatically included in syllabi created using Simple Syllabus.",
+     "frag_start": "They will also be automatically",
+     "frag_end": "created using Simple Syllabus.",
+     "section": "GAI Guidelines",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "phase": "course-start",
+     "actor": "department"
+    },
+    {
+     "text": "Instructors have academic freedom to set acceptable levels of GAI use in their classroom",
+     "frag_start": "Instructors have academic freedom to",
+     "frag_end": "from one instructor to another.",
+     "section": "Why levels are helpful",
+     "topics": [
+      "instructor-discretion",
+      "use-categories-levels"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "When an academic honesty issue is raised, a clear statement on the syllabus",
+     "frag_start": "When an academic honesty issue",
+     "frag_end": "the case easier to address.",
+     "section": "Why levels are helpful",
+     "topics": [
+      "integrity-sanctions",
+      "syllabus-communication"
+     ],
+     "phase": "when-misuse",
+     "actor": "instructor"
+    },
+    {
+     "text": "Faculty are therefore cautioned against attempting to use this type of software.",
+     "frag_start": "The UM system does not",
+     "frag_end": "has not been able to keep up.",
+     "section": "Using AI checkers",
+     "topics": [
+      "detection-tools"
+     ],
+     "phase": "when-misuse",
+     "actor": "instructor"
+    },
+    {
+     "text": "When GAI is allowed you must verify and cite all claims and information appropriately.",
+     "frag_start": "When GAI is allowed you",
+     "frag_end": "information appropriately.",
+     "section": "Additional optional GAI statements and images",
+     "topics": [
+      "disclosure-citation",
+      "accountability-understanding"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "not adopt generated content without reflection and revision to make it your work",
+     "frag_start": "You must also not adopt",
+     "frag_end": "to make it your work.",
+     "section": "Additional optional GAI statements and images",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    }
+   ]
+  },
+  {
+   "id": "fiu-cap4104-hci-syllabus",
+   "university": "Florida International University",
+   "country": "USA",
+   "region": "FL",
+   "unit": "Knight Foundation School of Computing and Information Sciences",
+   "level": "course",
+   "course": "CAP 4104",
+   "title": "CAP 4104 Human-Computer Interaction (course syllabus, AI-Assisted Interface Evaluation and Redesign assignment)",
+   "url": "https://www4.cis.fiu.edu/courses/Syllabi/2026-08-NewSyllabi/CAP_4104.docx",
+   "date_or_term": "2026-08 new syllabi",
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "encourage",
+   "summary": "Tier 1. School-hosted master syllabus for FIU's HCI course. Its sample assessment has students deliberately use generative AI for heuristic evaluation and redesign ideas, while keeping responsibility for analysis and final design, documenting how and why they used AI, and reflecting on its limits and biases; the rubric penalises unvalidated AI output.",
+   "excerpts": [
+    {
+     "text": "intentionally leverage Generative AI (GenAI) tools to support parts of their workflow",
+     "frag_start": "Students are expected to intentionally",
+     "frag_end": "and final design decisions.",
+     "section": "Assessment Assignments and Rubrics",
+     "topics": [
+      "permitted-uses",
+      "ai-literacy-career"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "while maintaining full responsibility for analysis, judgment, and final design decisions",
+     "frag_start": "Students are expected to intentionally",
+     "frag_end": "and final design decisions.",
+     "section": "Assessment Assignments and Rubrics",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Students must document how, when, and why GenAI tools were used",
+     "frag_start": "Students must document how, when",
+     "frag_end": "usefulness and limitations.",
+     "section": "Assessment Assignments and Rubrics",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "GenAI may be used to suggest potential heuristic violations.",
+     "frag_start": "GenAI may be used to",
+     "frag_end": "potential heuristic violations.",
+     "section": "Student Tasks",
+     "topics": [
+      "permitted-uses"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Students must validate, revise, or reject AI-generated suggestions.",
+     "frag_start": "Students must validate, revise, or",
+     "frag_end": "reject AI-generated suggestions.",
+     "section": "Student Tasks",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "GenAI may assist with ideation, but final designs must reflect student reasoning.",
+     "frag_start": "GenAI may assist with ideation",
+     "frag_end": "must reflect student reasoning.",
+     "section": "Student Tasks",
+     "topics": [
+      "permitted-uses",
+      "accountability-understanding"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Heuristics misapplied or largely copied from AI without validation",
+     "frag_start": "Heuristics misapplied or largely copied",
+     "frag_end": "from AI without validation",
+     "section": "Rubric",
+     "topics": [
+      "assessment-design"
+     ],
+     "phase": "during-assessment",
+     "actor": "instructor"
+    },
+    {
+     "text": "Insightful discussion of GenAI strengths, limitations, and bias",
+     "frag_start": "Insightful discussion of GenAI strengths",
+     "frag_end": "limitations, and bias",
+     "section": "Rubric: Reflection on AI Limitations",
+     "topics": [
+      "assessment-design",
+      "ethics-bias-environment"
+     ],
+     "phase": "during-assessment",
+     "actor": "instructor"
+    }
+   ]
+  },
+  {
+   "id": "emory-college-syllabus-additions-ai",
+   "university": "Emory University",
+   "country": "USA",
+   "region": "GA",
+   "unit": "Emory College of Arts and Sciences (Academic Affairs and Faculty Partnerships)",
+   "level": "school-general",
+   "course": null,
+   "title": "Emory College Syllabus Additions (Artificial Intelligence statement)",
+   "url": "https://oue.college.emory.edu/faculty-resources/documents/syllabus-add.pdf",
+   "date_or_term": null,
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "instructor-discretion",
+   "summary": "Tier 3. Required syllabus additions for Emory College courses, which include computer science. Instructors decide whether students may use AI and must say so in the syllabus. Honor Council model language for courses that ban AI treats AI-generated content as plagiarism and unpermitted use as unauthorized assistance, with suspected cases reported to the Honor Council.",
+   "excerpts": [
+    {
+     "text": "It is up to the instructor to determine whether student use of",
+     "frag_start": "It is up to the",
+     "frag_end": "allowed for any assignments.",
+     "section": "Artificial Intelligence",
+     "topics": [
+      "instructor-discretion"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "statement that addresses the extent to which AI use is appropriate for the course",
+     "frag_start": "The syllabus should include a",
+     "frag_end": "any speciﬁc assignments.",
+     "section": "Artificial Intelligence",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "phase": "course-start",
+     "actor": "instructor"
+    },
+    {
+     "text": "This may be included as part of the Honor Code statement for the course",
+     "frag_start": "This may be included as",
+     "frag_end": "as its own course policy.",
+     "section": "Artificial Intelligence",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "phase": "course-start",
+     "actor": "instructor"
+    },
+    {
+     "text": "you may use the suggested language below for the syllabus and assignments",
+     "frag_start": "If the use of Artificial",
+     "frag_end": "(adapt as needed):",
+     "section": "Artificial Intelligence",
+     "topics": [
+      "syllabus-communication",
+      "default-stance"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "constitutes plagiarism and is a violation of the Honor Code",
+     "frag_start": "Using an artificial intelligence program",
+     "frag_end": "violation of the Honor Code.",
+     "section": "Artificial Intelligence (AI) suggested language",
+     "topics": [
+      "prohibited-uses",
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "student"
+    },
+    {
+     "text": "without permission from the instructor may also constitute seeking unauthorized assistance",
+     "frag_start": "The use of an artificial",
+     "frag_end": "provisions of the Honor Code.",
+     "section": "Artificial Intelligence (AI) suggested language",
+     "topics": [
+      "integrity-sanctions",
+      "instructor-discretion"
+     ],
+     "phase": "when-misuse",
+     "actor": "student"
+    },
+    {
+     "text": "Any suspicion of academic misconduct will be reported to the Honor Council.",
+     "frag_start": "Any suspicion of academic misconduct",
+     "frag_end": "to the Honor Council.",
+     "section": "Artificial Intelligence (AI) suggested language",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "instructor"
+    }
+   ]
+  },
+  {
+   "id": "slu-syllabus-components-genai",
+   "university": "Saint Louis University",
+   "country": "USA",
+   "region": "MO",
+   "unit": "Office of the Provost (Faculty Affairs)",
+   "level": "university-general",
+   "course": null,
+   "title": "Saint Louis University – Course Syllabus Components (Print-Friendly)",
+   "url": "https://www.slu.edu/provost/faculty-affairs/teaching-resources-for-faculty/course-syllabus-information/syllabus-statements/print-friendly-syllabus-components-slu.pdf",
+   "date_or_term": "Updated: July, 2025",
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "instructor-discretion",
+   "summary": "Tier 4. Provost list of required syllabus components under SLU's Course Syllabus Policy. Every syllabus must state in writing whether and how generative AI may be used. The decision rests with each instructor unless academic leadership directs otherwise; there is no single university statement, and the Reinert Center offers templates.",
+   "excerpts": [
+    {
+     "text": "make explicit whether or not GAI use is acceptable in the course",
+     "frag_start": "Provide written information to make",
+     "frag_end": "in which circumstances.",
+     "section": "Required Components: Generative AI",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "phase": "course-start",
+     "actor": "instructor"
+    },
+    {
+     "text": "is determined by each individual instructor, unless otherwise directed by their academic leadership",
+     "frag_start": "If/how students are permitted to",
+     "frag_end": "chair, director, dean).",
+     "section": "Required Components: Generative AI",
+     "topics": [
+      "instructor-discretion"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "There is no single, University-level syllabus statement about GAI use.",
+     "frag_start": "There is no single, University-level",
+     "frag_end": "statement about GAI use.",
+     "section": "Required Components: Generative AI",
+     "topics": [
+      "default-stance",
+      "instructor-discretion"
+     ],
+     "phase": "before-course",
+     "actor": "department"
+    },
+    {
+     "text": "The Reinert Center offers a set of sample templates for syllabus statements",
+     "frag_start": "Note: The Reinert Center offers",
+     "frag_end": "who choose to use them.",
+     "section": "Required Components: Generative AI",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    }
+   ]
+  },
+  {
+   "id": "ontariotech-should-i-use-chatgpt",
+   "university": "Ontario Tech University",
+   "country": "Canada",
+   "region": "ON",
+   "unit": "Academic Integrity (Teaching and Learning Centre)",
+   "level": "university-general",
+   "course": null,
+   "title": "Should I Use ChatGPT? (decision tree, plain-text version)",
+   "url": "https://shared.ontariotechu.ca/shared/department/tlc/academic-integrity/chatgpt-decision-tree-diagram-plain-text.docx",
+   "date_or_term": null,
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "permit-with-conditions",
+   "summary": "Tier 4. Student decision tree linked from Ontario Tech's academic-integrity page on generative AI. It asks whether truth matters, whether the work must be the student's own, whether the student can check the output, and whether they will take full responsibility for errors. Each path ends in safe, unsafe or possible use, with reminders to check with the instructor, verify output and cite sources.",
+   "excerpts": [
+    {
+     "text": "evaluate whether it is safe or appropriate to use ChatGPT in higher education",
+     "frag_start": "You can use the following",
+     "frag_end": "ChatGPT in higher education.",
+     "section": "Should I Use ChatGPT?",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Check with your instructor since works of creative writing and fiction may not allow",
+     "frag_start": "Check with your instructor since",
+     "frag_end": "ChatGPT generated output.",
+     "section": "Should I Use ChatGPT?",
+     "topics": [
+      "instructor-discretion"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Is there an expectation that the work should be done on your own?",
+     "frag_start": "Is there an expectation that",
+     "frag_end": "done on your own?",
+     "section": "Should I Use ChatGPT?",
+     "topics": [
+      "prohibited-uses"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Using ChatGPT output for your work may violate academic integrity expectations.",
+     "frag_start": "Using ChatGPT output for your",
+     "frag_end": "academic integrity expectations.",
+     "section": "Should I Use ChatGPT?",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "These AI tools can also produce flawed, biased, and misleading output.",
+     "frag_start": "These AI tools can also",
+     "frag_end": "and misleading output.",
+     "section": "Should I Use ChatGPT?",
+     "topics": [
+      "ethics-bias-environment"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Do you have the expertise to verify that the output is accurate?",
+     "frag_start": "Do you have the expertise",
+     "frag_end": "the output is accurate?",
+     "section": "Should I Use ChatGPT?",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Are you willing to take full responsibility (legal, moral, etc.) for any missed inaccuracies?",
+     "frag_start": "Are you willing to take",
+     "frag_end": "any missed inaccuracies?",
+     "section": "Should I Use ChatGPT?",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Be sure to verify each output word and sentence for accuracy and common sense",
+     "frag_start": "Be sure to verify each",
+     "frag_end": "correctly cite your sources.",
+     "section": "Should I Use ChatGPT?",
+     "topics": [
+      "accountability-understanding",
+      "disclosure-citation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    }
+   ]
+  },
+  {
+   "id": "wfu-guidelines-academic-use-gai",
+   "university": "Wake Forest University",
+   "country": "USA",
+   "region": "NC",
+   "unit": "AI at Wake Forest (AI Working Group for Academics)",
+   "level": "university-general",
+   "course": null,
+   "title": "Guidelines for Academic Use",
+   "url": "https://ai.wfu.edu/guidelines-for-academic-use/",
+   "date_or_term": "Adapted from AI Working Group for Academics Final Report (March 2025)",
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "instructor-discretion",
+   "summary": "Tier 4. University guidelines adapted from the March 2025 AI Working Group report. Every syllabus must state GAI expectations, which can differ by course and assignment. Misconduct is defined as GAI use without permission, instructors and students share responsibility for communication, AI detectors cannot be the only evidence, and instructors who require GAI must make sure every student has access.",
+   "excerpts": [
+    {
+     "text": "Include GAI expectations and policies on each course syllabus",
+     "frag_start": "Include GAI expectations and policies",
+     "frag_end": "on each course syllabus",
+     "section": "GAI and Pro Humanitate: Guidelines for Academic Excellence",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "phase": "course-start",
+     "actor": "instructor"
+    },
+    {
+     "text": "permitted uses of GAI may not be the same in every course",
+     "frag_start": "As courses fulfill various roles",
+     "frag_end": "may change over time.",
+     "section": "GAI and Pro Humanitate: Guidelines for Academic Excellence",
+     "topics": [
+      "instructor-discretion",
+      "policy-evolution"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "The absence of GAI guidance in a course undermines the ability to recognize and adjudicate",
+     "frag_start": "The absence of GAI guidance",
+     "frag_end": "instances of academic misconduct.",
+     "section": "GAI and Pro Humanitate: Guidelines for Academic Excellence",
+     "topics": [
+      "integrity-sanctions",
+      "syllabus-communication"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "A definition may be as simple as naming the use of GAI",
+     "frag_start": "A definition may be as",
+     "frag_end": "academic purposes without permission.",
+     "section": "Provide clarity on academic misconduct with GAI",
+     "topics": [
+      "default-stance",
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "department"
+    },
+    {
+     "text": "including method(s) for disclosing or citing such use",
+     "frag_start": "In order to substantiate cases",
+     "frag_end": "such use should be acknowledged.",
+     "section": "Provide clarity on academic misconduct with GAI",
+     "topics": [
+      "disclosure-citation",
+      "syllabus-communication"
+     ],
+     "phase": "course-start",
+     "actor": "instructor"
+    },
+    {
+     "text": "Students are responsible for requesting clarification when they are uncertain",
+     "frag_start": "Students are responsible for requesting",
+     "frag_end": "academic integrity more broadly).",
+     "section": "Provide clarity on academic misconduct with GAI",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "should not allow for AI detectors alone to constitute a sufficient standard of proof",
+     "frag_start": "Evidentiary standards for academic misconduct",
+     "frag_end": "sufficient standard of proof.",
+     "section": "Provide clarity on academic misconduct with GAI",
+     "topics": [
+      "detection-tools",
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "instructor"
+    },
+    {
+     "text": "is expected to ensure that all students have access to the necessary GAI tools",
+     "frag_start": "Any instructor whose course explicitly",
+     "frag_end": "the necessary GAI tools.",
+     "section": "Ensure Equity and Access",
+     "topics": [
+      "equity-access",
+      "course-provided-tools"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    }
+   ]
+  },
+  {
+   "id": "okstate-itle-chatgpt-sample-syllabus-statements",
+   "university": "Oklahoma State University",
+   "country": "USA",
+   "region": "OK",
+   "unit": "Institute for Teaching & Learning Excellence (ITLE)",
+   "level": "university-general",
+   "course": null,
+   "title": "Chat GPT & AI Support: Sample Syllabus Statements for AI in the Classroom",
+   "url": "https://itle.okstate.edu/chatgpt",
+   "date_or_term": "Updated July 27, 2023",
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "tiered",
+   "summary": "Tier 4. ITLE page for faculty with OSU sample syllabus statements at three levels: generative AI not allowed, allowed in some circumstances, or fully allowed. It asks faculty to share their position in the syllabus or Canvas and in class. The OSU statements cover plagiarism penalties, permitted uses that support learning, a ban on fully AI-produced work, and attribution.",
+   "excerpts": [
+    {
+     "text": "it should not be used to replace or undermine students’ original work and effort",
+     "frag_start": "Although generative AI can be",
+     "frag_end": "original work and effort",
+     "section": "Sample Syllabus Statements for AI in the Classroom",
+     "topics": [
+      "learning-rationale"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "Faculty may wish to allow students to use generative AI tools, provide specific parameters",
+     "frag_start": "Faculty may wish to allow",
+     "frag_end": "course assignments and assessments.",
+     "section": "Sample Syllabus Statements for AI in the Classroom",
+     "topics": [
+      "instructor-discretion",
+      "use-categories-levels"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "It is important that faculty clearly communicate to students the acceptable use of generative AI",
+     "frag_start": "It is important that faculty",
+     "frag_end": "AI in their course",
+     "section": "Sample Syllabus Statements for AI in the Classroom",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "phase": "course-start",
+     "actor": "instructor"
+    },
+    {
+     "text": "prohibited from using any generative AI tools such as ChatGPT, Bing AI, or Bard",
+     "frag_start": "Students are prohibited from using",
+     "frag_end": "completing course assignments.",
+     "section": "For Faculty Who Do NOT Allow Generative AI Tools",
+     "topics": [
+      "prohibited-uses"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "will be considered plagiarism and could result in the student failing the course",
+     "frag_start": "Use of these tools, or",
+     "frag_end": "student failing the course.",
+     "section": "For Faculty Who Do NOT Allow Generative AI Tools",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "student"
+    },
+    {
+     "text": "Appropriate uses may include generating ideas for writing assignments, checking facts of a phenomenon",
+     "frag_start": "Appropriate uses may include generating",
+     "frag_end": "written by the student.",
+     "section": "For Faculty Who Allow Generative AI Tools in Some Circumstances",
+     "topics": [
+      "permitted-uses",
+      "writing-assistance"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "to completely produce, reproduce, and/or manufacture paper and/or other assignments without using any personal effort",
+     "frag_start": "However, students are prohibited",
+     "frag_end": "devoted to the learning process",
+     "section": "For Faculty Who Allow Generative AI Tools in Some Circumstances",
+     "topics": [
+      "prohibited-uses",
+      "learning-rationale"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Students are expected to provide attribution for any text created using generative AI tools",
+     "frag_start": "Students are expected to provide",
+     "frag_end": "AI tools as appropriate.",
+     "section": "For Faculty Who Allow Full Use of Generative AI Tools",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    }
+   ]
+  },
+  {
+   "id": "jsu-common-syllabus-ai-policy",
+   "university": "Jackson State University",
+   "country": "USA",
+   "region": "MS",
+   "unit": "THEE Pathway (General Education) common syllabus links",
+   "level": "university-general",
+   "course": null,
+   "title": "Common Syllabus Links for Students: AI Policy",
+   "url": "https://www.jsums.edu/theepathway/common-syllabus-links-for-students/",
+   "date_or_term": null,
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "permit-with-conditions",
+   "summary": "Tier 4. JSU's common syllabus AI policy for students. With instructor approval it allows AI for listed tasks such as brainstorming, outlining, summarizing and revising, but no graded work may be fully AI-generated. Such work can receive a zero, all use must be cited, departments may add their own criteria, and protected personal data must not be entered into AI tools.",
+   "excerpts": [
+    {
+     "text": "this policy may adjust based on this evolution at the course instructor’s discretion",
+     "frag_start": "This policy recognizes the pace",
+     "frag_end": "course instructor’s discretion.",
+     "section": "AI Policy",
+     "topics": [
+      "policy-evolution",
+      "instructor-discretion"
+     ],
+     "phase": "over-time",
+     "actor": "instructor"
+    },
+    {
+     "text": "individual faculty, departments, and/or colleges may have additional criteria in their syllabus",
+     "frag_start": "Please be advised that individual",
+     "frag_end": "not conflict with this policy.",
+     "section": "AI Policy",
+     "topics": [
+      "instructor-discretion",
+      "syllabus-communication"
+     ],
+     "phase": "course-start",
+     "actor": "department"
+    },
+    {
+     "text": "to supplement student learning, not to replace human creativity, ingenuity, or critical thinking",
+     "frag_start": "The goal of integrating AI",
+     "frag_end": "or critical thinking.",
+     "section": "AI Policy",
+     "topics": [
+      "learning-rationale"
+     ],
+     "phase": "before-course",
+     "actor": "student"
+    },
+    {
+     "text": "AI use is permissible when used for specific tasks as noted and approved",
+     "frag_start": "Thus, AI use is permissible",
+     "frag_end": "by the course instructor.",
+     "section": "AI Policy",
+     "topics": [
+      "permitted-uses",
+      "instructor-discretion"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "no final assignment, presentation, paper, or other graded work can be fully created by AI",
+     "frag_start": "However, no final assignment, presentation",
+     "frag_end": "to that end is the assignment.",
+     "section": "AI Policy",
+     "topics": [
+      "prohibited-uses"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "coursework for a grade that is fully created by AI will receive a zero",
+     "frag_start": "At the instructor’s discretion, any",
+     "frag_end": "for that specific assignment.",
+     "section": "AI Policy",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "student"
+    },
+    {
+     "text": "the submitted work must cite such usage properly in accordance with current citation formats",
+     "frag_start": "If AI is utilized for",
+     "frag_end": "(MLA, APA, Chicago, etc.).",
+     "section": "AI Policy",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "prohibited from inputting any personal, sensitive, or otherwise confidential information",
+     "frag_start": "Members of the JSU community",
+     "frag_end": "into any AI program.",
+     "section": "AI Policy",
+     "topics": [
+      "privacy-data"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    }
+   ]
+  },
+  {
+   "id": "njit-cs490-guided-design-se",
+   "university": "New Jersey Institute of Technology",
+   "country": "USA",
+   "region": "NJ",
+   "unit": "Ying Wu College of Computing, Department of Computer Science",
+   "level": "course",
+   "course": "CS 490",
+   "title": "CS 490-001: Guided Design in Software Engineering (Au24) syllabus",
+   "url": "https://digitalcommons.njit.edu/cgi/viewcontent.cgi?article=1509&context=cs-syllabi",
+   "date_or_term": "Fall 2024",
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "permit-with-conditions",
+   "summary": "Tier 1. Software engineering course syllabus from NJIT's Digital Commons. Its collaboration policy lists acceptable and unacceptable code reuse: code from a generative AI tool the student prompted is allowed if a link to the chat is left as a code comment, but uncited AI code or AI output prompted by someone else is not. The rules are framed as copying industry norms.",
+   "excerpts": [
+    {
+     "text": "output of a generative AI tool such as ChatGPT that you prompted yourself",
+     "frag_start": "Copy code from the output",
+     "frag_end": "feature) as a code comment.",
+     "section": "Collaboration Policy",
+     "topics": [
+      "code-generation",
+      "permitted-uses"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "if you include a link to a record of your interaction with the model",
+     "frag_start": "Copy code from the output",
+     "frag_end": "feature) as a code comment.",
+     "section": "Collaboration Policy",
+     "topics": [
+      "disclosure-citation",
+      "code-generation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "generative AI tool (such as ChatGPT) without citing your source",
+     "frag_start": "Copy code from the output of a generative AI tool (such",
+     "frag_end": "without citing your source",
+     "section": "Collaboration Policy: Unacceptable collaborations",
+     "topics": [
+      "prohibited-uses",
+      "disclosure-citation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "output of a generative AI tool prompted by someone other than you",
+     "frag_start": "Copy code from the output",
+     "frag_end": "for the group project)",
+     "section": "Collaboration Policy: Unacceptable collaborations",
+     "topics": [
+      "prohibited-uses",
+      "collaboration-analogy"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "intended to mimic what is acceptable in industry when working as a software engineer",
+     "frag_start": "These rules are intended to",
+     "frag_end": "working on a similar product.",
+     "section": "Collaboration Policy",
+     "topics": [
+      "ai-literacy-career",
+      "learning-rationale"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    }
+   ]
+  },
+  {
+   "id": "njit-cs485-usable-security-privacy",
+   "university": "New Jersey Institute of Technology",
+   "country": "USA",
+   "region": "NJ",
+   "unit": "Ying Wu College of Computing, Department of Computer Science",
+   "level": "course",
+   "course": "CS 485-007",
+   "title": "CS 485-007: Selected Topics In CS - Usable Security and Privacy (syllabus)",
+   "url": "https://digitalcommons.njit.edu/cgi/viewcontent.cgi?article=1508&context=cs-syllabi",
+   "date_or_term": "Fall 2024",
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "permit-with-conditions",
+   "summary": "Tier 1. Syllabus for an upper-level NJIT computer science topics course. It discourages AI tools as harmful to the course goals but allows them with full disclosure of tools, prompts, responses and outputs. Students must check for hallucinations, violations bring a zero and a Dean of Students report, non-disclosure is punished more harshly, and work may be run through AI detectors.",
+   "excerpts": [
+    {
+     "text": "the use of AI tools will hurt rather than help the educational objectives",
+     "frag_start": "AI tools can be very",
+     "frag_end": "AI tools is discouraged.",
+     "section": "Generative artificial intelligence policy",
+     "topics": [
+      "learning-rationale",
+      "default-stance"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "required to clearly specify which one(s), how it was used (including any prompts you provided",
+     "frag_start": "If you choose to use",
+     "frag_end": "in any work you submit.",
+     "section": "Generative artificial intelligence policy",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "You are responsible for the correctness of your work",
+     "frag_start": "You are responsible for the",
+     "frag_end": "any hallucinated information.",
+     "section": "Generative artificial intelligence policy",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Failure to follow this policy will be treated as a violation of academic integrity",
+     "frag_start": "Failure to follow this policy",
+     "frag_end": "the Dean of Students.",
+     "section": "Generative artificial intelligence policy",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "student"
+    },
+    {
+     "text": "not disclosing your usage will receive more serious consequences than if you are forthcoming",
+     "frag_start": "However, in all cases, not",
+     "frag_end": "are forthcoming about it.",
+     "section": "Generative artificial intelligence policy",
+     "topics": [
+      "disclosure-citation",
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "student"
+    },
+    {
+     "text": "we retain the discretion to submit your work to any such services",
+     "frag_start": "While “AI detectors” are known",
+     "frag_end": "to any such services.",
+     "section": "Generative artificial intelligence policy",
+     "topics": [
+      "detection-tools"
+     ],
+     "phase": "when-misuse",
+     "actor": "instructor"
+    }
+   ]
+  },
+  {
+   "id": "njit-cs698-ml-time-series",
+   "university": "New Jersey Institute of Technology",
+   "country": "USA",
+   "region": "NJ",
+   "unit": "Ying Wu College of Computing, Department of Computer Science",
+   "level": "course",
+   "course": "CS 698-004",
+   "title": "CS 698-004: Machine Learning for Time Series Analysis and Forecasting (syllabus)",
+   "url": "https://digitalcommons.njit.edu/cgi/viewcontent.cgi?article=1599&context=cs-syllabi",
+   "date_or_term": "Spring 2025 (Updated: 01/15/2025)",
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "permit-with-conditions",
+   "summary": "Tier 1. Graduate machine learning syllabus from NJIT's Digital Commons. Students may usually build code or text from online sources or LLMs into their solutions, but must credit them. LLM users must hand in the full conversation transcript, which must be their own, and failing to give credit counts as plagiarism under NJIT's academic integrity policy.",
+   "excerpts": [
+    {
+     "text": "In most cases, you will be allowed to integrate this information into your solution.",
+     "frag_start": "In most cases, you will",
+     "frag_end": "into your solution.",
+     "section": "Generative AI Tools and Other External Resources",
+     "topics": [
+      "permitted-uses",
+      "code-generation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "you must always give the appropriate credit and citations (e.g. links)",
+     "frag_start": "However, if you do, you",
+     "frag_end": "you found online).",
+     "section": "Generative AI Tools and Other External Resources",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "must say that you did so and present the entire transcript",
+     "frag_start": "In the case you use",
+     "frag_end": "to the delivered solution.",
+     "section": "Generative AI Tools and Other External Resources",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Your ‘conversation’ with it must be entirely yours",
+     "frag_start": "Your ‘conversation’ with it must",
+     "frag_end": "from that of other students.",
+     "section": "Generative AI Tools and Other External Resources",
+     "topics": [
+      "accountability-understanding",
+      "collaboration-analogy"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Failure to give appropriate credit when using the work of others (whether human or AI)",
+     "frag_start": "Failure to give appropriate credit",
+     "frag_end": "Academic Integrity policy.",
+     "section": "Generative AI Tools and Other External Resources",
+     "topics": [
+      "integrity-sanctions",
+      "disclosure-citation"
+     ],
+     "phase": "when-misuse",
+     "actor": "student"
+    }
+   ]
+  },
+  {
+   "id": "olemiss-cetl-syllabus-template-genai",
+   "university": "University of Mississippi",
+   "country": "USA",
+   "region": "MS",
+   "unit": "Center for Excellence in Teaching and Learning (CETL)",
+   "level": "university-general",
+   "course": null,
+   "title": "CETL Syllabus Template: Use of Generative Artificial Intelligence",
+   "url": "https://guides.lib.olemiss.edu/ld.php?content_id=77996771",
+   "date_or_term": null,
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "instructor-discretion",
+   "summary": "Tier 4. Section of the CETL syllabus template, linked from the UM Libraries AI guide. Policy text lets each instructor decide which AI uses are allowed or count as misconduct, and asks for clear syllabus statements. CETL warns that detectors are unreliable and may breach privacy, notes that bans are hard to enforce, and gives permitted and not-permitted model statements covering disclosure and responsibility.",
+   "excerpts": [
+    {
+     "text": "Every instructor may determine for their own class what uses of generative artificial intelligence",
+     "frag_start": "Every instructor may determine for",
+     "frag_end": "Academic Conduct and Discipline Policy.",
+     "section": "Use of Generative Artificial Intelligence",
+     "topics": [
+      "instructor-discretion"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "Instructors should be as clear as possible in their syllabi",
+     "frag_start": "Instructors should be as clear",
+     "frag_end": "generative AI in their work.",
+     "section": "Use of Generative Artificial Intelligence",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "phase": "course-start",
+     "actor": "instructor"
+    },
+    {
+     "text": "use of AI detection software, which is not FERPA-protected, may violate students’ privacy",
+     "frag_start": "Please be aware, too, that",
+     "frag_end": "intellectual property rights.",
+     "section": "Use of Generative Artificial Intelligence",
+     "topics": [
+      "detection-tools",
+      "privacy-data"
+     ],
+     "phase": "when-misuse",
+     "actor": "instructor"
+    },
+    {
+     "text": "outright bans on generative AI are increasingly difficult to enforce.",
+     "frag_start": "Given that 1) many interactions",
+     "frag_end": "increasingly difficult to enforce.",
+     "section": "Use of Generative Artificial Intelligence",
+     "topics": [
+      "default-stance"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "make modifications to their assessments that would prevent or discourage AI misuse",
+     "frag_start": "We recommend, therefore, that instructors",
+     "frag_end": "prevent or discourage AI misuse.",
+     "section": "Use of Generative Artificial Intelligence",
+     "topics": [
+      "assessment-design"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "will likely have a larger effect on students’ AI use than a simple syllabus policy",
+     "frag_start": "Additionally, creating assignments, policies, and",
+     "frag_end": "a simple syllabus policy.",
+     "section": "Use of Generative Artificial Intelligence",
+     "topics": [
+      "assessment-design",
+      "learning-rationale"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "If you use an AI tool to complete an assignment, please disclose your use",
+     "frag_start": "If you use an AI",
+     "frag_end": "affected your process; etc.]",
+     "section": "Use of Generative AI Permitted (with or without limitations)",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "you are responsible for the work you submit for this course",
+     "frag_start": "Please know that you are",
+     "frag_end": "creation of that work.",
+     "section": "Use of Generative AI Permitted (with or without limitations)",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    }
+   ]
+  },
+  {
+   "id": "guelph-provisional-recommendations-genai",
+   "university": "University of Guelph",
+   "country": "Canada",
+   "region": "ON",
+   "unit": "Office of the Associate Vice-President (Academic) / Office of Teaching and Learning",
+   "level": "university-general",
+   "course": null,
+   "title": "Provisional Recommendations for the Use of Generative AI",
+   "url": "https://otl.uoguelph.ca/teaching-assessment-resources/teaching-context-ai/provisional-recommendations-use-generative-ai",
+   "date_or_term": "September 3, 2026",
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "instructor-discretion",
+   "summary": "Tier 4. Fall 2026 memo to Guelph educators from the Acting AVP (Academic) and the AVP Graduate Studies. Instructors decide whether AI is banned, allowed or required, and spell this out for each assessment. Existing misconduct rules cover unauthorized AI, detectors are not approved, identifiable student work must stay out of public AI tools, AI may not grade on its own, and TA use and instructors' own use are addressed.",
+   "excerpts": [
+    {
+     "text": "As an instructor, you determine whether and how AI is incorporated into your courses.",
+     "frag_start": "As an instructor, you determine",
+     "frag_end": "incorporated into your courses.",
+     "section": "Authority for AI use",
+     "topics": [
+      "instructor-discretion"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "how students should demonstrate their learning and acknowledge AI use",
+     "frag_start": "Articulate your expectations for each",
+     "frag_end": "and acknowledge AI use.",
+     "section": "Setting Expectations",
+     "topics": [
+      "syllabus-communication",
+      "disclosure-citation"
+     ],
+     "phase": "course-start",
+     "actor": "instructor"
+    },
+    {
+     "text": "existing academic misconduct provisions (Unauthorized Aids and Assistance) cover unauthorized use of AI",
+     "frag_start": "The calendar's existing academic misconduct",
+     "frag_end": "cover unauthorized use of AI.",
+     "section": "Academic Integrity",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "student"
+    },
+    {
+     "text": "cannot be used to support an allegation of a breach of academic integrity",
+     "frag_start": "Use of tools for detecting",
+     "frag_end": "breach of academic integrity.",
+     "section": "Academic Integrity",
+     "topics": [
+      "detection-tools"
+     ],
+     "phase": "when-misuse",
+     "actor": "instructor"
+    },
+    {
+     "text": "identifiable student work is confidential information and cannot be shared in public AI tools",
+     "frag_start": "Information Security's Artificial Intelligence Acceptable",
+     "frag_end": "free or a paid personal one.",
+     "section": "Privacy and Data security",
+     "topics": [
+      "privacy-data"
+     ],
+     "phase": "during-assessment",
+     "actor": "instructor"
+    },
+    {
+     "text": "Substantive academic evaluations should never be made independently by AI",
+     "frag_start": "Substantive academic evaluations should never",
+     "frag_end": "exercise of discretion by instructors.",
+     "section": "Top Four Guidelines",
+     "topics": [
+      "faculty-grading-feedback"
+     ],
+     "phase": "during-assessment",
+     "actor": "instructor"
+    },
+    {
+     "text": "double check AI products for accuracy and bias as you are accountable",
+     "frag_start": "Please double check AI products",
+     "frag_end": "academic integrity for students.",
+     "section": "Using AI for course preparation",
+     "topics": [
+      "faculty-course-materials",
+      "instructor-staff-use"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "Decide what constitutes acceptable use of AI by TAs in support of the course",
+     "frag_start": "Decide what constitutes acceptable use",
+     "frag_end": "consistent across the teaching team.",
+     "section": "Teaching assistants",
+     "topics": [
+      "instructor-staff-use"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    }
+   ]
+  },
+  {
+   "id": "gsu-cis3001-ai-mou",
+   "university": "Georgia State University",
+   "country": "USA",
+   "region": "GA",
+   "unit": "Department of Computer Information Systems, Robinson College of Business",
+   "level": "course",
+   "course": "CIS 3001",
+   "title": "Memorandum of Understanding: Artificial Intelligence Course Usage Guidelines (CIS 3001 Managing IT Projects)",
+   "url": "https://drive.google.com/file/d/1wzyndU88MmujzjcVMvrTtf2vvyfSPeBr/view?usp=sharing",
+   "date_or_term": null,
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "permit-with-conditions",
+   "summary": "Tier 2. Class AI agreement for an IT project management course in GSU's Computer Information Systems department, co-written with students in the first class meeting and linked from a CETLOE teaching blog post. It lists encouraged uses (study aids, explanations, brainstorming, planning), prohibited uses (AI on exams, graded homework answers, passing off AI work, AI-done group work), what AI use must be documented, and the penalties for violations.",
+   "excerpts": [
+    {
+     "text": "This Memorandum of Understanding (MOU) was collaboratively developed during our first-class meeting",
+     "frag_start": "This Memorandum of Understanding (MOU)",
+     "frag_end": "contribution from all students.",
+     "section": "Preamble",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "phase": "course-start",
+     "actor": "instructor"
+    },
+    {
+     "text": "Creating study guides and summaries of course materials",
+     "frag_start": "Creating study guides and summaries",
+     "frag_end": "summaries of course materials",
+     "section": "Section 1: Acceptable Uses of AI",
+     "topics": [
+      "permitted-uses"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "The following uses of AI are strictly prohibited and constitute academic dishonesty",
+     "frag_start": "The following uses of AI",
+     "frag_end": "constitute academic dishonesty:",
+     "section": "Section 2: Prohibited Uses of AI",
+     "topics": [
+      "prohibited-uses",
+      "integrity-sanctions"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Using AI to answer questions during exams or quizzes",
+     "frag_start": "Using AI to answer questions",
+     "frag_end": "during exams or quizzes",
+     "section": "2.1. Assessment Violations",
+     "topics": [
+      "prohibited-uses"
+     ],
+     "phase": "during-assessment",
+     "actor": "student"
+    },
+    {
+     "text": "Students must document their use of AI tools in the following situations:",
+     "frag_start": "Students must document their use",
+     "frag_end": "in the following situations:",
+     "section": "Section 3: Disclosure and Documentation",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "The student's role in verifying and modifying AI-generated content",
+     "frag_start": "The student's role in verifying",
+     "frag_end": "modifying AI-generated content",
+     "section": "Section 3: Disclosure and Documentation",
+     "topics": [
+      "disclosure-citation",
+      "accountability-understanding"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Violations of this MOU may result in:",
+     "frag_start": "Violations of this MOU",
+     "frag_end": "may result in:",
+     "section": "Section 4: Consequences",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "student"
+    },
+    {
+     "text": "these guidelines may be updated as needed throughout the semester",
+     "frag_start": "Students also understand that these",
+     "frag_end": "for any changes.",
+     "section": "Agreement",
+     "topics": [
+      "policy-evolution"
+     ],
+     "phase": "over-time",
+     "actor": "instructor"
+    }
+   ]
+  },
+  {
+   "id": "wmu-ai-in-the-syllabus",
+   "university": "Western Michigan University",
+   "country": "USA",
+   "region": "MI",
+   "unit": "Office of Faculty Development / Center for Teaching, Learning, and Development",
+   "level": "university-general",
+   "course": null,
+   "title": "AI in the Syllabus",
+   "url": "https://wmich.edu/x/instructors/resources/ai-syllabus",
+   "date_or_term": null,
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "instructor-discretion",
+   "summary": "Tier 4. WMU teaching-center guidance on writing syllabus AI statements. It warns that outright bans are hard to enforce because detectors are unreliable and biased, recommends clear, flexible, process-focused policies discussed on day one, and suggests co-creating policies with students. Sample statements range from open use with an AI acknowledgement to authorized-only use, including language under Faculty Senate review.",
+   "excerpts": [
+    {
+     "text": "producing a clear AI statement and discussing it with students on the first day",
+     "frag_start": "By producing a clear AI",
+     "frag_end": "they need to meet expectations.",
+     "section": "AI in the Syllabus",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "phase": "course-start",
+     "actor": "instructor"
+    },
+    {
+     "text": "tempting to take a prohibitive classroom policy stance against the use of AI tools",
+     "frag_start": "To that end, it may",
+     "frag_end": "(and potentially unethical).",
+     "section": "AI in the Syllabus",
+     "topics": [
+      "default-stance"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "it is nearly impossible to detect, and therefore enforce, the use of AI",
+     "frag_start": "First, it is nearly impossible",
+     "frag_end": "consistency or validity.",
+     "section": "AI in the Syllabus",
+     "topics": [
+      "detection-tools"
+     ],
+     "phase": "when-misuse",
+     "actor": "instructor"
+    },
+    {
+     "text": "AI detectors have also been shown to be biased against English language learners",
+     "frag_start": "AI detectors have also been",
+     "frag_end": "English language learners",
+     "section": "AI in the Syllabus",
+     "topics": [
+      "detection-tools",
+      "equity-access"
+     ],
+     "phase": "when-misuse",
+     "actor": "instructor"
+    },
+    {
+     "text": "AI syllabus policies should be being clear, flexible, learner-centered and process-focused",
+     "frag_start": "Considering the unreliability of AI",
+     "frag_end": "learner-centered and process-focused.",
+     "section": "AI in the Syllabus",
+     "topics": [
+      "syllabus-communication",
+      "policy-evolution"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "some educators are choosing to have students collaborate on the development of AI policies",
+     "frag_start": "One final point: some educators",
+     "frag_end": "AI policies for their courses.",
+     "section": "AI in the Syllabus",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "phase": "course-start",
+     "actor": "instructor"
+    },
+    {
+     "text": "Generative-AI tools, such as ChatGPT and Microsoft CoPilot, should only be used in this course",
+     "frag_start": "Generative-AI tools, such as ChatGPT",
+     "frag_end": "authorized by the instructor.",
+     "section": "Example 4: Suggested Language Under Consideration",
+     "topics": [
+      "prohibited-uses",
+      "instructor-discretion"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "you must be fully transparent with your use, including proper citation",
+     "frag_start": "When you do use generative-AI",
+     "frag_end": "required by your instructor.",
+     "section": "Example 4: Suggested Language Under Consideration",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    }
+   ]
+  },
+  {
+   "id": "uwm-syllabus-statements-genai",
+   "university": "University of Wisconsin–Milwaukee",
+   "country": "USA",
+   "region": "WI",
+   "unit": "Center for Advancing Student Learning",
+   "level": "university-general",
+   "course": null,
+   "title": "Syllabus Statements: Guiding Student Generative AI Usage in Your Class",
+   "url": "https://uwm.edu/advancing-learning/syllabus-statements-guiding-student-generative-ai-usage-in-your-class/",
+   "date_or_term": null,
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "tiered",
+   "summary": "Tier 4. UWM teaching-center guidance asking instructors to state their generative AI expectations in the syllabus and on each assignment, and to explain how AI use should be cited. It gives three sample statements: full use with citations and prompts, specific permitted uses, and a ban under which AI-assisted work counts as academic misconduct under UWS 14.",
+   "excerpts": [
+    {
+     "text": "Explicitly state your expectations for student Generative AI use in the syllabus.",
+     "frag_start": "Explicitly state your expectations for",
+     "frag_end": "AI use in the syllabus.",
+     "section": "Syllabus Statements: Guiding Student Generative AI Usage in Your Class",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "phase": "course-start",
+     "actor": "instructor"
+    },
+    {
+     "text": "Include written expectations for Generative AI use on assignments and talk directly with students",
+     "frag_start": "Include written expectations for Generative",
+     "frag_end": "sharing examples of what",
+     "section": "Syllabus Statements: Guiding Student Generative AI Usage in Your Class",
+     "topics": [
+      "syllabus-communication",
+      "assessment-design"
+     ],
+     "phase": "course-start",
+     "actor": "instructor"
+    },
+    {
+     "text": "provide information on how students are expected to cite Generative AI use for assignments",
+     "frag_start": "If applicable, provide information on",
+     "frag_end": "Generative AI use for assignments.",
+     "section": "Syllabus Statements: Guiding Student Generative AI Usage in Your Class",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "phase": "course-start",
+     "actor": "instructor"
+    },
+    {
+     "text": "you may use Generative Artificial Intelligence (AI) for assignments with appropriate citations",
+     "frag_start": "In this class, you may",
+     "frag_end": "with appropriate citations.",
+     "section": "Syllabus Statement Allowing the Full Use of Generative AI by Students",
+     "topics": [
+      "permitted-uses",
+      "use-categories-levels"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "your responsibility to critically evaluate all responses generated with the use of Generative AI",
+     "frag_start": "It is your responsibility to",
+     "frag_end": "use of Generative AI.",
+     "section": "Syllabus Statement Allowing the Full Use of Generative AI by Students",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Generative AI use must be cited and include the prompt used to generate",
+     "frag_start": "All Generative AI use must",
+     "frag_end": "generate the material.",
+     "section": "Syllabus Statement Allowing the Full Use of Generative AI by Students",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "The use of Generative Artificial Intelligence (AI) is not allowed in this class.",
+     "frag_start": "The use of Generative Artificial",
+     "frag_end": "not allowed in this class.",
+     "section": "Sample Syllabus Policy Prohibiting AI Use",
+     "topics": [
+      "prohibited-uses",
+      "use-categories-levels"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "will be considered Academic Misconduct as defined by",
+     "frag_start": "Generative AI used to assist",
+     "frag_end": "Academic Misconduct as defined by",
+     "section": "Sample Syllabus Policy Prohibiting AI Use",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "student"
+    }
+   ]
+  },
+  {
+   "id": "utrgv-coltt-generative-ai",
+   "university": "UT Rio Grande Valley",
+   "country": "USA",
+   "region": "TX",
+   "unit": "Center for Online Learning and Teaching Technology (COLTT)",
+   "level": "university-general",
+   "course": null,
+   "title": "Generative AI Technology",
+   "url": "https://www.utrgv.edu/online/teaching-online/elearning-topics/generative-ai/index.htm",
+   "date_or_term": null,
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "instructor-discretion",
+   "summary": "Tier 4. COLTT resource page for UTRGV instructors on generative AI. It lists completing programming assignments among misuse concerns and advises clear syllabus policies on permitted use, citation and consequences. It encourages transparency and talking with students, offers assessment-design and exam tips, says detectors must never be the only basis for misconduct decisions, and suggests assignments that deliberately include AI.",
+   "excerpts": [
+    {
+     "text": "Completing programming assignments",
+     "frag_start": "Some concerns within the educational",
+     "frag_end": "potential misuse, such as:",
+     "section": "What Types of Tasks Can Generative AI Perform?",
+     "topics": [
+      "code-generation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Clearly outline expectations regarding the use of Generative AI tools in your course.",
+     "frag_start": "Clearly outline expectations regarding the",
+     "frag_end": "AI tools in your course.",
+     "section": "Syllabus: Set Clear Policies",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "phase": "course-start",
+     "actor": "instructor"
+    },
+    {
+     "text": "Policies should align with course learning outcomes and institutional guidance.",
+     "frag_start": "Policies should align with course",
+     "frag_end": "and institutional guidance.",
+     "section": "Syllabus: Set Clear Policies",
+     "topics": [
+      "learning-rationale",
+      "instructor-discretion"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "Encourage transparency by asking students to acknowledge AI use when appropriate.",
+     "frag_start": "Encourage transparency by asking students",
+     "frag_end": "AI use when appropriate.",
+     "section": "Discuss Expectations with Your Students",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "phase": "during-work",
+     "actor": "instructor"
+    },
+    {
+     "text": "Too much reliance on AI shortcuts can limit opportunities to develop essential skills",
+     "frag_start": "Too much reliance on AI",
+     "frag_end": "a deeper understanding.",
+     "section": "Discuss Expectations with Your Students",
+     "topics": [
+      "learning-rationale"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "If exams or quizzes are used, consider avoiding high-stakes weighting.",
+     "frag_start": "If exams or quizzes are",
+     "frag_end": "avoiding high-stakes weighting.",
+     "section": "Strategies to Address AI in Education",
+     "topics": [
+      "assessment-design"
+     ],
+     "phase": "during-assessment",
+     "actor": "instructor"
+    },
+    {
+     "text": "should never be used as the sole basis for academic misconduct decisions",
+     "frag_start": "AI detection tools may help",
+     "frag_end": "academic misconduct decisions.",
+     "section": "Strategies to Address AI in Education",
+     "topics": [
+      "detection-tools"
+     ],
+     "phase": "when-misuse",
+     "actor": "instructor"
+    },
+    {
+     "text": "instructors may consider designing activities that intentionally incorporate AI use",
+     "frag_start": "Since students are likely to",
+     "frag_end": "rather than avoidance alone.",
+     "section": "Rethinking Assessments to Include AI",
+     "topics": [
+      "ai-literacy-career",
+      "assessment-design"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    }
+   ]
+  },
+  {
+   "id": "usu-teach-communicate-about-ai",
+   "university": "Utah State University",
+   "country": "USA",
+   "region": "UT",
+   "unit": "USU Teach (Center for Empowering Teaching Excellence / Center for Instructional Design and Innovation)",
+   "level": "university-general",
+   "course": null,
+   "title": "AI in Teaching: Communicate about AI",
+   "url": "https://www.usu.edu/teach/help-topics/teaching-tips/communicate-about-ai",
+   "date_or_term": null,
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "tiered",
+   "summary": "Tier 4. USU teaching guidance requiring instructors to define AI guidelines in the syllabus and enforce them under Article VI of the Student Code. It describes three broad categories of course policy, from prohibited (which explicitly covers coding assistants) to encouraged, with template statements on detection, sanctions, citation and acknowledgement. It also asks instructors to disclose their own AI use, such as for grading feedback.",
+   "excerpts": [
+    {
+     "text": "every teacher should address the topic of acceptable AI use in their courses",
+     "frag_start": "With rare exception, every teacher",
+     "frag_end": "AI use in their courses.",
+     "section": "AI in Teaching: Communicate about AI",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "phase": "course-start",
+     "actor": "instructor"
+    },
+    {
+     "text": "such guidelines must be clearly defined in the syllabus, and enforcement must follow the procedures",
+     "frag_start": "At USU, instructors are granted",
+     "frag_end": "Article VI of the student code",
+     "section": "Always Share AI Guidelines in the Syllabus",
+     "topics": [
+      "instructor-discretion",
+      "integrity-sanctions"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "Class guidelines relative to AI typically fall into three broad categories:",
+     "frag_start": "Class guidelines relative to AI",
+     "frag_end": "three broad categories:",
+     "section": "Always Share AI Guidelines in the Syllabus",
+     "topics": [
+      "use-categories-levels"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "This includes chatbots like ChatGPT and Copilot, image generators, coding assistants, and similar technologies.",
+     "frag_start": "This includes chatbots like ChatGPT",
+     "frag_end": "and similar technologies.",
+     "section": "Syllabus Guideline Templates",
+     "topics": [
+      "prohibited-uses",
+      "code-generation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "assignment submissions may be reviewed by AI detection software such as Copyleaks",
+     "frag_start": "To ensure that students do",
+     "frag_end": "software such as Copyleaks.",
+     "section": "Syllabus Guideline Templates",
+     "topics": [
+      "detection-tools"
+     ],
+     "phase": "when-misuse",
+     "actor": "instructor"
+    },
+    {
+     "text": "Possible sanctions may include a reduced grade and/or requirement to resubmit the assignment.",
+     "frag_start": "Possible sanctions may include a",
+     "frag_end": "resubmit the assignment.",
+     "section": "Syllabus Guideline Templates",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "student"
+    },
+    {
+     "text": "include a statement with each assignment submission stating 1) which AI tool(s) they used",
+     "frag_start": "Students are expected to include",
+     "frag_end": "with their own contributions.",
+     "section": "AI Use Permitted Under Certain Guidelines",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "If you are planning to use AI to help provide feedback for grading, inform students",
+     "frag_start": "If you are planning to",
+     "frag_end": "reviewing the feedback.",
+     "section": "Providing Examples of Appropriate AI Use",
+     "topics": [
+      "faculty-grading-feedback",
+      "disclosure-citation"
+     ],
+     "phase": "during-assessment",
+     "actor": "instructor"
+    }
+   ]
+  },
+  {
+   "id": "unlv-cs301-social-implications",
+   "university": "University of Nevada, Las Vegas",
+   "country": "USA",
+   "region": "NV",
+   "unit": "Department of Computer Science",
+   "level": "course",
+   "course": "CS 301",
+   "title": "CS 301: Social Implications of Computer Technology, Course Syllabus (Spring 2026)",
+   "url": "https://web.archive.org/web/20260516075129/http://www.berghel.net/classes/CS301/s26_cs301.php",
+   "date_or_term": "SPRING, 2026",
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "permit-with-conditions",
+   "summary": "Tier 1. Spring 2026 syllabus for UNLV's required computing ethics course. Students are responsible for their submitted work whatever tools they used, must openly acknowledge any generative AI content or translation (tool name and marked passages), and must keep the full AI output until the end of term. Exams are closed-book with devices off.",
+   "excerpts": [
+    {
+     "text": "All students are responsible for submitted work, irrespective of tools used to create it.",
+     "frag_start": "All students are responsible for",
+     "frag_end": "tools used to create it.",
+     "section": "CLASS POLICIES: USE OF GENERATIVE AI",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Any use of generative AI to create content or make translations for use",
+     "frag_start": "Any use of generative AI",
+     "frag_end": "acknowledged in the submitted work.",
+     "section": "CLASS POLICIES: USE OF GENERATIVE AI",
+     "topics": [
+      "disclosure-citation",
+      "permitted-uses"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "identifying the \"imported\" GenAI content in the document(s) affected",
+     "frag_start": "A minimum for complete transparency",
+     "frag_end": "footnote, or endnote).",
+     "section": "CLASS POLICIES: USE OF GENERATIVE AI",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Students must retain the complete GenAI content until the end-of-term",
+     "frag_start": "Students must retain the complete",
+     "frag_end": "for comparison purposes.",
+     "section": "CLASS POLICIES: USE OF GENERATIVE AI",
+     "topics": [
+      "disclosure-citation",
+      "integrity-sanctions"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "any use of GenAI must be consistent with existing intellectual property laws and UNLV policies",
+     "frag_start": "It must be noted that",
+     "frag_end": "and UNLV policies.",
+     "section": "CLASS POLICIES: USE OF GENERATIVE AI",
+     "topics": [
+      "intellectual-property"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "All exams are closed book, closed notes, all electronic devices turned off.",
+     "frag_start": "All exams are closed",
+     "frag_end": "electronic devices turned off.",
+     "section": "CLASS POLICIES: EXAMS",
+     "topics": [
+      "exams-in-person"
+     ],
+     "phase": "during-assessment",
+     "actor": "student"
+    }
+   ]
+  },
+  {
+   "id": "calstatela-cetl-recommendations-ai",
+   "university": "Cal State LA",
+   "country": "USA",
+   "region": "CA",
+   "unit": "Center for Effective Teaching and Learning (CETL)",
+   "level": "university-general",
+   "course": null,
+   "title": "Recommendations for Teaching & Learning with AI",
+   "url": "https://www.calstatela.edu/cetl/recommendations-teaching-learning-ai",
+   "date_or_term": null,
+   "accessed": "2026-10-05",
+   "verbatim_source": "curl",
+   "stance": "instructor-discretion",
+   "summary": "Tier 4. CETL guidance for Cal State LA faculty. AI misuse falls under existing plagiarism standards, but instructors are urged to write their own policy, whether a ban, full use or a middle path, covering examples, rationale, citation and consequences, and possibly co-created with students. The page explains that the campus switched off Turnitin's AI detector and notes detector bias against non-native English writers.",
+   "excerpts": [
+    {
+     "text": "the misuse of AI generally falls under standards regarding plagiarism and the misrepresentation of work",
+     "frag_start": "is under revision to include AI",
+     "frag_end": "the misrepresentation of work.",
+     "section": "Creating a generative AI Policy",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "phase": "when-misuse",
+     "actor": "student"
+    },
+    {
+     "text": "it is good idea to develop your own AI policy.",
+     "frag_start": "However, because of the growing",
+     "frag_end": "develop your own AI policy.",
+     "section": "Creating a generative AI Policy",
+     "topics": [
+      "syllabus-communication",
+      "instructor-discretion"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "Identify (with examples) the uses and times you consider AI appropriate",
+     "frag_start": "Identify (with examples) the uses",
+     "frag_end": "you consider AI inappropriate.",
+     "section": "Creating a generative AI Policy",
+     "topics": [
+      "permitted-uses",
+      "prohibited-uses"
+     ],
+     "phase": "before-course",
+     "actor": "instructor"
+    },
+    {
+     "text": "the student, not the AI, will be responsible for any errors.",
+     "frag_start": "In the end, these tools",
+     "frag_end": "responsible for any errors.",
+     "section": "Creating a generative AI Policy",
+     "topics": [
+      "accountability-understanding"
+     ],
+     "phase": "during-work",
+     "actor": "student"
+    },
+    {
+     "text": "Explain that use of AI can lead to the deterioration of hard-earned skills.",
+     "frag_start": "Explain that use of AI",
+     "frag_end": "deterioration of hard-earned skills.",
+     "section": "Creating a generative AI Policy",
+     "topics": [
+      "learning-rationale"
+     ],
+     "phase": "course-start",
+     "actor": "instructor"
+    },
+    {
+     "text": "Consider allowing student to co-create their policy so that there is greater student buy in.",
+     "frag_start": "Consider allowing student to co-create",
+     "frag_end": "greater student buy in.",
+     "section": "Creating a generative AI Policy",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "phase": "course-start",
+     "actor": "instructor"
+    },
+    {
+     "text": "the campus does not have plans to separately purchase the AI detection feature in Turnitin",
+     "frag_start": "At this time, the campus",
+     "frag_end": "detection feature in Turnitin.",
+     "section": "AI Detection Tools - Considerations & Limitations",
+     "topics": [
+      "detection-tools"
+     ],
+     "phase": "when-misuse",
+     "actor": "instructor"
+    },
+    {
+     "text": "AI detectors are susceptible to bias against non-native English writers",
+     "frag_start": "(Liang et al., 2023) from researchers",
+     "frag_end": "for already marginalized learners.",
+     "section": "AI Detection Tools - Considerations & Limitations",
+     "topics": [
+      "detection-tools",
+      "equity-access"
+     ],
+     "phase": "when-misuse",
+     "actor": "instructor"
+    }
+   ]
+  }
+ ],
+ "excluded": [
+  {
+   "university": "Northwestern University",
+   "title": "Cracking the Code: Preparing Students for an AI-Driven Future",
+   "url": "https://ce.northwestern.edu/magazine/fall-2025/cracking-the-code-preparing-students-for-ai-driven-future/index.html",
+   "reason": "Magazine article describing CS course norms; not a policy document."
+  },
+  {
+   "university": "Northwestern University",
+   "title": "Statement on AI in Learning and Teaching (Searle Center)",
+   "url": "https://searle.northwestern.edu/initiatives/generative-ai/generative-ai-statement.html",
+   "reason": "Teaching-center philosophy statement; the Provost academic integrity principles were preferred as the single university-general document."
+  },
+  {
+   "university": "Emory University",
+   "title": "Considerations for detection: Artificial Intelligence (Honor Council)",
+   "url": "https://oue.college.emory.edu/includes/documents/honor-council/artificial-intelligence-hc.pdf",
+   "reason": "Generic university-wide; one university-general document per university (syllabus additions chosen)."
+  },
+  {
+   "university": "Oklahoma State University",
+   "title": "AI Misuse Guidelines",
+   "url": "https://itle.okstate.edu/ai_misuse.html",
+   "reason": "Generic university-wide; one university-general document per university."
+  },
+  {
+   "university": "Dalhousie University",
+   "title": "GenAI @ Dal (Libraries guide)",
+   "url": "https://dal.ca.libguides.com/genai/dal",
+   "reason": "Generic library guide; a computing-course statement was found instead."
+  },
+  {
+   "university": "Dalhousie University",
+   "title": "Sample Syllabus Statement (CSCI 6505)",
+   "url": "https://web.cs.dal.ca/~eem/6505/Syllabus-statement-on-AI.htm",
+   "reason": "Despite the filename, it is an academic-integrity statement with no AI content."
+  },
+  {
+   "university": "New Jersey Institute of Technology",
+   "title": "CS 332-H01 / CS 301-003 and other Digital Commons CS syllabi",
+   "url": "https://digitalcommons.njit.edu/cgi/viewcontent.cgi?article=1627&context=cs-syllabi",
+   "reason": "Still inaccessible (Cloudflare 403) and not archived in the Wayback Machine; wording cannot be verified."
+  },
+  {
+   "university": "Northwestern University",
+   "title": "Principles Regarding Academic Integrity",
+   "url": "https://www.northwestern.edu/provost/policies-procedures/academic-integrity/principles.html",
+   "reason": "superseded by Tier 1 document (addendum 4)"
+  },
+  {
+   "university": "Georgia State University",
+   "title": "AI Policy Supplement",
+   "url": "https://gsu.policystat.com/policy/token_access/3916c854-9eea-4e9c-a678-a8f0356f0f44/attachment/73391148/",
+   "reason": "superseded by Tier 2 document (addendum 4)"
+  }
+ ],
+ "new_codes": []
+}

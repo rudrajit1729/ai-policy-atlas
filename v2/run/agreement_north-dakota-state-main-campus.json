@@ -1,0 +1,16 @@
+{
+ "documents": 3,
+ "units_A": 111,
+ "units_B": 137,
+ "matched": 108,
+ "only_A": 3,
+ "only_B": 29,
+ "kept_only_A": 3,
+ "kept_only_B": 21,
+ "agree_actor": 0.935,
+ "agree_phase": 0.898,
+ "agree_modality": 0.917,
+ "agree_policy_type": 0.88,
+ "agree_stance_docs": 1.0,
+ "notes": "Three university-layer documents (NDSU IT KB framework page, instructor guide, student guide); no school/computing units found, course layer deferred. Matched units were aligned by position of the anchor in the source text; 4 greedy mispairings were fixed by hand. Main disagreements: (1) policy_type between neighbouring types, e.g. P31 vs P29/P32 for accountability or critical evaluation, P36 vs P19 vs P45 for misconduct/parity statements, P04 vs P11 vs P10 for 'policies vary by course', P26 vs P24 for 'explain how you used AI', P35 vs P08 for the assignment that asks students to use AI after writing their own review; each resolved by re-reading the sentence and choosing the type matching its distinctive rule, with fit_note kept. (2) actor all vs instructor/admin for general principles: general statements and rationale went to all. (3) phase: definitions of misuse went to general, instructor tips on assignment/course design to before-course, communicating to students to course-start. (4) modality should vs must/informs: imperatives in the same document as an explicit 'must' went to must; descriptive lines to informs. (5) unit_stance was not scored but differed often; normalised: conditions on permitted use (crediting, logs) are permit, verification and rationale neutral. Only-one-coder units: B was more granular (29 B-only vs 3 A-only); 21 B-only and all 3 A-only were kept as distinct sentences or bullets; 8 B-only were dropped (intro pleasantries, duplicated clauses of the same rule, a need statement in the research section, and one fragment that is the condition of a penalty rule and not a rule itself)."
+}

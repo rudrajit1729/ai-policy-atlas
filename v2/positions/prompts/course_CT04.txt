@@ -1,0 +1,102 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT04 "Rules vary by assignment or deliverable" (The AI rule is set per assignment, deliverable or activity, or the instructor may permit or ban AI case by case ("AI only on designated assignments", "per-assignment AI permission stated").).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..77 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | bucknell | C4 | student | may | AI allowed for learning and debugging | Allowed: Learning, debugging, projects
+1 | bucknell | C4 | student | may | AI allowed on projects with attribution | Project work (with attribution)
+2 | depaul | C2 | student | may | AI allowed only when instructed | instructions by the instructor to use a generative AI tool in the
+3 | east-texas-aandm | C4 | all | informs | legitimate AI uses acknowledged | legitimate uses of Artificial Intelligence, ChatBots, or other software
+4 | east-texas-aandm | C4 | instructor | may | instructors may ban AI | Individual instructors may disallow entirely the use of such software
+5 | east-texas-aandm | C5 | all | informs | legitimate AI uses acknowledged | East Texas A&M University acknowledges that there are legitimate uses of Artificial
+6 | east-texas-aandm | C5 | instructor | may | instructors may ban AI | Individual instructors may disallow entirely the use of such software for individual
+7 | east-texas-aandm | C6 | all | informs | legitimate AI uses acknowledged | University acknowledges that there are legitimate uses of Artificial
+8 | east-texas-aandm | C6 | instructor | may | instructors may ban AI | instructors may disallow entirely the use of such software for individual assignments or
+9 | florida-atlantic | C4 | student | must-not | AI banned unless instructor allows | FAU students are not permitted to use AI for any course work unless explicitly
+10 | florida-atlantic | C4 | instructor | informs | instructor sets course AI policy | Class policies related to AI use are decided by the individual faculty.
+11 | florida-atlantic | C4 | instructor | must | per-assignment AI permission stated | the assignment instructions will indicate when and how the use of AI is
+12 | florida-atlantic | C4 | student | may | AI only on designated assignments | permitted only for specific assignments as indicated by the
+13 | georgia-tech | C4 | student | may | AI coding only where assignment allows | we allow the use of AI in the context of writing code for those
+14 | grinnell-college | C2 | student | informs | AI policy varies by deliverable | GenAI policies will vary per deliverable.
+15 | grinnell-college | C2 | student | informs | AI policy varies by deliverable | The GenAI policy is deliverable-specific.
+16 | grinnell-college | C4 | student | informs | AI policy varies by deliverable | GenAI policies will vary according to the
+17 | grinnell-college | C5 | instructor | may | exceptions for stated activities | (unless stated otherwise by your instructor for specific activities).
+18 | harvard | C1 | student | may | outside AI ok for final project | except for your own final project.
+19 | illinois-chicago | C5 | student | may | AI allowed only if explicitly permitted | unless explicitly allowed to do so
+20 | james-madison | C4 | student | must-not | no AI on exams or homework | The use of AI is strictly prohibited during quizzes and exams and homework/programming assignments, so make sure you can program independently.
+21 | james-madison | C4 | student | may | AI allowed on team project | AI tools may be used on the team project, but use caution when doing so
+22 | kansas | C4 | student | must-not | no AI in assessments unless authorized | and similar technologies are prohibited unless expressly
+23 | kansas | C4 | student | must-not | AI banned unless authorized per assignment | Use of generative AI tools is not permitted for any assignment
+24 | lehigh | C5 | student | must-not | no AI without permission | ChatGPT without my previous permission
+25 | louisville | C6 | instructor | may | assignment instructions may allow AI | unless explicitly stated otherwise
+26 | loyola-marymount | C1 | student | must | AI limited to listed uses | limit the use of GenAI in programmatic assignments to the following cases:
+27 | loyola-marymount | C5 | student | must | AI limited to listed uses | limit the use of GenAI in programmatic assignments to the following cases
+28 | loyola-marymount | C6 | student | must | AI limited to listed uses | limit the use of GenAI in programmatic assignments to the following cases
+29 | macalester-college | C2 | student | may | AI code allowed on project | You are allowed to try out AI-generated code for your course project, although I don’t
+30 | north-carolina-state | C2 | student | must | AI only when specifically allowed | Use AI tools only when specifically allowed.
+31 | north-carolina-state | C4 | instructor | informs | AI rules set per assignment | Each assignment states what AI may be used for.
+32 | north-carolina-state | C4 | student | may | teams set AI policy | Teams determine AI policy for team deliverables.
+33 | northern-virginia-community-college | C1 | student | should | need instructor permission for tools | Students are urged to be cautious when using any web tools designed to assist with assignments without their instructors’ explicit permission
+34 | northern-virginia-community-college | C2 | student | should | need instructor permission for tools | Students are urged to be cautious when using any web tools designed to assist with assignments without their instructors’ explicit permission
+35 | oberlin-college | C5 | student | may | AI allowed for some activities | The use of AI tools (e.g., ChatGPT, Gemini, Claude, etc.) is permissible for some activities,
+36 | oklahoma | C1 | student | must | AI only when assignment permits | Use of generative AI tools is only allowed when the assignment specifically permits it.
+37 | prairie-view-aandm | C1 | instructor | may | instructor may permit AI | should an instructor permit their students to use artificial intelligence as a resource or tool
+38 | prairie-view-aandm | C3 | instructor | may | instructor may permit AI | should an instructor permit their students to use artificial intelligence as a resource or tool
+39 | prairie-view-aandm | C3 | instructor | may | instructor may permit AI | should an instructor permit their students to use artificial intelligence as a resource or tool
+40 | prairie-view-aandm | C4 | instructor | may | instructor may permit AI | should an instructor permit their students to use artificial intelligence as a resource or tool
+41 | rochester-institute-technology | C4 | instructor | informs | AI use may be assigned | From time to time you may be asked to use these tools.
+42 | rochester-institute-technology | C4 | instructor | informs | AI allowed only if instructed | Unless given instruction for a specific allowed use,
+43 | rose-hulman-institute-technology | C1 | student | may | AI maybe allowed in capstone | as directed by your instructor for the Capstone Project.
+44 | rose-hulman-institute-technology | C5 | student | must-not | no ChatGPT unless assignment permits | Please do not use it or like tools unless explicitly permitted
+45 | san-jose-state | C1 | instructor | may | AI allowed if instructor states | that you submit, unless the instructor explicitly states that AI use is allowed for a
+46 | south-florida | C4 | instructor | informs | assignments may forbid AI | If there are specific assignments where the use of AI tools is not appropriate, these will be clearly marked
+47 | swarthmore-college | C5 | student | must-not | no AI coding on labs | AI-assisted coding is not permitted for lab assignments.
+48 | swarthmore-college | C5 | student | may | AI allowed for debugging non-core code | use AI-assisted coding tools in the final project for debugging and for coding non-core parts of your project
+49 | texas-arlington | C3 | student | must | GenAI use follows instructor guidelines | The use of Generative AI (GenAI) in course assignments and assessments must align with the
+50 | texas-arlington | C3 | instructor | must | instructors must state permissible GenAI uses | Instructors are responsible for clearly delineating the permissible uses of
+51 | texas-austin | C6 | student | may | AI permitted partially | partial basis for academic work in this course, provided that students 1) use
+52 | texas-austin | C6 | instructor | informs | instructor specifies allowed AI aspects | instructor/s in writing as to the aspects of the assignments for which AI may
+53 | texas-austin | C6 | student | may | may seek prior approval | You are also welcome to seek prior
+54 | texas-austin | C6 | instructor | may | exception with written permission | academic dishonesty except in the case where it has been explicitly permitted
+55 | texas-christian | C5 | instructor | may | exception if instructor authorizes | for course assignments except as explicitly authorized by the instructor.
+56 | texas-christian | C6 | instructor | may | exception if instructor authorizes | for course assignments except as explicitly authorized by the instructor.
+57 | texas-el-paso | C1 | student | must | AI needs prior instructor permission | is only allowed with approval from the instructor BEFORE being used.
+58 | texas-el-paso | C3 | instructor | informs | assignment-specific AI guidelines | Specific more detailed guidelines concerning permissible uses of AI may
+59 | texas-tyler | C2 | student | must | homework self-generated unless AI assigned | All homework must be self-generated unless otherwise assigned (i.e NO AI generated work unless assigned
+60 | texas-tyler | C3 | student | may | AI encouraged on designated assignments | are permitted and encouraged. When AI use is permissible, it will be
+61 | texas-tyler | C3 | instructor | informs | permitted AI use stated in directions | clearly stated in the assignment directions, and all use of AI must be
+62 | texas-tyler | C4 | student | must-not | no AI on tests or non-project work | tests or other assignments that are not directly related to the main project.
+63 | texas-tyler | C4 | student | must-not | no AI on tests or non-project work | tests and non-project related assignments.
+64 | uiuc | C2 | student | must | follow assignment prompt protocol | Where an assignment specifies such a requirement, you must follow
+65 | uiuc | C6 | student | must | labs done without AI | These must be completed without AI.
+66 | uiuc | C6 | all | informs | AI rules vary by assignment | This course has two different rules for AI use, and which one applies depends on the assignment
+67 | vanderbilt | C5 | student | may | AI allowed on open-format homework | you MAY consult with texts, notes, slides, AIs, and with other people on the open format components of homework
+68 | vermont | C1 | student | may | AI allowed with citation on homework | programming homework yes yes yes (with citation) no no
+69 | vermont | C1 | student | must-not | no AI in code review | code review yes no no no no
+70 | vermont | C5 | all | informs | some assignments require AI | Some homework and projects may require the use of AI.
+71 | vermont | C5 | instructor | informs | AI rules given in assignment spec | will be clearly indicated, and guidelines for permitted and prohibited use will be supplied in the
+72 | washington | C1 | student | must-not | AI only as course policy allows | Do not use AI in relation to your graded work in a manner not allowed by the course
+73 | washington | C3 | student | must | AI use must follow course policy | If you decide to use generative AI in this course (i.e., ChatGPT/Bard), make sure
+74 | wellesley-college | C2 | student | may | AI free for listed study uses | You are free to use generative AI (e.g. ChatGPT, Gemini, etc.) for the following use cases:
+75 | wellesley-college | C5 | student | may | AI allowed on final project | The final project will allow Generative AI use within certain restrictions.
+76 | wellesley-college | C5 | student | must | must get permission before AI | You must contact me before using GenAI for any class purpose.
+77 | wellesley-college | C5 | student | must | email request to use AI | Send me an email describing how you would like to use GenAI, and I will review the request.

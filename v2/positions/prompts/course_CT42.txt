@@ -1,0 +1,63 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT42 "AI output is unreliable or insecure" (Warnings that AI code or answers can be wrong, insecure, outdated, poorly styled or ignore course constraints.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..38 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | appalachian-state | C6 | all | informs | AI code often unreliable | While powerful, they don't always produce working code.
+1 | colby-college | C5 | student | should | only listed packages despite AI advice | you should only use Python packages listed in Software
+2 | colorado-boulder | C3 | all | informs | warning AI output may be wrong | You may be learning something incorrectly if you rely on these tools.
+3 | colorado-state | C2 | all | informs | reason: AI output unreliable | These tools are prone to generating imperfect or even incorrect solutions, so trusting them blindly can lead to bad consequences.
+4 | colorado-state | C4 | all | informs | reason: AI tests too simple | AI produces simplistic test cases compared to those used for grading.
+5 | dartmouth-college | C2 | student | must-not | no uncovered Java classes from AI | Use Java-provided classes or methods that we have not discussed in class.
+6 | dartmouth-college | C2 | all | informs | warning working code may be incorrect | because code compiles and runs does not mean it is correct or efficient
+7 | duke | C2 | all | informs | reason: Copilot code may fail tests | For assignments, the prompts and details often change from one semester to the next.
+8 | georgia-tech | C4 | all | informs | AI risk: stuck when debugging | 1. Stuck when debugging. Often, students end up in a spot where the code
+9 | georgia-tech | C4 | all | informs | AI risk: incorrect inefficient code | 2. Incorrect/inefficient approach. AI is prone to developing code in an
+10 | harvard | C6 | student | should | caution about AI errors | We recommend that students use extreme caution when
+11 | louisville | C6 | all | informs | AI output may be inaccurate | AI-generated information may be inaccurate, incomplete, or inconsistent with
+12 | louisville | C6 | student | must | course materials override AI output | course lectures, slides, announcements, and instructor guidance take prece-
+13 | loyola-marymount | C1 | all | informs | blind AI use earns poor grades | Using GenAI and related tools without knowing what you are doing may lead to poor homework submissions
+14 | loyola-marymount | C1 | all | informs | AI code may have bugs | In some cases it may struggle to write code for scenarios it cannot recognize
+15 | loyola-marymount | C2 | all | informs | blind AI use earns poor grades | Using GenAI and related tools without knowing what you are doing may lead to poor homework submissions
+16 | loyola-marymount | C2 | all | informs | AI code may have bugs | In some cases it may struggle to write code for scenarios it cannot recognize
+17 | loyola-marymount | C3 | all | informs | blind AI use earns poor grades | Using GenAI and related tools without knowing what you are doing may lead to poor homework submissions
+18 | loyola-marymount | C3 | all | informs | AI code may have bugs | In some cases it may struggle to write code for scenarios it cannot recognize
+19 | maryland-college-park | C2 | all | informs | AI answers unreliable | since AI is often wrong, or may have correct
+20 | massachusetts-amherst | C2 | all | informs | incorrect AI output dangerous | This is dangerous in a world where good software is essential and can affect safety
+21 | massachusetts-amherst | C3 | student | should | AI may mislead | being led down an incorrect or strange path by an eager AI tool.
+22 | memphis | C3 | student | informs | warning: AI hallucinates | have a tendency to hallucinate incorrect facts and fake citations.
+23 | memphis | C3 | student | informs | warning: AI code insecure | larly, code generation models may produce inaccurate or insecure output.
+24 | miami | C1 | student | informs | warning: AI code ignores course constraints | Beware, the programs generated by AI-tools often do not meet the requirements of CSC120,
+25 | miami | C1 | student | informs | warning: AI code poor style | and AI-generated code often is nasty nasty nasty.
+26 | oklahoma | C3 | instructor | informs | AI output often misleading | they often give misleading information
+27 | stony-brook | C4 | student | should | understand AI limitations | understanding both their capabilities and their limitations.
+28 | swarthmore-college | C5 | student | should | be cautious about AI accuracy | Be cautious when using generative AI tools for learning purposes.
+29 | texas-el-paso | C1 | student | informs | AI output may be inaccurate | that are inaccurate or incomplete—even providing false citations for use.
+30 | texas-el-paso | C6 | student | informs | AI may hallucinate inaccurate content | and information that are inaccurate or incomplete—even providing
+31 | virginia-tech | C3 | student | should | advised to use AI carefully | we advise that you be careful in their use
+32 | washington | C3 | all | informs | unvetted AI code risks institution | Including code from AI tools that you do
+33 | washington | C3 | all | informs | AI code may be flawed | Code may have security flaws and may contain bugs.
+34 | wellesley-college | C2 | all | informs | AI may be believably wrong | Can produce incorrect information in a very believable way
+35 | wellesley-college | C2 | all | informs | AI may be outdated | Are trained on old information and might not have the most up-to-date information that we discuss in class.
+36 | wellesley-college | C6 | all | informs | AI may produce incorrect code | CS240 focuses on correctness. Generative AI tools can produce incorrect code,
+37 | wesleyan | C1 | all | informs | security risk of AI code | An additional thing you should be aware of is all of the security
+38 | williams-college | C2 | all | informs | LLM explanations lack context | LLM explanations often omit key context

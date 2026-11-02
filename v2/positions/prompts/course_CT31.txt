@@ -1,0 +1,90 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT31 "Verify and test AI output" (Students check AI output for correctness and are responsible for its errors.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..65 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | austin-community-college | C2 | student | must | must verify AI output | you are responsible for verifying accuracy, refining outputs, and ensuring your work aligns with course requirements.
+1 | brandeis | C6 | student | must | student responsible for AI output | student’s responsibility to assess the validity and applicability of any GAI output that is
+2 | brown | C6 | student | must | student verifies AI correctness | making sure your work is correct, as you would in industry: generative
+3 | california-san-diego | C3 | student | must | student responsible for accuracy | You are fully responsible for the content and accuracy of everything you submit
+4 | california-santa-cruz | C2 | student | must | student responsible for accuracy | It is your responsibility to ensure the accuracy, integrity, and quality of any AI-generated content incorporated into your work
+5 | colby-college | C1 | student | must | student verifies AI correctness | verify the correctness of the answers from generative AI
+6 | colby-college | C5 | student | must-not | verify AI fixes | Never accept fixes blindly
+7 | colby-college | C5 | student | must | student responsible for submission | you are responsible for all the code and analyses that you turn in
+8 | colgate | C3 | student | must | student fact-checks AI | it is your responsibility to also fact check the insights that you gain
+9 | colorado-boulder | C3 | student | should | double-check AI against reliable source | it is best to double-check information with a more reliable source, such as a textbook.
+10 | colorado-boulder | C4 | student | must | student must test AI code | It is your responsibility to identify errors in program logic through comprehensive, documented testing.
+11 | cornell | C3 | student | must | responsible for submitted work | You remain responsible for understanding the work you submit and for its correctness and provenance.
+12 | cornell | C3 | student | should | review AI output carefully | You should review AI-generated contributions carefully for correctness and for your own understanding
+13 | east-texas-aandm | C4 | student | must | student responsible for content | students are fully responsible for the content of any
+14 | east-texas-aandm | C5 | student | must | student responsible for content | students are fully responsible for the content of any assignment they submit,
+15 | east-texas-aandm | C6 | student | must | student responsible for content | students are fully responsible for the content of any assignment they
+16 | florida-atlantic | C4 | student | must | student accountable for AI content | the student is also responsible and accountable for the content of the
+17 | florida-atlantic | C4 | student | should | verify AI output before use | review any information generated by AI before using generated content as-is.
+18 | harvey-mudd-college | C1 | student | must | student accountable for AI content | each student is fully accountable for AI-generated content that they make part of a deliverable.
+19 | harvey-mudd-college | C5 | student | should | evaluate AI code suggestions | you should be clear in your intent for the code you are writing so you can evaluate its suggestions.
+20 | harvey-mudd-college | C6 | student | must | critically evaluate AI output | Always critically evaluate any information or suggestions provided by LLMs.
+21 | hawaii-manoa | C1 | student | must | student responsible for accuracy | If you use information from the Internet, you are responsible for the accuracy of the information.
+22 | johns-hopkins | C2 | student | must | review test debug AI code | You are expected to review, test, and debug it thoroughly.
+23 | johns-hopkins | C2 | student | must | student debugs failing AI code | If your code fails or behaves unexpectedly, it is your responsibility to debug and correct it.
+24 | johns-hopkins | C2 | ta-staff | informs | staff not fixing AI code bugs | The course staff is not responsible for fixing bugs and glitches.
+25 | johns-hopkins | C2 | student | must-not | no uncritical AI reliance | Blind or uncritical reliance on AI output is not acceptable and may result in penalty on your grades.
+26 | johns-hopkins | C2 | student | must | student responsible for submitted code | However, responsibility for all submitted code rests solely with the submitting student(s).
+27 | kansas | C4 | student | must | disclose validation of output | How you validated and revised the AI output
+28 | loyola-marymount | C5 | student | informs | uncritical AI use risks low grade | Using GenAI and related tools without knowing what you are doing may lead to poor homework submissions
+29 | loyola-marymount | C6 | student | informs | uncritical AI use risks low grade | Using GenAI and related tools without knowing what you are doing may lead to poor homework submissions
+30 | maryland-college-park | C5 | student | must | run code yourself, not AI output | Do no use the output of a piece of code directly from an AI tool, you are expected to run the
+31 | memphis | C3 | student | must | student responsible for submitted content | You remain fully responsible for any inaccurate, biased, offensive, or otherwise unethical
+32 | michigan | C3 | student | should | must verify AI accuracy | Any time you engage with it, make sure to confirm it is giving you accurate information.
+33 | new-jersey-institute-technology | C6 | student | must | student responsible for AI output accuracy | Students are fully responsible for the accuracy and correctness of all content in their submissions,
+34 | new-jersey-institute-technology | C6 | instructor | informs | incorrect AI content graded down | If AI-generated content is incorrect, the assignment will be
+35 | new-york | C2 | student | must | must verify AI output | you are responsible for critically evaluating and verifying any information it provides.
+36 | new-york | C2 | student | must | document and verify AI feedback | make sure to document such assistance, make sure that the suggested changes are correct and that you understand them
+37 | north-carolina-chapel-hill | C1 | student | must | must evaluate AI output | You must evaluate AI-generated outputs for potential biases, limitations, inaccuracies, false output, and ethical implications.
+38 | north-carolina-chapel-hill | C1 | student | must | student responsible for final product | you are ultimately 100% responsible for your final product.
+39 | north-carolina-chapel-hill | C3 | instructor | informs | wrong AI answers lose credit | If your answers are incorrect, you will not receive full credit.
+40 | north-carolina-state | C2 | student | must | must check AI answer in scope | It is your responsibility to reflect on the AI’s response to determine if it is appropriate and within scope.
+41 | north-carolina-state | C2 | student | must | must verify AI output | Critically evaluate the output from AI tools for accuracy.
+42 | north-carolina-state | C3 | student | must | must evaluate AI responses | The AI responses must be evaluated for correctness and appropriateness within the context of CSC316
+43 | north-carolina-state | C4 | student | must | must verify AI output | You must verify anything AI produces.
+44 | oklahoma | C4 | student | must | student evaluates AI output | it is the responsibility of the student to evaluate the content generated
+45 | pennsylvania | C5 | student | should | verify LLM explanations | Always dig a bit deeper when learning from an LLM
+46 | princeton | C6 | student | should | verify AI output | we implore students to verify any information they receive from AI sources
+47 | rhode-island | C5 | student | should | AI output is a starting point | Students should view AI-generated content as a starting point
+48 | rhode-island | C5 | student | should | verify AI output | It's crucial to verify AI-generated information, as these tools can produce errors or outdated content.
+49 | rochester-institute-technology | C4 | student | should | explore AI with skepticism | We ask that you explore but also approach with skepticism and apply your own critical thinking
+50 | south-florida | C4 | student | must | must verify AI output | Students are responsible for the accuracy of their submissions and must cross-verify the information word by word
+51 | stony-brook | C4 | student | must | student accountable for AI output | Using AI tools does not relieve you of responsibility for the correctness, security, and quality of the work
+52 | temple | C6 | student | must | verify AI accuracy | You need to be sure the material you find is accurate and up-to-date.
+53 | texas-austin | C6 | student | must | review AI output critically | 2) practice critical discernment and conduct meaningful human
+54 | tufts | C2 | student | must | student verifies chatbot output | It is ultimately your responsibility to verify the correctness of its
+55 | tufts | C2 | student | informs | blaming chatbot won't restore points | If you lose points on an assignment, you will not win them back
+56 | uiuc | C1 | student | must | responsible for own AI use | You are always responsible for your own use of AI.
+57 | uiuc | C1 | student | must | student directs and judges agent output | You direct the work and judge what comes back.
+58 | uiuc | C1 | student | must | evaluate AI output critically | It means evaluating AI outputs critically rather than accepting them blindly.
+59 | uiuc | C3 | student | must | validate AI output independently | Always validate it independently.
+60 | uiuc | C3 | student | must | responsible for all submitted work | you are expected to be responsible for all documentation and code you submit,
+61 | uiuc | C6 | student | must | student responsible for AI code | You remain responsible for everything you submit, including code that an AI tool wrote for you.
+62 | virginia-commonwealth | C6 | student | must | responsible for shared code | You are responsible for any code you write and share with course staff (including in
+63 | virginia-tech | C3 | student | must | student responsible for submitted work | students remain fully responsible for the accuracy, originality, and integrity of all
+64 | washington | C3 | student | should | double-check AI output | then you should always double-check the content
+65 | washington | C3 | student | must | responsible for AI-assisted accuracy | then you are responsible for the accuracy and correctness

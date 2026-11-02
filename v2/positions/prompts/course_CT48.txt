@@ -1,0 +1,40 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT48 "Pointer to other policies" (Refers to the university, department or other courses' AI policies, which still apply.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..15 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | brandeis | C3 | all | informs | policy deferred to Moodle | Please see cs131a curriculum on Moodle for our current policy on use of AI
+1 | brandeis | C6 | student | must | policies differ by course | could implement different AI policies, and it is the student’s responsibility to conform to
+2 | colby-college | C2 | all | informs | labs follow lecture AI policy | Labs have the same AI policy as your lecture section.
+3 | florida-institute-technology | C2 | all | informs | refers to university AI guideline | The university guideline on Responsible Use of Generative AI in Academic Work is located
+4 | old-dominion | C6 | all | informs | policy limited to this course | Note that this policy applies only to CS 471/571
+5 | pomona | C4 | student | informs | details on section page | See your individual section page for further details.
+6 | southern-california | C1 | instructor | informs | future courses stricter on AI | future CS courses will likely have STRICT collaboration and AI-Assistance Policies.
+7 | temple | C5 | all | informs | university blanket AI policy | a blanket policy on the use of generative AI tools
+8 | texas-austin | C2 | all | informs | department bans AI on graded items | CS department policy AI use on any course element with points attached
+9 | uiuc | C1 | student | must | other courses' AI policies still bind | AI policy is academic dishonesty regardless of what CS 124 permits
+10 | uiuc | C1 | student | must | follow every context's AI policy | This means understanding and following the AI policies of every course you take,
+11 | villanova | C1 | student | informs | university AI policy applies | regarding the use of artificial intelligent systems such as ChatGPT.
+12 | villanova | C1 | student | should | read department integrity policy | please review the supplemental academic integrity policy from the computing science department
+13 | villanova | C2 | student | informs | university AI policy applies | regarding the use of artificial intelligent systems such as ChatGPT.
+14 | villanova | C2 | student | should | read department integrity policy | please review the supplemental academic integrity policy from the computing science department
+15 | wellesley-college | C6 | instructor | informs | advanced courses may differ | Some advanced (e.g., 300-level) CS courses will have different

@@ -1,0 +1,81 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT34 "No AI during exams and quizzes" (AI is not allowed during exams, quizzes or in-class assessments.).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..56 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | brigham-young-idaho | C1 | student | must-not | no AI for quiz answers | Do not use AI to give you the answers to quiz questions.
+1 | brown | C6 | student | must-not | no AI on quizzes | absolutely no collaboration, with humans or AI tools, is
+2 | bucknell | C4 | student | must-not | no AI on quizzes | Prohibited: Progress checks, quizzes
+3 | bucknell | C4 | all | informs | no AI access during assessments | You will have NO access to AI tools during quizzes and progress checks
+4 | bucknell | C4 | student | must-not | no AI on quizzes | Quizzes and Progress Checks
+5 | california-berkeley | C1 | student | must-not | no AI on quizzes | Students will complete the quiz on their computer, without assistance from AI or from other students.
+6 | california-san-diego | C3 | student | must-not | no AI during exams | You may not use generative artificial intelligence tools, online resources, additional notes, or communication with other people during the midterm or final exam
+7 | california-san-diego | C3 | student | must | only pen, note sheet, calculator allowed | The only materials permitted are a pen, the handwritten note sheet and a calculator.
+8 | california-san-diego | C3 | student | must-not | no AI during exams | They may not be used for the midterm or final exam.
+9 | city-college-san-francisco | C1 | student | must-not | no devices incl. AI glasses | you may not use any electronic devices (laptops, phones, AI Glasses, tablets, e-readers, etc.)
+10 | cornell | C1 | student | must-not | no AI in discussion sections | discussion time, you may not access any form of generative AI.
+11 | cornell | C3 | student | must-not | no AI on exams | Exams will be closed book, closed internet, closed generative AI.
+12 | cornell | C4 | student | must-not | no AI in class unless permitted | exams or in-class activities unless explicitly permitted by the instructor.
+13 | duke | C2 | student | must-not | no LLMs on APT quizzes | Use of ChatGPT or other LLMs is not allowed when completing APT quizzes.
+14 | duke | C2 | student | must-not | no AI on exams and quizzes | you may not use any AI-assistance.
+15 | duke | C2 | student | must | APT quizzes alone without LLMs | and without using ChatGPT or other LLMs or CoPilot.
+16 | emory | C2 | student | must-not | no AI in closed assessments | Use AI tools during quizzes, exams, or other assessments designated as closed-resource.
+17 | georgia-tech | C3 | student | informs | no AI access on exams | you will NOT have access to any of this material on the exams!
+18 | georgia-tech | C3 | student | must-not | no outside resources on exams | It IS considered cheating to use any outside resource on an exam
+19 | grinnell-college | C6 | student | must-not | no AI during class | LLM/AI use is prohibited during class periods.
+20 | harvey-mudd-college | C6 | student | must-not | no AI on take-home exams | LLMs must not be used for any take-home exams or quizzes.
+21 | houston | C3 | student | must-not | no AI on exams | AI websites cannot be
+22 | james-madison | C1 | student | must-not | no AI on quizzes and exams | The use of AI is strictly prohibited during quizzes and exams
+23 | james-madison | C2 | student | must-not | no AI on exams | The use of AI is strictly prohibited during exams, so make sure you can program without AI.
+24 | kansas | C4 | student | must-not | no AI on exams | use is not permitted during exams or quizzes.
+25 | louisville | C6 | student | must-not | no generative AI during exams | The use of generative AI tools is not permitted during exams
+26 | marquette | C6 | student | must-not | no AI in exams | be permitted for written exams and lab practical exams.
+27 | memphis | C2 | student | must-not | no AI on quizzes and exams | Quizzes and Final Exam: All AI tools are prohibited.
+28 | michigan-state | C1 | student | must | exams are unaided | You will be expected to complete these questions unaided during the allowed time.
+29 | michigan | C1 | student | must-not | no AI during exams | Using generative AI tools during exams
+30 | new-york | C2 | student | must-not | no AI on exams | exams and other assessments in this class will not be given with access to AI tools
+31 | north-carolina-state | C4 | student | must-not | no AI on exams | Generative AI tools are not permitted on any exam, for any purpose.
+32 | northeastern | C3 | student | must-not | no AI on exams | No outside assistance of any kind, AI or otherwise, is permitted on exams or
+33 | oklahoma | C3 | student | must-not | no AI during quizzes and exams | You can not access AI models during online quizzes and exams.
+34 | princeton | C2 | student | must-not | no AI during exams and quizzes | You may not use generative AI for exams or quizzes.
+35 | rensselaer-polytechnic-institute | C2 | instructor | informs | paper exams without AI | exams in this course will be paper and pencil without access to the internet or AI tools
+36 | rose-hulman-institute-technology | C6 | student | must-not | unlisted resources banned on exams | using any resources not specifically allowed during
+37 | san-francisco | C6 | student | must-not | no AI during sessions | During a session: no Internet and no AI assistant.
+38 | southern-california | C1 | student | must-not | no AI on exams | You are NEVER allowed to show others your answers NOR receive ANY assistance from another human, device, or AI-based tools
+39 | southern-california | C1 | student | must-not | no AI on exams | using AI-generated work in whole or in part (even for reference) is prohibited on any exam
+40 | southern-california | C2 | student | must-not | no AI on projects and exams | MAY NOT use AI, help from other students / 3rd parties, or external solutions even for reference.
+41 | stony-brook | C2 | student | must-not | no AI on exams quizzes programming | their use in completing exams, quizzes, or programming assignments is strictly prohibited.
+42 | texas-el-paso | C2 | student | must-not | AI restricted in exams and quizzes | but their use is restricted during exams and quizzes.
+43 | uiuc | C2 | student | must-not | no AI tools during quizzes | During a quiz, no tool beyond what the
+44 | uiuc | C2 | student | must | attest quizzes done without AI | You acknowledge that quizzes must be completed without AI assistance and that your performance on quizzes
+45 | uiuc | C3 | student | must-not | no AI in quizzes and exams | AI usage is not allowed in individual assessments (i.e., quizzes and exams).
+46 | vanderbilt | C5 | student | must-not | no AI during quiz attempts | You may NOT consult with AIs, texts, notes, slides, etc while you are actually taking a quiz attempt
+47 | vermont | C1 | student | must-not | no AI on quizzes | quizzes yes yes no no no
+48 | vermont | C1 | student | must-not | no AI on exams | exams yes yes no no no
+49 | vermont | C5 | student | must-not | no AI in exams | Use of AI is strictly prohibited as a means of researching,
+50 | vermont | C5 | all | informs | exams assess own knowledge | Why? Exams and in-class assessments are intended to assess your knowledge and ability to apply
+51 | virginia-tech | C3 | student | must-not | tests closed book no AI | All tests will beclosed book and closed Internet/no AI
+52 | virginia-tech | C5 | student | should-not | no LLMs during exams | chat, Zoom, Skype, social media, LLMs, e.g., ChatGPT, etc. during the
+53 | washington | C3 | student | must-not | no AI on invigilated exams | Using AI tools on official assessments where uses have been
+54 | west-chester-pennsylvania | C4 | instructor | informs | exams test understanding unaided | These are meant to test you with in-depth understanding and key concepts.
+55 | worcester-polytechnic-institute | C6 | student | must-not | no AI during quizzes | may not access reference materials, the Internet, generative AI tools, or communicate with others during the quiz
+56 | worcester-polytechnic-institute | C6 | student | must-not | no AI-generated work on quizzes | students may not submit work that has been generated by automated programming or text generation tools (such as Copilot or ChatGPT) on quizzes.

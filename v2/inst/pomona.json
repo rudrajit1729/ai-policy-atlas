@@ -1,0 +1,681 @@
+{
+ "university": "Pomona College",
+ "slug": "pomona",
+ "state": "CA",
+ "type": "liberal-arts",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "found",
+  "course": "found"
+ },
+ "documents": [
+  {
+   "id": "pomona-handbook-honesty",
+   "layer": "university",
+   "unit": "Student Handbook (Academic Honesty Policy)",
+   "course": null,
+   "title": "Academic Honesty Policy",
+   "url": "https://studenthandbook.pomona.edu/academicpolicies/academichonesty",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance": "restrict",
+   "tiers": [],
+   "summary": "The college-wide Academic Honesty Policy in the Student Handbook is mostly procedure (reporting, hearings, sanctions). Its only AI content is one clause that lists 'unapproved use of artificial intelligence' as a breach of academic integrity on independent work.",
+   "stance_why": "The only AI text is 'unapproved use of artificial intelligence', named as an example of misrepresenting others' ideas or language as one's own; AI is thus barred unless approved, which is restrict. The document does not say who approves or set any tiers.",
+   "units": [
+    {
+     "why": "The clause lists 'unapproved use of artificial intelligence' among forms of representing the ideas or language of others as one's own on independently prepared work, so AI use without approval is an integrity violation. It binds students, sets a standard (general phase), bans AI absent approval (must-not, restrict), and P36 fits because it classifies AI misuse as an integrity violation; P06 does not fit because the clause does not say what applies when a syllabus is silent.",
+     "anchor": "unapproved use of artificial intelligence",
+     "frag_start": "In projects and assignments (including homework)",
+     "frag_end": "resubmitted personal work for another course.",
+     "policy": "Unapproved use of artificial intelligence on projects and assignments prepared independently is an example of representing the ideas or language of others as one's own, which breaches the College's standards of honesty and academic integrity.",
+     "actor": "student",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions",
+      "prohibited-uses"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "pomona-cs-tiers",
+   "layer": "computing",
+   "unit": "Department of Computer Science",
+   "course": null,
+   "title": "Computer Science AI Policy Tier System",
+   "url": "https://www.pomona.edu/academics/departments/computer-science/courses-requirements/ai-policy-tier-system",
+   "date_or_term": "Fall 2026",
+   "stance": "delegates",
+   "tiers": [
+    "Tier 0: Absolutely no usage allowed",
+    "Tier 1: See syllabus for allowed usage",
+    "Tier 2: Use in any way with required attribution",
+    "Tier 3: Completely open use"
+   ],
+   "summary": "The Computer Science department sets four tiers of AI use, from none to completely open, and each CS course falls under one tier. It is a pilot for Fall 2026 and the department plans to revisit it regularly. Use outside a course's tier counts as an honor policy violation.",
+   "stance_why": "The document offers four tiers ('0. Absolutely no usage allowed' to '3. Completely open use') for each course to adopt, so the department itself sets no single stance and delegates to the course.",
+   "units": [
+    {
+     "why": "States the purpose is 'a unified system' to clarify allowed and disallowed AI uses 'across all Pomona Computer Science classes'. It is a department-level preamble giving purpose and scope, so P56 and informs; the tier structure itself is coded in a later unit as P05.",
+     "resolution_why": "Coder A coded P05 with actor all; coder B coded P56 with actor admin. The source sentence is headed 'Purpose of this document' and states why the department provides a unified system and over what scope, which is the P56 definition (framework preamble stating purpose and scope). The tier definitions themselves are a separate sentence and carry P05. The text is a department statement, so the actor is admin.",
+     "anchor": "a unified system and increase clarity about what AI usages are allowed or disallowed",
+     "frag_start": "To provide a unified system",
+     "frag_end": "across all Pomona Computer Science classes.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "default-stance",
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "Says the system is a pilot in Fall 2026 and 'we plan to revisit it regularly', a commitment to review, so P54 and over-time.",
+     "anchor": "we are piloting in Fall 2026; we plan to revisit it regularly.",
+     "frag_start": "This is a program we are piloting",
+     "frag_end": "revisit it regularly.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "informs",
+     "policy_type": "P54",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution"
+     ]
+    },
+    {
+     "why": "Says the document 'focuses on general usage rather than specific tools' because technology advances rapidly. This sets the document's scope (tool-neutral), so P61 and informs.",
+     "resolution_why": "Coders agreed on P61, general, informs; actor differed (A all, B admin). The sentence describes what the department's own document covers, so the department (admin) is the speaker and no addressee is singled out; admin follows the same reading as the purpose sentence.",
+     "anchor": "the document focuses on general usage rather than specific tools",
+     "frag_start": "Because these technologies are advancing so rapidly,",
+     "frag_end": "Grammarly, etc.).",
+     "policy": null,
+     "actor": "admin",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P61",
+     "unit_stance": "neutral",
+     "topics": [
+      "use-categories-levels"
+     ]
+    },
+    {
+     "why": "Defines 'four tiers of allowed use that a course can fall under, from least to most permissive'. This is the named-tier structure, P05; it is institutional set-up by the department and courses choose a tier.",
+     "resolution_why": "Coders agreed on P05, informs. A coded actor all and phase general; B coded admin and before-course. The tiers are set up by the department for courses to adopt, which is institutional set-up (before-course) by an office (admin), not a rule addressed to everyone.",
+     "anchor": "four tiers of allowed use that a course can fall under",
+     "frag_start": "This document outlines the four tiers",
+     "frag_end": "Completely open use",
+     "policy": "Each Computer Science course falls under one of four tiers of allowed AI use, from least to most permissive: 0 absolutely no usage, 1 see the syllabus, 2 use in any way with required attribution, 3 completely open use.",
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P05",
+     "unit_stance": "neutral",
+     "topics": [
+      "use-categories-levels",
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "A student whose AI use does not match the course's tier commits a 'violation of our Departmental Academic Honor Policy'. This classes tier breaches as misconduct (P36), must-not for students.",
+     "anchor": "it is considered a violation of our Departmental",
+     "frag_start": "If a student uses AI in a way",
+     "frag_end": "Academic Honor Policy",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "Tier 0 says courses 'do not allow the use of any AI', a blanket ban, so P01, must-not, prohibit.",
+     "anchor": "Courses in this tier do not allow the use of any AI.",
+     "frag_start": "Courses in this tier do not",
+     "frag_end": "use of any AI.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "must-not",
+     "policy_type": "P01",
+     "unit_stance": "prohibit",
+     "topics": [
+      "default-stance",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "Lists disallowed uses ('brainstorm ideas, find source materials, summarize ideas, create study guides, generate code snippets... revise your writing, or check your work'). It spells out what the Tier 0 ban on any AI covers across many purposes, so the ban type P01 is chosen with a fit note; P19 would cover only the part about AI producing submitted work.",
+     "resolution_why": "A coded P01 and B coded P19 (with a fit note about the wide list). The source sentence follows 'do not allow the use of any AI' and lists non-exhaustive disallowed uses (brainstorming, finding sources, summarizing, study guides, code, images, video, revising, checking). Most of the list is not about producing submitted work, so P19 fits only partly, whereas the list is the elaboration of the Tier 0 blanket ban, so P01 with a fit note.",
+     "anchor": "using generative AI tools to brainstorm ideas, find source materials, summarize ideas, create study guides",
+     "frag_start": "Disallowed uses include, but are not limited to,",
+     "frag_end": "or check your work.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P01",
+     "unit_stance": "prohibit",
+     "topics": [
+      "prohibited-uses",
+      "code-generation"
+     ],
+     "fit_note": "Lists many banned purposes (brainstorming, sources, summaries, study guides, code, images, video, revising writing, checking work) rather than only the default ban."
+    },
+    {
+     "why": "Even in Tier 0, 'tools that automatically flag spelling and grammatical errors' such as Word's built-in checkers are allowed. It is a narrow permitted writing aid, so P18 and may.",
+     "anchor": "Tools that automatically flag spelling and grammatical errors as you write are allowed",
+     "frag_start": "Tools that automatically flag spelling",
+     "frag_end": "built into Microsoft Word)",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P18",
+     "unit_stance": "permit",
+     "topics": [
+      "writing-assistance",
+      "permitted-uses"
+     ]
+    },
+    {
+     "why": "Tier 0 excludes 'tools that offer suggested revisions of your sentences (for example, Grammarly)'. It is a prose-tool rule, so P18 and must-not.",
+     "resolution_why": "Modality and type agreed. unit_stance differed (A restrict, B prohibit). The clause is an outright exclusion of one class of tool (sentence-revision tools), with no condition for use, so prohibit; the narrower allowance for spell and grammar flagging is a separate unit.",
+     "anchor": "but not tools that offer suggested revisions of your sentences",
+     "frag_start": "but not tools that offer",
+     "frag_end": "(for example, Grammarly)",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P18",
+     "unit_stance": "prohibit",
+     "topics": [
+      "writing-assistance",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "Non-native English speakers are told 'please ask your instructor' whether translation tools are allowed. Asking before using an unclear tool is P10, should.",
+     "anchor": "ask your instructor about whether tools for translating words or texts between languages are allowed",
+     "frag_start": "If English is not your first language,",
+     "frag_end": "between languages are allowed.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P10",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion",
+      "permitted-uses"
+     ],
+     "fit_note": "Specific to translation tools for non-native English speakers."
+    },
+    {
+     "why": "Tier 1 gives 'flexibility for instructors who primarily want to curb AI use but may make exceptions' tailored to course goals. The instructor decides within the tier, so P04; the tier curbs AI by default, so restrict.",
+     "resolution_why": "Actor, phase, modality and type agreed; unit_stance differed (A neutral, B restrict). The sentence says Tier 1 is for instructors who 'primarily want to curb AI use' and 'may make exceptions', so the position it takes is a curb with exceptions, which is restrict.",
+     "anchor": "flexibility for instructors who primarily want to curb AI use but may make exceptions",
+     "frag_start": "The goal of this policy is to allow some",
+     "frag_end": "tailored to their course's learning objectives.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P04",
+     "unit_stance": "restrict",
+     "topics": [
+      "instructor-discretion",
+      "default-stance"
+     ]
+    },
+    {
+     "why": "Gives the example that a Tier 1 course 'might allow the use of AI for study purposes (e.g., to ask clarifying questions, obtain additional examples, create study guides)'. It names study uses as something a course may permit, so P14.",
+     "resolution_why": "A coded actor student, during-work; B coded instructor, before-course. The sentence says what 'a course following this tier might allow', i.e. a choice open to the instructor when designing the course, with 'may', so instructor and before-course.",
+     "anchor": "might allow the use of AI for study purposes (e.g., to ask clarifying questions",
+     "frag_start": "For example, a course following this tier",
+     "frag_end": "create study guides, etc.)",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P14",
+     "unit_stance": "permit",
+     "topics": [
+      "permitted-uses"
+     ],
+     "fit_note": "Example only; also covers asking clarifying questions and getting additional examples (P12)."
+    },
+    {
+     "why": "The same Tier 1 example would 'prohibit its use during the completion of assignments and exams'. It is a ban on AI in graded work and exams that a Tier 1 course may set; the nearest type is P22, though it also covers assignments.",
+     "resolution_why": "Only coder A made this a separate unit; B folded it into the study-purposes unit. The source states a second, distinct rule (a Tier 1 course may ban AI in assignments and exams) so it is kept as its own unit. A coded it as a student ban in the assessment phase; the sentence is the same 'might ... but prohibit' example as the study unit, so actor, phase and modality follow that unit (instructor, before-course, may), and unit_stance is restrict.",
+     "anchor": "prohibit its use during the completion of assignments and exams",
+     "frag_start": "but prohibit its use during the completion",
+     "frag_end": "of assignments and exams.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P22",
+     "unit_stance": "restrict",
+     "topics": [
+      "assessment-design",
+      "prohibited-uses"
+     ],
+     "fit_note": "Covers assignments as well as exams, and is an example of what a Tier 1 course might do."
+    },
+    {
+     "why": "Students 'must read the course syllabus carefully and discuss allowed uses with their instructor'. This tells students to check and ask rather than assume, P10, must.",
+     "anchor": "students must read the course syllabus carefully and discuss allowed uses with their instructor",
+     "frag_start": "Rather than provide an exhaustive list,",
+     "frag_end": "with their instructor.",
+     "policy": null,
+     "actor": "student",
+     "phase": "course-start",
+     "modality": "must",
+     "policy_type": "P10",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "instructor-discretion"
+     ],
+     "fit_note": "Also requires reading the syllabus carefully, not only asking."
+    },
+    {
+     "why": "Tier 2's goal is 'to openly allow students to use generative AI tools in their learning'. A tier with open permission is P02, permit.",
+     "resolution_why": "Type, actor and modality agreed. Phase differed (A during-work, B general). The sentence states the goal of the tier, i.e. the default for courses in it, in the same way the Tier 0 and Tier 3 default statements are phased (general), so general.",
+     "anchor": "to openly allow students to use generative AI tools in their learning",
+     "frag_start": "The goal of this policy is",
+     "frag_end": "in their learning.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "may",
+     "policy_type": "P02",
+     "unit_stance": "permit",
+     "topics": [
+      "default-stance",
+      "permitted-uses"
+     ]
+    },
+    {
+     "why": "In Tier 2, if AI plays 'a significant role in the genesis of your work, they should be credited'. This is disclosure with the submission, P24, should.",
+     "anchor": "play a significant role in the genesis of your work, they should be credited",
+     "frag_start": "If generative AI tools",
+     "frag_end": "with a collaborating lab partner in a publication.",
+     "policy": "If generative AI tools play a significant role in the genesis of the work, students should credit them in Tier 2 courses.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ],
+     "fit_note": "Credit is triggered only when AI plays a significant role."
+    },
+    {
+     "why": "Credit AI 'in the same way that you would share authorship with a collaborating lab partner'. This compares AI to a human collaborator, so P45 and informs.",
+     "resolution_why": "Only coder B made this a separate unit; A noted the analogy in the credit unit's why. The clause is a distinct explanatory statement (AI credited like a co-author), which is the P45 definition, and the codebook counts rationale as policy, so it is kept as its own informs unit.",
+     "anchor": "in the same way that you would share authorship with a collaborating lab partner",
+     "frag_start": "they should be",
+     "frag_end": "in a publication.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P45",
+     "unit_stance": "neutral",
+     "topics": [
+      "collaboration-analogy",
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "The syllabus 'will contain more information on expectations and attribution formatting' for Tier 2. It says expectations are communicated in the syllabus, nearest P09.",
+     "anchor": "The course syllabus will contain more information on expectations and attribution formatting.",
+     "frag_start": "The course syllabus will contain more",
+     "frag_end": "and attribution formatting.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "informs",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication",
+      "disclosure-citation"
+     ],
+     "fit_note": "Not a requirement on instructors; it states that the syllabus will give expectations and attribution format, for Tier 2 courses only."
+    },
+    {
+     "why": "Tier 3 says 'Students can freely use generative AI tools and do not need to credit their use'. Open use without disclosure is P02, permit.",
+     "resolution_why": "Type, actor and modality agreed. Phase differed (A during-work, B general); general as for the other tier-default statements. unit_stance differed (A encourage, B permit): the text says students 'can freely use', which allows but does not recommend, so permit.",
+     "anchor": "Students can freely use generative AI tools and do not need to credit their use.",
+     "frag_start": "Students can freely use generative AI tools",
+     "frag_end": "do not need to credit their use.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "may",
+     "policy_type": "P02",
+     "unit_stance": "permit",
+     "topics": [
+      "default-stance",
+      "permitted-uses"
+     ]
+    },
+    {
+     "why": "In Tier 3 only, AI-generated text and images 'are treated as the student's own work' under the College Academic Honesty Policy. No type covers deeming AI output the student's own for integrity purposes (P29 requires students to own submissions), so UNCOVERED.",
+     "resolution_why": "Both coders chose UNCOVERED, informs, student. Phase differed (A during-work, B general); the sentence is a deeming rule about how work is classified under the honesty policy, i.e. a definition, so general.",
+     "anchor": "generated by a student using an AI system are treated as the student's own work",
+     "frag_start": "Specifically and only for classes in Tier 3,",
+     "frag_end": "College Academic Honesty Policy.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "UNCOVERED",
+     "unit_stance": "permit",
+     "topics": [
+      "accountability-understanding",
+      "default-stance"
+     ],
+     "uncovered_note": "In the most open tier, AI-generated text and images count as the student's own work under the College Academic Honesty Policy."
+    }
+   ]
+  },
+  {
+   "id": "pomona-cs-honesty",
+   "layer": "computing",
+   "unit": "Department of Computer Science",
+   "course": null,
+   "title": "Academic Honesty Policy (Computer Science Department)",
+   "url": "https://www.pomona.edu/academics/departments/computer-science/courses-requirements/academic-honesty",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance": "delegates",
+   "tiers": [],
+   "summary": "The Computer Science department Academic Honesty Policy sets general rules for individual work, collaboration, exams, course materials and penalties. Its AI content says AI tools count as unapproved help and refers to the department AI Policy Tier System, which each course follows.",
+   "stance_why": "The text bars sources 'other than those approved by the instructors, including AI tools' but then says 'all Computer Science courses will now follow' the AI Policy Tier System, with exceptions 'in the course syllabus'. The actual stance is handed to each course's tier, so delegates; the page points to the tiers rather than offering them, so tiers is left empty.",
+   "units": [
+    {
+     "why": "Work submitted must be 'completed independently, unless collaboration on a particular assignment is explicitly permitted'. This is a rule that submitted work is the student's own (P29), must. The next sentences apply it to AI.",
+     "resolution_why": "Only coder B coded this sentence. It is a real rule (independent work, unless collaboration is permitted) and sets up the AI sentences that follow, so it is kept. It does not name AI, so unit_stance is neutral rather than B's restrict.",
+     "anchor": "the work you submit must be completed independently",
+     "frag_start": "However, the work you submit",
+     "frag_end": "explicitly permitted.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P29",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding"
+     ]
+    },
+    {
+     "why": "Submitted work must not be based on 'information obtained from sources other than those approved by the instructors, including AI tools'. AI is out unless approved, which is the 'unless approved, not allowed' pattern of P06; P19 is narrower (producing the work).",
+     "resolution_why": "A coded P01, B coded P06. The sentence does not ban AI outright: it bans sources 'other than those approved by the instructors, including AI tools', so AI is barred unless an instructor approves it. That is the 'unless allowed, prohibited' fallback rule of P06; P01 is a ban on AI on graded work, which this is not unconditionally.",
+     "anchor": "sources other than those approved by the instructors, including AI tools",
+     "frag_start": "It must not be based on help from others",
+     "frag_end": "approved by the instructors, including AI tools.",
+     "policy": "The work you turn in must not be based on help from others or information from sources other than those approved by the instructors, including AI tools.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P06",
+     "unit_stance": "restrict",
+     "topics": [
+      "default-stance",
+      "prohibited-uses"
+     ]
+    },
+    {
+     "why": "States exceptions 'will appear in the course syllabus or the instructions for an assignment'. It says where course-level differences are communicated, P09, informs.",
+     "resolution_why": "A coded P04, should; B coded P09, informs. The source is a statement ('will appear') of where exceptions are communicated, not an instruction that instructors may decide, so P09 and informs.",
+     "anchor": "Any exceptions or differences will appear in the course syllabus or the instructions",
+     "frag_start": "Any exceptions or differences will appear",
+     "frag_end": "for an assignment.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "informs",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "fit_note": "States that the syllabus or assignment will carry exceptions, rather than requiring it of instructors; not AI-specific."
+    },
+    {
+     "why": "Says the pilot 'AI Policy Tier System' is one 'that all Computer Science courses will now follow'. A tiered system for all courses is P05.",
+     "resolution_why": "Type and modality agreed. A coded actor all, general; B coded admin, before-course. The department launches the system for its courses, which is institutional set-up by an office, matching the choice made for the tier definition in the tiers document.",
+     "anchor": "the Computer Science Department has launched a pilot",
+     "frag_start": "Specifically for the use of Artificial Intelligence",
+     "frag_end": "courses will now follow.",
+     "policy": "Starting in Fall 2026, the Computer Science Department has launched a pilot AI Policy Tier System that all Computer Science courses will now follow.",
+     "actor": "admin",
+     "phase": "before-course",
+     "modality": "informs",
+     "policy_type": "P05",
+     "unit_stance": "neutral",
+     "topics": [
+      "use-categories-levels",
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "AI use that does not align with the course's tier 'is considered a violation of our Departmental Academic Honor Policy'. It classes AI misuse as misconduct, P36.",
+     "anchor": "it is considered a violation of our Departmental Academic Honor Policy",
+     "frag_start": "If a student uses AI in a way",
+     "frag_end": "Academic Honor Policy.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "must-not",
+     "policy_type": "P36",
+     "unit_stance": "restrict",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "'Ask your instructor if you are ever unsure about what constitutes acceptable behavior.' Ask-first guidance, P10, should.",
+     "resolution_why": "Phase differed (A during-work, B general). The advice applies when a student is working and is unsure, so during-work.",
+     "anchor": "Ask your instructor if you are ever unsure about what constitutes acceptable behavior.",
+     "frag_start": "Ask your instructor if you are ever",
+     "frag_end": "acceptable behavior.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should",
+     "policy_type": "P10",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion"
+     ]
+    },
+    {
+     "why": "For individual work, 'Copying solutions from any source, including the web, AI tools, or students ... is not allowed'. AI-made solutions cannot be submitted as one's own, P19, must-not.",
+     "anchor": "Copying solutions from any source, including the web, AI tools",
+     "frag_start": "Copying solutions from any source,",
+     "frag_end": "of the course, is not allowed.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P19",
+     "unit_stance": "prohibit",
+     "topics": [
+      "prohibited-uses",
+      "code-generation"
+     ]
+    },
+    {
+     "why": "'We routinely use software and other tools to detect similarities between submissions and generative AI content.' Use of detection tools, P40, informs.",
+     "resolution_why": "Actor differed (A instructor, B admin). The speaker is 'we', the department, and the sentence is about the department's practice, not the individual instructor, so admin.",
+     "anchor": "software and other tools to detect similarities between submissions and generative AI content.",
+     "frag_start": "We routinely use software",
+     "frag_end": "generative AI content.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P40",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools"
+     ]
+    },
+    {
+     "why": "'Identical, or nearly identical, submissions will be considered conclusive evidence of plagiarism' sets what counts as proof of misuse, P69. It follows the generative-AI detection sentence in the same paragraph, but does not itself name AI.",
+     "resolution_why": "Only coder A coded this sentence. It is a real rule on evidence of misuse and sits in the AI-aware paragraph beside the generative-AI detection sentence, so it is kept as P69 with a fit note.",
+     "anchor": "Identical, or nearly identical, submissions will be considered conclusive evidence of plagiarism.",
+     "frag_start": "Identical, or nearly identical, submissions will",
+     "frag_end": "conclusive evidence of plagiarism.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P69",
+     "unit_stance": "neutral",
+     "topics": [
+      "detection-tools",
+      "integrity-sanctions"
+     ],
+     "fit_note": "Applies to identical submissions generally; AI is not named in this sentence."
+    },
+    {
+     "why": "'The prose must be your own' is a prose-specific ownership rule for papers (P18); P29 was considered but this sentence addresses papers only.",
+     "resolution_why": "Both coded P18, must. unit_stance differed (A neutral, B restrict). The sentence does not name AI (the AI clause is the next unit), so the position it takes on AI is neutral.",
+     "anchor": "The prose must be your own",
+     "frag_start": "When papers are assigned, they must adhere",
+     "frag_end": "properly cited.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P18",
+     "unit_stance": "neutral",
+     "topics": [
+      "writing-assistance",
+      "accountability-understanding"
+     ],
+     "fit_note": "Does not name AI; it is a general ownership rule for prose in papers."
+    },
+    {
+     "why": "For papers, 'all external sources, including AI tools, if permitted, must be properly cited'. A citation duty when AI is allowed, P24.",
+     "anchor": "all external sources, including AI tools, if permitted, must be properly cited",
+     "frag_start": "The prose must be your own, and",
+     "frag_end": "must be properly cited.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must",
+     "policy_type": "P24",
+     "unit_stance": "permit",
+     "topics": [
+      "disclosure-citation"
+     ]
+    },
+    {
+     "why": "Students 'should never use course materials or assignments as a prompt for an AI tool, unless explicitly allowed by the course policy'. Keeping course materials and assignments out of AI tools is P49, which names both; P20 would cover the assignment but not the course materials.",
+     "resolution_why": "A coded P20, must-not, prohibit; B coded P49, should-not, restrict. The source says 'you should never use course materials or assignments as a prompt ... unless explicitly allowed', so the modality is should-not (the text says 'should') and the position is restrict because of 'unless explicitly allowed'. The rule covers course materials as well as assignments, which P49 names and P20 does not, so P49.",
+     "anchor": "you should never use course materials or assignments as a prompt for an AI tool",
+     "frag_start": "Additionally, you should never use course",
+     "frag_end": "unless explicitly allowed by the course policy.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "should-not",
+     "policy_type": "P49",
+     "unit_stance": "restrict",
+     "topics": [
+      "prohibited-uses",
+      "intellectual-property"
+     ]
+    },
+    {
+     "why": "'Suspected violations are always reported to the Dean of Students Office' routes suspected breaches into the integrity process, P36, must for the instructor.",
+     "anchor": "Suspected violations are always reported to the Dean of Students Office.",
+     "frag_start": "Suspected violations are always reported",
+     "frag_end": "Dean of Students Office.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "when-misuse",
+     "modality": "must",
+     "policy_type": "P36",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ]
+    },
+    {
+     "why": "'A first offense results in a zero and no less than a half-letter-grade reduction.' A penalty stated in advance, P37, addressed to students as a consequence.",
+     "resolution_why": "Actor differed (A admin, B student). The sentence tells students what the consequence of an offense is, so it is addressed to students (the actor is who the policy is addressed to or binds).",
+     "anchor": "A first offense results in a zero and no less than a half-letter-grade reduction.",
+     "frag_start": "A first offense results in a zero",
+     "frag_end": "half-letter-grade reduction.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "fit_note": "Applies to all honesty violations in the department."
+    },
+    {
+     "why": "A second offense 'is automatically referred to the College's Academic Discipline Board', an escalation by offense number, P37.",
+     "resolution_why": "Actor differed (A admin, B student); student, as for the first-offense sentence.",
+     "anchor": "A second offense is automatically referred to the College's Academic Discipline Board.",
+     "frag_start": "A second offense is automatically referred",
+     "frag_end": "Academic Discipline Board.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "fit_note": "Applies to all honesty violations in the department."
+    },
+    {
+     "why": "'In the event of a second offense in the same course, the Department will recommend a failing grade in the course' is a stated penalty, P37.",
+     "resolution_why": "Coder B merged this into its second-offense unit with a two-part normalized policy; A coded it separately. These are two distinct penalties (referral to the Board, and a recommended failing grade in the course), so they are kept as separate units. Actor student, as for the other penalty sentences.",
+     "anchor": "the Department will recommend a failing grade in the course",
+     "frag_start": "In the event of a second offense in the same course,",
+     "frag_end": "a failing grade in the course.",
+     "policy": null,
+     "actor": "student",
+     "phase": "when-misuse",
+     "modality": "informs",
+     "policy_type": "P37",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions"
+     ],
+     "fit_note": "Applies to all honesty violations in the department."
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Course syllabi (CS 51, CS 62, CS 105) were deferred by both coders and are not coded. From the college Student Handbook only the single AI clause is coded; the generic hearing, evidence-standard, response, sanction-list and record-reporting passages (which do not mention AI and were coded by coder A only) are not coded. Fit notes from both coders are kept on the units they apply to. UNCOVERED: Tier 3 deeming of AI output as the student's own work."
+}

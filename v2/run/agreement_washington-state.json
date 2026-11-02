@@ -1,0 +1,16 @@
+{
+ "documents": 3,
+ "units_A": 59,
+ "units_B": 63,
+ "matched": 54,
+ "only_A": 5,
+ "only_B": 9,
+ "kept_only_A": 4,
+ "kept_only_B": 9,
+ "agree_actor": 0.889,
+ "agree_phase": 0.852,
+ "agree_modality": 0.926,
+ "agree_policy_type": 0.944,
+ "agree_stance_docs": 1.0,
+ "notes": "Main disagreements: (1) phase, mostly general vs course-start/before-course/during-work for quoted example rationales and for the sentence \"best handled by proactive teaching\" (resolved by whether the passage states a principle, which is general, or a time-bound action; the cancellation of Turnitin AI detection and similar facts became when-misuse or general); (2) actor on factual or explanatory sentences (all vs student/instructor/admin), resolved by whom the sentence addresses or who acts, with no-addressee facts coded all; (3) modality: \"expects\", \"an expectation\", \"critical that\", \"please remember\" coded should, \"potentially\" coded may, \"they must submit a report\" coded must, and \"should be mindful\" coded should rather than should-not; (4) policy_type: causes of dishonesty (P68 vs P99, made P99), the 33% Review Board statistic (P55 vs P39, made P39), additional-policy preference (P04 vs P02, kept P04), peer-R1 benchmark (P88, remapped to P39 with fit_note); (5) unit_stance on unauthorized-use classification (prohibit vs restrict, made restrict) and on attribution (permit, made require). Coder B coded more: quoted instructor examples in the provost memo (kept with fit_notes that they are examples), the detector-rationale facts, and the written reporting steps; all real and kept (9 B-only). A-only: 4 real facts/expectations kept; one general academic-integrity sentence on the CCS page (faculty must clarify expectations) dropped as not AI-specific. Stance matched on all three documents (delegates). new_types empty on both sides."
+}

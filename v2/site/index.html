@@ -1,0 +1,998 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AI Policy Atlas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a policy register. A quiet sans for what the atlas says, a book serif for what institutions said;
+   statements read top to bottom along the course lifecycle. */
+:root {
+  --bg: #f4f6f6; --surface: #ffffff; --sunk: #eaeeee; --ink: #172026; --muted: #56636c; --line: #d8dfe1;
+  --accent: #0e5f6c; --accent-soft: #dcecee; --quote: #2a3439;
+  --ok: #2c7a4c; --warn: #9a5d0a; --bad: #a33a2f;
+  --s-prohibit: #a33a2f; --s-restrict: #b8742a; --s-permit: #2f6aa3; --s-encourage: #2e7d4f; --s-require: #6b3fa0; --s-delegates: #66737c;
+  --f-quote: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --f-ui: "Public Sans", -apple-system, "Segoe UI", Roboto, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  --r: 8px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0f1416; --surface: #161d20; --sunk: #12181b; --ink: #e5eaec; --muted: #98a6ad; --line: #273236;
+    --accent: #6cc3cf; --accent-soft: #173a40; --quote: #d3dbde;
+    --ok: #6cc592; --warn: #e3a54a; --bad: #ef7d73;
+    --s-prohibit: #ef7d73; --s-restrict: #e8a65e; --s-permit: #7fb0ef; --s-encourage: #6cc592; --s-require: #c4a2f0; --s-delegates: #a0abb2;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0f1416; --surface: #161d20; --sunk: #12181b; --ink: #e5eaec; --muted: #98a6ad; --line: #273236;
+  --accent: #6cc3cf; --accent-soft: #173a40; --quote: #d3dbde;
+  --ok: #6cc592; --warn: #e3a54a; --bad: #ef7d73;
+  --s-prohibit: #ef7d73; --s-restrict: #e8a65e; --s-permit: #7fb0ef; --s-encourage: #6cc592; --s-require: #c4a2f0; --s-delegates: #a0abb2;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-ui); font-size: 0.9375rem; line-height: 1.5; }
+a { color: var(--accent); }
+button, select, input { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+h1, h2, h3, h4 { text-wrap: balance; margin: 0; }
+[hidden] { display: none !important; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-inline: 20px; }
+.siteband { background: var(--accent); color: #fff; }
+.siteband .wrap { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 24px; padding-block: 14px; }
+.siteband .brand { font-family: var(--f-quote); font-weight: 600; font-size: 1.35rem; letter-spacing: .01em; }
+.siteband .tag { font-size: 0.8125rem; opacity: .85; }
+.mast { padding-block: 26px 14px; display: grid; gap: 10px; }
+.mast h1 { font-family: var(--f-quote); font-weight: 600; font-size: clamp(1.6rem, 3.2vw, 2.3rem); line-height: 1.15; max-width: 30ch; }
+.mast p { margin: 0; color: var(--muted); max-width: 78ch; }
+.stats { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 0.8125rem; color: var(--muted); font-variant-numeric: tabular-nums; }
+.stats b { color: var(--ink); }
+.tabbar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--bg); border-bottom: 1px solid var(--line); }
+.tabs { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: none; }
+.tabs button { background: none; border: 0; border-bottom: 2px solid transparent; padding: 12px 14px 10px; cursor: pointer; color: var(--muted); font-weight: 500; white-space: nowrap; }
+.tabs button[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--accent); }
+.tabs button:hover { color: var(--ink); }
+main.wrap { padding-block: 22px 64px; }
+.pagehead { margin: 4px 0 14px; display: grid; gap: 6px; }
+.pagehead h2 { font-family: var(--f-quote); font-weight: 600; font-size: 1.7rem; }
+.pagehead p { margin: 0; color: var(--muted); max-width: 80ch; }
+.csvbar { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; margin: 0 0 18px; font-size: 0.8125rem; color: var(--muted); }
+.csvbar a { display: inline-flex; gap: 6px; align-items: center; padding: 4px 10px; border: 1px solid var(--line); border-radius: 99px; background: var(--surface); color: var(--ink); text-decoration: none; }
+.csvbar a:hover { border-color: var(--accent); }
+.csvbar .ext { font: 600 0.6875rem var(--f-mono); color: var(--accent); }
+.subtabs { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 8px; }
+.subtabs button { font: 500 0.875rem var(--f-ui); padding: 7px 14px; border: 1px solid var(--line); border-radius: 99px; background: var(--surface); color: var(--ink); cursor: pointer; }
+.subtabs button[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+.subtabs .cnt { margin-left: 8px; font-variant-numeric: tabular-nums; opacity: .8; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 6px 0 26px; }
+.kpis div { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; display: grid; gap: 2px; }
+.kpis span { font-size: 0.8125rem; color: var(--muted); }
+.kpis b { font: 600 2rem var(--f-quote); font-variant-numeric: tabular-nums lining-nums; }
+.kpis em { font-style: normal; font-size: 0.8125rem; color: var(--muted); }
+h3.sec { font-family: var(--f-quote); font-weight: 600; font-size: 1.3rem; margin: 26px 0 4px; }
+.flows { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 16px; margin-top: 10px; }
+.flow { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+.flow h4 { font-size: 0.9375rem; margin-bottom: 10px; }
+.flow ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.flow li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr); gap: 10px; align-items: center; position: relative; padding: 7px 0 7px 18px; border-left: 2px solid var(--accent-soft); }
+.flow li::before { content: ""; position: absolute; left: -6px; top: 14px; width: 10px; height: 10px; border-radius: 50%; background: var(--accent); }
+.fstep { display: grid; gap: 1px; }
+.fstep b { font: 600 1.15rem var(--f-quote); font-variant-numeric: tabular-nums; }
+.fstep span { font-size: 0.875rem; }
+.fstep em { font-style: normal; font-size: 0.75rem; color: var(--muted); }
+.fout { font-size: 0.75rem; color: var(--warn); border: 1px dashed var(--line); border-radius: 8px; padding: 4px 8px; }
+.fout::before { content: "Set aside → "; font-weight: 600; }
+.flow li.final { border-left-color: var(--accent); }
+.flow li.final .fstep b { font-size: 1.6rem; color: var(--accent); }
+.heats { display: grid; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); gap: 14px; margin-top: 8px; }
+.heat { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; }
+.heat .hh { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; margin-bottom: 6px; }
+.heat .hh span { font-size: 0.75rem; color: var(--muted); }
+table.heatmap { border-collapse: separate; border-spacing: 2px; width: 100%; font-size: 0.75rem; font-variant-numeric: tabular-nums; }
+table.heatmap th { font-weight: 500; color: var(--muted); padding: 2px 4px; }
+table.heatmap td { text-align: center; padding: 6px 2px; border-radius: 4px; }
+.finding { border-left: 3px solid var(--warn); background: var(--surface); padding: 12px 16px; margin: 18px 0 0; max-width: 90ch; border-radius: 0 8px 8px 0; font-size: 0.9rem; }
+.stlist { display: grid; gap: 5px; font-size: 0.8125rem; max-height: 460px; overflow: auto; padding: 4px 0 10px 12px; }
+.stlist div { border-left: 2px solid var(--accent-soft); padding-left: 8px; }
+.stlist q { font-family: var(--f-quote); color: var(--quote); }
+.dirsum { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 10px 0 12px; }
+.dirsum div { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px; display: grid; gap: 2px; }
+.dirsum b { font: 600 1.6rem var(--f-quote); font-variant-numeric: tabular-nums; }
+.dirsum em { font-style: normal; font-size: 0.75rem; color: var(--muted); }
+.dchip { display: inline-block; font: 600 0.75rem var(--f-ui); padding: 2px 9px; border-radius: 99px; color: var(--surface); background: var(--muted); }
+.dir-do .dchip { background: var(--ok); } .dir-dont .dchip { background: var(--bad); } .dir-may .dchip { background: var(--s-permit); } .dir-know .dchip { background: var(--warn); }
+.dir { margin: 6px 0 14px; } .dir h4 { display: flex; gap: 10px; align-items: baseline; margin: 6px 0 4px; }
+iframe.method { width: 100%; min-height: 900px; border: 0; background: transparent; }
+main { padding-block: 20px 64px; }
+.toolbar { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; margin-bottom: 16px; }
+.lbl { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); font-weight: 600; }
+.field { display: inline-flex; align-items: center; gap: 6px; }
+input[type="search"], input[type="text"], select { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 6px 9px; font-size: 0.8125rem; }
+input[type="search"] { width: min(280px, 100%); }
+.seg { display: inline-flex; flex-wrap: wrap; border: 1px solid var(--line); border-radius: var(--r); overflow: hidden; background: var(--surface); }
+.seg button { border: 0; background: none; padding: 6px 11px; cursor: pointer; font-size: 0.8125rem; color: var(--muted); border-right: 1px solid var(--line); }
+.seg button:last-child { border-right: 0; }
+.seg button[aria-pressed="true"] { background: var(--accent-soft); color: var(--ink); font-weight: 600; }
+.btn { border: 1px solid var(--line); background: var(--surface); border-radius: var(--r); padding: 6px 11px; font-size: 0.8125rem; cursor: pointer; }
+.btn:hover { border-color: var(--accent); }
+.btn.primary { background: var(--accent); color: var(--surface); border-color: var(--accent); }
+.note { font-size: 0.8125rem; color: var(--muted); }
+.grow { flex: 1; }
+.count { font-size: 0.75rem; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.tag { font-size: 0.75rem; padding: 1px 8px; border-radius: 999px; background: var(--sunk); color: var(--muted); border: 1px solid var(--line); white-space: nowrap; }
+.stance { font-size: 0.75rem; font-weight: 600; padding: 1px 8px; border-radius: 999px; border: 1px solid currentColor; white-space: nowrap; }
+.st-prohibit { color: var(--s-prohibit); } .st-restrict { color: var(--s-restrict); } .st-permit { color: var(--s-permit); }
+.st-encourage { color: var(--s-encourage); } .st-require { color: var(--s-require); } .st-delegates { color: var(--s-delegates); }
+.layer { font-family: var(--f-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
+
+/* a policy: the statement, then the institution's own words under it */
+.pol { display: grid; gap: 6px; padding: 12px 0; border-top: 1px solid var(--line); }
+.pol:first-child { border-top: 0; }
+.pol .stmt { font-size: 0.9375rem; line-height: 1.5; margin: 0; }
+.pol .stmt .own { font-family: var(--f-quote); font-size: 1rem; color: var(--quote); }
+.pol .orig { margin: 0; padding: 2px 0 2px 12px; border-left: 2px solid var(--line); font-family: var(--f-quote); font-size: 0.9375rem; color: var(--quote); }
+.pol .orig .lab, .pol .stmt .lab { display: block; font-family: var(--f-ui); font-size: 0.6875rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin-bottom: 1px; }
+.pol .meta { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; font-size: 0.75rem; color: var(--muted); }
+.pol .meta a { white-space: nowrap; }
+.pol .who { color: var(--ink); font-weight: 600; }
+.unv { color: var(--warn); }
+.more { margin-top: 6px; }
+
+/* universities */
+.uni-layout { display: grid; grid-template-columns: minmax(0, 330px) minmax(0, 1fr); gap: 22px; align-items: start; }
+.uni-list { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); max-height: calc(100vh - 210px); overflow: auto; position: sticky; top: 60px; }
+.uni-row { display: grid; gap: 2px; padding: 9px 12px; border-bottom: 1px solid var(--line); cursor: pointer; background: none; border-left: 0; border-right: 0; border-top: 0; width: 100%; text-align: left; }
+.uni-row:hover { background: var(--sunk); }
+.uni-row[aria-current="true"] { background: var(--accent-soft); }
+.uni-row .nm { font-weight: 600; }
+.uni-row .chips { display: flex; gap: 4px; flex-wrap: wrap; }
+.dot { width: 9px; height: 9px; border-radius: 50%; display: inline-block; background: var(--line); }
+.dot.on { background: var(--accent); }
+.uni-detail { display: grid; gap: 16px; min-width: 0; }
+.uni-head h2 { font-family: var(--f-quote); font-size: 1.6rem; }
+.layer-block { display: grid; gap: 10px; }
+.layer-block > h3 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--muted); }
+.doc { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); }
+.doc > summary { list-style: none; cursor: pointer; padding: 12px 14px; display: grid; gap: 4px; }
+.doc > summary::-webkit-details-marker { display: none; }
+.doc-title { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: baseline; }
+.doc-title b { font-size: 1rem; }
+.doc .body { padding: 0 14px 14px; display: grid; gap: 12px; }
+.doc .grp > h4 { font-size: 0.8125rem; margin: 8px 0 2px; color: var(--accent); }
+.empty { color: var(--muted); font-size: 0.875rem; padding: 10px 0; }
+
+/* policies (themes / types) */
+.theme { margin-bottom: 26px; }
+.theme > h2 { font-family: var(--f-quote); font-size: 1.35rem; padding-bottom: 6px; border-bottom: 1px solid var(--line); margin-bottom: 10px; }
+.ptype { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); margin-bottom: 10px; }
+.ptype > summary { list-style: none; cursor: pointer; padding: 12px 14px; display: grid; gap: 6px; }
+.ptype > summary::-webkit-details-marker { display: none; }
+.ptype .hd { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+.ptype .hd h3 { font-size: 1rem; flex: 1; min-width: 14ch; }
+.pid { font-family: var(--f-mono); font-size: 0.75rem; color: var(--muted); }
+.rep { display: grid; gap: 4px; font-size: 0.875rem; }
+.rep .orig { font-family: var(--f-quote); color: var(--quote); border-left: 2px solid var(--line); padding-left: 10px; }
+.stage { margin: 8px 0 34px; }
+.stage > header { display: grid; gap: 4px; margin-bottom: 12px; padding-bottom: 10px; border-bottom: 2px solid var(--ink); }
+.stage > header .num { font-family: var(--f-mono); font-size: 0.75rem; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; }
+.stage > header h2 { font-family: var(--f-quote); font-size: 1.6rem; font-weight: 600; }
+.stage > header p { margin: 0; color: var(--muted); max-width: 75ch; }
+.theme > h3.tname { font-size: 1.05rem; margin: 18px 0 8px; }
+.unibar { display: inline-flex; align-items: center; gap: 6px; font-size: 0.75rem; color: var(--muted); white-space: nowrap; }
+.unibar i { display: inline-block; height: 6px; background: var(--accent); border-radius: 3px; }
+.ptype .body { padding: 0 14px 12px; }
+.bar { height: 6px; background: var(--sunk); border-radius: 3px; overflow: hidden; display: flex; }
+.bar i { display: block; height: 100%; }
+
+/* matrix */
+.mx-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); }
+table.mx { border-collapse: separate; border-spacing: 0; min-width: 100%; font-size: 0.8125rem; }
+table.mx th, table.mx td { border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); padding: 6px 8px; vertical-align: top; text-align: left; }
+table.mx thead th { position: sticky; top: 0; background: var(--sunk); z-index: 1; font-size: 0.75rem; }
+table.mx th.rowh { background: var(--surface); font-weight: 500; white-space: nowrap; position: sticky; left: 0; z-index: 1; }
+table.mx tr.actor th { background: var(--sunk); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.06em; }
+.cell { cursor: pointer; display: grid; gap: 4px; min-width: 190px; border-radius: 6px; padding: 8px; }
+.cell .unit { font-size: 0.6875rem; color: var(--muted); }
+.cell ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 2px; }
+.cell li { display: flex; justify-content: space-between; gap: 8px; font-size: 0.75rem; line-height: 1.3; }
+.cell li span:last-child { font-family: var(--f-mono); color: var(--muted); }
+.legend { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 8px 16px; font-size: 0.8125rem; margin: 6px 0 14px; }
+.legend div { display: grid; gap: 2px; }
+.dgroup > h4 { font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); margin: 14px 0 6px; }
+.cell:hover { outline: 1px solid var(--accent); }
+.cell .n { font-family: var(--f-mono); font-weight: 500; }
+
+.cell[aria-pressed="true"] { outline: 2px solid var(--accent); }
+.drawer { margin-top: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 14px; display: grid; gap: 10px; }
+
+/* readings, links, focus, courses, draft */
+.reading { border-left: 3px solid var(--accent); background: var(--surface); padding: 10px 14px; margin: 4px 0 14px; font-size: 0.875rem; max-width: 80ch; border-radius: 0 4px 4px 0; }
+.plink, .linkbtn { font-size: 0.75rem; color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; font: inherit; }
+details.drawer > summary { cursor: pointer; list-style-position: inside; }
+details.drawer > summary h3 { display: inline; }
+.focus { border: 2px solid var(--accent); border-radius: 6px; padding: 10px 14px; margin-bottom: 16px; background: var(--surface); }
+.focus .hd { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; margin-bottom: 6px; }
+.grow { flex: 1; }
+.ctab td.num { text-align: right; font-variant-numeric: tabular-nums; }
+blockquote.cpass { margin: 8px 0 12px; padding: 8px 12px; border-left: 3px solid var(--line); white-space: pre-wrap; font-size: 0.875rem; }
+blockquote.cpass footer { font-size: 0.75rem; color: var(--muted); margin-top: 4px; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 6px; }
+h3.sub { margin: 18px 0 8px; font-size: 0.95rem; }
+.draft { background: var(--surface); border: 1px solid var(--line); border-radius: 4px; padding: clamp(20px, 5vw, 56px); max-width: 860px; margin: 18px auto 0; box-shadow: 0 1px 2px rgb(0 0 0 / 0.06); }
+.draft h2 { font-family: var(--f-quote); font-size: 1.75rem; font-weight: 600; margin: 0 0 4px; }
+.draft .sub { color: var(--muted); font-size: 0.875rem; margin: 0 0 18px; }
+.draft h3 { font-family: var(--f-quote); font-size: 1.15rem; font-weight: 600; margin: 26px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--line); }
+.draft p { margin: 8px 0; font-size: 1rem; line-height: 1.6; }
+.answers { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 16px; }
+.answers > summary { cursor: pointer; font-weight: 600; }
+.qgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(330px, 1fr)); gap: 10px; margin-top: 12px; }
+.howothers { font-size: 0.8125rem; border-left: 2px solid var(--accent-soft); padding-left: 12px; margin: 4px 0 12px; display: grid; gap: 4px; color: var(--muted); }
+.ppos { border-top: 1px solid var(--line); }
+.ppos > summary { list-style: none; cursor: pointer; padding: 10px 0; display: grid; gap: 4px; }
+.ppos > summary::-webkit-details-marker { display: none; }
+.ppos .hd { display: flex; flex-wrap: wrap; gap: 4px 10px; align-items: baseline; }
+.psent { font-weight: 600; flex: 1; min-width: 20ch; margin: 0; }
+.pmeta { font-size: 0.75rem; color: var(--muted); }
+.ppos .howothers { margin: 2px 0 0; }
+.ppos > .body { padding: 0 0 10px 12px; }
+.howothers q { font-family: var(--f-quote); color: var(--quote); }
+/* label builder */
+.builder { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 420px); gap: 24px; align-items: start; }
+.q { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 12px 14px; display: grid; gap: 8px; margin-bottom: 10px; }
+.q legend { font-weight: 600; padding: 0; }
+.q fieldset { border: 0; margin: 0; padding: 0; display: grid; gap: 6px; }
+.opts { display: flex; flex-wrap: wrap; gap: 6px; }
+.opts label { border: 1px solid var(--line); border-radius: 999px; padding: 4px 11px; cursor: pointer; font-size: 0.8125rem; background: var(--bg); }
+.opts input { position: absolute; opacity: 0; pointer-events: none; }
+.opts input:checked + span { font-weight: 600; }
+.opts label:has(input:checked) { border-color: var(--accent); background: var(--accent-soft); }
+.opts label:has(input:focus-visible) { outline: 2px solid var(--accent); }
+.label-card { position: sticky; top: 60px; background: var(--surface); border: 2px solid var(--ink); border-radius: 4px; padding: 14px 16px; font-size: 0.8125rem; }
+.label-card h3 { font-family: var(--f-quote); font-size: 1.6rem; border-bottom: 8px solid var(--ink); padding-bottom: 4px; }
+.lrow { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; padding: 6px 0; border-bottom: 1px solid var(--line); }
+.lrow.thick { border-bottom: 4px solid var(--ink); }
+.lrow .pct { font-family: var(--f-mono); font-weight: 500; }
+.lrow .ex { grid-column: 1 / -1; font-family: var(--f-quote); color: var(--muted); font-size: 0.8125rem; }
+.sim { display: grid; gap: 4px; margin-top: 8px; }
+
+/* patterns, method */
+.prose { max-width: 76ch; }
+.prose h2 { font-family: var(--f-quote); font-size: 1.35rem; margin: 26px 0 8px; }
+.prose li { margin-bottom: 6px; }
+.agents { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin: 10px 0; }
+.agent { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r); padding: 12px; font-size: 0.8125rem; }
+.agent b { display: block; font-size: 0.9375rem; margin-bottom: 4px; }
+
+@media (max-width: 860px) {
+  .uni-layout, .builder { grid-template-columns: 1fr; }
+  .uni-list { position: static; max-height: 300px; }
+  .rep { grid-template-columns: 1fr; }
+  .label-card { position: static; }
+  .mast h1 { font-size: 1.7rem; }
+}
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+<div class="siteband"><div class="wrap"><span class="brand">AI Policy Atlas</span><span class="tag">Generative AI policy in US higher education and computer science</span></div></div>
+<div class="wrap mast">
+  <h1>What US universities and CS courses say about generative AI</h1>
+  <p>Policies from 342 universities, from the university-wide document to the CS syllabus, synthesized into one policy set. Every policy opens to the statements behind it, each in the institution's own words with a link to the exact passage.</p>
+  <div class="stats" id="stats">Loading the corpus…</div>
+</div>
+<div class="tabbar"><div class="wrap"><nav class="tabs" role="tablist" id="tabs"></nav></div></div>
+<main class="wrap" id="main" role="tabpanel"><p class="note">Loading the corpus…</p></main>
+
+<script>
+(() => {
+"use strict";
+// D68: the atlas is a set of pages. The policy set (rules, recommendations, facts and warnings) is what is counted; other
+// coded text (templates, descriptions, reasons, definitions, resources) has its own page and is never counted in it.
+const TABS = [["overview", "Overview"], ["report", "Report"], ["policies", "Policy set"], ["cpolicies", "CS course policies"], ["roles", "By role"], ["matrix", "Matrix"], ["other", "Other coded text"],
+  ["universities", "Universities"], ["courses", "CS course coverage"], ["draft", "Draft a policy"], ["label", "Policy label"], ["method", "Method and reliability"]];
+const SUBS = { rr: "Rules and recommendations", fact: "Facts and warnings", template: "Templates", description: "Descriptions", other: "Reasons, definitions, resources" };
+const SUBNOTE = { rr: "What institutions or courses require, permit, forbid or advise. The core of the policy set.",
+  fact: "What policies say about AI itself: errors, fabricated citations, bias, data retention. Part of the policy set: they explain why the rules exist.",
+  template: "Sample syllabus language universities offer instructors. Coded and kept, but not counted in the policy set: it is model wording, not the university's own rule.",
+  description: "Descriptions of practices, tools or situations that ask no one to act. Coded and kept for context; not counted in the policy set.",
+  other: "Purpose and values, definitions of AI and of a policy's scope, and where to get help. Coded and kept for reference; not counted in the policy set." };
+const inSet = c => c === "rr" || c === "fact";
+const SL = { prohibit: "Prohibit", restrict: "Only listed uses", permit: "Allowed with conditions", encourage: "Encourage", require: "Require", delegates: "Instructor decides" };
+const SDEF = { prohibit: "AI is not allowed.", restrict: "AI is allowed only for specific uses the document lists; everything else is off limits.",
+  permit: "AI is allowed in general, under conditions such as disclosure or citation.", encourage: "The document invites or promotes AI use.",
+  require: "Some work requires AI.", delegates: "The document leaves the decision to each instructor." };
+// D65: TAs, staff and administrators form one group; "Everyone" is a rule addressed to the whole community, not one role
+const AL = { student: "Students", instructor: "Instructors", staff: "Staff and administrators", "ta-staff": "Staff and administrators", admin: "Staff and administrators", all: "Everyone" };
+const PL = { background: "Background (definitions, reasons, facts)", general: "Background (definitions, reasons, facts)", "before-course": "Before the course", "course-start": "At the start of the course", "during-work": "While students work", "during-assessment": "During assessment", "when-misuse": "When misuse is suspected", "over-time": "Over time" };
+const LL = { university: "University-wide", school: "School or college", computing: "Computing unit", course: "Course (add-on)" };
+const ML = { must: "must", "must-not": "must not", may: "may", should: "should", "should-not": "should not", informs: "explains" };
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const store = { get(k, d) { try { const v = localStorage.getItem("atlas2:" + k); return v == null ? d : JSON.parse(v); } catch { return d; } }, set(k, v) { try { localStorage.setItem("atlas2:" + k, JSON.stringify(v)); } catch {} } };
+
+let U = [], P = [], T = [], M = {}, PAT = { sections: [] }, METH = { sections: [] };
+let byId, uniBySlug, typeById, docById, PHI = {}, C = null, POS = [], posById = new Map(), SET = [], CSTM = new Map();
+// lifecycle order (D55): phase first (general, before the course, start, during work, assessment, misuse, over time), then the type's lifecycle rank
+const life = (a, b) => (PHI[a.phase] - PHI[b.phase]) || (((typeById.get(a.type) || {}).rank ?? 9) - ((typeById.get(b.type) || {}).rank ?? 9)) || a.uni.localeCompare(b.uni);
+const byRank = (a, b) => (a.rank ?? 9) - (b.rank ?? 9);
+function setHash(h) { history.replaceState(null, "", "#" + h); }
+function parseHash() {
+  const h = decodeURIComponent(location.hash.slice(1));
+  if (h.startsWith("matrix/")) { const [v, l, c] = h.slice(7).split("~"); st.tab = "matrix"; st.mView = v || "full"; st.mLayer = l || "all"; st.mCell = c || null; }
+  else if (h.startsWith("policy/")) { st.focus = h.slice(7); }
+  else if (h.startsWith("course/")) { st.tab = "courses"; st.cuni = h.slice(7); }
+  else if (TABS.some(t => t[0] === h)) st.tab = h;
+}
+function reading(html) { return `<aside class="reading"><b>Reading this view.</b> ${html}</aside>`; }
+const pct = (a, b) => b ? Math.round(100 * a / b) : 0;
+const nUnis = n => `${n} ${n === 1 ? "university" : "universities"}`;
+const st = {
+  tab: TABS.some(t => "#" + t[0] === location.hash) ? location.hash.slice(1) : store.get("tab", "universities"),
+  uq: "", uni: null, uLayerFilter: "all", uState: "all",
+  pq: "", pLayer: "all",
+  mView: store.get("mView", "full"), mLayer: "all", mCount: "pols", mCell: null, pSub: "rr", cSub: "rr", oSub: "template", oLayer: "inst", role: "student", rLayer: "inst",
+  answers: store.get("answers", {}), focus: null, more: new Set(), cq: "", cuni: null, unitName: store.get("unitName", ""), docKind: store.get("docKind", "syllabus"),
+};
+
+// ---------- data ----------
+async function load() {
+  const get = n => fetch("data/" + n + ".json").then(r => { if (!r.ok) throw new Error(n); return r.json(); });
+  [U, P, T, M] = await Promise.all([get("universities"), get("policies"), get("types"), get("meta")]);
+  P = P.filter(x => x.about_ai !== "no");  // D45: statements not about AI are kept in the data (Excel NotAboutAI tab) but not shown or counted
+  try { PAT = await get("patterns"); } catch {}
+  try { METH = await get("method"); } catch {}
+  try { POS = await get("positions"); } catch { POS = []; }
+  posById = new Map(POS.map((q, i) => [q.pid, Object.assign(q, { ord: i })]));
+  SET = P.filter(x => inSet(x.cat));
+  try { C = await get("courses"); indexCourses(); } catch {}
+  byId = new Map(P.map(x => [x.id, x]));
+  uniBySlug = new Map(U.map(u => [u.slug, u]));
+  typeById = new Map(T.map(t => [t.id, t]));
+  docById = new Map(U.flatMap(u => u.documents.map(d => [d.id, Object.assign(d, { uni: u.slug })])));
+  if (!st.uni || !uniBySlug.has(st.uni)) st.uni = U[0] && U[0].slug;
+  if (!location.hash) st.tab = "overview";
+  PHI = Object.fromEntries(M.phases.map((p, i) => [p, i]));
+  const nSet = POS.filter(q => inSet(q.cat)).length, nCSet = C ? (C.policies || []).filter(q => inSet(q.cat)).length : 0;
+  document.getElementById("stats").innerHTML =
+    `<span><b>${M.n_universities}</b> universities</span><span><b>${P.length.toLocaleString()}</b> statements about AI, each with the institution's own wording</span>` +
+    `<span><b>${nSet.toLocaleString()}</b> institutional policies</span><span><b>${nCSet}</b> CS course policies</span>`;
+  parseHash();
+  render();
+}
+
+// ---------- shared pieces ----------
+function polRow(x, showWho = false) {
+  const u = uniBySlug.get(x.uni), d = docById.get(x.doc);
+  const stmt = x.policy
+    ? `<p class="stmt">${esc(x.policy)}</p><blockquote class="orig"><span class="lab">Original wording</span>“${esc(x.anchor)}”</blockquote>`
+    : `<p class="stmt"><span class="lab">Original wording</span><span class="own">“${esc(x.anchor)}”</span></p>`;
+  return `<article class="pol">${stmt}
+    <div class="meta">${showWho ? `<span class="who">${esc(u.name)}</span><span>${esc(LL[x.layer])}${d && (d.course || d.unit) ? " · " + esc(d.course || d.unit) : ""}</span>` : ""}
+      <span>${esc(AL[x.actor] || x.actor)} ${esc(ML[x.modality] || "")}</span><span>${esc(PL[x.phase] || x.phase)}</span>
+      ${typeById.get(x.type) ? `<span title="Policy type">${esc(typeById.get(x.type).name)}</span>` : ""}
+      <a href="${esc(x.link)}" target="_blank" rel="noopener" title="Open the source with this passage highlighted">source ↗</a>
+      <a href="#policy/${encodeURIComponent(x.id)}" class="plink" data-focus="${esc(x.id)}" title="Link to this policy">link</a></div></article>`;
+}
+const colHead = () => "";
+// who a policy is asked of and how strongly, counted over the statements shown (e.g. "Students must 189 · should 104")
+function whoPairs(who) {
+  const by = {}; for (const [a, m, k] of who) ((by[a] ||= {})[m] = (by[a][m] || 0) + k);
+  return Object.entries(by).sort((a, b) => Object.values(b[1]).reduce((s, n) => s + n, 0) - Object.values(a[1]).reduce((s, n) => s + n, 0)).slice(0, 3)
+    .map(([a, ms]) => esc(AL[a] || a) + " " + Object.entries(ms).sort((x, y) => y[1] - x[1]).map(([m, n]) => `${esc(ML[m] || m)} ${n}`).join(", ")).join(" · ");
+}
+function whoLine(ys) {
+  const by = {}; for (const x of ys) ((by[x.actor] ||= {})[x.modality] = (by[x.actor][x.modality] || 0) + 1);
+  return Object.entries(by).sort((a, b) => Object.values(b[1]).reduce((s, n) => s + n, 0) - Object.values(a[1]).reduce((s, n) => s + n, 0)).slice(0, 3)
+    .map(([a, ms]) => esc(AL[a] || a) + " " + Object.entries(ms).sort((x, y) => y[1] - x[1]).map(([m, n]) => `${esc(ML[m] || m)} ${n}`).join(", ")).join(" · ");
+}
+// D59/D60: inside a type, statements are grouped into policies (who is asked to do what, and when). Each position shows
+// its policy sentence, then up to 3 supporting original wordings; opening it lists every supporting statement.
+function posList(xs, key) {
+  const g = new Map(); for (const x of xs) { const k = x.pos || "_"; (g.get(k) || g.set(k, []).get(k)).push(x); }
+  if (g.size === 1 && g.has("_")) return polList(xs, key);
+  return [...g.keys()].sort((a, b) => (posById.has(a) ? posById.get(a).ord : 1e9) - (posById.has(b) ? posById.get(b).ord : 1e9)).map(k => {
+    const q = posById.get(k), ys = g.get(k), nu = nUnis(new Set(ys.map(x => x.uni)).size);
+    if (!q) return `<details class="ppos"><summary><div class="hd"><p class="psent">Not yet grouped into a policy</p><span class="unibar">${nu}</span></div></summary><div class="body">${polList(ys, key + ":" + k)}</div></details>`;
+    const ex = q.examples.map(i => byId.get(i)).filter(x => x && ys.includes(x));
+    const shown = (ex.length ? ex : ys.filter(x => x.verified)).slice(0, 3);
+    return `<details class="ppos"><summary><div class="hd"><p class="psent">${esc(q.sentence)}</p><span class="unibar">${nu}</span></div>
+      <div class="pmeta">${q.policy_kind ? `<b>${esc({ rule: "Rule", recommendation: "Recommendation", template: "Template", description: "Description", background: "Background" }[q.policy_kind] || q.policy_kind)}</b> · ` : ""}${whoLine(ys)} · ${esc(PL[q.phase] || q.phase)} · ${ys.length.toLocaleString()} ${ys.length === 1 ? "statement" : "statements"}${q.parts && q.parts.length > 1 ? ` · merged from ${q.parts.length} policies` : ""}</div>
+      <div class="howothers"><span>Original wording</span>${shown.map(x => `<div><q>${esc(x.anchor)}</q> · ${esc(uniBySlug.get(x.uni).name)} · <a href="${esc(x.link)}" target="_blank" rel="noopener">source ↗</a></div>`).join("")}</div></summary>
+      <div class="body">${polList(ys, key + ":" + k)}</div></details>`;
+  }).join("");
+}
+function polList(xs, key, showWho = true, k = 12) {
+  const all = [...xs].sort(life), open = st.more.has(key);
+  return all.slice(0, open ? all.length : k).map(x => polRow(x, showWho)).join("") +
+    (all.length > k ? `<button class="btn more" data-more="${esc(key)}">${open ? "Show fewer" : `Show all ${all.length}`}</button>` : "");
+}
+const stancePill = s => `<span class="stance st-${s}">${esc(SL[s] || s)}</span>`;
+
+// ---------- universities ----------
+function renderUniversities() {
+  const states = [...new Set(U.map(u => u.state).filter(Boolean))].sort();
+  const q = st.uq.toLowerCase();
+  const list = U.filter(u => (!q || (u.name + " " + (u.state || "")).toLowerCase().includes(q)) && (st.uState === "all" || u.state === st.uState));
+  const u = uniBySlug.get(st.uni);
+  const rows = list.map(x => {
+    const have = new Set(x.documents.map(d => d.layer));
+    return `<button class="uni-row" data-uni="${x.slug}" aria-current="${x.slug === st.uni}"><span class="nm">${esc(x.name)}</span>
+      <span class="chips">${M.layers.map(l => `<span class="dot ${have.has(l) ? "on" : ""}" title="${LL[l]}${have.has(l) ? "" : ": none found"}"></span>`).join("")}
+      <span class="count">${esc(x.state || "")} · ${x.documents.length} docs · ${x.documents.reduce((a, d) => a + d.units.filter(id => byId.has(id)).length, 0)} policies</span></span></button>`;
+  }).join("");
+  return `<div class="toolbar"><input type="search" id="uq" placeholder="Search universities" value="${esc(st.uq)}" aria-label="Search universities">
+    <label class="field"><span class="lbl">State</span><select id="ustate"><option value="all">All</option>${states.map(s => `<option ${st.uState === s ? "selected" : ""}>${esc(s)}</option>`).join("")}</select></label>
+    <span class="note">Dots: university · school · computing unit · course. ${list.length} of ${U.length} universities.</span></div>
+    ${reading(`Dots show which levels have a policy document: university-wide, school or college, computing unit, course. ${U.filter(x => x.documents.some(d => d.layer === "computing")).length} of ${U.length} universities have a computing-unit document and ${U.filter(x => x.documents.some(d => d.layer === "school")).length} a school or college document; almost everything else is university-wide. Each document lists its policies in the document's own order.`)}
+    <div class="uni-layout"><nav class="uni-list" aria-label="Universities">${rows || `<p class="empty" style="padding:12px">No universities match.</p>`}</nav>
+    <section class="uni-detail">${u ? uniDetail(u) : ""}</section></div>`;
+}
+function uniDetail(u) {
+  const blocks = M.layers.map(l => {
+    const docs = u.documents.filter(d => d.layer === l);
+    const status = (u.searched || {})[l];
+    const body = docs.length ? docs.map(docCard).join("") : `<p class="empty">${status === "inaccessible" ? "A document exists but is not publicly accessible." : "No document found at this level."}</p>`;
+    return `<div class="layer-block"><h3>${LL[l]}</h3>${body}</div>`;
+  }).join("");
+  return `<div class="uni-head"><h2>${esc(u.name)}</h2><p class="note">${esc([u.state, u.type].filter(Boolean).join(" · "))}${u.notes ? " · " + esc(u.notes) : ""}</p></div>${blocks}`;
+}
+function docCard(d) {
+  const units = d.units.map(id => byId.get(id)).filter(Boolean);
+  const groups = {};
+  for (const x of units) (groups[x.actor] ||= []).push(x);
+  const inner = M.actors.filter(a => groups[a]).map(a => {
+    const xs = groups[a].sort((p, q) => M.phases.indexOf(p.phase) - M.phases.indexOf(q.phase));
+    return `<div class="grp"><h4>${esc(AL[a])} <span class="count">${xs.length}</span></h4>${colHead()}${xs.map(x => polRow(x)).join("")}</div>`;
+  }).join("");
+  return `<details class="doc"><summary><div class="doc-title"><b>${esc(d.title)}</b>${stancePill(d.stance)}<span class="count">${units.length} policies</span></div>
+    <div class="note">${esc([d.unit, d.course, d.date_or_term].filter(Boolean).join(" · "))} · <a href="${esc(d.url)}" target="_blank" rel="noopener">open document ↗</a></div>
+    ${d.summary ? `<div class="note"><i>Analyst summary:</i> ${esc(d.summary)}</div>` : ""}
+    ${d.tiers && d.tiers.length ? `<div class="note"><i>Tiers offered:</i> ${d.tiers.map(esc).join(" · ")}</div>` : ""}</summary>
+    <div class="body">${inner || `<p class="empty">No policies coded.</p>`}</div></details>`;
+}
+
+// ---------- policies (thematic) ----------
+const STAGES = [
+  ["Why the policy exists", "Rationale, values, ethics and the purpose of the policy itself.", ["T09", "T13", "T15"]],
+  ["Setting up", "Who decides, which tools are approved, how data is protected, and how faculty use and learn AI.", ["T01", "T12", "T11", "T10"]],
+  ["Telling students the rules", "How expectations reach students: syllabus statements, conversations, pointers.", ["T02"]],
+  ["While students work", "What students may use AI for, what they may not submit, how they disclose it, and what they remain responsible for.", ["T03", "T04", "T05", "T06"]],
+  ["Assessment", "How assignments and exams are designed or changed because of AI.", ["T07"]],
+  ["When misuse is suspected", "Detection, evidence, misconduct procedures and due process.", ["T08"]],
+  ["Beyond the classroom", "AI in research, publication and review.", ["T14"]]];
+function renderPolicies() {
+  const q = st.pq.toLowerCase();
+  const pass = x => x.cat === st.pSub && (st.pLayer === "all" || x.layer === st.pLayer) && (!q || ((x.policy || "") + " " + x.anchor + " " + uniBySlug.get(x.uni).name).toLowerCase().includes(q));
+  const mem = new Map();
+  for (const x of P) if (pass(x)) (mem.get(x.type) || mem.set(x.type, []).get(x.type)).push(x);
+  const thBy = Object.fromEntries(M.themes.map(t => [t.id, t]));
+  const maxU = Math.max(1, ...T.map(t => new Set((mem.get(t.id) || []).map(x => x.uni)).size));
+  const stages = STAGES.map(([h, d, ths], i) => {
+    const body = ths.map(tid => { const th = thBy[tid]; if (!th) return "";
+      const nu = t => new Set((mem.get(t.id) || []).map(x => x.uni)).size;
+      const types = T.filter(t => t.theme === tid && (mem.get(t.id) || []).length).sort((a, b) => nu(b) - nu(a));
+      return types.length ? `<section class="theme"><h3 class="tname">${esc(th.label)}</h3>${types.map(t => typeCard(t, mem.get(t.id), maxU)).join("")}</section>` : ""; }).join("");
+    return body ? `<section class="stage"><header><span class="num">Stage ${i + 1}</span><h2>${esc(h)}</h2><p>${esc(d)}</p></header>${body}</section>` : "";
+  }).join("");
+  return `<div class="toolbar"><input type="search" id="pq" placeholder="Search policies" value="${esc(st.pq)}" aria-label="Search policies">
+    <label class="field"><span class="lbl">Layer</span><select id="player"><option value="all">All layers</option>${M.layers.map(l => `<option value="${l}" ${st.pLayer === l ? "selected" : ""}>${LL[l]}</option>`).join("")}</select></label></div>
+    ${subTabs(["rr", "fact"], st.pSub, "psub", k => POS.filter(q => q.cat === k).length)}
+    <p class="note">${SUBNOTE[st.pSub]}</p>
+    ${reading(`The ${POS.filter(q => inSet(q.cat)).length.toLocaleString()} policies in the set rest on ${SET.length.toLocaleString()} statements. They are arranged as a course unfolds: why a policy exists, setting things up, telling students, what happens while they work, assessment, suspected misuse, and research. Each card is one topic; the bar shows how many universities address it, and the example is one institution's policy with its original wording. Open a card to see the distinct policies inside it, in lifecycle order: each says who it asks and how strongly (for example, students must 189, should 104), shows original wordings from three universities, and opens to every statement behind it.`)}
+    ${stages || `<p class="empty">No policies match.</p>`}`;
+}
+function typeCard(t, xs, maxU) {
+  const rep = byId.get(t.rep) && xs.includes(byId.get(t.rep)) ? byId.get(t.rep) : xs[0];
+  const nUni = new Set(xs.map(x => x.uni)).size;
+  const ru = uniBySlug.get(rep.uni);
+  return `<details class="ptype"><summary><div class="hd"><h3>${esc(t.name)}</h3><span class="unibar"><i style="width:${Math.max(4, Math.round(120 * nUni / maxU))}px"></i>${nUnis(nUni)}</span>${(() => { const k = new Set(xs.map(x => x.pos).filter(Boolean)).size; return k ? `<span class="note">${k} distinct ${k === 1 ? "policy" : "policies"} inside</span>` : ""; })()}</div>
+    <div class="rep"><div>${esc(rep.policy || rep.anchor)} <span class="note">· ${esc(ru.name)}</span></div>${rep.policy ? `<div class="orig">“${esc(rep.anchor)}”</div>` : ""}</div></summary>
+    <div class="body">${posList(xs, "type:" + t.id)}</div></details>`;
+}
+
+// ---------- matrix ----------
+function matrixData() {
+  // D68: only the policy set; each statement sits in the cell of its policy's group and stage, so a policy is counted once
+  const xs = SET.filter(x => st.mLayer === "all" || x.layer === st.mLayer);
+  const key = x => { const q = posById.get(x.pos) || {}; const a = q.actor || x.actor, p = q.phase || x.phase; return st.mView === "full" ? `${a}|${p}|${x.stance}` : `${a}|${p}`; };
+  const cells = new Map();
+  for (const x of xs) (cells.get(key(x)) || cells.set(key(x), []).get(key(x))).push(x);
+  return cells;
+}
+function cellHTML(k, list, max) {
+  if (!list || !list.length) return `<td></td>`;
+  const n = cellN(list);
+  const tc = {}; for (const x of list) tc[x.type] = (tc[x.type] || 0) + 1;
+  const tops = Object.entries(tc).sort((a, b) => b[1] - a[1]).slice(0, 3).map(([id, c]) => `<li><span>${esc((typeById.get(id) || { name: id }).name)}</span><span>${c}</span></li>`).join("");
+  const a = 0.06 + 0.34 * Math.sqrt(n / max);
+  return `<td><div class="cell" role="button" tabindex="0" data-cell="${k}" aria-pressed="${st.mCell === k}" style="background:color-mix(in srgb, var(--accent) ${Math.round(a * 100)}%, transparent)"><span class="n">${n.toLocaleString()}</span><span class="unit">${cellU()}</span><ul>${tops}</ul></div></td>`;
+}
+function renderMatrix() {
+  const cells = matrixData();
+  const sizes = [...cells.values()].map(cellN);
+  const max = Math.max(1, ...sizes);
+  const actors = M.actors.filter(a => [...cells.keys()].some(k => k.startsWith(a + "|")));
+  const STS = M.stances.filter(s => [...cells.keys()].some(k => k.endsWith("|" + s)));
+  let head, body;
+  if (st.mView === "full") {
+    head = `<tr><th>Who › when</th>${STS.map(s => `<th><span class="stance st-${s}">${SL[s]}</span></th>`).join("")}</tr>`;
+    body = actors.map(a => `<tr class="actor"><th colspan="${STS.length + 1}">${AL[a]}</th></tr>` +
+      M.phases.filter(p => STS.some(s => cells.has(`${a}|${p}|${s}`))).map(p => `<tr><th class="rowh">${PL[p]}</th>${STS.map(s => cellHTML(`${a}|${p}|${s}`, cells.get(`${a}|${p}|${s}`), max)).join("")}</tr>`).join("")).join("");
+  } else {
+    const phases = M.phases.filter(p => actors.some(a => cells.has(`${a}|${p}`)));
+    head = `<tr><th>Actor</th>${phases.map(p => `<th>${PL[p]}</th>`).join("")}</tr>`;
+    body = actors.map(a => `<tr><th class="rowh">${AL[a]}</th>${phases.map(p => cellHTML(`${a}|${p}`, cells.get(`${a}|${p}`), max)).join("")}</tr>`).join("");
+  }
+  let drawer = "";
+  if (st.mCell && cells.get(st.mCell)) {
+    const list = cells.get(st.mCell);
+    const [a, p, s] = st.mCell.split("|");
+    const byTh = {}; for (const x of list) { const th = (typeById.get(x.type) || {}).theme || "other"; ((byTh[th] ||= {})[x.type] ||= []).push(x); }
+    const link = `#matrix/${encodeURIComponent([st.mView, st.mLayer, st.mCell].join("~"))}`;
+    const thOrder = M.themes.map(t => t.id).filter(t => byTh[t]).concat(byTh.other ? ["other"] : []);
+    drawer = `<details class="drawer" open aria-live="polite"><summary><h3>${AL[a]} · ${PL[p]}${s ? " · " + SL[s] : ""}</h3> <span class="count">${list.length.toLocaleString()} policies from ${new Set(list.map(x => x.uni)).size} universities</span></summary>
+      <p class="note"><a href="${link}" class="plink">Link to this cell</a> · <button class="linkbtn" data-cell="${esc(st.mCell)}">Close</button></p>
+      ${thOrder.map(th => `<div class="dgroup"><h4>${esc((M.themes.find(t => t.id === th) || { label: "Other" }).label)}</h4>${Object.entries(byTh[th]).sort((x, y) => byRank(typeById.get(x[0]) || {}, typeById.get(y[0]) || {})).map(([tid, xs]) => `<details class="ptype"><summary><div class="hd"><h3>${esc((typeById.get(tid) || { name: tid }).name)}</h3><span class="unibar">${nUnis(new Set(xs.map(x => x.uni)).size)}</span></div></summary><div class="body">${posList(xs, "cell:" + st.mCell + ":" + tid)}</div></details>`).join("")}</div>`).join("")}</details>`;
+  }
+  return `<div class="toolbar"><span class="lbl">View</span><div class="seg" role="group"><button data-mview="full" aria-pressed="${st.mView === "full"}">Actor › phase × stance</button><button data-mview="ap" aria-pressed="${st.mView === "ap"}">Actor × phase</button></div>
+    <label class="field"><span class="lbl">Layer</span><select id="mlayer"><option value="all">All layers</option>${M.layers.map(l => `<option value="${l}" ${st.mLayer === l ? "selected" : ""}>${LL[l]}</option>`).join("")}</select></label>
+    <span class="lbl">Count</span><div class="seg" role="group"><button data-mcount="pols" aria-pressed="${st.mCount === "pols"}">Policies</button><button data-mcount="units" aria-pressed="${st.mCount === "units"}">Statements</button><button data-mcount="unis" aria-pressed="${st.mCount === "unis"}">Universities</button></div></div>
+    ${st.mView === "full" ? `<div class="legend">${M.stances.filter(s => P.some(x => x.stance === s)).map(s => `<div><span class="stance st-${s}">${SL[s]}</span><span class="note">${SDEF[s]}</span></div>`).join("")}</div>` : ""}
+    <p class="note">The matrix shows the policy set only (rules, recommendations, facts and warnings). Each cell counts the ${cellU()} for that group and stage and lists its three most common topics. Columns are the overall stance of the document a policy comes from. Rows group who a policy addresses: students, instructors, staff and administrators (TAs, staff, administrators and offices), and everyone (rules addressed to the whole community rather than one role). Select a cell to read its policies, grouped by theme and kind.</p>
+    ${matrixReading(cells)}
+    <div class="mx-wrap"><table class="mx"><thead>${head}</thead><tbody>${body}</tbody></table></div>${drawer}`;
+}
+const cellN = l => st.mCount === "units" ? l.length : st.mCount === "unis" ? new Set(l.map(x => x.uni)).size : new Set(l.map(x => x.pos)).size;
+const cellU = () => ({ pols: "policies", units: "statements", unis: "universities" })[st.mCount] || "policies";
+function matrixReading(cells) {
+  const all = [...cells.values()].flat(), n = all.length;
+  if (!n) return "";
+  const by = k => { const c = {}; for (const x of all) c[x[k]] = (c[x[k]] || 0) + 1; return c; };
+  const ac = by("actor"), pc = by("phase"), sc = by("stance");
+  const top = [...cells.entries()].sort((a, b) => cellN(b[1]) - cellN(a[1]))[0];
+  const [ta, tp, ts] = top[0].split("|");
+  const lay = st.mLayer === "all" ? "all layers" : LL[st.mLayer].toLowerCase();
+  return reading(`Rows are who a policy addresses and when it applies, in lifecycle order; ${st.mView === "full" ? "columns are the stance of the document it comes from" : "columns are the phases"}. Darker cells hold more ${cellU()}. Across ${lay}, ${pct(ac.student || 0, n)}% of the statements behind the policy set address students and ${pct(ac.instructor || 0, n)}% instructors; ${pct(pc["during-work"] || 0, n)}% apply while students work and only ${pct(pc["during-assessment"] || 0, n)}% during assessment. ${st.mView === "full" ? `${pct(sc.delegates || 0, n)}% come from documents that leave the decision to instructors, so most of the grid describes guidance around a delegated choice rather than rules.` : ""} The largest cell is ${AL[ta]} · ${PL[tp]}${ts ? " · " + SL[ts] : ""} (${cellN(top[1]).toLocaleString()} ${cellU()}). Select any cell to read its policies; the cell's address can be copied from "Link to this cell".`);
+}
+
+// ---------- policy label builder ----------
+const QUESTIONS = [
+  { id: "stance", q: "What is your default stance on AI for graded computing work?", type: "stance" },
+  { id: "who", q: "Who decides what is allowed?", opts: [["dept", "One rule for the unit", ["P01", "P02", "P06"]], ["instr", "Each instructor or assignment", ["P04"]], ["tiers", "Named levels that instructors choose from", ["P05"]]] },
+  { id: "syllabus", q: "Must every syllabus include an AI statement?", yn: ["P09"] },
+  { id: "tutor", q: "May students use AI to learn concepts or debug?", yn: ["P12", "P13", "P14", "P15"] },
+  { id: "code", q: "May students submit AI-generated code?", opts: [["no", "No", ["P19"]], ["cond", "Within stated limits", ["P16"]], ["yes", "Freely", ["P02", "P16"]]] },
+  { id: "exams", q: "Is AI banned on exams and quizzes?", yn: ["P22"] },
+  { id: "disclose", q: "Must students disclose AI use?", opts: [["no", "No requirement", []], ["stmt", "A statement or citation", ["P24"]], ["full", "Prompts, outputs or transcripts", ["P24", "P25", "P26"]]] },
+  { id: "explain", q: "Must students be able to explain their work, with oral or code checks?", yn: ["P30", "P34"] },
+  { id: "detect", q: "How do you treat AI detectors?", opts: [["avoid", "Do not rely on them", ["P39"]], ["use", "Use detection or similarity tools", ["P40"]], ["none", "Not addressed", []]] },
+  { id: "faculty", q: "Does the policy cover instructors' own AI use (grading, materials)?", yn: ["P46", "P47", "P48"] },
+  { id: "privacy", q: "Does it address student data and privacy?", yn: ["P50"] },
+  { id: "equity", q: "Does it address equity and access (no paid tools, opt-outs)?", yn: ["P51"] },
+  { id: "review", q: "Will the policy be reviewed on a schedule?", yn: ["P54"] },
+];
+function uniProfiles() {
+  const prof = new Map();
+  for (const u of U) prof.set(u.slug, { types: new Set(), stances: new Set(u.documents.filter(d => d.layer !== "course").map(d => d.stance)) });
+  for (const x of P) if (x.layer !== "course") prof.get(x.uni).types.add(x.type);
+  return prof;
+}
+let PROF = null;
+function chosenTypes() {
+  const s = new Set();
+  for (const q of QUESTIONS) {
+    const a = st.answers[q.id]; if (a == null) continue;
+    if (q.yn && a === "yes") q.yn.forEach(t => s.add(t));
+    if (q.opts) (q.opts.find(o => o[0] === a) || [, , []])[2].forEach(t => s.add(t));
+  }
+  return s;
+}
+function questionsHTML() {
+  return QUESTIONS.map(q => {
+    const opts = q.type === "stance" ? M.stances.map(s => [s, SL[s]]) : q.yn ? [["yes", "Yes"], ["no", "No"]] : q.opts.map(o => [o[0], o[1]]);
+    return `<div class="q"><fieldset><legend>${esc(q.q)}</legend><div class="opts">${opts.map(([v, l]) => `<label><input type="radio" name="q-${q.id}" value="${v}" ${st.answers[q.id] === v ? "checked" : ""}><span>${esc(l)}</span></label>`).join("")}</div></fieldset></div>`;
+  }).join("");
+}
+function renderLabel() {
+  PROF ||= uniProfiles();
+  const qs = questionsHTML();
+  return `<div class="toolbar"><span class="note">Answer for your unit. The label shows how many universities in the corpus made the same choice and what their policies say. University and unit documents are compared; course syllabi are not.</span><span class="grow"></span><button class="btn" id="reset">Clear answers</button></div>
+    ${reading(`Each answer is compared with all ${U.length} universities: the percentage is the share whose university or unit documents make the same choice, with one real example of how it is worded. "Most similar universities" share the most of your choices. The Draft a policy tab turns the same answers into a document.`)}
+    <div class="builder"><div>${qs}</div><aside>${labelCard()}</aside></div>`;
+}
+function labelCard() {
+  const n = U.length;
+  const rows = [];
+  const share = pred => { let k = 0; for (const [slug, p] of PROF) if (pred(p)) k++; return k; };
+  const ex = tids => { const x = P.find(x => tids.includes(x.type) && x.layer !== "course"); return x ? `<div class="ex">“${esc(x.anchor)}” <span class="note">${esc(uniBySlug.get(x.uni).name)}</span></div>` : ""; };
+  for (const q of QUESTIONS) {
+    const a = st.answers[q.id]; if (a == null) continue;
+    let label, k, tids = [];
+    if (q.type === "stance") { label = `Default stance: ${SL[a]}`; k = share(p => p.stances.has(a)); }
+    else if (q.yn) { tids = q.yn; const has = p => tids.some(t => p.types.has(t)); label = `${q.q.replace(/\?$/, "")}: ${a === "yes" ? "Yes" : "No"}`; k = share(p => a === "yes" ? has(p) : !has(p)); }
+    else { const o = q.opts.find(o => o[0] === a); tids = o[2]; label = `${q.q.replace(/\?$/, "")}: ${o[1]}`; k = tids.length ? share(p => tids.some(t => p.types.has(t))) : share(p => !q.opts.flatMap(o => o[2]).some(t => p.types.has(t))); }
+    rows.push(`<div class="lrow"><span>${esc(label)}</span><span class="pct" title="${k} of ${n} universities">${Math.round(100 * k / n)}%</span>${tids.length && (q.yn ? a === "yes" : true) ? ex(tids) : ""}</div>`);
+  }
+  const mine = chosenTypes();
+  let sim = "";
+  if (mine.size) {
+    const scores = [...PROF].map(([slug, p]) => { const inter = [...mine].filter(t => p.types.has(t)).length; const uni = new Set([...mine, ...p.types]).size; return [slug, uni ? inter / uni : 0]; }).sort((a, b) => b[1] - a[1]).slice(0, 6);
+    sim = `<div class="lrow thick"><b>Most similar universities</b><span></span></div><div class="sim">${scores.map(([slug, s]) => `<a href="#universities" data-gouni="${slug}">${esc(uniBySlug.get(slug).name)}</a> <span class="count">${Math.round(100 * s)}% overlap</span>`).join("<br>")}</div>`;
+  }
+  return `<div class="label-card" aria-live="polite"><h3>AI Policy Facts</h3><div class="lrow thick"><span class="note">Your choice</span><span class="note">Share of ${n} universities</span></div>${rows.join("") || `<p class="note">Answer a question to start your label.</p>`}${sim}</div>`;
+}
+
+
+// ---------- CS courses (D41, D49, D53) ----------
+const CSL = { C1: "CS1", C2: "CS2", C3: "Algorithms", C4: "Software engineering", C5: "AI / machine learning", C6: "Systems or security" };
+const CST = { "public-ai-policy": "Current syllabus with AI rules", "public-generic-only": "Only points to a higher-level policy", "public-no-ai": "Current syllabus, no AI mention",
+  outdated: "Only a pre-ChatGPT syllabus", "undated-only": "Only an undated syllabus", "not-public": "Behind a login", "not-found": "No syllabus found", "no-such-course": "No such required course" };
+async function loadCourses() { if (!C) { C = await fetch("data/courses.json").then(r => r.json()); render(); } }
+function renderCourses() {
+  if (!C) { loadCourses(); return `<p class="note">Loading course syllabi…</p>`; }
+  const slots = ["C1", "C2", "C3", "C4", "C5", "C6"];
+  const CU = C.universities || C, CB = Object.fromEntries(((C.codebook || {}).types || []).map(t => [t.id, t])), CMP = C.comparison;
+  const cnt = {}; let withAI = 0, lab = {};
+  for (const u of CU) { let any = false; for (const s of u.slots) { (cnt[s.slot] ||= {})[s.status] = (cnt[s.slot][s.status] || 0) + 1; if (s.passages.length) any = true;
+    for (const p of s.passages) for (const l of p.labels || []) { const k = l.ct && CB[l.ct] ? l.ct : null; if (k) lab[k] = (lab[k] || 0) + 1; } } if (any) withAI++; }
+  const cols = ["public-ai-policy", "public-no-ai", "outdated", "not-public", "not-found", "no-such-course"];
+  const table = `<div class="mx-wrap"><table class="mx ctab"><thead><tr><th>Course</th>${cols.map(c => `<th>${CST[c]}</th>`).join("")}</tr></thead><tbody>${slots.map(sl => `<tr><th class="rowh">${sl} ${CSL[sl]}</th>${cols.map(c => `<td class="num">${(cnt[sl] || {})[c] || (cnt[sl] ? 0 : "")}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
+  const c1 = cnt.C1 || {}, c1n = Object.values(c1).reduce((a, b) => a + b, 0);
+  const topLab = Object.entries(lab).sort((a, b) => b[1] - a[1]).slice(0, 18);
+  const q = st.cq.toLowerCase();
+  const list = CU.filter(u => !q || (u.name || u.slug).toLowerCase().includes(q));
+  const u = CU.find(x => x.slug === st.cuni) || list[0];
+  const rows = list.map(x => `<button class="uni-row" data-cuni="${x.slug}" aria-current="${u && x.slug === u.slug}"><span class="nm">${esc(x.name || x.slug)}</span><span class="count">${x.slots.reduce((a, s) => a + s.passages.length, 0)} AI passages</span></button>`).join("");
+  const detail = u ? `<h2>${esc(u.name || u.slug)}</h2><p class="note">${esc(u.program || "No CS bachelor's program")}${u.unit ? " · " + esc(u.unit) : ""} · <a href="#course/${u.slug}" class="plink">Link to this university</a></p>` +
+    u.slots.map(s => `<details class="doc" ${s.passages.length ? "open" : ""}><summary><div class="doc-title"><b>${s.slot} ${CSL[s.slot] || ""}: ${esc(s.course || "none")}${s.title ? " · " + esc(s.title) : ""}</b><span class="stance st-${s.status === "public-ai-policy" ? "permit" : "delegates"}">${esc(CST[s.status] || s.status)}</span></div></summary>
+      <div class="body">${s.note ? `<p class="note">${esc(s.note)}</p>` : ""}${s.syllabi.map(y => `<p class="note">Syllabus: <a href="${esc(y.url)}" target="_blank" rel="noopener">${esc(y.term || y.year || "undated")} ↗</a></p>`).join("")}
+      ${s.passages.map(p => `<blockquote class="cpass">${esc(p.text)}<footer><a href="${esc(p.link)}" target="_blank" rel="noopener">open in syllabus ↗</a>${p.stance ? ` · overall: ${esc(p.stance)}` : ""}</footer>${(p.labels || []).length ? `<div class="chips">${p.labels.map(l => `<span class="tag" title="“${esc(l.anchor)}” (${esc(l.stance)})">${esc(l.ct && CB[l.ct] ? l.ct + " " + CB[l.ct].name : l.label)}${l.cs === "yes" ? " · CS" : ""}</span>`).join("")}</div>` : ""}</blockquote>`).join("")}</div></details>`).join("") : "";
+  return `${reading(`Every university is checked for the same courses: four required core courses (C1 to C4) and two added slots, an AI or machine-learning course (C5) and an upper-level systems or security course (C6). Of ${c1n} CS1 courses, ${c1["public-ai-policy"] || 0} have a current public syllabus with AI rules and ${c1["not-found"] || 0} have no findable syllabus, so missing syllabi are a finding in themselves. ${withAI} universities have at least one AI passage. Passages are the syllabus's own words, cut by script. ${topLab.length ? "The tags under each passage are course-level policy types from a codebook built from the syllabi alone (hover a tag to see the syllabus words it codes); the comparison with institutional policy is below the table." : "Course passages are being coded; types appear here as they are ready."}`)}
+    ${table}
+    ${topLab.length ? `<h3 class="sub">Most common course-level policy types (course codebook, built from the syllabi alone)</h3><div class="chips">${topLab.map(([l, n]) => `<span class="tag">${esc(l)} ${esc(CB[l].name)} · ${n}</span>`).join("")}</div>` : ""}
+    ${CMP ? compareHTML(CMP, CB) : ""}
+    <div class="toolbar"><input type="search" id="cq" placeholder="Search universities" value="${esc(st.cq)}" aria-label="Search universities"></div>
+    <div class="uni-layout"><nav class="uni-list" aria-label="Universities">${rows}</nav><section class="uni-detail">${detail}</section></div>`;
+}
+
+// D63: course policies (bottom-up from syllabi), grouped by stage like the institutional policies; each with who it asks,
+// how many universities' syllabi state it, and up to 3 original wordings from those syllabi
+function coursePolicies(CB) {
+  const CP = C.policies || []; if (!CP.length) return "";
+  const nm = Object.fromEntries((C.universities || []).map(u => [u.slug, u.name || u.slug]));
+  const byStage = {}; for (const q of CP) (byStage[q.phase] ||= []).push(q);
+  const order = M.phases.filter(p => p !== "background").concat(["background"]).filter(p => byStage[p]);
+  return `<h3 class="sub">Course policies (${CP.length}, from ${CP.reduce((a, q) => a + q.n, 0).toLocaleString()} syllabus statements), by stage of the course</h3>
+    <p class="note">Each policy groups syllabus statements that ask the same people for the same thing. Open one to read original wordings from the syllabi.</p>` +
+    order.map(p => `<details class="ptype" ${p === "during-work" ? "open" : ""}><summary><div class="hd"><h3>${esc(PL[p] || p)}</h3><span class="note">${byStage[p].length} policies</span></div></summary><div class="body">` +
+      byStage[p].sort((a, b) => b.n_unis - a.n_unis).map(q => `<details class="ppos"><summary><div class="hd"><p class="psent">${esc(q.sentence)}</p><span class="unibar">${nUnis(q.n_unis)}</span></div>
+        <div class="pmeta">${whoPairs(q.who)} · ${(q.types || [q.type]).map(t => esc((CB[t] || { name: "Other" }).name)).join(", ")}</div></summary>
+        <div class="howothers"><span>Original wording</span>${q.examples.map(x => `<div><q>${esc(x.anchor)}</q> · ${esc(nm[x.uni] || x.uni)}${x.link ? ` · <a href="${esc(x.link)}" target="_blank" rel="noopener">syllabus ↗</a>` : ""}</div>`).join("")}</div></details>`).join("") +
+      `</div></details>`).join("");
+}
+function compareHTML(X, CB) {
+  const a = X.alignment_share || {}, sl = X.stance_by_slot || {};
+  const SS = ["prohibit", "restrict", "mixed", "permit", "encourage", "require", "none"];
+  const slotRows = ["C1", "C2", "C3", "C4", "C5", "C6"].filter(k => sl[k]).map(k => { const t = Object.values(sl[k]).reduce((x, y) => x + y, 0);
+    return `<tr><th class="rowh">${k} ${CSL[k]}</th>${SS.map(s => `<td class="num">${sl[k][s] ? pct(sl[k][s], t) + "%" : ""}</td>`).join("")}<td class="num">${t}</td></tr>`; }).join("");
+  const none = (X.course_types || []).filter(t => t.relation === "none" && t.statements);
+  const uv = Object.entries(X.university_vs_course_stance || {}).filter(([k]) => k.startsWith("delegates"));
+  const uvT = uv.reduce((x, [, n]) => x + n, 0), uvP = (X.university_vs_course_stance || {})["delegates -> prohibit"] || 0;
+  const c1 = sl.C1 || {}, c4 = sl.C4 || {}, t1 = Object.values(c1).reduce((x, y) => x + y, 0), t4 = Object.values(c4).reduce((x, y) => x + y, 0);
+  return `<h3 class="sub">CS courses compared with institutional policy</h3>
+    ${reading(`Course syllabi were coded with their own codebook (agreement α = ${(X.type_alpha || 0).toFixed(2)} on ${X.alpha_pairs} statements) and only then compared with the institutional types. ${pct((a.same || 0) * 100, 100)}% of course statements fall in types that institutions also write about, ${pct((a.partial || 0) * 100, 100)}% in related but more specific types, and ${pct(((a.none || 0) + (a.other || 0)) * 100, 100)}% in types institutions never mention. Course rules loosen across the degree: ${pct(c1.prohibit || 0, t1)}% of CS1 AI passages ban AI, against ${pct(c4.prohibit || 0, t4)}% in software engineering. Where the university leaves the decision to instructors, ${pct(uvP, uvT)}% of CS course passages ban AI outright, so CS courses are often stricter than their universities.`)}
+    <div class="mx-wrap"><table class="mx ctab"><thead><tr><th>Course</th>${SS.map(s => `<th>${s}</th>`).join("")}<th>passages</th></tr></thead><tbody>${slotRows}</tbody></table></div>
+    <h3 class="sub">Course practices institutions do not mention</h3><ul>${none.map(t => `<li><b>${esc(t.id)} ${esc(t.name)}</b>: ${t.statements} statements at ${t.universities} universities. ${esc(t.why || "")}</li>`).join("")}</ul>
+    <h3 class="sub">Common institutional topics that never reach CS syllabi</h3><p class="note">${(X.never_reach_syllabi || []).map(m => `${esc(m.id)} ${esc(m.name)} (${m.universities} universities)`).join(" · ")}</p>`;
+}
+
+// ---------- draft a policy (D51): template sentences from your answers, in lifecycle order; examples are real wording ----------
+const DRAFT = {
+  stance: { prohibit: "{U} does not allow generative AI tools for graded work unless an assignment explicitly permits it.", restrict: "{U} allows generative AI only for the specific uses listed in this policy.",
+    permit: "{U} allows generative AI for graded work under the conditions in this policy.", encourage: "{U} encourages students to use generative AI as a learning tool, under the conditions in this policy.",
+    require: "Some work in {U} requires the use of generative AI, as each assignment specifies.", delegates: "Each instructor in {U} decides whether and how generative AI may be used in their course." },
+  who: { dept: "This rule applies to every course in {U}.", instr: "Instructors set the rule for each course or assignment and state it in writing.", tiers: "Each course or assignment names its level of AI use: no AI; AI for learning only; AI with disclosure; or open use." },
+  syllabus: { yes: "Every syllabus includes a statement on generative AI use, and any assignment with a different rule says so." },
+  tutor: { yes: "Students may use AI to understand concepts, practice, and get help understanding errors in their own work.", no: "Students may not use AI as a tutor or debugging aid for course work." },
+  code: { no: "Students may not submit code, text or other work generated by AI as their own.", cond: "Students may submit AI-generated code only within the limits an assignment states, and must identify it.", yes: "Students may submit AI-generated code, provided they disclose it and can explain it." },
+  disclose: { stmt: "Students disclose any AI use with each submission, naming the tool and what they used it for.", full: "Students disclose any AI use with each submission and keep their prompts, outputs or transcripts, which instructors may ask to see." },
+  explain: { yes: "Students must be able to explain any work they submit; instructors may ask them to walk through their code or reasoning." },
+  exams: { yes: "AI tools may not be used during exams, quizzes or other in-class assessments.", no: "AI use during assessments follows the instructions given for each assessment." },
+  detect: { avoid: "AI detection tools are not used as evidence of misconduct on their own, because their results are unreliable.", use: "Instructors may use similarity and detection tools together with other evidence, such as drafts and a conversation with the student." },
+  faculty: { yes: "Instructors disclose their own use of AI in preparing materials, giving feedback or grading, and remain responsible for every grade." },
+  privacy: { yes: "No one enters personal, confidential or student data into AI tools the university has not approved." },
+  equity: { yes: "No assignment requires a paid AI tool, and students who choose not to use AI have an equivalent option." },
+  review: { yes: "{U} reviews this policy every year as tools and evidence change." },
+};
+const DRAFT_SECTIONS = [["Our approach", ["stance", "who"]], ["Before the course", ["faculty", "privacy", "equity"]], ["At the start of the course", ["syllabus"]],
+  ["While students work", ["tutor", "code", "disclose", "explain"]], ["During assessment", ["exams"]], ["If misuse is suspected", ["detect"]], ["Keeping the policy current", ["review"]]];
+const STANCE_TYPES = { prohibit: ["P01"], restrict: ["P107"], permit: ["P02"], encourage: ["P02"], require: ["P79"], delegates: ["P04"] };
+function qTypes(q, a) { if (q.type === "stance") return STANCE_TYPES[a] || []; if (q.yn) return a === "yes" ? q.yn : []; const o = q.opts.find(o => o[0] === a); return o ? o[2] : []; }
+function examples(tids, k = 2) {
+  const xs = P.filter(x => tids.includes(x.type) && x.layer !== "course");
+  xs.sort((a, b) => (b.binding === "rule") - (a.binding === "rule") || (b.layer === "computing") - (a.layer === "computing") || a.anchor.length - b.anchor.length);
+  const out = [], seen = new Set();
+  for (const x of xs) { if (seen.has(x.uni)) continue; seen.add(x.uni); out.push(x); if (out.length >= k) break; }
+  return out;
+}
+function draftText() {
+  const U0 = st.unitName.trim() || (st.docKind === "syllabus" ? "This course" : "Our department");
+  const qById = Object.fromEntries(QUESTIONS.map(q => [q.id, q]));
+  const secs = [];
+  for (const [h, ids] of DRAFT_SECTIONS) {
+    const items = [];
+    for (const id of ids) { const a = st.answers[id]; const t = a && DRAFT[id] && DRAFT[id][a]; if (t) { const tids = qTypes(qById[id], a); items.push({ id, text: t.replaceAll("{U}", U0), ex: examples(tids), pos: POS.filter(q => q.cat === "rr" && (q.types || [q.type]).some(t => tids.includes(t))).sort((x, y) => y.n_unis - x.n_unis).slice(0, 3) }); } }
+    if (items.length) secs.push({ h, items });
+  }
+  return { title: `${st.unitName.trim() || (st.docKind === "syllabus" ? "Course" : "Department")} policy on generative AI (draft)`, secs };
+}
+function renderDraft() {
+  const d = draftText();
+  const md = `# ${d.title}\n\n` + d.secs.map(s => `## ${s.h}\n\n` + s.items.map(i => `- ${i.text}`).join("\n")).join("\n\n") + `\n\n_Drafted with the AI Policy Atlas from template sentences matching your answers. Compare each section with how other universities word it before adopting it._\n`;
+  const nAns = QUESTIONS.filter(q => st.answers[q.id] != null).length;
+  const doc = d.secs.length ? `<article class="draft"><h2>${esc(d.title)}</h2><p class="sub">${st.docKind === "syllabus" ? "Course syllabus statement" : "Department guideline"} · drafted from ${nAns} answers · sections follow the course lifecycle</p>${d.secs.map(s => `<h3>${esc(s.h)}</h3>${s.items.map(i => `<p>${esc(i.text)}</p>${i.pos.length ? `<div class="howothers"><span>Common policies at other universities, each with one original wording</span>${i.pos.map(q => { const x = q.examples.map(e => byId.get(e)).find(Boolean); return `<div><b>${esc(q.sentence)}</b> <span class="note">${nUnis(q.n_unis)}</span>${x ? `<br><q>${esc(x.anchor)}</q> · ${esc(uniBySlug.get(x.uni).name)} · <a href="${esc(x.link)}" target="_blank" rel="noopener">source ↗</a>` : ""}</div>`; }).join("")}</div>` : i.ex.length ? `<div class="howothers"><span>How other universities word it</span>${i.ex.map(x => `<div><q>${esc(x.anchor)}</q> · ${esc(uniBySlug.get(x.uni).name)}${x.layer === "computing" ? " (computing unit)" : ""} · <a href="${esc(x.link)}" target="_blank" rel="noopener">source ↗</a></div>`).join("")}</div>` : ""}`).join("")}`).join("")}
+    <p class="note">Every sentence above is a template matched to your answers, not text from any institution. Under it, each bold sentence is a policy shared by other universities, followed by one university's original wording with a link.</p>
+    <div class="toolbar"><button class="btn" id="copyDraft">Copy as text</button><button class="btn" id="dlDraft">Download (.md)</button></div></article>` : `<p class="note">Answer the questions to build your draft. Sections appear in the order a course runs.</p>`;
+  window.__draftMD = md;
+  return `${reading(`Your answers become a policy organized by the course lifecycle: your overall approach, what is settled before the course, what the syllabus tells students, what students may do while they work, the rules for assessments, what happens if misuse is suspected, and how the policy is kept current. The answers are shared with the Policy label tab, which shows how common each choice is.`)}
+    <div class="toolbar"><label class="field"><span class="lbl">Name</span><input id="unitName" value="${esc(st.unitName)}" placeholder="e.g. CS 161 or School of EECS"></label>
+    <label class="field"><span class="lbl">Document</span><select id="docKind"><option value="syllabus" ${st.docKind === "syllabus" ? "selected" : ""}>Course syllabus statement</option><option value="dept" ${st.docKind === "dept" ? "selected" : ""}>Department guideline</option></select></label>
+    <span class="grow"></span><button class="btn" id="reset">Clear answers</button></div>
+    <details class="answers" ${nAns ? "" : "open"}><summary>Your answers (${nAns} of ${QUESTIONS.length}): open to change them</summary><div class="qgrid">${questionsHTML()}</div></details>
+    ${doc}`;
+}
+function focusPanel() {
+  const x = st.focus && byId.get(st.focus); if (!x) return "";
+  const d = docById.get(x.doc), u = uniBySlug.get(x.uni);
+  return `<section class="focus"><div class="hd"><b>Linked policy</b> <span class="note">${esc(u.name)} · ${esc(d.title || "")} · ${esc(LL[x.layer])}</span><span class="grow"></span><button class="linkbtn" data-gouni="${u.slug}">Open in university view</button> <button class="linkbtn" data-unfocus="1">Close</button></div>${colHead()}${polRow(x, true)}</section>`;
+}
+
+// ---------- patterns & method ----------
+function renderProse(doc) {
+  return `<div class="prose">${(doc.sections || []).map(s => `<h2>${esc(s.h)}</h2>${(s.p || []).map(p => `<p>${esc(p)}</p>`).join("")}${s.list ? `<ul>${s.list.map(x => `<li>${esc(x)}</li>`).join("")}</ul>` : ""}${s.agents ? `<div class="agents">${s.agents.map(a => `<div class="agent"><b>${esc(a.role)}</b>${esc(a.does)}</div>`).join("")}</div>` : ""}`).join("") || `<p class="note">Coming with the full corpus.</p>`}</div>`;
+}
+
+// ---------- render & events ----------
+
+// ---------- D68: pages ----------
+const CSV = {
+  overview: [["pipeline.csv", "Pipeline counts"], ["policy_set_counts.csv", "Policy set by level, group and stage"]],
+  policies: [["policy_set.csv", "Policy set (institutional)"], ["policy_set_statements.csv", "Every statement behind each policy"]],
+  roles: [["policy_set.csv", "Policy set (column: who it addresses)"], ["course_policies.csv", "CS course policies (column: who it addresses)"]],
+  cpolicies: [["course_policies.csv", "CS course policies"], ["course_policy_statements.csv", "Every syllabus statement behind each policy"]],
+  matrix: [["policy_set_counts.csv", "Matrix counts by level, group and stage"]],
+  other: [["other_coded.csv", "Templates, descriptions, reasons, definitions, resources"]],
+  universities: [["universities.csv", "Universities and documents"], ["statements.csv", "All coded statements"]],
+  courses: [["course_coverage.csv", "Course coverage by university and slot"]],
+  method: [["decisions.csv", "Study decisions (D01 onward)"]],
+  report: [["policy_set.csv", "Institutional policy set"], ["course_policies.csv", "CS course policy set"], ["policy_set_counts.csv", "Counts by level, group and stage"]] };
+function csvBar(tab) {
+  const L = CSV[tab]; if (!L) return "";
+  return `<div class="csvbar"><span>Data for this page</span>${L.map(([f, l]) => `<a href="data/csv/${f}" download>${esc(l)} <span class="ext">CSV</span></a>`).join("")}</div>`;
+}
+function subTabs(keys, cur, attr, count) {
+  return `<div class="subtabs" role="tablist">${keys.map(k => `<button role="tab" data-${attr}="${k}" aria-selected="${cur === k}">${esc(SUBS[k] || k)}${count ? `<span class="cnt">${count(k).toLocaleString()}</span>` : ""}</button>`).join("")}</div>`;
+}
+function indexCourses() {
+  CSTM = new Map();
+  for (const u of C.universities || []) for (const sl of u.slots) for (const p of sl.passages) for (const l of p.labels || [])
+    if (l.pos) (CSTM.get(l.pos) || CSTM.set(l.pos, []).get(l.pos)).push({ anchor: l.anchor, uni: u.name || u.slug, slot: sl.slot, course: sl.course, link: p.link });
+}
+// a course policy, collapsed: sentence, who, stage, how many syllabi; opens to every syllabus statement behind it
+function coursePolCard(q, CB) {
+  const xs = CSTM.get(q.pid) || [];
+  return `<details class="ppos"><summary><div class="hd"><p class="psent">${esc(q.sentence)}</p><span class="unibar">${nUnis(q.n_unis)}</span></div>
+    <div class="pmeta">${whoPairs(q.who)} · ${esc(PL[q.phase] || q.phase)} · ${q.n} ${q.n === 1 ? "statement" : "statements"}${(q.parts || []).length > 1 ? ` · merged from ${q.parts.length} policies` : ""} · ${(q.types || [q.type]).map(t => esc((CB[t] || { name: "Other" }).name)).join(", ")}</div></summary>
+    <div class="body stlist">${xs.map(x => `<div><q>${esc(x.anchor)}</q> · ${esc(x.uni)} · ${esc(x.slot)} ${esc(x.course || "")}${x.link ? ` · <a href="${esc(x.link)}" target="_blank" rel="noopener">syllabus ↗</a>` : ""}</div>`).join("")}</div></details>`;
+}
+function courseByStage(L, CB) {
+  const by = {}; for (const q of L) (by[q.phase] ||= []).push(q);
+  return M.phases.filter(p => p !== "background").concat(["background"]).filter(p => by[p]).map(p =>
+    `<details class="ptype"><summary><div class="hd"><h3>${esc(PL[p] || p)}</h3><span class="note">${by[p].length} ${by[p].length === 1 ? "policy" : "policies"}</span></div></summary><div class="body">${by[p].sort((a, b) => b.n_unis - a.n_unis).map(q => coursePolCard(q, CB)).join("")}</div></details>`).join("");
+}
+function renderCoursePolicies() {
+  if (!C) return `<p class="note">Loading course data…</p>`;
+  const CB = Object.fromEntries(((C.codebook || {}).types || []).map(t => [t.id, t]));
+  const CP = C.policies || [];
+  const L = CP.filter(q => q.cat === st.cSub);
+  return `${pageHead("CS course policies", "Policies built bottom-up from the AI passages in CS course syllabi: the same six courses at every university. Each policy groups syllabus statements that ask the same people for the same thing.")}
+    ${csvBar("cpolicies")}
+    ${subTabs(["rr", "fact"], st.cSub, "csub", k => CP.filter(q => q.cat === k).length)}
+    <p class="note">${SUBNOTE[st.cSub]} Grouped by stage of the course; open a stage, then a policy, to read every syllabus statement behind it.</p>
+    ${courseByStage(L, CB)}`;
+}
+function renderOther() {
+  const keys = ["template", "description", "other"];
+  const layerSel = `<div class="seg" role="group"><button data-olayer="inst" aria-pressed="${st.oLayer === "inst"}">Institutional</button><button data-olayer="course" aria-pressed="${st.oLayer === "course"}">CS courses</button></div>`;
+  let body = "", count;
+  if (st.oLayer === "course") {
+    if (!C) return `<p class="note">Loading course data…</p>`;
+    const CB = Object.fromEntries(((C.codebook || {}).types || []).map(t => [t.id, t]));
+    const CP = C.policies || [];
+    count = k => CP.filter(q => q.cat === k).length;
+    body = st.oSub === "template" ? `<p class="empty">Syllabi are themselves course policies, so the course layer has no templates.</p>` : courseByStage(CP.filter(q => q.cat === st.oSub), CB);
+  } else {
+    count = k => POS.filter(q => q.cat === k).length;
+    const xs = P.filter(x => x.cat === st.oSub), by = new Map();
+    for (const x of xs) (by.get(x.type) || by.set(x.type, []).get(x.type)).push(x);
+    const maxU = Math.max(1, ...[...by.values()].map(v => new Set(v.map(x => x.uni)).size));
+    body = [...by.entries()].sort((a, b) => new Set(b[1].map(x => x.uni)).size - new Set(a[1].map(x => x.uni)).size)
+      .map(([tid, v]) => typeCard(typeById.get(tid) || { id: tid, name: tid }, v, maxU)).join("");
+  }
+  return `${pageHead("Other coded text", "Everything the documents say about AI was coded. These kinds are kept and can be browsed here, but they are not counted in the policy set.")}
+    ${csvBar("other")}
+    <div class="toolbar">${layerSel}</div>
+    ${subTabs(["template", "description", "other"], st.oSub, "osub", count)}
+    <p class="note">${SUBNOTE[st.oSub]}</p>${body || `<p class="empty">Nothing of this kind.</p>`}`;
+}
+// D70: the shareable report (status, pipeline, numbers, findings, decisions, full policy set); prints well and downloads as Word
+function renderReport() {
+  return `${pageHead("Report", "Where things stand, the numbers, what the policies show, and every policy in the set grouped by who it addresses and when. Made to share and print.")}
+    <div class="csvbar"><span>Share</span><a href="report.html" target="_blank" rel="noopener">Open printable report</a><a href="data/AI_Policy_Atlas_report.docx" download>Report <span class="ext">Word</span></a></div>
+    ${csvBar("report")}
+    <iframe class="method" src="report.html" title="Report" onload="this.style.height=(this.contentDocument.documentElement.scrollHeight+20)+'px'"></iframe>`;
+}
+function renderMethod() {
+  return `${pageHead("Method and reliability", "How the documents were collected and coded, how reliable the coding is, and the definitions used throughout.")}
+    ${csvBar("method")}
+    <iframe class="method" src="findings.html?embed=1" title="Method and reliability" onload="this.style.height=(this.contentDocument.documentElement.scrollHeight+20)+'px'"></iframe>`;
+}
+const pageHead = (h, sub) => `<header class="pagehead"><h2>${esc(h)}</h2><p>${esc(sub)}</p></header>`;
+function heat(m, title, sub) {
+  const ST = M.phases.filter(p => p !== "background").concat(["background"]), AC = ["student", "instructor", "staff", "all"];
+  const mx = Math.max(1, ...Object.values(m)), tot = Object.values(m).reduce((a, b) => a + b, 0);
+  return `<div class="heat"><div class="hh"><b>${esc(title)}</b><span>${tot.toLocaleString()} policies · ${esc(sub)}</span></div><div class="mx-wrap"><table class="heatmap"><thead><tr><th></th>${ST.map(p => `<th>${esc(PS_SHORT[p] || p)}</th>`).join("")}</tr></thead><tbody>` +
+    AC.map(a => `<tr><th class="rowh">${esc(AL[a])}</th>${ST.map(p => { const v = m[a + "|" + p] || 0, t = v ? Math.round(8 + 72 * Math.sqrt(v / mx)) : 0;
+      return `<td style="background:${v ? `color-mix(in srgb, var(--accent) ${t}%, transparent)` : "transparent"};color:${t > 48 ? "var(--surface)" : "var(--ink)"}">${v || "·"}</td>`; }).join("")}</tr>`).join("") + `</tbody></table></div></div>`;
+}
+const PS_SHORT = { "before-course": "Before course", "course-start": "Course start", "during-work": "While working", "during-assessment": "Assessment", "when-misuse": "Misuse", "over-time": "Over time", background: "Background" };
+function renderOverview() {
+  const PP = M.pipeline || {}, sa = PP.set_aside || {};
+  const set = POS.filter(q => inSet(q.cat)), kc = k => POS.filter(q => q.cat === k).length;
+  const CP = C ? C.policies || [] : [], cset = CP.filter(q => inSet(q.cat)), ckc = k => CP.filter(q => q.cat === k).length;
+  const nPas = C ? (C.universities || []).reduce((a, u) => a + u.slots.reduce((b, s) => b + s.passages.length, 0), 0) : 0;
+  const nCStm = C ? (C.universities || []).reduce((a, u) => a + u.slots.reduce((b, s) => b + s.passages.reduce((c, p) => c + (p.labels || []).length, 0), 0), 0) : 0;
+  const allU = P.length + (M.n_units - M.n_about_ai);
+  const step = (n, label, note, out) => `<li><div class="fstep"><b>${n.toLocaleString()}</b><span>${label}</span>${note ? `<em>${note}</em>` : ""}</div>${out ? `<div class="fout">${out}</div>` : ""}</li>`;
+  // policy-set heatmaps per level: each policy in the cell of its group and stage, counted once per level it appears in
+  const lev = {}; for (const L of ["university", "school", "computing"]) lev[L] = {};
+  const seen = new Set();
+  for (const x of SET) { const q = posById.get(x.pos); if (!q) continue; const k = x.layer + "|" + q.pid; if (seen.has(k)) continue; seen.add(k); const c = q.actor + "|" + q.phase; lev[x.layer][c] = (lev[x.layer][c] || 0) + 1; }
+  const cm = {}; for (const q of cset) { const c = q.actor + "|" + q.phase; cm[c] = (cm[c] || 0) + 1; }
+  const tot = m => Object.values(m).reduce((a, b) => a + b, 0), share = (m, f) => Math.round(100 * Object.entries(m).filter(([c]) => f(c)).reduce((a, [, v]) => a + v, 0) / Math.max(1, tot(m)));
+  const uni = lev.university;
+  return `${pageHead("Overview", "What the atlas holds, how the policy set was built, and where its policies sit.")}
+    ${csvBar("overview")}
+    <div class="kpis">
+      <div><span>Institutional policy set</span><b>${set.length.toLocaleString()}</b><em>${kc("rr").toLocaleString()} rules and recommendations · ${kc("fact")} facts and warnings</em></div>
+      <div><span>CS course policy set</span><b>${cset.length.toLocaleString()}</b><em>${ckc("rr")} rules and recommendations · ${ckc("fact")} facts and warnings</em></div>
+      <div><span>Statements behind the policy set</span><b>${SET.length.toLocaleString()}</b><em>from ${new Set(SET.map(x => x.uni)).size} universities, each with original wording</em></div>
+      <div><span>Other coded text, not counted</span><b>${(kc("template") + kc("description") + kc("other")).toLocaleString()}</b><em>templates, descriptions, reasons, definitions, resources</em></div>
+    </div>
+    <h3 class="sec">How the policy set was built</h3>
+    <p class="note">Each step keeps what it passes on; what it sets aside is shown on the right and stays in the data.</p>
+    <div class="flows">
+      <div class="flow"><h4>University, school and computing-unit documents</h4><ol>
+        ${step(M.n_documents, "documents", `from ${M.n_universities} universities`)}
+        ${step(M.n_units, "statements coded", "every sentence about AI, two coders and a reconciler")}
+        ${step(P.length, "statements about AI", "", `${(M.n_units - P.length).toLocaleString()} not about AI`)}
+        ${step(P.filter(x => x.type !== "UNCOVERED").length, "statements with a topic", `${T.filter(t => t.n_units).length} topics in ${M.themes.length} themes`, `${(sa.unique || 0) + (sa.not_policy || 0)} without a topic: ${sa.unique || 0} rare one-offs, ${sa.not_policy || 0} no policy`)}
+        ${step(PP.fine_positions || 0, "groups", "same people, same act, same strength, same time, within a topic")}
+        ${step(PP.force_merged || 0, "policies", "must and should versions of the same act merged")}
+        ${step(PP.cross_type_merged || 0, "policies", "the same policy under different topics merged", `${(kc("template") + kc("description") + kc("other")).toLocaleString()} other coded text: ${kc("template")} templates, ${kc("description")} descriptions, ${kc("other")} reasons, definitions, resources`)}
+        <li class="final"><div class="fstep"><b>${set.length.toLocaleString()}</b><span>policies in the institutional policy set</span><em>${kc("rr")} rules and recommendations · ${kc("fact")} facts and warnings</em></div></li></ol></div>
+      <div class="flow"><h4>CS course syllabi</h4><ol>
+        ${step(C ? (C.universities || []).length : 0, "universities checked", "the same six courses at each")}
+        ${step(nPas, "AI passages in syllabi", "the syllabus's own words")}
+        ${step(nCStm, "statements coded", "with a course codebook built from the syllabi")}
+        ${step(PP.course_grouped || 0, "policies", "same people, same act, within a course topic", `${PP.course_not_ai_statements || 0} statements not about AI`)}
+        ${step(PP.course_merged || 0, "policies", "the same policy under different topics merged", `${ckc("description") + ckc("other")} other coded text: ${ckc("description")} descriptions, ${ckc("other")} reasons, definitions, resources`)}
+        <li class="final"><div class="fstep"><b>${cset.length}</b><span>policies in the CS course policy set</span><em>${ckc("rr")} rules and recommendations · ${ckc("fact")} facts and warnings</em></div></li></ol></div>
+    </div>
+    <h3 class="sec">Where the policy set sits</h3>
+    <p class="note">Distinct policies by who they address and when they apply. A policy found at several levels is counted at each. Open the Matrix page to read the policies in any cell.</p>
+    <div class="heats">${heat(lev.university, "University-wide", "documents at the university level")}${heat(lev.school, "School or college", "e.g. college of engineering")}${heat(lev.computing, "Computing unit", "CS and related departments")}${heat(cm, "CS courses", "bottom-up from syllabi")}</div>
+    <div class="finding"><b>Thin cells are findings.</b> Among stages of action, assessment is the one university-wide policies address least (${share(uni, c => c.endsWith("|during-assessment"))}% of policies); CS syllabi give it ${share(cm, c => c.endsWith("|during-assessment"))}% and say least about what happens before the course (${share(cm, c => c.endsWith("|before-course"))}%) or over time (${share(cm, c => c.endsWith("|over-time"))}%). Staff and administrators are addressed by ${share(uni, c => c.startsWith("staff|"))}% of university-wide policies and ${share(cm, c => c.startsWith("staff|"))}% of course policies. School and computing units add few policies of their own, so the CS picture rests mainly on syllabi.</div>`;
+}
+
+// D69: one role's policies. For a role, its policy set by stage, sorted into what it must or should do, must not do, may do,
+// and what it should know (facts and warnings). Direction comes from how that role's statements word the policy.
+const DIRS = [["do", "Do", "must or should"], ["dont", "Don't", "must not or should not"], ["may", "May", "allowed"], ["know", "Know", "facts and warnings"]];
+function dirOf(q, role) {
+  if (q.cat === "fact") return "know";
+  const w = (q.who || []).filter(x => x[0] === role), c = {};
+  for (const [, m, k] of (w.length ? w : q.who || [])) c[m] = (c[m] || 0) + k;
+  const m = Object.entries(c).sort((a, b) => b[1] - a[1])[0];
+  return !m ? "know" : { must: "do", should: "do", "must-not": "dont", "should-not": "dont", may: "may" }[m[0]] || "know";
+}
+let BYPOS = null;
+function renderRoles() {
+  if (!BYPOS) { BYPOS = new Map(); for (const x of SET) (BYPOS.get(x.pos) || BYPOS.set(x.pos, []).get(x.pos)).push(x); }
+  const course = st.rLayer === "course";
+  if (course && !C) return `<p class="note">Loading course data…</p>`;
+  const CB = course ? Object.fromEntries(((C.codebook || {}).types || []).map(t => [t.id, t])) : {};
+  const all = (course ? C.policies || [] : POS).filter(q => inSet(q.cat));
+  const L = all.filter(q => q.actor === st.role);
+  const roleBtns = `<div class="subtabs" role="tablist">${["student", "instructor", "staff", "all"].map(a => `<button role="tab" data-role="${a}" aria-selected="${st.role === a}">${esc(AL[a])}<span class="cnt">${all.filter(q => q.actor === a).length}</span></button>`).join("")}</div>`;
+  const layer = `<div class="seg" role="group"><button data-rlayer="inst" aria-pressed="${!course}">University, school and department policies</button><button data-rlayer="course" aria-pressed="${course}">CS course syllabi</button></div>`;
+  const card = q => course ? coursePolCard(q, CB) : posList(BYPOS.get(q.pid) || [], "role:" + q.pid);
+  const stages = M.phases.filter(p => p !== "background").concat(["background"]);
+  const tally = Object.fromEntries(DIRS.map(([d]) => [d, L.filter(q => dirOf(q, st.role) === d).length]));
+  const body = stages.map(ph => {
+    const qs = L.filter(q => q.phase === ph); if (!qs.length) return "";
+    const groups = DIRS.map(([d, lab, sub]) => { const g = qs.filter(q => dirOf(q, st.role) === d).sort((a, b) => b.n_unis - a.n_unis);
+      return g.length ? `<div class="dir dir-${d}"><h4><span class="dchip">${lab}</span><span class="note">${sub} · ${g.length}</span></h4>${g.map(card).join("")}</div>` : ""; }).join("");
+    return `<details class="ptype rolestage"><summary><div class="hd"><h3>${esc(PL[ph] || ph)}</h3><span class="note">${qs.length} ${qs.length === 1 ? "policy" : "policies"} · ${DIRS.map(([d, lab]) => { const n = qs.filter(q => dirOf(q, st.role) === d).length; return n ? `${lab} ${n}` : ""; }).filter(Boolean).join(" · ")}</span></div></summary><div class="body">${groups}</div></details>`;
+  }).join("");
+  return `${pageHead("By role", "If you are a student, an instructor, staff or an administrator: the AI policies that apply to you, stage by stage, sorted into what to do, what not to do, what you may do, and what to know.")}
+    ${csvBar("roles")}
+    <div class="toolbar">${layer}</div>
+    ${roleBtns}
+    <div class="dirsum">${DIRS.map(([d, lab, sub]) => `<div class="dir-${d}"><span class="dchip">${lab}</span><b>${tally[d]}</b><em>${sub}</em></div>`).join("")}</div>
+    <p class="note">${L.length} ${course ? "course" : "institutional"} policies address ${esc(AL[st.role].toLowerCase())}${st.role === "all" ? " (rules for the whole community)" : ""}. Open a stage to read them; open a policy to see every statement behind it. A policy's direction follows how most of its statements word it for this role.</p>
+    ${body || `<p class="empty">No policies.</p>`}`;
+}
+function render() {
+  document.getElementById("tabs").innerHTML = TABS.map(([id, l]) => `<button role="tab" aria-selected="${st.tab === id}" data-tab="${id}">${l}</button>`).join("");
+  const f = { overview: renderOverview, universities: renderUniversities, policies: renderPolicies, cpolicies: renderCoursePolicies, other: renderOther, matrix: renderMatrix,
+    courses: renderCourses, label: renderLabel, draft: renderDraft, method: renderMethod, report: renderReport, roles: renderRoles }[st.tab] || renderOverview;
+  const main = document.getElementById("main");
+  const act = document.activeElement, fid = act && act.id, sel = fid && act.selectionStart != null ? [act.selectionStart, act.selectionEnd] : null;
+  const own = ["overview", "cpolicies", "other", "method", "roles"].includes(st.tab);
+  const HEAD = { policies: ["Policy set", "The synthesized institutional policies: rules, recommendations, facts and warnings, arranged as a course unfolds."],
+    matrix: ["Matrix", "The policy set by who a policy addresses and when it applies. Select a cell to read its policies."],
+    universities: ["Universities", "Every university's documents and coded statements, with original wording."],
+    courses: ["CS course coverage", "Which of the six frame courses have a current public syllabus, and the AI passages found in them."],
+    draft: ["Draft a policy", "Answer a few questions to draft a course or department AI policy, with examples of how other universities word each part."],
+    label: ["Policy label", "Build a profile of a policy and find universities with similar ones."] };
+  main.innerHTML = focusPanel() + (own || !HEAD[st.tab] ? "" : pageHead(...HEAD[st.tab]) + csvBar(st.tab)) + f();
+  if (fid) { const el = document.getElementById(fid); if (el) { el.focus(); if (sel) try { el.setSelectionRange(...sel); } catch {} } }
+}
+document.addEventListener("click", e => {
+  const sb = e.target.closest("[data-psub],[data-csub],[data-osub],[data-olayer],[data-role],[data-rlayer]");
+  if (sb) { for (const k of ["psub", "csub", "osub", "olayer", "role", "rlayer"]) if (sb.dataset[k]) st[{ psub: "pSub", csub: "cSub", osub: "oSub", olayer: "oLayer", role: "role", rlayer: "rLayer" }[k]] = sb.dataset[k]; render(); return; }
+  const t = e.target.closest("[data-tab],[data-uni],[data-mview],[data-mcount],[data-cell],[data-gouni],[data-focus],[data-unfocus],[data-cuni],[data-more],#reset,#copyDraft,#dlDraft");
+  if (!t) return;
+  if (t.dataset.tab) { st.tab = t.dataset.tab; st.focus = null; store.set("tab", st.tab); history.replaceState(null, "", "#" + st.tab); render(); window.scrollTo(0, 0); }
+  else if (t.dataset.uni) { st.uni = t.dataset.uni; render(); }
+  else if (t.dataset.gouni) { e.preventDefault(); st.uni = t.dataset.gouni; st.tab = "universities"; st.focus = null; setHash("universities"); render(); window.scrollTo(0, 0); }
+  else if (t.dataset.focus) { e.preventDefault(); st.focus = t.dataset.focus; setHash("policy/" + encodeURIComponent(st.focus)); render(); window.scrollTo(0, 0); }
+  else if (t.dataset.more) { e.preventDefault(); st.more.has(t.dataset.more) ? st.more.delete(t.dataset.more) : st.more.add(t.dataset.more); render(); }
+  else if (t.dataset.unfocus) { st.focus = null; setHash(st.tab); render(); }
+  else if (t.dataset.cuni) { st.cuni = t.dataset.cuni; setHash("course/" + st.cuni); render(); }
+  else if (t.id === "copyDraft") { const md = window.__draftMD || ""; (navigator.clipboard ? navigator.clipboard.writeText(md) : Promise.reject()).then(() => { t.textContent = "Copied"; }).catch(() => { t.textContent = "Copy failed: select the text instead"; }); }
+  else if (t.id === "dlDraft") { const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([window.__draftMD || ""], { type: "text/markdown" })); a.download = "ai-policy-draft.md"; a.click(); }
+  else if (t.dataset.mview) { st.mView = t.dataset.mview; st.mCell = null; store.set("mView", st.mView); render(); }
+  else if (t.dataset.mcount) { st.mCount = t.dataset.mcount; render(); }
+  else if (t.dataset.cell) { st.mCell = st.mCell === t.dataset.cell ? null : t.dataset.cell; setHash(st.mCell ? "matrix/" + encodeURIComponent([st.mView, st.mLayer, st.mCell].join("~")) : "matrix"); render(); }
+  else if (t.id === "reset") { st.answers = {}; store.set("answers", {}); render(); }
+});
+document.addEventListener("keydown", e => { if ((e.key === "Enter" || e.key === " ") && e.target.dataset && e.target.dataset.cell) { e.preventDefault(); e.target.click(); } });
+document.addEventListener("input", e => {
+  const t = e.target;
+  if (t.id === "uq") { st.uq = t.value; render(); }
+  if (t.id === "pq") { st.pq = t.value; render(); }
+  if (t.id === "cq") { st.cq = t.value; render(); }
+  if (t.id === "unitName") { st.unitName = t.value; store.set("unitName", t.value); render(); }
+});
+document.addEventListener("change", e => {
+  const t = e.target;
+  if (t.id === "ustate") { st.uState = t.value; render(); }
+  if (t.id === "player") { st.pLayer = t.value; render(); }
+  if (t.id === "mlayer") { st.mLayer = t.value; st.mCell = null; render(); }
+  if (t.id === "docKind") { st.docKind = t.value; store.set("docKind", t.value); render(); }
+  if (t.name && t.name.startsWith("q-")) { st.answers[t.name.slice(2)] = t.value; store.set("answers", st.answers); render(); }
+});
+window.addEventListener("hashchange", () => { parseHash(); render(); });
+load().catch(err => { document.getElementById("main").innerHTML = `<p class="note">The corpus data could not be loaded (${esc(err.message)}). If you opened this file directly, serve the folder instead: <code>python3 -m http.server</code>.</p>`; });
+})();
+</script>
+</body>
+</html>

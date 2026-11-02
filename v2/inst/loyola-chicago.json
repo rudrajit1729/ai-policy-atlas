@@ -1,0 +1,216 @@
+{
+ "university": "Loyola University Chicago",
+ "slug": "loyola-chicago",
+ "state": "IL",
+ "type": "R1",
+ "searched": {
+  "university": "found",
+  "school": "none-found",
+  "computing": "none-found",
+  "course": "deferred"
+ },
+ "documents": [
+  {
+   "id": "loyola-chicago-statement",
+   "layer": "university",
+   "unit": "Office of the Provost, Division of Academic Affairs",
+   "course": null,
+   "title": "Statement on Academic Integrity and Use of Artificial Intelligence",
+   "url": "https://www.luc.edu/academicaffairs/homenews/statementonacademicintegrityanduseofartificialintelligence.shtml",
+   "date_or_term": "current (accessed 2026-10-25)",
+   "stance": "restrict",
+   "tiers": [],
+   "summary": "A short provost statement from August 2024. Students may not use AI-assisted technology on graded work unless faculty specifically authorize it, and faculty decide whether to allow AI and are asked to state expectations in the syllabus. The rest is integrity framing and a promise to keep reviewing.",
+   "stance_why": "The statement says \"students are not to use AI assisted technology in the classroom unless they are specifically authorized to do so by their faculty\", a default ban with faculty-granted exceptions, so restrict. It is not delegates because it sets that university-wide default itself, and it names no tiers.",
+   "units": [
+    {
+     "why": "The opening says AI tools are \"here to stay and will continue to shape our futures in education, the world of work\". It teaches no AI skill and imposes no duty, so it is a framing preamble (P56) with informs, not P44.",
+     "anchor": "These tools are here to stay and will continue to shape our futures",
+     "frag_start": "In recent months, artificial intelligence",
+     "frag_end": "science, technology, and research.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "informs",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "governance",
+      "ai-literacy-career"
+     ],
+     "resolution_why": "Coder A chose P56 (framework preamble), coder B chose P44 (nearest, since no duty to teach AI use). The source only states context that AI is lasting; it does not say courses teach AI use or that employers expect it, so P44 does not fit. P56 follows."
+    },
+    {
+     "why": "\"All of us at Loyola University Chicago have an obligation to complete our academic and scholarly work with absolute integrity and honesty\" is an institution-wide principle framing the AI rule, binding everyone, so P56 with must.",
+     "anchor": "obligation to complete our academic and scholarly work with absolute integrity and honesty",
+     "frag_start": "All of us at Loyola",
+     "frag_end": "integrity and honesty.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions",
+      "governance"
+     ],
+     "resolution_why": "Both coders agreed on codes (P56, all, general, must). Coder B wrote one normalized policy merging this obligation with the next sentence on Community Standards; the anchor alone states the obligation, so policy is null and the Community Standards sentence is a separate unit."
+    },
+    {
+     "why": "\"We must always uphold our Community Standards and academic policies\" is a principle binding everyone that ties the AI statement to existing rules. It sets no misconduct classification or sanction, so P56 with must rather than P36.",
+     "anchor": "We must always uphold our\nCommunity Standards\nand academic policies.",
+     "frag_start": "We must always uphold",
+     "frag_end": "academic policies.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "must",
+     "policy_type": "P56",
+     "unit_stance": "neutral",
+     "topics": [
+      "integrity-sanctions",
+      "governance"
+     ],
+     "resolution_why": "Coder A coded this as its own unit under P36; coder B folded it into the integrity-obligation unit under P56. The source sentence says only that everyone must uphold Community Standards and academic policies; it does not classify AI use as misconduct or name an integrity process for it, so P36 is too strong. Kept as a separate unit (distinct sentence and rule) coded P56."
+    },
+    {
+     "why": "\"students are not to use AI assisted technology in the classroom unless they are specifically authorized to do so by their faculty\" sets a university-wide default ban on graded work with faculty-granted exceptions, so P01 with must-not. P06 does not fit because the text does not address a silent syllabus.",
+     "anchor": "not to use AI assisted technology in the classroom unless they are specifically authorized",
+     "frag_start": "To maintain our culture of",
+     "frag_end": "that will be graded.",
+     "policy": null,
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "must-not",
+     "policy_type": "P01",
+     "unit_stance": "restrict",
+     "topics": [
+      "default-stance",
+      "prohibited-uses"
+     ],
+     "resolution_why": "Coder A said P01, general; coder B said P06, during-work. The source never mentions a silent syllabus: it states the default rule itself (no AI unless faculty authorize it for an assignment, test, quiz or graded deliverable). That is P01's default ban, so P01. The rule governs graded work, so phase is during-work as coder B had it."
+    },
+    {
+     "why": "\"specifically authorized to do so by their faculty for an assignment, a test, a quiz\" says AI use is allowed only when faculty authorize it for a graded item, so P04 with may.",
+     "anchor": "specifically authorized to do so by their faculty for an assignment, a test, a quiz",
+     "frag_start": "To maintain our culture of",
+     "frag_end": "that will be graded.",
+     "policy": "Students may use AI-assisted technology only when their faculty specifically authorize it for an assignment, a test, a quiz, or any deliverable that will be graded.",
+     "actor": "student",
+     "phase": "during-work",
+     "modality": "may",
+     "policy_type": "P04",
+     "unit_stance": "permit",
+     "topics": [
+      "instructor-discretion",
+      "default-stance"
+     ],
+     "resolution_why": "Only coder A split out the faculty-authorization exception; coder B treated the sentence as one default-ban unit. The source does state the permission route separately from the ban (authorization by faculty for each graded item), and it is the only student-facing statement of when AI is allowed, so the unit is kept. unit_stance is permit because this unit grants permission under a condition; the ban is in the previous unit."
+    },
+    {
+     "why": "\"Let us all make sure we are learning and sharing best practices\" asks the whole community to learn about AI tools and share practice, closest to P63 though not limited to faculty.",
+     "anchor": "Let us all make sure we are learning and sharing best practices",
+     "frag_start": "We have much to learn",
+     "frag_end": "learning for us.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P63",
+     "unit_stance": "neutral",
+     "topics": [
+      "governance",
+      "ai-literacy-career"
+     ],
+     "resolution_why": "Only coder A made this its own unit (P63); coder B merged it into the P41 unit's normalized policy. The source sentence has two clauses with distinct rules (learn and share best practices; do not let AI do the learning), so they are split. No type covers community-wide learning exactly; P63 (learning about AI to inform practice) is the nearest and is kept."
+    },
+    {
+     "why": "\"not allowing AI to do the learning for us\" limits AI because AI should not replace the learning itself, the skill-building rationale (P41) with should-not. P32 is not chosen because the sentence frames a learning aim, not who solves problems.",
+     "anchor": "not allowing AI to do the learning for us",
+     "frag_start": "Let us all make sure",
+     "frag_end": "learning for us.",
+     "policy": null,
+     "actor": "all",
+     "phase": "general",
+     "modality": "should-not",
+     "policy_type": "P41",
+     "unit_stance": "restrict",
+     "topics": [
+      "learning-rationale",
+      "accountability-understanding"
+     ],
+     "resolution_why": "Both coders agreed on all codes. Coder B's normalized policy merged in the 'sharing best practices' clause; the anchor alone states this rule, so policy is null and the other clause is its own unit."
+    },
+    {
+     "why": "\"whether you allow the use of generative AI or not in your classes is of course up to you\" leaves the allow or forbid decision to each instructor, so P04 addressed to instructors with may.",
+     "anchor": "whether you allow the use of generative AI or not in your classes",
+     "frag_start": "Faculty, whether you allow",
+     "frag_end": "up to you,",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "before-course",
+     "modality": "may",
+     "policy_type": "P04",
+     "unit_stance": "neutral",
+     "topics": [
+      "instructor-discretion"
+     ],
+     "resolution_why": "Both coders agreed on all codes; topics trimmed to the one that fits (default-stance is covered by the ban unit)."
+    },
+    {
+     "why": "\"you should include a statement in your syllabus stating your expectations regarding student use of AI\" directs faculty to state AI expectations in the syllabus, so P09 with should at course-start.",
+     "anchor": "you should include a statement in your syllabus stating your expectations",
+     "frag_start": "but you should include",
+     "frag_end": "student use of AI.",
+     "policy": null,
+     "actor": "instructor",
+     "phase": "course-start",
+     "modality": "should",
+     "policy_type": "P09",
+     "unit_stance": "neutral",
+     "topics": [
+      "syllabus-communication"
+     ],
+     "resolution_why": "Both coders agreed on all codes."
+    },
+    {
+     "why": "\"With this opportunity comes an important responsibility to honor, respect, and carry forward Loyola's proud tradition of excellence\" gives students responsibility for their own education and its integrity; P29 is the closest type, with should. The passage does not mention AI, so P32 does not fit.",
+     "anchor": "With this opportunity comes an important responsibility to honor, respect, and carry forward",
+     "frag_start": "Students, you came here",
+     "frag_end": "excellence in all that you do.",
+     "policy": null,
+     "actor": "student",
+     "phase": "general",
+     "modality": "should",
+     "policy_type": "P29",
+     "unit_stance": "neutral",
+     "topics": [
+      "accountability-understanding",
+      "learning-rationale"
+     ],
+     "resolution_why": "Both coders agreed on all codes (P29, student, general, should). Coder B's normalized policy added 'in their own education' as a gloss; replaced by a fuller anchor with policy null to avoid going beyond the text."
+    },
+    {
+     "why": "\"Loyola will continue evaluating and responding to the opportunities and challenges these tools present\" commits the university to ongoing review, so P54 with informs.",
+     "anchor": "Loyola will continue evaluating and responding to the opportunities and challenges these tools present",
+     "frag_start": "Loyola will continue evaluating",
+     "frag_end": "as they are available.",
+     "policy": null,
+     "actor": "admin",
+     "phase": "over-time",
+     "modality": "informs",
+     "policy_type": "P54",
+     "unit_stance": "neutral",
+     "topics": [
+      "policy-evolution",
+      "governance"
+     ],
+     "resolution_why": "Both coders agreed on all codes."
+    }
+   ]
+  }
+ ],
+ "new_types": [],
+ "notes": "Single short university-wide statement; no school or computing documents found, course layer deferred. Topic codes follow those used in other v2 outputs."
+}

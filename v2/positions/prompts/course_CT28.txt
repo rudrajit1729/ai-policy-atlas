@@ -1,0 +1,40 @@
+You turn CS course-syllabus statements about generative AI into COURSE POLICIES. All statements below were coded
+with one course type: CT28 "Reflection on AI use" (Reflect on how AI was used and what was learned (forms, paragraphs, retrospectives).).
+
+A policy is ONE thing a syllabus asks: WHO is asked to do WHAT, and WHEN in the course. Group statements that ask the same
+actor for the same thing, however strongly (must / should / may to do it: one policy). Keep separate: different actors
+(students vs instructor/course staff vs everyone), different actions or objects, and a prohibition vs a permission of the
+same act. Merge statements that say the same thing in different words. Usually 1-10 policies per type.
+
+For each policy give:
+  "sentence": the policy stated directly, at most 20 words, naming its actor ("Students ...", "The instructor ...",
+     "Course staff ...", "Everyone ..."); for a fact or reason state it directly ("AI-generated code is often wrong.").
+     Restate only what the statements say; add nothing. Never write "Syllabi say/state that".
+  "actor": student | instructor | ta-staff | all
+  "stage": when it applies in the course: before-course (course design, before term) | course-start (syllabus, first
+     week, setting expectations) | during-work (while students do homework, labs, projects) | during-assessment (exams,
+     quizzes, in-class tests) | when-misuse (suspected or found misuse, penalties, reporting) | over-time (policy changes,
+     revisions during or after the term) | background (definitions, reasons, facts with no time of action)
+  "about_ai": "no" only for a group of statements that are not about AI at all (generic integrity or course rules), else "yes"
+  "members": line numbers; "examples": the 3 line numbers whose wording states the policy most clearly, different universities where possible.
+Every line number 0..15 must appear in exactly one policy.
+Return ONLY this JSON, no prose, no code fence:
+{"policies": [{"sentence": "...", "actor": "...", "stage": "...", "about_ai": "yes", "members": [0, 3], "examples": [3, 0]}]}
+
+Lines: n | uni | course slot | actor | force | label (coder's) | original wording
+0 | bucknell | C4 | student | must | explain modifications to AI output | Explain how you modified AI suggestions
+1 | california-berkeley | C5 | instructor | informs | assignment includes AI usage reflection | Each assignment will have a section to reflect on your usage of GenAI.
+2 | california-berkeley | C5 | student | must | AI reflection required for credit | You must fill this out to receive credit for the assignment
+3 | james-madison | C1 | student | should | reflect on whether AI helps | the weekly reflection is a good place to think about whether it is helping you.
+4 | kansas | C4 | student | must | disclose challenges faced | The challenges or limitations you faced while using AI
+5 | north-carolina-state | C2 | student | must | must reflect on AI use | Reflect on the use of AI tools: how did it enhance learning? How did it limit learning?
+6 | north-carolina-state | C3 | student | must | must reflect on each AI session | Each conversation/session must include a brief reflection on how the AI tool enhanced and/or limited
+7 | princeton | C3 | student | should | reflect on skill growth | be reflective on whether you have improved your skills
+8 | rochester-institute-technology | C4 | student | should | invites sharing how AI is used | we want to hear from you if/how you are using, and/or benefitting from using, these technologies.
+9 | temple | C6 | student | must | explain how AI was used | You must explain how you used the AI and what you learned from it
+10 | temple | C6 | student | must | explanation as separate document | This explanation must be submitted as a separate document with your project
+11 | temple | C6 | student | must | discuss AI use in demo | You will also discuss it during your demo with the TA
+12 | uiuc | C2 | student | must | must file AI reflection form | For every graded lesson, recitation activity, and machine problem on which you use AI assistance, however minimal
+13 | uiuc | C2 | student | informs | form asks tools, purposes, learning | document which tools you used and for what purposes, what you learned from the interaction
+14 | uiuc | C2 | student | must | reflection form due next day | Submit the AI Usage Reflection Form by 23:59 Champaign local time the day after you submit the work, or on the
+15 | uiuc | C3 | student | must | cite and reflect on AI use | Then, cite any usage, and describe/reflect on how you used it to inform your work or better your understanding.
