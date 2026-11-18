@@ -4,6 +4,7 @@ Generative-AI policies at US universities and in their computer science courses,
 
 - **Site:** https://rudrajit1729.github.io/ai-policy-atlas/ (the same site runs locally: double-click `Open AI Policy Atlas.command`, or `python3 -m http.server 8792 --directory v2/site`).
 - **Report:** the site's Report tab, or `v2/exports/AI_Policy_Atlas_report.docx`.
+- **Students and instructors:** the site's Students and Instructors tabs, or `v2/exports/Student_AI_Policies.docx` and `v2/exports/Instructor_AI_Policies.docx`.
 - **Data:** every site page links its CSV (`v2/site/data/csv/`); full workbooks in `v2/exports/` (`atlas_v2.xlsx`, `course_layer.xlsx`).
 
 ## In numbers

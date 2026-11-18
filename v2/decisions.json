@@ -605,6 +605,14 @@
    "by": "PI (request), Claude (design)",
    "decision": "Policy label tab gets a 'Where you stand' map: every university as a dot (IPEDS 2022 coordinates, matched by name within state; 20 campuses pinned by IPEDS id in geo_overrides.json), colored by the share of your answers its university-wide, school and computing documents share. Clicking a dot, a 'Most similar' name or picking from the list shows that university next to your answers, decision by decision, with its match and how it ranks. 'Most similar universities' now uses the same measure (ties broken by topic overlap). Puerto Rico universities are off the map but in the list. Map libraries (d3-geo, topojson-client) and US state outlines (us-atlas) are stored in v2/site/vendor so the site works offline.",
    "rationale": "PI asked to see their relative stance against other universities on a map when clicking a university."
+  },
+  {
+   "id": "D75",
+   "date": "2026-11-18",
+   "section": "Presentation: website",
+   "by": "PI (request), Claude (design)",
+   "decision": "Students and Instructors get their own pages and their own Word documents (Student_AI_Policies.docx, Instructor_AI_Policies.docx), built by tools/build_roles.py from one data file (site/data/roles.json) so site and documents match. Each has two parts: university, school and department policies combined, and CS course policies. Each part opens with a matrix of course stage (rows, in course order) by stance (columns), each cell giving the number of policies and their themes; then the policies stage by stage, grouped by theme, each with stance, kind, number of universities, levels and an ID. Appendices give up to three original-wording statements per policy (different universities) with source links, and a link to the website, where every statement is listed (#students/inst/<id>, #students/course/<id>). Policies addressed to everyone are not repeated; they are on the Other roles page (formerly By role), which now covers staff and administrators and everyone. The summary sentences are computed from counts only.",
+   "rationale": "PI wants student and instructor policy sets that can go into a paper: chronological, organized by what policies are about, with every claim traceable to sources."
   }
  ]
 }

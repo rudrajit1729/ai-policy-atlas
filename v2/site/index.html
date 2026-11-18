@@ -131,7 +131,7 @@ input[type="search"] { width: min(280px, 100%); }
 .tag { font-size: 0.75rem; padding: 1px 8px; border-radius: 999px; background: var(--sunk); color: var(--muted); border: 1px solid var(--line); white-space: nowrap; }
 .stance { font-size: 0.75rem; font-weight: 600; padding: 1px 8px; border-radius: 999px; border: 1px solid currentColor; white-space: nowrap; }
 .st-prohibit { color: var(--s-prohibit); } .st-restrict { color: var(--s-restrict); } .st-permit { color: var(--s-permit); }
-.st-encourage { color: var(--s-encourage); } .st-require { color: var(--s-require); } .st-delegates { color: var(--s-delegates); }
+.st-encourage { color: var(--s-encourage); } .st-require { color: var(--s-require); } .st-delegates { color: var(--s-delegates); } .st-neutral { color: var(--muted); }
 .layer { font-family: var(--f-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--muted); }
 
 /* a policy: the statement, then the institution's own words under it */
@@ -283,6 +283,19 @@ h3.sub { margin: 18px 0 8px; font-size: 0.95rem; }
 .lrow .pct { font-family: var(--f-mono); font-weight: 500; }
 .lrow .ex { grid-column: 1 / -1; font-family: var(--f-quote); color: var(--muted); font-size: 0.8125rem; }
 .sim { display: grid; gap: 4px; margin-top: 8px; }
+/* D75: Students and Instructors pages */
+table.rmx th.rowh { white-space: normal; }
+table.rmx td.num { text-align: right; font-family: var(--f-mono); }
+.rstage { border: 1px solid var(--line); border-radius: var(--r); background: var(--surface); margin: 10px 0; padding: 0 14px; }
+.rstage > summary { cursor: pointer; padding: 12px 0; list-style-position: inside; }
+.rstage > summary h3 { display: inline; font-size: 1rem; margin: 0; } .rstage > summary .note { display: block; margin: 4px 0 0 1.1em; }
+.rstage.empty { padding: 10px 14px; } .rstage.empty h3 { font-size: 1rem; margin: 0 0 4px; }
+.rtheme { margin: 4px 0 14px; } .rtheme h4 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: .05em; color: var(--accent); margin: 10px 0 6px; }
+.rpol { border-top: 1px solid var(--line); padding: 7px 0; } .rpol > summary { cursor: pointer; list-style-position: outside; margin-left: 1em; }
+.rpol .rs { display: block; } .rpol .rmeta { display: block; font-size: 0.75rem; color: var(--muted); margin-top: 3px; }
+.rpol[open] { background: color-mix(in srgb, var(--accent) 4%, transparent); }
+.rquotes { margin: 6px 0 4px 1em; padding-left: 1em; font-size: 0.8125rem; } .rquotes li { margin: 5px 0; } .rquotes q { font-style: italic; }
+.rfilter { font-size: 0.875rem; background: var(--accent-soft); border-radius: 6px; padding: 6px 10px; }
 /* D74: where you stand map */
 .whmap { margin-top: 28px; }
 .whmap .mapgrid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 360px); gap: 20px; align-items: start; }
@@ -339,7 +352,7 @@ h3.sub { margin: 18px 0 8px; font-size: 0.95rem; }
 "use strict";
 // D68: the atlas is a set of pages. The policy set (rules, recommendations, facts and warnings) is what is counted; other
 // coded text (templates, descriptions, reasons, definitions, resources) has its own page and is never counted in it.
-const TABS = [["overview", "Overview"], ["report", "Report"], ["policies", "Policy set"], ["cpolicies", "CS course policies"], ["roles", "By role"], ["matrix", "Matrix"], ["other", "Other coded text"],
+const TABS = [["overview", "Overview"], ["report", "Report"], ["policies", "Policy set"], ["cpolicies", "CS course policies"], ["students", "Students"], ["instructors", "Instructors"], ["roles", "Other roles"], ["matrix", "Matrix"], ["other", "Other coded text"],
   ["universities", "Universities"], ["courses", "CS course coverage"], ["draft", "Draft a policy"], ["label", "Policy label"], ["method", "Method and reliability"]];
 const SUBS = { rr: "Rules and recommendations", fact: "Facts and warnings", template: "Templates", description: "Descriptions", other: "Reasons, definitions, resources" };
 const SUBNOTE = { rr: "What institutions or courses require, permit, forbid or advise. The core of the policy set.",
@@ -371,7 +384,8 @@ function parseHash() {
   if (h.startsWith("matrix/")) { const [v, l, c] = h.slice(7).split("~"); st.tab = "matrix"; st.mView = v || "full"; st.mLayer = l || "all"; st.mCell = c || null; }
   else if (h.startsWith("policy/")) { st.focus = h.slice(7); }
   else if (h.startsWith("course/")) { st.tab = "courses"; st.cuni = h.slice(7); }
-  else if (TABS.some(t => t[0] === h)) st.tab = h;
+  else if (/^(students|instructors)\//.test(h)) { const [t, part, pid] = h.split("/"); st.tab = t; st.rPart = part === "course" ? "course" : "inst"; st.rPid = pid || null; st.rCell = null; }
+  else if (TABS.some(t => t[0] === h)) { st.tab = h; if (h === "students" || h === "instructors") { st.rPart = "inst"; st.rCell = null; st.rPid = null; } }
 }
 function reading(html) { return `<aside class="reading"><b>Reading this view.</b> ${html}</aside>`; }
 const pct = (a, b) => b ? Math.round(100 * a / b) : 0;
@@ -871,6 +885,7 @@ function renderProse(doc) {
 const CSV = {
   overview: [["pipeline.csv", "Pipeline counts"], ["policy_set_counts.csv", "Policy set by level, group and stage"]],
   policies: [["policy_set.csv", "Policy set (institutional)"], ["policy_set_statements.csv", "Every statement behind each policy"]],
+  students: [["policy_set.csv", "Institutional policy set (column: who it addresses)"], ["course_policies.csv", "CS course policies (column: who it addresses)"], ["policy_set_statements.csv", "Statements behind institutional policies"], ["course_policy_statements.csv", "Statements behind course policies"]],
   roles: [["policy_set.csv", "Policy set (column: who it addresses)"], ["course_policies.csv", "CS course policies (column: who it addresses)"]],
   cpolicies: [["course_policies.csv", "CS course policies"], ["course_policy_statements.csv", "Every syllabus statement behind each policy"]],
   matrix: [["policy_set_counts.csv", "Matrix counts by level, group and stage"]],
@@ -1026,7 +1041,8 @@ function renderRoles() {
   const CB = course ? Object.fromEntries(((C.codebook || {}).types || []).map(t => [t.id, t])) : {};
   const all = (course ? C.policies || [] : POS).filter(q => inSet(q.cat));
   const L = all.filter(q => q.actor === st.role);
-  const roleBtns = `<div class="subtabs" role="tablist">${["student", "instructor", "staff", "all"].map(a => `<button role="tab" data-role="${a}" aria-selected="${st.role === a}">${esc(AL[a])}<span class="cnt">${all.filter(q => q.actor === a).length}</span></button>`).join("")}</div>`;
+  if (st.role === "student" || st.role === "instructor") st.role = "staff";
+  const roleBtns = `<div class="subtabs" role="tablist">${["staff", "all"].map(a => `<button role="tab" data-role="${a}" aria-selected="${st.role === a}">${esc(AL[a])}<span class="cnt">${all.filter(q => q.actor === a).length}</span></button>`).join("")}</div>`;
   const layer = `<div class="seg" role="group"><button data-rlayer="inst" aria-pressed="${!course}">University, school and department policies</button><button data-rlayer="course" aria-pressed="${course}">CS course syllabi</button></div>`;
   const card = q => course ? coursePolCard(q, CB) : posList(BYPOS.get(q.pid) || [], "role:" + q.pid);
   const stages = M.phases.filter(p => p !== "background").concat(["background"]);
@@ -1037,7 +1053,7 @@ function renderRoles() {
       return g.length ? `<div class="dir dir-${d}"><h4><span class="dchip">${lab}</span><span class="note">${sub} · ${g.length}</span></h4>${g.map(card).join("")}</div>` : ""; }).join("");
     return `<details class="ptype rolestage"><summary><div class="hd"><h3>${esc(PL[ph] || ph)}</h3><span class="note">${qs.length} ${qs.length === 1 ? "policy" : "policies"} · ${DIRS.map(([d, lab]) => { const n = qs.filter(q => dirOf(q, st.role) === d).length; return n ? `${lab} ${n}` : ""; }).filter(Boolean).join(" · ")}</span></div></summary><div class="body">${groups}</div></details>`;
   }).join("");
-  return `${pageHead("By role", "If you are a student, an instructor, staff or an administrator: the AI policies that apply to you, stage by stage, sorted into what to do, what not to do, what you may do, and what to know.")}
+  return `${pageHead("Other roles", "Staff and administrators, and policies addressed to everyone (which also apply to students and instructors): stage by stage, sorted into what to do, what not to do, what you may do, and what to know. Students and instructors have their own pages.")}
     ${csvBar("roles")}
     <div class="toolbar">${layer}</div>
     ${roleBtns}
@@ -1045,6 +1061,50 @@ function renderRoles() {
     <p class="note">${L.length} ${course ? "course" : "institutional"} policies address ${esc(AL[st.role].toLowerCase())}${st.role === "all" ? " (rules for the whole community)" : ""}. Open a stage to read them; open a policy to see every statement behind it. A policy's direction follows how most of its statements word it for this role.</p>
     ${body || `<p class="empty">No policies.</p>`}`;
 }
+// D75: Students and Instructors pages. Same structure and data as the Word documents (tools/build_roles.py -> data/roles.json):
+// two parts (university, school and department; CS courses), each a stage x stance matrix with themes, then the policies stage by stage,
+// grouped by theme; each policy opens to every statement behind it, in the institution's own words with a link to the source.
+let ROLESD = null;
+async function loadRoles() { if (!ROLESD) { ROLESD = await fetch("data/roles.json").then(r => r.json()); render(); } }
+const RDOC = { student: "Student_AI_Policies.docx", instructor: "Instructor_AI_Policies.docx" };
+function renderRolePage(rk) {
+  if (!ROLESD) { loadRoles(); return `<p class="note">Loading…</p>`; }
+  const R = ROLESD.roles[rk], SLB = ROLESD.stance_labels, who = R.label.toLowerCase();
+  const part = R.parts.find(p => p.layer === (st.rPart || "inst")) || R.parts[0];
+  const mx = Math.max(1, ...part.stages.flatMap(s => Object.values(s.cells).map(c => c.n)));
+  const [fs, fk] = (st.rCell || "").split("|");
+  const head = `<tr><th>Stage</th>${part.stances.map(k => `<th><span class="stance st-${k === "none" ? "neutral" : k}">${esc(SLB[k])}</span></th>`).join("")}<th>All</th></tr>`;
+  const body = part.stages.map(s => `<tr><th class="rowh">${esc(s.label)}</th>${part.stances.map(k => { const c = s.cells[k]; if (!c) return `<td></td>`;
+    const a = 0.08 + 0.45 * Math.sqrt(c.n / mx);
+    return `<td><div class="cell" role="button" tabindex="0" data-rcell="${s.id}|${k}" aria-pressed="${st.rCell === s.id + "|" + k}" style="background:color-mix(in srgb, var(--accent) ${Math.round(a * 100)}%, transparent)"><span class="n">${c.n}</span><ul>${c.themes.map(([l, n]) => `<li><span>${esc(l)}</span><span>${n}</span></li>`).join("")}</ul></div></td>`; }).join("")}<td class="num"><b>${s.n || "–"}</b></td></tr>`).join("");
+  const pol = q => `<details class="rpol" id="rp-${esc(q.pid)}" data-rpid="${esc(q.pid)}" ${st.rPid === q.pid ? "open" : ""}><summary><span class="rs">${esc(q.sentence)}</span>
+      <span class="rmeta"><span class="stance st-${q.stance === "none" ? "neutral" : q.stance}">${esc(SLB[q.stance])}</span> ${esc(q.kind)} · ${q.n_unis} ${q.n_unis === 1 ? "university" : "universities"}${q.levels.length ? " · " + q.levels.join(" ") : ""} · <a href="#${R.slug}/${part.layer}/${esc(q.pid)}" class="plink" title="Link to this policy">${esc(q.pid)}</a></span></summary><div class="rstm">${st.rPid === q.pid ? stmHTML(part.layer, q.pid) : ""}</div></details>`;
+  const stages = part.stages.map(s => {
+    if (!s.n) return `<section class="rstage empty"><h3>${esc(s.label)} <span class="count">0</span></h3><p class="note">No policy addressed to ${esc(who)} at this stage.</p></section>`;
+    const show = q => !fs || (s.id === fs && q.stance === fk);
+    const th = s.themes.map(t => ({ ...t, policies: t.policies.filter(show) })).filter(t => t.policies.length);
+    if (fs && s.id !== fs) return "";
+    const open = fs || (st.rPid && s.themes.some(t => t.policies.some(q => q.pid === st.rPid)));
+    return `<details class="rstage" ${open ? "open" : ""}><summary><h3>${esc(s.label)} <span class="count">${s.n} ${s.n === 1 ? "policy" : "policies"}</span></h3><span class="note">${esc(s.themes.map(t => `${t.label} (${t.policies.length})`).join(" · "))}</span></summary>
+      ${th.map(t => `<div class="rtheme"><h4>${esc(t.label)} <span class="count">${t.policies.length}</span></h4>${t.policies.map(pol).join("")}</div>`).join("")}</details>`;
+  }).join("");
+  const filt = fs ? `<p class="rfilter">Showing ${esc((part.stages.find(s => s.id === fs) || {}).label || "")} · ${esc(SLB[fk])}. <button class="linkbtn" data-rcell="">Show all stages</button></p>` : "";
+  return `${pageHead(R.label, `What university, school and department policies, and CS course syllabi, ask of ${who}: a matrix of course stage by stance, then every policy stage by stage, grouped by theme. Open a policy to read every statement behind it, with links to the sources.`)}
+    <div class="csvbar"><span>Document</span><a href="data/${RDOC[rk]}" download>${esc(R.label.slice(0, -1))} policies <span class="ext">Word</span></a></div>
+    ${csvBar("students")}
+    <div class="subtabs" role="tablist">${R.parts.map(p => `<button role="tab" data-rpart="${p.layer}" aria-selected="${p.layer === part.layer}">${esc(p.title)}<span class="cnt">${p.n}</span></button>`).join("")}</div>
+    ${reading(`${part.n} policies for ${who}, from ${part.n_statements.toLocaleString()} statements at ${part.n_unis} universities. ${part.facts.join(" ")}`)}
+    <p class="note">Rows are course stages in order; columns are each policy's stance. A cell gives the number of policies and their themes; darker cells hold more. Select a cell to list just those policies.</p>
+    <div class="mx-wrap mx-scroll" data-keep="rmatrix"><table class="mx rmx"><thead>${head}</thead><tbody>${body}</tbody></table></div>
+    <h3 class="sub" id="rlist">Policies, stage by stage</h3>${filt}${stages}`;
+}
+function stmHTML(layer, pid) {
+  const xs = layer === "course" ? (CSTM.get(pid) || []).map(x => ({ anchor: x.anchor, uni: x.uni, link: x.link, where: x.course || x.slot }))
+    : P.filter(x => x.pos === pid && x.about_ai === "yes").map(x => ({ anchor: x.anchor, uni: (uniBySlug.get(x.uni) || {}).name || x.uni, link: x.link, where: LL[x.layer] }));
+  xs.sort((a, b) => a.uni.localeCompare(b.uni));
+  return `<p class="note">${xs.length} ${xs.length === 1 ? "statement" : "statements"} in the institutions' own words:</p><ul class="rquotes">${xs.map(x => `<li><q>${esc(x.anchor)}</q> <span class="note">${esc(x.uni)}${x.where ? " · " + esc(x.where) : ""} · <a href="${esc(x.link)}" target="_blank" rel="noopener">source ↗</a></span></li>`).join("")}</ul>`;
+}
+document.addEventListener("toggle", e => { const d = e.target; if (d.matches && d.matches("details.rpol") && d.open) { const b = d.querySelector(".rstm"); if (b && !b.innerHTML) b.innerHTML = stmHTML(st.rPart || "inst", d.dataset.rpid); } }, true);
 function fitMatrix() {
   for (const w of document.querySelectorAll(".mx-scroll")) { w.classList.remove("boxed"); w.classList.toggle("boxed", innerWidth < 900 || w.scrollWidth > w.clientWidth + 1); }
 }
@@ -1052,10 +1112,10 @@ addEventListener("resize", () => { clearTimeout(fitMatrix.t); fitMatrix.t = setT
 function render() {
   document.getElementById("tabs").innerHTML = TABS.map(([id, l]) => `<button role="tab" aria-selected="${st.tab === id}" data-tab="${id}">${l}</button>`).join("");
   const f = { overview: renderOverview, universities: renderUniversities, policies: renderPolicies, cpolicies: renderCoursePolicies, other: renderOther, matrix: renderMatrix,
-    courses: renderCourses, label: renderLabel, draft: renderDraft, method: renderMethod, report: renderReport, roles: renderRoles }[st.tab] || renderOverview;
+    courses: renderCourses, label: renderLabel, draft: renderDraft, method: renderMethod, report: renderReport, roles: renderRoles, students: () => renderRolePage("student"), instructors: () => renderRolePage("instructor") }[st.tab] || renderOverview;
   const main = document.getElementById("main");
   const act = document.activeElement, fid = act && act.id, sel = fid && act.selectionStart != null ? [act.selectionStart, act.selectionEnd] : null;
-  const own = ["overview", "cpolicies", "other", "method", "roles"].includes(st.tab);
+  const own = ["overview", "cpolicies", "other", "method", "roles", "students", "instructors"].includes(st.tab);
   const HEAD = { policies: ["Policy set", "The synthesized institutional policies: rules, recommendations, facts and warnings, arranged as a course unfolds."],
     matrix: ["Matrix", "The policy set by who a policy addresses and when it applies. Select a cell to read its policies."],
     universities: ["Universities", "Every university's documents and coded statements, with original wording."],
@@ -1072,13 +1132,17 @@ function render() {
   if (fid) { const el = document.getElementById(fid); if (el) { el.focus(); if (sel) try { el.setSelectionRange(...sel); } catch {} } }
 }
 document.addEventListener("click", e => {
+  const rc = e.target.closest("[data-rcell],[data-rpart]");
+  if (rc) { if (rc.dataset.rpart) { st.rPart = rc.dataset.rpart; st.rCell = null; st.rPid = null; setHash(st.tab + "/" + st.rPart); }
+    else { st.rCell = rc.dataset.rcell && st.rCell !== rc.dataset.rcell ? rc.dataset.rcell : null; st.rPid = null; }
+    render(); if (rc.dataset.rcell) document.getElementById("rlist")?.scrollIntoView({ behavior: "smooth", block: "start" }); return; }
   const mu = e.target.closest("[data-mapuni]");
   if (mu) { e.preventDefault(); st.mapUni = mu.dataset.mapuni; render(); return; }
   const sb = e.target.closest("[data-psub],[data-csub],[data-osub],[data-olayer],[data-role],[data-rlayer]");
   if (sb) { for (const k of ["psub", "csub", "osub", "olayer", "role", "rlayer"]) if (sb.dataset[k]) st[{ psub: "pSub", csub: "cSub", osub: "oSub", olayer: "oLayer", role: "role", rlayer: "rLayer" }[k]] = sb.dataset[k]; render(); return; }
   const t = e.target.closest("[data-tab],[data-uni],[data-mview],[data-mcount],[data-cell],[data-gouni],[data-focus],[data-unfocus],[data-cuni],[data-more],#reset,#copyDraft,#dlDraft");
   if (!t) return;
-  if (t.dataset.tab) { st.tab = t.dataset.tab; st.focus = null; store.set("tab", st.tab); history.replaceState(null, "", "#" + st.tab); render(); window.scrollTo(0, 0); }
+  if (t.dataset.tab) { st.tab = t.dataset.tab; st.focus = null; st.rPart = "inst"; st.rCell = null; st.rPid = null; store.set("tab", st.tab); history.replaceState(null, "", "#" + st.tab); render(); window.scrollTo(0, 0); }
   else if (t.dataset.uni) { st.uni = t.dataset.uni; render(); }
   else if (t.dataset.gouni) { e.preventDefault(); st.uni = t.dataset.gouni; st.tab = "universities"; st.focus = null; setHash("universities"); render(); window.scrollTo(0, 0); }
   else if (t.dataset.focus) { e.preventDefault(); st.focus = t.dataset.focus; setHash("policy/" + encodeURIComponent(st.focus)); render(); window.scrollTo(0, 0); }
@@ -1092,7 +1156,7 @@ document.addEventListener("click", e => {
   else if (t.dataset.cell) { st.mCell = st.mCell === t.dataset.cell ? null : t.dataset.cell; setHash(st.mCell ? "matrix/" + encodeURIComponent([st.mView, st.mLayer, st.mCell].join("~")) : "matrix"); render(); }
   else if (t.id === "reset") { st.answers = {}; store.set("answers", {}); render(); }
 });
-document.addEventListener("keydown", e => { if (e.key === "Escape" && st.tab === "matrix" && st.mCell) { st.mCell = null; setHash("matrix"); render(); return; } if ((e.key === "Enter" || e.key === " ") && e.target.dataset && e.target.dataset.cell) { e.preventDefault(); e.target.click(); } });
+document.addEventListener("keydown", e => { if ((e.key === "Enter" || e.key === " ") && e.target.dataset && e.target.dataset.rcell != null && e.target.classList.contains("cell")) { e.preventDefault(); e.target.click(); return; } if (e.key === "Escape" && st.tab === "matrix" && st.mCell) { st.mCell = null; setHash("matrix"); render(); return; } if ((e.key === "Enter" || e.key === " ") && e.target.dataset && e.target.dataset.cell) { e.preventDefault(); e.target.click(); } });
 document.addEventListener("input", e => {
   const t = e.target;
   if (t.id === "uq") { st.uq = t.value; render(); }
