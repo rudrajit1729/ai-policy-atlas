@@ -637,6 +637,14 @@
    "by": "PI (request), Claude (design)",
    "decision": "Site design refresh: light header instead of a solid colour band, editorial type scale, quieter tabs, cards with soft shadows, a prominent Word download button on role pages; role matrices fit their columns (cells no longer overflow); cells show the top 3 groups and '+N more'; selecting a cell opens its policies in a side panel. CS course coverage page explains that CS1 and CS2 are curriculum roles (first and second programming course), not course numbers, and that each university's own course is recorded.",
    "rationale": "PI: the matrix overlapped, the design looked unfinished, and CS1/CS2 labels were unclear."
+  },
+  {
+   "id": "D79",
+   "date": "2026-11-18",
+   "section": "Analysis: thematic grouping",
+   "by": "PI (request), Claude (design)",
+   "decision": "Role documents and pages: (1) the two halves are named by level, 'University, school and department level' and 'CS course level', in headings and tables; (2) group labels rewritten to say what the policies ask (e.g. 'Keep private data and course materials from AI', 'Use AI to study, practice and understand material'); (3) near-duplicate policies inside a group are shown as one entry led by the most widespread policy, with the others as variants and a short note on how each differs (235 variants under 149 leads; v2/role_items.json via tools/assemble_role_items.py). Analysts refused to collapse them into one sentence because they differ in force, scope or condition (one identical pair was merged). A variant is split back into its own entry when lead and variant point in opposite directions (ban versus permission) and in 5 manual cases where a ban sat under a softer limit (e.g. 'do not use AI detectors' under 'do not treat a detector as sole evidence'); 7 splits in all. (4) Of the 124 policies whose sentence never names AI, 78 have AI-related sources and their directive now says so; 46 are general integrity or procedural rules restated in AI documents and are tagged 'general rule'. Policy P22.03 now names AI (4 of its 8 universities do). (5) Word: policies sit in a table under each stage with theme rows; appendices are lookup tables (ID, policy, where it sits, original wording with source links, website link). (6) Stance paragraphs written for staff and administrators and for everyone (checked with check_role_prose.py). Policy counts are unchanged.",
+   "rationale": "PI: theme names unclear, redundancy inside themes, some policies did not read as AI policies, parts should be named by level, and the appendix should work as a lookup table."
   }
  ]
 }

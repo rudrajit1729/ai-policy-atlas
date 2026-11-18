@@ -393,6 +393,8 @@ table.rmx th.rowh .rdef { display: block; font-weight: 400; font-size: 0.6875rem
 .rgroup h5 { margin: 8px 0 2px; font-size: 0.875rem; font-weight: 600; color: var(--ink); }
 .rpol { border-top: 1px solid var(--line); padding: 8px 0; }
 .rpol .rs { font-weight: 500; }
+.rvars { display: grid; gap: 2px; margin: 4px 0 2px; } .rvar { font-size: 0.75rem; color: var(--muted); padding-left: 10px; border-left: 2px solid var(--line); } .rvar b { font-weight: 600; }
+.gtag { font: 500 0.6875rem var(--f-ui); color: #8a6d3b; border: 1px solid #e3d3b0; background: #fbf6ea; border-radius: 99px; padding: 0 7px; white-space: nowrap; vertical-align: 1px; }
 .drawer.side .rgroup h5 { margin-top: 14px; }
 .drawer.side { grid-template-columns: minmax(0, 1fr); } .drawer.side .dhead .count { white-space: normal; } .drawer.side .dhead .row h3 { min-width: 0; } .drawer.side .rpol, .drawer.side .rs { min-width: 0; overflow-wrap: anywhere; }
 </style>
@@ -447,7 +449,7 @@ function parseHash() {
   if (h.startsWith("matrix/")) { const [v, l, c] = h.slice(7).split("~"); st.tab = "matrix"; st.mView = v || "full"; st.mLayer = l || "all"; st.mCell = c || null; }
   else if (h.startsWith("policy/")) { st.focus = h.slice(7); }
   else if (h.startsWith("course/")) { st.tab = "courses"; st.cuni = h.slice(7); }
-  else if (/^(students|instructors)\//.test(h)) { const [t, part, pid] = h.split("/"); st.tab = t; st.rPart = part === "course" ? "course" : "inst"; st.rPid = pid || null; st.rCell = null; }
+  else if (/^(students|instructors)\//.test(h)) { const [t, part, pid] = h.split("/"); st.tab = t; st.rPart = part === "course" ? "course" : "inst"; st.rPid = pid || null; st.rCell = null; st.rScroll = !!pid; }
   else if (TABS.some(t => t[0] === h)) { st.tab = h; if (h === "students" || h === "instructors") { st.rPart = "inst"; st.rCell = null; st.rPid = null; } }
 }
 function reading(html) { return `<aside class="reading"><b>Reading this view.</b> ${html}</aside>`; }
@@ -1117,16 +1119,16 @@ function renderRolePage(rk, roleTabs) {
   const plural = (n, a, b) => `${n} ${n === 1 ? a : b}`;
   const chip = k => `<span class="stance st-${k === "none" ? "neutral" : k}">${esc(SLB[k])}</span>`;
   const stageOf = (x, g) => x.stages.find(s => s.id === g);
-  const groupsOf = g => g.groups && g.groups.length ? g.groups.map(gr => ({ label: gr.label, policies: gr.pids.map(id => g.policies.find(q => q.pid === id)).filter(Boolean) })) : [{ label: "", policies: g.policies }];
+
   const head = `<tr><th>Stance</th>${STGS.map(([g, l]) => `<th>${esc(l)}</th>`).join("")}<th class="num">All</th></tr>`;
   const body = part.stances.map(x => `<tr><th class="rowh">${chip(x.id)}<span class="rdef">${esc(x.def)}</span></th>${STGS.map(([g]) => { const c = part.matrix[x.id][g]; if (!c.n) return `<td></td>`;
-    const sg = stageOf(x, g), labs = sg.groups && sg.groups.length ? sg.groups.map(gr => [gr.label, gr.pids.length]) : c.themes;
+    const sg = stageOf(x, g), labs = sg.groups.filter(gr => gr.label).map(gr => [gr.label, gr.n]);
     const a = 0.07 + 0.42 * Math.sqrt(c.n / mx), k = x.id + "|" + g;
     return `<td><div class="cell" role="button" tabindex="0" data-rcell="${k}" aria-pressed="${st.rCell === k}" style="background:color-mix(in srgb, var(--accent) ${Math.round(a * 100)}%, transparent)"><span class="n">${c.n}</span><ul>${labs.slice(0, 3).map(([l, n]) => `<li><span>${esc(l)}</span><span>${n}</span></li>`).join("")}${labs.length > 3 ? `<li class="more"><span>+${labs.length - 3} more</span></li>` : ""}</ul></div></td>`; }).join("")}<td class="num"><b>${x.n}</b></td></tr>`).join("")
     + `<tr class="tot"><th class="rowh">All stances</th>${STGS.map(([g]) => `<td class="num">${part.stage_n[g] || "–"}</td>`).join("")}<td class="num"><b>${part.n}</b></td></tr>`;
-  const pol = q => `<details class="rpol" id="rp-${esc(q.pid)}" data-rpid="${esc(q.pid)}" data-rlayer="${part.layer}" ${st.rPid === q.pid ? "open" : ""}><summary><span class="rs">${esc(q.directive || q.sentence)}</span>
-      <span class="rmeta">${esc(q.kind)} · ${plural(q.n_unis, "university", "universities")}, ${plural(q.n, "statement", "statements")}${q.levels.length ? " · " + q.levels.join(" ") : ""} · <a href="#${R.slug}/${part.layer}/${esc(q.pid)}" class="plink" title="Link to this policy">${esc(q.pid)}</a></span></summary><div class="rstm">${st.rPid === q.pid ? stmHTML(part.layer, q.pid) : ""}</div></details>`;
-  const groupsHTML = g => groupsOf(g).map(gr => `<div class="rgroup">${gr.label ? `<h5>${esc(gr.label)} <span class="count">${gr.policies.length}</span></h5>` : ""}${gr.policies.map(pol).join("")}</div>`).join("");
+  const item = it => `<details class="rpol${it.general ? " general" : ""}" id="rp-${esc(it.ids[0])}" data-rids="${esc(it.ids.join(","))}" data-rlayer="${part.layer}" ${it.ids.includes(st.rPid) ? "open" : ""}><summary><span class="rs">${esc(it.directive)}${it.general ? ` <span class="gtag" title="A general academic-integrity or procedural rule restated in an AI document">general rule</span>` : ""}</span>${it.variants && it.variants.length ? `<span class="rvars">${it.variants.map(v => `<span class="rvar" title="${esc(v.directive)}"><b>Variant:</b> ${esc(v.differs)} · ${plural(v.n_unis, "university", "universities")} · ${esc(v.id)}</span>`).join("")}</span>` : ""}
+      <span class="rmeta">${esc(it.kind)} · ${plural(it.n_unis, "university", "universities")}, ${plural(it.n, "statement", "statements")}${it.levels.length ? " · " + it.levels.join(" ") : ""} · ${it.ids.map(id => `<a href="#${R.slug}/${part.layer}/${esc(id)}" class="plink" title="Link to this policy">${esc(id)}</a>`).join(", ")}</span></summary><div class="rstm">${it.ids.includes(st.rPid) ? it.ids.map(id => stmHTML(part.layer, id)).join("") : ""}</div></details>`;
+  const groupsHTML = g => g.groups.map(gr => `<div class="rgroup">${gr.label ? `<h5>${esc(gr.label)} <span class="count">${plural(gr.n, "policy", "policies")}</span></h5>` : ""}${gr.items.map(item).join("")}</div>`).join("");
   let panel = "";
   if (st.rCell) {
     const [sk, g] = st.rCell.split("|"), x = part.stances.find(s => s.id === sk), sg = x && stageOf(x, g);
@@ -1152,7 +1154,7 @@ function stmHTML(layer, pid) {
   xs.sort((a, b) => a.uni.localeCompare(b.uni));
   return `<p class="note">${xs.length} ${xs.length === 1 ? "statement" : "statements"} in the institutions' own words:</p><ul class="rquotes">${xs.map(x => `<li><q>${esc(x.anchor)}</q> <span class="note">${esc(x.uni)}${x.where ? " · " + esc(x.where) : ""} · <a href="${esc(x.link)}" target="_blank" rel="noopener">source ↗</a></span></li>`).join("")}</ul>`;
 }
-document.addEventListener("toggle", e => { const d = e.target; if (d.matches && d.matches("details.rpol") && d.open) { const b = d.querySelector(".rstm"); if (b && !b.innerHTML) b.innerHTML = stmHTML(d.dataset.rlayer || st.rPart || "inst", d.dataset.rpid); } }, true);
+document.addEventListener("toggle", e => { const d = e.target; if (d.matches && d.matches("details.rpol") && d.open) { const b = d.querySelector(".rstm"); if (b && !b.innerHTML) b.innerHTML = (d.dataset.rids || d.dataset.rpid || "").split(",").map(id => stmHTML(d.dataset.rlayer || st.rPart || "inst", id)).join(""); } }, true);
 function fitMatrix() {
   for (const w of document.querySelectorAll(".mx-scroll")) { w.classList.remove("boxed"); w.classList.toggle("boxed", innerWidth < 900 || w.scrollWidth > w.clientWidth + 1); }
 }
@@ -1175,6 +1177,7 @@ function render() {
   const tb = document.querySelector(".tabbar"); if (tb) document.documentElement.style.setProperty("--tabh", tb.offsetHeight + "px");
   main.innerHTML = focusPanel() + (own || !HEAD[st.tab] ? "" : pageHead(...HEAD[st.tab]) + csvBar(st.tab)) + f();
   fitMatrix();
+  if (st.rScroll && ROLESD) { const el = [...document.querySelectorAll("details.rpol")].find(d => (d.dataset.rids || "").split(",").includes(st.rPid)); if (el) { st.rScroll = false; requestAnimationFrame(() => el.scrollIntoView({ block: "center" })); } }
   scrollTo(scrollX, y);
   for (const el of document.querySelectorAll("[data-keep]")) { const k = keep.get(el.dataset.keep); if (k) [el.scrollTop, el.scrollLeft] = k; }
   if (fid) { const el = document.getElementById(fid); if (el) { el.focus(); if (sel) try { el.setSelectionRange(...sel); } catch {} } }

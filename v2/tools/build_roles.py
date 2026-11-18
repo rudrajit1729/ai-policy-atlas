@@ -91,6 +91,9 @@ def build():
     # D77: sub-groups inside a stance x stage cell from the three-member thematic council, and directive wording addressed to the reader
     GROUPS = json.loads((V2 / "role_groups.json").read_text())["cells"] if (V2 / "role_groups.json").exists() else {}
     DIRV = json.loads((V2 / "role_directives.json").read_text()) if (V2 / "role_directives.json").exists() else {}
+    # D79: near-duplicates merged inside each group into one item, clearer group labels, AI link for policies that never say AI
+    RI = json.loads((V2 / "role_items.json").read_text()) if (V2 / "role_items.json").exists() else {"cells": {}, "ai_link": {}}
+    ITEMS, AIL = RI["cells"], RI["ai_link"]
     roles = {}
     for rk, rl, slug in ROLES:
         parts = []
@@ -111,12 +114,39 @@ def build():
                     G = sorted((q for q in S if q["phase"] == g), key=lambda q: (-q["n_unis"], -q["n"]))
                     if G:
                         matrix[s][g] = {"n": len(G), "themes": [[thl.get(t, "Other"), n] for t, n in Counter(theme_of(q) for q in G).most_common()]}
-                        gr = GROUPS.get(f"{rk}|{layer}|{s}|{g}", [])
-                        stages.append({"id": g, "label": STAGE_NOTE[g], "groups": gr, "policies": [{
-                            "pid": q["pid"], "sentence": q["sentence"], "directive": DIRV.get(q["pid"], ""), "stance": s, "stage": g, "theme": thl.get(theme_of(q), "Other"), "kind": kind(q),
-                            "n_unis": q["n_unis"], "n": len(sts(q)), "levels": [LEVN[l] for l in q.get("levels", [])], "examples": ex(q)} for q in G]})
+                        ck = f"{rk}|{layer}|{s}|{g}"
+                        pols = [{"pid": q["pid"], "sentence": q["sentence"], "directive": (AIL.get(q["pid"], {}).get("directive") or DIRV.get(q["pid"], "")),
+                                 "general": AIL.get(q["pid"], {}).get("class") == "general", "stance": s, "stage": g, "theme": thl.get(theme_of(q), "Other"), "kind": kind(q),
+                                 "n_unis": q["n_unis"], "n": len(sts(q)), "levels": [LEVN[l] for l in q.get("levels", [])], "examples": ex(q)} for q in G]
+                        byq = {q["pid"]: q for q in G}
+                        bypol = {x["pid"]: x for x in pols}
+                        if ck in ITEMS:
+                            gl = ITEMS[ck]
+                        else:
+                            gl = [{"label": gr["label"], "items": [{"pids": [i], "directive": ""} for i in gr["pids"]]} for gr in GROUPS.get(ck, [])] or [{"label": "", "items": [{"pids": [x["pid"]], "directive": ""} for x in pols]}]
+                        groups = []
+                        for gr in gl:
+                            its = []
+                            for it in gr["items"]:
+                                qs = [byq[i] for i in it["pids"]]
+                                ps = [bypol[i] for i in it["pids"]]
+                                exs, seen = [], set()
+                                for x in ps:
+                                    for e in x["examples"]:
+                                        if e["uni"] not in seen and len(exs) < 3:
+                                            seen.add(e["uni"])
+                                            exs.append(e)
+                                vs = [{"id": v["pid"], "differs": v["differs"], "n_unis": bypol[v["pid"]]["n_unis"], "directive": bypol[v["pid"]]["directive"] or bypol[v["pid"]]["sentence"]}
+                                      for v in it.get("variants", [])]
+                                its.append({"ids": it["pids"], "directive": it.get("directive") or ps[0]["directive"] or ps[0]["sentence"], "variants": vs,
+                                            "n_unis": len({x["uni"] for q in qs for x in sts(q)}), "n": sum(len(sts(q)) for q in qs),
+                                            "kind": ", ".join(dict.fromkeys(x["kind"] for x in ps)), "levels": [l for l in ("U", "S", "C") if any(l in x["levels"] for x in ps)],
+                                            "general": all(x["general"] for x in ps), "examples": exs})
+                            its.sort(key=lambda t: (t["general"], -t["n_unis"], -t["n"]))
+                            groups.append({"label": gr["label"], "n": sum(len(t["ids"]) for t in its), "items": its})
+                        stages.append({"id": g, "label": STAGE_NOTE[g], "groups": groups, "policies": pols})
                 stances.append({"id": s, "label": STANCE[s], "def": SDEF[s], "n": len(S), "n_unis": unis(S), "prose": pr.get("stances", {}).get(s, ""), "stages": stages})
-            parts.append({"layer": layer, "title": "University, school and department policies" if layer == "inst" else "CS course policies",
+            parts.append({"layer": layer, "title": "University, school and department level" if layer == "inst" else "CS course level",
                           "n": len(L), "n_statements": sum(len(sts(q)) for q in L), "n_unis": unis(L), "intro": pr.get("intro", ""),
                           "stage_n": {g: sum(1 for q in L if q["phase"] == g) for g, _ in STG}, "stance_order": [x["id"] for x in stances],
                           "matrix": {s: matrix[s] for s in (x["id"] for x in stances)}, "stances": stances})
@@ -227,15 +257,15 @@ def docx_for(data, rk):
     doc.add_heading("About this document", 1)
     for t in [
         f"This document lists every policy that US university documents and CS course syllabi address to {who}. It draws on {M['n_documents']} university-wide, school and department documents from {M['n_universities']} universities, and on {cpas} AI passages in CS syllabi at {cuni} of those universities.",
-        f"A policy is one thing asked of one group. Statements that ask {who} to do the same thing are merged into one policy, whether they say must or should and however they are worded. The policy sentence summarizes those statements. Appendices A and B quote the original wording with links to the sources, and the website lists every statement behind each policy.",
-        "Part 1 combines university-wide, school and department documents; Part 2 covers CS course syllabi. Within each part, policies are grouped by stance, that is, what the policy does about AI use. Within a stance, they follow the course from before it starts to after it ends.",
-        "Each policy ends with its theme, whether it is a rule, a recommendation or a fact, and two counts. \u201c13 universities, 15 statements\u201d means that 15 statements from 13 different universities were merged into the policy; a university counts once however many of its documents state it. Levels: U university-wide, S school or college, C computing department. The ID links to the policy's sources in the appendix.",
+        f"A policy is one thing asked of one group. Statements that ask {who} to do the same thing are merged into one policy, whether they say must or should and however they are worded. Each policy here is written as a directive to the reader. Appendices A and B are lookup tables: for every policy ID they quote the original wording, with links to the sources, and the website lists every statement behind each policy.",
+        "The document has two levels. The university, school and department level combines university-wide, school or college, and computing department documents. The CS course level covers CS course syllabi. Within each level, policies are grouped by stance, that is, what the policy does about AI use; within a stance, they follow the course from before it starts to after it ends; within a stage, they are grouped by what they ask. The groups come from a thematic analysis by three independent coders, and policies that asked the same thing within a group were combined into one entry.",
+        "Each entry gives the kind (rule, recommendation, or fact or warning), two counts, the levels, and the policy ID or IDs. \u201c13 universities, 15 statements\u201d means that 15 statements from 13 different universities stand behind the entry; a university counts once however many of its documents state it. Levels: U university-wide, S school or college, C computing department. Each ID links to its row in the appendix. Entries marked \u201cgeneral rule\u201d restate an academic-integrity or procedural rule inside an AI document without being specific to AI.",
         f"Policies addressed to everyone in a university also apply to {who}. They are not repeated here; the website lists them on its Other roles page."]:
         doc.add_paragraph(t)
     parts = R["parts"]
     t = doc.add_table(rows=1, cols=4)
     t.style = "Table Grid"
-    for c, v in zip(t.rows[0].cells, ["Stance", "What the policy does about AI use", "Part 1", "Part 2"]):
+    for c, v in zip(t.rows[0].cells, ["Stance", "What the policy does about AI use", "University, school, department", "CS course"]):
         c.text = ""
         run(c.paragraphs[0], v, bold=True, size=8.5)
         shade(c, "EEEEEE")
@@ -255,26 +285,41 @@ def docx_for(data, rk):
         for c, w in zip(row.cells, (1.4, 3.9, 0.6, 0.6)):
             c.width = Inches(w)
 
-    for i, part in enumerate(parts, 1):
+    def cellset(c, text, bold=False, italic=False, size=8.5, color=None):
+        c.text = ""
+        run(c.paragraphs[0], text, bold=bold, italic=italic, size=size, color=color)
+
+    def header(t, cols):
+        for c, v in zip(t.rows[0].cells, cols):
+            cellset(c, v, bold=True, size=8)
+            shade(c, "EEEEEE")
+        tr = t.rows[0]._tr.get_or_add_trPr()
+        e = OxmlElement("w:tblHeader")
+        e.set(qn("w:val"), "true")
+        tr.append(e)
+
+    def widths(t, ws):
+        for row in t.rows:
+            for c, w in zip(row.cells, ws):
+                c.width = Inches(w)
+
+    for i, part in enumerate(parts):
+        lev = part["title"]
         landscape(True)
-        doc.add_heading(f"Part {i}. {part['title']} for {who}", 1)
+        doc.add_heading(f"{lev}: policies for {who}", 1)
         p = doc.add_paragraph()
         run(p, part["intro"] or f"{plural(part['n'], 'policy', 'policies')} from {part['n_statements']:,} statements at {part['n_unis']} universities.")
         p = doc.add_paragraph()
         run(p, "On the website: ", size=9, color="5B6570")
         link(p, f"{url}/{part['layer']}", f"{url}/{part['layer']}", size=9)
         stg = [g for g, _ in data["stages"]]
-        mx = max([c["n"] for s in part["matrix"].values() for c in s.values()] or [1])
+        mx = max([c["n"] for s_ in part["matrix"].values() for c in s_.values()] or [1])
         t = doc.add_table(rows=1, cols=len(stg) + 2)
         t.style = "Table Grid"
-        for c, v in zip(t.rows[0].cells, ["Stance"] + [SHORT[g] for g in stg] + ["All"]):
-            c.text = ""
-            run(c.paragraphs[0], v, bold=True, size=8)
-            shade(c, "EEEEEE")
+        header(t, [f"{lev}: stance"] + [SHORT[g] for g in stg] + ["All"])
         for x in part["stances"]:
             cells = t.add_row().cells
-            cells[0].text = ""
-            run(cells[0].paragraphs[0], x["label"], bold=True, size=8)
+            cellset(cells[0], x["label"], bold=True, size=8)
             for c, g in zip(cells[1:], stg):
                 c.text = ""
                 cell = part["matrix"][x["id"]][g]
@@ -282,75 +327,97 @@ def docx_for(data, rk):
                     continue
                 run(c.paragraphs[0], str(cell["n"]), bold=True, size=9)
                 sg = next(z for z in x["stages"] if z["id"] == g)
-                for lab, n in ([[gr["label"], len(gr["pids"])] for gr in sg["groups"]] if sg["groups"] else cell["themes"]):
+                for gr in sg["groups"]:
+                    if not gr["label"]:
+                        continue
                     q = c.add_paragraph()
                     q.paragraph_format.space_after = Pt(0)
-                    run(q, f"{lab} ({n})", size=7)
+                    run(q, f"{gr['label']} ({gr['n']})", size=7)
                 shade(c, mix(0.08 + 0.5 * (cell["n"] / mx) ** 0.5))
-            cells[-1].text = ""
-            run(cells[-1].paragraphs[0], str(x["n"]), bold=True, size=9)
+            cellset(cells[-1], str(x["n"]), bold=True, size=9)
         cells = t.add_row().cells
         for c, v in zip(cells, ["All stances"] + [str(part["stage_n"][g] or "–") for g in stg] + [str(part["n"])]):
-            c.text = ""
-            run(c.paragraphs[0], v, bold=True, size=8.5)
+            cellset(c, v, bold=True, size=8.5)
         for row in t.rows:
-            row.cells[0].width = Inches(1.25)
+            row.cells[0].width = Inches(1.3)
         p = doc.add_paragraph()
-        run(p, "Each cell: number of policies, then the groups they fall into, with counts. Darker cells hold more policies; empty cells have none.", italic=True, size=8, color="5B6570")
+        run(p, f"{lev}. Rows are stances and columns follow the course. Each cell: number of policies, then the groups they fall into, with counts. Darker cells hold more policies; empty cells have none.", italic=True, size=8, color="5B6570")
         landscape(False)
         for x in part["stances"]:
-            doc.add_heading(f"{x['label']}: {plural(x['n'], 'policy', 'policies')}, {plural(x['n_unis'], 'university', 'universities')}", 2)
+            doc.add_heading(f"{lev} · {x['label']}: {plural(x['n'], 'policy', 'policies')}, {plural(x['n_unis'], 'university', 'universities')}", 2)
             p = doc.add_paragraph()
             run(p, x["def"] + " ", italic=True, color="5B6570")
             if x["prose"]:
                 run(p, x["prose"])
             for g in x["stages"]:
                 p = doc.add_paragraph()
-                p.paragraph_format.space_before = Pt(6)
-                p.paragraph_format.space_after = Pt(2)
-                run(p, f"{g['label']} ({len(g['policies'])})", bold=True, size=9.5, color="1F5F8B")
-                byid = {q["pid"]: q for q in g["policies"]}
-                for gr in (g["groups"] or [{"label": "", "pids": [q["pid"] for q in g["policies"]]}]):
+                p.paragraph_format.space_before = Pt(8)
+                p.paragraph_format.space_after = Pt(3)
+                p.paragraph_format.keep_with_next = True
+                run(p, f"{g['label']} ({plural(len(g['policies']), 'policy', 'policies')})", bold=True, size=10, color="1F5F8B")
+                t = doc.add_table(rows=1, cols=4)
+                t.style = "Table Grid"
+                header(t, ["Policy", "Kind", "Universities (statements) · levels", "ID"])
+                for gr in g["groups"]:
                     if gr["label"]:
-                        p = doc.add_paragraph()
-                        p.paragraph_format.space_before = Pt(3)
-                        p.paragraph_format.space_after = Pt(1)
-                        p.paragraph_format.left_indent = Inches(0.1)
-                        run(p, f"{gr['label']} ({len(gr['pids'])})", bold=True, italic=True, size=9)
-                    for q in (byid[i] for i in gr["pids"] if i in byid):
-                      p = doc.add_paragraph(style="List Bullet")
-                      p.paragraph_format.space_after = Pt(1)
-                      run(p, (q["directive"] or q["sentence"]) + " ")
-                      run(p, f"{q['kind']} · {plural(q['n_unis'], 'university', 'universities')}, {plural(q['n'], 'statement', 'statements')}"
-                        + (f" · {' '.join(q['levels'])}" if q["levels"] else "") + " · ", size=8.5, color="5B6570")
-                      link(p, bid(q["pid"]), q["pid"], size=8.5, anchor=True)
+                        row = t.add_row()
+                        c = row.cells[0].merge(row.cells[-1])
+                        cellset(c, f"{gr['label']} ({plural(gr['n'], 'policy', 'policies')})", bold=True, size=8.5, color="1F5F8B")
+                        shade(c, "F3F1EC")
+                    for it in gr["items"]:
+                        cells = t.add_row().cells
+                        cellset(cells[0], it["directive"], size=8.5)
+                        if it["general"]:
+                            run(cells[0].paragraphs[0], "  general rule", italic=True, size=7.5, color="8A6D3B")
+                        for v in it["variants"]:
+                            q = cells[0].add_paragraph()
+                            q.paragraph_format.left_indent = Inches(0.12)
+                            q.paragraph_format.space_after = Pt(0)
+                            run(q, "Variant: ", bold=True, size=7.5, color="5B6570")
+                            run(q, f"{v['differs']} ({plural(v['n_unis'], 'university', 'universities')}, ", size=7.5, color="5B6570")
+                            link(q, bid(v["id"]), v["id"], size=7.5, anchor=True)
+                            run(q, ")", size=7.5, color="5B6570")
+                        cellset(cells[1], it["kind"], size=8, color="5B6570")
+                        cellset(cells[2], f"{it['n_unis']} ({it['n']})" + (f" · {' '.join(it['levels'])}" if it["levels"] else ""), size=8, color="5B6570")
+                        cells[3].text = ""
+                        for k, pid in enumerate(it["ids"]):
+                            if k:
+                                run(cells[3].paragraphs[0], ", ", size=8)
+                            link(cells[3].paragraphs[0], bid(pid), pid, size=8, anchor=True)
+                widths(t, (4.3, 0.95, 1.05, 0.7))
 
-    for i, part in enumerate(parts, 1):
+    for i, part in enumerate(parts):
+        lev = part["title"]
         doc.add_page_break()
-        doc.add_heading(f"Appendix {'AB'[i - 1]}. Sources for Part {i}", 1)
+        doc.add_heading(f"Appendix {'AB'[i]}. Lookup table, {lev}", 1)
         p = doc.add_paragraph()
-        run(p, "For each policy: up to three statements in the institutions' own words, each from a different university, with a link to the source. "
-            "The website link lists every statement behind the policy.", size=9, color="5B6570")
+        run(p, "One row per policy ID, in the order of the document. Original wording is quoted from up to three universities, each with a link to the source; the website link lists every statement behind the policy.", size=9, color="5B6570")
+        t = doc.add_table(rows=1, cols=3)
+        t.style = "Table Grid"
+        header(t, ["ID", "Policy · where it sits", "Original wording and sources"])
         for x in part["stances"]:
             for g in x["stages"]:
-                for q in g["policies"]:
-                    p = doc.add_paragraph()
-                    p.paragraph_format.space_before = Pt(6)
-                    p.paragraph_format.space_after = Pt(1)
-                    run(p, q["pid"] + "  ", bold=True, size=9)
-                    run(p, q["directive"] or q["sentence"], bold=True, size=9)
-                    bookmark(p, bid(q["pid"]))
-                    p = doc.add_paragraph()
-                    p.paragraph_format.space_after = Pt(1)
-                    run(p, f"{x['label']} · {g['label']} · {q['theme']} · {plural(q['n_unis'], 'university', 'universities')}, {plural(q['n'], 'statement', 'statements')} · ", size=8, color="5B6570")
-                    link(p, f"{url}/{part['layer']}/{q['pid']}", "all statements on the website", size=8)
-                    for e in q["examples"]:
-                        p = doc.add_paragraph()
-                        p.paragraph_format.left_indent = Inches(0.25)
-                        p.paragraph_format.space_after = Pt(1)
-                        run(p, f"\u201c{e['anchor']}\u201d ", italic=True, size=8.5)
-                        run(p, f"{e['uni']}" + (f", {e['course']}" if e.get("course") else "") + " · ", size=8, color="5B6570")
-                        link(p, e["link"], "source", size=8)
+                for gr in g["groups"]:
+                    for it in gr["items"]:
+                        for pid in it["ids"]:
+                            pol = next(z for z in g["policies"] if z["pid"] == pid)
+                            cells = t.add_row().cells
+                            cellset(cells[0], pid, bold=True, size=8)
+                            bookmark(cells[0].paragraphs[0], bid(pid))
+                            cellset(cells[1], pol["directive"] or pol["sentence"], size=8)
+                            q = cells[1].add_paragraph()
+                            run(q, f"{x['label']} · {g['label']}" + (f" · {gr['label']}" if gr["label"] else "") + f" · {plural(pol['n_unis'], 'university', 'universities')}, {plural(pol['n'], 'statement', 'statements')}", size=7, color="5B6570")
+                            cells[2].text = ""
+                            first = True
+                            for e in pol["examples"]:
+                                q = cells[2].paragraphs[0] if first else cells[2].add_paragraph()
+                                first = False
+                                run(q, f"\u201c{e['anchor']}\u201d ", italic=True, size=7.5)
+                                run(q, f"{e['uni']}" + (f", {e['course']}" if e.get("course") else "") + " · ", size=7, color="5B6570")
+                                link(q, e["link"], "source", size=7)
+                            q = cells[2].add_paragraph()
+                            link(q, f"{url}/{part['layer']}/{pid}", "all statements on the website", size=7)
+        widths(t, (0.75, 2.9, 3.35))
     name = f"{R['label'][:-1]}_AI_Policies.docx"
     doc.save(V2 / "exports" / name)
     shutil.copy(V2 / "exports" / name, D / name)
