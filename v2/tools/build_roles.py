@@ -27,12 +27,51 @@ ROLES = [("student", "Students", "students"), ("instructor", "Instructors", "ins
 DOCS = ("student", "instructor")
 LEVN = {"university": "U", "school": "S", "computing": "C"}
 SORDER = list(STANCE)
-STAGE_NOTE = {"before-course": "Before the course", "course-start": "At the start of the course", "during-work": "While students work",
+STAGE_NOTE = {"before-course": "Before the course", "course-start": "At the start of the course", "during-work": "During the course",
               "during-assessment": "During assessment", "when-misuse": "When misuse is suspected", "over-time": "Over time",
               "background": "Background: facts and context"}
 SDEF = {"prohibit": "AI is not allowed.", "restrict": "AI is allowed only for listed uses.", "permit": "AI is allowed under conditions such as disclosure.",
         "encourage": "AI use is invited or promoted.", "require": "Something is required when AI is used (or AI use is required).",
-        "delegates": "The instructor or assignment decides.", "none": "Sets a duty or states a fact without allowing or restricting AI."}
+        "delegates": "The instructor or assignment decides.", "none": "Duties and facts that hold whatever the stance on AI use."}
+
+# D82 (Peggy): tell enforced rules apart from recommendations and from options the policy leaves to the reader
+KORDER = ["rule", "recommendation", "option", "fact or warning"]
+KINDS = {"rule": ["must", "A rule: you must or must not."], "recommendation": ["should", "A recommendation: you should or should not."],
+         "option": ["may", "An option: you may, or need not; the choice is yours."], "fact or warning": ["fact", "A fact or warning."]}
+
+# PI after meeting Peggy: say at the start who writes these policies and who the document is for
+AUD = {"instructor": "Who this is for. These are the AI policies that universities, schools and computing departments write for their instructors: what exists, and what instructors are asked to do. They come from provosts, teaching centers, academic integrity offices and department committees, so the first readers are the administrators and committees who write such policies and the instructors who receive them. The CS course level adds the few policies instructors write for themselves in their own syllabi.",
+       "student": "Who this is for. These are the AI policies written for students. At the university, school and department level they come from administrators, academic integrity offices and departments. At the CS course level they come from instructors, in their syllabi: instructors writing for their students. The first readers are the instructors and administrators who write such policies and the students who must follow them."}
+
+
+def accessed():
+    """D82: date accessed, from the latest link check (tools/check_links.py)."""
+    fs = sorted((V2 / "linkcheck").glob("links_*.csv"))
+    if not fs:
+        return ""
+    import csv
+    r = list(csv.DictReader(open(fs[-1])))
+    day = date.fromisoformat(r[0]["checked"])
+    ok = sum(x["http_status"][0] in "23" for x in r)
+    blk = sum(x["http_status"] == "403" for x in r)
+    to = sum(x["http_status"] == "000" for x in r)
+    gone = sum(x["http_status"] in ("404", "410") for x in r)
+    return (f"Date accessed. Sources were collected in October 2026, and the text of every source as it was read is kept in the project records. "
+            f"All {len(r):,} source links were checked on {day:%B %-d, %Y}: {ok:,} opened, {blk} refused the automated check (such pages usually open in a browser), "
+            f"{to} did not answer in time, and {gone} are no longer at their address. A page that has moved or changed since then does not affect the quotes, which are kept as read.")
+
+
+def gaps(matrix, who):
+    """D82: empty cells are findings. Where AI is allowed or encouraged while work is done but no policy says what that means at assessment."""
+    w = lambda s, g: matrix[s][g]["n"]
+    ok = [s for s in ("permit", "encourage") if w(s, "during-work") >= 3]
+    lead = "Read the empty cells as findings: no policy at this level takes that stance at that point in the course."
+    if not ok or any(w(s, "during-assessment") > 1 for s in ok):
+        return lead
+    nn = lambda n: "none" if n == 0 else ("only one" if n == 1 else str(n))
+    bits = [f"{STANCE[s]} has {w(s, 'during-work')} policies during the course and {nn(w(s, 'during-assessment'))} during assessment" for s in ok]
+    return (f"{lead} {'; '.join(bits)}. AI use is allowed or encouraged while the work is done, and {who} are left to work out for themselves "
+            "what that means when the work is graded.")
 
 
 def build():
@@ -115,7 +154,8 @@ def build():
                 for g, _ in STG:
                     G = sorted((q for q in S if q["phase"] == g), key=lambda q: (-q["n_unis"], -q["n"]))
                     if G:
-                        matrix[s][g] = {"n": len(G), "themes": [[thl.get(t, "Other"), n] for t, n in Counter(theme_of(q) for q in G).most_common()]}
+                        matrix[s][g] = {"n": len(G), "themes": [[thl.get(t, "Other"), n] for t, n in Counter(theme_of(q) for q in G).most_common()],
+                                       "kinds": {k: n for k in KORDER if (n := sum(1 for q in G if kind(q) == k))}}
                         ck = f"{rk}|{layer}|{s}|{g}"
                         pols = [{"pid": q["pid"], "sentence": q["sentence"], "directive": (AIL.get(q["pid"], {}).get("directive") or DIRV.get(q["pid"], "")),
                                  "general": AIL.get(q["pid"], {}).get("class") == "general", "stance": s, "stage": g, "theme": thl.get(theme_of(q), "Other"), "kind": kind(q),
@@ -148,7 +188,7 @@ def build():
                                         if e["uni"] not in seen and len(exs) < 3:
                                             seen.add(e["uni"])
                                             exs.append(e)
-                                vs = [{"id": v["pid"], "differs": v["differs"], "n_unis": bypol[v["pid"]]["n_unis"], "directive": bypol[v["pid"]]["directive"] or bypol[v["pid"]]["sentence"]}
+                                vs = [{"id": v["pid"], "differs": v["differs"], "n_unis": bypol[v["pid"]]["n_unis"], "directive": bypol[v["pid"]]["directive"] or bypol[v["pid"]]["sentence"], "kind": bypol[v["pid"]]["kind"]}
                                       for v in it.get("variants", [])]
                                 its.append({"ids": it["pids"], "directive": it.get("directive") or ps[0]["directive"] or ps[0]["sentence"], "variants": vs,
                                             "n_unis": len({x["uni"] for q in qs for x in sts(q)}), "n": sum(len(sts(q)) for q in qs),
@@ -161,9 +201,10 @@ def build():
             parts.append({"layer": layer, "title": "University, school and department level" if layer == "inst" else "CS course level",
                           "n": len(L), "n_statements": sum(len(sts(q)) for q in L), "n_unis": unis(L), "intro": pr.get("intro", ""),
                           "stage_n": {g: sum(1 for q in L if q["phase"] == g) for g, _ in STG}, "stance_order": [x["id"] for x in stances],
-                          "matrix": {s: matrix[s] for s in (x["id"] for x in stances)}, "stances": stances})
-        roles[rk] = {"label": rl, "slug": slug, "parts": parts}
-    out = {"generated": date.today().isoformat(), "site": SITE, "stance_labels": STANCE, "stance_defs": SDEF, "stages": [[g, STAGE_NOTE[g]] for g, _ in STG], "roles": roles}
+                          "matrix": {s: matrix[s] for s in (x["id"] for x in stances)}, "stances": stances,
+                          "kinds": {k: n for k in KORDER if (n := sum(1 for q in L if kind(q) == k))}, "gaps": gaps(matrix, rl.lower())})
+        roles[rk] = {"label": rl, "slug": slug, "audience": AUD.get(rk, ""), "parts": parts}
+    out = {"generated": date.today().isoformat(), "site": SITE, "accessed": accessed(), "stance_labels": STANCE, "stance_defs": SDEF, "kinds": KINDS, "stages": [[g, STAGE_NOTE[g]] for g, _ in STG], "roles": roles}
     (D / "roles.json").write_text(json.dumps(out, ensure_ascii=False))
     return out
 
@@ -258,7 +299,7 @@ def docx_for(data, rk):
     C = json.loads((D / "courses.json").read_text())
     cpas = sum(len(sl["passages"]) for u in C["universities"] for sl in u["slots"])
     cuni = sum(1 for u in C["universities"] if any(sl["passages"] for sl in u["slots"]))
-    SHORT = {"before-course": "Before the course", "course-start": "At the start", "during-work": "While students work", "during-assessment": "During assessment",
+    SHORT = {"before-course": "Before the course", "course-start": "At the start", "during-work": "During the course", "during-assessment": "During assessment",
              "when-misuse": "When misuse is suspected", "over-time": "Over time", "background": "Background"}
     plural = lambda n, one, many: f"{n} {one if n == 1 else many}"
 
@@ -266,13 +307,16 @@ def docx_for(data, rk):
     p = doc.add_paragraph()
     run(p, f"US universities and their computer science courses. AI Policy Atlas, {date.fromisoformat(data['generated']):%B %-d, %Y}. Website: ", color="5B6570")
     link(p, url, url)
+    p = doc.add_paragraph()
+    run(p, "Who this is for. ", bold=True)
+    run(p, R["audience"].removeprefix("Who this is for. "))
     doc.add_heading("About this document", 1)
     for t in [
         f"This document lists every policy that US university documents and CS course syllabi address to {who}. It draws on {M['n_documents']} university-wide, school and department documents from {M['n_universities']} universities, and on {cpas} AI passages in CS syllabi at {cuni} of those universities.",
         f"A policy is one thing asked of one group. Statements that ask {who} to do the same thing are merged into one policy, whether they say must or should and however they are worded. Each policy here is written as a directive to the reader. Appendices A and B are lookup tables: for every policy ID they quote the original wording, with links to the sources, and the website lists every statement behind each policy.",
         "The document has two levels. The university, school and department level combines university-wide, school or college, and computing department documents. The CS course level covers CS course syllabi. Within each level, policies are grouped by stance, that is, what the policy does about AI use; within a stance, they follow the course from before it starts to after it ends; within a stage, they are grouped by what they ask. The groups come from a thematic analysis by three independent coders, and policies that asked the same thing within a group were combined into one entry.",
-        "Each entry gives the kind (rule, recommendation, or fact or warning), two counts, the levels, and the policy ID or IDs. \u201c13 universities, 15 statements\u201d means that 15 statements from 13 different universities stand behind the entry; a university counts once however many of its documents state it. Levels: U university-wide, S school or college, C computing department. Each ID links to its row in the appendix.",
-        f"Policies addressed to everyone in a university also apply to {who}. They are not repeated here; the website lists them on its Other roles page."]:
+        "Each entry gives the kind: a rule (must: you must or must not), a recommendation (should: you should), an option (may: you may, or need not; the choice is left to you), or a fact or warning (fact). It also gives two counts, the levels, and the policy ID or IDs. \u201c13 universities, 15 statements\u201d means that 15 statements from 13 different universities stand behind the entry; a university counts once however many of its documents state it. Levels: U university-wide, S school or college, C computing department. Each ID links to its row in the appendix.",
+        f"Policies addressed to everyone in a university also apply to {who}. They are not repeated here; the website lists them on its Other roles page."] + ([data["accessed"]] if data.get("accessed") else []):
         doc.add_paragraph(t)
     parts = R["parts"]
     t = doc.add_table(rows=1, cols=4)
@@ -328,7 +372,8 @@ def docx_for(data, rk):
         mx = max([c["n"] for s_ in part["matrix"].values() for c in s_.values()] or [1])
         t = doc.add_table(rows=1, cols=len(stg) + 2)
         t.style = "Table Grid"
-        header(t, [f"{lev}: stance"] + [SHORT[g] for g in stg] + ["All"])
+        doc.add_heading(f"Bird\u2019s-eye view of policies for {who}: {lev}", 2)
+        header(t, ["Stance \u2193 \u00b7 When \u2192"] + [SHORT[g] for g in stg] + ["All"])
         for x in part["stances"]:
             cells = t.add_row().cells
             cellset(cells[0], x["label"], bold=True, size=8)
@@ -338,6 +383,10 @@ def docx_for(data, rk):
                 if not cell["n"]:
                     continue
                 run(c.paragraphs[0], str(cell["n"]), bold=True, size=9)
+                if cell.get("kinds"):
+                    q = c.add_paragraph()
+                    q.paragraph_format.space_after = Pt(1)
+                    run(q, "  ".join(f"{n} {data['kinds'][k][0]}" for k, n in cell["kinds"].items()), bold=True, size=7, color="1F5F8B")
                 sg = next(z for z in x["stages"] if z["id"] == g)
                 for gr in sg["groups"]:
                     if not gr["label"]:
@@ -353,7 +402,9 @@ def docx_for(data, rk):
         for row in t.rows:
             row.cells[0].width = Inches(1.3)
         p = doc.add_paragraph()
-        run(p, f"{lev}. Rows are stances and columns follow the course. Each cell: number of policies, then the groups they fall into, with counts. Darker cells hold more policies; empty cells have none.", italic=True, size=8, color="5B6570")
+        run(p, f"{lev}. Rows are stances; columns are when in the course a policy applies. Each cell: number of policies; how many are rules (must), recommendations (should), options (may) and facts or warnings (fact); then the groups they fall into, with counts. Darker cells hold more policies; empty cells have none.", italic=True, size=8, color="5B6570")
+        if part.get("gaps"):
+            doc.add_paragraph(part["gaps"])
         landscape(False)
         for x in part["stances"]:
             doc.add_heading(f"{lev} · {x['label']}: {plural(x['n'], 'policy', 'policies')}, {plural(x['n_unis'], 'university', 'universities')}", 2)

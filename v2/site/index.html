@@ -397,6 +397,11 @@ table.rmx th.rowh .rdef { display: block; font-weight: 400; font-size: 0.6875rem
 .gtag { font: 500 0.6875rem var(--f-ui); color: #8a6d3b; border: 1px solid #e3d3b0; background: #fbf6ea; border-radius: 99px; padding: 0 7px; white-space: nowrap; vertical-align: 1px; }
 .drawer.side .rgroup h5 { margin-top: 14px; }
 .drawer.side { grid-template-columns: minmax(0, 1fr); } .drawer.side .dhead .count { white-space: normal; } .drawer.side .dhead .row h3 { min-width: 0; } .drawer.side .rpol, .drawer.side .rs { min-width: 0; overflow-wrap: anywhere; }
+
+.kbs{display:flex;flex-wrap:wrap;gap:3px;margin:2px 0 4px}.kb{display:inline-block;font:600 10.5px/1.5 var(--sans,system-ui);padding:0 5px;border-radius:4px;white-space:nowrap}
+.kb-must{background:#1f3b4d;color:#fff}.kb-should{background:#cfe0e8;color:#1f3b4d}.kb-may{background:#fff;color:#2f6b3a;border:1px solid #6aa476}.kb-fact{background:#ecebe6;color:#5d6670}
+.audience{border-left:3px solid var(--accent);padding:6px 12px;margin:10px 0;background:color-mix(in srgb,var(--accent) 6%,transparent);max-width:80ch}
+.gaps{max-width:80ch;margin:8px 0 18px;font-size:.95em}
 </style>
 </head>
 <body>
@@ -432,7 +437,7 @@ const SDEF = { prohibit: "AI is not allowed.", restrict: "AI is allowed only for
   require: "Some work requires AI.", delegates: "The document leaves the decision to each instructor." };
 // D65: TAs, staff and administrators form one group; "Everyone" is a rule addressed to the whole community, not one role
 const AL = { student: "Students", instructor: "Instructors", staff: "Staff and administrators", "ta-staff": "Staff and administrators", admin: "Staff and administrators", all: "Everyone" };
-const PL = { background: "Background (definitions, reasons, facts)", general: "Background (definitions, reasons, facts)", "before-course": "Before the course", "course-start": "At the start of the course", "during-work": "While students work", "during-assessment": "During assessment", "when-misuse": "When misuse is suspected", "over-time": "Over time" };
+const PL = { background: "Background (definitions, reasons, facts)", general: "Background (definitions, reasons, facts)", "before-course": "Before the course", "course-start": "At the start of the course", "during-work": "During the course", "during-assessment": "During assessment", "when-misuse": "When misuse is suspected", "over-time": "Over time" };
 const LL = { university: "University-wide", school: "School or college", computing: "Computing unit", course: "Course (add-on)" };
 const ML = { must: "must", "must-not": "must not", may: "may", should: "should", "should-not": "should not", informs: "explains" };
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -585,7 +590,7 @@ const STAGES = [
   ["Why the policy exists", "Rationale, values, ethics and the purpose of the policy itself.", ["T09", "T13", "T15"]],
   ["Setting up", "Who decides, which tools are approved, how data is protected, and how faculty use and learn AI.", ["T01", "T12", "T11", "T10"]],
   ["Telling students the rules", "How expectations reach students: syllabus statements, conversations, pointers.", ["T02"]],
-  ["While students work", "What students may use AI for, what they may not submit, how they disclose it, and what they remain responsible for.", ["T03", "T04", "T05", "T06"]],
+  ["During the course", "What students may use AI for, what they may not submit, how they disclose it, and what they remain responsible for.", ["T03", "T04", "T05", "T06"]],
   ["Assessment", "How assignments and exams are designed or changed because of AI.", ["T07"]],
   ["When misuse is suspected", "Detection, evidence, misconduct procedures and due process.", ["T08"]],
   ["Beyond the classroom", "AI in research, publication and review.", ["T14"]]];
@@ -682,7 +687,7 @@ function matrixReading(cells) {
   const top = [...cells.entries()].sort((a, b) => cellN(b[1]) - cellN(a[1]))[0];
   const [ta, tp, ts] = top[0].split("|");
   const lay = st.mLayer === "all" ? "all layers" : LL[st.mLayer].toLowerCase();
-  return reading(`Rows are who a policy addresses and when it applies, in lifecycle order; ${st.mView === "full" ? "columns are the stance of the document it comes from" : "columns are the phases"}. Darker cells hold more ${cellU()}. Across ${lay}, ${pct(ac.student || 0, n)}% of the statements behind the policy set address students and ${pct(ac.instructor || 0, n)}% instructors; ${pct(pc["during-work"] || 0, n)}% apply while students work and only ${pct(pc["during-assessment"] || 0, n)}% during assessment. ${st.mView === "full" ? `${pct(sc.delegates || 0, n)}% come from documents that leave the decision to instructors, so most of the grid describes guidance around a delegated choice rather than rules.` : ""} The largest cell is ${AL[ta]} · ${PL[tp]}${ts ? " · " + SL[ts] : ""} (${cellN(top[1]).toLocaleString()} ${cellU()}). Select any cell to read its policies; the cell's address can be copied from "Link to this cell".`);
+  return reading(`Rows are who a policy addresses and when it applies, in lifecycle order; ${st.mView === "full" ? "columns are the stance of the document it comes from" : "columns are the phases"}. Darker cells hold more ${cellU()}. Across ${lay}, ${pct(ac.student || 0, n)}% of the statements behind the policy set address students and ${pct(ac.instructor || 0, n)}% instructors; ${pct(pc["during-work"] || 0, n)}% apply during the course and only ${pct(pc["during-assessment"] || 0, n)}% during assessment. ${st.mView === "full" ? `${pct(sc.delegates || 0, n)}% come from documents that leave the decision to instructors, so most of the grid describes guidance around a delegated choice rather than rules.` : ""} The largest cell is ${AL[ta]} · ${PL[tp]}${ts ? " · " + SL[ts] : ""} (${cellN(top[1]).toLocaleString()} ${cellU()}). Select any cell to read its policies; the cell's address can be copied from "Link to this cell".`);
 }
 
 // ---------- policy label builder ----------
@@ -897,7 +902,7 @@ const DRAFT = {
   review: { yes: "{U} reviews this policy every year as tools and evidence change." },
 };
 const DRAFT_SECTIONS = [["Our approach", ["stance", "who"]], ["Before the course", ["faculty", "privacy", "equity"]], ["At the start of the course", ["syllabus"]],
-  ["While students work", ["tutor", "code", "disclose", "explain"]], ["During assessment", ["exams"]], ["If misuse is suspected", ["detect"]], ["Keeping the policy current", ["review"]]];
+  ["During the course", ["tutor", "code", "disclose", "explain"]], ["During assessment", ["exams"]], ["If misuse is suspected", ["detect"]], ["Keeping the policy current", ["review"]]];
 const STANCE_TYPES = { prohibit: ["P01"], restrict: ["P107"], permit: ["P02"], encourage: ["P02"], require: ["P79"], delegates: ["P04"] };
 function qTypes(q, a) { if (q.type === "stance") return STANCE_TYPES[a] || []; if (q.yn) return a === "yes" ? q.yn : []; const o = q.opts.find(o => o[0] === a); return o ? o[2] : []; }
 function examples(tids, k = 2) {
@@ -1119,15 +1124,17 @@ function renderRolePage(rk, roleTabs) {
   const plural = (n, a, b) => `${n} ${n === 1 ? a : b}`;
   const chip = k => `<span class="stance st-${k === "none" ? "neutral" : k}">${esc(SLB[k])}</span>`;
   const stageOf = (x, g) => x.stages.find(s => s.id === g);
+  const KW = ROLESD.kinds || {}, kb = (k, n) => KW[k] ? `<span class="kb kb-${KW[k][0]}" title="${esc(KW[k][1])}">${n != null ? `${n} ` : ""}${KW[k][0]}</span>` : esc(k);
+  const kinds = c => Object.entries(c.kinds || {}).map(([k, n]) => kb(k, n)).join("");
 
-  const head = `<tr><th>Stance</th>${STGS.map(([g, l]) => `<th>${esc(l)}</th>`).join("")}<th class="num">All</th></tr>`;
+  const head = `<tr><th>Stance ↓ · When →</th>${STGS.map(([g, l]) => `<th>${esc(l)}</th>`).join("")}<th class="num">All</th></tr>`;
   const body = part.stances.map(x => `<tr><th class="rowh">${chip(x.id)}<span class="rdef">${esc(x.def)}</span></th>${STGS.map(([g]) => { const c = part.matrix[x.id][g]; if (!c.n) return `<td></td>`;
     const sg = stageOf(x, g), labs = sg.groups.filter(gr => gr.label).map(gr => [gr.label, gr.n]);
     const a = 0.07 + 0.42 * Math.sqrt(c.n / mx), k = x.id + "|" + g;
-    return `<td><div class="cell" role="button" tabindex="0" data-rcell="${k}" aria-pressed="${st.rCell === k}" style="background:color-mix(in srgb, var(--accent) ${Math.round(a * 100)}%, transparent)"><span class="n">${c.n}</span><ul>${labs.slice(0, 3).map(([l, n]) => `<li><span>${esc(l)}</span><span>${n}</span></li>`).join("")}${labs.length > 3 ? `<li class="more"><span>+${labs.length - 3} more</span></li>` : ""}</ul></div></td>`; }).join("")}<td class="num"><b>${x.n}</b></td></tr>`).join("")
+    return `<td><div class="cell" role="button" tabindex="0" data-rcell="${k}" aria-pressed="${st.rCell === k}" style="background:color-mix(in srgb, var(--accent) ${Math.round(a * 100)}%, transparent)"><span class="n">${c.n}</span><span class="kbs">${kinds(c)}</span><ul>${labs.slice(0, 3).map(([l, n]) => `<li><span>${esc(l)}</span><span>${n}</span></li>`).join("")}${labs.length > 3 ? `<li class="more"><span>+${labs.length - 3} more</span></li>` : ""}</ul></div></td>`; }).join("")}<td class="num"><b>${x.n}</b></td></tr>`).join("")
     + `<tr class="tot"><th class="rowh">All stances</th>${STGS.map(([g]) => `<td class="num">${part.stage_n[g] || "–"}</td>`).join("")}<td class="num"><b>${part.n}</b></td></tr>`;
-  const item = it => `<details class="rpol${it.general ? " general" : ""}" id="rp-${esc(it.ids[0])}" data-rids="${esc(it.ids.join(","))}" data-rlayer="${part.layer}" ${it.ids.includes(st.rPid) ? "open" : ""}><summary><span class="rs">${esc(it.directive)}${it.general ? ` <span class="gtag" title="A general academic-integrity or procedural rule restated in an AI document">general rule</span>` : ""}</span>${it.variants && it.variants.length ? `<span class="rvars">${it.variants.map(v => `<span class="rvar" title="${esc(v.directive)}"><b>Variant:</b> ${esc(v.differs)} · ${plural(v.n_unis, "university", "universities")} · ${esc(v.id)}</span>`).join("")}</span>` : ""}
-      <span class="rmeta">${esc(it.kind)} · ${plural(it.n_unis, "university", "universities")}, ${plural(it.n, "statement", "statements")}${it.levels.length ? " · " + it.levels.join(" ") : ""} · ${it.ids.map(id => `<a href="#${R.slug}/${part.layer}/${esc(id)}" class="plink" title="Link to this policy">${esc(id)}</a>`).join(", ")}</span></summary><div class="rstm">${it.ids.includes(st.rPid) ? it.ids.map(id => stmHTML(part.layer, id)).join("") : ""}</div></details>`;
+  const item = it => `<details class="rpol${it.general ? " general" : ""}" id="rp-${esc(it.ids[0])}" data-rids="${esc(it.ids.join(","))}" data-rlayer="${part.layer}" ${it.ids.includes(st.rPid) ? "open" : ""}><summary><span class="rs">${esc(it.directive)}${it.general ? ` <span class="gtag" title="A general academic-integrity or procedural rule restated in an AI document">general rule</span>` : ""}</span>${it.variants && it.variants.length ? `<span class="rvars">${it.variants.map(v => `<span class="rvar" title="${esc(v.directive)}"><b>Variant:</b> ${esc(v.differs)} · ${v.kind && v.kind !== it.kind ? kb(v.kind) + " · " : ""}${plural(v.n_unis, "university", "universities")} · ${esc(v.id)}</span>`).join("")}</span>` : ""}
+      <span class="rmeta">${it.kind.split(", ").map(k => kb(k)).join(" ")} · ${plural(it.n_unis, "university", "universities")}, ${plural(it.n, "statement", "statements")}${it.levels.length ? " · " + it.levels.join(" ") : ""} · ${it.ids.map(id => `<a href="#${R.slug}/${part.layer}/${esc(id)}" class="plink" title="Link to this policy">${esc(id)}</a>`).join(", ")}</span></summary><div class="rstm">${it.ids.includes(st.rPid) ? it.ids.map(id => stmHTML(part.layer, id)).join("") : ""}</div></details>`;
   const groupsHTML = g => g.groups.map(gr => `<div class="rgroup">${gr.label ? `<h5>${esc(gr.label)} <span class="count">${plural(gr.n, "policy", "policies")}</span></h5>` : ""}${gr.items.map(item).join("")}</div>`).join("");
   let panel = "";
   if (st.rCell) {
@@ -1143,10 +1150,13 @@ function renderRolePage(rk, roleTabs) {
     <div class="actions">${doc}${csvBar("students")}</div>
     ${roleTabs || ""}
     <div class="subtabs" role="tablist">${R.parts.map(p => `<button role="tab" data-rpart="${p.layer}" aria-selected="${p.layer === part.layer}">${esc(p.title)}<span class="cnt">${p.n}</span></button>`).join("")}</div>
+    ${R.audience ? `<p class="audience">${esc(R.audience)}</p>` : ""}
     ${reading(part.intro || `${plural(part.n, "policy", "policies")} for ${who}, from ${part.n_statements.toLocaleString()} statements at ${part.n_unis} universities.`)}
-    <p class="note">Rows are stances; columns follow the course in order. Each cell gives the number of policies and the groups they fall into; darker cells hold more. Select a cell to read its policies beside the matrix. “13 universities, 15 statements” means 15 statements from 13 different universities were merged into one policy.</p>
+    <h3 class="sub">Bird’s-eye view of policies for ${esc(who)}: ${esc(part.title)}</h3>
+    <p class="note">Rows are stances; columns are when in the course a policy applies. Each cell gives the number of policies, how many are ${kb("rule")} rules, ${kb("recommendation")} recommendations, ${kb("option")} options (the choice is left to the reader) and ${kb("fact or warning")} facts or warnings, and the groups they fall into; darker cells hold more. Select a cell to read its policies beside the matrix. “13 universities, 15 statements” means 15 statements from 13 different universities were merged into one policy.</p>
     <div class="mx-wrap mx-scroll" data-keep="rmatrix"><table class="mx rmx"><thead>${head}</thead><tbody>${body}</tbody></table></div>
-    <h3 class="sub" id="rlist">All policies by stance</h3>${list}${panel}`;
+    ${part.gaps ? `<p class="gaps">${esc(part.gaps)}</p>` : ""}
+    <h3 class="sub" id="rlist">All policies by stance</h3>${list}${ROLESD.accessed ? `<p class="note" style="max-width:80ch;margin-top:18px">${esc(ROLESD.accessed)}</p>` : ""}${panel}`;
 }
 function stmHTML(layer, pid) {
   const xs = layer === "course" ? (CSTM.get(pid) || []).map(x => ({ anchor: x.anchor, uni: x.uni, link: x.link, where: x.course || x.slot }))

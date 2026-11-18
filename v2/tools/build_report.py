@@ -9,6 +9,7 @@ No method or reliability section: that stays on the site's Method page.
 import csv
 import html
 import json
+import re
 import shutil
 from collections import Counter, defaultdict
 from datetime import date
@@ -18,7 +19,7 @@ V2 = Path(__file__).resolve().parents[1]
 D = V2 / "site" / "data"
 SET = ("rr", "fact")
 ACT = [("student", "Students"), ("instructor", "Instructors"), ("staff", "Staff and administrators"), ("all", "Everyone")]
-STG = [("before-course", "Before the course"), ("course-start", "At the start of the course"), ("during-work", "While students work"),
+STG = [("before-course", "Before the course"), ("course-start", "At the start of the course"), ("during-work", "During the course"),
        ("during-assessment", "During assessment"), ("when-misuse", "When misuse is suspected"), ("over-time", "Over time"),
        ("background", "Background (facts and context)")]
 LEV = [("university", "University-wide"), ("school", "School or college"), ("computing", "Computing unit"), ("course", "CS course syllabi")]
@@ -27,12 +28,26 @@ LAB = {"university": "U", "school": "S", "computing": "C"}
 # A policy takes its most common non-neutral stance when at least a quarter of its statements take one; otherwise it is
 # "Instructor decides" if its topics are about who decides (P04, P85, CT04), else "Duties and facts" (it states a duty or fact without a stance on AI use).
 STANCE = {"prohibit": "Prohibit", "restrict": "Only listed uses", "permit": "Allowed with conditions", "encourage": "Encourage", "require": "Require",
-          "delegates": "Instructor decides", "none": "Duties and facts"}
+          "delegates": "Instructor decides", "none": "Cross-cutting duties and facts"}
 DECIDES = {"P04", "P85", "CT04"}
 KIND = {"rule": "rule", "recommendation": "recommendation", "fact": "fact or warning"}
+# D82 (Peggy): a policy that gives the reader a choice ("you may", "you can", "you need not") is an option, not a rule or a
+# recommendation. Read from the policy's second-person directive; "you may face ...", "you may not ..." are not options.
+_RI = json.loads((V2 / "role_items.json").read_text()).get("ai_link", {}) if (V2 / "role_items.json").exists() else {}
+_DIRV = json.loads((V2 / "role_directives.json").read_text()) if (V2 / "role_directives.json").exists() else {}
+OPTION = re.compile(r"^(?:[^;]*?,\s*)?you (?:may|can|are free to|need not|do not need to|do not have to|are not required to)\b(?! not\b| face\b| be\b| lose\b| receive\b| incur\b)|is optional[;,] (?:and )?you may", re.I)
+# a permission limited by "only" or carrying a "must" is an enforced condition, so it stays a rule
+ENFORCED = re.compile(r"\bonly\b|\bmust\b", re.I)
+
+
+def directive(q):
+    return _RI.get(q["pid"], {}).get("directive") or _DIRV.get(q["pid"], "")
 
 
 def kind(q):
+    t = directive(q)
+    if OPTION.search(t) and not ENFORCED.search(t):
+        return "option"
     return "fact or warning" if q["cat"] == "fact" else KIND.get(q.get("policy_kind"), q.get("policy_kind") or "")
 
 
@@ -93,7 +108,7 @@ def blocks(d):
          ("h2", "1. Where things stand"),
          ("ul", [f"**Institutional corpus.** {M['n_documents']:,} policy documents from {M['n_universities']} universities: university-wide, school or college, and computing unit (CS department or college). {M['n_units']:,} statements coded; {d['n_ai']:,} are about AI.",
                  f"**CS course syllabi.** {d['cpas']} AI passages from syllabi at {d['cu']} universities, across six course slots (CS1, CS2, algorithms, software engineering, AI/ML, systems or security). {d['cst']:,} statements coded.",
-                 f"**Policy set.** {len(POS)} institutional policies ({k['rule']} rules, {k['recommendation']} recommendations, {k['fact or warning']} facts and warnings) and {len(CP)} course policies ({kc['rule']} rules, {kc['recommendation']} recommendations, {kc['fact or warning']} facts and warnings).",
+                 f"**Policy set.** {len(POS)} institutional policies ({k['rule']} rules, {k['recommendation']} recommendations, {k['option']} options, {k['fact or warning']} facts and warnings) and {len(CP)} course policies ({kc['rule']} rules, {kc['recommendation']} recommendations, {kc['option']} options, {kc['fact or warning']} facts and warnings).",
                  "**A policy** is one thing asked of one group: statements that ask the same group to do the same thing are merged into one policy, whatever their wording, and whether they say must or should. Policies for different groups stay separate.",
                  "**Conflicting policies** are handled by direction: each group's policies are sorted into what to do, what not to do, what is allowed and what to know (the site's By role page), so a \"may\" and a \"must not\" about the same act sit side by side."]),
          ("table", (["Step", "Status"], [
@@ -124,7 +139,7 @@ def blocks(d):
          ("h3", "Stance of the policies"),
          ("table", (["Stance", "Institutional", "CS course syllabi"], [[STANCE[st], f"{sum(q['stance'] == st for q in POS)} ({pct(sum(q['stance'] == st for q in POS), len(POS))})",
                      f"{sum(q['stance'] == st for q in CP)} ({pct(sum(q['stance'] == st for q in CP), len(CP))})"] for st in STANCE])),
-         ("p", "A policy's stance is the stance most of its statements take on AI use. \"Duties and facts\" means the policy sets a duty or states a fact without allowing or restricting AI (for example, verify AI output; AI output can be wrong)."),
+         ("p", "A policy's stance is the stance most of its statements take on AI use. \"Cross-cutting duties and facts\" means the policy sets a duty or states a fact that holds whatever the stance on AI use (for example, verify AI output; AI output can be wrong)."),
          ("h2", "4. What the policies show"),
          ("h3", "Little is binding at the top"),
          ("table", (["Level", "Rule", "Recommendation", "Description", "Template"], [
@@ -153,7 +168,7 @@ def blocks(d):
                  f"**How to run the human review on a sample.** Proposal: two reviewers check (a) every policy merged from 5 or more versions ({merged5}), and (b) a random sample of about 10% of the rest, drawn evenly across who it addresses and stage (about 60 institutional, 25 course). For each: does the sentence say what its statements say, are the merges right, are the group and stage right. Report agreement, fix, and extend the review where errors cluster."]),
          ("pagebreak", None),
          ("h2", f"Appendix A. Institutional policy set ({len(POS)})"),
-         ("p", "Grouped by who the policy addresses, then by stage in course order. Within a stage, most widespread first. Universities = how many universities state it. Stance: what the policy does about AI use (Prohibit, Only listed uses, Allowed with conditions, Encourage, Require, Instructor decides, or Duties and facts). Levels: U university-wide, S school or college, C computing unit. Each sentence summarizes the statements merged into it; the original wording and sources are in policy_set_statements.csv."),
+         ("p", "Grouped by who the policy addresses, then by stage in course order. Within a stage, most widespread first. Universities = how many universities state it. Stance: what the policy does about AI use (Prohibit, Only listed uses, Allowed with conditions, Encourage, Require, Instructor decides, or Cross-cutting duties and facts). Levels: U university-wide, S school or college, C computing unit. Each sentence summarizes the statements merged into it; the original wording and sources are in policy_set_statements.csv."),
          ("policies", ("inst", POS)),
          ("pagebreak", None),
          ("h2", f"Appendix B. CS course policy set ({len(CP)})"),

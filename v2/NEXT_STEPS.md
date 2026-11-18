@@ -3,7 +3,7 @@
 ## Where it stands
 First pass done: every source collected, coded and organized so the team can review it.
 - **Corpus:** 774 university-wide, school and department documents from 342 US universities; 24,536 statements coded, 23,948 about AI. CS syllabi: 471 AI passages at 135 universities, 2,238 statements.
-- **Policy set:** 675 institutional and 229 CS course policies (rules, recommendations, facts and warnings), each traceable to the statements and sources behind it.
+- **Policy set:** 675 institutional and 229 CS course policies (rules, recommendations, options, facts and warnings), each traceable to the statements and sources behind it.
 - **By role:** students, instructors, staff and administrators, everyone. Each role is organized by stance, then course stage, then theme, with near-duplicates shown as one lead policy with variants. General academic-integrity rules that AI documents restate without being about AI (45) are left out of the role views.
 - **Reliability so far:** coder agreement α 0.82 to 0.89 on actor, topic, force and stage; course coding α 0.868; theme grouping by three independent coders, adjusted Rand 0.74.
 - **Website:** https://rudrajit1729.github.io/ai-policy-atlas/ (repository: https://github.com/rudrajit1729/ai-policy-atlas).
@@ -11,10 +11,18 @@ First pass done: every source collected, coded and organized so the team can rev
 
 ## Proposed first paper: instructors
 Instructors are the right first paper: 249 institutional policies is a manageable set, and instructors are the ones who write the course AI policies.
-1. **What institutions ask of instructors** (249 policies, 303 universities): by stance and course stage. Headline: most are duties, not stances (136 of 249); policies cluster before the course (96) and at its start (55); 252 universities leave the AI decision to instructors.
-2. **What instructors then ask of students in CS syllabi** (173 course policies for students): far more binding (145 of 173 are rules) and more prohibitive (Prohibit 45, Require 39).
+1. **What institutions ask of instructors** (249 policies, 303 universities): by stance and course stage. Headline: most are duties, not stances (136 of 249), and most are recommendations, not rules (175 recommendations, 38 options, 30 rules); policies cluster before the course (96) and at its start (55); 252 universities leave the AI decision to instructors.
+2. **What instructors then ask of students in CS syllabi** (173 course policies for students): far more binding (106 of 173 are rules, 40 options, 27 recommendations) and more prohibitive (Prohibit 45, Require 39).
 3. **What syllabi ask of instructors themselves:** almost nothing (13 policies at 19 universities). Instructors write the syllabus, so they rarely bind themselves; obligations on instructors come from the institution.
-4. **The gap between the two layers:** what institutions delegate to instructors versus what instructors pass on to students, stage by stage (e.g. assessment is thin at both levels).
+4. **The gap between the two layers:** what institutions delegate to instructors versus what instructors pass on to students, stage by stage (e.g. assessment is thin at both levels: Allowed with conditions and Encourage fill the during-the-course column and are almost empty during assessment, so instructors and students are left to work out what allowed or encouraged use means when work is graded).
+
+## Changes after meeting Peggy (2026-11-18)
+- Each document now opens with who it is for and who writes the policies.
+- Kinds: rule (must), recommendation (should), option (may: the choice is left to the reader), fact or warning. Options are read from each policy's directive ("you may", "you need not"); a "may ... only" or "may ... but must" stays a rule.
+- The matrix is called the bird's-eye view; columns are when in the course a policy applies ("While students work" is now "During the course"); each cell shows how many policies are must, should, may and fact.
+- "Duties and facts" is now "Cross-cutting duties and facts": things that hold whatever the stance.
+- Empty cells are reported as findings under each matrix.
+- Date accessed: sources collected in October 2026; every source link checked on 2026-11-18 (v2/linkcheck/).
 
 ## What I would change in the next two weeks (no input needed from you unless noted)
 1. **Human review sample** of the instructor policies first: every lead with variants (check the variant notes) and a stratified 10% of the rest. Needs: one or two coauthors to check against sources.
