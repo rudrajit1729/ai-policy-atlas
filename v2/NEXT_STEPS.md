@@ -4,15 +4,15 @@
 First pass done: every source collected, coded and organized so the team can review it.
 - **Corpus:** 774 university-wide, school and department documents from 342 US universities; 24,536 statements coded, 23,948 about AI. CS syllabi: 471 AI passages at 135 universities, 2,238 statements.
 - **Policy set:** 675 institutional and 229 CS course policies (rules, recommendations, facts and warnings), each traceable to the statements and sources behind it.
-- **By role:** students, instructors, staff and administrators, everyone. Each role is organized by stance, then course stage, then theme, with near-duplicates shown as one lead policy with variants.
+- **By role:** students, instructors, staff and administrators, everyone. Each role is organized by stance, then course stage, then theme, with near-duplicates shown as one lead policy with variants. General academic-integrity rules that AI documents restate without being about AI (45) are left out of the role views.
 - **Reliability so far:** coder agreement α 0.82 to 0.89 on actor, topic, force and stage; course coding α 0.868; theme grouping by three independent coders, adjusted Rand 0.74.
 - **Website:** https://rudrajit1729.github.io/ai-policy-atlas/ (repository: https://github.com/rudrajit1729/ai-policy-atlas).
-- **Printouts:** `v2/exports/print/1_Instructor_AI_Policies.pdf`, `2_Student_AI_Policies.pdf` (sources online). Word versions with lookup-table appendices: `v2/exports/*_AI_Policies.docx`.
+- **Printouts:** `v2/exports/print/1_Instructor_AI_Policies.pdf`, `2_Student_AI_Policies.pdf` (sources on the website). Word versions with source tables in the appendices: `v2/exports/*_AI_Policies.docx`.
 
 ## Proposed first paper: instructors
-Instructors are the right first paper: 266 institutional policies is a manageable set, and instructors are the ones who write the course AI policies.
-1. **What institutions ask of instructors** (266 policies, 303 universities): by stance and course stage. Headline: most are duties, not stances (152 of 266); policies cluster before the course (103) and at its start (56); 252 universities leave the AI decision to instructors.
-2. **What instructors then ask of students in CS syllabi** (184 course policies for students): far more binding (155 of 184 are rules) and more prohibitive (Prohibit 46, Require 43).
+Instructors are the right first paper: 249 institutional policies is a manageable set, and instructors are the ones who write the course AI policies.
+1. **What institutions ask of instructors** (249 policies, 303 universities): by stance and course stage. Headline: most are duties, not stances (136 of 249); policies cluster before the course (96) and at its start (55); 252 universities leave the AI decision to instructors.
+2. **What instructors then ask of students in CS syllabi** (173 course policies for students): far more binding (145 of 173 are rules) and more prohibitive (Prohibit 45, Require 39).
 3. **What syllabi ask of instructors themselves:** almost nothing (13 policies at 19 universities). Instructors write the syllabus, so they rarely bind themselves; obligations on instructors come from the institution.
 4. **The gap between the two layers:** what institutions delegate to instructors versus what instructors pass on to students, stage by stage (e.g. assessment is thin at both levels).
 
@@ -26,7 +26,7 @@ Instructors are the right first paper: 266 institutional policies is a manageabl
 7. **Website:** add a short "How to use this site" page and a search box for policies.
 
 ## Feedback from coauthors
-Please add notes below, or edit any CSV linked from the website (each page has its own) and send it back. Useful feedback: a policy that misstates its sources, a theme name that is unclear, a variant that is really a different policy, a missing source.
+Please add notes below or reply by email. Useful feedback: a policy that misstates its sources, a theme name that is unclear, a variant that is really a different policy, a missing source.
 
 | Who | Page or policy ID | Comment | Suggested change |
 |---|---|---|---|

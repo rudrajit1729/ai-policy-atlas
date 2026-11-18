@@ -87,7 +87,8 @@ def build():
                 break
         return out
 
-    PROSE = json.loads((V2 / "role_prose.json").read_text()) if (V2 / "role_prose.json").exists() else {}
+    import os
+    PROSE = json.loads((V2 / "role_prose.json").read_text()) if (V2 / "role_prose.json").exists() and not os.environ.get("NOPROSE") else {}
     # D77: sub-groups inside a stance x stage cell from the three-member thematic council, and directive wording addressed to the reader
     GROUPS = json.loads((V2 / "role_groups.json").read_text())["cells"] if (V2 / "role_groups.json").exists() else {}
     DIRV = json.loads((V2 / "role_directives.json").read_text()) if (V2 / "role_directives.json").exists() else {}
@@ -100,7 +101,8 @@ def build():
         for layer, pols, theme_of, thl, tho, ex, sts in [
                 ("inst", POS, lambda q: T.get(q["type"], {}).get("theme", "other"), TH, THO, inst_examples, lambda q: st_inst[q["pid"]]),
                 ("course", CP, lambda q: CB.get(q["type"], {}).get("theme", "other"), CTH, CTHO, course_examples, lambda q: st_course[q["pid"]])]:
-            L = [q for q in pols if q["actor"] == rk]
+            # D81: general integrity or procedural rules restated in AI documents are not AI policies; they are left out of the role views
+            L = [q for q in pols if q["actor"] == rk and AIL.get(q["pid"], {}).get("class") != "general"]
             unis = lambda qs: len({x["uni"] for q in qs for x in sts(q)})
             pr = PROSE.get(rk, {}).get(layer, {})
             matrix = {s: {g: {"n": 0, "themes": []} for g, _ in STG} for s in SORDER}
@@ -121,7 +123,17 @@ def build():
                         byq = {q["pid"]: q for q in G}
                         bypol = {x["pid"]: x for x in pols}
                         if ck in ITEMS:
-                            gl = ITEMS[ck]
+                            gl = []
+                            for gr0 in ITEMS[ck]:
+                                its0 = []
+                                for it in gr0["items"]:
+                                    if it["pids"][0] in byq:
+                                        vs0 = [v for v in it.get("variants", []) if v["pid"] in byq]
+                                        its0.append({**it, "pids": [it["pids"][0]] + [v["pid"] for v in vs0], "variants": vs0})
+                                    else:
+                                        its0 += [{"pids": [v["pid"]], "directive": "", "variants": []} for v in it.get("variants", []) if v["pid"] in byq]
+                                if its0:
+                                    gl.append({"label": gr0["label"], "items": its0})
                         else:
                             gl = [{"label": gr["label"], "items": [{"pids": [i], "directive": ""} for i in gr["pids"]]} for gr in GROUPS.get(ck, [])] or [{"label": "", "items": [{"pids": [x["pid"]], "directive": ""} for x in pols]}]
                         groups = []
@@ -259,7 +271,7 @@ def docx_for(data, rk):
         f"This document lists every policy that US university documents and CS course syllabi address to {who}. It draws on {M['n_documents']} university-wide, school and department documents from {M['n_universities']} universities, and on {cpas} AI passages in CS syllabi at {cuni} of those universities.",
         f"A policy is one thing asked of one group. Statements that ask {who} to do the same thing are merged into one policy, whether they say must or should and however they are worded. Each policy here is written as a directive to the reader. Appendices A and B are lookup tables: for every policy ID they quote the original wording, with links to the sources, and the website lists every statement behind each policy.",
         "The document has two levels. The university, school and department level combines university-wide, school or college, and computing department documents. The CS course level covers CS course syllabi. Within each level, policies are grouped by stance, that is, what the policy does about AI use; within a stance, they follow the course from before it starts to after it ends; within a stage, they are grouped by what they ask. The groups come from a thematic analysis by three independent coders, and policies that asked the same thing within a group were combined into one entry.",
-        "Each entry gives the kind (rule, recommendation, or fact or warning), two counts, the levels, and the policy ID or IDs. \u201c13 universities, 15 statements\u201d means that 15 statements from 13 different universities stand behind the entry; a university counts once however many of its documents state it. Levels: U university-wide, S school or college, C computing department. Each ID links to its row in the appendix. Entries marked \u201cgeneral rule\u201d restate an academic-integrity or procedural rule inside an AI document without being specific to AI.",
+        "Each entry gives the kind (rule, recommendation, or fact or warning), two counts, the levels, and the policy ID or IDs. \u201c13 universities, 15 statements\u201d means that 15 statements from 13 different universities stand behind the entry; a university counts once however many of its documents state it. Levels: U university-wide, S school or college, C computing department. Each ID links to its row in the appendix.",
         f"Policies addressed to everyone in a university also apply to {who}. They are not repeated here; the website lists them on its Other roles page."]:
         doc.add_paragraph(t)
     parts = R["parts"]

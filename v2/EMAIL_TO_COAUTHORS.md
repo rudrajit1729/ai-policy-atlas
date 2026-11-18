@@ -1,23 +1,22 @@
-Subject: AI Policy Atlas: first pass is up for review
+Subject: AI Policy Atlas: first pass ready for your review
 
 Hi all,
 
-The first pass of the AI policy project is done and online. We collected and coded the generative-AI policies of 342 US universities (774 university-wide, school and department documents) and the AI passages in CS course syllabi at 135 of them, and organized them so we can review them together.
+The first pass of our AI policy project is done. We gathered the generative-AI policies of 342 US universities, at three levels: university-wide, school or college, and computing department (774 documents in all). We also searched each university's CS syllabi for six core courses, from intro programming to software engineering; 135 universities had public syllabi with AI rules. From these we built a set of 675 university policies and 229 CS course policies, each traced back to its sources.
 
-Website: https://rudrajit1729.github.io/ai-policy-atlas/
+Everything is on the website: https://rudrajit1729.github.io/ai-policy-atlas/
 
-How to navigate it:
-- Overview: what was collected and how 23,948 statements about AI became 675 institutional and 229 CS course policies.
-- Instructors and Students: what policies ask of each group. Each page has two levels (university, school and department; CS courses). The matrix shows stances (rows) across the course (columns); click a cell to read its policies on the right, and open any policy to see every source statement, in the institution's own words, with a link.
-- Other roles: staff and administrators, and policies addressed to everyone.
-- Matrix and Policy set: the full institutional set. Report: a summary with the numbers.
-- Every page links to its data as a CSV. If something is wrong or unclear, edit the CSV (there is a "reviewer note" column) and send it back, or reply with the policy ID.
+Where to start:
+1. Instructors: what universities and CS courses ask of instructors.
+2. Students: the same for students.
+   On both pages, the table shows each type of policy (prohibit, allow with conditions, and so on) across the course, from before it starts to after it ends. Click any cell to read those policies, and click a policy to see the original wording from each university, with links.
+3. Overview: how the data was collected and how many policies came out of it.
 
-Attached are print versions of the instructor and student documents (sources are on the website; the Word versions include the full source tables).
+I've attached print versions of the instructor and student documents.
 
-I propose we start with a paper on instructors: what institutions ask of instructors, what instructors then ask of students in their CS syllabi, and the gap between the two. Where things stand and the next steps are in NEXT_STEPS.md in the repository (https://github.com/rudrajit1729/ai-policy-atlas). Feedback there or by email is welcome.
+I suggest our first paper focus on instructors: what universities ask of them, what they in turn ask of students in CS courses, and the gap between the two. The current status and next steps are here: https://github.com/rudrajit1729/ai-policy-atlas/blob/main/v2/NEXT_STEPS.md
 
-I defend my dissertation on December 4, so I will pick this up in earnest after that; comments before then will help us start quickly.
+I defend my dissertation on December 4 and will pick this up after that. Any comments before then, by reply or on a call, will help us start quickly.
 
 Thanks,
 Rudrajit
