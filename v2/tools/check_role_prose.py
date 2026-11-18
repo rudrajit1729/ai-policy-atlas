@@ -22,7 +22,7 @@ NUM = re.compile(r"(?<![\w.])(\d{1,3}(?:,\d{3})+|\d+)(%?)(?![\w.]\d)")
 
 
 def allowed(part):
-    a = {part["n"], part["n_statements"], part["n_unis"]} | set(part["stage_n"].values())
+    a = {part["n"], part["n_statements"], part["n_unis"]} | set(part["stage_n"].values()) | set(part.get("kinds", {}).values())
     for x in part["stances"]:
         a |= {x["n"], x["n_unis"]}
         for g in x["stages"]:

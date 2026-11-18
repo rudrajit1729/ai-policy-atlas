@@ -40,6 +40,19 @@ OPTION = re.compile(r"^(?:[^;]*?,\s*)?you (?:may|can|are free to|need not|do not
 ENFORCED = re.compile(r"\bonly\b|\bmust\b", re.I)
 
 
+# D84: what each policy does to its actor (asked, choice, fact), coded by three independent coders (v2/role_tags.json);
+# falls back to the kind for policies outside the role views
+_TAGS = json.loads((V2 / "role_tags.json").read_text()) if (V2 / "role_tags.json").exists() else {}
+
+
+def tag(q):
+    t = _TAGS.get(q["pid"])
+    if t:
+        return t["tag"] if isinstance(t, dict) else t
+    k = kind(q)
+    return {"option": "choice", "fact or warning": "fact"}.get(k, "asked")
+
+
 def directive(q):
     return _RI.get(q["pid"], {}).get("directive") or _DIRV.get(q["pid"], "")
 
@@ -73,7 +86,7 @@ def load():
     for q in POS:
         q["levels"] = [l for l, _ in LEV if l in lev[q["pid"]]]
         q["stance"] = stance(stc[q["pid"]], q.get("types", [q["type"]]))
-        if kind(q) == "fact or warning":  # D83: facts and warnings ask nothing of the reader; they are context, not a stance
+        if tag(q) == "fact":  # D83: facts and warnings ask nothing of the reader; they are context, not a stance
             q["stance"] = "context"
     cs = defaultdict(Counter)
     for u in C["universities"]:
@@ -84,7 +97,7 @@ def load():
                         cs[l["pos"]][l.get("stance")] += 1
     for q in CP:
         q["stance"] = stance(cs[q["pid"]], q.get("types", [q["type"]]))
-        if kind(q) == "fact or warning":
+        if tag(q) == "fact":
             q["stance"] = "context"
     cnt = Counter()
     for r in csv.DictReader(open(D / "csv" / "policy_set_counts.csv")):

@@ -18,7 +18,7 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from build_report import STANCE, STG, kind, load  # noqa: E402
+from build_report import STANCE, STG, kind, load, tag  # noqa: E402
 
 V2 = Path(__file__).resolve().parents[1]
 D = V2 / "site" / "data"
@@ -37,11 +37,14 @@ SDEF = {"prohibit": "AI is not allowed.", "restrict": "AI is allowed only for li
 
 # D82 (Peggy): tell enforced rules apart from recommendations and from options the policy leaves to the reader
 KORDER = ["rule", "recommendation", "option", "fact or warning"]
+WHOSE = {"instructor": "instructors\u2019", "student": "students\u2019", "staff": "staff\u2019s", "all": "everyone\u2019s"}
+WHO = {"instructor": "instructors", "student": "students", "staff": "staff and administrators", "all": "people in the university"}
 YOU = {"instructor": "you, the instructor", "student": "you, the student", "staff": "you, as staff or an administrator", "all": "everyone in the university"}
-BTAG = {"rule": "must/should", "recommendation": "must/should", "option": "may", "fact or warning": "fact"}
+TAGO = ["asked", "choice", "fact"]
 # D83 (PI): must and should are the same thing for the reader; the line that matters is must/should versus may
-KINDS = {"must/should": ["must/should", "You are asked to do it (a rule or a recommendation).", "must"],
-         "may": ["may", "You may do it, or need not: the choice is yours.", "may"], "fact": ["fact", "A fact or warning; it asks nothing of you.", "fact"]}
+# D84 (PI): asked (you should do it: must and should are the same thing), choice (you may do it or not), fact (asks nothing of you)
+KINDS = {"asked": ["Expected", "Expected: the policy says you should (or must) do it.", "must"],
+         "choice": ["Optional", "Optional: you may do it, or not; the choice is yours.", "may"], "fact": ["Fact", "Fact or warning: it asks nothing of you.", "fact"]}
 TORDER = list(KINDS)
 
 # PI after meeting Peggy: say at the start who writes these policies and who the document is for
@@ -64,6 +67,32 @@ def accessed():
     return (f"Date accessed. Sources were collected in October 2026, and the text of every source as it was read is kept in the project records. "
             f"All {len(r):,} source links were checked on {day:%B %-d, %Y}: {ok:,} opened, {blk} refused the automated check (such pages usually open in a browser), "
             f"{to} did not answer in time, and {gone} are no longer at their address. A page that has moved or changed since then does not affect the quotes, which are kept as read.")
+
+
+def tagline(L, rk):
+    """D84: how many policies ask something of the reader, leave the choice to them, or state a fact."""
+    c = Counter(tag(q) for q in L)
+    if not L:
+        return ""
+    bits = [f"{c['asked']} ask {WHO[rk]} to do something" if c["asked"] != 1 else f"1 asks {WHO[rk]} to do something"]
+    if c["choice"]:
+        bits.append(f"{c['choice']} leave the choice to them" if c["choice"] != 1 else "1 leaves the choice to them")
+    if c["fact"]:
+        bits.append(f"{c['fact']} state facts or warnings" if c["fact"] != 1 else "1 states a fact or warning")
+    return f"Of the {len(L)}, " + (", ".join(bits[:-1]) + " and " + bits[-1] if len(bits) > 1 else bits[0]) + "."
+
+
+def context_note(stances, rk):
+    """D84 (PI): facts and warnings get no row in the bird's-eye view; they are named under it."""
+    x = next((x for x in stances if x["id"] == "context"), None)
+    if not x:
+        return ""
+    th = Counter()
+    for g in x["stages"]:
+        for gr in g["groups"]:
+            th[gr["label"].rstrip(".")] += gr["n"]
+    return (f"Not in the table: {x['n']} {'fact or warning' if x['n'] == 1 else 'facts and warnings'}, which ask nothing of {WHO[rk]}: "
+            + "; ".join(f"{l} ({n})" for l, n in th.most_common()) + ".")
 
 
 def gaps(matrix, who):
@@ -139,6 +168,7 @@ def build():
     # D79: near-duplicates merged inside each group into one item, clearer group labels, AI link for policies that never say AI
     RI = json.loads((V2 / "role_items.json").read_text()) if (V2 / "role_items.json").exists() else {"cells": {}, "ai_link": {}}
     ITEMS, AIL = RI["cells"], RI["ai_link"]
+    RELAB = json.loads((V2 / "role_labels.json").read_text()) if (V2 / "role_labels.json").exists() else {}
     roles = {}
     for rk, rl, slug in ROLES:
         parts = []
@@ -160,10 +190,10 @@ def build():
                     G = sorted((q for q in S if q["phase"] == g), key=lambda q: (-q["n_unis"], -q["n"]))
                     if G:
                         matrix[s][g] = {"n": len(G), "themes": [[thl.get(t, "Other"), n] for t, n in Counter(theme_of(q) for q in G).most_common()],
-                                       "kinds": {k: n for k in TORDER if (n := sum(1 for q in G if BTAG[kind(q)] == k))}}
+                                       "kinds": {k: n for k in TORDER if (n := sum(1 for q in G if tag(q) == k))}}
                         ck = f"{rk}|{layer}|{s}|{g}"
                         pols = [{"pid": q["pid"], "sentence": q["sentence"], "directive": (AIL.get(q["pid"], {}).get("directive") or DIRV.get(q["pid"], "")),
-                                 "general": AIL.get(q["pid"], {}).get("class") == "general", "stance": s, "stage": g, "theme": thl.get(theme_of(q), "Other"), "kind": kind(q),
+                                 "general": AIL.get(q["pid"], {}).get("class") == "general", "stance": s, "stage": g, "theme": thl.get(theme_of(q), "Other"), "kind": kind(q), "tag": tag(q),
                                  "n_unis": q["n_unis"], "n": len(sts(q)), "levels": [LEVN[l] for l in q.get("levels", [])], "examples": ex(q)} for q in G]
                         byq = {q["pid"]: q for q in G}
                         bypol = {x["pid"]: x for x in pols}
@@ -192,6 +222,21 @@ def build():
                         left = [x["pid"] for x in pols if x["pid"] not in seen_ids]
                         if left:
                             gl.append({"label": "Other", "items": [{"pids": [i], "directive": ""} for i in left]})
+                        # D84: a theme holds one tag only; a mixed theme is split, and each part gets its own label naming the actor
+                        gl2 = []
+                        for gr in gl:
+                            bk = {t: [] for t in TAGO}
+                            for it in gr["items"]:
+                                lt = bypol[it["pids"][0]]["tag"]
+                                keep = [v for v in it.get("variants", []) if bypol[v["pid"]]["tag"] == lt]
+                                bk[lt].append({**it, "pids": [it["pids"][0]] + [v["pid"] for v in keep] + [i for i in it["pids"][1:] if i not in {v["pid"] for v in it.get("variants", [])}], "variants": keep})
+                                for v in it.get("variants", []):
+                                    if bypol[v["pid"]]["tag"] != lt:
+                                        bk[bypol[v["pid"]]["tag"]].append({"pids": [v["pid"]], "directive": "", "variants": []})
+                            for t in TAGO:
+                                if bk[t]:
+                                    gl2.append({"label": RELAB.get(f"{ck}|{gr['label']}|{t}", gr["label"]), "theme": gr["label"], "tag": t, "items": bk[t]})
+                        gl = sorted(gl2, key=lambda gr: TAGO.index(gr["tag"]))
                         groups = []
                         for gr in gl:
                             its = []
@@ -204,32 +249,24 @@ def build():
                                         if e["uni"] not in seen and len(exs) < 3:
                                             seen.add(e["uni"])
                                             exs.append(e)
-                                vs = [{"id": v["pid"], "differs": v["differs"], "n_unis": bypol[v["pid"]]["n_unis"], "directive": bypol[v["pid"]]["directive"] or bypol[v["pid"]]["sentence"], "kind": BTAG[bypol[v["pid"]]["kind"]]}
+                                vs = [{"id": v["pid"], "differs": v["differs"], "n_unis": bypol[v["pid"]]["n_unis"], "directive": bypol[v["pid"]]["directive"] or bypol[v["pid"]]["sentence"], "kind": bypol[v["pid"]]["tag"]}
                                       for v in it.get("variants", [])]
                                 its.append({"ids": it["pids"], "directive": it.get("directive") or ps[0]["directive"] or ps[0]["sentence"], "variants": vs,
                                             "n_unis": len({x["uni"] for q in qs for x in sts(q)}), "n": sum(len(sts(q)) for q in qs),
-                                            "kind": ", ".join(dict.fromkeys(BTAG[x["kind"]] for x in ps)), "levels": [l for l in ("U", "S", "C") if any(l in x["levels"] for x in ps)],
+                                            "kind": ", ".join(dict.fromkeys(x["tag"] for x in ps)), "levels": [l for l in ("U", "S", "C") if any(l in x["levels"] for x in ps)],
                                             "general": all(x["general"] for x in ps), "examples": exs})
                             its.sort(key=lambda t: (t["general"], -t["n_unis"], -t["n"]))
-                            tg = Counter(BTAG[bypol[i]["kind"]] for t in its for i in t["ids"])
-                            groups.append({"label": gr["label"], "n": sum(len(t["ids"]) for t in its), "tags": {k: tg[k] for k in ("must/should", "may", "fact") if tg[k]}, "items": its})
+                            groups.append({"label": gr["label"], "theme": gr["theme"], "tag": gr["tag"], "n": sum(len(t["ids"]) for t in its), "items": its})
                         # D83 bird's-eye view: every theme, one line per tag (must/should, may; facts in the Context row)
-                        lines = []
-                        for gr in groups:
-                            top = max(gr["tags"], key=gr["tags"].get)
-                            lines.append([top, gr["label"], gr["tags"][top], 0])
-                            for t in gr["items"]:
-                                for i in t["ids"]:
-                                    if BTAG[bypol[i]["kind"]] != top:  # the few policies in a theme that carry the other tag, in their own words
-                                        lines.append([BTAG[bypol[i]["kind"]], bypol[i]["directive"] or bypol[i]["sentence"], 1, 1])
-                        matrix[s][g]["lines"] = lines
+                        matrix[s][g]["lines"] = [[gr["tag"], gr["label"], gr["n"], 0] for gr in groups]
                         stages.append({"id": g, "label": STAGE_NOTE[g], "groups": groups, "policies": pols})
                 stances.append({"id": s, "label": STANCE[s], "def": SDEF[s], "n": len(S), "n_unis": unis(S), "prose": pr.get("stances", {}).get(s, ""), "stages": stages})
             parts.append({"layer": layer, "title": "University, school and department level" if layer == "inst" else "CS course level",
-                          "n": len(L), "n_statements": sum(len(sts(q)) for q in L), "n_unis": unis(L), "intro": pr.get("intro", ""),
+                          "n": len(L), "n_statements": sum(len(sts(q)) for q in L), "n_unis": unis(L), "intro": (pr.get("intro", "") + " " + tagline(L, rk)).strip(),
                           "stage_n": {g: sum(1 for q in L if q["phase"] == g) for g, _ in STG}, "stance_order": [x["id"] for x in stances],
                           "matrix": {s: matrix[s] for s in (x["id"] for x in stances)}, "stances": stances,
-                          "kinds": {k: n for k in TORDER if (n := sum(1 for q in L if BTAG[kind(q)] == k))}, "gaps": gaps(matrix, rl.lower())})
+                          "kinds": {k: n for k in TORDER if (n := sum(1 for q in L if tag(q) == k))}, "context_note": context_note(stances, rk),
+                          "n_table": sum(1 for q in L if q["stance"] != "context"), "stage_table": {g: sum(1 for q in L if q["phase"] == g and q["stance"] != "context") for g, _ in STG}, "gaps": gaps(matrix, rl.lower())})
         roles[rk] = {"label": rl, "slug": slug, "audience": AUD.get(rk, ""), "parts": parts}
     out = {"generated": date.today().isoformat(), "site": SITE, "accessed": accessed(), "stance_labels": STANCE, "stance_defs": SDEF, "kinds": KINDS, "stages": [[g, STAGE_NOTE[g]] for g, _ in STG], "roles": roles}
     (D / "roles.json").write_text(json.dumps(out, ensure_ascii=False))
@@ -342,7 +379,7 @@ def docx_for(data, rk):
         f"This document lists every policy that US university documents and CS course syllabi address to {who}. It draws on {M['n_documents']} university-wide, school and department documents from {M['n_universities']} universities, and on {cpas} AI passages in CS syllabi at {cuni} of those universities.",
         f"A policy is one thing asked of one group. Statements that ask {who} to do the same thing are merged into one policy, whether they say must or should and however they are worded. Each policy here is written as a directive to the reader. Appendices A and B are lookup tables: for every policy ID they quote the original wording, with links to the sources, and the website lists every statement behind each policy.",
         "The document has two levels. The university, school and department level combines university-wide, school or college, and computing department documents. The CS course level covers CS course syllabi. Within each level, policies are grouped by stance, that is, what the policy does about AI use; within a stance, they follow the course from before it starts to after it ends; within a stage, they are grouped by what they ask. The groups come from a thematic analysis by three independent coders, and policies that asked the same thing within a group were combined into one entry.",
-        "Each entry is tagged must/should (you are asked to do it: a rule or a recommendation), may (you may do it, or need not: the choice is yours) or fact (a fact or warning that asks nothing of you). It also gives two counts, the levels, and the policy ID or IDs. \u201c13 universities, 15 statements\u201d means that 15 statements from 13 different universities stand behind the entry; a university counts once however many of its documents state it. Levels: U university-wide, S school or college, C computing department. Each ID links to its row in the appendix.",
+        f"Each entry is tagged Expected ({who} are expected to do it: the policy says they should or must), Optional ({who} may do it, or not: the choice is theirs) or Fact (a fact or warning that asks nothing of anyone). It also gives two counts, the levels, and the policy ID or IDs. \u201c13 universities, 15 statements\u201d means that 15 statements from 13 different universities stand behind the entry; a university counts once however many of its documents state it. Levels: U university-wide, S school or college, C computing department. Each ID links to its row in the appendix.",
         f"Policies addressed to everyone in a university also apply to {who}. They are not repeated here; the website lists them on its Other roles page."] + ([data["accessed"]] if data.get("accessed") else []):
         doc.add_paragraph(t)
     parts = R["parts"]
@@ -399,11 +436,11 @@ def docx_for(data, rk):
         mx = max([c["n"] for s_ in part["matrix"].values() for c in s_.values()] or [1])
         doc.add_heading(f"Bird\u2019s-eye view of policies for {who}: {lev}", 2)
         p = doc.add_paragraph()
-        run(p, f"Every entry is addressed to {YOU[rk]}. [must/should]: you are asked to do it (a rule or a recommendation). [may]: you may do it, and the choice is yours. The Context row holds facts and warnings, which ask nothing of you. The number after each theme is how many of its policies carry that tag; indented lines are a theme\u2019s few policies with the other tag, in their own words.", size=8.5, color="5B6570")
+        run(p, f"Each theme says who it addresses. [Expected]: {WHO[rk]} are expected to do it; the policy says they should or must. [Optional]: {WHO[rk]} may do it, or not; the choice is theirs. The number after each theme is how many policies it holds.", size=8.5, color="5B6570")
         t = doc.add_table(rows=1, cols=len(stg) + 2)
         t.style = "Table Grid"
-        header(t, [f"{R['label']}: stance \u2193 \u00b7 when \u2192"] + [SHORT[g] for g in stg] + ["All"])
-        for x in part["stances"]:
+        header(t, ["Stance \u2193 When \u2192"] + [SHORT[g] for g in stg] + ["All"])
+        for x in [x for x in part["stances"] if x["id"] != "context"]:
             cells = t.add_row().cells
             cellset(cells[0], x["label"], bold=True, size=8)
             for c, g in zip(cells[1:], stg):
@@ -418,17 +455,24 @@ def docx_for(data, rk):
                     if ind:
                         q.paragraph_format.left_indent = Pt(6)
                     if tg != "fact":
-                        run(q, f"[{tg}] ", bold=True, size=6.5, color="1F3B4D" if tg == "must/should" else "2F6B3A")
-                    run(q, lab + ("" if ind else f" ({n})"), size=7, italic=bool(ind))
+                        run(q, f"[{KINDS[tg][0]}] ", bold=True, size=6.5, color="1F3B4D" if tg == "asked" else "2F6B3A")
+                    run(q, lab.rstrip(".") + ("" if ind else f" ({n})"), size=7, italic=bool(ind))
                 shade(c, mix(0.08 + 0.5 * (cell["n"] / mx) ** 0.5))
             cellset(cells[-1], str(x["n"]), bold=True, size=9)
         cells = t.add_row().cells
-        for c, v in zip(cells, ["All stances"] + [str(part["stage_n"][g] or "–") for g in stg] + [str(part["n"])]):
+        for c, v in zip(cells, ["All stances"] + [str(part["stage_table"][g] or "–") for g in stg] + [str(part["n_table"])]):
             cellset(c, v, bold=True, size=8.5)
+        wt = [0.45 if not part["stage_table"][g] else 1 + 1.6 * (part["stage_table"][g] / max(part["stage_table"].values())) ** 0.6 for g in stg]
+        ws = [0.95] + [7.75 * w / sum(wt) for w in wt] + [0.4]
+        t.autofit = False
         for row in t.rows:
-            row.cells[0].width = Inches(1.3)
+            for c, w in zip(row.cells, ws):
+                c.width = Inches(w)
         p = doc.add_paragraph()
         run(p, f"{lev}. Rows are stances; columns are when in the course a policy applies. Each cell: number of policies; how many are rules (must), recommendations (should), options (may) and facts or warnings (fact); then the groups they fall into, with counts. Darker cells hold more policies; empty cells have none.", italic=True, size=8, color="5B6570")
+        if part.get("context_note"):
+            p = doc.add_paragraph()
+            run(p, part["context_note"], italic=True, size=8, color="5B6570")
         if part.get("gaps"):
             doc.add_paragraph(part["gaps"])
         landscape(False)
@@ -446,12 +490,12 @@ def docx_for(data, rk):
                 run(p, f"{g['label']} ({plural(len(g['policies']), 'policy', 'policies')})", bold=True, size=10, color="1F5F8B")
                 t = doc.add_table(rows=1, cols=4)
                 t.style = "Table Grid"
-                header(t, ["Policy", "Kind", "Universities (statements) · levels", "ID"])
+                header(t, ["Policy", "Tag", "Universities (statements) · levels", "ID"])
                 for gr in g["groups"]:
                     if gr["label"]:
                         row = t.add_row()
                         c = row.cells[0].merge(row.cells[-1])
-                        cellset(c, f"{gr['label']} ({plural(gr['n'], 'policy', 'policies')})", bold=True, size=8.5, color="1F5F8B")
+                        cellset(c, f"{gr['label'].rstrip('.')} ({plural(gr['n'], 'policy', 'policies')})", bold=True, size=8.5, color="1F5F8B")
                         shade(c, "F3F1EC")
                     for it in gr["items"]:
                         cells = t.add_row().cells

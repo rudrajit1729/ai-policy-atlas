@@ -24,7 +24,9 @@ KO = ["rule", "recommendation", "option", "fact or warning"]
 
 
 YOU = {"instructor": "you, the instructor", "student": "you, the student", "staff": "you, as staff or an administrator", "all": "everyone in the university"}
-BT = {"must/should": "must", "may": "may", "fact": "fact"}
+BT = {"asked": "must", "choice": "may", "fact": "fact"}
+WHOSE = {"instructor": "instructors\u2019", "student": "students\u2019", "staff": "staff\u2019s", "all": "everyone\u2019s"}
+WHO = {"instructor": "instructors", "student": "students", "staff": "staff and administrators", "all": "people in the university"}
 
 
 def btag(gr, ctx):
@@ -53,7 +55,7 @@ def page(data, rk):
          "<h2>About this document</h2>",
          f"<p>This document lists every policy that US university documents and CS course syllabi address to {e(who)}, drawn from {M['n_documents']} university-wide, school and department documents at {M['n_universities']} universities and from AI passages in CS course syllabi.</p>",
          f"<p>A policy is one thing asked of one group. Statements that ask {e(who)} to do the same thing are merged into one policy, whatever their wording, and each policy is written as a directive to the reader. Within each level, policies are grouped by stance (what the policy does about AI use), then follow the course from before it starts to after it ends, then are grouped by what they ask. The groups come from a thematic analysis by three independent coders. Policies that make the same point appear as one entry led by the most widespread policy, with the others listed as variants and how they differ.</p>",
-         f"<p>Each entry is tagged {kb(data, 'must/should')} you are asked to do it (a rule or a recommendation), {kb(data, 'may')} you may do it, or need not: the choice is yours, or {kb(data, 'fact')} a fact or warning that asks nothing of you. It also gives the number of universities and of statements behind it (“13 (15)” means 15 statements from 13 different universities), the levels where it appears (U university-wide, S school or college, C computing department), and its ID. <b>Sources:</b> every ID links to the website, which lists each statement behind the policy in the institution’s own words, with a link to the source.</p>",
+         f"<p>Each entry is tagged <span class='kb kb-must'>Expected</span> ({e(who)} are expected to do it: the policy says they should or must), <span class='kb kb-may'>Optional</span> ({e(who)} may do it, or not: the choice is theirs) or <span class='kb kb-fact'>Fact</span> (a fact or warning that asks nothing of anyone). It also gives the number of universities and of statements behind it (“13 (15)” means 15 statements from 13 different universities), the levels where it appears (U university-wide, S school or college, C computing department), and its ID. <b>Sources:</b> every ID links to the website, which lists each statement behind the policy in the institution’s own words, with a link to the source.</p>",
          f"<p>Policies addressed to everyone in a university also apply to {e(who)}; the website lists them on its Other roles page.</p>",
          "<table class='key'><tr><th>Stance</th><th>What the policy does about AI use</th>" + "".join(f"<th>{e(p['title'])}</th>" for p in parts) + "</tr>"]
     for sk, lab in data["stance_labels"].items():
@@ -68,9 +70,13 @@ def page(data, rk):
         mx = max([c["n"] for r in p["matrix"].values() for c in r.values()] or [1])
         h.append(f"<section class='wide'><h2>{e(lev)}: policies for {e(who)}</h2><p>{e(p['intro'])}</p>")
         h.append(f"<h3>Bird\u2019s-eye view of policies for {e(who)}: {e(lev)}</h3>")
-        h.append(f"<p class='youline'>Every entry is addressed to {YOU[rk]}. <span class='kb kb-must'>must/should</span> you are asked to do it (a rule or a recommendation). <span class='kb kb-may'>may</span> you are allowed to, and the choice is yours. The Context row holds facts and warnings, which ask nothing of you. The number after each theme is how many of its policies carry that tag; indented lines are the theme\u2019s few policies with the other tag, in their own words.</p>")
-        h.append(f"<table class='mx'><tr><th>{e(R['label'])}: stance \u2193 \u00b7 when \u2192</th>" + "".join(f"<th>{SHORT[g]}</th>" for g in stg) + "<th>All</th></tr>")
-        for x in p["stances"]:
+        h.append(f"<p class='youline'>Each theme says who it addresses. <span class='kb kb-must'>Expected</span> {WHO[rk]} are expected to do it: the policy says they should or must. <span class='kb kb-may'>Optional</span> {WHO[rk]} may do it, or not: the choice is theirs. The number after each theme is how many policies it holds.</p>")
+        # wider columns where the policies are, so theme lines wrap less; empty columns stay (an empty column is a finding)
+        wt = {g: 0.45 if not p["stage_table"][g] else 1 + 1.6 * (p["stage_table"][g] / max(p["stage_table"].values())) ** 0.6 for g in stg}
+        avail = 10.4 - 0.72 - 0.32
+        cols = "<colgroup><col style='width:0.72in'>" + "".join(f"<col style='width:{avail * wt[g] / sum(wt.values()):.2f}in'>" for g in stg) + "<col style='width:0.32in'></colgroup>"
+        h.append(f"<table class='mx'>{cols}<tr><th>Stance \u2193 When \u2192</th>" + "".join(f"<th>{SHORT[g]}</th>" for g in stg) + "<th>All</th></tr>")
+        for x in [x for x in p["stances"] if x["id"] != "context"]:
             row = f"<tr><th>{e(x['label'])}</th>"
             for g in stg:
                 c = p["matrix"][x["id"]][g]
@@ -80,10 +86,12 @@ def page(data, rk):
                 sg = next(z for z in x["stages"] if z["id"] == g)
                 a = 0.04 + 0.26 * (c["n"] / mx) ** 0.5
                 row += (f"<td style='background:rgba(31,90,115,{a:.2f})'><b class='cn'>{pl(c['n'], 'policy', 'policies')}</b>"
-                        + "".join(f"<div class='th{' sub' if ind else ''}'>{'' if t == 'fact' else f'<span class={chr(39)}kb kb-{BT[t]}{chr(39)}>{t}</span>'}{e(lab)}{'' if ind else f' ({n})'}</div>" for t, lab, n, ind in c["lines"]) + "</td>")
+                        + "".join(f"<div class='th{' sub' if ind else ''}'>{'' if t == 'fact' else f'<span class={chr(39)}kb kb-{BT[t]}{chr(39)}>{data[chr(107)+chr(105)+chr(110)+chr(100)+chr(115)][t][0]}</span>'}{e(lab.rstrip('.'))}{'' if ind else f' ({n})'}</div>" for t, lab, n, ind in c["lines"]) + "</td>")
             h.append(row + f"<td class=n><b>{x['n']}</b></td></tr>")
-        h.append("<tr class='tot'><th>All stances</th>" + "".join(f"<td class=n>{p['stage_n'][g] or '–'}</td>" for g in stg) + f"<td class=n>{p['n']}</td></tr></table>")
-        h.append(f"<p class='cap'>{e(lev)}. Rows are stances; columns are when in the course a policy applies. Each cell lists every theme of policies at that point, tagged must/should or may, with the number of policies in it. Darker cells hold more policies. Online: <a href='{link}'>{e(link)}</a></p>")
+        h.append("<tr class='tot'><th>All stances</th>" + "".join(f"<td class=n>{p['stage_table'][g] or '–'}</td>" for g in stg) + f"<td class=n>{p['n_table']}</td></tr></table>")
+        if p.get("context_note"):
+            h.append(f"<p class='cap'>{e(p['context_note'])}</p>")
+        h.append(f"<p class='cap'>{e(lev)}. Rows are stances; columns are when in the course a policy applies. Each cell lists every theme of policies at that point, tagged Expected or Optional, with the number of policies in it. Darker cells hold more policies. Online: <a href='{link}'>{e(link)}</a></p>")
         if p.get("gaps"):
             h.append(f"<p class='gaps'>{e(p['gaps'])}</p>")
         h.append("</section>")
@@ -91,10 +99,10 @@ def page(data, rk):
             h.append(f"<h3>{e(lev)} · {e(x['label'])}: {pl(x['n'], 'policy', 'policies')}, {pl(x['n_unis'], 'university', 'universities')}</h3>")
             h.append(f"<p><i class='def'>{e(x['def'])}</i> {e(x['prose'])}</p>")
             for g in x["stages"]:
-                h.append(f"<h4>{e(g['label'])} ({pl(len(g['policies']), 'policy', 'policies')})</h4><table class='pol'><tr><th>Policy</th><th>Kind</th><th>Universities (statements) · levels</th><th>ID</th></tr>")
+                h.append(f"<h4>{e(g['label'])} ({pl(len(g['policies']), 'policy', 'policies')})</h4><table class='pol'><tr><th>Policy</th><th>Tag</th><th>Universities (statements) · levels</th><th>ID</th></tr>")
                 for gr in g["groups"]:
                     if gr["label"]:
-                        h.append(f"<tr class='grp'><td colspan=4>{e(gr['label'])} ({pl(gr['n'], 'policy', 'policies')})</td></tr>")
+                        h.append(f"<tr class='grp'><td colspan=4>{e(gr['label'].rstrip('.'))} ({pl(gr['n'], 'policy', 'policies')})</td></tr>")
                     for it in gr["items"]:
                         var = "".join(f"<div class='var'><b>Variant:</b> {e(v['differs'])} ({kb(data, v['kind']) + ', ' if v.get('kind') and v['kind'] != it['kind'] else ''}{pl(v['n_unis'], 'university', 'universities')}, <a href='{link}/{e(v['id'])}'>{e(v['id'])}</a>)</div>" for v in it["variants"])
                         gen = " <span class='gen'>general rule</span>" if it["general"] else ""
@@ -107,10 +115,10 @@ body{font:10pt/1.45 Georgia,'Times New Roman',serif;color:#1c2126}h1{font-size:2
 h3{font:600 11.5pt -apple-system,Helvetica,Arial,sans-serif;margin:16pt 0 4pt;color:#1c2126;break-after:avoid}h4{font:600 9.5pt -apple-system,Helvetica,Arial,sans-serif;color:#1f5a73;margin:10pt 0 3pt;break-after:avoid}
 .sub{color:#5d6670;margin:0 0 10pt}a{color:#1f5a73}table{border-collapse:collapse;width:100%;font:8.5pt/1.35 -apple-system,Helvetica,Arial,sans-serif;margin:4pt 0 8pt}
 th,td{border:0.5pt solid #cfc9bd;padding:3pt 5pt;vertical-align:top;text-align:left}th{background:#efece5}td.n{text-align:right}tr.tot td,tr.tot th{font-weight:600;background:#f6f4ef}
-.wide{page:wide}.wide h2{margin-top:0}table.mx{table-layout:auto;font-size:7.5pt}table.mx td{min-width:0.55in}table.mx th,table.mx td{padding:2.5pt 3pt}table.mx th:first-child{width:0.78in}table.mx th:last-child{width:0.32in}
-table.mx td .th{font-size:7.3pt;line-height:1.28;margin:0 0 2.5pt}table.mx td .th .kb{font-size:6pt;margin-right:3pt}table.mx .cn{display:block;font-size:7.5pt;margin-bottom:2pt}
+.wide{page:wide}.wide h2{margin-top:0}table.mx{table-layout:fixed;font-size:7.5pt}table.mx th,table.mx td{padding:2pt 2.5pt}table.mx th:first-child{width:0.78in}table.mx th:last-child{width:0.32in}
+table.mx td .th{font-size:7.2pt;line-height:1.25;margin:0 0 2pt}table.mx td .th .kb{font-size:6pt;margin-right:3pt}table.mx .cn{display:block;font-size:7.5pt;margin-bottom:2pt}
 .th.sub{margin-left:7pt;font-style:italic}.youline{font-size:8.5pt;margin:2pt 0 5pt}
-table.pol td:first-child{width:62%}td.k{color:#5d6670;font-size:8pt}tr.grp td{background:#f3f1ec;font-weight:600;color:#1f5a73}tr{break-inside:avoid}
+table.pol td:first-child{width:64%}table.pol td.k{white-space:nowrap}td.k{color:#5d6670;font-size:8pt}tr.grp td{background:#f3f1ec;font-weight:600;color:#1f5a73}tr{break-inside:avoid}
 .var{font-size:7.5pt;color:#5d6670;margin:2pt 0 0 8pt}.gen{font-size:7pt;color:#8a6d3b;border:0.5pt solid #e3d3b0;border-radius:6pt;padding:0 4pt}
 .kb{display:inline-block;font:600 6.8pt/1.4 -apple-system,Helvetica,Arial,sans-serif;padding:0 3pt;border-radius:2.5pt;margin:0 2pt 1pt 0;white-space:nowrap;-webkit-print-color-adjust:exact;print-color-adjust:exact}
 .kb-must{background:#1f3b4d;color:#fff}.kb-should{background:#cfe0e8;color:#1f3b4d}.kb-may{background:#fff;color:#2f6b3a;border:0.6pt solid #6aa476}.kb-fact{background:#ecebe6;color:#5d6670}
