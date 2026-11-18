@@ -28,7 +28,7 @@ LAB = {"university": "U", "school": "S", "computing": "C"}
 # A policy takes its most common non-neutral stance when at least a quarter of its statements take one; otherwise it is
 # "Instructor decides" if its topics are about who decides (P04, P85, CT04), else "Duties and facts" (it states a duty or fact without a stance on AI use).
 STANCE = {"prohibit": "Prohibit", "restrict": "Only listed uses", "permit": "Allowed with conditions", "encourage": "Encourage", "require": "Require",
-          "delegates": "Instructor decides", "none": "Cross-cutting duties and facts"}
+          "delegates": "Instructor decides", "none": "Cross-cutting duties", "context": "Context: facts and warnings"}
 DECIDES = {"P04", "P85", "CT04"}
 KIND = {"rule": "rule", "recommendation": "recommendation", "fact": "fact or warning"}
 # D82 (Peggy): a policy that gives the reader a choice ("you may", "you can", "you need not") is an option, not a rule or a
@@ -73,6 +73,8 @@ def load():
     for q in POS:
         q["levels"] = [l for l, _ in LEV if l in lev[q["pid"]]]
         q["stance"] = stance(stc[q["pid"]], q.get("types", [q["type"]]))
+        if kind(q) == "fact or warning":  # D83: facts and warnings ask nothing of the reader; they are context, not a stance
+            q["stance"] = "context"
     cs = defaultdict(Counter)
     for u in C["universities"]:
         for sl in u["slots"]:
@@ -82,6 +84,8 @@ def load():
                         cs[l["pos"]][l.get("stance")] += 1
     for q in CP:
         q["stance"] = stance(cs[q["pid"]], q.get("types", [q["type"]]))
+        if kind(q) == "fact or warning":
+            q["stance"] = "context"
     cnt = Counter()
     for r in csv.DictReader(open(D / "csv" / "policy_set_counts.csv")):
         cnt[(r["level"], r["who it addresses"], r["stage"])] += int(r["policies"])
@@ -139,7 +143,7 @@ def blocks(d):
          ("h3", "Stance of the policies"),
          ("table", (["Stance", "Institutional", "CS course syllabi"], [[STANCE[st], f"{sum(q['stance'] == st for q in POS)} ({pct(sum(q['stance'] == st for q in POS), len(POS))})",
                      f"{sum(q['stance'] == st for q in CP)} ({pct(sum(q['stance'] == st for q in CP), len(CP))})"] for st in STANCE])),
-         ("p", "A policy's stance is the stance most of its statements take on AI use. \"Cross-cutting duties and facts\" means the policy sets a duty or states a fact that holds whatever the stance on AI use (for example, verify AI output; AI output can be wrong)."),
+         ("p", "A policy's stance is the stance most of its statements take on AI use. \"Cross-cutting duties\" means the policy sets a duty that holds whatever the stance on AI use (for example, verify AI output). Facts and warnings (for example, AI output can be wrong) ask nothing of the reader and are counted apart, as context."),
          ("h2", "4. What the policies show"),
          ("h3", "Little is binding at the top"),
          ("table", (["Level", "Rule", "Recommendation", "Description", "Template"], [
@@ -168,7 +172,7 @@ def blocks(d):
                  f"**How to run the human review on a sample.** Proposal: two reviewers check (a) every policy merged from 5 or more versions ({merged5}), and (b) a random sample of about 10% of the rest, drawn evenly across who it addresses and stage (about 60 institutional, 25 course). For each: does the sentence say what its statements say, are the merges right, are the group and stage right. Report agreement, fix, and extend the review where errors cluster."]),
          ("pagebreak", None),
          ("h2", f"Appendix A. Institutional policy set ({len(POS)})"),
-         ("p", "Grouped by who the policy addresses, then by stage in course order. Within a stage, most widespread first. Universities = how many universities state it. Stance: what the policy does about AI use (Prohibit, Only listed uses, Allowed with conditions, Encourage, Require, Instructor decides, or Cross-cutting duties and facts). Levels: U university-wide, S school or college, C computing unit. Each sentence summarizes the statements merged into it; the original wording and sources are in policy_set_statements.csv."),
+         ("p", "Grouped by who the policy addresses, then by stage in course order. Within a stage, most widespread first. Universities = how many universities state it. Stance: what the policy does about AI use (Prohibit, Only listed uses, Allowed with conditions, Encourage, Require, Instructor decides, or Cross-cutting duties; facts and warnings are listed as Context). Levels: U university-wide, S school or college, C computing unit. Each sentence summarizes the statements merged into it; the original wording and sources are in policy_set_statements.csv."),
          ("policies", ("inst", POS)),
          ("pagebreak", None),
          ("h2", f"Appendix B. CS course policy set ({len(CP)})"),
@@ -235,7 +239,7 @@ table.pol th:nth-child(n+4){width:10%}table.pol th,table.pol td{padding:5px 4px}
 .st{display:inline-block;max-width:100%;font-size:11.5px;line-height:1.3;padding:1px 7px;border-radius:9px;border:1px solid var(--line)}
 .st-prohibit{background:#f6dcdc;border-color:#e3b3b3;color:#7a1f1f}.st-restrict{background:#f8e9d2;border-color:#e6c89a;color:#6e4510}
 .st-permit{background:#dcefe0;border-color:#b2d6ba;color:#1f5a2e}.st-encourage{background:#d6ecef;border-color:#a9d2d8;color:#145560}
-.st-require{background:#e3def3;border-color:#c3b8e3;color:#3d2c7a}.st-delegates{background:#dde6f2;border-color:#b5c7e0;color:#1f3f6b}.st-none{color:var(--mute)}
+.st-require{background:#e3def3;border-color:#c3b8e3;color:#3d2c7a}.st-delegates{background:#dde6f2;border-color:#b5c7e0;color:#1f3f6b}.st-none{color:var(--mute)}.st-context{color:var(--mute);font-style:italic}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .st:not(.st-none){filter:brightness(.85) saturate(.9)}}
 li{margin:4px 0}.bar{font:13px system-ui,sans-serif;display:flex;gap:14px;flex-wrap:wrap;margin:0 0 18px}.bar a{color:var(--acc)}
 .tw{overflow-x:auto}

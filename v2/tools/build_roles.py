@@ -32,12 +32,17 @@ STAGE_NOTE = {"before-course": "Before the course", "course-start": "At the star
               "background": "Background: facts and context"}
 SDEF = {"prohibit": "AI is not allowed.", "restrict": "AI is allowed only for listed uses.", "permit": "AI is allowed under conditions such as disclosure.",
         "encourage": "AI use is invited or promoted.", "require": "Something is required when AI is used (or AI use is required).",
-        "delegates": "The instructor or assignment decides.", "none": "Duties and facts that hold whatever the stance on AI use."}
+        "delegates": "The instructor or assignment decides.", "none": "What you must or should do whatever the stance on AI use.",
+        "context": "Facts and warnings that give context; they ask nothing of you."}
 
 # D82 (Peggy): tell enforced rules apart from recommendations and from options the policy leaves to the reader
 KORDER = ["rule", "recommendation", "option", "fact or warning"]
-KINDS = {"rule": ["must", "A rule: you must or must not."], "recommendation": ["should", "A recommendation: you should or should not."],
-         "option": ["may", "An option: you may, or need not; the choice is yours."], "fact or warning": ["fact", "A fact or warning."]}
+YOU = {"instructor": "you, the instructor", "student": "you, the student", "staff": "you, as staff or an administrator", "all": "everyone in the university"}
+BTAG = {"rule": "must/should", "recommendation": "must/should", "option": "may", "fact or warning": "fact"}
+# D83 (PI): must and should are the same thing for the reader; the line that matters is must/should versus may
+KINDS = {"must/should": ["must/should", "You are asked to do it (a rule or a recommendation).", "must"],
+         "may": ["may", "You may do it, or need not: the choice is yours.", "may"], "fact": ["fact", "A fact or warning; it asks nothing of you.", "fact"]}
+TORDER = list(KINDS)
 
 # PI after meeting Peggy: say at the start who writes these policies and who the document is for
 AUD = {"instructor": "Who this is for. These are the AI policies that universities, schools and computing departments write for their instructors: what exists, and what instructors are asked to do. They come from provosts, teaching centers, academic integrity offices and department committees, so the first readers are the administrators and committees who write such policies and the instructors who receive them. The CS course level adds the few policies instructors write for themselves in their own syllabi.",
@@ -155,16 +160,23 @@ def build():
                     G = sorted((q for q in S if q["phase"] == g), key=lambda q: (-q["n_unis"], -q["n"]))
                     if G:
                         matrix[s][g] = {"n": len(G), "themes": [[thl.get(t, "Other"), n] for t, n in Counter(theme_of(q) for q in G).most_common()],
-                                       "kinds": {k: n for k in KORDER if (n := sum(1 for q in G if kind(q) == k))}}
+                                       "kinds": {k: n for k in TORDER if (n := sum(1 for q in G if BTAG[kind(q)] == k))}}
                         ck = f"{rk}|{layer}|{s}|{g}"
                         pols = [{"pid": q["pid"], "sentence": q["sentence"], "directive": (AIL.get(q["pid"], {}).get("directive") or DIRV.get(q["pid"], "")),
                                  "general": AIL.get(q["pid"], {}).get("class") == "general", "stance": s, "stage": g, "theme": thl.get(theme_of(q), "Other"), "kind": kind(q),
                                  "n_unis": q["n_unis"], "n": len(sts(q)), "levels": [LEVN[l] for l in q.get("levels", [])], "examples": ex(q)} for q in G]
                         byq = {q["pid"]: q for q in G}
                         bypol = {x["pid"]: x for x in pols}
-                        if ck in ITEMS:
+                        src = ITEMS.get(ck)
+                        if src is None and s == "context":  # D83: facts moved out of their stance cells keep the group they had there
+                            mg = {}
+                            for s2 in SORDER:
+                                for gr0 in ITEMS.get(f"{rk}|{layer}|{s2}|{g}", []):
+                                    mg.setdefault(gr0["label"], {"label": gr0["label"], "items": []})["items"] += gr0["items"]
+                            src = list(mg.values()) or None
+                        if src is not None:
                             gl = []
-                            for gr0 in ITEMS[ck]:
+                            for gr0 in src:
                                 its0 = []
                                 for it in gr0["items"]:
                                     if it["pids"][0] in byq:
@@ -176,6 +188,10 @@ def build():
                                     gl.append({"label": gr0["label"], "items": its0})
                         else:
                             gl = [{"label": gr["label"], "items": [{"pids": [i], "directive": ""} for i in gr["pids"]]} for gr in GROUPS.get(ck, [])] or [{"label": "", "items": [{"pids": [x["pid"]], "directive": ""} for x in pols]}]
+                        seen_ids = {i for gr in gl for it in gr["items"] for i in it["pids"]}
+                        left = [x["pid"] for x in pols if x["pid"] not in seen_ids]
+                        if left:
+                            gl.append({"label": "Other", "items": [{"pids": [i], "directive": ""} for i in left]})
                         groups = []
                         for gr in gl:
                             its = []
@@ -188,21 +204,32 @@ def build():
                                         if e["uni"] not in seen and len(exs) < 3:
                                             seen.add(e["uni"])
                                             exs.append(e)
-                                vs = [{"id": v["pid"], "differs": v["differs"], "n_unis": bypol[v["pid"]]["n_unis"], "directive": bypol[v["pid"]]["directive"] or bypol[v["pid"]]["sentence"], "kind": bypol[v["pid"]]["kind"]}
+                                vs = [{"id": v["pid"], "differs": v["differs"], "n_unis": bypol[v["pid"]]["n_unis"], "directive": bypol[v["pid"]]["directive"] or bypol[v["pid"]]["sentence"], "kind": BTAG[bypol[v["pid"]]["kind"]]}
                                       for v in it.get("variants", [])]
                                 its.append({"ids": it["pids"], "directive": it.get("directive") or ps[0]["directive"] or ps[0]["sentence"], "variants": vs,
                                             "n_unis": len({x["uni"] for q in qs for x in sts(q)}), "n": sum(len(sts(q)) for q in qs),
-                                            "kind": ", ".join(dict.fromkeys(x["kind"] for x in ps)), "levels": [l for l in ("U", "S", "C") if any(l in x["levels"] for x in ps)],
+                                            "kind": ", ".join(dict.fromkeys(BTAG[x["kind"]] for x in ps)), "levels": [l for l in ("U", "S", "C") if any(l in x["levels"] for x in ps)],
                                             "general": all(x["general"] for x in ps), "examples": exs})
                             its.sort(key=lambda t: (t["general"], -t["n_unis"], -t["n"]))
-                            groups.append({"label": gr["label"], "n": sum(len(t["ids"]) for t in its), "items": its})
+                            tg = Counter(BTAG[bypol[i]["kind"]] for t in its for i in t["ids"])
+                            groups.append({"label": gr["label"], "n": sum(len(t["ids"]) for t in its), "tags": {k: tg[k] for k in ("must/should", "may", "fact") if tg[k]}, "items": its})
+                        # D83 bird's-eye view: every theme, one line per tag (must/should, may; facts in the Context row)
+                        lines = []
+                        for gr in groups:
+                            top = max(gr["tags"], key=gr["tags"].get)
+                            lines.append([top, gr["label"], gr["tags"][top], 0])
+                            for t in gr["items"]:
+                                for i in t["ids"]:
+                                    if BTAG[bypol[i]["kind"]] != top:  # the few policies in a theme that carry the other tag, in their own words
+                                        lines.append([BTAG[bypol[i]["kind"]], bypol[i]["directive"] or bypol[i]["sentence"], 1, 1])
+                        matrix[s][g]["lines"] = lines
                         stages.append({"id": g, "label": STAGE_NOTE[g], "groups": groups, "policies": pols})
                 stances.append({"id": s, "label": STANCE[s], "def": SDEF[s], "n": len(S), "n_unis": unis(S), "prose": pr.get("stances", {}).get(s, ""), "stages": stages})
             parts.append({"layer": layer, "title": "University, school and department level" if layer == "inst" else "CS course level",
                           "n": len(L), "n_statements": sum(len(sts(q)) for q in L), "n_unis": unis(L), "intro": pr.get("intro", ""),
                           "stage_n": {g: sum(1 for q in L if q["phase"] == g) for g, _ in STG}, "stance_order": [x["id"] for x in stances],
                           "matrix": {s: matrix[s] for s in (x["id"] for x in stances)}, "stances": stances,
-                          "kinds": {k: n for k in KORDER if (n := sum(1 for q in L if kind(q) == k))}, "gaps": gaps(matrix, rl.lower())})
+                          "kinds": {k: n for k in TORDER if (n := sum(1 for q in L if BTAG[kind(q)] == k))}, "gaps": gaps(matrix, rl.lower())})
         roles[rk] = {"label": rl, "slug": slug, "audience": AUD.get(rk, ""), "parts": parts}
     out = {"generated": date.today().isoformat(), "site": SITE, "accessed": accessed(), "stance_labels": STANCE, "stance_defs": SDEF, "kinds": KINDS, "stages": [[g, STAGE_NOTE[g]] for g, _ in STG], "roles": roles}
     (D / "roles.json").write_text(json.dumps(out, ensure_ascii=False))
@@ -315,7 +342,7 @@ def docx_for(data, rk):
         f"This document lists every policy that US university documents and CS course syllabi address to {who}. It draws on {M['n_documents']} university-wide, school and department documents from {M['n_universities']} universities, and on {cpas} AI passages in CS syllabi at {cuni} of those universities.",
         f"A policy is one thing asked of one group. Statements that ask {who} to do the same thing are merged into one policy, whether they say must or should and however they are worded. Each policy here is written as a directive to the reader. Appendices A and B are lookup tables: for every policy ID they quote the original wording, with links to the sources, and the website lists every statement behind each policy.",
         "The document has two levels. The university, school and department level combines university-wide, school or college, and computing department documents. The CS course level covers CS course syllabi. Within each level, policies are grouped by stance, that is, what the policy does about AI use; within a stance, they follow the course from before it starts to after it ends; within a stage, they are grouped by what they ask. The groups come from a thematic analysis by three independent coders, and policies that asked the same thing within a group were combined into one entry.",
-        "Each entry gives the kind: a rule (must: you must or must not), a recommendation (should: you should), an option (may: you may, or need not; the choice is left to you), or a fact or warning (fact). It also gives two counts, the levels, and the policy ID or IDs. \u201c13 universities, 15 statements\u201d means that 15 statements from 13 different universities stand behind the entry; a university counts once however many of its documents state it. Levels: U university-wide, S school or college, C computing department. Each ID links to its row in the appendix.",
+        "Each entry is tagged must/should (you are asked to do it: a rule or a recommendation), may (you may do it, or need not: the choice is yours) or fact (a fact or warning that asks nothing of you). It also gives two counts, the levels, and the policy ID or IDs. \u201c13 universities, 15 statements\u201d means that 15 statements from 13 different universities stand behind the entry; a university counts once however many of its documents state it. Levels: U university-wide, S school or college, C computing department. Each ID links to its row in the appendix.",
         f"Policies addressed to everyone in a university also apply to {who}. They are not repeated here; the website lists them on its Other roles page."] + ([data["accessed"]] if data.get("accessed") else []):
         doc.add_paragraph(t)
     parts = R["parts"]
@@ -370,10 +397,12 @@ def docx_for(data, rk):
         link(p, f"{url}/{part['layer']}", f"{url}/{part['layer']}", size=9)
         stg = [g for g, _ in data["stages"]]
         mx = max([c["n"] for s_ in part["matrix"].values() for c in s_.values()] or [1])
+        doc.add_heading(f"Bird\u2019s-eye view of policies for {who}: {lev}", 2)
+        p = doc.add_paragraph()
+        run(p, f"Every entry is addressed to {YOU[rk]}. [must/should]: you are asked to do it (a rule or a recommendation). [may]: you may do it, and the choice is yours. The Context row holds facts and warnings, which ask nothing of you. The number after each theme is how many of its policies carry that tag; indented lines are a theme\u2019s few policies with the other tag, in their own words.", size=8.5, color="5B6570")
         t = doc.add_table(rows=1, cols=len(stg) + 2)
         t.style = "Table Grid"
-        doc.add_heading(f"Bird\u2019s-eye view of policies for {who}: {lev}", 2)
-        header(t, ["Stance \u2193 \u00b7 When \u2192"] + [SHORT[g] for g in stg] + ["All"])
+        header(t, [f"{R['label']}: stance \u2193 \u00b7 when \u2192"] + [SHORT[g] for g in stg] + ["All"])
         for x in part["stances"]:
             cells = t.add_row().cells
             cellset(cells[0], x["label"], bold=True, size=8)
@@ -382,18 +411,15 @@ def docx_for(data, rk):
                 cell = part["matrix"][x["id"]][g]
                 if not cell["n"]:
                     continue
-                run(c.paragraphs[0], str(cell["n"]), bold=True, size=9)
-                if cell.get("kinds"):
+                run(c.paragraphs[0], plural(cell["n"], "policy", "policies"), bold=True, size=8)
+                for tg, lab, n, ind in cell["lines"]:
                     q = c.add_paragraph()
                     q.paragraph_format.space_after = Pt(1)
-                    run(q, "  ".join(f"{n} {data['kinds'][k][0]}" for k, n in cell["kinds"].items()), bold=True, size=7, color="1F5F8B")
-                sg = next(z for z in x["stages"] if z["id"] == g)
-                for gr in sg["groups"]:
-                    if not gr["label"]:
-                        continue
-                    q = c.add_paragraph()
-                    q.paragraph_format.space_after = Pt(0)
-                    run(q, f"{gr['label']} ({gr['n']})", size=7)
+                    if ind:
+                        q.paragraph_format.left_indent = Pt(6)
+                    if tg != "fact":
+                        run(q, f"[{tg}] ", bold=True, size=6.5, color="1F3B4D" if tg == "must/should" else "2F6B3A")
+                    run(q, lab + ("" if ind else f" ({n})"), size=7, italic=bool(ind))
                 shade(c, mix(0.08 + 0.5 * (cell["n"] / mx) ** 0.5))
             cellset(cells[-1], str(x["n"]), bold=True, size=9)
         cells = t.add_row().cells

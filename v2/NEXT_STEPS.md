@@ -11,16 +11,17 @@ First pass done: every source collected, coded and organized so the team can rev
 
 ## Proposed first paper: instructors
 Instructors are the right first paper: 249 institutional policies is a manageable set, and instructors are the ones who write the course AI policies.
-1. **What institutions ask of instructors** (249 policies, 303 universities): by stance and course stage. Headline: most are duties, not stances (136 of 249), and most are recommendations, not rules (175 recommendations, 38 options, 30 rules); policies cluster before the course (96) and at its start (55); 252 universities leave the AI decision to instructors.
-2. **What instructors then ask of students in CS syllabi** (173 course policies for students): far more binding (106 of 173 are rules, 40 options, 27 recommendations) and more prohibitive (Prohibit 45, Require 39).
+1. **What institutions ask of instructors** (249 policies, 303 universities): by stance and course stage. Headline: most are cross-cutting duties, not stances (132 of 249); 205 ask instructors to do something (must/should), 38 leave the choice to them (may) and 6 are context; policies cluster before the course (96) and at its start (55); 252 universities leave the AI decision to instructors.
+2. **What instructors then ask of students in CS syllabi** (173 course policies for students): 133 of 173 ask students to do something (must/should) and 40 leave the choice to them (may); more prohibitive (Prohibit 45, Require 39).
 3. **What syllabi ask of instructors themselves:** almost nothing (13 policies at 19 universities). Instructors write the syllabus, so they rarely bind themselves; obligations on instructors come from the institution.
 4. **The gap between the two layers:** what institutions delegate to instructors versus what instructors pass on to students, stage by stage (e.g. assessment is thin at both levels: Allowed with conditions and Encourage fill the during-the-course column and are almost empty during assessment, so instructors and students are left to work out what allowed or encouraged use means when work is graded).
 
 ## Changes after meeting Peggy (2026-11-18)
 - Each document now opens with who it is for and who writes the policies.
-- Kinds: rule (must), recommendation (should), option (may: the choice is left to the reader), fact or warning. Options are read from each policy's directive ("you may", "you need not"); a "may ... only" or "may ... but must" stays a rule.
-- The matrix is called the bird's-eye view; columns are when in the course a policy applies ("While students work" is now "During the course"); each cell shows how many policies are must, should, may and fact.
-- "Duties and facts" is now "Cross-cutting duties and facts": things that hold whatever the stance.
+- Tags: must/should (rules and recommendations together: the reader is asked to do it) versus may (an option: the choice is left to the reader). Options are read from each policy's directive ("you may", "you need not"); a "may ... only" or "may ... but must" stays must/should.
+- Facts and warnings are pulled out of the stance rows into their own Context row, since they ask nothing of the reader.
+- The matrix is called the bird's-eye view; columns are when in the course a policy applies ("While students work" is now "During the course"); each cell lists every theme, tagged must/should or may, and says who "you" is.
+- "Duties and facts" is now "Cross-cutting duties": things the reader must or should do whatever the stance.
 - Empty cells are reported as findings under each matrix.
 - Date accessed: sources collected in October 2026; every source link checked on 2026-11-18 (v2/linkcheck/).
 
