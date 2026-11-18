@@ -621,6 +621,22 @@
    "by": "PI (request), Claude (design)",
    "decision": "Student and instructor documents and pages are organized by stance first and course stage within each stance; the matrix has stances as rows and course stages as columns, with a row of stage totals. Every policy shows both counts, e.g. '13 universities, 15 statements' (distinct universities that state it; statements merged into it; verified against the statements for all policies). Each part opens with a paragraph on its shape and each stance with a paragraph on what its policies ask, drafted from the policy list (v2/role_prose.json), checked by tools/check_role_prose.py (every cited ID in that part and stance; every number a count in the data) and by reading each cited policy's sentence against the claim; four claims were corrected. The computed summary sentences of D75 are dropped.",
    "rationale": "PI: lifecycle-only grouping did not work; policies should read by stance and actor, then lifecycle, at the level of a paper, without generic AI prose, and the count shown must say whether it is universities or statements."
+  },
+  {
+   "id": "D77",
+   "date": "2026-11-18",
+   "section": "Analysis: thematic grouping",
+   "by": "PI (request), Claude (design)",
+   "decision": "Inside each stance x course-stage cell with 5 or more policies (47 cells, 783 of 904 policies, all roles), policies are grouped by what they ask, by a council of three independent Claude coders doing inductive thematic analysis (labels of 2 to 6 words, reused across cells). Agreement: adjusted Rand index weighted by policies, 0.717, 0.778 and 0.732 for the three pairs (mean 0.742). The consensus keeps, per cell, the grouping that agrees most with the other two (medoid; from members 1, 2 and 3 in 27, 10 and 10 cells). Files: v2/council/, v2/role_groups.json, tools/council_consensus.py. Policies on the role pages and in the documents are shown as directives to the reader ('Do not ...', 'You may ...'), rewritten from the policy sentences with force words kept (all 904 checked automatically for must, should, may, only, unless, except, without, never and negation; 12 flagged differences were intended, e.g. 'Nobody uses AI to ...' -> 'Do not use AI to ...'); v2/role_directives.json. The stance 'No position' is renamed 'Duties and facts'. Other roles (staff and administrators; everyone) use the same page as students and instructors. Course policy CT20.c06 corrected: its sentence had inverted the sources (Copilot code counts as others' code and must not be presented as the student's own work).",
+   "rationale": "PI: large cells (e.g. 27 and 29 policies) need organizing, as a thematic analysis by several coders; policies should be directives to the reader; role pages should work like the Matrix tab; fix the overlapping matrix."
+  },
+  {
+   "id": "D78",
+   "date": "2026-11-18",
+   "section": "Presentation: website",
+   "by": "PI (request), Claude (design)",
+   "decision": "Site design refresh: light header instead of a solid colour band, editorial type scale, quieter tabs, cards with soft shadows, a prominent Word download button on role pages; role matrices fit their columns (cells no longer overflow); cells show the top 3 groups and '+N more'; selecting a cell opens its policies in a side panel. CS course coverage page explains that CS1 and CS2 are curriculum roles (first and second programming course), not course numbers, and that each university's own course is recorded.",
+   "rationale": "PI: the matrix overlapped, the design looked unfinished, and CS1/CS2 labels were unclear."
   }
  ]
 }

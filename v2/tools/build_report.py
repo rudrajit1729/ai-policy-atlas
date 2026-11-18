@@ -25,9 +25,9 @@ LEV = [("university", "University-wide"), ("school", "School or college"), ("com
 LAB = {"university": "U", "school": "S", "computing": "C"}
 # D72: stance tag per policy, from the stance of its statements (prohibit, restrict, permit, encourage, require, neutral).
 # A policy takes its most common non-neutral stance when at least a quarter of its statements take one; otherwise it is
-# "Instructor decides" if its topics are about who decides (P04, P85, CT04), else "No position" (it states a duty or fact without a stance on AI use).
+# "Instructor decides" if its topics are about who decides (P04, P85, CT04), else "Duties and facts" (it states a duty or fact without a stance on AI use).
 STANCE = {"prohibit": "Prohibit", "restrict": "Only listed uses", "permit": "Allowed with conditions", "encourage": "Encourage", "require": "Require",
-          "delegates": "Instructor decides", "none": "No position"}
+          "delegates": "Instructor decides", "none": "Duties and facts"}
 DECIDES = {"P04", "P85", "CT04"}
 KIND = {"rule": "rule", "recommendation": "recommendation", "fact": "fact or warning"}
 
@@ -124,7 +124,7 @@ def blocks(d):
          ("h3", "Stance of the policies"),
          ("table", (["Stance", "Institutional", "CS course syllabi"], [[STANCE[st], f"{sum(q['stance'] == st for q in POS)} ({pct(sum(q['stance'] == st for q in POS), len(POS))})",
                      f"{sum(q['stance'] == st for q in CP)} ({pct(sum(q['stance'] == st for q in CP), len(CP))})"] for st in STANCE])),
-         ("p", "A policy's stance is the stance most of its statements take on AI use. \"No position\" means the policy sets a duty or states a fact without allowing or restricting AI (for example, verify AI output; AI output can be wrong)."),
+         ("p", "A policy's stance is the stance most of its statements take on AI use. \"Duties and facts\" means the policy sets a duty or states a fact without allowing or restricting AI (for example, verify AI output; AI output can be wrong)."),
          ("h2", "4. What the policies show"),
          ("h3", "Little is binding at the top"),
          ("table", (["Level", "Rule", "Recommendation", "Description", "Template"], [
@@ -153,7 +153,7 @@ def blocks(d):
                  f"**How to run the human review on a sample.** Proposal: two reviewers check (a) every policy merged from 5 or more versions ({merged5}), and (b) a random sample of about 10% of the rest, drawn evenly across who it addresses and stage (about 60 institutional, 25 course). For each: does the sentence say what its statements say, are the merges right, are the group and stage right. Report agreement, fix, and extend the review where errors cluster."]),
          ("pagebreak", None),
          ("h2", f"Appendix A. Institutional policy set ({len(POS)})"),
-         ("p", "Grouped by who the policy addresses, then by stage in course order. Within a stage, most widespread first. Universities = how many universities state it. Stance: what the policy does about AI use (Prohibit, Only listed uses, Allowed with conditions, Encourage, Require, Instructor decides, or No position). Levels: U university-wide, S school or college, C computing unit. Each sentence summarizes the statements merged into it; the original wording and sources are in policy_set_statements.csv."),
+         ("p", "Grouped by who the policy addresses, then by stage in course order. Within a stage, most widespread first. Universities = how many universities state it. Stance: what the policy does about AI use (Prohibit, Only listed uses, Allowed with conditions, Encourage, Require, Instructor decides, or Duties and facts). Levels: U university-wide, S school or college, C computing unit. Each sentence summarizes the statements merged into it; the original wording and sources are in policy_set_statements.csv."),
          ("policies", ("inst", POS)),
          ("pagebreak", None),
          ("h2", f"Appendix B. CS course policy set ({len(CP)})"),

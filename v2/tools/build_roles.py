@@ -23,7 +23,8 @@ from build_report import STANCE, STG, kind, load  # noqa: E402
 V2 = Path(__file__).resolve().parents[1]
 D = V2 / "site" / "data"
 SITE = "https://rudrajit1729.github.io/ai-policy-atlas/"
-ROLES = [("student", "Students", "students"), ("instructor", "Instructors", "instructors")]
+ROLES = [("student", "Students", "students"), ("instructor", "Instructors", "instructors"), ("staff", "Staff and administrators", "roles"), ("all", "Everyone", "roles")]
+DOCS = ("student", "instructor")
 LEVN = {"university": "U", "school": "S", "computing": "C"}
 SORDER = list(STANCE)
 STAGE_NOTE = {"before-course": "Before the course", "course-start": "At the start of the course", "during-work": "While students work",
@@ -87,6 +88,9 @@ def build():
         return out
 
     PROSE = json.loads((V2 / "role_prose.json").read_text()) if (V2 / "role_prose.json").exists() else {}
+    # D77: sub-groups inside a stance x stage cell from the three-member thematic council, and directive wording addressed to the reader
+    GROUPS = json.loads((V2 / "role_groups.json").read_text())["cells"] if (V2 / "role_groups.json").exists() else {}
+    DIRV = json.loads((V2 / "role_directives.json").read_text()) if (V2 / "role_directives.json").exists() else {}
     roles = {}
     for rk, rl, slug in ROLES:
         parts = []
@@ -107,8 +111,9 @@ def build():
                     G = sorted((q for q in S if q["phase"] == g), key=lambda q: (-q["n_unis"], -q["n"]))
                     if G:
                         matrix[s][g] = {"n": len(G), "themes": [[thl.get(t, "Other"), n] for t, n in Counter(theme_of(q) for q in G).most_common()]}
-                        stages.append({"id": g, "label": STAGE_NOTE[g], "policies": [{
-                            "pid": q["pid"], "sentence": q["sentence"], "stance": s, "stage": g, "theme": thl.get(theme_of(q), "Other"), "kind": kind(q),
+                        gr = GROUPS.get(f"{rk}|{layer}|{s}|{g}", [])
+                        stages.append({"id": g, "label": STAGE_NOTE[g], "groups": gr, "policies": [{
+                            "pid": q["pid"], "sentence": q["sentence"], "directive": DIRV.get(q["pid"], ""), "stance": s, "stage": g, "theme": thl.get(theme_of(q), "Other"), "kind": kind(q),
                             "n_unis": q["n_unis"], "n": len(sts(q)), "levels": [LEVN[l] for l in q.get("levels", [])], "examples": ex(q)} for q in G]})
                 stances.append({"id": s, "label": STANCE[s], "def": SDEF[s], "n": len(S), "n_unis": unis(S), "prose": pr.get("stances", {}).get(s, ""), "stages": stages})
             parts.append({"layer": layer, "title": "University, school and department policies" if layer == "inst" else "CS course policies",
@@ -276,7 +281,8 @@ def docx_for(data, rk):
                 if not cell["n"]:
                     continue
                 run(c.paragraphs[0], str(cell["n"]), bold=True, size=9)
-                for lab, n in cell["themes"]:
+                sg = next(z for z in x["stages"] if z["id"] == g)
+                for lab, n in ([[gr["label"], len(gr["pids"])] for gr in sg["groups"]] if sg["groups"] else cell["themes"]):
                     q = c.add_paragraph()
                     q.paragraph_format.space_after = Pt(0)
                     run(q, f"{lab} ({n})", size=7)
@@ -290,7 +296,7 @@ def docx_for(data, rk):
         for row in t.rows:
             row.cells[0].width = Inches(1.25)
         p = doc.add_paragraph()
-        run(p, "Each cell: number of policies, then their themes with counts. Darker cells hold more policies; empty cells have none.", italic=True, size=8, color="5B6570")
+        run(p, "Each cell: number of policies, then the groups they fall into, with counts. Darker cells hold more policies; empty cells have none.", italic=True, size=8, color="5B6570")
         landscape(False)
         for x in part["stances"]:
             doc.add_heading(f"{x['label']}: {plural(x['n'], 'policy', 'policies')}, {plural(x['n_unis'], 'university', 'universities')}", 2)
@@ -303,13 +309,21 @@ def docx_for(data, rk):
                 p.paragraph_format.space_before = Pt(6)
                 p.paragraph_format.space_after = Pt(2)
                 run(p, f"{g['label']} ({len(g['policies'])})", bold=True, size=9.5, color="1F5F8B")
-                for q in g["policies"]:
-                    p = doc.add_paragraph(style="List Bullet")
-                    p.paragraph_format.space_after = Pt(1)
-                    run(p, q["sentence"] + " ")
-                    run(p, f"{q['theme']} · {q['kind']} · {plural(q['n_unis'], 'university', 'universities')}, {plural(q['n'], 'statement', 'statements')}"
+                byid = {q["pid"]: q for q in g["policies"]}
+                for gr in (g["groups"] or [{"label": "", "pids": [q["pid"] for q in g["policies"]]}]):
+                    if gr["label"]:
+                        p = doc.add_paragraph()
+                        p.paragraph_format.space_before = Pt(3)
+                        p.paragraph_format.space_after = Pt(1)
+                        p.paragraph_format.left_indent = Inches(0.1)
+                        run(p, f"{gr['label']} ({len(gr['pids'])})", bold=True, italic=True, size=9)
+                    for q in (byid[i] for i in gr["pids"] if i in byid):
+                      p = doc.add_paragraph(style="List Bullet")
+                      p.paragraph_format.space_after = Pt(1)
+                      run(p, (q["directive"] or q["sentence"]) + " ")
+                      run(p, f"{q['kind']} · {plural(q['n_unis'], 'university', 'universities')}, {plural(q['n'], 'statement', 'statements')}"
                         + (f" · {' '.join(q['levels'])}" if q["levels"] else "") + " · ", size=8.5, color="5B6570")
-                    link(p, bid(q["pid"]), q["pid"], size=8.5, anchor=True)
+                      link(p, bid(q["pid"]), q["pid"], size=8.5, anchor=True)
 
     for i, part in enumerate(parts, 1):
         doc.add_page_break()
@@ -324,7 +338,7 @@ def docx_for(data, rk):
                     p.paragraph_format.space_before = Pt(6)
                     p.paragraph_format.space_after = Pt(1)
                     run(p, q["pid"] + "  ", bold=True, size=9)
-                    run(p, q["sentence"], bold=True, size=9)
+                    run(p, q["directive"] or q["sentence"], bold=True, size=9)
                     bookmark(p, bid(q["pid"]))
                     p = doc.add_paragraph()
                     p.paragraph_format.space_after = Pt(1)
@@ -345,7 +359,7 @@ def docx_for(data, rk):
 
 def main():
     data = build()
-    for rk, _, _ in ROLES:
+    for rk in DOCS:
         n = docx_for(data, rk)
         R = data["roles"][rk]
         print(n, " | ".join(f"{p['layer']}: {p['n']} policies, {p['n_statements']} statements, {p['n_unis']} universities" for p in R["parts"]))
