@@ -55,7 +55,7 @@ def page(data, rk):
          "<h2>About this document</h2>",
          f"<p>This document lists every policy that US university documents and CS course syllabi address to {e(who)}, drawn from {M['n_documents']} university-wide, school and department documents at {M['n_universities']} universities and from AI passages in CS course syllabi.</p>",
          f"<p>A policy is one thing asked of one group. Statements that ask {e(who)} to do the same thing are merged into one policy, whatever their wording, and each policy is written as a directive to the reader. Within each level, policies are grouped by stance (what the policy does about AI use), then follow the course from before it starts to after it ends, then are grouped by what they ask. The groups come from a thematic analysis by three independent coders. Policies that make the same point appear as one entry led by the most widespread policy, with the others listed as variants and how they differ.</p>",
-         f"<p>Each entry is tagged <span class='kb kb-must'>Expected</span> ({e(who)} are expected to do it: the policy says they should or must), <span class='kb kb-may'>Optional</span> ({e(who)} may do it, or not: the choice is theirs) or <span class='kb kb-fact'>Fact</span> (a fact or warning that asks nothing of anyone). It also gives the number of universities and of statements behind it (“13 (15)” means 15 statements from 13 different universities), the levels where it appears (U university-wide, S school or college, C computing department), and its ID. <b>Sources:</b> every ID links to the website, which lists each statement behind the policy in the institution’s own words, with a link to the source.</p>",
+         f"<p>Each entry is tagged <span class='kb kb-must'>Expected</span> ({e(who)} are expected to do it: the policy says they should or must), <span class='kb kb-may'>Choice</span> ({e(who)} may do it, or not: the choice is theirs) or <span class='kb kb-fact'>Fact</span> (a fact or warning that asks nothing of anyone). It also gives the number of universities and of statements behind it (“13 (15)” means 15 statements from 13 different universities), the levels where it appears (U university-wide, S school or college, C computing department), and its ID. <b>Sources:</b> every ID links to the website, which lists each statement behind the policy in the institution’s own words, with a link to the source.</p>",
          f"<p>Policies addressed to everyone in a university also apply to {e(who)}; the website lists them on its Other roles page.</p>",
          "<table class='key'><tr><th>Stance</th><th>What the policy does about AI use</th>" + "".join(f"<th>{e(p['title'])}</th>" for p in parts) + "</tr>"]
     for sk, lab in data["stance_labels"].items():
@@ -70,7 +70,7 @@ def page(data, rk):
         mx = max([c["n"] for r in p["matrix"].values() for c in r.values()] or [1])
         h.append(f"<section class='wide'><h2>{e(lev)}: policies for {e(who)}</h2><p>{e(p['intro'])}</p>")
         h.append(f"<h3>Bird\u2019s-eye view of policies for {e(who)}: {e(lev)}</h3>")
-        h.append(f"<p class='youline'>Each theme says who it addresses. <span class='kb kb-must'>Expected</span> {WHO[rk]} are expected to do it: the policy says they should or must. <span class='kb kb-may'>Optional</span> {WHO[rk]} may do it, or not: the choice is theirs. The number after each theme is how many policies it holds.</p>")
+        h.append(f"<p class='youline'>Each theme says who it addresses. <span class='kb kb-must'>Expected</span> {WHO[rk]} are expected to do it: the policy says they should or must. <span class='kb kb-may'>Choice</span> {WHO[rk]} may do it, or not: the choice is theirs. The number after each theme is how many policies it holds.</p>")
         # wider columns where the policies are, so theme lines wrap less; empty columns stay (an empty column is a finding)
         wt = {g: 0.45 if not p["stage_table"][g] else 1 + 1.6 * (p["stage_table"][g] / max(p["stage_table"].values())) ** 0.6 for g in stg}
         avail = 10.4 - 0.72 - 0.32
@@ -91,7 +91,7 @@ def page(data, rk):
         h.append("<tr class='tot'><th>All stances</th>" + "".join(f"<td class=n>{p['stage_table'][g] or '–'}</td>" for g in stg) + f"<td class=n>{p['n_table']}</td></tr></table>")
         if p.get("context_note"):
             h.append(f"<p class='cap'>{e(p['context_note'])}</p>")
-        h.append(f"<p class='cap'>{e(lev)}. Rows are stances; columns are when in the course a policy applies. Each cell lists every theme of policies at that point, tagged Expected or Optional, with the number of policies in it. Darker cells hold more policies. Online: <a href='{link}'>{e(link)}</a></p>")
+        h.append(f"<p class='cap'>{e(lev)}. Rows are stances; columns are when in the course a policy applies. Each cell lists every theme of policies at that point, tagged Expected or Choice, with the number of policies in it. Darker cells hold more policies. Online: <a href='{link}'>{e(link)}</a></p>")
         if p.get("gaps"):
             h.append(f"<p class='gaps'>{e(p['gaps'])}</p>")
         h.append("</section>")

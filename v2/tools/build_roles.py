@@ -18,7 +18,7 @@ from datetime import date
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
-from build_report import STANCE, STG, kind, load, tag  # noqa: E402
+from build_report import OVR, STANCE, STG, kind, load, tag  # noqa: E402
 
 V2 = Path(__file__).resolve().parents[1]
 D = V2 / "site" / "data"
@@ -44,7 +44,7 @@ TAGO = ["asked", "choice", "fact"]
 # D83 (PI): must and should are the same thing for the reader; the line that matters is must/should versus may
 # D84 (PI): asked (you should do it: must and should are the same thing), choice (you may do it or not), fact (asks nothing of you)
 KINDS = {"asked": ["Expected", "Expected: the policy says you should (or must) do it.", "must"],
-         "choice": ["Optional", "Optional: you may do it, or not; the choice is yours.", "may"], "fact": ["Fact", "Fact or warning: it asks nothing of you.", "fact"]}
+         "choice": ["Choice", "Choice: you may do it, or not; the choice is yours.", "may"], "fact": ["Fact", "Fact or warning: it asks nothing of you.", "fact"]}
 TORDER = list(KINDS)
 
 # PI after meeting Peggy: say at the start who writes these policies and who the document is for
@@ -192,7 +192,7 @@ def build():
                         matrix[s][g] = {"n": len(G), "themes": [[thl.get(t, "Other"), n] for t, n in Counter(theme_of(q) for q in G).most_common()],
                                        "kinds": {k: n for k in TORDER if (n := sum(1 for q in G if tag(q) == k))}}
                         ck = f"{rk}|{layer}|{s}|{g}"
-                        pols = [{"pid": q["pid"], "sentence": q["sentence"], "directive": (AIL.get(q["pid"], {}).get("directive") or DIRV.get(q["pid"], "")),
+                        pols = [{"pid": q["pid"], "sentence": q["sentence"], "directive": (OVR.get(q["pid"], {}).get("directive") or AIL.get(q["pid"], {}).get("directive") or DIRV.get(q["pid"], "")),
                                  "general": AIL.get(q["pid"], {}).get("class") == "general", "stance": s, "stage": g, "theme": thl.get(theme_of(q), "Other"), "kind": kind(q), "tag": tag(q),
                                  "n_unis": q["n_unis"], "n": len(sts(q)), "levels": [LEVN[l] for l in q.get("levels", [])], "examples": ex(q)} for q in G]
                         byq = {q["pid"]: q for q in G}
@@ -220,8 +220,18 @@ def build():
                             gl = [{"label": gr["label"], "items": [{"pids": [i], "directive": ""} for i in gr["pids"]]} for gr in GROUPS.get(ck, [])] or [{"label": "", "items": [{"pids": [x["pid"]], "directive": ""} for x in pols]}]
                         seen_ids = {i for gr in gl for it in gr["items"] for i in it["pids"]}
                         left = [x["pid"] for x in pols if x["pid"] not in seen_ids]
-                        if left:
-                            gl.append({"label": "Other", "items": [{"pids": [i], "directive": ""} for i in left]})
+                        if left:  # D85: a policy moved here by a verified correction keeps the theme it had in its old cell
+                            home = {}
+                            for k2, grs in ITEMS.items():
+                                if k2.startswith(f"{rk}|{layer}|"):
+                                    for gr0 in grs:
+                                        for it in gr0["items"]:
+                                            for i in it["pids"] + [v["pid"] for v in it.get("variants", [])]:
+                                                home.setdefault(i, gr0["label"])
+                            byth = {}
+                            for i in left:
+                                byth.setdefault(home.get(i, "Other"), []).append({"pids": [i], "directive": "", "variants": []})
+                            gl += [{"label": th, "items": its} for th, its in byth.items()]
                         # D84: a theme holds one tag only; a mixed theme is split, and each part gets its own label naming the actor
                         gl2 = []
                         for gr in gl:
@@ -235,8 +245,20 @@ def build():
                                         bk[bypol[v["pid"]]["tag"]].append({"pids": [v["pid"]], "directive": "", "variants": []})
                             for t in TAGO:
                                 if bk[t]:
-                                    gl2.append({"label": RELAB.get(f"{ck}|{gr['label']}|{t}", gr["label"]), "theme": gr["label"], "tag": t, "items": bk[t]})
-                        gl = sorted(gl2, key=lambda gr: TAGO.index(gr["tag"]))
+                                    lb = RELAB.get(f"{ck}|{gr['label']}|{t}") or next((v for k2, v in RELAB.items() if k2.startswith(f"{rk}|{layer}|") and k2.endswith(f"|{gr['label']}|{t}")), gr["label"])
+                                    gl2.append({"label": RELAB.get(f"{ck}|{gr['label']}|{t}|{'+'.join(sorted(i for it in bk[t] for i in it['pids']))}", lb), "theme": gr["label"], "tag": t, "items": bk[t]})
+                        # D85: a policy whose label was corrected after verification leaves its theme for one under the corrected label;
+                        # themes in a cell with the same label and tag are merged
+                        gl3, idx = [], {}
+                        for gr in gl2:
+                            for it in gr["items"]:
+                                ol = OVR.get(it["pids"][0], {}).get("label")
+                                k = ((ol or gr["label"]).rstrip("."), gr["tag"])
+                                if k not in idx:
+                                    idx[k] = len(gl3)
+                                    gl3.append({"label": ol or gr["label"], "theme": gr["theme"] if not ol else ol, "tag": gr["tag"], "items": []})
+                                gl3[idx[k]]["items"].append(it)
+                        gl = sorted([g3 for g3 in gl3 if g3["items"]], key=lambda gr: TAGO.index(gr["tag"]))
                         groups = []
                         for gr in gl:
                             its = []
@@ -379,7 +401,7 @@ def docx_for(data, rk):
         f"This document lists every policy that US university documents and CS course syllabi address to {who}. It draws on {M['n_documents']} university-wide, school and department documents from {M['n_universities']} universities, and on {cpas} AI passages in CS syllabi at {cuni} of those universities.",
         f"A policy is one thing asked of one group. Statements that ask {who} to do the same thing are merged into one policy, whether they say must or should and however they are worded. Each policy here is written as a directive to the reader. Appendices A and B are lookup tables: for every policy ID they quote the original wording, with links to the sources, and the website lists every statement behind each policy.",
         "The document has two levels. The university, school and department level combines university-wide, school or college, and computing department documents. The CS course level covers CS course syllabi. Within each level, policies are grouped by stance, that is, what the policy does about AI use; within a stance, they follow the course from before it starts to after it ends; within a stage, they are grouped by what they ask. The groups come from a thematic analysis by three independent coders, and policies that asked the same thing within a group were combined into one entry.",
-        f"Each entry is tagged Expected ({who} are expected to do it: the policy says they should or must), Optional ({who} may do it, or not: the choice is theirs) or Fact (a fact or warning that asks nothing of anyone). It also gives two counts, the levels, and the policy ID or IDs. \u201c13 universities, 15 statements\u201d means that 15 statements from 13 different universities stand behind the entry; a university counts once however many of its documents state it. Levels: U university-wide, S school or college, C computing department. Each ID links to its row in the appendix.",
+        f"Each entry is tagged Expected ({who} are expected to do it: the policy says they should or must), Choice ({who} may do it, or not: the choice is theirs) or Fact (a fact or warning that asks nothing of anyone). It also gives two counts, the levels, and the policy ID or IDs. \u201c13 universities, 15 statements\u201d means that 15 statements from 13 different universities stand behind the entry; a university counts once however many of its documents state it. Levels: U university-wide, S school or college, C computing department. Each ID links to its row in the appendix.",
         f"Policies addressed to everyone in a university also apply to {who}. They are not repeated here; the website lists them on its Other roles page."] + ([data["accessed"]] if data.get("accessed") else []):
         doc.add_paragraph(t)
     parts = R["parts"]
@@ -436,7 +458,7 @@ def docx_for(data, rk):
         mx = max([c["n"] for s_ in part["matrix"].values() for c in s_.values()] or [1])
         doc.add_heading(f"Bird\u2019s-eye view of policies for {who}: {lev}", 2)
         p = doc.add_paragraph()
-        run(p, f"Each theme says who it addresses. [Expected]: {WHO[rk]} are expected to do it; the policy says they should or must. [Optional]: {WHO[rk]} may do it, or not; the choice is theirs. The number after each theme is how many policies it holds.", size=8.5, color="5B6570")
+        run(p, f"Each theme says who it addresses. [Expected]: {WHO[rk]} are expected to do it; the policy says they should or must. [Choice]: {WHO[rk]} may do it, or not; the choice is theirs. The number after each theme is how many policies it holds.", size=8.5, color="5B6570")
         t = doc.add_table(rows=1, cols=len(stg) + 2)
         t.style = "Table Grid"
         header(t, ["Stance \u2193 When \u2192"] + [SHORT[g] for g in stg] + ["All"])

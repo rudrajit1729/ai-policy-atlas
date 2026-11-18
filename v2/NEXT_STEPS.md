@@ -11,19 +11,21 @@ First pass done: every source collected, coded and organized so the team can rev
 
 ## Proposed first paper: instructors
 Instructors are the right first paper: 249 institutional policies is a manageable set, and instructors are the ones who write the course AI policies.
-1. **What institutions ask of instructors** (249 policies, 303 universities): by stance and course stage. Headline: most are cross-cutting duties, not stances (132 of 249); 205 ask instructors to do something (must/should), 38 leave the choice to them (may) and 6 are context; policies cluster before the course (96) and at its start (55); 252 universities leave the AI decision to instructors.
-2. **What instructors then ask of students in CS syllabi** (173 course policies for students): 133 of 173 ask students to do something (must/should) and 40 leave the choice to them (may); more prohibitive (Prohibit 45, Require 39).
+1. **What institutions ask of instructors** (249 policies, 303 universities): by stance and course stage. Headline: most are cross-cutting duties, not stances (145 of 249); 199 are expected of instructors, 45 are their choice and 5 are facts; policies cluster before the course (96) and at its start (56); 157 universities say the AI decision is the instructor's.
+2. **What instructors then ask of students in CS syllabi** (173 course policies for students): 134 of 173 are expected of students and 38 are their choice; more prohibitive (Prohibit 44, Require 41).
 3. **What syllabi ask of instructors themselves:** almost nothing (13 policies at 19 universities). Instructors write the syllabus, so they rarely bind themselves; obligations on instructors come from the institution.
 4. **The gap between the two layers:** what institutions delegate to instructors versus what instructors pass on to students, stage by stage (e.g. assessment is thin at both levels: Allowed with conditions and Encourage fill the during-the-course column and are almost empty during assessment, so instructors and students are left to work out what allowed or encouraged use means when work is graded).
 
 ## Changes after meeting Peggy (2026-11-18)
 - Each document now opens with who it is for and who writes the policies.
-- Tags: must/should (rules and recommendations together: the reader is asked to do it) versus may (an option: the choice is left to the reader). Options are read from each policy's directive ("you may", "you need not"); a "may ... only" or "may ... but must" stays must/should.
+- Tags: Expected (the policy says the actor should or must do it) versus Choice (the actor may do it, or not), coded by three independent coders (Fleiss kappa 0.97). A permission limited by a condition the actor must meet ("only with permission") counts as Expected.
 - Facts and warnings are pulled out of the stance rows into their own Context row, since they ask nothing of the reader.
-- The matrix is called the bird's-eye view; columns are when in the course a policy applies ("While students work" is now "During the course"); each cell lists every theme, tagged must/should or may, and says who "you" is.
+- The matrix is called the bird's-eye view; columns are when in the course a policy applies ("While students work" is now "During the course"); each cell lists every theme, tagged Expected or Choice, and every theme names its actor ("Instructors should ...").
 - "Duties and facts" is now "Cross-cutting duties": things the reader must or should do whatever the stance.
 - Empty cells are reported as findings under each matrix.
 - Date accessed: sources collected in October 2026; every source link checked on 2026-11-18 (v2/linkcheck/).
+
+- Verification (D85): every policy in both documents was checked against its original statements by a verifier and a second reviewer; 116 agreed corrections (37 stances, 22 stages, 28 wordings, 24 theme placements, 4 tags) are in v2/role_overrides.json with reasons.
 
 ## What I would change in the next two weeks (no input needed from you unless noted)
 1. **Human review sample** of the instructor policies first: every lead with variants (check the variant notes) and a stratified 10% of the rest. Needs: one or two coauthors to check against sources.

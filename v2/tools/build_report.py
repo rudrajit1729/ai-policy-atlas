@@ -45,7 +45,13 @@ ENFORCED = re.compile(r"\bonly\b|\bmust\b", re.I)
 _TAGS = json.loads((V2 / "role_tags.json").read_text()) if (V2 / "role_tags.json").exists() else {}
 
 
+# D85: corrections after verifying each policy against its statements (v2/role_overrides.json: stage, stance, tag, directive)
+OVR = json.loads((V2 / "role_overrides.json").read_text()) if (V2 / "role_overrides.json").exists() else {}
+
+
 def tag(q):
+    if OVR.get(q["pid"], {}).get("tag"):
+        return OVR[q["pid"]]["tag"]
     t = _TAGS.get(q["pid"])
     if t:
         return t["tag"] if isinstance(t, dict) else t
@@ -54,7 +60,7 @@ def tag(q):
 
 
 def directive(q):
-    return _RI.get(q["pid"], {}).get("directive") or _DIRV.get(q["pid"], "")
+    return OVR.get(q["pid"], {}).get("directive") or _RI.get(q["pid"], {}).get("directive") or _DIRV.get(q["pid"], "")
 
 
 def kind(q):
@@ -97,6 +103,14 @@ def load():
                         cs[l["pos"]][l.get("stance")] += 1
     for q in CP:
         q["stance"] = stance(cs[q["pid"]], q.get("types", [q["type"]]))
+        if tag(q) == "fact":
+            q["stance"] = "context"
+    for q in POS + CP:
+        o = OVR.get(q["pid"], {})
+        if o.get("stage"):
+            q["phase"] = o["stage"]
+        if o.get("stance") and q["stance"] != "context":
+            q["stance"] = o["stance"]
         if tag(q) == "fact":
             q["stance"] = "context"
     cnt = Counter()
