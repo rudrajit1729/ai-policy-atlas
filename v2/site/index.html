@@ -295,6 +295,8 @@ table.rmx td.num { text-align: right; font-family: var(--f-mono); }
 .rpol .rs { display: block; } .rpol .rmeta { display: block; font-size: 0.75rem; color: var(--muted); margin-top: 3px; }
 .rpol[open] { background: color-mix(in srgb, var(--accent) 4%, transparent); }
 .rquotes { margin: 6px 0 4px 1em; padding-left: 1em; font-size: 0.8125rem; } .rquotes li { margin: 5px 0; } .rquotes q { font-style: italic; }
+.rprose { max-width: 80ch; margin: 2px 0 10px; }
+table.rmx tr.tot td, table.rmx tr.tot th { background: var(--sunk); font-weight: 600; }
 .rfilter { font-size: 0.875rem; background: var(--accent-soft); border-radius: 6px; padding: 6px 10px; }
 /* D74: where you stand map */
 .whmap { margin-top: 28px; }
@@ -1069,34 +1071,35 @@ async function loadRoles() { if (!ROLESD) { ROLESD = await fetch("data/roles.jso
 const RDOC = { student: "Student_AI_Policies.docx", instructor: "Instructor_AI_Policies.docx" };
 function renderRolePage(rk) {
   if (!ROLESD) { loadRoles(); return `<p class="note">Loading…</p>`; }
-  const R = ROLESD.roles[rk], SLB = ROLESD.stance_labels, who = R.label.toLowerCase();
+  const R = ROLESD.roles[rk], SLB = ROLESD.stance_labels, who = R.label.toLowerCase(), STGS = ROLESD.stages;
   const part = R.parts.find(p => p.layer === (st.rPart || "inst")) || R.parts[0];
-  const mx = Math.max(1, ...part.stages.flatMap(s => Object.values(s.cells).map(c => c.n)));
-  const [fs, fk] = (st.rCell || "").split("|");
-  const head = `<tr><th>Stage</th>${part.stances.map(k => `<th><span class="stance st-${k === "none" ? "neutral" : k}">${esc(SLB[k])}</span></th>`).join("")}<th>All</th></tr>`;
-  const body = part.stages.map(s => `<tr><th class="rowh">${esc(s.label)}</th>${part.stances.map(k => { const c = s.cells[k]; if (!c) return `<td></td>`;
+  const mx = Math.max(1, ...Object.values(part.matrix).flatMap(r => Object.values(r).map(c => c.n)));
+  const [fk, fs] = (st.rCell || "").split("|");
+  const plural = (n, a, b) => `${n} ${n === 1 ? a : b}`;
+  const chip = k => `<span class="stance st-${k === "none" ? "neutral" : k}">${esc(SLB[k])}</span>`;
+  const head = `<tr><th>Stance</th>${STGS.map(([g, l]) => `<th>${esc(l)}</th>`).join("")}<th>All</th></tr>`;
+  const body = part.stances.map(x => `<tr><th class="rowh">${chip(x.id)}</th>${STGS.map(([g]) => { const c = part.matrix[x.id][g]; if (!c.n) return `<td></td>`;
     const a = 0.08 + 0.45 * Math.sqrt(c.n / mx);
-    return `<td><div class="cell" role="button" tabindex="0" data-rcell="${s.id}|${k}" aria-pressed="${st.rCell === s.id + "|" + k}" style="background:color-mix(in srgb, var(--accent) ${Math.round(a * 100)}%, transparent)"><span class="n">${c.n}</span><ul>${c.themes.map(([l, n]) => `<li><span>${esc(l)}</span><span>${n}</span></li>`).join("")}</ul></div></td>`; }).join("")}<td class="num"><b>${s.n || "–"}</b></td></tr>`).join("");
-  const pol = q => `<details class="rpol" id="rp-${esc(q.pid)}" data-rpid="${esc(q.pid)}" ${st.rPid === q.pid ? "open" : ""}><summary><span class="rs">${esc(q.sentence)}</span>
-      <span class="rmeta"><span class="stance st-${q.stance === "none" ? "neutral" : q.stance}">${esc(SLB[q.stance])}</span> ${esc(q.kind)} · ${q.n_unis} ${q.n_unis === 1 ? "university" : "universities"}${q.levels.length ? " · " + q.levels.join(" ") : ""} · <a href="#${R.slug}/${part.layer}/${esc(q.pid)}" class="plink" title="Link to this policy">${esc(q.pid)}</a></span></summary><div class="rstm">${st.rPid === q.pid ? stmHTML(part.layer, q.pid) : ""}</div></details>`;
-  const stages = part.stages.map(s => {
-    if (!s.n) return `<section class="rstage empty"><h3>${esc(s.label)} <span class="count">0</span></h3><p class="note">No policy addressed to ${esc(who)} at this stage.</p></section>`;
-    const show = q => !fs || (s.id === fs && q.stance === fk);
-    const th = s.themes.map(t => ({ ...t, policies: t.policies.filter(show) })).filter(t => t.policies.length);
-    if (fs && s.id !== fs) return "";
-    const open = fs || (st.rPid && s.themes.some(t => t.policies.some(q => q.pid === st.rPid)));
-    return `<details class="rstage" ${open ? "open" : ""}><summary><h3>${esc(s.label)} <span class="count">${s.n} ${s.n === 1 ? "policy" : "policies"}</span></h3><span class="note">${esc(s.themes.map(t => `${t.label} (${t.policies.length})`).join(" · "))}</span></summary>
-      ${th.map(t => `<div class="rtheme"><h4>${esc(t.label)} <span class="count">${t.policies.length}</span></h4>${t.policies.map(pol).join("")}</div>`).join("")}</details>`;
+    return `<td><div class="cell" role="button" tabindex="0" data-rcell="${x.id}|${g}" aria-pressed="${st.rCell === x.id + "|" + g}" style="background:color-mix(in srgb, var(--accent) ${Math.round(a * 100)}%, transparent)"><span class="n">${c.n}</span><ul>${c.themes.map(([l, n]) => `<li><span>${esc(l)}</span><span>${n}</span></li>`).join("")}</ul></div></td>`; }).join("")}<td class="num"><b>${x.n}</b></td></tr>`).join("")
+    + `<tr class="tot"><th class="rowh">All stances</th>${STGS.map(([g]) => `<td class="num">${part.stage_n[g] || "–"}</td>`).join("")}<td class="num"><b>${part.n}</b></td></tr>`;
+  const pol = (q, x) => `<details class="rpol" id="rp-${esc(q.pid)}" data-rpid="${esc(q.pid)}" ${st.rPid === q.pid ? "open" : ""}><summary><span class="rs">${esc(q.sentence)}</span>
+      <span class="rmeta">${esc(q.theme)} · ${esc(q.kind)} · ${plural(q.n_unis, "university", "universities")}, ${plural(q.n, "statement", "statements")}${q.levels.length ? " · " + q.levels.join(" ") : ""} · <a href="#${R.slug}/${part.layer}/${esc(q.pid)}" class="plink" title="Link to this policy">${esc(q.pid)}</a></span></summary><div class="rstm">${st.rPid === q.pid ? stmHTML(part.layer, q.pid) : ""}</div></details>`;
+  const list = part.stances.filter(x => !fk || x.id === fk).map(x => {
+    const stages = x.stages.filter(g => !fs || g.id === fs);
+    const open = fk || (st.rPid && x.stages.some(g => g.policies.some(q => q.pid === st.rPid)));
+    return `<details class="rstage" ${open ? "open" : ""}><summary><h3>${chip(x.id)} <span class="count">${plural(x.n, "policy", "policies")}, ${plural(x.n_unis, "university", "universities")}</span></h3><span class="note">${esc(x.def)}</span></summary>
+      ${x.prose ? `<p class="rprose">${esc(x.prose)}</p>` : ""}
+      ${stages.map(g => `<div class="rtheme"><h4>${esc(g.label)} <span class="count">${g.policies.length}</span></h4>${g.policies.map(q => pol(q, x)).join("")}</div>`).join("")}</details>`;
   }).join("");
-  const filt = fs ? `<p class="rfilter">Showing ${esc((part.stages.find(s => s.id === fs) || {}).label || "")} · ${esc(SLB[fk])}. <button class="linkbtn" data-rcell="">Show all stages</button></p>` : "";
-  return `${pageHead(R.label, `What university, school and department policies, and CS course syllabi, ask of ${who}: a matrix of course stage by stance, then every policy stage by stage, grouped by theme. Open a policy to read every statement behind it, with links to the sources.`)}
+  const filt = fk ? `<p class="rfilter">Showing ${esc(SLB[fk])} · ${esc((STGS.find(([g]) => g === fs) || [, ""])[1])}. <button class="linkbtn" data-rcell="">Show all</button></p>` : "";
+  return `${pageHead(R.label, `What university, school and department policies, and CS course syllabi, ask of ${who}: grouped by stance, and within each stance in course order. Open a policy to read every statement behind it, with links to the sources.`)}
     <div class="csvbar"><span>Document</span><a href="data/${RDOC[rk]}" download>${esc(R.label.slice(0, -1))} policies <span class="ext">Word</span></a></div>
     ${csvBar("students")}
     <div class="subtabs" role="tablist">${R.parts.map(p => `<button role="tab" data-rpart="${p.layer}" aria-selected="${p.layer === part.layer}">${esc(p.title)}<span class="cnt">${p.n}</span></button>`).join("")}</div>
-    ${reading(`${part.n} policies for ${who}, from ${part.n_statements.toLocaleString()} statements at ${part.n_unis} universities. ${part.facts.join(" ")}`)}
-    <p class="note">Rows are course stages in order; columns are each policy's stance. A cell gives the number of policies and their themes; darker cells hold more. Select a cell to list just those policies.</p>
+    ${reading(part.intro || `${plural(part.n, "policy", "policies")} for ${who}, from ${part.n_statements.toLocaleString()} statements at ${part.n_unis} universities.`)}
+    <p class="note">Rows are stances; columns follow the course in order. A cell gives the number of policies and their themes; darker cells hold more. Select a cell to list just those policies. "13 universities, 15 statements" means 15 statements from 13 different universities were merged into a policy.</p>
     <div class="mx-wrap mx-scroll" data-keep="rmatrix"><table class="mx rmx"><thead>${head}</thead><tbody>${body}</tbody></table></div>
-    <h3 class="sub" id="rlist">Policies, stage by stage</h3>${filt}${stages}`;
+    <h3 class="sub" id="rlist">Policies by stance</h3>${filt}${list}`;
 }
 function stmHTML(layer, pid) {
   const xs = layer === "course" ? (CSTM.get(pid) || []).map(x => ({ anchor: x.anchor, uni: x.uni, link: x.link, where: x.course || x.slot }))
